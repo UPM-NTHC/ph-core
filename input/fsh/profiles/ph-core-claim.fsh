@@ -2,7 +2,7 @@ Profile: PHCoreClaim
 Parent: Claim
 Id: ph-core-claim
 Title: "PH Core Claim"
-Description: "Captures information about a request for reimbursement or payment for health care products and services within the Philippine health system, including specific benefit packages such as Animal Bites and TB DOTS programs."
+Description: "Captures information about a request for reimbursement or payment for health care products and services within the Philippine health system."
 
 * patient only Reference(PHCorePatient)
 

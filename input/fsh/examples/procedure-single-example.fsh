@@ -3,13 +3,6 @@ InstanceOf: PHCoreProcedure
 Usage: #example
 Description: "Appendectomy performed during Juan Dela Cruz's January 2024 surgical encounter; linked to the appendicitis diagnosis and completed service request."
 
-* identifier[0].use = #usual
-* identifier[=].system = "https://fhir.doh.gov.ph/phcore/NamingSystem/procedure-id"
-* identifier[=].value = "PROC-2024-000123"
-* identifier[+].use = #secondary
-* identifier[=].system = "http://philhealth.gov.ph/procedure"
-* identifier[=].value = "PH-APP-789456"
-
 * basedOn = Reference(ServiceRequest/servicerequest-appendectomy-example)
 
 

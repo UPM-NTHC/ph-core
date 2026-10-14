@@ -1,14 +1,14 @@
 Instance: claim-single-example
 InstanceOf: PHCoreClaim
 Usage: #example
-Description: "A PhilHealth outpatient consultation claim for Juan Dela Cruz submitted by Dr. Maria Clara Santos for management of Type 2 Diabetes Mellitus."
+Description: "Synthetic FHIR claim for Juan Dela Cruz's March 2025 outpatient follow-up. Illustrates insurer/provider separation; the amount and service coding do not establish PhilHealth coverage or reimbursement rules."
 
 * status = #active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#professional "Professional"
 * use = #claim
 * patient = Reference(Patient/patient-single-example)
-* created = "2024-03-15"
-* insurer = Reference(Organization/organization-single-example)
+* created = "2025-03-15"
+* insurer = Reference(Organization/organization-philhealth-example)
 * provider = Reference(Practitioner/practitioner-single-example)
 * priority = http://terminology.hl7.org/CodeSystem/processpriority#normal "Normal"
 
@@ -35,15 +35,13 @@ Description: "A PhilHealth outpatient consultation claim for Juan Dela Cruz subm
 * item[=].diagnosisSequence = 1
 * item[=].productOrService = $sct#11429006 "Consultation"
 * item[=].productOrService.text = "Outpatient Consultation"
-* item[=].servicedDate = "2024-03-15"
+* item[=].servicedDate = "2025-03-15"
 * item[=].quantity.value = 1
 * item[=].unitPrice.value = 500.00
 * item[=].unitPrice.currency = #PHP
 * item[=].net.value = 500.00
 * item[=].net.currency = #PHP
 
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Claim:</b> PhilHealth Outpatient Consultation</p><p><b>Status:</b> Active</p><p><b>Patient:</b> Juan Dela Cruz (PhilHealth ID: 63-584789845-5)</p><p><b>Created:</b> March 15, 2024</p><p><b>Insurer:</b> Philippine Health Insurance Corporation (PhilHealth)</p><p><b>Provider:</b> Dr. Maria Clara Santos</p><p><b>Diagnosis:</b> Type 2 Diabetes Mellitus (Principal)</p><p><b>Service:</b> Outpatient Consultation on March 15, 2024 - PHP 500.00</p></div>"
 
 Instance: philhealth-coverage-example
 InstanceOf: Coverage
@@ -53,6 +51,4 @@ Description: "PhilHealth coverage for Juan Dela Cruz with member ID 63-584789845
 * subscriber = Reference(Patient/patient-single-example)
 * beneficiary = Reference(Patient/patient-single-example)
 * subscriberId = "63-584789845-5"
-* payor = Reference(Organization/organization-single-example)
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">PhilHealth coverage for Juan Dela Cruz with member ID 63-584789845-5.</div>"
+* payor = Reference(Organization/organization-philhealth-example)

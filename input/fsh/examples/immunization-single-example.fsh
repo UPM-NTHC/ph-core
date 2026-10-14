@@ -6,8 +6,8 @@ InstanceOf: PHCoreImmunization
 Usage: #example
 Description: "Juan Dela Cruz received a completed intramuscular influenza (H5N1-1203) vaccine at Philippine General Hospital on January 10, 2013."
 
-* extension[batchNumber].valueString = "AAJN11K"
-* extension[administeredProduct].valueReference = Reference(Medication/medication-single-example)
+// Batch is represented once, by the base lotNumber element.
+* extension[administeredProduct].valueReference = Reference(Medication/medication-vaccine-example)
 
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
@@ -18,7 +18,7 @@ Description: "Juan Dela Cruz received a completed intramuscular influenza (H5N1-
 * vaccineCode.text = "Influenza H5N1-1203 Vaccine"
 
 * patient = Reference(Patient/patient-single-example)
-* encounter = Reference(Encounter/encounter-single-example)
+* encounter = Reference(Encounter/encounter-immunization-example)
 * occurrenceDateTime = "2013-01-10"
 * primarySource = true
 
@@ -33,14 +33,12 @@ Description: "Juan Dela Cruz received a completed intramuscular influenza (H5N1-
 * route = $v3-RouteOfAdministration#IM "Injection, intramuscular"
 * route.text = "Intramuscular injection"
 
-* doseQuantity = 5 'mg'
 
 * performer.function = $v2-0443#OP "Ordering Provider"
 * performer.function.text = "Ordering Provider"
 * performer.actor = Reference(Practitioner/practitioner-single-example)
 * performer.actor.display = "Dr. Maria Clara Santos"
 
-* isSubpotent = true
 
 * fundingSource = $immunization-funding-source#private "Private"
 * fundingSource.text = "Private"

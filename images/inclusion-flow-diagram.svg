@@ -23,13 +23,14 @@
   
   <!-- Count -->
   <polygon points="350,320 430,360 350,400 270,360" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
-  <text x="350" y="352" text-anchor="middle" font-size="11" fill="#333">≥2 independent</text>
-  <text x="350" y="367" text-anchor="middle" font-size="11" fill="#333">IGs use it?</text>
+  <text x="350" y="345" text-anchor="middle" font-size="9" fill="#333">≥2 independent IGs use it</text>
+  <text x="350" y="360" text-anchor="middle" font-size="9" fill="#333">AND</text>
+  <text x="350" y="375" text-anchor="middle" font-size="9" fill="#333">MS in ≥2 independent IGs?</text>
   
   <!-- Yes - Candidate -->
   <rect x="480" y="340" width="140" height="40" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
   <text x="550" y="360" text-anchor="middle" font-size="11" fill="#1b5e20">PH Core candidate</text>
-  <text x="550" y="373" text-anchor="middle" font-size="10" fill="#1b5e20">(≥2 Rule met)</text>
+  <text x="550" y="373" text-anchor="middle" font-size="10" fill="#1b5e20">(both thresholds met)</text>
   
   <!-- Exception -->
   <polygon points="350,420 430,460 350,500 270,460" fill="#ffcc80" stroke="#ef6c00" stroke-width="2"/>

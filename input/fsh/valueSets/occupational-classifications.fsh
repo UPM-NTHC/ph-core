@@ -1,7 +1,7 @@
 ValueSet: OccupationClassifications
 Id: occupational-classifications
 Title: "Occupation Classifications"
-Description: "The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA)."
+Description: "Includes four PSOC fragment codes used in PH Core examples; it is not a complete occupational classification."
 * insert ShareableValueSet
 * include $PSOC#111102 "Hospital Administrator"
 * include $PSOC#111103 "Medical Department Head"

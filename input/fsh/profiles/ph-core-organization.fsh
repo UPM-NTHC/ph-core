@@ -3,6 +3,8 @@ Parent: Organization
 Id: ph-core-organization
 Title: "PH Core Organization"
 Description: "This profile localizes the FHIR R4 Organization resource to the Philippine context."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
 
 * identifier ^slicing.discriminator.type = #value

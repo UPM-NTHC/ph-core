@@ -3,6 +3,8 @@ Id: occupation
 Context: Patient
 Title: "Occupation"
 Description: "Patient's occupation."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * insert ExperimentalStructureDefinition
 // Content review: an occupation classification can be known without its duration.
 // Preserve the classification requirement; do not require an unknown duration.

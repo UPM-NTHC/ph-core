@@ -3,6 +3,8 @@ Parent: MedicationDispense
 Id: ph-core-medicationdispense
 Title: "PH Core Medication Dispense"
 Description: "Captures key FHIR Medication Dispense data for the Philippine context."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * insert ExperimentalStructureDefinition
 
 // Philippine-specific references

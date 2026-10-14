@@ -3,6 +3,8 @@ Parent: Procedure
 Id: ph-core-procedure
 Title: "PH Core Procedure"
 Description: "An action that is or was performed on or for a patient, practitioner, device, organization, or location."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * subject only Reference(PHCorePatient or Group)
 * subject insert ObligationRequired // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 

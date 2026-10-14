@@ -3,6 +3,8 @@ Parent: Patient
 Id: ph-core-patient
 Title: "PH Core Patient"
 Description: "Captures key demographic and administrative information about individuals receiving care or other health-related services."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * extension contains
     http://hl7.org/fhir/StructureDefinition/patient-nationality|5.3.0 named nationality 0..* and
     http://hl7.org/fhir/StructureDefinition/patient-religion|5.3.0 named religion 0..* and

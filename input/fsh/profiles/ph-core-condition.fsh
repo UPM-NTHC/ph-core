@@ -3,6 +3,8 @@ Parent: Condition
 Id: ph-core-condition
 Title: "PH Core Condition"
 Description: "Captures Condition."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
 * category MS 
 * category insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.

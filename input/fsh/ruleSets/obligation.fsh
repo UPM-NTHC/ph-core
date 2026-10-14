@@ -1,4 +1,5 @@
 RuleSet: ObligationActorAndCode(actor, code)
+* ^mustSupport = true
 * ^extension[$obligation][+].extension[code].valueCode = {code}
 * ^extension[$obligation][=].extension[actor].valueCanonical = {actor}
 

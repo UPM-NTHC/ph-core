@@ -51,21 +51,48 @@ Thank you for your interest in contributing to the PH Core Implementation Guide!
 
 ## Profile Inclusion Criteria
 
-### Standard Rule: The ≥2 IG Rule
+### Standard Rule: Shared Use and Multiple-IG MS
 
-A resource or data element is eligible for PH Core when it is **used by 2 or more independent Implementation Guides** (IGs) or programs within the Philippine health system.
+A resource or data element is eligible as a PH Core candidate only when both conditions are met:
+
+- It is independently used by **2 or more source Implementation Guides (IGs)** within the Philippine health system.
+- The same element is explicitly designated Must Support (MS) by **at least 2 independent source IGs**.
+
+Count only independent Philippine source IGs in both conditions. Foreign IGs may inform Human Appraisal, but do not satisfy this local threshold merely by being a second IG. Record their package/version and exact path when used as appraisal evidence.
+
+Count only independent source IGs in both conditions; the PH Core IG being developed does not count as a source. Structural presence inherited from the FHIR base resource does not by itself establish independent use or an MS designation. Meeting these thresholds makes an element eligible for consideration; it does not automatically select it for PH Core MS. Apply the documented local use-case and obligation rules separately.
 
 **Rationale:** This ensures PH Core contains only nationally reusable components, avoiding program-specific bloat while enabling true interoperability.
 
 **Process:**
 1. Identify data elements across local IGs (e.g., NHDR, eReferral, PhilHealth Claims, Facility Systems)
 2. Map to base FHIR resources
-3. If ≥2 IGs independently use the same element → candidate for PH Core
+3. If at least 2 independent source IGs use the element and at least 2 independent source IGs explicitly designate that same FHIR path MS, treat it as a PH Core candidate.
 4. Profile the element with PH Core constraints
+
+### Version 0.3.0 Rule: Include if appropriately mapped from DOH JAO 2021-0002
+
+The JAO's Annex B Release 01 is the initial list of mandatory national health
+data standards for interoperability. See the
+[DOH/PhilHealth JAO 2021-0002](https://law.upd.edu.ph/wp-content/uploads/2021/06/DOH-PHIC-JAO-No-2021-002.pdf).
+
+- A proposed PH Core data element **MUST** map to one or more specific data
+  elements in Annex B, Release 01 of the JAO.
+- The crosswalk **MUST** identify the JAO data-element name, definition, source
+  of definition, and data/system/application, and the corresponding FHIR path.
+- If the source and FHIR concepts differ in granularity, the crosswalk **MUST**
+  explain any split, combination, or transformation. A similar label alone does
+  not establish an appropriate mapping.
+- If no appropriate JAO data element exists, record the gap. A proposed
+  exception **MUST** be reviewed under the existing Human Appraisal process and
+  documented in the Decision Log.
+- JAO mapping supports data-element selection. It **SHALL NOT** by itself set
+  FHIR cardinality, MS, terminology bindings, obligations, or requirements on
+  child representation paths; apply the Profile Development Rules separately.
 
 ### Exception Rule: Human Appraisal
 
-The ≥2 rule may be waived through **human appraisal** when:
+The cross-IG eligibility thresholds may be waived through **human appraisal** when:
 - The element has **high national policy priority** (e.g., mandated by DOH JAO)
 - The element **enables critical interoperability** despite limited current adoption
 - The element is **essential for patient safety** or **regulatory compliance**
@@ -73,7 +100,7 @@ The ≥2 rule may be waived through **human appraisal** when:
 
 ### Documentation Requirement
 
-When bypassing the ≥2 rule, the justification must be documented in:
+When bypassing either cross-IG threshold, the justification must be documented in:
 1. The profile's FSH comments (e.g., `// Exception: Required by DOH JAO 2021-0002`)
 2. The issue/PR description
 3. The [Decision Log](#decision-log)
@@ -82,83 +109,106 @@ When bypassing the ≥2 rule, the justification must be documented in:
 
 ## Profile Development Rules
 
-> 📝 **Note:** These rules represent the current team consensus as of the latest IG review cycle. They are subject to refinement as edge cases are identified and the IG matures.
+MS identifies support selected for an implementation use case; cardinality
+constrains resource instances; obligations specify actor behavior. See
+[FHIR R4 MustSupport](https://hl7.org/fhir/R4/conformance-rules.html#mustSupport)
+and the [Obligation extension](https://hl7.org/fhir/extensions/StructureDefinition-obligation.html).
 
-### Rule Summary Table
+### Rule 1: Cardinality, MS, and Obligation Designation
 
-| Rule | Description | Example |
-|------|-------------|---------|
-| **Rule 1: Cardinality → Obligation Mapping** | Map cardinality to Must Support + Obligation | `1..1` → `ObligationRequired` |
-| **Rule 2: CodeableConcept Optional** | Use `CodeableConceptSO` RuleSet | `* insert CodeableConceptSO(elementName)` |
-| **Rule 3: CodeableConcept Required** | Declare explicitly, don't use SO | `* element 1..* MS` + explicit obligations |
-| **Rule 4: Non-CodeableConcept Elements** | Always separate MS and obligation | `* element 0..1 MS` then `* element insert ObligationOptional` |
-| **Rule 5: Sub-Element Obligations** | Parent = existence, Sub-elements = representation flexibility | `reaction.manifestation` (1..*) with flexible coding |
-
-### Detailed Rules
-
-#### Rule 1: Cardinality → Obligation Mapping
-
-Map cardinality constraints to Must Support flags and obligation extensions:
-
-```fsh
-// Cardinality 1..1 with Must Support and Required obligation
-* status 1..1 MS
-* status insert ObligationRequired
-
-// Cardinality 0..1 with Must Support and Optional obligation  
-* birthDate 0..1 MS
-* birthDate insert ObligationOptional
-```
-
-#### Rule 2: CodeableConcept Optional
-
-For optional CodeableConcept elements, use the `CodeableConceptSO` RuleSet:
+- The element **MUST** first be selected for a documented local use case.
+- Authors **MUST** resolve the profile's full parent chain, compare the
+  inherited effective cardinality, and verify the exact path against the
+  matching FHIR R4 snapshot, including nested backbone and datatype paths.
+  When the intended minimum and maximum equal the inherited cardinality,
+  authors **MUST NOT** restate them in FSH or add a redundant declaration to
+  trigger MS or obligation mapping.
+- Cardinalities written in a `contains` rule define new named slices. Authors
+  **MUST** assess those slice cardinalities separately; they **MUST NOT** remove
+  them solely because the numbers match the unsliced parent element.
+- A PH Core cardinality constraint that changes the inherited minimum or
+  maximum **MUST** be explicitly declared and justified by the local use case.
+- A selected MS element **MUST** have explicitly designated obligations based
+  on the responsible actors and expected behavior, whether its cardinality is
+  inherited or constrained by PH Core. Base cardinality alone **SHALL NOT**
+  determine MS or actor obligations.
+- A use-case-backed required cardinality constraint (`1..1` or `1..*`)
+  **SHALL** have MS and `ObligationRequired`.
+- A use-case-selected MS element with an explicitly constrained optional
+  cardinality (`0..1` or `0..*`) **SHALL** have `ObligationOptional` unless the
+  use case justifies a different actor obligation.
 
 ```fsh
-// Optional CodeableConcept - uses RuleSet
-* insert CodeableConceptSO(maritalStatus)
-* insert CodeableConceptSO(contact.relationship)
-```
-
-#### Rule 3: CodeableConcept Required
-
-For required CodeableConcept elements, declare explicitly without the RuleSet:
-
-```fsh
-// Required CodeableConcept - explicit declaration
-* code 1..* MS
-* code.text MS
-* code.coding MS
-* code insert ObligationRequired
-```
-
-#### Rule 4: Non-CodeableConcept Elements
-
-For non-CodeableConcept elements, always separate Must Support and obligation declarations:
-
-```fsh
-// Non-CodeableConcept element
-* birthDate 0..1 MS
+// Patient.birthDate remains 0..1 in the base; select it without restating that cardinality
+* birthDate MS
 * birthDate insert ObligationOptional
 
-* gender 0..1 MS
-* gender insert ObligationOptional
+// Example of a justified constraint: strengthen Patient.name from base 0..* to 1..*
+* name 1..* MS
+* name insert ObligationRequired
+
+// AllergyIntolerance.reaction.manifestation is already required in base FHIR R4
+* reaction.manifestation MS
+* reaction.manifestation insert ObligationRequired
 ```
 
-#### Rule 5: Sub-Element Obligations
+### Rule 2: Optional FHIR Elements and subelements/subpaths
 
-For parent elements with sub-elements, the parent controls existence while sub-elements control representation flexibility:
+- A FHIR element that is declared MUST SUPPORT **MUST** declare appropriate Obligations.
+- Selected MS and its obligations **MUST** be declared explicitly on the
+  applicable path.
 
 ```fsh
-// Parent controls cardinality (must exist)
-* reaction 0..* MS
-* reaction insert ObligationOptional
-
-// Sub-elements control representation (coding vs text)
-* reaction.manifestation 1..* MS
-* reaction.manifestation.text MS
-* reaction.manifestation.coding MS
+// Practitioner role selected for eReferral/NHDR exchange (PR #160); code is base 0..*
+* code MS
+* code insert ObligationOptional
 ```
+
+### Rule 3: Required FHIR Elements and subelements/subpaths
+
+- A use-case-selected FHIR element with inherited or explicitly constrained
+  required cardinality **SHALL** have MS and `ObligationRequired` when that
+  actor behavior is required by the use case.
+- Its representation paths **SHALL NOT** acquire MS or obligations solely
+  because the parent is required.
+
+```fsh
+// Reviewed allergy-capture requirement; manifestation inherits 1..* from R4
+* reaction.manifestation MS
+* reaction.manifestation insert ObligationRequired
+```
+
+### Rule 4: Designated Obligations for MS
+
+- Every declared MS element **MUST** have designated obligations.
+- Each obligation **MUST** identify at least 1 responsible actor and expected behavior.
+- Contributors **SHOULD** cite the source mapping, implementation contract,
+  policy, issue, or recorded human appraisal in FSH comments and the PR.
+- Datatype, binding strength, consistency with another profile, or presence in
+  an example **SHALL NOT** automatically assign MS or obligations.
+- Requirements included in PH Core **MUST** meet the existing
+  [inclusion criteria](#profile-inclusion-criteria). Program-specific
+  requirements **SHOULD** be constrained in downstream IGs where appropriate.
+
+### Obligation RuleSets
+
+The reusable `Obligation*` RuleSets remain available:
+
+| RuleSet | Creator behavior | Server and Consumer behavior |
+|---------|------------------|------------------------------|
+| `ObligationRequired` | `SHALL:able-to-populate` | `SHALL:handle` |
+| `ObligationRecommended` | `SHOULD:able-to-populate` | `SHALL:handle` |
+| `ObligationOptional` | `MAY:able-to-populate` | `SHALL:handle` |
+
+- Authors **MUST** distinguish capability (`able-to-populate`) from mandatory
+  instance population (`populate`) when designating obligations.
+- `ObligationOptional` still requires Server and Consumer `SHALL:handle`;
+  optional Creator capability does not make those handling responsibilities optional.
+- Changes **SHALL** be checked in generated differentials and snapshots and
+  validated with SUSHI and IG Publisher.
+
+The [CodeableConcept obligation review](codeableconcept-obligation-review.md)
+records the removed blanket applications and retained support requirements.
 
 ---
 
@@ -281,6 +331,22 @@ This section documents significant decisions that bypassed standard rules or est
 | 2026-02 | #139 | Adopt CamelCase with CS/VS/NS suffixes | Better tooling support, explicit resource type identification | Previous naming conventions |
 | 2026-03 | #150 | Change example suffix from `-ex` to `-example` | "ex" was ambiguous (Extension vs Example) | Previous file naming |
 | 2026-03 | #166, #175 | Complete transition to `-example` suffix | Consistency across all example files | Previous file naming |
+| 2026-10-09 | #265 | Retain `AllergyIntolerance.reaction.manifestation` MS under human appraisal | Omitting the manifestation would lose safety-relevant detail for the confirmed allergy-capture use case; JAO Release 01 lists allergy type and category but no separate manifestation field | JAO v0.3.0 mapping rule, Human Appraisal exception |
+
+
+### Content review status (13 October 2026)
+
+This review corrects source meaning and illustrative data. It does not certify that the existing source-IG comparison comments meet the current local eligibility thresholds.
+
+| Item | Applied change or retained boundary | Remaining appraisal |
+| --- | --- | --- |
+| Occupation duration | Classification remains required within the extension; duration is optional because a source can know occupation without its dates. No MS or obligations added. | Compare national occupation use cases and duration units. |
+| Patient bindings and contact demographics | Retain inherited R4 marital-status/contact-role bindings; remove person-root extension declarations from the contact backbone. | Any stronger binding or new contact representation needs a local use case. |
+| Race, indigenous-status and PWD terminology | Preserve existing draft artifacts and identify their provisional meaning/coverage. | Select dated Philippine classifications and issuer semantics through Human Appraisal. |
+| Source-IG support comments | Preserve existing selected MS and obligations. | Attach versioned independent Philippine source evidence or record each exception; AU guidance alone is not local multi-IG evidence. |
+| Provenance organization attribution | Preserve the existing draft `provenance-1` rule. | Appraise independent practitioners and patient-held devices before expanding its intended scope. |
+
+These pending items are review questions, not new national mandates or completed endorsements.
 
 ### Example Entry Format
 
@@ -317,7 +383,7 @@ The following diagrams illustrate PH Core architecture and workflows:
 
 ![Inclusion Flow](images/inclusion-flow-diagram.svg)
 
-*Flowchart of the ≥2 IG Rule from identification to inclusion*
+*Flowchart of the independent-use and MS thresholds from identification to inclusion*
 
 ### Identifier Systems Map
 
@@ -438,7 +504,7 @@ PH Core follows **CamelCase with explicit suffixes** (established Feb-Mar 2026 v
 |--------------|------------------|------------|--------------|---------|
 | **Profile** | `PHCore{Resource}` | `ph-core-{resource}` | `ph-core-{resource}.fsh` | `PHCorePatient`, `ph-core-patient.fsh` |
 | **Extension** | `{PascalCase}` | `{kebab-case}` | `{id}.fsh` | `IndigenousPeople`, `indigenous-people.fsh` |
-| **CodeSystem** | `{Name}CS` or `{ACRONYM}` | `{kebab}-cs` or `{ACRONYM}` | `{name}.fsh` | `IndigenousGroupsCS`, `indigenous-groups.fsh` |
+| **CodeSystem** | `{Name}CS` or `{ACRONYM}` | `{kebab}-cs` or `{ACRONYM}` | `{name}.fsh` | `IndigenousGroupsCS`, `indigenous-status.fsh` |
 | **ValueSet** | `{Name}VS` or `{Plural}` | `{kebab}-vs` or `{plural}` | `{name}.fsh` | `Regions`, `regions.fsh` |
 | **NamingSystem** | `{System}NS` | `{system}-ns` | `{system}-ns.fsh` | `PhilHealthIDNS`, `philhealth-id-ns.fsh` |
 | **Example** | `{resource}-{scenario}-example` | (same as name) | `{id}.fsh` | `patient-single-example.fsh` |
@@ -471,9 +537,11 @@ Title: "PH Core Patient Profile"
 Description: "Philippine Core Patient Profile"
 
 // 3. Rules - flat structure, * prefix
-* identifier 1..*
-* name 1..*
-* insert CodeableConceptSO(maritalStatus)
+* identifier 1..* MS
+* identifier insert ObligationRequired
+* name 1..* MS
+* name insert ObligationRequired
+* maritalStatus from http://hl7.org/fhir/ValueSet/marital-status (required)
 
 // 4. Invariants (if any)
 Invariant: ph-pat-001

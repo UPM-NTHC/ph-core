@@ -3,25 +3,23 @@ InstanceOf: PHCoreOrganization
 Title: "Example PH Core Organization"
 Description: "An example instance of a PH Core Organization conforming to the Philippine localization profile. Demonstrates all identifier types (NHFR, HCPN, PAN, PEN) and Must Support fields."
 
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789, PEN: PEN-987654321) is an active PH Core Organization located at 123, Barangay 1, City of Las Piñas, Benguet, 1740, Philippines. The organization can be contacted via phone at +63-2-8651-7800 or email at contact@doh.gov.ph.</div>"
 
 
 * active = true
-* identifier[NhfrCode].system = "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"
-* identifier[NhfrCode].value = "1234567890"
-* identifier[HcpnCode].system = "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code"
-* identifier[HcpnCode].value = "Baguio City Health Care Provider Network"
-* identifier[PAN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
-* identifier[PAN].value = "PAN-2024-56789"
-* identifier[PEN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"
-* identifier[PEN].value = "PEN-987654321"
+* identifier[0].system = "https://nhfr.doh.gov.ph/"
+* identifier[=].value = "0987654321"
+* identifier[+].system = "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code"
+* identifier[=].value = "HCPN-EXAMPLE-MANILA-001"
+* identifier[+].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
+* identifier[=].value = "PAN-2024-00001"
+* identifier[+].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"
+* identifier[=].value = "PEN-000000001"
 
 // A custom identifier not defined in PH Core profile
 * identifier[+].system = "http://my-hospital.org/internal-id"
 * identifier[=].value = "HOSP-INT-12345"
 
-* name = "Department of Health - Sattelite Office"
+* name = "Example Manila Health Centre"
 
 * telecom.system = #phone
 * telecom.value = "+63-2-8651-7800"
@@ -32,19 +30,21 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 
 * address.use = #work
 * address.line = "123 Hospital Street"
-* address.postalCode = "1740"
+* address.postalCode = "1000"
 * address.country = "PH"
-* address.extension[region].valueCoding = $PSGC#1401100000 "Benguet"
-* address.extension[cityMunicipality].valueCoding = $PSGC#1380200000 "City of Las Piñas"
-* address.extension[barangay].valueCoding = $PSGC#1380100001 "Barangay 1"
+* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"
+* address.extension[=].valueCoding = $PSGC#1300000000
+* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"
+* address.extension[=].valueCoding = $PSGC#1380600000
 
 * contact.name.text = "Health Facility Contact"
 * contact.telecom.system = #phone
 * contact.telecom.value = "+63-2-8651-7800"
 * contact.address.use = #work
 * contact.address.line = "125 Central Office Street"
-* contact.address.postalCode = "1740"
+* contact.address.postalCode = "1000"
 * contact.address.country = "PH"
-* contact.address.extension[region].valueCoding = $PSGC#1401100000 "Benguet"
-* contact.address.extension[cityMunicipality].valueCoding = $PSGC#1380200000 "City of Las Piñas"
-* contact.address.extension[barangay].valueCoding = $PSGC#1380100001 "Barangay 1"
+* contact.address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"
+* contact.address.extension[=].valueCoding = $PSGC#1300000000
+* contact.address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"
+* contact.address.extension[=].valueCoding = $PSGC#1380600000

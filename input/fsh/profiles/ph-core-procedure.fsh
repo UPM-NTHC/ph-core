@@ -3,23 +3,18 @@ Parent: Procedure
 Id: ph-core-procedure
 Title: "PH Core Procedure"
 Description: "An action that is or was performed on or for a patient, practitioner, device, organization, or location."
-* subject MS
 * subject only Reference(PHCorePatient or Group)
-* subject insert ObligationRequired
+* subject insert ObligationRequired // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
-* encounter MS
 * encounter only Reference(PHCoreEncounter)
-* encounter insert ObligationOptional
+* encounter insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
-* status MS
-* status insert ObligationRequired
+* status insert ObligationRequired // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
-* performed[x] MS
-* performed[x] insert ObligationOptional
+* performed[x] insert ObligationOptional // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * performed[x] MS
 
-* reasonReference MS
 * reasonReference only Reference(Condition or PHCoreObservation or PHCoreProcedure or DiagnosticReport or DocumentReference)
-* reasonReference insert ObligationOptional
+* reasonReference insert ObligationOptional // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * reasonReference MS
 
 * basedOn only Reference(CarePlan or ServiceRequest) // Note: No changes to Base FHIR, but Re-declared here for convenience of adjusting when new PH Core profiles are added
 * partOf only Reference(PHCoreProcedure or Observation or MedicationAdministration)
@@ -32,15 +27,3 @@ Description: "An action that is or was performed on or for a patient, practition
 * complicationDetail only Reference(Condition)
 * focalDevice.manipulated only Reference(Device)
 * usedReference only Reference(Device or PHCoreMedication or Substance)
-
-* insert CodeableConceptSO(code)
-* insert CodeableConceptSO(reasonCode)
-* insert CodeableConceptSO(statusReason)
-* insert CodeableConceptSO(category)
-* insert CodeableConceptSO(performer.function)
-* insert CodeableConceptSO(bodySite)
-* insert CodeableConceptSO(outcome)
-* insert CodeableConceptSO(complication)
-* insert CodeableConceptSO(followUp)
-* insert CodeableConceptSO(focalDevice.action)
-* insert CodeableConceptSO(usedCode)

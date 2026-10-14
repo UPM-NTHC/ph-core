@@ -16,33 +16,21 @@ Description: "This profile localizes the FHIR R4 Location resource to the Philip
 // ============================================
 
 // Status
-* status MS
-* status insert ObligationOptional
+// * status insert ObligationOptional // Appraised - Remove: 0 independent source IGs mark this exact path MS (at least 2 required). Original rule: * status MS
 
 // Name
-* name MS
-* name insert ObligationOptional
+* name insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
 // Address and sub-elements
-* address MS
-* address insert ObligationOptional
-* address.line MS
-* address.line insert ObligationOptional
+* address insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+// * address.line insert ObligationOptional // Remove, Parent Obligation sufficient: 1 independent source IG marks this path MS: Road Safety IG (at least 2 required). Original rule: * address.line MS
 
 // Managing Organization
-* managingOrganization MS
-* managingOrganization insert ObligationOptional
+* managingOrganization insert ObligationOptional // Appraised - Keep - AU IG best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * managingOrganization MS
 
 // Position and sub-elements
-* position MS
-* position insert ObligationOptional
-* position.longitude MS
-* position.longitude insert ObligationOptional
-* position.latitude MS
-* position.latitude insert ObligationOptional
-
-// ============================================
-// CodeableConcept Elements
-// ============================================
-* insert CodeableConceptSO(type)
-* insert CodeableConceptSO(physicalType)
+* position insert ObligationOptional // Keep, Road Safety Reporting: 1 independent source IG marks this path MS: Road Safety IG (at least 2 required). Original rule: * position MS
+// MS commented let Parent MS explain: 1 independent source IG marks this path MS: Road Safety IG (at least 2 required). Original rule: * position.longitude MS
+// * position.longitude insert ObligationOptional
+// MS commented let Parent MS explain: Road Safety IG (at least 2 required). Original rule: * position.latitude MS
+// * position.latitude insert ObligationOptional

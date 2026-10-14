@@ -159,9 +159,6 @@ Description: "This profile localizes the FHIR R4 Provenance resource to the Phil
 
 * agent obeys provenance-1
 
-* insert CodeableConceptSO(reason)
-* insert CodeableConceptSO(activity)
-* insert CodeableConceptSO(agent.role)
 
 
 Invariant: provenance-1

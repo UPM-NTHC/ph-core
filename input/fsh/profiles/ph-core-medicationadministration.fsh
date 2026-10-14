@@ -15,14 +15,6 @@ Description: "Captures key FHIR Medication Administration data for the Philippin
 * partOf only Reference(PHCoreMedicationAdministration or PHCoreProcedure)
 
 // Philippine-specific binding for medication codes
+* medication[x] only CodeableConcept or Reference(PHCoreMedication)
 * medicationCodeableConcept from DrugsVS (preferred)
-
-* insert CodeableConceptSO(statusReason)
-* insert CodeableConceptSO(category)
-* insert CodeableConceptSO(medicationCodeableConcept)
-* insert CodeableConceptSO(performer.function)
-* insert CodeableConceptSO(reasonCode)
-* insert CodeableConceptSO(dosage.site)
-* insert CodeableConceptSO(dosage.route)
-* insert CodeableConceptSO(dosage.method)
-
+* medication[x] insert ObligationOptional

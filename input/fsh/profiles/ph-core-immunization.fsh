@@ -3,6 +3,8 @@ Parent: Immunization
 Id: ph-core-immunization
 Title: "PH Core Immunization"
 Description: "Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
 * extension contains
     BatchNumber named batchNumber 0..1 and

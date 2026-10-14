@@ -3,6 +3,8 @@ Parent: Provenance
 Id: ph-core-provenance
 Title: "PH Core Provenance"
 Description: "This profile localizes the FHIR R4 Provenance resource to the Philippine context, capturing key information about who, what, when, and where for a set of resources. It is used to track the authorship and history of healthcare data in Philippine health information systems."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
 // ============================================
 // US CORE PROVENANCE MANDATORY ELEMENTS

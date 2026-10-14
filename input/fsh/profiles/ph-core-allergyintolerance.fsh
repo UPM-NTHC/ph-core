@@ -3,6 +3,8 @@ Parent: AllergyIntolerance
 Id: ph-core-allergyintolerance
 Title: "PH Core AllergyIntolerance"
 Description: "This profile sets minimum expectations for an AllergyIntolerance resource to record, search, and fetch basic allergy intolerance information for a patient. It is based on the [FHIR R4 AllergyIntolerance](https://www.hl7.org/fhir/R4/allergyintolerance.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the AllergyIntolerance when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
 * patient insert ObligationRequired // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 * patient only Reference(PHCorePatient)

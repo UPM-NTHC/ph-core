@@ -6,7 +6,7 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 
 
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slicing based on identifier system"
 * identifier ^slicing.ordered = false
@@ -18,7 +18,7 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
     PEN 0..*
 
 // * identifier[NhfrCode] only PHCoreDOHNHFRCode
-* identifier[NhfrCode] ^patternIdentifier.system = "https://nhfr.doh.gov.ph/"
+* identifier[NhfrCode].system = "https://nhfr.doh.gov.ph/" (exactly)
 * identifier[NhfrCode] ^definition = "Health Facility Code (HFC) from the National Health Facility Registry"
 * identifier[NhfrCode] ^short = "DOH NHFR Code"
 // Suppress Identifier.value's inherited R4 "General" example, then provide the NHFR-specific example.
@@ -29,7 +29,7 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 * identifier[NhfrCode] insert ObligationOptional
 
 // * identifier[HcpnSite] only PHCoreHcpnSite
-* identifier[HcpnSite] ^patternIdentifier.system = "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code"
+* identifier[HcpnSite].system = "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code" (exactly)
 * identifier[HcpnSite] ^definition = "Health Care Provider Network (HCPN) code uniquely identifying an organization within its Health Care Provider Network in the Philippines. There is no National Coded Registry of capturing this, hence Free Text or string is ok and has to be agreed upon by their designated networks. Note that the cities and provinces can establish their own HCPN, but DOH can only Monitor Sites listed on http://bit.ly/ListofUHCIS"
 * identifier[HcpnSite] ^short = "HCPN Integration Site; Note that the cities and provinces can establish their own HCPN, but DOH can only Monitor Sites listed on http://bit.ly/ListofUHCIS"
 * identifier[HcpnSite].type = $v2-0203#LR
@@ -40,7 +40,7 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 * identifier[HcpnSite].value ^example[2].valueString = "Baguio City"
 
 // * identifier[PAN] only PHCorePhilHealthPAN
-* identifier[PAN] ^patternIdentifier.system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
+* identifier[PAN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber" (exactly)
 * identifier[PAN] ^short = "PAN - PhilHealth Accreditation Number"
 * identifier[PAN] ^definition = "The unique number issued by PhilHealth to accredited institutions."
 * identifier[PAN].value ^short = "PhilHealth Accreditation Number"
@@ -50,7 +50,7 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 // * identifier[PAN] insert ObligationOptional
 
 // * identifier[PEN] only PHCorePhilHealthPEN
-* identifier[PEN] ^patternIdentifier.system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"
+* identifier[PEN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber" (exactly)
 * identifier[PEN] ^short = "PEN - PhilHealth Employer Number"
 * identifier[PEN] ^short = "PEN - PhilHealth Employer Number"
 * identifier[PEN] ^definition = "The unique number issued by PhilHealth to employers."

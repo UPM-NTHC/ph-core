@@ -21,18 +21,12 @@ Description: "Maria Cruz Santos is a female born on 1 January 1955, mother of th
 * telecom.value = "+63-912-345-6789"
 * telecom.use = #mobile
 * address.line = "123 Mabini Street"
-* address.postalCode = "1100"
+* address.postalCode = "1000"
 * address.country = "PH"
-* address.extension.url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"
-* address.extension.valueCoding = $PSGC#1380608000 "Ermita"
 
 * address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"
 * address.extension[=].valueCoding = $PSGC#1380600000 "City of Manila"
 
-* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/province"
-* address.extension[=].valueCoding = $PSGC#0402100000 "Cavite"
 
 * address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"
 * address.extension[=].valueCoding = $PSGC#1300000000 "National Capital Region (NCR)"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Maria Cruz Santos, born on January 1, 1955, is the mother of the patient. She resides at 123 Mabini Street, 1100, Philippines. Her PhilSys ID is 1234-1234567-1.</div>"

@@ -3,6 +3,8 @@ Parent: Provenance
 Id: ph-core-provenance
 Title: "PH Core Provenance"
 Description: "This profile identifies the resources described by an activity, when the activity was recorded, and the agents responsible for creating, updating, or transmitting the information."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
 // Human Appraisal: draft attribution baseline selected for early PH Core development.
 // This is a working design, not evidence of national policy or multi-IG adoption.

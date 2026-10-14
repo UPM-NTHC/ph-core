@@ -3,6 +3,8 @@ Parent: PractitionerRole
 Id: ph-core-practitionerrole
 Title: "PH Core PractitionerRole"
 Description: "The PH Core Practitioner Role Profile inherits from the [FHIR R4 PractitionerRole resource](https://hl7.org/fhir/R4/practitionerrole.html); refer to it for scope and usage definitions. This profile sets minimum expectations for the PractitionerRole resource to record, search, and fetch basic demographics and administrative information about an individual practitioner role in a Philippine context. It specifies which core elements, extensions, vocabularies, and value sets SHALL be present and constrains how the elements are used. It provides the floor for standards development for Philippine use cases."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
 // JAO 2021-0002 Annex B Release 01, HEALTH CARE PROFESSIONAL item 9:
 // Healthcare Professional Category is represented by a code. This maps to the

@@ -7,6 +7,8 @@ Id: ph-core-pwd-disability
 Title: "PH Core PWD Disability Registration"
 Context: Patient
 Description: "Extension for Person With Disability (PWD) registration information. Captures PWD ID number, type of disability, and ID expiration date as issued by the PDAO (Persons with Disability Affairs Office)."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * insert ExperimentalStructureDefinition
 
 * extension contains

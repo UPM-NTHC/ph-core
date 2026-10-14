@@ -3,6 +3,8 @@ Parent: Location
 Id: ph-core-location
 Title: "PH Core Location"
 Description: "This profile localizes the FHIR R4 Location resource to the Philippine context."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
 // ============================================
 // PH Core Specific References

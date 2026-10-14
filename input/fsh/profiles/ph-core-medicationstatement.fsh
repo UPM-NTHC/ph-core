@@ -3,6 +3,8 @@ Parent: MedicationStatement
 Id: ph-core-medicationstatement
 Title: "PH Core Medication Statement"
 Description: "Captures key FHIR Medication Statement data for the Philippine context."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * insert ExperimentalStructureDefinition
 
 // Philippine-specific references

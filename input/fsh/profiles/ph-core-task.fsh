@@ -3,6 +3,8 @@ Parent: Task
 Id: ph-core-task
 Title: "PH Core Task"
 Description: "This profile localizes the FHIR R4 Task resource to the Philippine context."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
 // TODO: Explicitly cite system url when Task is being reviewed
 

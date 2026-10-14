@@ -1,53 +1,20 @@
 <style>
-.ph-scroll {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.ph-table {
+/* Style unclassed narrative tables while excluding Publisher tables that carry
+   classes or generated/presentation attributes. */
+table:not([class]):not([style]):not([border]):not([data-fhir]) {
   border-collapse: collapse;
-  width: 100%;
   margin: 1em 0;
-  font-size: 0.95em;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
-.ph-table thead {
-  display: table-header-group;
-}
-
-.ph-table th {
-  background-color: #555555;
-  color: #ffffff;
-  font-weight: 600;
-  padding: 10px 14px;
-  text-align: left;
-  border: 1px solid #444444;
-}
-
-.ph-table td {
-  padding: 8px 14px;
+table:not([class]):not([style]):not([border]):not([data-fhir]) th,
+table:not([class]):not([style]):not([border]):not([data-fhir]) td {
   border: 1px solid #e2e8f0;
+  padding: 8px 14px;
   vertical-align: top;
 }
 
-.ph-table tbody tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-
-.ph-table tbody tr:nth-child(even) {
-  background-color: #f7fafc;
-}
-
-.ph-table tbody tr:hover {
-  background-color: #ebf8ff;
-  transition: background-color 0.2s ease;
-}
-
-.ph-table td code {
-  background-color: #edf2f7;
-  padding: 2px 6px;
-  border-radius: 3px;
-  font-size: 0.9em;
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 </style>

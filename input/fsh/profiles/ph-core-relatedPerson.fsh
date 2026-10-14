@@ -16,14 +16,14 @@ Description: "This profile localizes the FHIR R4 RelatedPerson resource to the P
 * extension[individualPronouns] ^short = "Individual pronouns"
 
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.description = "Slicing based on identifier system"
 * identifier ^slicing.ordered = false
 * identifier contains
     PHCorePhilHealthID 0..* and
     PHCorePhilSysID 0..*
-* identifier[PHCorePhilHealthID] ^patternIdentifier.system = "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"
+* identifier[PHCorePhilHealthID].system = "http://philhealth.gov.ph/fhir/Identifier/philhealth-id" (exactly)
 * identifier[PHCorePhilHealthID] ^short = "PhilHealth ID"
 * identifier[PHCorePhilHealthID].value ^example[0].extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-suppress].valueBoolean = true // Clears out Example General: 123456
 * identifier[PHCorePhilHealthID].value ^example[1].label = "PhilHealth ID"
@@ -31,7 +31,7 @@ Description: "This profile localizes the FHIR R4 RelatedPerson resource to the P
 * identifier[PHCorePhilHealthID].type = $v2-0203#NH
 * identifier[PHCorePhilHealthID] insert ObligationOptional
 
-* identifier[PHCorePhilSysID] ^patternIdentifier.system = "http://philsys.gov.ph/fhir/Identifier/philsys-id"
+* identifier[PHCorePhilSysID].system = "http://philsys.gov.ph/fhir/Identifier/philsys-id" (exactly)
 * identifier[PHCorePhilSysID] ^short = "PhilSys ID"
 * identifier[PHCorePhilSysID].value ^example[0].extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-suppress].valueBoolean = true // Clears out Example General: 123456
 * identifier[PHCorePhilSysID].value ^example[1].label = "PhilSys ID"

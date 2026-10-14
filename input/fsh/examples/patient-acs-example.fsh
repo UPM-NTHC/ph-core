@@ -18,8 +18,6 @@ Description: "Juan Dela Cruz, 45-year-old Filipino male, residing in City of Las
 * extension[religion].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[religion].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1041 "Roman Catholic Church"
 
-* extension[indigenousPeople].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people"
-* extension[indigenousPeople].valueBoolean = false
 
 * extension[race].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/race"
 * extension[race].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-Race#2036-2 "Filipino"

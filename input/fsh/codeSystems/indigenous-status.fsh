@@ -1,7 +1,7 @@
-CodeSystem: IndigenousGroupsCS
-Id: indigenous-groups-cs
+CodeSystem: IndigenousStatusCS
+Id: indigenous-status-cs
 Title: "Indigenous Groups CodeSystem"
-Description: "A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong."
+Description: "Provisional locally authored list of indigenous-status labels for draft examples. It does not establish an authoritative or exhaustive national classification."
 * insert ShareableCodeSystem
 * #Aetas "Aetas" 
 * #Ati "Ati" 
@@ -35,4 +35,4 @@ Description: "A list of codes representing the recognized indigenous groups in t
 * #Tasaday "Tasaday" 
 * #Tinguian "Tinguian" 
 * #Tumandok "Tumandok" 
-* #Others "Others" 
+* #Others "Others"

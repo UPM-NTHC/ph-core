@@ -7,8 +7,8 @@ Description: "Captures key demographic and administrative information about indi
     http://hl7.org/fhir/StructureDefinition/patient-nationality named nationality 0..* and
     http://hl7.org/fhir/StructureDefinition/patient-religion named religion 0..* and
     http://hl7.org/fhir/StructureDefinition/individual-genderIdentity named genderIdentity 0..* and
-    IndigenousGroup named indigenousGroup 0..* and
-    IndigenousPeople named indigenousPeople 0..1 and
+    IndigenousStatus named indigenousStatus 0..* and
+    // IndigenousPeople named indigenousPeople 0..1 and // removed, capturing indigenousStatus
     Occupation named occupation 0..* and
     Race named race 0..1 and
     EducationalAttainment named educationalAttainment 0..1 and

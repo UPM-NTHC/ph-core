@@ -15,9 +15,9 @@ Description: "Describes the event of a patient being administered a vaccine or a
 * extension[administeredProduct] insert ObligationPopulateIfKnownHandle
 
 * patient only Reference(PHCorePatient) // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; AU Core IG.
-* patient insert ObligationRequired
+* patient insert ObligationClientShouldPopulate
 
-* status insert ObligationRequired // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; AU Core IG.
+* status insert ObligationClientShouldPopulate // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; AU Core IG.
 
 * lotNumber insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; AU Core IG.
 
@@ -28,11 +28,11 @@ Description: "Describes the event of a patient being administered a vaccine or a
 * location insert ObligationPopulateIfKnownHandle // Appraised - Keep - Immu IG: 1 independent source IG marks this path MS: Immunization IG (at least 2 required). Original rule: * location MS
 
 * occurrence[x] only dateTime
-* occurrenceDateTime insert ObligationRequired // Appraised - Keep - Immu IG: 1 independent source IG marks this path MS: Immunization IG (at least 2 required). Original rule: * occurrenceDateTime MS
+* occurrenceDateTime insert ObligationClientShouldPopulate // Appraised - Keep - Immu IG: 1 independent source IG marks this path MS: Immunization IG (at least 2 required). Original rule: * occurrenceDateTime MS
 
 * performer insert ObligationPopulateIfKnownHandle // Appraised - Keep - Immu IG: 1 independent source IG marks this path MS: Immunization IG (at least 2 required). Original rule: * performer MS
 
-* performer.actor insert ObligationRequired // Appraised - Keep - Immu IG: 1 independent source IG marks this path MS: Immunization IG (at least 2 required). Original rule: * performer.actor MS
+* performer.actor insert ObligationClientShouldPopulate // Appraised - Keep - Immu IG: 1 independent source IG marks this path MS: Immunization IG (at least 2 required). Original rule: * performer.actor MS
 * performer.actor only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCoreOrganization) // In FHIR R4 additional Profile was added Patient and RelatedPerson
 
 * performer.actor.display insert ObligationPopulateIfKnownHandle // Appraised - Keep - Immu IG: 1 independent source IG marks this path MS: Immunization IG (at least 2 required). Original rule: * performer.actor.display MS

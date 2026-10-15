@@ -167,6 +167,15 @@ Description: "This profile localizes the FHIR R4 Provenance resource to the Phil
 * agent[ProvenanceTransmitter] insert ObligationPopulateIfKnownHandle
 * agent[ProvenanceTransmitter].onBehalfOf insert ObligationPopulateIfKnownHandle
 
+* target insert ObligationClientShouldPopulate
+* recorded insert ObligationClientShouldPopulate
+* agent[ProvenanceAuthor].type insert ObligationClientShouldPopulate
+* agent[ProvenanceAuthor].who insert ObligationClientShouldPopulate
+* agent[ProvenanceTransmitter].type insert ObligationClientShouldPopulate
+* agent[ProvenanceTransmitter].who insert ObligationClientShouldPopulate
+* agent insert ObligationClientShouldPopulate
+* agent.who insert ObligationClientShouldPopulate
+
 * agent obeys provenance-1
 
 

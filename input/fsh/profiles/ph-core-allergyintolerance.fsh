@@ -6,7 +6,7 @@ Description: "This profile sets minimum expectations for an AllergyIntolerance r
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 0
 
-* patient insert ObligationRequired // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+* patient insert ObligationClientShouldPopulate // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 * patient only Reference(PHCorePatient)
 
 // Manual Appraisal done: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * reaction 0..* MS
@@ -29,4 +29,4 @@ Description: "This profile sets minimum expectations for an AllergyIntolerance r
 // Decision Log. JAO Annex B ALERT items 5-7 describe allergy type and category,
 // not this subpath. The reviewed use case requires a recorded manifestation.
 // MS commented out for manual review: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * reaction.manifestation MS
-* reaction.manifestation insert ObligationRequired
+* reaction.manifestation insert ObligationClientShouldPopulate

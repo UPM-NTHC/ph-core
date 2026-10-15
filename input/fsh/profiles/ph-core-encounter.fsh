@@ -6,11 +6,11 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 0
 
-* status insert ObligationRequired // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
+* status insert ObligationClientShouldPopulate // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
 
-* class insert ObligationRequired // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
+* class insert ObligationClientShouldPopulate // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
 
-* subject insert ObligationRequired // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
+* subject insert ObligationClientShouldPopulate // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
 * subject only Reference(PHCorePatient or Group)
 
 * diagnosis.condition only Reference(PHCoreCondition or PHCoreProcedure) //Add PHCoreCondition once available.

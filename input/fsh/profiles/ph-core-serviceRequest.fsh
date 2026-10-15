@@ -32,10 +32,10 @@ Description: "The PH Core ServiceRequest Profile is a Philippine-specific FHIR p
 // * requester insert ObligationPopulateIfKnownHandle
 
 // Appraised - for removal: independent source IG marks subject MS (Road Safety IG); base 1..1 is inherited.
-// * subject insert ObligationRequired
+// * subject insert ObligationClientShouldPopulate
 
 // Appraised - for removal: independent source IG marks status MS (Road Safety IG); base 1..1 is inherited.
-// * status insert ObligationRequired
+// * status insert ObligationClientShouldPopulate
 
 // Appraised - for removal: independent source IG marks supportingInfo MS (Road Safety IG); base 0..* is inherited.
 // * supportingInfo insert ObligationPopulateIfKnownHandle

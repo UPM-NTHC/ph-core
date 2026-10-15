@@ -3,6 +3,8 @@ Parent: Observation
 Id: ph-core-observation
 Title: "PH Core Observation"
 Description: "Measurements and simple assertions made about a patient, device or other subject."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * subject only Reference(PHCorePatient or Group or Device or Location)
 * encounter only Reference(PHCoreEncounter)
 

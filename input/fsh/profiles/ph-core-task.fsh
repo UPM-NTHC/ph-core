@@ -20,7 +20,7 @@ Description: "This profile localizes the FHIR R4 Task resource to the Philippine
 // Appraised - for removal: 1 independent source IG marks this path MS: Road Safety IG (at least 2 required). Existing note: Task.note - : 0..* MS
 // * note insert ObligationPopulateIfKnownHandle
 // Appraised - for removal: 1 independent source IG marks this path MS: Road Safety IG (at least 2 required). Existing note: Task.status - : 1..1 MS
-// * status insert ObligationRequired
+// * status insert ObligationClientShouldPopulate
 
 // ============================================
 // PH CORE SPECIFIC REFERENCE CONSTRAINTS

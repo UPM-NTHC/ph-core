@@ -13,9 +13,9 @@ Description: "This profile identifies the resources described by an activity, wh
 // Supporting source guidance: https://build.fhir.org/ig/HL7/US-Core/basic-provenance.html
 // Source comparison and development context belong in author comments, not published profile prose.
 // Preserve R4 cardinalities for target, recorded, agent and who without restating them.
-* target insert ObligationRequired
+* target insert ObligationClientShouldPopulate
 * target.reference insert ObligationPopulateIfKnownHandle
-* recorded insert ObligationRequired
+* recorded insert ObligationClientShouldPopulate
 * recorded ^comment = "The time the activity was recorded. Use occurred[x] for when the activity happened, if known."
 
 // Optional local reference constraint; location is not selected as Must Support.
@@ -34,25 +34,25 @@ Description: "This profile identifies the resources described by an activity, wh
 * agent[ProvenanceAuthor] ^short = "Agent responsible for creating or updating the information"
 * agent[ProvenanceAuthor] ^definition = "The individual, organization, or device responsible for the information produced by the activity described in this record."
 * agent[ProvenanceAuthor].type 1..1
-* agent[ProvenanceAuthor].type insert ObligationRequired
+* agent[ProvenanceAuthor].type insert ObligationClientShouldPopulate
 * agent[ProvenanceAuthor].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author
-* agent[ProvenanceAuthor].who insert ObligationRequired
+* agent[ProvenanceAuthor].who insert ObligationClientShouldPopulate
 * agent[ProvenanceAuthor].onBehalfOf insert ObligationPopulateIfKnownHandle
 
 * agent[ProvenanceTransmitter] insert ObligationPopulateIfKnownHandle
 * agent[ProvenanceTransmitter] ^short = "Agent that provided the copy to the receiving system"
 * agent[ProvenanceTransmitter] ^definition = "The entity that provided the copy to the receiving system. It may differ from the author."
 * agent[ProvenanceTransmitter].type 1..1
-* agent[ProvenanceTransmitter].type insert ObligationRequired
+* agent[ProvenanceTransmitter].type insert ObligationClientShouldPopulate
 * agent[ProvenanceTransmitter].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#transmitter
-* agent[ProvenanceTransmitter].who insert ObligationRequired
+* agent[ProvenanceTransmitter].who insert ObligationClientShouldPopulate
 * agent[ProvenanceTransmitter].onBehalfOf insert ObligationPopulateIfKnownHandle
 
 // Apply common reference constraints and obligations to every agent, including other roles.
 // Declare slice support before common support so SUSHI retains slice MS and obligations in its differential.
-* agent insert ObligationRequired
+* agent insert ObligationClientShouldPopulate
 * agent.type insert ObligationPopulateIfKnownHandle
-* agent.who insert ObligationRequired
+* agent.who insert ObligationClientShouldPopulate
 * agent.who only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCoreOrganization or PHCorePatient or PHCoreRelatedPerson or Device)
 * agent.onBehalfOf insert ObligationPopulateIfKnownHandle
 * agent.onBehalfOf only Reference(PHCoreOrganization)

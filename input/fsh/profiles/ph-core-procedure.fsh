@@ -6,12 +6,12 @@ Description: "An action that is or was performed on or for a patient, practition
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 0
 * subject only Reference(PHCorePatient or Group)
-* subject insert ObligationRequired // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+* subject insert ObligationClientShouldPopulate // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
 * encounter only Reference(PHCoreEncounter)
 * encounter insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
-* status insert ObligationRequired // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+* status insert ObligationClientShouldPopulate // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
 * performed[x] insert ObligationPopulateIfKnownHandle // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * performed[x] MS
 

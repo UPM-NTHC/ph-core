@@ -159,8 +159,15 @@ Description: "This profile localizes the FHIR R4 Provenance resource to the Phil
 // INVARIANTS (from US Core Provenance)
 // ============================================
 
-* agent obeys provenance-1
+* target.reference insert ObligationPopulateIfKnownHandle
+* agent.type insert ObligationPopulateIfKnownHandle
+* agent.onBehalfOf insert ObligationPopulateIfKnownHandle
+* agent[ProvenanceAuthor] insert ObligationPopulateIfKnownHandle
+* agent[ProvenanceAuthor].onBehalfOf insert ObligationPopulateIfKnownHandle
+* agent[ProvenanceTransmitter] insert ObligationPopulateIfKnownHandle
+* agent[ProvenanceTransmitter].onBehalfOf insert ObligationPopulateIfKnownHandle
 
+* agent obeys provenance-1
 
 
 Invariant: provenance-1

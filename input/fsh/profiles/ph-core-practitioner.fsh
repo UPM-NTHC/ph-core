@@ -20,20 +20,20 @@ Description: "The PH Core Practitioner Profile inherits from the [FHIR R4 Practi
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * name MS
 * name.given ^short = "First name (given[0]) and Middle Name (given[1])."
 * name.given ^definition = "First name (given[0]) and Middle Name (given[1])."
-* name insert ObligationOptional
+* name insert ObligationPopulateIfKnownHandle
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * name.family MS
-* name.family insert ObligationOptional
+* name.family insert ObligationPopulateIfKnownHandle
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * name.given MS
-* name.given insert ObligationOptional
+* name.given insert ObligationPopulateIfKnownHandle
 
 // Remove - not sufficient evidence: 0 independent source IGs mark this exact path MS (at least 2 required). Original rule: * telecom MS
-// * telecom insert ObligationOptional
+// * telecom insert ObligationPopulateIfKnownHandle
 
 // Remove - not sufficient evidence: 0 independent source IGs mark this exact path MS (at least 2 required). Original rule: * address MS
-// * address insert ObligationOptional
+// * address insert ObligationPopulateIfKnownHandle
 * address only PHCoreAddress
 
 // Remove - not sufficient evidence: 0 independent source IGs mark this exact path MS (at least 2 required). Original rule: * birthDate MS
-// * birthDate insert ObligationOptional
+// * birthDate insert ObligationPopulateIfKnownHandle
 // Remove - not sufficient evidence: 0 independent source IGs mark this exact path MS (at least 2 required). Original rule: * gender MS
-// * gender insert ObligationOptional
+// * gender insert ObligationPopulateIfKnownHandle

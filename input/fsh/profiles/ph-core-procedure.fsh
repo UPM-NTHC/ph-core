@@ -9,14 +9,14 @@ Description: "An action that is or was performed on or for a patient, practition
 * subject insert ObligationRequired // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
 * encounter only Reference(PHCoreEncounter)
-* encounter insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+* encounter insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
 * status insert ObligationRequired // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
-* performed[x] insert ObligationOptional // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * performed[x] MS
+* performed[x] insert ObligationPopulateIfKnownHandle // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * performed[x] MS
 
 * reasonReference only Reference(Condition or PHCoreObservation or PHCoreProcedure or DiagnosticReport or DocumentReference)
-* reasonReference insert ObligationOptional // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * reasonReference MS
+* reasonReference insert ObligationPopulateIfKnownHandle // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * reasonReference MS
 
 * basedOn only Reference(CarePlan or ServiceRequest) // Note: No changes to Base FHIR, but Re-declared here for convenience of adjusting when new PH Core profiles are added
 * partOf only Reference(PHCoreProcedure or Observation or MedicationAdministration)

@@ -85,7 +85,7 @@ The PH Core IG is developed through a collaborative, open, and standards-based p
 
 **PH Core:**
 
-- defines local representations, reference constraints, terminology bindings and explicitly selected actor obligations. This draft does not publish a server CapabilityStatement or a uniform requirement to implement every REST interaction.
+- defines local representations, reference constraints, terminology bindings and explicitly selected actor obligations. The [Client and Server conformance requirements](client-server-conformance.html) define selectable REST capabilities without requiring every system to implement every profile or interaction.
 - for use by the stakeholders in the Philippines when implementing FHIR to provide a common implementation and to be built upon when creating further profiles and implementation guides.
 - conformance may become tied to regulatory and/or contractual agreements in order to necessitate adoption to this more prescriptive specification.
 

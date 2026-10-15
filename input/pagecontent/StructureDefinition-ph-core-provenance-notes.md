@@ -19,7 +19,7 @@ To validate `provenance-1`, provide access to the resource referenced by `agent.
 
 ### Actor responsibilities
 
-| Selected paths | Creator | Server and Consumer |
+| Selected paths | Client and Server when producing resources | Client and Server when receiving resources |
 |----------------|---------|---------------------|
 | `target`, `recorded`, `agent`, `agent.who`, and `type` in each named agent slice | **SHALL** be able to populate these elements. | **SHALL** handle these elements. |
 | `target.reference`, general `agent.type`, each named agent slice, and `agent.onBehalfOf` | **MAY** be able to populate these elements. | **SHALL** handle these elements. |

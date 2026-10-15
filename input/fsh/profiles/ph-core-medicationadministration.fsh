@@ -19,4 +19,4 @@ Description: "Captures key FHIR Medication Administration data for the Philippin
 // Philippine-specific binding for medication codes
 * medication[x] only CodeableConcept or Reference(PHCoreMedication)
 * medicationCodeableConcept from DrugsVS (preferred)
-* medication[x] insert ObligationOptional
+* medication[x] insert ObligationPopulateIfKnownHandle

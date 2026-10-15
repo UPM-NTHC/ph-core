@@ -31,7 +31,7 @@ Description: "This profile localizes the FHIR R4 RelatedPerson resource to the P
 * identifier[PHCorePhilHealthID].value ^example[1].label = "PhilHealth ID"
 * identifier[PHCorePhilHealthID].value ^example[1].valueString = "nn-nnnnnnnnn-n"
 * identifier[PHCorePhilHealthID].type = $v2-0203#NH
-* identifier[PHCorePhilHealthID] insert ObligationOptional
+* identifier[PHCorePhilHealthID] insert ObligationPopulateIfKnownHandle
 
 * identifier[PHCorePhilSysID].system = "http://philsys.gov.ph/fhir/Identifier/philsys-id" (exactly)
 * identifier[PHCorePhilSysID] ^short = "PhilSys ID"
@@ -39,16 +39,16 @@ Description: "This profile localizes the FHIR R4 RelatedPerson resource to the P
 * identifier[PHCorePhilSysID].value ^example[1].label = "PhilSys ID"
 * identifier[PHCorePhilSysID].value ^example[1].valueString = "1234-5678-9101-1213"
 * identifier[PHCorePhilSysID].type = $v2-0203#NI
-* identifier[PHCorePhilSysID] insert ObligationOptional
+* identifier[PHCorePhilSysID] insert ObligationPopulateIfKnownHandle
 
 // MS commented out for manual review: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * address MS
-* address insert ObligationOptional
+* address insert ObligationPopulateIfKnownHandle
 * address only PHCoreAddress
 
 // MS commented out for manual review: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * telecom MS
-* telecom insert ObligationOptional
+* telecom insert ObligationPopulateIfKnownHandle
 
-* name insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; AU Core IG.
+* name insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; AU Core IG.
 * name.given ^short = "First name (given[0]) and Middle Name (given[1])."
 * name.given ^definition = "First name (given[0]) and Middle Name (given[1])."
 

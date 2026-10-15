@@ -10,7 +10,6 @@ Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus
 * subject = Reference(Patient/patient-single-example)
 * encounter = Reference(Encounter/encounter-single-example)
 * onsetDateTime = "2020-03-15"
-* recordedDate = "2020-03-15T10:30:00Z"
+* recordedDate = "2025-03-15T09:00:00+08:00"
+// The source reports onset in 2020; the problem is documented at this follow-up visit.
 * note.text = "Patient advised on diet and exercise management."
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</div>"

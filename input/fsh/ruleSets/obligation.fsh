@@ -85,12 +85,6 @@ RuleSet: ObligationRecommended
 * insert ObligationHandleBothActors
 * insert ObligationProduceBothActors(#SHOULD:able-to-populate)
 
-// Optional capability retained for existing profile insertions in this stack layer.
-// The following population-policy layer migrates these calls and removes this RuleSet.
-RuleSet: ObligationOptional
-* insert ObligationHandleBothActors
-* insert ObligationProduceBothActors(#MAY:able-to-populate)
-
 // Client presentation recommendation, applicable when content is shown to humans.
 // Does not require a headless application to add a UI or apply to Server presentation.
 RuleSet: ObligationClientDisplay

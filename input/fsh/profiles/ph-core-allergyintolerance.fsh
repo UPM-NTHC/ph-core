@@ -10,20 +10,20 @@ Description: "This profile sets minimum expectations for an AllergyIntolerance r
 * patient only Reference(PHCorePatient)
 
 // Manual Appraisal done: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * reaction 0..* MS
-* reaction insert ObligationOptional // Rationale to keep, AU Core wisdom holds good clinical weight to capture what kind of reaction happened
+* reaction insert ObligationPopulateIfKnownHandle // Rationale to keep, AU Core wisdom holds good clinical weight to capture what kind of reaction happened
 
 
 // Manual Appraisal done:  1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * reaction.severity 0..1 MS
-* reaction.severity insert ObligationOptional // Rationale to keep: AU Core wisdom
+* reaction.severity insert ObligationPopulateIfKnownHandle // Rationale to keep: AU Core wisdom
 
 
 
 // Manual Appraisal: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * onset[x] 0..1 MS
-* onset[x] insert ObligationOptional // Rationale to keep: AU Core wisdom
+* onset[x] insert ObligationPopulateIfKnownHandle // Rationale to keep: AU Core wisdom
 
 
 // Manual Appraisal: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * note 0..* MS
-* note insert ObligationOptional // Rationale to keep: Common asked method to capture free text
+* note insert ObligationPopulateIfKnownHandle // Rationale to keep: Common asked method to capture free text
 
 // Human-appraisal exception to JAO v0.3.0 direct mapping rule; see the
 // Decision Log. JAO Annex B ALERT items 5-7 describe allergy type and category,

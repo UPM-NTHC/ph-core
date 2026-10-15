@@ -11,26 +11,26 @@ Description: "The PH Core Practitioner Role Profile inherits from the [FHIR R4 P
 // eReferral/NHDR practitioner-role exchange use case recorded in PR #160.
 // MS: role exchange for eReferral and NHDR (PR #160).
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * code 0..* MS
-* code insert ObligationOptional
+* code insert ObligationPopulateIfKnownHandle
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * identifier 0..* MS
-* identifier insert ObligationOptional
+* identifier insert ObligationPopulateIfKnownHandle
 
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * telecom 0..* MS
-* telecom insert ObligationOptional
+* telecom insert ObligationPopulateIfKnownHandle
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * telecom.system 0..1 MS
-* telecom.system insert ObligationOptional
+* telecom.system insert ObligationPopulateIfKnownHandle
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * telecom.value 0..1 MS
-* telecom.value insert ObligationOptional
+* telecom.value insert ObligationPopulateIfKnownHandle
 
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * specialty 0..* MS
-* specialty insert ObligationOptional
+* specialty insert ObligationPopulateIfKnownHandle
 
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * practitioner 0..1 MS
-* practitioner insert ObligationOptional
+* practitioner insert ObligationPopulateIfKnownHandle
 * practitioner only Reference(PHCorePractitioner)
 
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * organization 0..1 MS
-* organization insert ObligationOptional
+* organization insert ObligationPopulateIfKnownHandle
 * organization only Reference(PHCoreOrganization)
 
 * location only Reference(PHCoreLocation)

@@ -6,21 +6,21 @@ Description: "This profile sets minimum expectations for a HealthcareService res
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 0
 
-* identifier insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+* identifier insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
 // Appraised - for removal: 1 independent source IG marks this path MS: Road Safety IG (at least 2 required). Original rule: * active MS
-//* active insert ObligationOptional
+//* active insert ObligationPopulateIfKnownHandle
 
 // Appraised - for removal: 1 independent source IG marks this path MS: Road Safety IG (at least 2 required). Original rule: * providedBy MS
-// * providedBy insert ObligationOptional
+// * providedBy insert ObligationPopulateIfKnownHandle
 * providedBy only Reference(PHCoreOrganization)
 
 // Appraised - for removal: 1 independent source IG marks this path MS: Road Safety IG (at least 2 required). Original rule: * location MS
-// * location insert ObligationOptional
+// * location insert ObligationPopulateIfKnownHandle
 * location only Reference(PHCoreLocation)
 
 * coverageArea only Reference(PHCoreLocation)
 
 * name insert ObligationRecommended // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
-* telecom insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+* telecom insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.

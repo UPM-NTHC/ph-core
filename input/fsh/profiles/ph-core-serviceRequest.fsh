@@ -14,22 +14,22 @@ Description: "The PH Core ServiceRequest Profile is a Philippine-specific FHIR p
 // Vibe Code Cleaning ~ removed the data elements below. Need to confirm with the author if there is any intent to keep.
 
 // Appraised - for removal: 0 independent source IGs mark authoredOn MS; its 0..1 cardinality is inherited from FHIR R4 ServiceRequest.
-// * authoredOn insert ObligationOptional
+// * authoredOn insert ObligationPopulateIfKnownHandle
 
 // Appraised - for removal: 0 independent source IGs mark category MS. Base 0..* is inherited; a national category slice may be added when defined.
-// * category insert ObligationOptional
+// * category insert ObligationPopulateIfKnownHandle
 
 // Appraised - for removal: independent source IG marks encounter MS (Road Safety IG); base 0..1 is inherited.
-// * encounter insert ObligationOptional
+// * encounter insert ObligationPopulateIfKnownHandle
 
 // Appraised - for removal: 0 independent source IGs mark occurrence[x] MS; its 0..1 cardinality is inherited from FHIR R4 ServiceRequest.
-// * occurrence[x] insert ObligationOptional
+// * occurrence[x] insert ObligationPopulateIfKnownHandle
 // occurrenceDateTime is the FSH path for the dateTime choice of occurrence[x]; it inherits the same base 0..1 cardinality.
-// * occurrenceDateTime insert ObligationOptional
+// * occurrenceDateTime insert ObligationPopulateIfKnownHandle
 // * occurrenceDateTime ^extension[$obligation][0].extension[documentation].valueMarkdown = "Handling the supported dateTime representation of the recorded service occurrence."
 
 // Appraised - for removal: 0 independent source IGs mark requester MS; its 0..1 cardinality is inherited from FHIR R4 ServiceRequest.
-// * requester insert ObligationOptional
+// * requester insert ObligationPopulateIfKnownHandle
 
 // Appraised - for removal: independent source IG marks subject MS (Road Safety IG); base 1..1 is inherited.
 // * subject insert ObligationRequired
@@ -38,4 +38,4 @@ Description: "The PH Core ServiceRequest Profile is a Philippine-specific FHIR p
 // * status insert ObligationRequired
 
 // Appraised - for removal: independent source IG marks supportingInfo MS (Road Safety IG); base 0..* is inherited.
-// * supportingInfo insert ObligationOptional
+// * supportingInfo insert ObligationPopulateIfKnownHandle

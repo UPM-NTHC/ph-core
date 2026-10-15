@@ -25,7 +25,7 @@ Description: "This profile sets minimum expectations for an Encounter resource t
 
 * reasonReference only Reference(PHCoreCondition or PHCoreObservation or PHCoreProcedure or ImmunizationRecommendation) //Add PHCoreCondition and PHCoreImmunizationRecommendation once available.
 
-* participant insert ObligationOptional // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
+* participant insert ObligationPopulateIfKnownHandle // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
 
-* serviceProvider insert ObligationOptional // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
+* serviceProvider insert ObligationPopulateIfKnownHandle // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
 * serviceProvider only Reference(PHCoreOrganization)

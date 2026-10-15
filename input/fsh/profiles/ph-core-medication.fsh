@@ -7,5 +7,5 @@ Description: "This resource is primarily used for the identification and definit
 * ^extension[=].valueInteger = 0
 * insert ExperimentalStructureDefinition
 * code 1..
-* code insert ObligationOptional
+* code insert ObligationPopulateIfKnownHandle
 * code from DrugsVS (preferred)

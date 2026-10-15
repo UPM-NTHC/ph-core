@@ -135,13 +135,13 @@ and the [Obligation extension](https://hl7.org/fhir/extensions/StructureDefiniti
 - A use-case-backed required cardinality constraint (`1..1` or `1..*`)
   **SHALL** have MS and `ObligationRequired`.
 - A use-case-selected MS element with an explicitly constrained optional
-  cardinality (`0..1` or `0..*`) **SHALL** have `ObligationOptional` unless the
+  cardinality (`0..1` or `0..*`) **SHALL** have `ObligationPopulateIfKnownHandle` unless the
   use case justifies a different actor obligation.
 
 ```fsh
 // Patient.birthDate remains 0..1 in the base; select it without restating that cardinality
 * birthDate MS
-* birthDate insert ObligationOptional
+* birthDate insert ObligationPopulateIfKnownHandle
 
 // Example of a justified constraint: strengthen Patient.name from base 0..* to 1..*
 * name 1..* MS
@@ -161,7 +161,7 @@ and the [Obligation extension](https://hl7.org/fhir/extensions/StructureDefiniti
 ```fsh
 // Practitioner role selected for eReferral/NHDR exchange (PR #160); code is base 0..*
 * code MS
-* code insert ObligationOptional
+* code insert ObligationPopulateIfKnownHandle
 ```
 
 ### Rule 3: Required FHIR Elements and subelements/subpaths
@@ -198,12 +198,12 @@ The reusable `Obligation*` RuleSets remain available:
 |---------|---------------------------------------------|-----------------------------------------------------|
 | `ObligationRequired` | `SHALL:able-to-populate` | `SHALL:handle` |
 | `ObligationRecommended` | `SHOULD:able-to-populate` | `SHALL:handle` |
-| `ObligationOptional` | `MAY:able-to-populate` | `SHALL:handle` |
+| `ObligationPopulateIfKnownHandle` | `SHALL:populate-if-known` | `SHALL:handle` |
 
 - Authors **MUST** distinguish API role from resource production/consumption.
 - Population duties apply only when producing resources for supported interactions; a read-only Client does not need authoring capability.
 - Authors **MUST** retain the distinction between `able-to-populate`, `populate-if-known`, `populate`, cardinality and MS. Changes to population duties **MUST** be reviewed independently of actor naming or element cardinality.
-- `ObligationOptional` still requires correct handling of received content; optional population capability does not make handling optional.
+- `ObligationPopulateIfKnownHandle` requires population of known, shareable values when producing resources and correct handling when processing received content. It does not require a system to be capable of ever knowing a value. These are separate duties, not an if/else branch; omission still **MUST** satisfy the profile constraints.
 - See [Client and Server conformance](../input/pagecontent/client-server-conformance.md).
 - Changes **SHALL** be checked in generated differentials and snapshots and
   validated with SUSHI and IG Publisher.

@@ -194,16 +194,17 @@ and the [Obligation extension](https://hl7.org/fhir/extensions/StructureDefiniti
 
 The reusable `Obligation*` RuleSets remain available:
 
-| RuleSet | Creator behavior | Server and Consumer behavior |
-|---------|------------------|------------------------------|
+| RuleSet | Client and Server when producing resources | Client and Server when processing received resources |
+|---------|---------------------------------------------|-----------------------------------------------------|
 | `ObligationRequired` | `SHALL:able-to-populate` | `SHALL:handle` |
 | `ObligationRecommended` | `SHOULD:able-to-populate` | `SHALL:handle` |
 | `ObligationOptional` | `MAY:able-to-populate` | `SHALL:handle` |
 
-- Authors **MUST** distinguish capability (`able-to-populate`) from mandatory
-  instance population (`populate`) when designating obligations.
-- `ObligationOptional` still requires Server and Consumer `SHALL:handle`;
-  optional Creator capability does not make those handling responsibilities optional.
+- Authors **MUST** distinguish API role from resource production/consumption.
+- Population duties apply only when producing resources for supported interactions; a read-only Client does not need authoring capability.
+- Authors **MUST** retain the distinction between `able-to-populate`, `populate-if-known`, `populate`, cardinality and MS. Changes to population duties **MUST** be reviewed independently of actor naming or element cardinality.
+- `ObligationOptional` still requires correct handling of received content; optional population capability does not make handling optional.
+- See [Client and Server conformance](../input/pagecontent/client-server-conformance.md).
 - Changes **SHALL** be checked in generated differentials and snapshots and
   validated with SUSHI and IG Publisher.
 
@@ -508,10 +509,18 @@ PH Core follows **CamelCase with explicit suffixes** (established Feb-Mar 2026 v
 | **ValueSet** | `{Name}VS` or `{Plural}` | `{kebab}-vs` or `{plural}` | `{name}.fsh` | `Regions`, `regions.fsh` |
 | **NamingSystem** | `{System}NS` | `{system}-ns` | `{system}-ns.fsh` | `PhilHealthIDNS`, `philhealth-id-ns.fsh` |
 | **Example** | `{resource}-{scenario}-example` | (same as name) | `{id}.fsh` | `patient-single-example.fsh` |
-| **Actor** | `{Noun}` | `{noun}` | `{noun}.fsh` | `Server`, `server.fsh` |
+| **Actor Instance** | `PHCore{Role}` | SUSHI-generated | `{role}.fsh` | `PHCoreServer`, `server.fsh` |
+| **CapabilityStatement Instance** | `PHCore{Role}CapabilityStatement` | SUSHI-generated | `ph-core-{role}.fsh` | `PHCoreServerCapabilityStatement` |
 | **RuleSet** | `{PascalCaseDescription}` | (inline only) | `{description}.fsh` | `ObligationRequired`, `obligation.fsh` |
 | **Alias (External)** | `${UPPERCASE}` | N/A | aliases.fsh | `$sct`, `$PSOC` |
-| **Alias (Actor)** | `${lowercase}` | N/A | aliases.fsh | `$server`, `$creator` |
+| **Actor canonical reference** | `Canonical({InstanceName})` | SUSHI-generated | Actor Instance | `Canonical(PHCoreServer)`, `Canonical(PHCoreClient)` |
+
+Actor and CapabilityStatement Instances **SHALL** use distinct names and let
+stock SUSHI generate their IDs and canonical URLs. Authors **SHALL NOT** override
+`id` or `url` for these Instances. Actor references **SHALL** use `Canonical(...)`
+instead of hardcoded actor URL aliases. Publication metadata is declared inline
+in each actor and CapabilityStatement FSH file; keep the Client and Server
+publication fields aligned when updating them.
 
 **Key Points:**
 - Profile names use `PHCore` prefix (PascalCase)

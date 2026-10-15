@@ -1,12 +1,28 @@
-Instance: Server
+Instance: PHCoreServer
 InstanceOf: ActorDefinition
 Title: "PH Core Server"
-Description: "A PH Core Server is a FHIR server that stores and provides access to PH Core resources."
+Description: "A system that accepts FHIR API requests and provides responses using PH Core resources."
 Usage: #definition
+// * name = "PHCoreServer"
+// * title = "PH Core Server"
+// * version = "0.2.1"
 * status = #draft
+* date = "2026-10-15"
+// * language = #en
+// * publisher = "UP Manila National TeleHealth Center"
+// * contact[0].name = "UP Manila National TeleHealth Center"
+// * contact[=].telecom[0].system = #url
+// * contact[=].telecom[=].value = "https://github.com/UP-NTHC"
+// * jurisdiction = urn:iso:std:iso:3166#PH "Philippines"
 * type = #system
-* name = "Server"
-* title = "PH Core Server"
-* experimental = false
-* description = "A PH Core Server is a FHIR server that stores and provides access to PH Core resources in response to FHIR API requests."
-* documentation = "A PH Core Server is a FHIR server that stores and provides access to PH Core resources. This includes health information exchanges (HIEs), national health data repositories, and facility-based FHIR servers that store and serve PH Core conformant resources."
+// FMM 0: draft, not yet balloted for implementation maturity.
+// The structuredefinition-fmm context permits Resource/DomainResource, including these definitions.
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* extension[=].valueInteger = 0
+* description = "A system that accepts FHIR API requests and provides responses using PH Core resources."
+* documentation = "A PH Core Server accepts FHIR API requests and provides responses containing PH Core resources. It fulfills population obligations when producing response resources and correctly handles resources in supported incoming write requests. It may store, generate, aggregate or proxy resources; it is not required to originate clinical facts or support every write interaction. The role applies to the request being answered; a system may also act as a PH Core Client in other exchanges. The API requirements are defined in the [PH Core Server CapabilityStatement](CapabilityStatement-PHCoreServerCapabilityStatement.html)."
+// Preserve the R5 capabilities association in the published R4 Basic backport.
+// The current Publisher uses an R6 ActorDefinition model without the native capabilities field.
+// R4 pattern: https://hl7.org.au/fhir/core/2.0.0/ActorDefinition-au-core-actor-requester.json
+* extension[+].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.capabilities"
+* extension[=].valueCanonical = Canonical(PHCoreServerCapabilityStatement)

@@ -5,14 +5,14 @@ Description: "Philippine General Hospital (PGH) — A government tertiary hospit
 
 * active = true
 
-* identifier[NhfrCode].system = "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"
-* identifier[NhfrCode].value = "1234567890"
+* identifier[0].system = "https://nhfr.doh.gov.ph/"
+* identifier[=].value = "1234567890"
 
-* identifier[PAN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
-* identifier[PAN].value = "PAN-2024-56789"
+* identifier[+].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"
+* identifier[=].value = "PAN-2024-56789"
 
-* identifier[PEN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"
-* identifier[PEN].value = "PEN-987654321"
+* identifier[+].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"
+* identifier[=].value = "PEN-987654321"
 
 * name = "Philippine General Hospital"
 
@@ -34,9 +34,10 @@ Description: "Philippine General Hospital (PGH) — A government tertiary hospit
 * address.postalCode = "1000"
 * address.country = "PH"
 
-* address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region (NCR)"
-* address.extension[cityMunicipality].valueCoding = $PSGC#1380600000 "City of Manila"
-* address.extension[barangay].valueCoding = $PSGC#1339000003 "Ermita"
+* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"
+* address.extension[=].valueCoding = $PSGC#1300000000
+* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"
+* address.extension[=].valueCoding = $PSGC#1380600000
 
 * contact.name.text = "Hospital Administrator"
 * contact.telecom.system = #phone
@@ -46,6 +47,7 @@ Description: "Philippine General Hospital (PGH) — A government tertiary hospit
 * contact.address.city = "Manila"
 * contact.address.postalCode = "1000"
 * contact.address.country = "PH"
-* contact.address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region (NCR)"
-* contact.address.extension[cityMunicipality].valueCoding = $PSGC#1380600000 "City of Manila"
-* contact.address.extension[barangay].valueCoding = $PSGC#1339000003 "Ermita"
+* contact.address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"
+* contact.address.extension[=].valueCoding = $PSGC#1300000000
+* contact.address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"
+* contact.address.extension[=].valueCoding = $PSGC#1380600000

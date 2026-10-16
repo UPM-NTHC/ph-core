@@ -6,6 +6,8 @@ PH Core uses `given[0]` for the complete first name and `given[1]` for a supplie
 
 Preserve the name reported by the person or source record. Do not infer a middle name from a parent's name, create an empty middle-name entry, or split a multiword first name merely to fill an array position. When a source cannot distinguish name parts, preserve its supplied text in `HumanName.text` until those parts can be confirmed.
 
+Name remains optional. Each supplied name SHALL contain a real `family`, `given` or `text` value, or the standard Data Absent Reason extension explaining why the whole name is missing. A name SHALL NOT contain both real name content and a whole-name absence reason. Missing individual optional name parts do not require placeholders. See the [missing-data rules](client-server-conformance.html#missing-data).
+
 ### Birth date and recorded age
 
 Use `birthDate` for a birth date supported by the source. A known year can be recorded as `YYYY`; a known year and month as `YYYY-MM`; a known complete date as `YYYY-MM-DD`. Partial dates describe known calendar components, not a birth date inferred from completed age.

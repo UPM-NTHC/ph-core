@@ -14,6 +14,9 @@ Description: "An action that is or was performed on or for a patient, practition
 * status insert ObligationClientShouldPopulate // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
 * performed[x] insert ObligationPopulateIfKnownHandle // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * performed[x] MS
+// Source: USCoreProcedureProfile.fsh applies us-core-7. This is a conditional
+// performed-presence rule, not a US Core DAR slice or primitive DAR invariant.
+* obeys ph-pro-001
 
 * reasonReference only Reference(Condition or PHCoreObservation or PHCoreProcedure or DiagnosticReport or DocumentReference)
 * reasonReference insert ObligationPopulateIfKnownHandle // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * reasonReference MS

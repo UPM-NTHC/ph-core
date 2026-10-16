@@ -1,5 +1,10 @@
 Alias: $sct = http://snomed.info/sct
 Alias: $loinc = http://loinc.org
+// The extension canonical and the terminology system have different roles.
+// Pin the R4 extension-pack definition already used by this IG. Instances retain
+// the unversioned extension.url; the version qualifies profile references only.
+Alias: $data-absent-reason-extension = http://hl7.org/fhir/StructureDefinition/data-absent-reason|5.3.0
+Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $PSA = https://psa.gov.ph/classification
 Alias: $PSCED = https://psa.gov.ph/classification/psced/level

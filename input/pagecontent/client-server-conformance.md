@@ -8,6 +8,30 @@ Read-only Clients do not need to implement resource authoring. Servers do not ne
 
 The ActorDefinitions describe roles, profile obligations describe element behavior, and CapabilityStatements describe the API contract. None replaces the other. A Cardinality constraint remains an instance constraint regardless of actor.
 
+### Missing data
+
+These rules apply to producers of request or response resources and to systems exchanging PH Core profiles outside REST. They apply together with the selected profile's cardinalities, bindings, invariants and actor obligations.
+
+- Producers SHALL include known, shareable values where the selected population obligation requires them. A missing value does not excuse omission of a known value.
+- When an optional value and any meaningful reason for its absence are unavailable, producers SHALL omit the element. Must Support alone does not require an unknown placeholder, a new collection workflow or a fabricated value.
+- Producers SHOULD preserve a known, shareable absence reason when the applicable profile permits it and that reason is relevant to the exchange. An optional element MAY carry an explicit absence reason; it need not be made mandatory to communicate that reason.
+- Mandatory elements and conditionally required content SHALL satisfy the applicable profile even when the real value is unavailable. For a permitted non-coded datatype, use the standard [Data Absent Reason extension](https://hl7.org/fhir/R4/extension-data-absent-reason.html). For a missing required date with no more specific known reason, use `unknown`.
+- An absence reason on a parent SHALL NOT be treated as satisfying required children, fixed values or other constraints. The Patient name constraint and inherited Observation result constraint define their respective value/absence exclusions.
+
+The general extension representation rules do not establish a named DAR slice, support obligation or new invariant on each primitive in PH Core. Known partial dates retain their recorded precision; do not invent dates to fill missing information.
+
+For Observations, use `Observation.dataAbsentReason` for an absent top-level result and `Observation.component.dataAbsentReason` for an absent component result, as illustrated in blood-pressure examples. A top-level result value and its native absence reason SHALL NOT coexist under inherited R4 `obs-6`. The [Clinical Result profile](StructureDefinition-ph-core-observation-clinical-result.html) requires a value or reason for an individual result without components or member observations. Panels may instead carry their results through `component` or `hasMember`; they do not need a top-level reason solely because they have no scalar value. The generic Observation profile does not gain additional DAR obligations or component-presence invariants from this guidance.
+
+For coded elements, preserve meaningful source text when the datatype and binding permit it. For extensible bindings, an appropriate concept in the bound value set SHALL be used when available. Use an appropriate exceptional concept from the applicable value set before considering an allowed external absence code. For a selected screening question whose answer value set contains an appropriate exceptional answer, use that answer in `valueCodeableConcept`; otherwise use native Observation DAR when appropriate. Required bindings SHALL be respected: generic DAR coding outside the required value set is not a replacement for a bound status or intent. If no truthful conformant representation exists, follow the applicable exchange's error or reconciliation process rather than invent a value. This guidance does not add custom hasValue() invariants to status or intent.
+
+`unknown`, `not-asked`, `asked-declined`, `masked` and `not-applicable` convey different facts. Producers SHALL select the reason supported by the source and SHALL NOT infer refusal or masking from a blank field. Absence of an allergy record does not assert no known allergies. Use an appropriate clinical assertion for known negative findings.
+
+Patient names and national identifiers remain optional. Preserve meaningful text-only names when their parts cannot be distinguished. Omit unknown optional race, indigenous-status, occupation and geographic items by default; their existing structures and bindings still apply. `Others` is not an unknown indigenous classification, and DAR is not a geographic identity.
+
+Processors SHALL correctly interpret supported absence representations as missing content with the stated reason, rather than as actual dates, measurements, identifiers or clinical negative findings. Handling does not automatically require persistence or display. When displaying an absence reason, present its meaning and preserve the distinction from a measured value. Validation of an instance and compliance with a producer's known-value obligations are separate checks.
+
+See the [missing-data examples](examples.html#missing-data-examples) for the Patient name extension, native Observation reasons and optional omission. The named Patient DAR slice follows US Core's explicit missing-name pattern; allowing meaningful name.text is a PH adaptation. General missing-data guidance is not evidence that US Core declares a DAR slice on every optional field.
+
 ### Declaring support
 
 The [Client CapabilityStatement](CapabilityStatement-PHCoreClientCapabilityStatement.html) supplies the basic request-initiator requirements. The [Server CapabilityStatement](CapabilityStatement-PHCoreServerCapabilityStatement.html) contains the resource and search catalog. Both are requirements statements, not claims that a particular deployment implements all catalog entries.

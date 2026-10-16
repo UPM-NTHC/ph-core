@@ -1,5 +1,17 @@
 ### Example scenarios
 
+### Missing data examples
+
+These three examples illustrate distinct DAR placements from the [missing-data policy](client-server-conformance.html#missing-data).
+
+| Representation | Example |
+| --- | --- |
+| Unknown whole name | [Explicit name absence reason](Patient-patient-explicit-absence-example.html) |
+| Missing individual clinical result | [Glucose result unavailable](Observation-observation-result-unavailable.html) |
+| Missing component alongside a measured component | [Blood pressure component unavailable](Observation-observation-component-unavailable.html) |
+
+### Connected scenarios
+
 These synthetic datasets show how PH Core representations connect across resources. They are informative examples, not clinical protocols, registry records, PhilHealth claim-submission specifications or additional conformance requirements. Identifiers, contact details and event times are invented for illustration.
 
 The examples are organized by scenario. Juan Dela Cruz (born 1 January 1980) and Miguel Reyes (born 15 March 1981) are different synthetic patients with different example PhilHealth IDs. Repeated clinician names represent illustrative roles, not assertions about actual people.

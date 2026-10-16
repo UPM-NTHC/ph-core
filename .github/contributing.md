@@ -512,6 +512,7 @@ PH Core follows **CamelCase with explicit suffixes** (established Feb-Mar 2026 v
 | **Actor Instance** | `PHCore{Role}` | SUSHI-generated | `{role}.fsh` | `PHCoreServer`, `server.fsh` |
 | **CapabilityStatement Instance** | `PHCore{Role}CapabilityStatement` | SUSHI-generated | `ph-core-{role}.fsh` | `PHCoreServerCapabilityStatement` |
 | **RuleSet** | `{PascalCaseDescription}` | (inline only) | `{description}.fsh` | `ObligationRequired`, `obligation.fsh` |
+| **Invariant** | `ph-{abbr}-{NNN}` | `ElementDefinition.constraint.key` | Topic file in `input/fsh/invariants/`, or inline in the owning profile | `ph-pat-001` |
 | **Alias (External)** | `${UPPERCASE}` | N/A | aliases.fsh | `$sct`, `$PSOC` |
 | **Actor canonical reference** | `Canonical({InstanceName})` | SUSHI-generated | Actor Instance | `Canonical(PHCoreServer)`, `Canonical(PHCoreClient)` |
 
@@ -530,6 +531,46 @@ publication fields aligned when updating them.
 - NamingSystems use `NS` suffix
 - Examples use `-example` suffix (changed from `-ex` via Issue #150)
 - Aliases: external terminology = UPPERCASE, actors = lowercase (EU EPS pattern)
+
+##### Invariant Keys
+
+New PH Core invariant names **SHALL** use `ph-{abbr}-{NNN}`. The FSH
+`Invariant:` name becomes the generated `ElementDefinition.constraint.key`;
+use that same name in every `obeys` reference. An invariant is not a standalone
+FHIR resource and does not receive a separate resource ID or canonical URL.
+
+| Part | Meaning | Example |
+|------|---------|---------|
+| `ph` | PH Core invariant prefix | `ph-pat-001` |
+| `{abbr}` | Lowercase abbreviation of the resource whose content is constrained | `pat` = Patient |
+| `{NNN}` | Three-digit sequence within that resource abbreviation, starting at `001` | `001`, `002`, `003` |
+
+The currently assigned abbreviations and keys are:
+
+| Abbreviation | Resource | Assigned Key | Constraint |
+|--------------|----------|--------------|------------|
+| `pat` | Patient | `ph-pat-001` | A supplied name contains real family, given or text content, or a whole-name DAR, but not both. |
+| `obs` | Observation | `ph-obs-001` | An individual clinical result without components or member observations contains a result value or an absence reason. |
+| `pro` | Procedure | `ph-pro-001` | A completed or in-progress procedure includes `performed[x]`. |
+
+Before assigning a key, search all `input/fsh/` definitions and references to
+avoid collisions. Add a distinct resource abbreviation to this table when one
+is needed; do not assume the first three letters are unique. Keys **SHALL** be
+unique within the IG. Reuse a key only when intentionally applying the same
+invariant; do not give different rules the same key. Keep published keys stable
+and do not recycle a retired key for a different constraint.
+
+Existing retained upstream keys, such as `provenance-1`, remain exceptions to
+this convention unless an explicit naming migration is undertaken. A PH Core
+adaptation uses a PH key and records its upstream source and any semantic
+differences in a comment above the rule or definition. The key identifies the
+rule; its `Description`, `Severity` and `Expression` define the behavior.
+
+Keep related definitions in a descriptive topic file, such as
+`input/fsh/invariants/data-absent-reason.fsh`, or inline with the owning profile.
+The filename need not equal the invariant key. When renaming an invariant,
+update its definition, all `obeys` references, and any authored `^condition` or
+`^constraint.key` references, then compile with SUSHI to verify resolution.
 
 #### FSH File Organization
 
@@ -551,11 +592,13 @@ Description: "Philippine Core Patient Profile"
 * name 1..* MS
 * name insert ObligationRequired
 * maritalStatus from http://hl7.org/fhir/ValueSet/marital-status (required)
+* name obeys ph-pat-001
 
 // 4. Invariants (if any)
 Invariant: ph-pat-001
-Description: "Patient name must include family name"
+Description: "A supplied name SHALL contain a family, given or text value, or a Data Absent Reason for the whole name, but not both."
 Severity: #error
+Expression: "(family.where(hasValue()).exists() or given.where(hasValue()).exists() or text.where(hasValue()).exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
 ```
 
 #### Comments

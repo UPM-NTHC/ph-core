@@ -33,6 +33,32 @@ Description: "The PH Core Practitioner Profile inherits from the [FHIR R4 Practi
 // * address insert ObligationPopulateIfKnownHandle
 * address only PHCoreAddress
 
+// Slice by identifier.system to identify a PRC-issued license; qualification.code independently classifies the profession for filtering.
+// A PRC license qualification has one PRC profession code; this structural pairing does not verify the number-code match against PRC registry data.
+// PRC examination names and abbreviations identify examinations and are not qualification codes.
+
+* qualification.issuer only Reference(PHCoreOrganization)
+* qualification.code from PRCProfessionCodesVS (preferred)
+
+
+* qualification ^slicing.discriminator.type = #value
+* qualification ^slicing.discriminator.path = "identifier.system"
+* qualification ^slicing.rules = #open
+* qualification ^slicing.ordered = false
+* qualification ^slicing.description = "PRC professional licenses are identified by the qualification identifier system."
+* qualification contains PRCLicense 0..*
+* qualification[PRCLicense] ^short = "PRC professional license"
+* qualification[PRCLicense] ^definition = "A professional license issued by the Professional Regulation Commission. Each distinct license is represented by its own qualification."
+* qualification[PRCLicense].identifier 1..1
+* qualification[PRCLicense].identifier.system = "https://www.prc.gov.ph" (exactly)
+* qualification[PRCLicense].identifier.value 1..1
+* qualification[PRCLicense].identifier.value ^short = "PRC license number"
+
+* qualification[PRCLicense].code from PRCProfessionCodesVS (required)
+* qualification[PRCLicense].code ^comment = "Use a PRC CPDAS numerical profession code when it accurately classifies the qualification. This code does not assert that the license is active."
+* qualification[PRCLicense].issuer only Reference(PHCoreOrganization)
+* qualification[PRCLicense] obeys ph-prc-001
+
 // Remove - not sufficient evidence: 0 independent source IGs mark this exact path MS (at least 2 required). Original rule: * birthDate MS
 // * birthDate insert ObligationPopulateIfKnownHandle
 // Remove - not sufficient evidence: 0 independent source IGs mark this exact path MS (at least 2 required). Original rule: * gender MS

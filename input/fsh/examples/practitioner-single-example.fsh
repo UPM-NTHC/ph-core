@@ -34,8 +34,8 @@ Description: "Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-1
 
 * extension[individualPronouns].extension[value].valueCodeableConcept = http://loinc.org#LA29519-8 "she/her/her/hers/herself"
 
-* qualification[0].code = http://terminology.hl7.org/CodeSystem/v2-0360#MD "Doctor of Medicine"
-* qualification[=].identifier.system = "http://prc.gov.ph/fhir/Identifier/prc-license"
+* qualification[0].code = PRCCodeSystem#2200 "Physician"
+* qualification[=].identifier.system = "https://www.prc.gov.ph"
 * qualification[=].identifier.value = "0123456"
 * qualification[=].period.start = "2010-07-15"
 * qualification[=].issuer = Reference(Organization/organization-prc-example)

@@ -7,6 +7,7 @@ Title: "PRC CodeSystem"
 Description: "Consolidated PH Core terminology for PRC CPDAS Council codes, CPDAS numerical profession codes, and PRC licensure examination codes. CPDAS council and profession concepts reflect the FAQ as of 12 January 2021; PRC examination concepts reflect the standardized list posted 18 March 2026. The hierarchy groups related concepts and does not assert an is-a relationship. The 2021 CPDAS table says its numeric profession codes are for CPD attendance sheets and is subject to regular updating. The 2026 Food Technology and Speech-Language Pathology examination boards have abstract local grouping nodes because the 2021 CPDAS table has no council codes for them; those nodes are not CouncilCode values."
 * insert ShareableCodeSystem
 * ^url = "https://fhir.doh.gov.ph/phcore/CodeSystem/prc"
+* ^valueSet = "https://fhir.doh.gov.ph/phcore/ValueSet/prc-all-codes"
 * ^version = "0.1.0"
 * ^date = "2026-10-17"
 * ^status = #draft

@@ -1,5 +1,5 @@
 // Structure: published US Core 9.0.0; PH scope and strengths follow the reviewed PH policy.
-// Resource searches use standard R4 definitions; conditional ingestion follows R4 REST.
+// Resource searches use R4 definitions with the R5 Practitioner identifier backport; conditional ingestion follows R4 REST.
 Instance: PHCoreServerCapabilityStatement
 InstanceOf: CapabilityStatement
 Usage: #definition
@@ -7,7 +7,7 @@ Usage: #definition
 // * title = "PH Core Server CapabilityStatement"
 // * version = "0.2.1"
 * status = #draft
-* date = "2026-10-15"
+* date = "2026-10-17"
 // * language = #en
 // * publisher = "UP Manila National TeleHealth Center"
 // * contact[0].name = "UP Manila National TeleHealth Center"
@@ -230,7 +230,7 @@ Usage: #definition
 
 // Practitioner: selected profile remains optional; declared REST access requires read/search.
 * insert PHCoreCatalogResource(#Practitioner, PHCorePractitioner, #MAY)
-* insert PHCoreCatalogSearch(identifier, http://hl7.org/fhir/SearchParameter/Practitioner-identifier, #token, #SHALL)
+* insert PHCoreCatalogSearch(identifier, https://fhir.doh.gov.ph/phcore/SearchParameter/practitioner-identifier, #token, #SHALL)
 * insert PHCoreCatalogSearch(name, http://hl7.org/fhir/SearchParameter/Practitioner-name, #string, #SHOULD)
 * insert PHCoreCatalogSearch(family, http://hl7.org/fhir/SearchParameter/individual-family, #string, #SHOULD)
 * insert PHCoreCatalogSearch(given, http://hl7.org/fhir/SearchParameter/individual-given, #string, #SHOULD)

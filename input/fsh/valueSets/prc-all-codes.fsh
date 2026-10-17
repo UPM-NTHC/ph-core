@@ -11,4 +11,4 @@ Description: "The complete set of all concepts defined by PRCCodeSystem version 
 * ^jurisdiction = urn:iso:std:iso:3166#PH "Philippines"
 * ^purpose = "Identify the complete contents of PRCCodeSystem version 0.1.0 for CodeSystem.valueSet metadata and terminology server compatibility."
 * ^immutable = true
-* include codes from system PRCCodeSystem|0.1.0
+* include codes from system PRCCodeSystem

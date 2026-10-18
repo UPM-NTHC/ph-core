@@ -1,6 +1,6 @@
 # Sex and Gender Guidance
 
-This informative guidance adapts the [HL7 Cross Paradigm Implementation Guide: Gender Harmony](https://hl7.org/xprod/ig/uv/gender-harmony/fhirgenderharmony.html), based on FHIR R5, to the optional sex and gender extensions declared in PH Core's FHIR R4 profiles. It adds no conformance requirement.
+The [HL7 Cross Paradigm Implementation Guide: Gender Harmony](https://hl7.org/xprod/ig/uv/gender-harmony/fhirgenderharmony.html) is an informative FHIR R5 guide. This page applies its relevant sex and gender guidance to the extensions declared in PH Core's FHIR R4 profiles; it adds no conformance requirement.
 
 ## Keep the meaning clear
 
@@ -12,7 +12,7 @@ Use the optional `genderIdentity` and `individualPronouns` extensions for those 
 
 Use the optional `genderIdentity` extension on the applicable person resource to exchange a person's gender identity. In PH Core, this slice is available on Patient, Practitioner and RelatedPerson. The extension can carry more than one value and a period of applicability, so systems can represent a change over time instead of replacing the earlier value.
 
-Because gender identity is personal demographic information, implementers should consider how their authorization and access controls protect it. Resource-level access may expose it together with other demographics on that resource.
+Gender identity is stored with other person-level demographics. Control access to the resource carefully, since resource-level permissions can expose the extension alongside those other demographics.
 
 ## Pronouns and name to use
 
@@ -32,10 +32,10 @@ PH Core declares the optional `sex` slice using HL7's `individual-recordedSexOrG
 
 The example uses text for the insurance-card and driver's-license type labels rather than introducing local codes for those source categories.
 
-Sex assigned at birth is one kind of recorded sex or gender. It represents the concept recorded by the source; it should not be assumed to describe every other sex or gender concept about a person. In particular, it is not a substitute for gender identity or pronouns.
+Sex assigned at birth is one kind of recorded sex or gender. It describes that source's record; it does not establish a person's gender identity, pronouns, or current clinical characteristics.
 
 ## Why these concepts use extensions
 
 The [FHIR design background](https://hl7.org/xprod/ig/uv/gender-harmony/fhirdesignbackground.html) explains the tradeoffs behind using extensions: they can share structure across resources and be adopted in earlier FHIR releases, while changing a core Patient element requires broader standards review. Observations can hold more metadata but may be less discoverable and require separate authorization. Extensions are also less visible, and resource-level permissions may expose them with other demographics.
 
-PH Core declares `genderIdentity`, `individualPronouns` and `sex` on Patient, Practitioner and RelatedPerson. This page does not define an Observation-based representation or the `patient-sexParameterForClinicalUse` extension, which is not declared by the PH Core Patient profile.
+PH Core declares `genderIdentity`, `individualPronouns` and `sex` on Patient, Practitioner and RelatedPerson. The Patient profile does not declare `patient-sexParameterForClinicalUse`; this page does not add that extension or an Observation-based representation.

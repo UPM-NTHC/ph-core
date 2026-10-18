@@ -12,6 +12,17 @@ Description: "The PH Core Practitioner Role Profile inherits from the [FHIR R4 P
 // MS: role exchange for eReferral and NHDR (PR #160).
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * code 0..* MS
 * code insert ObligationPopulateIfKnownHandle
+
+* code ^binding.extension[+].extension[0].url = "key"
+* code ^binding.extension[=].extension[=].valueId = "practitionerrole-prc-profession-codes"
+* code ^binding.extension[=].extension[+].url = "purpose"
+* code ^binding.extension[=].extension[=].valueCode = #preferred
+* code ^binding.extension[=].extension[+].url = "valueSet"
+* code ^binding.extension[=].extension[=].valueCanonical = Canonical(PRCProfessionCodesVS)
+* code ^binding.extension[=].extension[+].url = "documentation"
+* code ^binding.extension[=].extension[=].valueMarkdown = "This value set is for use when PRC Profession Codes are preferred."
+* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * identifier 0..* MS
 * identifier insert ObligationPopulateIfKnownHandle
 

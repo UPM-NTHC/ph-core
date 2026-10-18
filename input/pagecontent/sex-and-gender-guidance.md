@@ -8,6 +8,18 @@ FHIR labels `Patient.gender` as administrative gender, but systems may use it fo
 
 Use the optional `genderIdentity` and `individualPronouns` extensions for those concepts. Do not infer them from `Patient.gender` or the `sex` slice.
 
+### Searching by administrative gender
+
+In the focused Patient example, `Patient.gender` is `male`. A client can search for Patient records with this value:
+
+```http
+GET [base]/Patient?gender=male
+```
+
+This standard FHIR search looks only at `Patient.gender`; it does not search the `sex`, `genderIdentity` or `individualPronouns` extensions. The PH Core Server CapabilityStatement lists the `gender` search as `SHOULD`, so servers are recommended to support it, but clients should check a server's CapabilityStatement before relying on it.
+
+The [FHIR for FAIR guidance](https://build.fhir.org/ig/HL7/fhir-for-fair/FHIRandFAIR.html) explains that searchable information can help people and software find relevant records. This search supports Findability; it does not grant permission to read matching records. The server's access controls still apply.
+
 ## Gender identity
 
 Use the optional `genderIdentity` extension on the applicable person resource to exchange a person's gender identity. In PH Core, this slice is available on Patient, Practitioner and RelatedPerson. The extension can carry more than one value and a period of applicability, so systems can represent a change over time instead of replacing the earlier value.
@@ -38,4 +50,6 @@ Sex assigned at birth is one kind of recorded sex or gender. It describes that s
 
 The [FHIR design background](https://hl7.org/xprod/ig/uv/gender-harmony/fhirdesignbackground.html) explains the tradeoffs behind using extensions: they can share structure across resources and be adopted in earlier FHIR releases, while changing a core Patient element requires broader standards review. Observations can hold more metadata but may be less discoverable and require separate authorization. Extensions are also less visible, and resource-level permissions may expose them with other demographics.
 
-PH Core declares `genderIdentity`, `individualPronouns` and `sex` on Patient, Practitioner and RelatedPerson. The Patient profile does not declare `patient-sexParameterForClinicalUse`; this page does not add that extension or an Observation-based representation.
+PH Core declares `genderIdentity`, `individualPronouns` and `sex` on Patient, Practitioner and RelatedPerson.
+
+When interpreting some lab results, clinicians may need to choose a sex-related normal range. FHIR has an optional field for recording that choice. Its [technical description](https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html) gives the formal name for developers. The PH Core Patient profile does not include this field. Before adding it, the PH Core community needs to agree on when it is needed and how it should be used. This page does not add the field or a substitute.

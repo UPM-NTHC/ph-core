@@ -1,5 +1,3 @@
-# Sex and Gender Guidance
-
 The [HL7 Cross Paradigm Implementation Guide: Gender Harmony](https://hl7.org/xprod/ig/uv/gender-harmony/fhirgenderharmony.html) is an informative FHIR R5 guide. This page applies its relevant sex and gender guidance to the extensions declared in PH Core's FHIR R4 profiles; it adds no conformance requirement.
 
 ## Keep the meaning clear

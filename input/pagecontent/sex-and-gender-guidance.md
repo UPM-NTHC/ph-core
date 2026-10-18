@@ -1,12 +1,12 @@
 The [HL7 Cross Paradigm Implementation Guide: Gender Harmony](https://hl7.org/xprod/ig/uv/gender-harmony/fhirgenderharmony.html) is an informative FHIR R5 guide. This page applies its relevant sex and gender guidance to the extensions declared in PH Core's FHIR R4 profiles; it adds no conformance requirement.
 
-## Keep the meaning clear
+### Keep the meaning clear
 
 FHIR labels `Patient.gender` as administrative gender, but systems may use it for administrative sex or gender and for purposes such as patient matching or choosing a laboratory reference range. State its intended meaning to exchange partners. When both concepts are needed, systems can use `Patient.gender` for the agreed administrative gender and the optional `Patient.extension[sex]` slice for the separate recorded sex value.
 
 Use the optional `genderIdentity` and `individualPronouns` extensions for those concepts. Do not infer them from `Patient.gender` or the `sex` slice.
 
-### Searching by administrative gender
+#### Searching by administrative gender
 
 In the focused Patient example, `Patient.gender` is `male`. A client can search for Patient records with this value:
 
@@ -18,19 +18,19 @@ This standard FHIR search looks only at `Patient.gender`; it does not search the
 
 The [FHIR for FAIR guidance](https://build.fhir.org/ig/HL7/fhir-for-fair/FHIRandFAIR.html) explains that searchable information can help people and software find relevant records. This search supports Findability; it does not grant permission to read matching records. The server's access controls still apply.
 
-## Gender identity
+### Gender identity
 
 Use the optional `genderIdentity` extension on the applicable person resource to exchange a person's gender identity. In PH Core, this slice is available on Patient, Practitioner and RelatedPerson. The extension can carry more than one value and a period of applicability, so systems can represent a change over time instead of replacing the earlier value.
 
 Gender identity is stored with other person-level demographics. Control access to the resource carefully, since resource-level permissions can expose the extension alongside those other demographics.
 
-## Pronouns and name to use
+### Pronouns and name to use
 
 Use the optional `individualPronouns` extension for a person's pronouns. Pronouns are distinct from gender identity. The extension can include a period when the pronouns apply.
 
 When a person has asked to be addressed by a particular name, represent that name using `HumanName.use = usual` on the relevant person resource. This is separate from an official name retained for other purposes.
 
-## Recorded sex or gender
+### Recorded sex or gender
 
 HL7 treats administrative sex and administrative gender as types of recorded sex or gender.
 
@@ -44,7 +44,7 @@ The example uses text for the insurance-card and driver's-license type labels ra
 
 Sex assigned at birth is one kind of recorded sex or gender. It describes that source's record; it does not establish a person's gender identity, pronouns, or current clinical characteristics.
 
-## Why these concepts use extensions
+### Why these concepts use extensions
 
 The [FHIR design background](https://hl7.org/xprod/ig/uv/gender-harmony/fhirdesignbackground.html) explains the tradeoffs behind using extensions: they can share structure across resources and be adopted in earlier FHIR releases, while changing a core Patient element requires broader standards review. Observations can hold more metadata but may be less discoverable and require separate authorization. Extensions are also less visible, and resource-level permissions may expose them with other demographics.
 

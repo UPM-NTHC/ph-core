@@ -12,7 +12,7 @@ Use the optional `genderIdentity` and `individualPronouns` extensions for those 
 
 In the focused Patient example, `Patient.gender` is `male`. A client can search for Patient records with this value:
 
-```http
+```
 GET [base]/Patient?gender=male
 ```
 

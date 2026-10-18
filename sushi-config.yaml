@@ -185,6 +185,8 @@ menu:
 language: en
 
 parameters:
+  # Keep the IG jurisdiction on the ImplementationGuide without copying it to every canonical resource.
+  apply-jurisdiction: false
   special-url:
     - https://verification.fda.gov.ph
     - http://my-hospital.org/internal-id

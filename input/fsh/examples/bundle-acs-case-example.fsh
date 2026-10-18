@@ -232,7 +232,7 @@ Description: "Dr. Maria Clara Santos — Emergency Medicine Attending Physician 
 
 * practitioner = Reference(Practitioner/practitioner-ed-example)
 * organization = Reference(Organization/organization-pgh-example)
-* code = $practitioner-role#doctor "Doctor"
+* code = PRCCodeSystem#2200 "Physician"
 // Keep the specific active SNOMED term as text: the R4 Practice Setting ValueSet
 // only offers the inactive "Accident & emergency" concept for this setting.
 * specialty.text = "Emergency medicine"

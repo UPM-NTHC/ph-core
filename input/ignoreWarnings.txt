@@ -17,6 +17,7 @@ This element does not match any known slice defined in the profile http://hl7.or
 
 # Suppressed Messages commonly suppressed by US Core
 No definition could be found for URL value%
+Reference to draft CodeSystem https://fhir.doh.gov.ph/phcore/CodeSystem/prc|0.2.1
 
 # Suppressed Messages commonly suppressed by AU Core
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)

@@ -38,7 +38,16 @@ Description: "The PH Core Practitioner Profile inherits from the [FHIR R4 Practi
 // PRC examination names and abbreviations identify examinations and are not qualification codes.
 
 * qualification.issuer only Reference(PHCoreOrganization)
-* qualification.code from PRCProfessionCodesVS (preferred)
+
+* qualification.code ^binding.extension[+].extension[0].url = "key"
+* qualification.code ^binding.extension[=].extension[=].valueId = "practitioner-prc-profession-codes"
+* qualification.code ^binding.extension[=].extension[+].url = "purpose"
+* qualification.code ^binding.extension[=].extension[=].valueCode = #preferred
+* qualification.code ^binding.extension[=].extension[+].url = "valueSet"
+* qualification.code ^binding.extension[=].extension[=].valueCanonical = Canonical(PRCProfessionCodesVS)
+* qualification.code ^binding.extension[=].extension[+].url = "documentation"
+* qualification.code ^binding.extension[=].extension[=].valueMarkdown = "This value set is for use when PRC Profession Codes are preferred."
+* qualification.code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 
 * qualification ^slicing.discriminator.type = #value

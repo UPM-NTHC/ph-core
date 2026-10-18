@@ -3,17 +3,20 @@ InstanceOf: ActorDefinition
 Title: "PH Core Server"
 Description: "A system that accepts FHIR API requests and provides responses using PH Core resources."
 Usage: #definition
-// * name = "PHCoreServer"
+* name = "PHCoreServer"
 // * title = "PH Core Server"
 // * version = "0.2.1"
 * status = #draft
 * date = "2026-10-15"
+// R5 deprecates ActorDefinition.jurisdiction; identify PH through useContext instead.
+* useContext[+].code = http://terminology.hl7.org/CodeSystem/usage-context-type#jurisdiction
+* useContext[=].valueCodeableConcept.coding = urn:iso:std:iso:3166#PH "Philippines"
+// * jurisdiction = urn:iso:std:iso:3166#PH "Philippines"
 // * language = #en
 // * publisher = "UP Manila National TeleHealth Center"
 // * contact[0].name = "UP Manila National TeleHealth Center"
 // * contact[=].telecom[0].system = #url
 // * contact[=].telecom[=].value = "https://github.com/UP-NTHC"
-// * jurisdiction = urn:iso:std:iso:3166#PH "Philippines"
 * type = #system
 // FMM 0: draft, not yet balloted for implementation maturity.
 // The structuredefinition-fmm context permits Resource/DomainResource, including these definitions.

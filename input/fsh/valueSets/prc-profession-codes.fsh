@@ -3,8 +3,9 @@
 ValueSet: PRCProfessionCodesVS
 Id: prc-profession-codes
 Title: "PRC Profession Codes ValueSet"
-Description: "The 66 numerical profession codes in the PRC CPDAS table as of 12 January 2021. PRC states that the codes are used on attendance sheets for accredited CPD programs, and notes that the FAQ is subject to regular updating. Use these codes for a qualification only when the CPDAS profession classification matches; the code does not assert current license validity."
-* insert ShareableValueSet
+Description: "The 66 numerical profession codes in the PRC CPDAS table as of 12 January 2021. PRC states that the codes are used on attendance sheets for accredited CPD programs, and notes that the FAQ is subject to regular updating. Use these codes for a qualification or practitioner role only when the CPDAS profession classification matches; the code does not assert current license validity."
+// Draft coverage is documented below; this profession value set is intended for genuine exchange use.
+* ^experimental = false
 * ^url = "https://fhir.doh.gov.ph/phcore/ValueSet/prc-profession-codes"
 * ^version = "0.1.0"
 * ^date = "2026-10-17"

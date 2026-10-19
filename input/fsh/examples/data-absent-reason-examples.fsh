@@ -5,6 +5,16 @@ Title: "Patient with an unknown name"
 Description: "The whole name is unknown. DAR is attached to HumanName, matching the US Core missing-name pattern."
 * name.extension[dataAbsentReason].valueCode = #unknown
 
+Instance: patient-anonymous-mothers-maiden-name-example
+InstanceOf: PHCorePatient
+Usage: #example
+Title: "Anonymous Patient with Mother's Maiden Name"
+Description: "The patient's own name is unknown, but the mother's full name is known from a reliable source and recorded as supplementary patient-matching information."
+* name.extension[dataAbsentReason].valueCode = #unknown
+* extension[mothersMaidenName].valueString = "Maria Cruz Santos"
+* text.status = #additional
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>The patient's own name is recorded as unknown. The mother's full maiden name, Maria Cruz Santos, is available from the source record and is included only as supplementary matching information; it does not identify the patient by itself.</p></div>"
+
 Instance: observation-result-unavailable
 InstanceOf: PHCoreObservationClinicalResult
 Usage: #example

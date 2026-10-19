@@ -7,14 +7,14 @@ Description: "The PH Core Practitioner Profile inherits from the [FHIR R4 Practi
 * ^extension[=].valueInteger = 0
 
 * extension contains
-    http://hl7.org/fhir/StructureDefinition/individual-genderIdentity named genderIdentity 0..* and
-    http://hl7.org/fhir/StructureDefinition/individual-pronouns named individualPronouns 0..* and
-    http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender named sex 0..*
+    http://hl7.org/fhir/StructureDefinition/individual-genderIdentity|5.3.0 named genderIdentity 0..* and
+    http://hl7.org/fhir/StructureDefinition/individual-pronouns|5.3.0 named individualPronouns 0..* and
+    http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender|5.3.0 named sex 0..*
 
-* extension[sex] ^short = "Recorded sex or gender"
+// * extension[sex] ^short = "Recorded sex or gender"
 // Supply the recorded concept in extension[type], such as sex assigned at birth, when known.
-* extension[genderIdentity] ^short = "Gender Identity"
-* extension[individualPronouns] ^short = "Individual pronouns"
+// * extension[genderIdentity] ^short = "Gender Identity"
+// * extension[individualPronouns] ^short = "Individual pronouns"
 
 
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * name MS

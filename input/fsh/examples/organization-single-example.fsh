@@ -19,7 +19,7 @@ Description: "An example instance of a PH Core Organization conforming to the Ph
 * identifier[+].system = "http://my-hospital.org/internal-id"
 * identifier[=].value = "HOSP-INT-12345"
 
-* name = "Example Manila Health Centre"
+* name = "Example Manila Health Center"
 
 * telecom.system = #phone
 * telecom.value = "+63-2-8651-7800"

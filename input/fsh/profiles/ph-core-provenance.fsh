@@ -2,164 +2,62 @@ Profile: PHCoreProvenance
 Parent: Provenance
 Id: ph-core-provenance
 Title: "PH Core Provenance"
-Description: "This profile localizes the FHIR R4 Provenance resource to the Philippine context, capturing key information about who, what, when, and where for a set of resources. It is used to track the authorship and history of healthcare data in Philippine health information systems."
+Description: "This profile identifies the resources described by an activity, when the activity was recorded, and the agents responsible for creating, updating, or transmitting the information."
 
-// ============================================
-// US CORE PROVENANCE MANDATORY ELEMENTS
-// ============================================
+// Human Appraisal: draft attribution baseline selected for early PH Core development.
+// This is a working design, not evidence of national policy or multi-IG adoption.
+// Source: US Core Provenance 10.0.0-ballot (reviewed 2026-10-13).
+// https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html
+// Supporting source guidance: https://build.fhir.org/ig/HL7/US-Core/basic-provenance.html
+// Source comparison and development context belong in author comments, not published profile prose.
+// Preserve R4 cardinalities for target, recorded, agent and who without restating them.
+* target insert ObligationRequired
+* target.reference insert ObligationOptional
+* recorded insert ObligationRequired
+* recorded ^comment = "The time the activity was recorded. Use occurred[x] for when the activity happened, if known."
 
-* target 1..* MS
-  * ^short = "The Resource(s) this Provenance record supports"
-  * ^definition = "The Reference(s) that were generated or updated by the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by a single activity."
-  * ^comment = "See the [PH Core Provenance Profile](StructureDefinition-ph-core-provenance.html) for guidance on supported resource types."
-* target.reference MS
-  * ^short = "Literal reference, Relative, internal or absolute URL"
-  * ^definition = "A reference to another resource on the FHIR server."
+// Optional local reference constraint; location is not selected as Must Support.
+* location only Reference(PHCoreLocation)
 
-* recorded 1..1 MS
-  * ^short = "Timestamp when the activity was recorded / updated"
-  * ^definition = "The instant of time at which the activity was recorded."
-  * ^comment = "This is when the activity was recorded, not necessarily when it occurred."
-
-// ============================================
-// US CORE PROVENANCE AGENT SLICES
-// ============================================
-
+// Open, unordered role slices: neither named slice is required in every record.
 * agent ^slicing.discriminator.type = #value
 * agent ^slicing.discriminator.path = "type"
 * agent ^slicing.rules = #open
-* agent ^slicing.description = "Slice based on the agent type code (author vs transmitter)"
-* agent ^slicing.ordered = false
+* agent ^slicing.description = "Agents classified by their participation type. Other agent types remain allowed."
 * agent contains
-    ProvenanceAuthor 0..* MS and
-    ProvenanceTransmitter 0..* MS
+    ProvenanceAuthor 0..* and
+    ProvenanceTransmitter 0..*
 
-* agent ^short = "Actor(s) involved"
-* agent ^definition = "An actor that takes part in the activity. The actor can be a person, an organization, a device, or a software system."
-* agent ^comment = "At least one agent must be provided. Use the ProvenanceAuthor slice for the entity that created the content and ProvenanceTransmitter slice for the entity that sent/transmitted it."
-
-// Base agent constraints
-* agent.type MS
-  * ^short = "How the agent participated"
-  * ^definition = "The participation the agent had in the activity."
-  * ^binding.description = "The type of participation (author, transmitter, etc.)"
-
-* agent.who 1..1 MS
-  * ^short = "Who participated"
-  * ^definition = "The individual, organization, or device that participated in the activity."
-
-* agent.onBehalfOf MS
-  * ^short = "Who the agent is representing"
-  * ^definition = "The organization the agent is representing. This is mandatory when the agent is a Practitioner or Device."
-  * ^comment = "When the agent is a Practitioner or Device, this element identifies the organization they were acting on behalf of."
-
-// ============================================
-// REFERENCED PROFILES
-// ============================================
-// This profile references the following PH Core profiles:
-// - PHCorePractitioner: For individual healthcare providers
-// - PHCorePractitionerRole: For practitioners in specific roles
-// - PHCoreOrganization: For healthcare organizations
-// - PHCorePatient: For patient agents
-// - PHCoreRelatedPerson: For related persons (family members, etc.)
-// - Device: Base FHIR Device (no PH Core Device profile available)
-// ============================================
-
-// ============================================
-// AGENT: PROVENANCE AUTHOR
-// ============================================
-
-* agent[ProvenanceAuthor]
-  * ^short = "Author organization or individual responsible for the information"
-  * ^definition = "The entity that created the data. This is typically an organization, practitioner, patient, or device that authored the information."
-  * ^comment = """
-    The author is the source of the information being recorded. This slice is used to identify who originally created the content.
-
-    Referenced Profiles:
-    - PHCorePractitioner: Philippine healthcare practitioner
-    - PHCorePractitionerRole: Practitioner in a specific role
-    - PHCoreOrganization: Philippine healthcare organization
-    - PHCorePatient: Philippine patient
-    - PHCoreRelatedPerson: Related person (family member, guardian, etc.)
-    - Device: Base FHIR Device (no PH Core Device profile)
-    """
-
-* agent[ProvenanceAuthor].type 1..1 MS
-  * ^short = "How the agent participated"
-  * ^definition = "The type of agent participation. For the author slice, this is fixed to 'author'."
-  * ^comment = "Fixed value: author"
+* agent[ProvenanceAuthor] insert ObligationOptional
+* agent[ProvenanceAuthor] ^short = "Agent responsible for creating or updating the information"
+* agent[ProvenanceAuthor] ^definition = "The individual, organization, or device responsible for the information produced by the activity described in this record."
+* agent[ProvenanceAuthor].type 1..1
+* agent[ProvenanceAuthor].type insert ObligationRequired
 * agent[ProvenanceAuthor].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author
+* agent[ProvenanceAuthor].who insert ObligationRequired
+* agent[ProvenanceAuthor].onBehalfOf insert ObligationOptional
 
-* agent[ProvenanceAuthor].who 1..1 MS
-  * ^short = "Who participated"
-  * ^definition = "The individual, organization, or device that authored the information."
-  * ^comment = """
-    References PH Core profiles where available:
-    - PHCorePractitioner | PHCorePractitionerRole | PHCoreOrganization | PHCorePatient | PHCoreRelatedPerson
-    Uses base FHIR Device when no PH Core profile exists.
-    """
-* agent[ProvenanceAuthor].who only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCoreOrganization or PHCorePatient or PHCoreRelatedPerson or Device)
-
-* agent[ProvenanceAuthor].onBehalfOf MS
-  * ^short = "Who the agent is representing"
-  * ^definition = "The organization the agent is representing. This is mandatory when the agent is a Practitioner or Device (per provenance-1 constraint)."
-  * ^comment = "References PHCoreOrganization"
-* agent[ProvenanceAuthor].onBehalfOf only Reference(PHCoreOrganization)
-
-// ============================================
-// AGENT: PROVENANCE TRANSMITTER
-// ============================================
-
-* agent[ProvenanceTransmitter]
-  * ^short = "Transmitter that provided the information"
-  * ^definition = "The entity that transmitted the data from the source to the destination. If the transmitter is a device, the transmitter organization must also be valued."
-  * ^comment = """
-    The transmitter represents who sent the information, which may differ from who authored it. This is important for tracking the chain of custody.
-
-    Referenced Profiles:
-    - PHCorePractitioner: Philippine healthcare practitioner
-    - PHCorePractitionerRole: Practitioner in a specific role
-    - PHCoreOrganization: Philippine healthcare organization
-    - PHCorePatient: Philippine patient
-    - PHCoreRelatedPerson: Related person (family member, guardian, etc.)
-    - Device: Base FHIR Device (no PH Core Device profile)
-    """
-
-* agent[ProvenanceTransmitter].type 1..1 MS
-  * ^short = "How the agent participated"
-  * ^definition = "The type of agent participation. For the transmitter slice, this is fixed to 'transmitter'."
-  * ^comment = "Fixed value: transmitter"
+* agent[ProvenanceTransmitter] insert ObligationOptional
+* agent[ProvenanceTransmitter] ^short = "Agent that provided the copy to the receiving system"
+* agent[ProvenanceTransmitter] ^definition = "The entity that provided the copy to the receiving system. It may differ from the author."
+* agent[ProvenanceTransmitter].type 1..1
+* agent[ProvenanceTransmitter].type insert ObligationRequired
 * agent[ProvenanceTransmitter].type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#transmitter
+* agent[ProvenanceTransmitter].who insert ObligationRequired
+* agent[ProvenanceTransmitter].onBehalfOf insert ObligationOptional
 
-* agent[ProvenanceTransmitter].who 1..1 MS
-  * ^short = "Who participated"
-  * ^definition = "The individual, organization, or device that transmitted the information."
-  * ^comment = """
-    References PH Core profiles where available:
-    - PHCorePractitioner | PHCorePractitionerRole | PHCoreOrganization | PHCorePatient | PHCoreRelatedPerson
-    Uses base FHIR Device when no PH Core profile exists.
-    """
-* agent[ProvenanceTransmitter].who only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCoreOrganization or PHCorePatient or PHCoreRelatedPerson or Device)
+// Apply common reference constraints and obligations to every agent, including other roles.
+// Declare slice support before common support so SUSHI retains slice MS and obligations in its differential.
+* agent insert ObligationRequired
+* agent.type insert ObligationOptional
+* agent.who insert ObligationRequired
+* agent.who only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCoreOrganization or PHCorePatient or PHCoreRelatedPerson or Device)
+* agent.onBehalfOf insert ObligationOptional
+* agent.onBehalfOf only Reference(PHCoreOrganization)
+* agent.onBehalfOf ^comment = "The organization represented by the agent. Required for a Practitioner or Device by provenance-1."
 
-* agent[ProvenanceTransmitter].onBehalfOf MS
-  * ^short = "Who the agent is representing"
-  * ^definition = "The organization the transmitter is representing. This is mandatory when the transmitter is a Practitioner or Device (per provenance-1 constraint)."
-  * ^comment = "References PHCoreOrganization"
-* agent[ProvenanceTransmitter].onBehalfOf only Reference(PHCoreOrganization)
-
-// ============================================
-// PH CORE SPECIFIC REFERENCE CONSTRAINTS
-// ============================================
-
-* location only Reference(PHCoreLocation)
-
-// ============================================
-// INVARIANTS (from US Core Provenance)
-// ============================================
-
+// Retain the existing US Core conditional attribution rule; reference resolution is needed to evaluate it.
 * agent obeys provenance-1
-
-
 
 Invariant: provenance-1
 Description: "onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device"

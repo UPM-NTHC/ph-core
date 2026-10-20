@@ -1,7 +1,7 @@
 CodeSystem: PSCED
 Id: PSCED
-Title: "PSCED Fragment"
-Description: "Fragment of the Philippine Standard Classification of Education containing four real concepts used in PH Core examples; this is not a complete publication of PSCED."
+Title: "PSCED"
+Description: "The Philippine Standard Classification of Education."
 * insert ShareableCodeSystem
 * ^url = "https://psa.gov.ph/classification/psced/level"
 * ^version = "0.1.0"

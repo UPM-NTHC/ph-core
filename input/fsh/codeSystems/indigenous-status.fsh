@@ -1,7 +1,7 @@
 CodeSystem: IndigenousStatusCS
 Id: indigenous-status-cs
 Title: "Indigenous Groups CodeSystem"
-Description: "Provisional locally authored list of indigenous-status labels for draft examples. It does not establish an authoritative or national classification."
+Description: "Provisional locally authored list of indigenous-status labels."
 * insert ShareableCodeSystem
 * #Aetas "Aetas" 
 * #Ati "Ati" 

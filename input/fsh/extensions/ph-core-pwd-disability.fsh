@@ -28,7 +28,7 @@ Description: "Extension for Person With Disability (PWD) registration informatio
 * extension[idExpirationDate] ^definition = "The expiration date of the PWD ID card. Record an expiration date only when supplied by the issuing source; do not infer one from age or disability category. Validity rules depend on the applicable dated policy."
 * extension[idExpirationDate].value[x] only date
 
-* extension[issuingLGU] ^short = "Issuing LGU (Barangay)"
-* extension[issuingLGU] ^definition = "Draft barangay-coded issuer-location representation. It does not identify a PDAO or establish that the barangay is the legal issuing authority. National issuer semantics and a suitable representation require human appraisal before this field is used for authority verification."
+* extension[issuingLGU] ^short = "Issuing LGU (Barangay) in PSGC code"
+* extension[issuingLGU] ^definition = "The barangay-level Local Government Unit (LGU) that issued the PWD ID, specified using PSGC code. It does not identify a PDAO or establish that the barangay is the legal issuing authority. National issuer semantics and a suitable representation require human appraisal before this field is used for authority verification."
 * extension[issuingLGU].value[x] only CodeableConcept
 * extension[issuingLGU].valueCodeableConcept from Barangays (extensible)

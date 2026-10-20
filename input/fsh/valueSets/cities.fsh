@@ -1,7 +1,7 @@
 ValueSet: Cities
 Id: cities
 Title: "Cities"
-Description: "Illustrative subset of city, municipality and sub-municipality codes from PSGC used by the Philippine Statistics Authority (PSA)."
+Description: "All city, municipality, and sub-municipality values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA)."
 * insert ShareableValueSet
 * ^url = "https://fhir.doh.gov.ph/phcore/ValueSet/cities"
 * ^version = "1Q-2026"

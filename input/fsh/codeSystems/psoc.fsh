@@ -1,7 +1,7 @@
 CodeSystem: PSOC
 Id: PSOC
-Title: "PSOC Fragment"
-Description: "Fragment of the Philippine Standard Occupational Classification containing four real concepts used in PH Core examples; this is not a complete publication of PSOC."
+Title: "PSOC"
+Description: "The Philippine Standard Occupational Classification."
 * insert ShareableCodeSystem
 * ^url = "https://psa.gov.ph/classification/psoc/unit"
 * ^version = "0.1.0"

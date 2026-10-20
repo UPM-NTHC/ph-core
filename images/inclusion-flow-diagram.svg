@@ -1,82 +1,119 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="600" viewBox="0 0 700 600">
-  <rect width="700" height="600" fill="#f5f5f5"/>
-  <text x="350" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">Profile Inclusion Flow</text>
-  <text x="350" y="65" text-anchor="middle" font-size="14" fill="#666">Source: images-source/inclusion-flow.mmd</text>
-  
-  <!-- Start -->
-  <ellipse cx="350" cy="100" rx="60" ry="30" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
-  <text x="350" y="105" text-anchor="middle" font-size="14" fill="#0d47a1">Start</text>
-  
-  <!-- Identify -->
-  <rect x="270" y="150" width="160" height="50" fill="white" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="350" y="170" text-anchor="middle" font-size="12" fill="#333">Identify data element</text>
-  <text x="350" y="188" text-anchor="middle" font-size="11" fill="#666">in use case analysis</text>
-  
-  <!-- Check -->
-  <polygon points="350,220 430,260 350,300 270,260" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
-  <text x="350" y="250" text-anchor="middle" font-size="11" fill="#333">Check existing</text>
-  <text x="350" y="265" text-anchor="middle" font-size="11" fill="#333">PH Core?</text>
-  
-  <!-- Exists -->
-  <rect x="480" y="240" width="140" height="40" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="550" y="265" text-anchor="middle" font-size="12" fill="#1b5e20">Use existing profile</text>
-  
-  <!-- Count -->
-  <polygon points="350,320 430,360 350,400 270,360" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
-  <text x="350" y="345" text-anchor="middle" font-size="9" fill="#333">≥2 independent IGs use it</text>
-  <text x="350" y="360" text-anchor="middle" font-size="9" fill="#333">AND</text>
-  <text x="350" y="375" text-anchor="middle" font-size="9" fill="#333">MS in ≥2 independent IGs?</text>
-  
-  <!-- Yes - Candidate -->
-  <rect x="480" y="340" width="140" height="40" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="550" y="360" text-anchor="middle" font-size="11" fill="#1b5e20">PH Core candidate</text>
-  <text x="550" y="373" text-anchor="middle" font-size="10" fill="#1b5e20">(both thresholds met)</text>
-  
-  <!-- Exception -->
-  <polygon points="350,420 430,460 350,500 270,460" fill="#ffcc80" stroke="#ef6c00" stroke-width="2"/>
-  <text x="350" y="450" text-anchor="middle" font-size="11" fill="#333">Exception criteria?</text>
-  <text x="350" y="465" text-anchor="middle" font-size="9" fill="#666">Policy / Critical / Safety</text>
-  
-  <!-- Appraisal -->
-  <rect x="480" y="440" width="140" height="40" fill="#ffcc80" stroke="#ef6c00" stroke-width="2" rx="5"/>
-  <text x="550" y="455" text-anchor="middle" font-size="11" fill="#e65100">Human appraisal</text>
-  <text x="550" y="468" text-anchor="middle" font-size="10" fill="#e65100">by PH Core team</text>
-  
-  <!-- Program specific -->
-  <rect x="50" y="440" width="140" height="40" fill="#ffe0b2" stroke="#ef6c00" stroke-width="2" rx="5"/>
-  <text x="120" y="460" text-anchor="middle" font-size="11" fill="#e65100">Keep program-</text>
-  <text x="120" y="473" text-anchor="middle" font-size="11" fill="#e65100">specific</text>
-  
-  <!-- Profile -->
-  <rect x="270" y="520" width="160" height="40" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="350" y="540" text-anchor="middle" font-size="11" fill="#1b5e20">Create PH Core profile</text>
-  <text x="350" y="553" text-anchor="middle" font-size="10" fill="#1b5e20">Document in Decision Log</text>
-  
-  <!-- End -->
-  <ellipse cx="350" cy="585" rx="60" ry="20" fill="#bbdefb" stroke="#1976d2" stroke-width="2"/>
-  <text x="350" y="590" text-anchor="middle" font-size="14" fill="#0d47a1">End</text>
-  
-  <!-- Lines -->
-  <line x1="350" y1="130" x2="350" y2="150" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="200" x2="350" y2="220" stroke="#333" stroke-width="2"/>
-  <line x1="430" y1="260" x2="480" y2="260" stroke="#333" stroke-width="2"/>
-  <line x1="550" y1="280" x2="550" y2="500" stroke="#333" stroke-width="2"/>
-  <line x1="550" y1="500" x2="510" y2="520" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="300" x2="350" y2="320" stroke="#333" stroke-width="2"/>
-  <line x1="430" y1="360" x2="480" y2="360" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="400" x2="350" y2="420" stroke="#333" stroke-width="2"/>
-  <line x1="270" y1="460" x2="190" y2="460" stroke="#333" stroke-width="2"/>
-  <line x1="430" y1="460" x2="480" y2="460" stroke="#333" stroke-width="2"/>
-  <line x1="120" y1="480" x2="120" y2="585" stroke="#333" stroke-width="2"/>
-  <line x1="120" y1="585" x2="290" y2="585" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="500" x2="350" y2="520" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="560" x2="350" y2="565" stroke="#333" stroke-width="2"/>
-  
-  <!-- Labels -->
-  <text x="440" y="250" font-size="10" fill="#388e3c">Yes</text>
-  <text x="440" y="350" font-size="10" fill="#388e3c">Yes</text>
-  <text x="380" y="450" font-size="10" fill="#ef6c00">Yes</text>
-  <text x="240" y="455" font-size="10" fill="#ef6c00">No</text>
-  <text x="380" y="490" font-size="10" fill="#666">Denied</text>
-  <text x="500" y="490" font-size="10" fill="#388e3c">Approved</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="1390" viewBox="0 0 1040 1390" role="img" aria-labelledby="title description">
+  <title id="title">PH Core profile inclusion flow</title>
+  <desc id="description">Identify a data element. Reuse an existing PH Core profile if available, then end. Otherwise check shared-use and Must Support thresholds. Meeting both leads to candidate status. If thresholds are not met, check exception criteria. Human appraisal of an exception leads to candidate status if approved, or program-specific status if denied. Without an exception, keep the element program-specific. For candidates, create a profile, document the decision, and publish. All paths end.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 1 1 L 9 5 L 1 9 Z" fill="#475569"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #172b4d; text-anchor: middle; font-size: 18px; }
+      .heading { font-size: 30px; font-weight: 700; text-anchor: start; }
+      .subtitle, .note { font-size: 16px; fill: #526277; text-anchor: start; }
+      .node { stroke-width: 2; }
+      .process { fill: #fff; stroke: #64748b; }
+      .decision { fill: #fff8df; stroke: #b77912; }
+      .terminal { fill: #e8f1ff; stroke: #3567a5; }
+      .candidate { fill: #e9f6ed; stroke: #338151; }
+      .review { fill: #fff0e4; stroke: #b96528; }
+      .strong { font-weight: 700; }
+      .detail { font-size: 16px; fill: #526277; }
+      .edge { fill: none; stroke: #475569; stroke-width: 2; stroke-linejoin: round; marker-end: url(#arrow); }
+      .label { font-size: 16px; font-weight: 700; fill: #334155; paint-order: stroke; stroke: #fff; stroke-width: 7; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect width="1040" height="1390" rx="16" fill="#fff"/>
+  <text x="40" y="48" class="heading">PH Core profile inclusion flow</text>
+  <text x="40" y="78" class="subtitle">Shared-use eligibility and human appraisal</text>
+
+  <!-- Reuse exits along the outer right edge. Threshold approval uses the inner right edge. -->
+  <g aria-label="Flow connections">
+    <path class="edge" d="M 330 156 V 185"/>
+    <path class="edge" d="M 330 249 V 270"/>
+    <path class="edge" d="M 510 330 H 670"/>
+    <path class="edge" d="M 330 390 V 425"/>
+    <path class="edge" d="M 520 500 H 960 V 855 H 910"/>
+    <path class="edge" d="M 330 575 V 610"/>
+    <path class="edge" d="M 520 685 H 670"/>
+    <path class="edge" d="M 330 760 V 820"/>
+    <path class="edge" d="M 790 720 V 820"/>
+    <path class="edge" d="M 670 698 H 625 V 790 H 440 V 820"/>
+    <path class="edge" d="M 790 890 V 930"/>
+    <path class="edge" d="M 790 994 V 1030"/>
+    <path class="edge" d="M 790 1094 V 1130"/>
+    <path class="edge" d="M 790 1194 V 1260 H 610"/>
+    <path class="edge" d="M 330 890 V 1260 H 430"/>
+    <path class="edge" d="M 790 365 V 395 H 1000 V 1310 H 520 V 1284"/>
+  </g>
+
+  <g aria-label="Start and identify">
+    <rect class="node terminal" x="260" y="112" width="140" height="44" rx="22"/>
+    <text x="330" y="141" class="strong">Start</text>
+    <rect class="node process" x="200" y="185" width="260" height="64" rx="10"/>
+    <text x="330" y="211" class="strong">Identify data element</text>
+    <text x="330" y="234" class="detail">in use case analysis</text>
+  </g>
+  <g aria-label="Reuse an existing profile">
+    <path class="node decision" d="M 330 270 L 510 330 L 330 390 L 150 330 Z"/>
+    <text x="330" y="324" class="strong">Existing PH Core</text>
+    <text x="330" y="348">profile available?</text>
+    <rect class="node candidate" x="670" y="295" width="240" height="70" rx="10"/>
+    <text x="790" y="324" class="strong">Use existing</text>
+    <text x="790" y="348">PH Core profile</text>
+  </g>
+  <g aria-label="Shared-use eligibility">
+    <path class="node decision" d="M 330 425 L 520 500 L 330 575 L 140 500 Z"/>
+    <text x="330" y="480" class="strong">Used by ≥2 IGs</text>
+    <text x="330" y="504" class="strong">AND</text>
+    <text x="330" y="528" class="strong">MS in ≥2 IGs?</text>
+    <text x="42" y="470" class="note">Count only</text>
+    <text x="42" y="492" class="note">independent</text>
+    <text x="42" y="514" class="note">Philippine</text>
+    <text x="42" y="536" class="note">source IGs.</text>
+  </g>
+  <g aria-label="Exception review">
+    <path class="node decision" d="M 330 610 L 520 685 L 330 760 L 140 685 Z"/>
+    <text x="330" y="677" class="strong">Exception criteria</text>
+    <text x="330" y="701" class="strong">met?</text>
+    <rect class="node review" x="670" y="650" width="240" height="70" rx="10"/>
+    <text x="790" y="679" class="strong">Human appraisal</text>
+    <text x="790" y="703">by PH Core team</text>
+    <text x="42" y="950" class="note strong">Exception criteria</text>
+    <text x="42" y="976" class="note">National policy priority</text>
+    <text x="42" y="1002" class="note">Critical interoperability</text>
+    <text x="42" y="1028" class="note">Patient safety</text>
+    <text x="42" y="1054" class="note">Regulatory compliance</text>
+    <text x="42" y="1080" class="note">Foundational infrastructure</text>
+  </g>
+  <g aria-label="Outcomes and publication">
+    <rect class="node review" x="200" y="820" width="260" height="70" rx="10"/>
+    <text x="330" y="850" class="strong">Keep as</text>
+    <text x="330" y="874" class="strong">program-specific</text>
+    <rect class="node candidate" x="670" y="820" width="240" height="70" rx="10"/>
+    <text x="790" y="850" class="strong">Mark as PH Core</text>
+    <text x="790" y="874" class="strong">candidate</text>
+    <rect class="node process" x="650" y="930" width="280" height="64" rx="10"/>
+    <text x="790" y="957" class="strong">Create PH Core profile</text>
+    <text x="790" y="981" class="detail">following conventions</text>
+    <rect class="node process" x="650" y="1030" width="280" height="64" rx="10"/>
+    <text x="790" y="1057" class="strong">Document in</text>
+    <text x="790" y="1081">Decision Log</text>
+    <rect class="node candidate" x="650" y="1130" width="280" height="64" rx="10"/>
+    <text x="790" y="1157" class="strong">Publish in</text>
+    <text x="790" y="1181">PH Core IG</text>
+    <rect class="node terminal" x="430" y="1236" width="180" height="48" rx="24"/>
+    <text x="520" y="1267" class="strong">End</text>
+  </g>
+  <g aria-label="Branch labels">
+    <text x="590" y="319" class="label">Profile exists</text>
+    <text x="386" y="414" class="label">No profile</text>
+    <text x="580" y="489" class="label">Yes</text>
+    <text x="355" y="601" class="label">No</text>
+    <text x="570" y="674" class="label">Yes</text>
+    <text x="355" y="797" class="label">No</text>
+    <text x="838" y="774" class="label">Approved</text>
+    <text x="548" y="779" class="label">Denied</text>
+  </g>
+  <path d="M 40 1330 H 1000" stroke="#dce3eb"/>
+  <text x="40" y="1354" class="note">Candidate eligibility does not automatically assign PH Core Must Support (MS).</text>
+  <text x="40" y="1377" class="note">Apply version-specific inclusion rules separately. Flow: images-source/inclusion-flow.mmd</text>
 </svg>

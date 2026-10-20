@@ -2,7 +2,7 @@ Profile: PHCoreOrganization
 Parent: Organization
 Id: ph-core-organization
 Title: "PH Core Organization"
-Description: "This profile localizes the FHIR R4 Organization resource to the Philippine context."
+Description: "This profile localizes the FHIR R4 Organization resource to the Philippine context. The ownership type is aligned with DOH-PhilHealth JAO 2021-0002 Annex B.1 Hospital Statistics #9."
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 0
 
@@ -75,3 +75,19 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 * contact.address only PHCoreAddress
 
 * partOf only Reference(PHCoreOrganization)
+
+// Exception: DOH-PhilHealth JAO 2021-0002 Annex B.1 Hospital Statistics #9 "Nature of Ownership"
+* type ^slicing.discriminator.type = #value
+* type ^slicing.discriminator.path = "coding.system"
+* type ^slicing.rules = #open
+* type ^slicing.description = "Slicing based on the code system of the organization type"
+* type ^slicing.ordered = false
+* type contains
+    ownership 0..1 MS
+* type[ownership] ^short = "Nature of ownership (government or private)"
+* type[ownership] ^definition = "The legal right of an individual, group, corporation or government to the possession (ownership) of the facility (DOH-PhilHealth JAO 2021-0002 Annex B.1 Hospital Statistics #9)."
+* type[ownership] insert ObligationOptional
+* type[ownership] from OrganizationOwnershipVS (required)
+* type[ownership].coding 1..*
+* type[ownership].coding.system 1..1
+* type[ownership].coding.system = "https://fhir.doh.gov.ph/phcore/CodeSystem/organization-ownership-cs" (exactly)

@@ -3,55 +3,29 @@ Parent: Encounter
 Id: ph-core-encounter
 Title: "PH Core Encounter"
 Description: "This profile sets minimum expectations for an Encounter resource to record, search, and fetch basic encounter information for a patient. It is based on the [FHIR R4 Encounter](https://www.hl7.org/fhir/R4/encounter.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Encounter when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
-* class 1..1 MS
+* status insert ObligationClientShouldPopulate // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
 
-* diagnosis.condition only Reference(Condition or PHCoreProcedure) //Add PHCoreCondition once available.
+* class insert ObligationClientShouldPopulate // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
 
-* hospitalization 0..1 MS
-* hospitalization.dischargeDisposition 0..1 MS
-* hospitalization.dischargeDisposition only CodeableConcept
-* hospitalization.origin 0..1 MS
-* hospitalization.origin only Reference(PHCoreLocation or PHCoreOrganization)
-
-* location 0..* MS
-* location.location MS 
-* location.location only Reference(PHCoreLocation)
-
-* identifier 0..* MS
-
-* participant 0..* MS
-* participant.individual only Reference(PHCorePractitioner or PHCoreRelatedPerson or PHCorePractitionerRole)
-
-* participant.type 0..* MS
-
-* period 0..1 MS
-* period.start 0..1 MS
-* period.end 0..1
-
-* reasonCode 0..* MS
-* reasonCode only CodeableConcept
-
-* reasonReference 0..* MS
-* reasonReference only Reference(Condition or PHCoreObservation or PHCoreProcedure or ImmunizationRecommendation) //Add PHCoreCondition and PHCoreImmunizationRecommendation once available.
-
-* serviceProvider 0..1 MS
-* serviceProvider only Reference(PHCoreOrganization)
-
-* status 1..1 MS
-
-* subject 1..1 MS
+* subject insert ObligationClientShouldPopulate // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
 * subject only Reference(PHCorePatient or Group)
 
-* type 0..* MS
+* diagnosis.condition only Reference(PHCoreCondition or PHCoreProcedure) //Add PHCoreCondition once available.
 
-* insert CodeableConceptSO(serviceType)
-* insert CodeableConceptSO(priority)
-* insert CodeableConceptSO(diagnosis.use)
-* insert CodeableConceptSO(hospitalization.admitSource)
-* insert CodeableConceptSO(hospitalization.reAdmission)
-* insert CodeableConceptSO(hospitalization.dietPreference)
-* insert CodeableConceptSO(hospitalization.specialCourtesy)
-* insert CodeableConceptSO(hospitalization.specialArrangement)
-* insert CodeableConceptSO(location.physicalType)
+* hospitalization.origin only Reference(PHCoreLocation or PHCoreOrganization)
 
+* location.location only Reference(PHCoreLocation)
+
+* participant.individual only Reference(PHCorePractitioner or PHCoreRelatedPerson or PHCorePractitionerRole)
+
+* reasonCode only CodeableConcept
+
+* reasonReference only Reference(PHCoreCondition or PHCoreObservation or PHCoreProcedure or ImmunizationRecommendation) //Add PHCoreCondition and PHCoreImmunizationRecommendation once available.
+
+* participant insert ObligationPopulateIfKnownHandle // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
+
+* serviceProvider insert ObligationPopulateIfKnownHandle // MS source in supplied Encounter comparison table: Road Safety IG (rs-encounter); AU Core IG (au-core-encounter).
+* serviceProvider only Reference(PHCoreOrganization)

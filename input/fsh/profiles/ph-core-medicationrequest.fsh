@@ -3,6 +3,8 @@ Parent: MedicationRequest
 Id: ph-core-medicationrequest
 Title: "PH Core Medication Request"
 Description: "Captures key FHIR Medication Request data for the Philippine context."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * insert ExperimentalStructureDefinition
 
 // Philippine-specific references
@@ -17,14 +19,15 @@ Description: "Captures key FHIR Medication Request data for the Philippine conte
 * priorPrescription only Reference(PHCoreMedicationRequest)
 
 // Philippine-specific binding for medication codes
-* medicationCodeableConcept from DrugsVS (preferred)
-
-* insert CodeableConceptSO(statusReason)
-* insert CodeableConceptSO(category)
-* insert CodeableConceptSO(medicationCodeableConcept)
-* insert CodeableConceptSO(performerType)
-* insert CodeableConceptSO(reasonCode)
-* insert CodeableConceptSO(courseOfTherapyType)
-* insert CodeableConceptSO(substitution.allowedCodeableConcept)
-* insert CodeableConceptSO(substitution.reason)
+* medication[x] only CodeableConcept or Reference(PHCoreMedication)
+* medicationCodeableConcept ^binding.extension[+].extension[0].url = "key"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueId = "phcore-medreq-fda-cpr-pref"
+* medicationCodeableConcept ^binding.extension[=].extension[+].url = "purpose"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueCode = #preferred
+* medicationCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueCanonical = Canonical(DrugsVS)
+* medicationCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "This value set is for use when Philippine FDA CPR product codes are preferred. It is a partial fragment and does not cover all registered drug products or medicinal substances."
+* medicationCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+* medication[x] insert ObligationPopulateIfKnownHandle
 

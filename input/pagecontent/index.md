@@ -1,5 +1,5 @@
 
-# Draft Philippine Core FHIR Implementation Guide (PH Core IG)
+### Draft Philippine Core FHIR Implementation Guide (PH Core IG)
 
 <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc"
      width="100%" viewBox="0 0 1400 200" preserveAspectRatio="xMidYMin meet">
@@ -49,17 +49,17 @@
 > **Project Status: In Development**  
 > This Implementation Guide is under active development and is not yet available for public or production use. Content, data models, and implementation details are subject to change.
 
-The Philippine Core FHIR Implementation Guide (PH Core IG) defines the nationally agreed core clinical and administrative data standards for interoperable health information exchange in the Philippines. It provides a common, implementable foundation for health systems to consistently exchange data using the HL7® FHIR® standard.
+The Philippine Core FHIR Implementation Guide (PH Core IG) proposes a reusable baseline of clinical and administrative data representations for interoperable health information exchange in the Philippines. It provides a common, implementable foundation for health systems to consistently exchange data using the HL7® FHIR® standard.
 
-PH Core IG standardizes commonly used FHIR profiles, extensions, terminology bindings, and conformance expectations that are applicable across health programs, facilities, and systems nationwide. Program- or use case–specific IGs should use PH Core artifacts to avoid duplication and ensure nationwide interoperability.
+PH Core IG standardizes commonly used FHIR profiles, extensions, terminology bindings, and conformance expectations that are applicable across health programs, facilities, and systems nationwide. Program- or use case–specific IGs can reuse these draft artifacts and define the additional requirements of their exchange contracts.
 
-# Project Background
+### Project Background
 
 PH Core is actively being developed by UP Manila National TeleHealth Center, under the guidance of the Phillippines Department of Health, with technical assistance from CSIRO Australia.
 
 The initial draft of IG will be tested in the Connectathon to validate proof of concept and direction settings for the Philippines Core IG development process.
 
-# Purpose and Scope
+### Purpose and Scope
 
 The PH Core IG aims to:
 
@@ -70,22 +70,22 @@ The PH Core IG aims to:
 
 This guide focuses on core clinical and administrative resources (e.g., Patient, Practitioner, Organization, Encounter, Observation) that are widely applicable across multiple use cases. It does not define program-specific workflows or reporting payloads, which are addressed by downstream Implementation Guides.
 
-# Usage of this Guide
+### Usage of this Guide
 
 - Health information systems implement PH Core profiles as a baseline for interoperability
 - Program-specific IGs inherit from PH Core and apply additional constraints
 - Developers and vendors use the guide to build and validate FHIR-conformant systems
 - Policy and governance bodies use it as a reference for national standardization
 
-# Development and Governance
+### Development and Governance
 
 The PH Core IG is developed through a collaborative, open, and standards-based process, involving the Department of Health (DOH), PhilHealth, UP Manila, and key technical partners. Development follows international best practices, uses open-source tooling (FHIR Shorthand, GitHub, IG Publisher), and is governed through structured review and change control mechanisms.
 
-# Relationship with other IGs
+### Relationship with other IGs
 
 **PH Core:**
 
-- defines a set of conformance requirements that enforce a set of ‘minimum requirements’ on the local concepts, specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions.
+- defines local representations, reference constraints, terminology bindings and explicitly selected actor obligations. The [Client and Server conformance requirements](client-server-conformance.html) define selectable REST capabilities without requiring every system to implement every profile or interaction.
 - for use by the stakeholders in the Philippines when implementing FHIR to provide a common implementation and to be built upon when creating further profiles and implementation guides.
 - conformance may become tied to regulatory and/or contractual agreements in order to necessitate adoption to this more prescriptive specification.
 
@@ -99,9 +99,19 @@ The context of PH Core within the set of FHIR Standards is shown in the diagram 
 />
 
 {% capture layers_svg %}{% include layers.svg %}{% endcapture %}
+<style>
+  .ph-core-architecture-diagram > svg {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    height: auto !important;
+  }
+</style>
+<div class="ph-core-architecture-diagram">
 {{ layers_svg | remove: '<?xml version="1.0" encoding="us-ascii" standalone="no"?>' }}
+</div>
 
-# Usage
+### Usage
 
 PH Core is particularly useful in defining:
 
@@ -109,17 +119,18 @@ PH Core is particularly useful in defining:
 - Assumed support by client applications
 - The basis of downstream implementation guides
 
-Implementation of capabilities defined in PH Core enables specifications, applications and business logic to be developed with confidence.
+Check each artifact for the constraints and obligations it actually declares. A reference-localization profile and a profile with selected support obligations have different contracts; base FHIR cardinalities continue to apply in both.
 
-This document is a working specification that may be directly implemented by FHIR®© system producers.
+This working specification supports prototype implementation and review. The [example scenarios](examples.html) illustrate its current content; downstream IGs define their own workflows and server capabilities.
 
 FHIR®© Connectathon events are key to the verification of the guide as being suitable for implementation. This implementation guide will be used as the basis for the Philippines Connectathon events.
 
-# Dependencies
+### Dependencies
 
 {% include ip-statements.xhtml %}
 {% include cross-version-analysis.xhtml %}
 {% include dependency-table.xhtml %}
-{% include dependency-table-short.xhtml %}
+{% capture dependency_table_short %}{% include dependency-table-short.xhtml %}{% endcapture %}
+{{ dependency_table_short | replace: 'id="dep', 'id="dep-short' | replace: 'href="#dep', 'href="#dep-short' }}
 {% include dependency-table-nontech.xhtml %}
 {% include globals-table.xhtml %}

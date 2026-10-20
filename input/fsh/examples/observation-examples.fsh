@@ -1,12 +1,12 @@
 // ============================================================================
-// PH Core Observation Examples - Monolithic File
+// PH Core Observation Examples
 // ============================================================================
 // This file contains multiple Observation examples demonstrating various
 // reference constraints and use cases for the PHCoreObservation profile.
 // ============================================================================
 
 // ----------------------------------------------------------------------------
-// Example 1: Basic Blood Pressure (existing pattern, modified for consistency)
+// Basic Blood Pressure (existing pattern, modified for consistency)
 // ----------------------------------------------------------------------------
 Instance: observation-bp-example
 InstanceOf: PHCoreObservation
@@ -36,7 +36,7 @@ Description: "Blood pressure observation for Juan Dela Cruz taken on 17 Septembe
 * component[=].interpretation.text = "Below low normal"
 
 // ----------------------------------------------------------------------------
-// Example 2: Vitals with Encounter Reference
+// Vitals with Encounter Reference
 // ----------------------------------------------------------------------------
 Instance: observation-vitals-encounter-example
 InstanceOf: PHCoreObservation
@@ -47,30 +47,29 @@ Description: "Body temperature observation for Juan Dela Cruz taken during an am
 * code = $loinc#8310-5 "Body temperature"
 * subject = Reference(Patient/patient-single-example)
 * encounter = Reference(Encounter/encounter-single-example)
-* effectiveDateTime = "2023-01-01T10:30:00Z"
+* effectiveDateTime = "2025-03-15T09:15:00+08:00"
 * valueQuantity = 37.0 'Cel' "degrees Celsius"
 * performer = Reference(Practitioner/practitioner-single-example)
 
 // ----------------------------------------------------------------------------
-// Example 3: Lab Panel with hasMember References
+// Lab Panel with hasMember References
 // ----------------------------------------------------------------------------
 Instance: observation-lab-panel-example
 InstanceOf: PHCoreObservation
 Usage: #example
-Description: "Basic Metabolic Panel with references to individual electrolyte observations."
+Description: "Preoperative electrolyte panel with references to its sodium and potassium observations."
 * status = #final
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#24326-1 "Electrolytes 1998 panel - Serum or Plasma"
 * subject = Reference(Patient/patient-single-example)
-* encounter = Reference(Encounter/encounter-single-example)
-* effectiveDateTime = "2024-01-15T08:00:00Z"
-* hasMember[0] = Reference(Observation/observation-glucose-example)
-* hasMember[+] = Reference(Observation/observation-sodium-example)
+* encounter = Reference(Encounter/encounter-surgery-example)
+* effectiveDateTime = "2024-01-15T08:00:00+08:00"
+* hasMember[0] = Reference(Observation/observation-sodium-example)
 * hasMember[+] = Reference(Observation/observation-potassium-example)
 * performer = Reference(Practitioner/practitioner-single-example)
 
 // ----------------------------------------------------------------------------
-// Example 4: Individual Lab Result - Glucose
+// Individual Lab Result - Glucose
 // ----------------------------------------------------------------------------
 Instance: observation-glucose-example
 InstanceOf: PHCoreObservation
@@ -80,15 +79,17 @@ Description: "Fasting blood glucose observation for Juan Dela Cruz."
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#1558-6 "Fasting glucose [Mass/volume] in Serum or Plasma"
 * subject = Reference(Patient/patient-single-example)
-* effectiveDateTime = "2024-01-15T08:00:00Z"
+* encounter = Reference(Encounter/encounter-single-example)
+* basedOn = Reference(ServiceRequest/servicerequest-single-example)
+* effectiveDateTime = "2025-03-15T10:30:00+08:00"
 * valueQuantity = 95 'mg/dL' "mg/dL"
-* performer = Reference(Organization/organization-single-example)
+* performer = Reference(Organization/organization-pgh-example)
 * interpretation = $v3-ObservationInterpretation#N "Normal"
 * referenceRange.low = 70 'mg/dL' "mg/dL"
 * referenceRange.high = 100 'mg/dL' "mg/dL"
 
 // ----------------------------------------------------------------------------
-// Example 5: Individual Lab Result - Sodium
+// Individual Lab Result - Sodium
 // ----------------------------------------------------------------------------
 Instance: observation-sodium-example
 InstanceOf: PHCoreObservation
@@ -98,15 +99,15 @@ Description: "Serum sodium observation for Juan Dela Cruz."
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * subject = Reference(Patient/patient-single-example)
-* effectiveDateTime = "2024-01-15T08:00:00Z"
+* effectiveDateTime = "2024-01-15T08:00:00+08:00"
 * valueQuantity = 140 'mmol/L' "mmol/L"
-* performer = Reference(Organization/organization-single-example)
+* performer = Reference(Organization/organization-pgh-example)
 * interpretation = $v3-ObservationInterpretation#N "Normal"
 * referenceRange.low = 135 'mmol/L' "mmol/L"
 * referenceRange.high = 145 'mmol/L' "mmol/L"
 
 // ----------------------------------------------------------------------------
-// Example 6: Individual Lab Result - Potassium
+// Individual Lab Result - Potassium
 // ----------------------------------------------------------------------------
 Instance: observation-potassium-example
 InstanceOf: PHCoreObservation
@@ -116,15 +117,15 @@ Description: "Serum potassium observation for Juan Dela Cruz."
 * category = $observation-category#laboratory "Laboratory"
 * code = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * subject = Reference(Patient/patient-single-example)
-* effectiveDateTime = "2024-01-15T08:00:00Z"
+* effectiveDateTime = "2024-01-15T08:00:00+08:00"
 * valueQuantity = 4.0 'mmol/L' "mmol/L"
-* performer = Reference(Organization/organization-single-example)
+* performer = Reference(Organization/organization-pgh-example)
 * interpretation = $v3-ObservationInterpretation#N "Normal"
 * referenceRange.low = 3.5 'mmol/L' "mmol/L"
 * referenceRange.high = 5.0 'mmol/L' "mmol/L"
 
 // ----------------------------------------------------------------------------
-// Example 7: BMI with derivedFrom References
+// BMI with derivedFrom References
 // ----------------------------------------------------------------------------
 Instance: observation-derived-bmi-example
 InstanceOf: PHCoreObservation
@@ -135,14 +136,14 @@ Description: "BMI calculated from height and weight observations for Juan Dela C
 * code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * subject = Reference(Patient/patient-single-example)
 * effectiveDateTime = "2023-06-15T09:00:00Z"
-* valueQuantity = 23.5 'kg/m2' "kg/m2"
+* valueQuantity = 23.4 'kg/m2' "kg/m2"
 * performer = Reference(PractitionerRole/practitionerrole-single-example)
 * interpretation = $v3-ObservationInterpretation#N "Normal"
 * derivedFrom[0] = Reference(Observation/observation-weight-example)
 * derivedFrom[+] = Reference(Observation/observation-height-example)
 
 // ----------------------------------------------------------------------------
-// Example 8: Weight (for BMI calculation)
+// Weight (for BMI calculation)
 // ----------------------------------------------------------------------------
 Instance: observation-weight-example
 InstanceOf: PHCoreObservation
@@ -157,7 +158,7 @@ Description: "Body weight observation for Juan Dela Cruz."
 * performer = Reference(Practitioner/practitioner-single-example)
 
 // ----------------------------------------------------------------------------
-// Example 9: Height (for BMI calculation)
+// Height (for BMI calculation)
 // ----------------------------------------------------------------------------
 Instance: observation-height-example
 InstanceOf: PHCoreObservation
@@ -172,7 +173,7 @@ Description: "Body height observation for Juan Dela Cruz."
 * performer = Reference(Practitioner/practitioner-single-example)
 
 // ----------------------------------------------------------------------------
-// Example 10: Intra-procedure Vitals (partOf reference)
+// Intra-procedure Vitals (partOf reference)
 // ----------------------------------------------------------------------------
 Instance: observation-part-of-procedure-example
 InstanceOf: PHCoreObservation
@@ -183,7 +184,7 @@ Description: "Intraoperative blood pressure observation during appendectomy proc
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(Patient/patient-single-example)
 * partOf = Reference(Procedure/procedure-single-example)
-* effectiveDateTime = "2024-02-20T14:30:00Z"
+* effectiveDateTime = "2024-01-15T09:00:00+08:00"
 * performer = Reference(Practitioner/practitioner-single-example)
 * component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[=].valueQuantity = 120 'mm[Hg]' "mmHg"
@@ -191,24 +192,7 @@ Description: "Intraoperative blood pressure observation during appendectomy proc
 * component[=].valueQuantity = 80 'mm[Hg]' "mmHg"
 
 // ----------------------------------------------------------------------------
-// Example 11: Lab Result based on ServiceRequest (basedOn reference)
-// ----------------------------------------------------------------------------
-Instance: observation-based-on-service-example
-InstanceOf: PHCoreObservation
-Usage: #example
-Description: "Hemoglobin A1c lab result based on a service request for diabetes monitoring."
-* status = #final
-* category = $observation-category#laboratory "Laboratory"
-* code = $loinc#4548-4 "Hemoglobin A1c/Hemoglobin.total in Blood"
-* subject = Reference(Patient/patient-single-example)
-* basedOn = Reference(ServiceRequest/servicerequest-single-example)
-* effectiveDateTime = "2024-03-10T10:00:00Z"
-* valueQuantity = 6.2 '%' "%"
-* performer = Reference(Organization/organization-single-example)
-* interpretation = $v3-ObservationInterpretation#N "Normal"
-
-// ----------------------------------------------------------------------------
-// Example 12: Observation with PractitionerRole as performer
+// Observation with PractitionerRole as performer
 // ----------------------------------------------------------------------------
 Instance: observation-performer-role-example
 InstanceOf: PHCoreObservation
@@ -224,7 +208,7 @@ Description: "Heart rate observation performed by a practitioner in a specific r
 * interpretation = $v3-ObservationInterpretation#N "Normal"
 
 // ----------------------------------------------------------------------------
-// Example 13: Environmental Observation (Location as subject)
+// Environmental Observation (Location as subject)
 // ----------------------------------------------------------------------------
 Instance: observation-environmental-temp-example
 InstanceOf: PHCoreObservation
@@ -237,4 +221,4 @@ Description: "Environmental temperature observation for a hospital ward (Locatio
 * subject = Reference(Location/location-single-example)
 * effectiveDateTime = "2024-03-15T14:00:00Z"
 * valueQuantity = 22 'Cel' "degrees Celsius"
-* performer = Reference(Organization/organization-single-example)
+* performer = Reference(Organization/organization-pgh-example)

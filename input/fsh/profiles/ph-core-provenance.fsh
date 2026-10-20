@@ -3,6 +3,8 @@ Parent: Provenance
 Id: ph-core-provenance
 Title: "PH Core Provenance"
 Description: "This profile localizes the FHIR R4 Provenance resource to the Philippine context, capturing key information about who, what, when, and where for a set of resources. It is used to track the authorship and history of healthcare data in Philippine health information systems."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 
 // ============================================
 // US CORE PROVENANCE MANDATORY ELEMENTS
@@ -157,11 +159,24 @@ Description: "This profile localizes the FHIR R4 Provenance resource to the Phil
 // INVARIANTS (from US Core Provenance)
 // ============================================
 
-* agent obeys provenance-1
+* target.reference insert ObligationPopulateIfKnownHandle
+* agent.type insert ObligationPopulateIfKnownHandle
+* agent.onBehalfOf insert ObligationPopulateIfKnownHandle
+* agent[ProvenanceAuthor] insert ObligationPopulateIfKnownHandle
+* agent[ProvenanceAuthor].onBehalfOf insert ObligationPopulateIfKnownHandle
+* agent[ProvenanceTransmitter] insert ObligationPopulateIfKnownHandle
+* agent[ProvenanceTransmitter].onBehalfOf insert ObligationPopulateIfKnownHandle
 
-* insert CodeableConceptSO(reason)
-* insert CodeableConceptSO(activity)
-* insert CodeableConceptSO(agent.role)
+* target insert ObligationClientShouldPopulate
+* recorded insert ObligationClientShouldPopulate
+* agent[ProvenanceAuthor].type insert ObligationClientShouldPopulate
+* agent[ProvenanceAuthor].who insert ObligationClientShouldPopulate
+* agent[ProvenanceTransmitter].type insert ObligationClientShouldPopulate
+* agent[ProvenanceTransmitter].who insert ObligationClientShouldPopulate
+* agent insert ObligationClientShouldPopulate
+* agent.who insert ObligationClientShouldPopulate
+
+* agent obeys provenance-1
 
 
 Invariant: provenance-1

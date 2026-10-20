@@ -28,7 +28,7 @@ The optional `mothersMaidenName` slice uses the [HL7 Patient Mother's Maiden Nam
 
 The HL7 Extensions Pack defines the `mothersMaidenName` [Patient SearchParameter](https://hl7.org/fhir/extensions/SearchParameter-patient-extensions-Patient-mothersMaidenName.html). PH Core recommends that servers support it when their systems can index this extension. Clients should check the server's CapabilityStatement before relying on it. For example, a client can search for candidate records with:
 
-```http
+```
 GET [base]/Patient?mothersMaidenName=Maria%20Cruz%20Santos
 ```
 

@@ -8,3 +8,7 @@ Description: "An address for the individual."
     Province named province 0..1 and
     CityMunicipality named cityMunicipality 0..1 and
     Barangay named barangay 0..1
+* extension[region] insert ObligationOptional
+* extension[province] insert ObligationOptional
+* extension[cityMunicipality] insert ObligationOptional
+* extension[barangay] insert ObligationOptional

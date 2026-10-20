@@ -54,10 +54,6 @@ Description: "Captures key demographic and administrative information about indi
 * contact.address insert ObligationOptional
 * contact.address only PHCoreAddress
 
-* insert CodeableConceptSO(maritalStatus)
-* insert CodeableConceptSO(contact.relationship)
-* insert CodeableConceptSO(communication.language)
-
 // PH Core Profile References - Issue #274
 * generalPractitioner only Reference(PHCorePractitioner or PHCorePractitionerRole or PHCoreOrganization)
 * managingOrganization only Reference(PHCoreOrganization)

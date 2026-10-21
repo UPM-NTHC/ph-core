@@ -1,0 +1,36 @@
+{
+  "artifacts": {
+    "objects": {
+      "location": "gs://${_ARTIFACT_BUCKET}/phcore-builds/$BUILD_ID/",
+      "paths": [
+        "phcore-release.tar.gz",
+        "phcore-release.sha256",
+        "output/qa.json",
+        "output/qa.html"
+      ]
+    }
+  },
+  "options": {
+    "logging": "CLOUD_LOGGING_ONLY",
+    "machineType": "E2_STANDARD_2"
+  },
+  "steps": [
+    {
+      "args": [
+        "-c",
+        "set -euo pipefail\n\ntest -f ig.ini\n\n# Install the tools needed by the IG build.\napt-get update\n\napt-get install -y --no-install-recommends \\\n  openjdk-17-jdk-headless \\\n  graphviz \\\n  jekyll \\\n  python3 \\\n  curl \\\n  ca-certificates \\\n  git\n\nnpm install --global fsh-sushi\n\n# Print tool versions for later troubleshooting.\njava -version\nnode --version\nsushi --version\njekyll --version\ndot -V\n\n# Download the same Publisher used by your workflow.\nmkdir -p input-cache\n\ncurl --fail --location --show-error --retry 3 \\\n  https://github.com/HL7/fhir-ig-publisher/releases/download/2.3.4/publisher.jar \\\n  --output input-cache/publisher.jar\n\n# Remove old generated results from the build workspace.\nrm -rf output temp\n\n# Build with terminology validation enabled.\njava -jar input-cache/publisher.jar \\\n  -ig . \\\n  -tx https://tx.fhir.org/r4 \\\n  -publish \"https://fhir.doh.gov.ph/phcore/${TAG_NAME}\"\n\n# Check that a website was generated.\ntest -s output/index.html\n\n# Check the Publisher QA report.\npython3 - <<'PY'\nimport json\nfrom pathlib import Path\n\npath = Path(\"output/qa.json\")\n\nif not path.is_file():\n    raise SystemExit(\"FAILED: output/qa.json is missing.\")\n\nqa = json.loads(path.read_text())\nerrors = qa.get(\"errs\")\n\nif type(errors) is not int or errors < 0:\n    raise SystemExit(\n        \"FAILED: qa.json has no valid integer error count.\"\n    )\n\nprint(f\"QA errors: {errors}\")\nprint(f\"QA warnings: {qa.get('warnings', 'unknown')}\")\n\nif errors > 0:\n    raise SystemExit(\n        \"FAILED: IG validation errors were found.\"\n    )\n\nprint(\"PASSED: PH Core built with zero QA errors.\")\nPY\n\nprintf '%s\\n' \"$COMMIT_SHA\" > output/BUILT_COMMIT\nprintf '%s\\n' \"$TAG_NAME\" > output/BUILT_TAG\n\n\n# Check publication package metadata before archiving.\npython3 - <<'CHECK_PACKAGE'\nimport json\nimport tarfile\n\ntag = \"${TAG_NAME}\"\nexpected_version = tag.removeprefix(\"v\")\nexpected_url = f\"https://fhir.doh.gov.ph/phcore/{tag}\"\n\nwith tarfile.open(\"output/package.tgz\", \"r:gz\") as archive:\n    member = archive.extractfile(\"package/package.json\")\n    if member is None:\n        raise SystemExit(\"FAILED: package/package.json is missing.\")\n    package = json.load(member)\n\nchecks = {\n    \"package ID\": package.get(\"name\") == \"fhir.ph.core\",\n    \"version\": package.get(\"version\") == expected_version,\n    \"canonical\": package.get(\"canonical\")\n        == \"https://fhir.doh.gov.ph/phcore\",\n    \"publication URL\": package.get(\"url\") == expected_url,\n    \"publication flag\": package.get(\"notForPublication\", False) is False,\n    \"FHIR version\": package.get(\"fhirVersions\") == [\"4.0.1\"],\n}\n\nprint(json.dumps(package, indent=2))\n\nfor name, passed in checks.items():\n    print(f\"{name}: {'PASS' if passed else 'FAIL'}\")\n\nif not all(checks.values()):\n    raise SystemExit(\"FAILED: publication package metadata.\")\n\nprint(\"PASSED: publication package metadata.\")\nCHECK_PACKAGE\n\ntar -C output -czf phcore-release.tar.gz .\nsha256sum phcore-release.tar.gz > phcore-release.sha256\n"
+      ],
+      "entrypoint": "bash",
+      "env": [
+        "DEBIAN_FRONTEND=noninteractive",
+        "JAVA_TOOL_OPTIONS=-Xmx5g -Dfile.encoding=UTF-8"
+      ],
+      "id": "Build and validate PH Core",
+      "name": "node:22-bookworm"
+    }
+  ],
+  "substitutions": {
+    "_ARTIFACT_BUCKET": "fhir-ig-dev-bucket"
+  },
+  "timeout": "1800s"
+}

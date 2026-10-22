@@ -11,6 +11,7 @@ Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing 
 * extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines"
 * extension[nationality].extension[period].valuePeriod.start = "2020-01-01"
 * extension[nationality].extension[period].valuePeriod.end = "2023-01-01"
+* extension[mothersMaidenName].valueString = "Maria Cruz Santos"
 * extension[religion].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 * extension[religion].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1007 "Atheism"
 * extension[indigenousStatus].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-status"

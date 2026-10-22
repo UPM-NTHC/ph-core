@@ -8,19 +8,21 @@ Description: "Captures key demographic and administrative information about indi
 * extension contains
     http://hl7.org/fhir/StructureDefinition/patient-nationality|5.3.0 named nationality 0..* and
     http://hl7.org/fhir/StructureDefinition/patient-religion|5.3.0 named religion 0..* and
-    http://hl7.org/fhir/StructureDefinition/individual-genderIdentity named genderIdentity 0..* and
-    http://hl7.org/fhir/StructureDefinition/individual-pronouns named individualPronouns 0..* and
+    http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName|5.3.0 named mothersMaidenName 0..1 and
+    http://hl7.org/fhir/StructureDefinition/individual-genderIdentity|5.3.0 named genderIdentity 0..* and
+    http://hl7.org/fhir/StructureDefinition/individual-pronouns|5.3.0 named individualPronouns 0..* and
     IndigenousStatus named indigenousStatus 0..* and
     // IndigenousPeople named indigenousPeople 0..1 and // removed, capturing indigenousStatus
     Occupation named occupation 0..* and
     Race named race 0..1 and
     EducationalAttainment named educationalAttainment 0..1 and
-    http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender named sex 0..* and
+    http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender|5.3.0 named sex 0..* and
     PHCorePWDDisability named pwdDisability 0..1
-* extension[genderIdentity] ^short = "Gender Identity"
-* extension[sex] ^short = "Recorded sex or gender"
+// * extension[genderIdentity] ^short = "Gender Identity"
+// * extension[mothersMaidenName] ^short = "Mother's maiden name"
+// * extension[sex] ^short = "Recorded sex or gender"
 // Supply the recorded concept in extension[type], such as sex assigned at birth, when known.
-* extension[individualPronouns] ^short = "Individual pronouns"
+// * extension[individualPronouns] ^short = "Individual pronouns"
 
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"

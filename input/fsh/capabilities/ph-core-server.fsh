@@ -225,6 +225,7 @@ Usage: #definition
 * insert PHCoreCatalogSearch(given, http://hl7.org/fhir/SearchParameter/individual-given, #string, #SHOULD)
 * insert PHCoreCatalogSearch(birthdate, http://hl7.org/fhir/SearchParameter/individual-birthdate, #date, #SHOULD)
 * insert PHCoreCatalogSearch(gender, http://hl7.org/fhir/SearchParameter/individual-gender, #token, #SHOULD)
+* insert PHCoreCatalogSearch(mothersMaidenName, http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-mothersMaidenName|5.3.0, #string, #SHOULD)
 * insert PHCoreCatalogSearch(active, http://hl7.org/fhir/SearchParameter/Patient-active, #token, #SHOULD)
 * insert PHCoreSearchCombination2(name, birthdate, #SHOULD)
 

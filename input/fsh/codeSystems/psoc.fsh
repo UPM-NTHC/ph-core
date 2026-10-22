@@ -1,11 +1,11 @@
 CodeSystem: PSOC
 Id: PSOC
-Title: "Mock PSOC"
-Description: "Mock of the Philippine Standard Occupational Classification."
+Title: "PSOC"
+Description: "The Philippine Standard Occupational Classification."
 * insert ShareableCodeSystem
 * ^url = "https://psa.gov.ph/classification/psoc/unit"
 * ^version = "0.1.0"
-* ^content = #example
+* ^content = #fragment
 * #111102 "Hospital Administrator" "Manages hospital operations"
 * #111103 "Medical Department Head" "Head of a medical department"
 * #121101 "General Manager" "Manages overall operations of an organization"

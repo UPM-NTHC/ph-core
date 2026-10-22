@@ -1,110 +1,277 @@
 Instance: transaction-example
 InstanceOf: Bundle
 Usage: #example
-Description: "Transaction bundle demonstrating a coherent clinical scenario: Juan Dela Cruz has a blood pressure check during an encounter with Dr. Maria Clara Santos, with his known allergies, conditions, and immunization history."
+Description: "Synthetic primary-care follow-up for Juan Dela Cruz on 15 March 2025, including linked organizations, clinician, encounter, completed collection work and laboratory results, and the medication sequence. This Bundle packages records, not a workflow event log."
 * type = #transaction
-* entry[0].fullUrl = "https://fhir.doh.gov.ph/phcore/Patient/patient-single-example"
+
+* entry[0].fullUrl = "https://example.org/fhir/Patient/patient-single-example"
 * entry[=].resource = patient-single-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Patient"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example"
+
+* entry[+].fullUrl = "https://example.org/fhir/Organization/organization-pgh-example"
+* entry[=].resource = organization-pgh-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "Organization"
+
+* entry[+].fullUrl = "https://example.org/fhir/Organization/organization-prc-example"
+* entry[=].resource = organization-prc-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "Organization"
+
+* entry[+].fullUrl = "https://example.org/fhir/Practitioner/practitioner-single-example"
 * entry[=].resource = practitioner-single-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Practitioner"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example"
-* entry[=].resource = encounter-single-example
+
+* entry[+].fullUrl = "https://example.org/fhir/PractitionerRole/practitionerrole-single-example"
+* entry[=].resource = practitionerrole-single-example
 * entry[=].request.method = #POST
-* entry[=].request.url = "Encounter"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Condition/condition-single-example"
+* entry[=].request.url = "PractitionerRole"
+
+* entry[+].fullUrl = "https://example.org/fhir/Location/location-single-example"
+* entry[=].resource = location-single-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "Location"
+
+* entry[+].fullUrl = "https://example.org/fhir/Condition/condition-single-example"
 * entry[=].resource = condition-single-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Condition"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Medication/medication-single-example"
+
+* entry[+].fullUrl = "https://example.org/fhir/Encounter/encounter-single-example"
+* entry[=].resource = encounter-single-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "Encounter"
+
+* entry[+].fullUrl = "https://example.org/fhir/ServiceRequest/servicerequest-single-example"
+* entry[=].resource = servicerequest-single-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "ServiceRequest"
+
+* entry[+].fullUrl = "https://example.org/fhir/ServiceRequest/servicerequest-hba1c-example"
+* entry[=].resource = servicerequest-hba1c-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "ServiceRequest"
+
+* entry[+].fullUrl = "https://example.org/fhir/Task/task-single-example"
+* entry[=].resource = task-single-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "Task"
+
+* entry[+].fullUrl = "https://example.org/fhir/Observation/observation-bp-followup-example"
+* entry[=].resource = observation-bp-followup-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+
+* entry[+].fullUrl = "https://example.org/fhir/Observation/observation-vitals-encounter-example"
+* entry[=].resource = observation-vitals-encounter-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+
+* entry[+].fullUrl = "https://example.org/fhir/Observation/observation-glucose-example"
+* entry[=].resource = observation-glucose-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+
+* entry[+].fullUrl = "https://example.org/fhir/Observation/observation-based-on-service-example"
+* entry[=].resource = observation-based-on-service-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "Observation"
+
+* entry[+].fullUrl = "https://example.org/fhir/Medication/medication-single-example"
 * entry[=].resource = medication-single-example
 * entry[=].request.method = #POST
 * entry[=].request.url = "Medication"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Observation/observation-bp-example"
-* entry[=].resource = observation-bp-example
+
+* entry[+].fullUrl = "https://example.org/fhir/MedicationRequest/medicationrequest-single-example"
+* entry[=].resource = medicationrequest-single-example
 * entry[=].request.method = #POST
-* entry[=].request.url = "Observation"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/AllergyIntolerance/allergy-single-example"
-* entry[=].resource = allergy-single-example
+* entry[=].request.url = "MedicationRequest"
+
+* entry[+].fullUrl = "https://example.org/fhir/MedicationDispense/medicationdispense-single-example"
+* entry[=].resource = medicationdispense-single-example
 * entry[=].request.method = #POST
-* entry[=].request.url = "AllergyIntolerance"
-* entry[+].fullUrl = "https://fhir.doh.gov.ph/phcore/Immunization/immunization-single-example"
-* entry[=].resource = immunization-single-example
+* entry[=].request.url = "MedicationDispense"
+
+* entry[+].fullUrl = "https://example.org/fhir/MedicationStatement/medicationstatement-single-example"
+* entry[=].resource = medicationstatement-single-example
 * entry[=].request.method = #POST
-* entry[=].request.url = "Immunization"
-* entry[=].request.url = "Practitioner"
+* entry[=].request.url = "MedicationStatement"
 
-Instance: example-patient
-InstanceOf: PHCorePatient
-Usage: #example
-Description: "Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines."
-* name.family = "Dela Cruz"
-* name.given = "Juan Jane"
-* name.given[+] = "Dela Fuente"
-* gender = #male
-* birthDate = "1980-01-01"
-//* identifier.system = "https://www.philhealth.gov.ph/advisories/2016/adv2016-0012.pdf"
-* active = true
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#PH "Philippines"
-* extension[nationality].extension[period].valuePeriod.start = "2020-01-01"
-* extension[nationality].extension[period].valuePeriod.end = "2023-01-01"
-* extension[religion].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1007 "Atheism"
-* extension[race].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-Race#2036-2 "Filipino"
-* identifier.system = "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"
-* identifier.value = "63-584789845-5"
-* address.line = "123 Mabini Street"
-* address.line[+] = "Barangay Malinis"
-* address.city = "Quezon City"
-* address.district = "NCR"
-* address.postalCode = "1100"
-* address.country = "PH"
-* address.extension.url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"
-* address.extension.valueCoding = $PSGC#1380100001 "Barangay 1"
+* entry[+].fullUrl = "https://example.org/fhir/MedicationAdministration/medicationadministration-single-example"
+* entry[=].resource = medicationadministration-single-example
+* entry[=].request.method = #POST
+* entry[=].request.url = "MedicationAdministration"
 
-* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"
-* address.extension[=].valueCoding = $PSGC#1380200000 "City of Las Piñas"
+// Bundle-private resources. Keep PH Core InstanceOf declarations and explicit
+// IDs/profile metadata so these resources remain referenceable within entries.
+// Usage #inline controls publication; these are not DomainResource.contained.
 
-* address.extension[+].url = "https://fhir.doh.gov.ph/phcore/StructureDefinition/province"
-* address.extension[=].valueCoding = $PSGC#0402100000  "Cavite"
+Instance: task-single-example
+InstanceOf: PHCoreTask
+Usage: #inline
+Description: "A laboratory task for Juan Dela Cruz requested by Dr. Maria Clara Santos. The task is to collect a blood sample for a ordered fasting blood glucose test."
+* id = "task-single-example"
+* meta.profile[0] = "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task"
+* status = #completed
+* intent = #order
+* priority = #routine
+* code = $sct#82078001 "Collection of blood specimen for laboratory"
+* code.text = "Blood sample collection"
+* description = "Collect blood sample for the ordered fasting blood glucose test"
+* focus = Reference(ServiceRequest/servicerequest-single-example)
+* for = Reference(Patient/patient-single-example)
+* encounter = Reference(Encounter/encounter-single-example)
+* requester = Reference(Practitioner/practitioner-single-example)
+* authoredOn = "2025-03-15T09:35:00+08:00"
+* lastModified = "2025-03-15T10:15:00+08:00"
+* executionPeriod.start = "2025-03-15T09:40:00+08:00"
+* executionPeriod.end = "2025-03-15T10:15:00+08:00"
+* owner = Reference(Organization/organization-pgh-example)
+* note.text = "Fasting status was checked before specimen collection."
+* note.time = "2025-03-15T10:15:00+08:00"
+* note.authorReference = Reference(Practitioner/practitioner-single-example)
 
-Instance: example-encounter
-InstanceOf: PHCoreEncounter
-Usage: #example
-Description: "An ambulatory encounter for Juan Dela Cruz that has been completed."
-* status = #finished
-* class = $v3-ActCode#AMB "ambulatory"
-* subject = Reference(Patient/example-patient)
+Instance: servicerequest-hba1c-example
+InstanceOf: PHCoreServiceRequest
+Usage: #inline
+Description: "Completed HbA1c order for Juan Dela Cruz's diabetes follow-up on 15 March 2025."
+* id = "servicerequest-hba1c-example"
+* meta.profile[0] = "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest"
+* status = #completed
+* intent = #order
+* category = $sct#108252007 "Laboratory procedure"
+* code = $loinc#4548-4 "Hemoglobin A1c/Hemoglobin.total in Blood"
+* subject = Reference(Patient/patient-single-example)
+* encounter = Reference(Encounter/encounter-single-example)
+* authoredOn = "2025-03-15T09:30:00+08:00"
+* requester = Reference(Practitioner/practitioner-single-example)
+* supportingInfo = Reference(Condition/condition-single-example)
 
-Instance: example-condition
-InstanceOf: Condition
-Usage: #example
-Description: "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus."
-* clinicalStatus = $condition-clinical#active "Active"
-* code = $sct#44054006 "Diabetes mellitus type 2"
-* subject = Reference(Patient/example-patient)
-* encounter = Reference(Encounter/example-encounter)
+// ----------------------------------------------------------------------------
+// Example 11: Lab Result based on ServiceRequest (basedOn reference)
+// ----------------------------------------------------------------------------
+Instance: observation-based-on-service-example
+InstanceOf: PHCoreObservation
+Usage: #inline
+Description: "Hemoglobin A1c lab result based on a service request for diabetes monitoring."
+* id = "observation-based-on-service-example"
+* meta.profile[0] = "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+* status = #final
+* category = $observation-category#laboratory "Laboratory"
+* code = $loinc#4548-4 "Hemoglobin A1c/Hemoglobin.total in Blood"
+* subject = Reference(Patient/patient-single-example)
+* basedOn = Reference(ServiceRequest/servicerequest-hba1c-example)
+* effectiveDateTime = "2025-03-15T10:30:00+08:00"
+* valueQuantity = 6.2 '%' "%"
+* performer = Reference(Organization/organization-pgh-example)
+* note.text = "Illustrative monitoring result; interpretation depends on the clinical context."
 
-Instance: example-practitioner
-InstanceOf: PHCorePractitioner
-Usage: #example
-Description: "Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph."
-* name.family = "Santos"
-* name.given[0] = "Maria"
-* name.given[+] = "Clara"
-* telecom[0].system = #phone
-* telecom[=].value = "+63-912-345-6789"
-* telecom[=].use = #mobile
-* telecom[+].system = #email
-* telecom[=].value = "maria.santos@example.ph"
-* telecom[=].use = #work
-* address.use = #home
-* address.line = "1234 Mabini Street"
-* address.city = "Manila"
-* address.state = "NCR"
-* address.postalCode = "1000"
-* address.country = "PH"
-* gender = #female
-* birthDate = "1985-05-15"
+Instance: observation-bp-followup-example
+InstanceOf: PHCoreObservation
+Usage: #inline
+Description: "Blood pressure recorded during Juan Dela Cruz's outpatient follow-up on 15 March 2025."
+* id = "observation-bp-followup-example"
+* meta.profile[0] = "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+* status = #final
+* category = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#85354-9 "Blood pressure panel with all children optional"
+* subject = Reference(Patient/patient-single-example)
+* encounter = Reference(Encounter/encounter-single-example)
+* effectiveDateTime = "2025-03-15T09:15:00+08:00"
+* performer = Reference(Practitioner/practitioner-single-example)
+* component[0].code = $loinc#8480-6 "Systolic blood pressure"
+* component[=].valueQuantity = 120 'mm[Hg]' "mmHg"
+* component[+].code = $loinc#8462-4 "Diastolic blood pressure"
+* component[=].valueQuantity = 80 'mm[Hg]' "mmHg"
+
+Instance: medicationrequest-single-example
+InstanceOf: PHCoreMedicationRequest
+Usage: #inline
+Description: "Dr. Maria Clara Santos renews Twinact (Telmisartan + Amlodipine) for Juan Dela Cruz to treat hypertension."
+* id = "medicationrequest-single-example"
+* meta.profile[0] = "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest"
+* status = #active
+* intent = #order
+* priority = $request-priority#routine
+* subject = Reference(Patient/patient-single-example)
+* encounter = Reference(Encounter/encounter-single-example)
+* authoredOn = "2025-03-15T09:00:00+08:00"
+* requester = Reference(Practitioner/practitioner-single-example)
+* medicationCodeableConcept = PHFDACPRCS#DRP-10144 "Twinact"
+* medicationCodeableConcept.text = "Twinact 40mg/5mg tablet"
+* reasonCode = $sct#38341003 "Hypertensive disorder"
+* note.text = "Continue the prescribed once-daily antihypertensive medication"
+* dosageInstruction.sequence = 1
+* dosageInstruction.text = "Take 1 tablet once daily"
+* dosageInstruction.timing.repeat.frequency = 1
+* dosageInstruction.timing.repeat.period = 1
+* dosageInstruction.timing.repeat.periodUnit = #d
+* dosageInstruction.route = $v3-RouteOfAdministration#PO "Swallow, oral"
+* dosageInstruction.doseAndRate.doseQuantity = 1 '1' "tablet"
+* dispenseRequest.numberOfRepeatsAllowed = 0
+* dispenseRequest.quantity = 30 $sct#732936001 "Tablet"
+
+Instance: medicationdispense-single-example
+InstanceOf: PHCoreMedicationDispense
+Usage: #inline
+Description: "Pharmacy dispenses Twinact (Telmisartan + Amlodipine) to Juan Dela Cruz based on Dr. Santos prescription."
+* id = "medicationdispense-single-example"
+* meta.profile[0] = "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationdispense"
+* status = #completed
+* subject = Reference(Patient/patient-single-example)
+* context = Reference(Encounter/encounter-single-example)
+* medicationCodeableConcept = PHFDACPRCS#DRP-10144 "Twinact"
+* medicationCodeableConcept.text = "Twinact 40mg/5mg tablet"
+* performer.function = $medicationdispense-performer-function#finalchecker "Final Checker"
+* performer.actor = Reference(Practitioner/practitioner-single-example)
+* authorizingPrescription = Reference(MedicationRequest/medicationrequest-single-example)
+* type = $sct#373784005 "Dispensing medication"
+* quantity = 30 $sct#732936001 "Tablet"
+* daysSupply = 30 'd' "days"
+* whenPrepared = "2025-03-15T10:30:00+08:00"
+* whenHandedOver = "2025-03-15T11:00:00+08:00"
+* dosageInstruction.sequence = 1
+* dosageInstruction.text = "Take 1 tablet once daily"
+
+Instance: medicationstatement-single-example
+InstanceOf: PHCoreMedicationStatement
+Usage: #inline
+Description: "Patient Juan Dela Cruz reports taking Twinact (Telmisartan + Amlodipine) for hypertension."
+* id = "medicationstatement-single-example"
+* meta.profile[0] = "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement"
+* status = #active
+* subject = Reference(Patient/patient-single-example)
+* context = Reference(Encounter/encounter-single-example)
+* effectivePeriod.start = "2025-03-10"
+* dateAsserted = "2025-03-15T09:00:00+08:00"
+* informationSource = Reference(Patient/patient-single-example)
+* medicationCodeableConcept = PHFDACPRCS#DRP-10144 "Twinact"
+* medicationCodeableConcept.text = "Twinact 40mg/5mg tablet"
+* reasonCode = $sct#38341003 "Hypertensive disorder"
+* note.text = "Patient reports taking medication once daily for hypertension"
+* dosage.sequence = 1
+* dosage.text = "Take 1 tablet once daily"
+* dosage.timing.repeat.frequency = 1
+* dosage.timing.repeat.period = 1
+* dosage.timing.repeat.periodUnit = #d
+* dosage.route = $v3-RouteOfAdministration#PO "Swallow, oral"
+
+Instance: medicationadministration-single-example
+InstanceOf: PHCoreMedicationAdministration
+Usage: #inline
+Description: "Juan Dela Cruz takes Twinact (Telmisartan + Amlodipine) tablet as prescribed."
+* id = "medicationadministration-single-example"
+* meta.profile[0] = "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration"
+* status = #completed
+* subject = Reference(Patient/patient-single-example)
+* context = Reference(Encounter/encounter-single-example)
+* medicationCodeableConcept = PHFDACPRCS#DRP-10144 "Twinact"
+* medicationCodeableConcept.text = "Twinact 40mg/5mg tablet"
+* effectiveDateTime = "2025-03-15T11:15:00+08:00"
+* performer.actor = Reference(Patient/patient-single-example)
+* request = Reference(MedicationRequest/medicationrequest-single-example)
+* dosage.text = "1 tablet taken orally"
+* dosage.route = $v3-RouteOfAdministration#PO "Swallow, oral"
+* dosage.dose = 1 '1' "tablet"

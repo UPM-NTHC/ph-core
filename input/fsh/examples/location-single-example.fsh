@@ -3,8 +3,6 @@ InstanceOf: PHCoreLocation
 Usage: #example
 Title: "Example PH Core Location"
 Description: "Philippine General Hospital - A government tertiary hospital located in Manila, Philippines."
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Philippine General Hospital (PGH) is an active tertiary government hospital located in Ermita, City of Manila, National Capital Region (NCR), Philippines.</div>"
 * status = #active
 * name = "Philippine General Hospital"
 * type.coding = $v3-roleCode#HOSP "Hospital"
@@ -17,10 +15,6 @@ Description: "Philippine General Hospital - A government tertiary hospital locat
 * address.country = "PH"
 * address.extension[region].valueCoding = $PSGC#1300000000 "National Capital Region (NCR)"
 * address.extension[cityMunicipality].valueCoding = $PSGC#1380600000 "City of Manila"
-* managingOrganization = Reference(Organization/organization-single-example)
-* type = $v3-roleCode#HOSP "Hospital"
-* physicalType = $location-physical-type#bu "Building"
+* managingOrganization = Reference(Organization/organization-pgh-example)
 * position.longitude = 120.9856
 * position.latitude = 14.5764
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Philippine General Hospital Main Building - A tertiary hospital located in Manila.</div>"

@@ -6,6 +6,7 @@ Description: "The Philippine Standard Geographic Code."
 * ^url = "https://psa.gov.ph/classification/psgc"
 * ^version = "1Q-2026"
 * ^content = #fragment
+* ^hierarchyMeaning = #part-of
 * ^experimental = true
 
 * #0100000000 "Region I (Ilocos Region)"

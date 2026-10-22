@@ -38,7 +38,7 @@ Description: "Captures key demographic and administrative information about indi
 * identifier[PHCorePhilHealthID].value ^example[1].label = "PhilHealth ID"
 * identifier[PHCorePhilHealthID].value ^example[1].valueString = "nn-nnnnnnnnn-n"
 * identifier[PHCorePhilHealthID].type = $v2-0203#NH
-* identifier[PHCorePhilHealthID] insert ObligationOptional
+* identifier[PHCorePhilHealthID] insert ObligationPopulateIfKnownHandle
 
 
 * identifier[PHCorePhilSysID].system = "http://philsys.gov.ph/fhir/Identifier/philsys-id" (exactly)
@@ -47,24 +47,24 @@ Description: "Captures key demographic and administrative information about indi
 * identifier[PHCorePhilSysID].value ^example[1].label = "PhilSys ID"
 * identifier[PHCorePhilSysID].value ^example[1].valueString = "1234-5678-9101-1213"
 * identifier[PHCorePhilSysID].type = $v2-0203#NI
-* identifier[PHCorePhilSysID] insert ObligationOptional
+* identifier[PHCorePhilSysID] insert ObligationPopulateIfKnownHandle
 
-* address insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; Road Safety IG; AU Core IG.
+* address insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; Road Safety IG; AU Core IG.
 * address only PHCoreAddress
 
-* birthDate insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; Road Safety IG; AU Core IG.
-* gender insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; AU Core IG.
+* birthDate insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; Road Safety IG; AU Core IG.
+* gender insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Immunization IG; AU Core IG.
 * gender ^short = "Administrative Gender - for backward compatibility with existing implementations"
 // Retain the R4 extensible marital-status binding; no stronger local binding is selected.
-* name insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+* name insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 * name.given ^short = "First name (given[0]) and Middle Name (given[1])."
 * name.given ^definition = "First name (given[0]) and Middle Name (given[1])."
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * name.family MS
-* name.family insert ObligationOptional
+* name.family insert ObligationPopulateIfKnownHandle
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * name.given MS
-* name.given insert ObligationOptional
+* name.given insert ObligationPopulateIfKnownHandle
 
-* telecom insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+* telecom insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
 * contact.name.given ^short = "First name (given[0]) and Middle Name (given[1])."
 * contact.name.given ^definition = "First name (given[0]) and Middle Name (given[1])."

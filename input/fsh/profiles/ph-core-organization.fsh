@@ -28,7 +28,7 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 * identifier[NhfrCode].value ^example[1].label = "DOH NHFR Code"
 * identifier[NhfrCode].value ^example[1].valueString = "DOH000000000012345"
 * identifier[NhfrCode].type = $v2-0203#NH
-* identifier[NhfrCode] insert ObligationOptional
+* identifier[NhfrCode] insert ObligationPopulateIfKnownHandle
 
 // * identifier[HcpnSite] only PHCoreHcpnSite
 * identifier[HcpnSite].system = "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code" (exactly)
@@ -49,7 +49,7 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 * identifier[PAN].type = $v2-0203#NPI
 * identifier[PAN].value ^example[0].extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-suppress].valueBoolean = true // Clears out Example General: 123456
 
-// * identifier[PAN] insert ObligationOptional
+// * identifier[PAN] insert ObligationPopulateIfKnownHandle
 
 // * identifier[PEN] only PHCorePhilHealthPEN
 * identifier[PEN].system = "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber" (exactly)
@@ -60,18 +60,18 @@ Description: "This profile localizes the FHIR R4 Organization resource to the Ph
 * identifier[PEN].value ^example[0].extension[http://hl7.org/fhir/StructureDefinition/elementdefinition-suppress].valueBoolean = true // Clears out Example General: 123456
 
 
-// * identifier[PEN] insert ObligationOptional
+// * identifier[PEN] insert ObligationPopulateIfKnownHandle
 
 
 // Removed - not sufficient evidence to keep: 1 independent source IG marks this path MS: Road Safety IG (at least 2 required). Original rule: * active 0..1 MS
-// * active insert ObligationOptional
-* address insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+// * active insert ObligationPopulateIfKnownHandle
+* address insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 * address only PHCoreAddress
-* name insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
-* telecom insert ObligationOptional // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+* name insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+* telecom insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
 
 // REMOVED - NO CLEAR UC IG USE: 0 independent source IGs mark this exact path MS (at least 2 required). Original rule: * contact.address MS
-// * contact.address insert ObligationOptional
+// * contact.address insert ObligationPopulateIfKnownHandle
 * contact.address only PHCoreAddress
 
 * partOf only Reference(PHCoreOrganization)

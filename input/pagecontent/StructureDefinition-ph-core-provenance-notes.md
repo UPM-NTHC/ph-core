@@ -22,9 +22,9 @@ To validate `provenance-1`, provide access to the resource referenced by `agent.
 | Selected paths | Client and Server when producing resources | Client and Server when receiving resources |
 |----------------|---------|---------------------|
 | `target`, `recorded`, `agent`, `agent.who`, and `type` in each named agent slice | **SHALL** be able to populate these elements. | **SHALL** handle these elements. |
-| `target.reference`, general `agent.type`, each named agent slice, and `agent.onBehalfOf` | **MAY** be able to populate these elements. | **SHALL** handle these elements. |
+| `target.reference`, general `agent.type`, each named agent slice, and `agent.onBehalfOf` | **SHALL** populate these elements when their values are known and permitted to be shared. | **SHALL** handle these elements. |
 
-Population capability does not determine whether an element is required in a record. Apply the required-content and `onBehalfOf` conditions above when populating an instance.
+Population capability and population when known are distinct from element cardinality. Handling applies when processing received resources; it is not a substitute for a missing value. Apply the required-content and `onBehalfOf` conditions above when populating an instance.
 
 ### Draft attribution scope
 

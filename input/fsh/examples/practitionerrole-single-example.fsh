@@ -8,7 +8,7 @@ Description: "Dr. Maria Clara Santos is a General Practitioner working in the Ph
 * practitioner = Reference(Practitioner/practitioner-single-example)
 * organization = Reference(Organization/organization-pgh-example)
 * location = Reference(Location/location-single-example)
-* code = $practitioner-role#doctor "Doctor"
+* code = PRCCodeSystem#2200 "Physician"
 * specialty = $sct#394802001 "General medicine"
 * telecom[0].system = #phone
 * telecom[=].value = "+63-2-8651-7800"

@@ -209,8 +209,8 @@ Description: "Dr. Maria Clara Santos, MD — Emergency Medicine Attending Physic
 
 * extension[individualPronouns].extension[value].valueCodeableConcept = http://loinc.org#LA29519-8 "she/her/her/hers/herself"
 
-* qualification[0].code = http://terminology.hl7.org/CodeSystem/v2-0360#MD "Doctor of Medicine"
-* qualification[=].identifier.system = "http://prc.gov.ph/fhir/Identifier/prc-license"
+* qualification[0].code = PRCCodeSystem#2200 "Physician"
+* qualification[=].identifier.system = "https://www.prc.gov.ph"
 * qualification[=].identifier.value = "0123456"
 * qualification[=].period.start = "2010-07-15"
 * qualification[=].issuer = Reference(Organization/organization-prc-example)
@@ -232,7 +232,7 @@ Description: "Dr. Maria Clara Santos — Emergency Medicine Attending Physician 
 
 * practitioner = Reference(Practitioner/practitioner-ed-example)
 * organization = Reference(Organization/organization-pgh-example)
-* code = $practitioner-role#doctor "Doctor"
+* code = PRCCodeSystem#2200 "Physician"
 // Keep the specific active SNOMED term as text: the R4 Practice Setting ValueSet
 // only offers the inactive "Accident & emergency" concept for this setting.
 * specialty.text = "Emergency medicine"

@@ -3,6 +3,8 @@ Parent: MedicationRequest
 Id: ph-core-medicationrequest
 Title: "PH Core Medication Request"
 Description: "Captures key FHIR Medication Request data for the Philippine context."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * insert ExperimentalStructureDefinition
 
 // Philippine-specific references

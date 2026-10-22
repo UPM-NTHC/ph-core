@@ -3,6 +3,8 @@ Parent: MedicationAdministration
 Id: ph-core-medicationadministration
 Title: "PH Core Medication Administration"
 Description: "Captures key FHIR Medication Administration data for the Philippine context."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * insert ExperimentalStructureDefinition
 
 // Philippine-specific references

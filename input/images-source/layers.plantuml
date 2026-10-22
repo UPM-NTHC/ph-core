@@ -93,7 +93,7 @@ package "PH Core IG" <<Layer>> #E8F5E9 {
         rectangle "City/Municipality" as ExtCityMun
         rectangle "Province" as ExtProvince
         rectangle "Region" as ExtRegion
-        rectangle "IndigenousGroup" as ExtIndigenous
+        rectangle "IndigenousStatus" as ExtIndigenous
         rectangle "PWDDisability" as ExtPWD
         rectangle "...(7 more)" as MoreExtensions
 

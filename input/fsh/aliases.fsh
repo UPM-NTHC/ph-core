@@ -1,5 +1,6 @@
 Alias: $sct = http://snomed.info/sct
 Alias: $loinc = http://loinc.org
+Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
 // The extension canonical and the terminology system have different roles.
 // Pin the R4 extension-pack definition already used by this IG. Instances retain
 // the unversioned extension.url; the version qualifies profile references only.

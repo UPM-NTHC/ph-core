@@ -78,6 +78,7 @@ menu:
   Home: index.html
   Guidance: 
     "Client and Server Conformance": client-server-conformance.html
+    "Sex and Gender": sex-and-gender-guidance.html
     "Worked Case": sample-case.html
     "FHIR REST Tutorial": fhir-rest-tutorial.html
     "Example": examples.html

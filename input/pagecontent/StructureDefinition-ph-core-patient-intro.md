@@ -20,7 +20,7 @@ Display partial dates at their recorded precision. Do not display an assumed 1 J
 
 ### Sex and gender concepts
 
-`Patient.gender` represents administrative gender. The `sex` slice reuses HL7 Recorded Sex or Gender; its `type` identifies the source concept, such as sex assigned at birth. Gender identity and pronouns use their own extensions. These concepts are not interchangeable, and optional slices do not require their collection.
+`Patient.gender` represents administrative gender in this profile. The optional `genderIdentity`, `individualPronouns` and `sex` slices represent separate concepts. In `sex`, `type` identifies what `value` records, such as sex assigned at birth. Keep these meanings distinct. See [Sex and Gender Guidance](sex-and-gender-guidance.html) and the [focused Patient example](Patient-patient-sex-and-gender-example.html).
 
 ### Examples
 

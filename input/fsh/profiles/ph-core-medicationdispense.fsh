@@ -20,6 +20,14 @@ Description: "Captures key FHIR Medication Dispense data for the Philippine cont
 
 // Philippine-specific binding for medication codes
 * medication[x] only CodeableConcept or Reference(PHCoreMedication)
-* medicationCodeableConcept from DrugsVS (preferred)
+* medicationCodeableConcept ^binding.extension[+].extension[0].url = "key"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueId = "phcore-meddisp-fda-cpr-pref"
+* medicationCodeableConcept ^binding.extension[=].extension[+].url = "purpose"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueCode = #preferred
+* medicationCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueCanonical = Canonical(DrugsVS)
+* medicationCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
+* medicationCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "This value set is for use when Philippine FDA CPR product codes are preferred. It is a partial fragment and does not cover all registered drug products or medicinal substances."
+* medicationCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * medication[x] insert ObligationPopulateIfKnownHandle
 

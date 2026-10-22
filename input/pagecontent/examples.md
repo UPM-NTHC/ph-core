@@ -2,13 +2,14 @@
 
 #### Missing data examples
 
-These three examples illustrate distinct DAR placements from the [missing-data policy](client-server-conformance.html#missing-data).
+These four examples illustrate distinct DAR placements from the [missing-data policy](client-server-conformance.html#missing-data).
 
 | Representation | Example |
 | --- | --- |
 | Unknown whole name | [Explicit name absence reason](Patient-patient-explicit-absence-example.html) |
 | Missing individual clinical result | [Glucose result unavailable](Observation-observation-result-unavailable.html) |
 | Missing component alongside a measured component | [Blood pressure component unavailable](Observation-observation-component-unavailable.html) |
+| Unknown date of a patient-reported procedure | [Appendectomy with unknown date](Procedure-procedure-unknown-date-example.html) |
 
 #### Connected scenarios
 

@@ -34,3 +34,15 @@ Description: "The systolic result is known. The diastolic result was not obtaine
 * component[=].valueQuantity = 120 'mm[Hg]' "mmHg"
 * component[+].code = $loinc#8462-4 "Diastolic blood pressure"
 * component[=].dataAbsentReason = $data-absent-reason#unknown
+
+Instance: procedure-unknown-date-example
+InstanceOf: PHCoreProcedure
+Usage: #example
+Title: "Patient-reported appendectomy with unknown date"
+Description: "The patient reports a completed past appendectomy but cannot recall its date. The standard DAR extension on performedDateTime records that the date is unknown."
+* status = #completed
+* code = $sct#80146002 "Appendectomy"
+* subject = Reference(Patient/patient-explicit-absence-example)
+* asserter = Reference(Patient/patient-explicit-absence-example)
+* performedDateTime.extension[0].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* performedDateTime.extension[=].valueCode = #unknown

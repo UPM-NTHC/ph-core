@@ -1,0 +1,3 @@
+A Procedure with `status = completed` or `in-progress` SHALL contain `performed[x]`. This timing-context requirement does not make performed timing mandatory for every other status. Use a known date, period or other permitted performed datatype when available.
+
+The timing-presence rule follows the [US Core Procedure constraint](https://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html). Use one of the permitted performed datatypes; this rule does not change those datatype choices. See the [missing-data policy](client-server-conformance.html#missing-data) for general representation requirements.

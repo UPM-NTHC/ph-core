@@ -57,6 +57,10 @@ Description: "Captures key demographic and administrative information about indi
 * gender ^short = "Administrative Gender - for backward compatibility with existing implementations"
 // Retain the R4 extensible marital-status binding; no stronger local binding is selected.
 * name insert ObligationPopulateIfKnownHandle // Source IGs marking this exact FHIR path MS in supplied table: Road Safety IG; AU Core IG.
+// Source: USCorePatientProfile.fsh name constraint (us-core-6) explicitly uses
+// DAR on HumanName. PH adaptation: keep optional names and permit real name.text.
+* name obeys ph-pat-001
+* name.extension contains $data-absent-reason-extension named dataAbsentReason 0..1
 * name.given ^short = "First name (given[0]) and Middle Name (given[1])."
 * name.given ^definition = "First name (given[0]) and Middle Name (given[1])."
 // Appraised - keep - AU Core best practice: 1 independent source IG marks this path MS: AU Core IG (at least 2 required). Original rule: * name.family MS

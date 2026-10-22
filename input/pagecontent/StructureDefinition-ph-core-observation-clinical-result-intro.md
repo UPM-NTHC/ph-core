@@ -1,0 +1,5 @@
+Select this profile for a clinical measurement, test or panel when the exchange requires a result or an explicit reason for its absence. It derives from [PH Core Observation](StructureDefinition-ph-core-observation.html); selecting the generic profile alone does not imply these additional result-presence constraints.
+
+An individual result without `component` or `hasMember` SHALL contain `value[x]` or `dataAbsentReason`. A top-level value and its corresponding absence reason SHALL NOT coexist, as required by inherited R4 `obs-6`. A panel whose results are carried by components or member observations does not require a top-level scalar value or absence reason.
+
+These rules follow the US Core clinical-result presence pattern. They do not require every component of a general clinical result to contain a value or reason; US Core applies that additional rule in specific blood-pressure profiles. A downstream profile supplies those use-case constraints and any screening answer set. See the [missing-data examples](examples.html#missing-data-examples).

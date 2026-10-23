@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-single-example> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "practitionerrole-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Maria Clara Santos is a General Practitioner working with the Department of Health. One of her assignments is at the Philippine General Hospital.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://doh.gov.ph/fhir/Identifier/practitioner-role-id"^^xsd:anyURI ;
+       fhir:l <http://doh.gov.ph/fhir/Identifier/practitioner-role-id>
+     ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:practitioner [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+  ] ; # 
+  fhir:organization [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:reference [ fhir:v "Organization/organization-single-example" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/practitioner-role"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/practitioner-role>
+       ] ;
+       fhir:code [ fhir:v "doctor" ] ;
+       fhir:display [ fhir:v "Doctor" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:394802001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "394802001" ] ;
+       fhir:display [ fhir:v "General medicine" ]
+     ] )
+  ] ) ; # 
+  fhir:location ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Location/location-single-example> ;
+     fhir:reference [ fhir:v "Location/location-single-example" ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-2-8651-7800" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "maria.santos@doh.gov.ph" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

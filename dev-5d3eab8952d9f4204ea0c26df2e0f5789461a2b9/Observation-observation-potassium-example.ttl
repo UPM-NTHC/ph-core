@@ -1,0 +1,99 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-potassium-example> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "observation-potassium-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-potassium-example</b></p><a name=\"observation-potassium-example\"> </a><a name=\"hcobservation-potassium-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2823-3}\">Potassium [Moles/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Patient-patient-single-example.html\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>effective</b>: 2024-01-15 08:00:00+0000</p><p><b>performer</b>: <a href=\"Organization-organization-single-example.html\">Organization Department of Health - Sattelite Office</a></p><p><b>value</b>: 4 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>3.5 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></td><td>5 mmol/L<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemmol/L = 'mmol/L')</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:2823-3 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "2823-3" ] ;
+       fhir:display [ fhir:v "Potassium [Moles/volume] in Serum or Plasma" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2024-01-15T08:00:00Z"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:reference [ fhir:v "Organization/organization-single-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "4"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "mmol/L" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "mmol/L" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "N" ] ;
+       fhir:display [ fhir:v "Normal" ]
+     ] )
+  ] ) ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v 3.5 ] ;
+       fhir:unit [ fhir:v "mmol/L" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mmol/L" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mmol/L" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mmol/L" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

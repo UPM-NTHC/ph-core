@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "barangays",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet barangays</b></p><a name=\"barangays\"> </a><a name=\"hcbarangays\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380100001\">1380100001</a></td><td>Barangay 1</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0133070250\">0133070250</a></td><td>Paringao</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/barangays",
+  "version" : "0.2.0",
+  "name" : "Barangays",
+  "title" : "Barangays",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-12T06:10:41+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psgc",
+      "concept" : [{
+        "code" : "1380100001",
+        "display" : "Barangay 1"
+      },
+      {
+        "code" : "0133070250",
+        "display" : "Paringao"
+      }]
+    }]
+  }
+}

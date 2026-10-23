@@ -1,0 +1,114 @@
+{
+  "resourceType" : "Organization",
+  "id" : "organization-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789, PEN: PEN-987654321) is an active PH Core Organization located at 123, Barangay 1, City of Las Piñas, Benguet, 1740, Philippines. The organization can be contacted via phone at +63-2-8651-7800 or email at contact@doh.gov.ph.</div>"
+  },
+  "identifier" : [{
+    "system" : "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code",
+    "value" : "1234567890"
+  },
+  {
+    "type" : {
+      "text" : "Baguio City Health Care Provider Network"
+    },
+    "system" : "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code"
+  },
+  {
+    "system" : "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber",
+    "value" : "PAN-2024-56789"
+  },
+  {
+    "system" : "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber",
+    "value" : "PEN-987654321"
+  },
+  {
+    "system" : "http://my-hospital.org/internal-id",
+    "value" : "HOSP-INT-12345"
+  }],
+  "active" : true,
+  "name" : "Department of Health - Sattelite Office",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+63-2-8651-7800",
+    "use" : "work"
+  },
+  {
+    "system" : "email",
+    "value" : "contact@doh.gov.ph",
+    "use" : "work"
+  }],
+  "address" : [{
+    "extension" : [{
+      "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/region",
+      "valueCoding" : {
+        "system" : "https://psa.gov.ph/classification/psgc",
+        "code" : "1401100000",
+        "display" : "Benguet"
+      }
+    },
+    {
+      "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+      "valueCoding" : {
+        "system" : "https://psa.gov.ph/classification/psgc",
+        "code" : "1380200000",
+        "display" : "City of Las Piñas"
+      }
+    },
+    {
+      "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay",
+      "valueCoding" : {
+        "system" : "https://psa.gov.ph/classification/psgc",
+        "code" : "1380100001",
+        "display" : "Barangay 1"
+      }
+    }],
+    "use" : "work",
+    "line" : ["123 Hospital Street"],
+    "postalCode" : "1740",
+    "country" : "PH"
+  }],
+  "contact" : [{
+    "name" : {
+      "text" : "Health Facility Contact"
+    },
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "+63-2-8651-7800"
+    }],
+    "address" : {
+      "extension" : [{
+        "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/region",
+        "valueCoding" : {
+          "system" : "https://psa.gov.ph/classification/psgc",
+          "code" : "1401100000",
+          "display" : "Benguet"
+        }
+      },
+      {
+        "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+        "valueCoding" : {
+          "system" : "https://psa.gov.ph/classification/psgc",
+          "code" : "1380200000",
+          "display" : "City of Las Piñas"
+        }
+      },
+      {
+        "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay",
+        "valueCoding" : {
+          "system" : "https://psa.gov.ph/classification/psgc",
+          "code" : "1380100001",
+          "display" : "Barangay 1"
+        }
+      }],
+      "use" : "work",
+      "line" : ["125 Central Office Street"],
+      "postalCode" : "1740",
+      "country" : "PH"
+    }
+  }]
+}

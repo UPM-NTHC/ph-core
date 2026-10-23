@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="servicerequest-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">A laboratory service request for fasting blood glucose test ordered by Dr. Maria Clara Santos for patient Juan Dela Cruz during an ambulatory encounter.</div>
+  </text>
+  <status value="active"/>
+  <intent value="order"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="108252007"/>
+      <display value="Laboratory procedure"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="33747003"/>
+      <display value="Glucose measurement, blood"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/encounter-single-example"/>
+  </encounter>
+  <occurrenceDateTime value="2024-03-15T10:00:00+08:00"/>
+  <authoredOn value="2024-03-15T09:30:00+08:00"/>
+  <requester>
+    <reference value="Practitioner/practitioner-single-example"/>
+  </requester>
+  <supportingInfo>
+    <reference value="Condition/condition-single-example"/>
+  </supportingInfo>
+</ServiceRequest>

@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationRequest/medicationrequest-single-example> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medicationrequest-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Maria Clara Santos prescribed Twinact 40mg/5mg tablet (Telmisartan + Amlodipine), 1 tablet once daily to treat hypertension for Juan Dela Cruz.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:priority [ fhir:v "routine"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://verification.fda.gov.ph"^^xsd:anyURI ;
+         fhir:l <https://verification.fda.gov.ph>
+       ] ;
+       fhir:code [ fhir:v "DRP-10144" ] ;
+       fhir:display [ fhir:v "Twinact" ]
+     ] ) ;
+     fhir:text [ fhir:v "Twinact 40mg/5mg tablet" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-single-example" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2025-03-15T09:00:00+08:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:38341003 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "38341003" ] ;
+       fhir:display [ fhir:v "Hypertensive disorder" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Take complete course of antibiotics as prescribed" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:sequence [ fhir:v 1 ] ;
+     fhir:text [ fhir:v "Take 1 tablet once daily" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration>
+         ] ;
+         fhir:code [ fhir:v "PO" ] ;
+         fhir:display [ fhir:v "Swallow, oral" ]
+       ] )
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "tablet" ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "1" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:dispenseRequest [
+     fhir:numberOfRepeatsAllowed [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+     fhir:quantity [
+       fhir:value [ fhir:v "30"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "Tablet" ] ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "732936001" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

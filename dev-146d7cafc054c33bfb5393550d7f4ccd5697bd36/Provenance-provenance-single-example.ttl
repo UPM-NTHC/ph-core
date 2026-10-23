@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Provenance/provenance-single-example> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "provenance-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Provenance record documenting that Dr. Maria Clara Santos created the blood pressure observation for Juan Dela Cruz on September 17, 2012, on behalf of the Department of Health - Central Office.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:target ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-bp-example> ;
+     fhir:reference [ fhir:v "Observation/observation-bp-example" ]
+  ] ) ; # 
+  fhir:occurred [
+     a fhir:DateTime ;
+     fhir:v "2012-09-17T08:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:recorded [ fhir:v "2012-09-17T08:30:15+08:00"^^xsd:dateTime] ; # 
+  fhir:reason ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActReason>
+       ] ;
+       fhir:code [ fhir:v "TREAT" ] ;
+       fhir:display [ fhir:v "treatment" ]
+     ] )
+  ] ) ; # 
+  fhir:activity [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-DataOperation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-DataOperation>
+       ] ;
+       fhir:code [ fhir:v "CREATE" ] ;
+       fhir:display [ fhir:v "create" ]
+     ] )
+  ] ; # 
+  fhir:agent ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/provenance-participant-type"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/provenance-participant-type>
+         ] ;
+         fhir:code [ fhir:v "author" ] ;
+         fhir:display [ fhir:v "Author" ]
+       ] )
+     ] ;
+     fhir:who [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+     ] ;
+     fhir:onBehalfOf [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+       fhir:reference [ fhir:v "Organization/organization-single-example" ]
+     ]
+  ] ) ; # 
+  fhir:signature ( [
+     fhir:type ( [
+       fhir:system [
+         fhir:v "urn:iso-astm:E1762-95:2013"^^xsd:anyURI ;
+         fhir:l <urn:iso-astm:E1762-95:2013>
+       ] ;
+       fhir:code [ fhir:v "1.2.840.10065.1.12.1.1" ] ;
+       fhir:display [ fhir:v "Author's Signature" ]
+     ] ) ;
+     fhir:when [ fhir:v "2012-09-17T08:30:15+08:00"^^xsd:dateTime ] ;
+     fhir:who [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+     ] ;
+     fhir:targetFormat [ fhir:v "xml" ] ;
+     fhir:sigFormat [ fhir:v "xml" ] ;
+     fhir:data [ fhir:v "dGhpcyBibG9iIGlzIHNuZWFrZWQ="^^xsd:base64Binary ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

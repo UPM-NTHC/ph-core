@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-ldl-acs> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "observation-cholesterol-ldl-acs"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-cholesterol-ldl-acs</b></p><a name=\"observation-cholesterol-ldl-acs\"> </a><a name=\"hcobservation-cholesterol-ldl-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2089-1}\">Cholesterol in LDL [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>value</b>: 160 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>0 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>100 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td></tr></table></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "laboratory" ] ;
+       fhir:Coding.display [ fhir:value "Laboratory" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:2089-1 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "2089-1" ] ;
+       fhir:Coding.display [ fhir:value "Cholesterol in LDL [Mass/volume] in Serum or Plasma" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-acs-example" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-ed-example" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-06-12T08:45:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.performer [
+     fhir:index -1 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/organization-pgh-example" ]
+  ] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "160"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "mg/dL" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "mg/dL" ]
+  ] ;
+  fhir:Observation.interpretation [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" ] ;
+       fhir:Coding.code [ fhir:value "H" ] ;
+       fhir:Coding.display [ fhir:value "High" ]
+     ]
+  ] ;
+  fhir:Observation.referenceRange [
+     fhir:index -1 ;
+     fhir:Observation.referenceRange.low [
+       fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "mg/dL" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "mg/dL" ]
+     ] ;
+     fhir:Observation.referenceRange.high [
+       fhir:Quantity.value [ fhir:value "100"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "mg/dL" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "mg/dL" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-ldl-acs.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

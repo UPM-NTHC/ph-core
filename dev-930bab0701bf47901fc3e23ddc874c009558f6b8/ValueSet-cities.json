@@ -1,0 +1,52 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "cities",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet cities</b></p><a name=\"cities\"> </a><a name=\"hccities\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380100000\">1380100000</a></td><td>City of Caloocan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380200000\">1380200000</a></td><td>City of Las Piñas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380600000\">1380600000</a></td><td>City of Manila</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0133070000\">0133070000</a></td><td>Bauang</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/cities",
+  "version" : "0.2.0",
+  "name" : "Cities",
+  "title" : "Cities",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-10T05:12:58+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "All city values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psgc",
+      "concept" : [{
+        "code" : "1380100000",
+        "display" : "City of Caloocan"
+      },
+      {
+        "code" : "1380200000",
+        "display" : "City of Las Piñas"
+      },
+      {
+        "code" : "1380600000",
+        "display" : "City of Manila"
+      },
+      {
+        "code" : "0133070000",
+        "display" : "Bauang"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="bundle-acs-case-example"/>
+  <language value="en"/>
+  <type value="transaction"/>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example"/>
+    <resource>
+      <Patient>
+        <id value="patient-acs-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_patient-acs-example"> </a><p class="res-header-id"><b>Generated Narrative: Patient patient-acs-example</b></p><a name="patient-acs-example"> </a><a name="hcpatient-acs-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-patient.html">PH Core Patient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="tel:+63-917-123-4567">+63-917-123-4567</a></li><li>123 Mabini Street Barangay Malinis City of Las Piñas 1740 PH (home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></li><li>Managing Organization: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="race of a patient."><a href="StructureDefinition-race.html">Race</a></td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-Race 2036-2}">Filipino</span></td></tr><tr><td style="background-color: #f3f5da" title="The nationality of the patient.">Patient Nationality:</td><td colspan="3"><ul><li>code: <span title="Codes:{urn:iso:std:iso:3166 PH}">Philippines</span></li><li>period: 1981-03-15 --&gt; (ongoing)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Highest educational attainment of the patient."><a href="StructureDefinition-educational-attainment.html">Educational Attainment</a></td><td colspan="3"><span title="Codes:{https://psa.gov.ph/classification/psced/level C201301}">Elementary Graduate</span></td></tr><tr><td style="background-color: #f3f5da" title="Patient's occupation.">Occupation:</td><td colspan="3"><ul><li>occupationClassification: <span title="Codes:{https://psa.gov.ph/classification/psoc/unit 911102}">Street Food Vendor</span></li><li>occupationLength: 2015-01-01 --&gt; (ongoing)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="If the patient is a member of an indigenous group."><a href="StructureDefinition-indigenous-people.html">Indigenous People</a></td><td colspan="3">false</td></tr><tr><td style="background-color: #f3f5da" title="The patient's professed religious affiliations."><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-patient-religion.html">Patient Religion</a></td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation 1041}">Roman Catholic Church</span></td></tr></table></div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+          <extension url="code">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:iso:std:iso:3166"/>
+                <code value="PH"/>
+                <display value="Philippines"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="period">
+            <valuePeriod>
+              <start value="1981-03-15"/>
+            </valuePeriod>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+              <code value="1041"/>
+              <display value="Roman Catholic Church"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people">
+          <valueBoolean value="false"/>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/race">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-Race"/>
+              <code value="2036-2"/>
+              <display value="Filipino"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://psa.gov.ph/classification/psced/level"/>
+              <code value="C201301"/>
+              <display value="Elementary Graduate"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation">
+          <extension url="occupationClassification">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://psa.gov.ph/classification/psoc/unit"/>
+                <code value="911102"/>
+                <display value="Street Food Vendor"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="occupationLength">
+            <valuePeriod>
+              <start value="2015-01-01"/>
+            </valuePeriod>
+          </extension>
+        </extension>
+        <identifier>
+          <system value="http://philhealth.gov.ph/fhir/Identifier/philhealth-id"/>
+          <value value="63-584789845-5"/>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <use value="official"/>
+          <family value="Dela Cruz"/>
+          <given value="Juan"/>
+          <given value="Carlos"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="+63-917-123-4567"/>
+          <use value="mobile"/>
+        </telecom>
+        <gender value="male"/>
+        <birthDate value="1981-03-15"/>
+        <address>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1380200000"/>
+              <display value="City of Las Piñas"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1300000000"/>
+              <display value="National Capital Region"/>
+            </valueCoding>
+          </extension>
+          <use value="home"/>
+          <type value="both"/>
+          <line value="123 Mabini Street"/>
+          <line value="Barangay Malinis"/>
+          <city value="City of Las Piñas"/>
+          <district value="NCR"/>
+          <postalCode value="1740"/>
+          <country value="PH"/>
+        </address>
+        <generalPractitioner>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </generalPractitioner>
+        <managingOrganization>
+          <reference value="Organization/organization-pgh-example"/>
+        </managingOrganization>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example"/>
+    <resource>
+      <Organization>
+        <id value="organization-pgh-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_organization-pgh-example"> </a><p class="res-header-id"><b>Generated Narrative: Organization organization-pgh-example</b></p><a name="organization-pgh-example"> </a><a name="hcorganization-pgh-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-organization.html">PH Core Organization</a></p></div><p><b>identifier</b>: <a href="NamingSystem-DOHNHFRCodeNS.html" title="Health Facility Code (HFC) from the National Health Facility Registry.">DOHNHFRCode</a>/1234567890, <a href="NamingSystem-PhilHealthPANNS.html" title="The unique number issued by PhilHealth to accredited institutions.">PhilHealthPAN</a>/PAN-2024-56789, <a href="NamingSystem-PhilHealthPENNS.html" title="The unique number issued by PhilHealth to employers.">PhilHealthPEN</a>/PEN-987654321</p><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}">Healthcare Provider</span></p><p><b>name</b>: Philippine General Hospital</p><p><b>telecom</b>: <a href="tel:+63-2-8651-7800">+63-2-8651-7800</a>, <a href="mailto:contact@pgh.gov.ph">contact@pgh.gov.ph</a></p><p><b>address</b>: Taft Avenue Manila 1000 PH (work)</p><h3>Contacts</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td style="display: none">*</td><td>Hospital Administrator</td><td><a href="tel:+63-2-8651-7801">+63-2-8651-7801</a></td><td>Taft Avenue Manila 1000 PH (work)</td></tr></table></div>
+        </text>
+        <identifier>
+          <system value="https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"/>
+          <value value="1234567890"/>
+        </identifier>
+        <identifier>
+          <system value="http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"/>
+          <value value="PAN-2024-56789"/>
+        </identifier>
+        <identifier>
+          <system value="http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"/>
+          <value value="PEN-987654321"/>
+        </identifier>
+        <active value="true"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+          </coding>
+        </type>
+        <name value="Philippine General Hospital"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="+63-2-8651-7800"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="contact@pgh.gov.ph"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1300000000"/>
+              <display value="National Capital Region"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1380600000"/>
+              <display value="City of Manila"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1339000003"/>
+              <display value="Ermita"/>
+            </valueCoding>
+          </extension>
+          <use value="work"/>
+          <type value="both"/>
+          <line value="Taft Avenue"/>
+          <city value="Manila"/>
+          <district value="NCR"/>
+          <postalCode value="1000"/>
+          <country value="PH"/>
+        </address>
+        <contact>
+          <name>
+            <text value="Hospital Administrator"/>
+          </name>
+          <telecom>
+            <system value="phone"/>
+            <value value="+63-2-8651-7801"/>
+          </telecom>
+          <address>
+            <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+              <valueCoding>
+                <system value="https://psa.gov.ph/classification/psgc"/>
+                <code value="1300000000"/>
+                <display value="National Capital Region"/>
+              </valueCoding>
+            </extension>
+            <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+              <valueCoding>
+                <system value="https://psa.gov.ph/classification/psgc"/>
+                <code value="1380600000"/>
+                <display value="City of Manila"/>
+              </valueCoding>
+            </extension>
+            <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+              <valueCoding>
+                <system value="https://psa.gov.ph/classification/psgc"/>
+                <code value="1339000003"/>
+                <display value="Ermita"/>
+              </valueCoding>
+            </extension>
+            <use value="work"/>
+            <line value="Taft Avenue"/>
+            <city value="Manila"/>
+            <postalCode value="1000"/>
+            <country value="PH"/>
+          </address>
+        </contact>
+      </Organization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Organization"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example"/>
+    <resource>
+      <Practitioner>
+        <id value="practitioner-ed-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_practitioner-ed-example"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner practitioner-ed-example</b></p><a name="practitioner-ed-example"> </a><a name="hcpractitioner-ed-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-practitioner.html">PH Core Practitioner</a></p></div><blockquote><p><b>Person Recorded Sex Or Gender</b></p><ul><li>value: <span title="Codes:{http://snomed.info/sct 248152002}">Female (finding)</span></li><li>type: <span title="Codes:{http://loinc.org 76689-9}">Sex Assigned at Birth</span></li></ul></blockquote><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title="Codes:{http://loinc.org LA22879-3}">Identifies as female</span></li></ul></blockquote><blockquote><p><b>Individual Pronouns</b></p><ul><li>value: <span title="Codes:{http://loinc.org LA29519-8}">she/her/her/hers/herself</span></li></ul></blockquote><p><b>name</b>: Maria Clara Santos (Official)</p><p><b>telecom</b>: <a href="tel:+63-912-345-6789">+63-912-345-6789</a>, <a href="mailto:maria.santos@pgh.gov.ph">maria.santos@pgh.gov.ph</a></p><p><b>address</b>: 1234 Mabini Street Manila 1000 PH (home)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1985-05-15</p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Period</b></td><td><b>Issuer</b></td></tr><tr><td style="display: none">*</td><td><code>http://prc.gov.ph/fhir/Identifier/prc-license</code>/0123456</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0360 MD}">Doctor of Medicine</span></td><td>2010-07-15 --&gt; (ongoing)</td><td><a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></td></tr></table><p><b>communication</b>: <span title="Codes:{urn:ietf:bcp:47 fil}">Filipino</span>, <span title="Codes:{urn:ietf:bcp:47 en}">English</span></p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+          <extension url="value">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="248152002"/>
+                <display value="Female (finding)"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="76689-9"/>
+                <display value="Sex Assigned at Birth"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+          <extension url="value">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="LA22879-3"/>
+                <display value="Identifies as female"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
+          <extension url="value">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="LA29519-8"/>
+                <display value="she/her/her/hers/herself"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <name>
+          <use value="official"/>
+          <family value="Santos"/>
+          <given value="Maria"/>
+          <given value="Clara"/>
+          <suffix value="MD"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="+63-912-345-6789"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="maria.santos@pgh.gov.ph"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1339000003"/>
+              <display value="Ermita"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1380600000"/>
+              <display value="City of Manila"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1300000000"/>
+              <display value="National Capital Region"/>
+            </valueCoding>
+          </extension>
+          <use value="home"/>
+          <type value="both"/>
+          <line value="1234 Mabini Street"/>
+          <city value="Manila"/>
+          <district value="NCR"/>
+          <postalCode value="1000"/>
+          <country value="PH"/>
+        </address>
+        <gender value="female"/>
+        <birthDate value="1985-05-15"/>
+        <qualification>
+          <identifier>
+            <system value="http://prc.gov.ph/fhir/Identifier/prc-license"/>
+            <value value="0123456"/>
+          </identifier>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0360"/>
+              <code value="MD"/>
+              <display value="Doctor of Medicine"/>
+            </coding>
+          </code>
+          <period>
+            <start value="2010-07-15"/>
+          </period>
+          <issuer>
+            <reference value="Organization/organization-pgh-example"/>
+          </issuer>
+        </qualification>
+        <communication>
+          <coding>
+            <system value="urn:ietf:bcp:47"/>
+            <code value="fil"/>
+            <display value="Filipino"/>
+          </coding>
+        </communication>
+        <communication>
+          <coding>
+            <system value="urn:ietf:bcp:47"/>
+            <code value="en"/>
+            <display value="English"/>
+          </coding>
+        </communication>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-ed-example"/>
+    <resource>
+      <PractitionerRole>
+        <id value="practitionerrole-ed-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="PractitionerRole_practitionerrole-ed-example"> </a><p class="res-header-id"><b>Generated Narrative: PractitionerRole practitionerrole-ed-example</b></p><a name="practitionerrole-ed-example"> </a><a name="hcpractitionerrole-ed-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-practitionerrole.html">PH Core PractitionerRole</a></p></div><p><b>identifier</b>: <code>http://doh.gov.ph/fhir/Identifier/practitioner-role-id</code>/PR-ED-001</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>organization</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}">Doctor</span></p><p><b>specialty</b>: <span title="Codes:{http://snomed.info/sct 773568002}">Emergency medicine</span></p><p><b>telecom</b>: <a href="tel:+63-2-8651-7802">+63-2-8651-7802</a>, <a href="mailto:ed.attending@pgh.gov.ph">ed.attending@pgh.gov.ph</a></p></div>
+        </text>
+        <identifier>
+          <system value="http://doh.gov.ph/fhir/Identifier/practitioner-role-id"/>
+          <value value="PR-ED-001"/>
+        </identifier>
+        <active value="true"/>
+        <practitioner>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </practitioner>
+        <organization>
+          <reference value="Organization/organization-pgh-example"/>
+        </organization>
+        <code>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/practitioner-role"/>
+            <code value="doctor"/>
+            <display value="Doctor"/>
+          </coding>
+        </code>
+        <specialty>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="773568002"/>
+            <display value="Emergency medicine"/>
+          </coding>
+        </specialty>
+        <telecom>
+          <system value="phone"/>
+          <value value="+63-2-8651-7802"/>
+          <use value="work"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="ed.attending@pgh.gov.ph"/>
+          <use value="work"/>
+        </telecom>
+      </PractitionerRole>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="PractitionerRole"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Condition/condition-t2dm-example"/>
+    <resource>
+      <Condition>
+        <id value="condition-t2dm-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_condition-t2dm-example"> </a><p class="res-header-id"><b>Generated Narrative: Condition condition-t2dm-example</b></p><a name="condition-t2dm-example"> </a><a name="hccondition-t2dm-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-condition.html">PH Core Condition</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}">Chronic Condition</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 44054006}">Type 2 Diabetes Mellitus</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>onset</b>: 2020-03-15</p><p><b>recordedDate</b>: 2020-03-15 10:30:00+0800</p><p><b>note</b>: </p><blockquote><div><p>Patient diagnosed with T2DM during routine health screening. Currently on Metformin 500mg twice daily. Last HbA1c: 8.2% (poor control). Advised on diet and exercise management.</p>
+</div></blockquote></div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+            <display value="Problem List Item"/>
+          </coding>
+          <text value="Chronic Condition"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="44054006"/>
+            <display value="Diabetes mellitus type 2"/>
+          </coding>
+          <text value="Type 2 Diabetes Mellitus"/>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <onsetDateTime value="2020-03-15"/>
+        <recordedDate value="2020-03-15T10:30:00+08:00"/>
+        <note>
+          <text value="Patient diagnosed with T2DM during routine health screening. Currently on Metformin 500mg twice daily. Last HbA1c: 8.2% (poor control). Advised on diet and exercise management."/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example"/>
+    <resource>
+      <Condition>
+        <id value="condition-acs-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_condition-acs-example"> </a><p class="res-header-id"><b>Generated Narrative: Condition condition-acs-example</b></p><a name="condition-acs-example"> </a><a name="hccondition-acs-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-condition.html">PH Core Condition</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Acute Diagnosis</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 401303003}">Acute Coronary Syndrome - STEMI</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>onset</b>: 2026-06-12 08:30:00+0800</p><p><b>recordedDate</b>: 2026-06-12 08:45:00+0800</p><p><b>recorder</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>note</b>: </p><blockquote><div><p>45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm. 12-lead ECG shows ST-elevation in leads V1-V4 consistent with anterior STEMI. Troponin I elevated at 2.5 ng/mL.</p>
+</div></blockquote></div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="encounter-diagnosis"/>
+            <display value="Encounter Diagnosis"/>
+          </coding>
+          <text value="Acute Diagnosis"/>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="401303003"/>
+            <display value="Acute ST segment elevation myocardial infarction"/>
+          </coding>
+          <text value="Acute Coronary Syndrome - STEMI"/>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <onsetDateTime value="2026-06-12T08:30:00+08:00"/>
+        <recordedDate value="2026-06-12T08:45:00+08:00"/>
+        <recorder>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </recorder>
+        <note>
+          <text value="45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm. 12-lead ECG shows ST-elevation in leads V1-V4 consistent with anterior STEMI. Troponin I elevated at 2.5 ng/mL."/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example"/>
+    <resource>
+      <Encounter>
+        <id value="encounter-ed-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_encounter-ed-example"> </a><p class="res-header-id"><b>Generated Narrative: Encounter encounter-ed-example</b></p><a name="encounter-ed-example"> </a><a name="hcencounter-ed-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-encounter.html">PH Core Encounter</a></p></div><p><b>identifier</b>: <code>http://pgh.gov.ph/fhir/Identifier/encounter-id</code>/ENC-2026-0612-001</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-EMER">ActCode: EMER</a> (emergency)</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EMER}">Emergency Department Visit</span></p><p><b>priority</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActPriority EM}">emergency</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><blockquote><p><b>participant</b></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}">attender</span></p><p><b>individual</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ADM}">admitter</span></p><p><b>individual</b>: <a href="PractitionerRole-practitionerrole-ed-example.html">PractitionerRole Doctor</a></p></blockquote><p><b>period</b>: 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</p><p><b>reasonReference</b>: <a href="Condition-condition-acs-example.html">Condition Acute ST segment elevation myocardial infarction</a></p><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href="Condition-condition-acs-example.html">Condition Acute ST segment elevation myocardial infarction</a></p><p><b>use</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role AD}">Admission diagnosis</span></p><p><b>rank</b>: 1</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href="Condition-condition-t2dm-example.html">Condition Diabetes mellitus type 2</a></p><p><b>use</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role CC}">Chief complaint</span></p><p><b>rank</b>: 2</p></blockquote><h3>Hospitalizations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>AdmitSource</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/admit-source emd}">From accident/emergency department</span></td></tr></table><p><b>serviceProvider</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p></div>
+        </text>
+        <identifier>
+          <system value="http://pgh.gov.ph/fhir/Identifier/encounter-id"/>
+          <value value="ENC-2026-0612-001"/>
+        </identifier>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="EMER"/>
+          <display value="emergency"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="EMER"/>
+            <display value="emergency"/>
+          </coding>
+          <text value="Emergency Department Visit"/>
+        </type>
+        <priority>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActPriority"/>
+            <code value="EM"/>
+            <display value="emergency"/>
+          </coding>
+        </priority>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <participant>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+              <code value="ATND"/>
+              <display value="attender"/>
+            </coding>
+          </type>
+          <individual>
+            <reference value="Practitioner/practitioner-ed-example"/>
+          </individual>
+        </participant>
+        <participant>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+              <code value="ADM"/>
+              <display value="admitter"/>
+            </coding>
+          </type>
+          <individual>
+            <reference value="PractitionerRole/practitionerrole-ed-example"/>
+          </individual>
+        </participant>
+        <period>
+          <start value="2026-06-12T08:30:00+08:00"/>
+          <end value="2026-06-12T10:30:00+08:00"/>
+        </period>
+        <reasonReference>
+          <reference value="Condition/condition-acs-example"/>
+        </reasonReference>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/condition-acs-example"/>
+          </condition>
+          <use>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="AD"/>
+              <display value="Admission diagnosis"/>
+            </coding>
+          </use>
+          <rank value="1"/>
+        </diagnosis>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/condition-t2dm-example"/>
+          </condition>
+          <use>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+              <code value="CC"/>
+              <display value="Chief complaint"/>
+            </coding>
+          </use>
+          <rank value="2"/>
+        </diagnosis>
+        <hospitalization>
+          <admitSource>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/admit-source"/>
+              <code value="emd"/>
+              <display value="From accident/emergency department"/>
+            </coding>
+          </admitSource>
+        </hospitalization>
+        <serviceProvider>
+          <reference value="Organization/organization-pgh-example"/>
+        </serviceProvider>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-bp-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-bp-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-bp-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-bp-acs</b></p><a name="observation-bp-acs"> </a><a name="hcobservation-bp-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 85354-9}">Blood pressure panel with all children optional</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 368209003}">Right arm</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8480-6}">Systolic blood pressure</span></p><p><b>value</b>: 160 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8462-4}">Diastolic blood pressure</span></p><p><b>value</b>: 95 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85354-9"/>
+            <display value="Blood pressure panel with all children optional"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:30:00+08:00"/>
+        <performer>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </performer>
+        <bodySite>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="368209003"/>
+            <display value="Right arm"/>
+          </coding>
+        </bodySite>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8480-6"/>
+              <display value="Systolic blood pressure"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="160"/>
+            <unit value="mmHg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+          </valueQuantity>
+          <interpretation>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+              <code value="H"/>
+              <display value="High"/>
+            </coding>
+          </interpretation>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8462-4"/>
+              <display value="Diastolic blood pressure"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="95"/>
+            <unit value="mmHg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+          </valueQuantity>
+          <interpretation>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+              <code value="H"/>
+              <display value="High"/>
+            </coding>
+          </interpretation>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-hr-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-hr-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-hr-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-hr-acs</b></p><a name="observation-hr-acs"> </a><a name="hcobservation-hr-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8867-4}">Heart rate</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 110 beats/minute<span style="background: LightGoldenRodYellow"> (Details: UCUM  code/min = '/min')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="8867-4"/>
+            <display value="Heart rate"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:30:00+08:00"/>
+        <performer>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </performer>
+        <valueQuantity>
+          <value value="110"/>
+          <unit value="beats/minute"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-rr-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-rr-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-rr-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-rr-acs</b></p><a name="observation-rr-acs"> </a><a name="hcobservation-rr-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 9279-1}">Respiratory rate</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 24 breaths/minute<span style="background: LightGoldenRodYellow"> (Details: UCUM  code/min = '/min')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="9279-1"/>
+            <display value="Respiratory rate"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:30:00+08:00"/>
+        <performer>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </performer>
+        <valueQuantity>
+          <value value="24"/>
+          <unit value="breaths/minute"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="/min"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-spo2-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-spo2-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-spo2-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-spo2-acs</b></p><a name="observation-spo2-acs"> </a><a name="hcobservation-spo2-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2708-6}">Oxygen saturation in Arterial blood</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 92 %<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation L}">Low</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style="display: none">*</td><td>95 %<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></td><td>100 %<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="2708-6"/>
+            <display value="Oxygen saturation in Arterial blood"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:30:00+08:00"/>
+        <performer>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </performer>
+        <valueQuantity>
+          <value value="92"/>
+          <unit value="%"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="L"/>
+            <display value="Low"/>
+          </coding>
+        </interpretation>
+        <referenceRange>
+          <low>
+            <value value="95"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="%"/>
+          </low>
+          <high>
+            <value value="100"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="%"/>
+          </high>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-temp-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-temp-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-temp-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-temp-acs</b></p><a name="observation-temp-acs"> </a><a name="hcobservation-temp-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8310-5}">Body temperature</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 37.2 degrees Celsius<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeCel = 'Cel')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="8310-5"/>
+            <display value="Body temperature"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:30:00+08:00"/>
+        <performer>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </performer>
+        <valueQuantity>
+          <value value="37.2"/>
+          <unit value="degrees Celsius"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="Cel"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="N"/>
+            <display value="Normal"/>
+          </coding>
+        </interpretation>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-pain-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-pain-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-pain-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-pain-acs</b></p><a name="observation-pain-acs"> </a><a name="hcobservation-pain-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}">Survey</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 72514-3}">Pain severity - 0-10 verbal numeric rating [Score] - Reported</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 8 score<span style="background: LightGoldenRodYellow"> (Details: UCUM  code{score} = '{score}')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation HH}">Critical high</span></p><p><b>note</b>: </p><blockquote><div><p>Patient reports crushing substernal chest pain radiating to left arm.</p>
+</div></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="72514-3"/>
+            <display value="Pain severity - 0-10 verbal numeric rating [Score] - Reported"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:30:00+08:00"/>
+        <performer>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </performer>
+        <valueQuantity>
+          <value value="8"/>
+          <unit value="score"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="{score}"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="HH"/>
+            <display value="Critical high"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="Patient reports crushing substernal chest pain radiating to left arm."/>
+        </note>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-troponin-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-troponin-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-troponin-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-troponin-acs</b></p><a name="observation-troponin-acs"> </a><a name="hcobservation-troponin-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 10839-9}">Troponin I.cardiac [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p><p><b>value</b>: 2.5 ng/mL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeng/mL = 'ng/mL')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><p><b>note</b>: </p><blockquote><div><p>Elevated troponin consistent with acute myocardial infarction.</p>
+</div></blockquote><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style="display: none">*</td><td>0 ng/mL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeng/mL = 'ng/mL')</span></td><td>0.04 ng/mL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codeng/mL = 'ng/mL')</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="10839-9"/>
+            <display value="Troponin I.cardiac [Mass/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:45:00+08:00"/>
+        <performer>
+          <reference value="Organization/organization-pgh-example"/>
+        </performer>
+        <valueQuantity>
+          <value value="2.5"/>
+          <unit value="ng/mL"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="ng/mL"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="Elevated troponin consistent with acute myocardial infarction."/>
+        </note>
+        <referenceRange>
+          <low>
+            <value value="0"/>
+            <unit value="ng/mL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="ng/mL"/>
+          </low>
+          <high>
+            <value value="0.04"/>
+            <unit value="ng/mL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="ng/mL"/>
+          </high>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-glucose-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-glucose-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-glucose-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-glucose-acs</b></p><a name="observation-glucose-acs"> </a><a name="hcobservation-glucose-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2345-7}">Glucose [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p><p><b>value</b>: 180 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><p><b>note</b>: </p><blockquote><div><p>Elevated glucose consistent with stress hyperglycemia and known T2DM.</p>
+</div></blockquote><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style="display: none">*</td><td>70 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>140 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="2345-7"/>
+            <display value="Glucose [Mass/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:45:00+08:00"/>
+        <performer>
+          <reference value="Organization/organization-pgh-example"/>
+        </performer>
+        <valueQuantity>
+          <value value="180"/>
+          <unit value="mg/dL"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg/dL"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="Elevated glucose consistent with stress hyperglycemia and known T2DM."/>
+        </note>
+        <referenceRange>
+          <low>
+            <value value="70"/>
+            <unit value="mg/dL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg/dL"/>
+          </low>
+          <high>
+            <value value="140"/>
+            <unit value="mg/dL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg/dL"/>
+          </high>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-hba1c-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-hba1c-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-hba1c-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-hba1c-acs</b></p><a name="observation-hba1c-acs"> </a><a name="hcobservation-hba1c-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 4548-4}">Hemoglobin A1c/Hemoglobin.total in Blood</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p><p><b>value</b>: 8.2 %<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><p><b>note</b>: </p><blockquote><div><p>HbA1c indicates poor glycemic control over past 3 months.</p>
+</div></blockquote><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style="display: none">*</td><td>4 %<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></td><td>5.7 %<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="4548-4"/>
+            <display value="Hemoglobin A1c/Hemoglobin.total in Blood"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:45:00+08:00"/>
+        <performer>
+          <reference value="Organization/organization-pgh-example"/>
+        </performer>
+        <valueQuantity>
+          <value value="8.2"/>
+          <unit value="%"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="%"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="HbA1c indicates poor glycemic control over past 3 months."/>
+        </note>
+        <referenceRange>
+          <low>
+            <value value="4"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="%"/>
+          </low>
+          <high>
+            <value value="5.7"/>
+            <unit value="%"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="%"/>
+          </high>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-total-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-cholesterol-total-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-cholesterol-total-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-cholesterol-total-acs</b></p><a name="observation-cholesterol-total-acs"> </a><a name="hcobservation-cholesterol-total-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2093-3}">Cholesterol [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p><p><b>value</b>: 240 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style="display: none">*</td><td>0 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>200 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="2093-3"/>
+            <display value="Cholesterol [Mass/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:45:00+08:00"/>
+        <performer>
+          <reference value="Organization/organization-pgh-example"/>
+        </performer>
+        <valueQuantity>
+          <value value="240"/>
+          <unit value="mg/dL"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg/dL"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+        <referenceRange>
+          <low>
+            <value value="0"/>
+            <unit value="mg/dL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg/dL"/>
+          </low>
+          <high>
+            <value value="200"/>
+            <unit value="mg/dL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg/dL"/>
+          </high>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-ldl-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-cholesterol-ldl-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-cholesterol-ldl-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-cholesterol-ldl-acs</b></p><a name="observation-cholesterol-ldl-acs"> </a><a name="hcobservation-cholesterol-ldl-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2089-1}">Cholesterol in LDL [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p><p><b>value</b>: 160 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style="display: none">*</td><td>0 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>100 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="2089-1"/>
+            <display value="Cholesterol in LDL [Mass/volume] in Serum or Plasma"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:45:00+08:00"/>
+        <performer>
+          <reference value="Organization/organization-pgh-example"/>
+        </performer>
+        <valueQuantity>
+          <value value="160"/>
+          <unit value="mg/dL"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg/dL"/>
+        </valueQuantity>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="H"/>
+            <display value="High"/>
+          </coding>
+        </interpretation>
+        <referenceRange>
+          <low>
+            <value value="0"/>
+            <unit value="mg/dL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg/dL"/>
+          </low>
+          <high>
+            <value value="100"/>
+            <unit value="mg/dL"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mg/dL"/>
+          </high>
+        </referenceRange>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-ecg-acs"/>
+    <resource>
+      <Observation>
+        <id value="observation-ecg-acs"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-ecg-acs"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-ecg-acs</b></p><a name="observation-ecg-acs"> </a><a name="hcobservation-ecg-acs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category procedure}">Procedure</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 11524-6}">EKG study</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:35:00+0800</p><p><b>performer</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: ST-elevation in leads V1-V4, reciprocal ST-depression in leads II, III, aVF. Rhythm: sinus tachycardia at 110 bpm.</p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation HH}">Critical high</span></p><p><b>note</b>: </p><blockquote><div><p>ECG findings consistent with acute anterior ST-elevation myocardial infarction.</p>
+</div></blockquote></div>
+        </text>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="procedure"/>
+            <display value="Procedure"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="11524-6"/>
+            <display value="EKG study"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <effectiveDateTime value="2026-06-12T08:35:00+08:00"/>
+        <performer>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </performer>
+        <valueString value="ST-elevation in leads V1-V4, reciprocal ST-depression in leads II, III, aVF. Rhythm: sinus tachycardia at 110 bpm."/>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="HH"/>
+            <display value="Critical high"/>
+          </coding>
+        </interpretation>
+        <note>
+          <text value="ECG findings consistent with acute anterior ST-elevation myocardial infarction."/>
+        </note>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Composition/composition-ed-note-example"/>
+    <resource>
+      <Composition>
+        <id value="composition-ed-note-example"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Composition_composition-ed-note-example"> </a><p class="res-header-id"><b>Generated Narrative: Composition composition-ed-note-example</b></p><a name="composition-ed-note-example"> </a><a name="hccomposition-ed-note-example"> </a><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 18842-5}">ED Clinical Note</span></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>date</b>: 2026-06-12 10:30:00+0800</p><p><b>author</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>title</b>: Emergency Department Clinical Note — Acute Coronary Syndrome</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td>Legal</td><td>2026-06-12 10:30:00+0800</td><td><a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></td></tr></table><p><b>custodian</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p></div>
+        </text>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="18842-5"/>
+            <display value="Discharge summary"/>
+          </coding>
+          <text value="ED Clinical Note"/>
+        </type>
+        <subject>
+          <reference value="Patient/patient-acs-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-ed-example"/>
+        </encounter>
+        <date value="2026-06-12T10:30:00+08:00"/>
+        <author>
+          <reference value="Practitioner/practitioner-ed-example"/>
+        </author>
+        <title value="Emergency Department Clinical Note — Acute Coronary Syndrome"/>
+        <confidentiality value="N"/>
+        <attester>
+          <mode value="legal"/>
+          <time value="2026-06-12T10:30:00+08:00"/>
+          <party>
+            <reference value="Practitioner/practitioner-ed-example"/>
+          </party>
+        </attester>
+        <custodian>
+          <reference value="Organization/organization-pgh-example"/>
+        </custodian>
+        <section>
+          <title value="Chief Complaint"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="10154-3"/>
+              <display value="Chief complaint Reported"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm, associated with dyspnea and diaphoresis.</p></div>
+          </text>
+          <entry>
+            <reference value="Condition/condition-acs-example"/>
+          </entry>
+        </section>
+        <section>
+          <title value="History of Present Illness"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="10164-2"/>
+              <display value="History of present illness Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Patient Juan Dela Cruz, 45M, Filipino, presented to PGH ED at 08:30 with acute chest pain. Pain described as crushing, 8/10 severity, substernal with radiation to left arm. Associated with shortness of breath and sweating. No relief with rest. Known T2DM since 2020. Current smoker (1 pack/day x 20 years).</p></div>
+          </text>
+        </section>
+        <section>
+          <title value="Vital Signs"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8716-3"/>
+              <display value="Vital signs note"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>BP: 160/95 mmHg (elevated)</li><li>HR: 110 bpm (tachycardic)</li><li>RR: 24/min (tachypneic)</li><li>SpO2: 92% RA (hypoxemic)</li><li>Temp: 37.2°C</li><li>Pain: 8/10</li></ul></div>
+          </text>
+          <entry>
+            <reference value="Observation/observation-bp-acs"/>
+          </entry>
+          <entry>
+            <reference value="Observation/observation-hr-acs"/>
+          </entry>
+          <entry>
+            <reference value="Observation/observation-rr-acs"/>
+          </entry>
+          <entry>
+            <reference value="Observation/observation-spo2-acs"/>
+          </entry>
+          <entry>
+            <reference value="Observation/observation-temp-acs"/>
+          </entry>
+          <entry>
+            <reference value="Observation/observation-pain-acs"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Assessment and Plan"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="18776-5"/>
+              <display value="Plan of care note"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><strong>Assessment:</strong> Acute Coronary Syndrome — Anterior STEMI (ST-elevation V1-V4 on ECG, elevated troponin 2.5 ng/mL).</p><p><strong>Plan:</strong> 1) Aspirin 325mg chewed, Clopidogrel 600mg loading, Metoprolol 25mg PO. 2) Cardiology consult for emergent PCI. 3) Admit to CCU post-PCI.</p></div>
+          </text>
+          <entry>
+            <reference value="Condition/condition-acs-example"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Active Conditions"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11493-4"/>
+              <display value="Hospital discharge studies summary Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Type 2 Diabetes Mellitus (diagnosed 2020, on Metformin)</li><li>Acute Coronary Syndrome — Anterior STEMI (diagnosed today)</li></ul></div>
+          </text>
+          <entry>
+            <reference value="Condition/condition-t2dm-example"/>
+          </entry>
+          <entry>
+            <reference value="Condition/condition-acs-example"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Composition"/>
+    </request>
+  </entry>
+</Bundle>

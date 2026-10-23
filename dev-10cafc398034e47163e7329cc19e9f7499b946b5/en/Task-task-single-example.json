@@ -1,0 +1,49 @@
+{
+  "resourceType" : "Task",
+  "id" : "task-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task task-single-example</b></p><a name=\"task-single-example\"> </a><a name=\"hctask-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-task.html\">PH Core Task</a></p></div><p><b>status</b>: Requested</p><p><b>intent</b>: order</p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 82078001}\">Blood sample collection</span></p><p><b>description</b>: Collect blood sample for complete blood count (CBC) testing</p><p><b>for</b>: <a href=\"Patient-patient-single-example.html\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-single-example.html\">Encounter: identifier = http://example.org/encounter-id#ENC-12345; status = finished; class = ambulatory (ActCode#AMB); type = ambulatory; period = 2023-01-01 10:00:00+0000 --&gt; 2023-01-01 11:00:00+0000</a></p><p><b>executionPeriod</b>: 2024-03-15 09:00:00+0800 --&gt; 2024-03-15 10:00:00+0800</p><p><b>authoredOn</b>: 2024-03-15 08:30:00+0800</p><p><b>lastModified</b>: 2024-03-15 08:30:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-practitioner-single-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>owner</b>: <a href=\"Organization-organization-single-example.html\">Organization Department of Health - Sattelite Office</a></p><p><b>note</b>: By Practitioner/practitioner-single-example @2024-03-15 08:30:00+0800</p><blockquote><div><p>Patient has confirmed appointment. Please ensure fasting status is verified before sample collection.</p>\n</div></blockquote></div>"
+  },
+  "status" : "requested",
+  "intent" : "order",
+  "priority" : "routine",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "82078001",
+      "display" : "Collection of blood specimen for laboratory"
+    }],
+    "text" : "Blood sample collection"
+  },
+  "description" : "Collect blood sample for complete blood count (CBC) testing",
+  "for" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "encounter" : {
+    "reference" : "Encounter/encounter-single-example"
+  },
+  "executionPeriod" : {
+    "start" : "2024-03-15T09:00:00+08:00",
+    "end" : "2024-03-15T10:00:00+08:00"
+  },
+  "authoredOn" : "2024-03-15T08:30:00+08:00",
+  "lastModified" : "2024-03-15T08:30:00+08:00",
+  "requester" : {
+    "reference" : "Practitioner/practitioner-single-example"
+  },
+  "owner" : {
+    "reference" : "Organization/organization-single-example"
+  },
+  "note" : [{
+    "authorReference" : {
+      "reference" : "Practitioner/practitioner-single-example"
+    },
+    "time" : "2024-03-15T08:30:00+08:00",
+    "text" : "Patient has confirmed appointment. Please ensure fasting status is verified before sample collection."
+  }]
+}

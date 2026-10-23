@@ -1,0 +1,176 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/barangays> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "barangays"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet barangays</b></p><a name=\"barangays\"> </a><a name=\"hcbarangays\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102801001\">0102801001</a></td><td>Adams</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802001\">0102802001</a></td><td>Bani</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802002\">0102802002</a></td><td>Buyon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802003\">0102802003</a></td><td>Cabaruan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802004\">0102802004</a></td><td>Cabulalaan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802005\">0102802005</a></td><td>Cabusligan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102901001\">0102901001</a></td><td>Alilem Daya </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0200901001\">0200901001</a></td><td>Ihubok II</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0201501001\">0201501001</a></td><td>Alinunu</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0300801001\">0300801001</a></td><td>Bangkal</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301401001\">0301401001</a></td><td>Banaban</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401001001\">0401001001</a></td><td>Adia</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0402101001\">0402101001</a></td><td>Amuyong</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0500501001\">0500501001</a></td><td>Baclayon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0501601001\">0501601001</a></td><td>Angas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600401001\">0600401001</a></td><td>Cabangila</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600601001\">0600601001</a></td><td>Bayo Grande</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0701201001\">0701201001</a></td><td>Bahi</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0702201001\">0702201001</a></td><td>Cabadiangan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0802601001\">0802601001</a></td><td>Aguinaldo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0803701001\">0803701001</a></td><td>Alangilan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0906601001\">0906601001</a></td><td>Adjid</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0907201001\">0907201001</a></td><td>Aliguay</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001301001\">1001301001</a></td><td>Balintad</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001801001\">1001801001</a></td><td>Alga</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102301004\">1102301004</a></td><td>Binancian</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102401001\">1102401001</a></td><td>Alegre</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1204701001\">1204701001</a></td><td>Bao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1206302002\">1206302002</a></td><td>Benitez </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380100001\">1380100001</a></td><td>Barangay 1</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1400101001\">1400101001</a></td><td>Agtangao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1401101001\">1401101001</a></td><td>Abiang</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600201001\">1600201001</a></td><td>Abilan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600301001\">1600301001</a></td><td>Calaitan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1704001001\">1704001001</a></td><td>Agot</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1705101001\">1705101001</a></td><td>Balao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804502001\">1804502001</a></td><td>Abuanan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804601001\">1804601001</a></td><td>Bio-os</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1900702001\">1900702001</a></td><td>Arco</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1903601001\">1903601001</a></td><td>Ampao</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://fhir.doh.gov.ph/phcore/ValueSet/barangays"^^xsd:anyURI ;
+     fhir:l <https://fhir.doh.gov.ph/phcore/ValueSet/barangays>
+  ] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "Barangays"] ; # 
+  fhir:title [ fhir:v "Barangays"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-06-16T04:07:14+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-NTHC" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+         fhir:l <https://psa.gov.ph/classification/psgc>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "0102801001" ] ;
+         fhir:display [ fhir:v "Adams" ]
+       ] [
+         fhir:code [ fhir:v "0102802001" ] ;
+         fhir:display [ fhir:v "Bani" ]
+       ] [
+         fhir:code [ fhir:v "0102802002" ] ;
+         fhir:display [ fhir:v "Buyon" ]
+       ] [
+         fhir:code [ fhir:v "0102802003" ] ;
+         fhir:display [ fhir:v "Cabaruan" ]
+       ] [
+         fhir:code [ fhir:v "0102802004" ] ;
+         fhir:display [ fhir:v "Cabulalaan" ]
+       ] [
+         fhir:code [ fhir:v "0102802005" ] ;
+         fhir:display [ fhir:v "Cabusligan" ]
+       ] [
+         fhir:code [ fhir:v "0102901001" ] ;
+         fhir:display [ fhir:v "Alilem Daya " ]
+       ] [
+         fhir:code [ fhir:v "0200901001" ] ;
+         fhir:display [ fhir:v "Ihubok II" ]
+       ] [
+         fhir:code [ fhir:v "0201501001" ] ;
+         fhir:display [ fhir:v "Alinunu" ]
+       ] [
+         fhir:code [ fhir:v "0300801001" ] ;
+         fhir:display [ fhir:v "Bangkal" ]
+       ] [
+         fhir:code [ fhir:v "0301401001" ] ;
+         fhir:display [ fhir:v "Banaban" ]
+       ] [
+         fhir:code [ fhir:v "0401001001" ] ;
+         fhir:display [ fhir:v "Adia" ]
+       ] [
+         fhir:code [ fhir:v "0402101001" ] ;
+         fhir:display [ fhir:v "Amuyong" ]
+       ] [
+         fhir:code [ fhir:v "0500501001" ] ;
+         fhir:display [ fhir:v "Baclayon" ]
+       ] [
+         fhir:code [ fhir:v "0501601001" ] ;
+         fhir:display [ fhir:v "Angas" ]
+       ] [
+         fhir:code [ fhir:v "0600401001" ] ;
+         fhir:display [ fhir:v "Cabangila" ]
+       ] [
+         fhir:code [ fhir:v "0600601001" ] ;
+         fhir:display [ fhir:v "Bayo Grande" ]
+       ] [
+         fhir:code [ fhir:v "0701201001" ] ;
+         fhir:display [ fhir:v "Bahi" ]
+       ] [
+         fhir:code [ fhir:v "0702201001" ] ;
+         fhir:display [ fhir:v "Cabadiangan" ]
+       ] [
+         fhir:code [ fhir:v "0802601001" ] ;
+         fhir:display [ fhir:v "Aguinaldo" ]
+       ] [
+         fhir:code [ fhir:v "0803701001" ] ;
+         fhir:display [ fhir:v "Alangilan" ]
+       ] [
+         fhir:code [ fhir:v "0906601001" ] ;
+         fhir:display [ fhir:v "Adjid" ]
+       ] [
+         fhir:code [ fhir:v "0907201001" ] ;
+         fhir:display [ fhir:v "Aliguay" ]
+       ] [
+         fhir:code [ fhir:v "1001301001" ] ;
+         fhir:display [ fhir:v "Balintad" ]
+       ] [
+         fhir:code [ fhir:v "1001801001" ] ;
+         fhir:display [ fhir:v "Alga" ]
+       ] [
+         fhir:code [ fhir:v "1102301004" ] ;
+         fhir:display [ fhir:v "Binancian" ]
+       ] [
+         fhir:code [ fhir:v "1102401001" ] ;
+         fhir:display [ fhir:v "Alegre" ]
+       ] [
+         fhir:code [ fhir:v "1204701001" ] ;
+         fhir:display [ fhir:v "Bao" ]
+       ] [
+         fhir:code [ fhir:v "1206302002" ] ;
+         fhir:display [ fhir:v "Benitez " ]
+       ] [
+         fhir:code [ fhir:v "1380100001" ] ;
+         fhir:display [ fhir:v "Barangay 1" ]
+       ] [
+         fhir:code [ fhir:v "1400101001" ] ;
+         fhir:display [ fhir:v "Agtangao" ]
+       ] [
+         fhir:code [ fhir:v "1401101001" ] ;
+         fhir:display [ fhir:v "Abiang" ]
+       ] [
+         fhir:code [ fhir:v "1600201001" ] ;
+         fhir:display [ fhir:v "Abilan" ]
+       ] [
+         fhir:code [ fhir:v "1600301001" ] ;
+         fhir:display [ fhir:v "Calaitan" ]
+       ] [
+         fhir:code [ fhir:v "1704001001" ] ;
+         fhir:display [ fhir:v "Agot" ]
+       ] [
+         fhir:code [ fhir:v "1705101001" ] ;
+         fhir:display [ fhir:v "Balao" ]
+       ] [
+         fhir:code [ fhir:v "1804502001" ] ;
+         fhir:display [ fhir:v "Abuanan" ]
+       ] [
+         fhir:code [ fhir:v "1804601001" ] ;
+         fhir:display [ fhir:v "Bio-os" ]
+       ] [
+         fhir:code [ fhir:v "1900702001" ] ;
+         fhir:display [ fhir:v "Arco" ]
+       ] [
+         fhir:code [ fhir:v "1903601001" ] ;
+         fhir:display [ fhir:v "Ampao" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

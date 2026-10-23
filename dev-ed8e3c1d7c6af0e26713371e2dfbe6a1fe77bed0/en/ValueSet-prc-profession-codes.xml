@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="prc-profession-codes"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet prc-profession-codes</b></p><a name="prc-profession-codes"> </a><a name="hcprc-profession-codes"> </a><ul><li>Include these codes as defined in <a href="CodeSystem-prc.html"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/prc</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.2.1</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-prc.html#prc-100">100</a></td><td>Certified Public Accountant</td></tr><tr><td><a href="CodeSystem-prc.html#prc-3400">3400</a></td><td>Aeronautical Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-200">200</a></td><td>Agricultural And Biosystems Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-4200">4200</a></td><td>Agriculturist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-300">300</a></td><td>Architect</td></tr><tr><td><a href="CodeSystem-prc.html#prc-410">410</a></td><td>Chemical Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-510">510</a></td><td>Chemist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-520">520</a></td><td>Chemical Technician</td></tr><tr><td><a href="CodeSystem-prc.html#prc-600">600</a></td><td>Civil Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-3500">3500</a></td><td>Criminologist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-800">800</a></td><td>Customs Broker</td></tr><tr><td><a href="CodeSystem-prc.html#prc-910">910</a></td><td>Dentist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-920">920</a></td><td>Dental Hygienist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-930">930</a></td><td>Dental Technologist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1100">1100</a></td><td>Registered Electrical Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1110">1110</a></td><td>Professional Electrical Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1150">1150</a></td><td>Registered Master Electrician</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1200">1200</a></td><td>Electronics And Communications Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1201">1201</a></td><td>Professional Electronics Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1202">1202</a></td><td>Electronics Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1203">1203</a></td><td>Electronics Technician</td></tr><tr><td><a href="CodeSystem-prc.html#prc-3600">3600</a></td><td>Environmental Planner</td></tr><tr><td><a href="CodeSystem-prc.html#prc-4300">4300</a></td><td>Fisheries Technologist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1300">1300</a></td><td>Forester</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1410">1410</a></td><td>Geodetic Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1510">1510</a></td><td>Geologist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1520">1520</a></td><td>Geologic Aide</td></tr><tr><td><a href="CodeSystem-prc.html#prc-4100">4100</a></td><td>Guidance Counselor</td></tr><tr><td><a href="CodeSystem-prc.html#prc-310">310</a></td><td>Interior Designer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-320">320</a></td><td>Landscape Architect</td></tr><tr><td><a href="CodeSystem-prc.html#prc-3800">3800</a></td><td>Librarian</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1900">1900</a></td><td>Master Plumber</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2010">2010</a></td><td>Professional Mechanical Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2040">2040</a></td><td>Mechanical Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2060">2060</a></td><td>Certified Plant Mechanic</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2110">2110</a></td><td>Medical Technologist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2120">2120</a></td><td>Medical Laboratory Technician</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2200">2200</a></td><td>Physician</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1810">1810</a></td><td>Metallurgical Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1820">1820</a></td><td>Metallurgical Plant Foreman</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2310">2310</a></td><td>Midwife (Ra 2382)</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2320">2320</a></td><td>Midwife</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2410">2410</a></td><td>Mining Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2420">2420</a></td><td>Certified Mine Foreman</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2440">2440</a></td><td>Certified Quarry Foreman</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2500">2500</a></td><td>Naval Architect &amp; Marine Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2600">2600</a></td><td>Nurse</td></tr><tr><td><a href="CodeSystem-prc.html#prc-1010">1010</a></td><td>Nutritionist Dietitian</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2920">2920</a></td><td>Occupational Therapist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2700">2700</a></td><td>Optometrist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2710">2710</a></td><td>Ocular Pharmacologist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2810">2810</a></td><td>Pharmacist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2820">2820</a></td><td>Chinese Druggist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-2910">2910</a></td><td>Physical Therapist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-4000">4000</a></td><td>Professional Teacher</td></tr><tr><td><a href="CodeSystem-prc.html#prc-4520">4520</a></td><td>Psychologist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-4530">4530</a></td><td>Psychometrician</td></tr><tr><td><a href="CodeSystem-prc.html#prc-3710">3710</a></td><td>Radiologic Technologist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-3720">3720</a></td><td>X-Ray Technologist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-4410">4410</a></td><td>Real Estate Consultant</td></tr><tr><td><a href="CodeSystem-prc.html#prc-4420">4420</a></td><td>Real Estate Appraiser</td></tr><tr><td><a href="CodeSystem-prc.html#prc-4430">4430</a></td><td>Real Estate Broker</td></tr><tr><td><a href="CodeSystem-prc.html#prc-4510">4510</a></td><td>Respiratory Therapist</td></tr><tr><td><a href="CodeSystem-prc.html#prc-3000">3000</a></td><td>Sanitary Engineer</td></tr><tr><td><a href="CodeSystem-prc.html#prc-3200">3200</a></td><td>Social Worker</td></tr><tr><td><a href="CodeSystem-prc.html#prc-3300">3300</a></td><td>Veterinarian</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.doh.gov.ph/phcore/ValueSet/prc-profession-codes"/>
+  <version value="0.2.1"/>
+  <name value="PRCProfessionCodesVS"/>
+  <title value="PRC Profession Codes ValueSet"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-10-17"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="The 66 numerical profession codes in the PRC CPDAS table as of 12 January 2021. PRC states that the codes are used on attendance sheets for accredited CPD programs, and notes that the FAQ is subject to regular updating. Use these codes for a qualification or practitioner role only when the CPDAS profession classification matches; the code does not assert current license validity."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Preferred classification for PRC profession codes when they accurately describe the qualification held."/>
+  <compose>
+    <include>
+      <system value="https://fhir.doh.gov.ph/phcore/CodeSystem/prc"/>
+      <concept>
+        <code value="100"/>
+        <display value="Certified Public Accountant"/>
+      </concept>
+      <concept>
+        <code value="3400"/>
+        <display value="Aeronautical Engineer"/>
+      </concept>
+      <concept>
+        <code value="200"/>
+        <display value="Agricultural And Biosystems Engineer"/>
+      </concept>
+      <concept>
+        <code value="4200"/>
+        <display value="Agriculturist"/>
+      </concept>
+      <concept>
+        <code value="300"/>
+        <display value="Architect"/>
+      </concept>
+      <concept>
+        <code value="410"/>
+        <display value="Chemical Engineer"/>
+      </concept>
+      <concept>
+        <code value="510"/>
+        <display value="Chemist"/>
+      </concept>
+      <concept>
+        <code value="520"/>
+        <display value="Chemical Technician"/>
+      </concept>
+      <concept>
+        <code value="600"/>
+        <display value="Civil Engineer"/>
+      </concept>
+      <concept>
+        <code value="3500"/>
+        <display value="Criminologist"/>
+      </concept>
+      <concept>
+        <code value="800"/>
+        <display value="Customs Broker"/>
+      </concept>
+      <concept>
+        <code value="910"/>
+        <display value="Dentist"/>
+      </concept>
+      <concept>
+        <code value="920"/>
+        <display value="Dental Hygienist"/>
+      </concept>
+      <concept>
+        <code value="930"/>
+        <display value="Dental Technologist"/>
+      </concept>
+      <concept>
+        <code value="1100"/>
+        <display value="Registered Electrical Engineer"/>
+      </concept>
+      <concept>
+        <code value="1110"/>
+        <display value="Professional Electrical Engineer"/>
+      </concept>
+      <concept>
+        <code value="1150"/>
+        <display value="Registered Master Electrician"/>
+      </concept>
+      <concept>
+        <code value="1200"/>
+        <display value="Electronics And Communications Engineer"/>
+      </concept>
+      <concept>
+        <code value="1201"/>
+        <display value="Professional Electronics Engineer"/>
+      </concept>
+      <concept>
+        <code value="1202"/>
+        <display value="Electronics Engineer"/>
+      </concept>
+      <concept>
+        <code value="1203"/>
+        <display value="Electronics Technician"/>
+      </concept>
+      <concept>
+        <code value="3600"/>
+        <display value="Environmental Planner"/>
+      </concept>
+      <concept>
+        <code value="4300"/>
+        <display value="Fisheries Technologist"/>
+      </concept>
+      <concept>
+        <code value="1300"/>
+        <display value="Forester"/>
+      </concept>
+      <concept>
+        <code value="1410"/>
+        <display value="Geodetic Engineer"/>
+      </concept>
+      <concept>
+        <code value="1510"/>
+        <display value="Geologist"/>
+      </concept>
+      <concept>
+        <code value="1520"/>
+        <display value="Geologic Aide"/>
+      </concept>
+      <concept>
+        <code value="4100"/>
+        <display value="Guidance Counselor"/>
+      </concept>
+      <concept>
+        <code value="310"/>
+        <display value="Interior Designer"/>
+      </concept>
+      <concept>
+        <code value="320"/>
+        <display value="Landscape Architect"/>
+      </concept>
+      <concept>
+        <code value="3800"/>
+        <display value="Librarian"/>
+      </concept>
+      <concept>
+        <code value="1900"/>
+        <display value="Master Plumber"/>
+      </concept>
+      <concept>
+        <code value="2010"/>
+        <display value="Professional Mechanical Engineer"/>
+      </concept>
+      <concept>
+        <code value="2040"/>
+        <display value="Mechanical Engineer"/>
+      </concept>
+      <concept>
+        <code value="2060"/>
+        <display value="Certified Plant Mechanic"/>
+      </concept>
+      <concept>
+        <code value="2110"/>
+        <display value="Medical Technologist"/>
+      </concept>
+      <concept>
+        <code value="2120"/>
+        <display value="Medical Laboratory Technician"/>
+      </concept>
+      <concept>
+        <code value="2200"/>
+        <display value="Physician"/>
+      </concept>
+      <concept>
+        <code value="1810"/>
+        <display value="Metallurgical Engineer"/>
+      </concept>
+      <concept>
+        <code value="1820"/>
+        <display value="Metallurgical Plant Foreman"/>
+      </concept>
+      <concept>
+        <code value="2310"/>
+        <display value="Midwife (Ra 2382)"/>
+      </concept>
+      <concept>
+        <code value="2320"/>
+        <display value="Midwife"/>
+      </concept>
+      <concept>
+        <code value="2410"/>
+        <display value="Mining Engineer"/>
+      </concept>
+      <concept>
+        <code value="2420"/>
+        <display value="Certified Mine Foreman"/>
+      </concept>
+      <concept>
+        <code value="2440"/>
+        <display value="Certified Quarry Foreman"/>
+      </concept>
+      <concept>
+        <code value="2500"/>
+        <display value="Naval Architect &amp; Marine Engineer"/>
+      </concept>
+      <concept>
+        <code value="2600"/>
+        <display value="Nurse"/>
+      </concept>
+      <concept>
+        <code value="1010"/>
+        <display value="Nutritionist Dietitian"/>
+      </concept>
+      <concept>
+        <code value="2920"/>
+        <display value="Occupational Therapist"/>
+      </concept>
+      <concept>
+        <code value="2700"/>
+        <display value="Optometrist"/>
+      </concept>
+      <concept>
+        <code value="2710"/>
+        <display value="Ocular Pharmacologist"/>
+      </concept>
+      <concept>
+        <code value="2810"/>
+        <display value="Pharmacist"/>
+      </concept>
+      <concept>
+        <code value="2820"/>
+        <display value="Chinese Druggist"/>
+      </concept>
+      <concept>
+        <code value="2910"/>
+        <display value="Physical Therapist"/>
+      </concept>
+      <concept>
+        <code value="4000"/>
+        <display value="Professional Teacher"/>
+      </concept>
+      <concept>
+        <code value="4520"/>
+        <display value="Psychologist"/>
+      </concept>
+      <concept>
+        <code value="4530"/>
+        <display value="Psychometrician"/>
+      </concept>
+      <concept>
+        <code value="3710"/>
+        <display value="Radiologic Technologist"/>
+      </concept>
+      <concept>
+        <code value="3720"/>
+        <display value="X-Ray Technologist"/>
+      </concept>
+      <concept>
+        <code value="4410"/>
+        <display value="Real Estate Consultant"/>
+      </concept>
+      <concept>
+        <code value="4420"/>
+        <display value="Real Estate Appraiser"/>
+      </concept>
+      <concept>
+        <code value="4430"/>
+        <display value="Real Estate Broker"/>
+      </concept>
+      <concept>
+        <code value="4510"/>
+        <display value="Respiratory Therapist"/>
+      </concept>
+      <concept>
+        <code value="3000"/>
+        <display value="Sanitary Engineer"/>
+      </concept>
+      <concept>
+        <code value="3200"/>
+        <display value="Social Worker"/>
+      </concept>
+      <concept>
+        <code value="3300"/>
+        <display value="Veterinarian"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

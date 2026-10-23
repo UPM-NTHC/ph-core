@@ -1,0 +1,74 @@
+# Example PH Core HealthcareService - Draft PH Core Implementation Guide v0.2.0
+
+## Example HealthcareService: Example PH Core HealthcareService
+
+Philippine General Hospital Outpatient Department - General Medicine is an active healthcare service providing outpatient consultations. It is managed by the Department of Health - Satellite Office and located at Philippine General Hospital, Taft Avenue, Manila.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "HealthcareService",
+  "id" : "healthcareservice-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice"]
+  },
+  "identifier" : [{
+    "system" : "http://pgh.gov.ph/fhir/Identifier/service-id",
+    "value" : "PGH-OPD-GMED-001"
+  }],
+  "active" : true,
+  "providedBy" : {
+    "reference" : "Organization/organization-single-example"
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/service-category",
+      "code" : "27",
+      "display" : "Specialist Medical"
+    }],
+    "text" : "Specialist Medical"
+  }],
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+      "code" : "124",
+      "display" : "General Practice"
+    }],
+    "text" : "General Practice"
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "394802001",
+      "display" : "General medicine"
+    }],
+    "text" : "General medicine"
+  }],
+  "location" : [{
+    "reference" : "Location/location-single-example"
+  }],
+  "name" : "Outpatient Department - General Medicine",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+63-2-5548-0000",
+    "use" : "work"
+  },
+  {
+    "system" : "email",
+    "value" : "opd.gmed@pgh.gov.ph",
+    "use" : "work"
+  }],
+  "availableTime" : [{
+    "daysOfWeek" : ["mon", "tue", "wed", "thu", "fri"],
+    "availableStartTime" : "08:00:00",
+    "availableEndTime" : "17:00:00"
+  }],
+  "notAvailable" : [{
+    "description" : "Closed on public holidays"
+  }]
+}
+
+```

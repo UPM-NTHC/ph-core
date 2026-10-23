@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="practitionerrole-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Dr. Maria Clara Santos is a General Practitioner working with the Department of Health. One of her assignments is at the Philippine General Hospital.</div>
+  </text>
+  <identifier>
+    <system value="http://doh.gov.ph/fhir/Identifier/practitioner-role-id"/>
+  </identifier>
+  <active value="true"/>
+  <practitioner>
+    <reference value="Practitioner/practitioner-single-example"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/organization-single-example"/>
+  </organization>
+  <code>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/practitioner-role"/>
+      <code value="doctor"/>
+      <display value="Doctor"/>
+    </coding>
+  </code>
+  <specialty>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="394802001"/>
+      <display value="General medicine"/>
+    </coding>
+  </specialty>
+  <location>
+    <reference value="Location/location-single-example"/>
+  </location>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63-2-8651-7800"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="maria.santos@doh.gov.ph"/>
+  </telecom>
+</PractitionerRole>

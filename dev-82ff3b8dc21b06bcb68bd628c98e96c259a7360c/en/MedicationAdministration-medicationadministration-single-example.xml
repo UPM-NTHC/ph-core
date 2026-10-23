@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="medicationadministration-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Juan Dela Cruz took 1 tablet of Twinact (Telmisartan + Amlodipine) orally on March 15, 2025 at 2:00 PM as prescribed.</div>
+  </text>
+  <status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="https://verification.fda.gov.ph"/>
+      <code value="DRP-10144"/>
+      <display value="Twinact"/>
+    </coding>
+    <text value="Twinact 40mg/5mg tablet"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <context>
+    <reference value="Encounter/encounter-single-example"/>
+  </context>
+  <effectiveDateTime value="2025-03-15T14:00:00+08:00"/>
+  <performer>
+    <function>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
+        <code value="PP"/>
+        <display value="Primary Care Provider"/>
+      </coding>
+    </function>
+    <actor>
+      <reference value="Patient/patient-single-example"/>
+    </actor>
+  </performer>
+  <request>
+    <reference value="MedicationRequest/medicationrequest-single-example"/>
+  </request>
+  <dosage>
+    <text value="1 tablet taken orally"/>
+    <route>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
+        <code value="PO"/>
+        <display value="Swallow, oral"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="1"/>
+      <unit value="tablet"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="1"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

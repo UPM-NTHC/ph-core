@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="encounter-ed-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Encounter encounter-ed-example</b></p><a name="encounter-ed-example"> </a><a name="hcencounter-ed-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-encounter.html">PH Core Encounter</a></p></div><p><b>identifier</b>: <code>http://pgh.gov.ph/fhir/Identifier/encounter-id</code>/ENC-2026-0612-001</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-EMER">ActCode: EMER</a> (emergency)</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EMER}">Emergency Department Visit</span></p><p><b>priority</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActPriority EM}">emergency</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><blockquote><p><b>participant</b></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}">attender</span></p><p><b>individual</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ADM}">admitter</span></p><p><b>individual</b>: <a href="PractitionerRole-practitionerrole-ed-example.html">PractitionerRole Doctor</a></p></blockquote><p><b>period</b>: 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</p><p><b>reasonReference</b>: <a href="Condition-condition-acs-example.html">Condition Acute ST segment elevation myocardial infarction</a></p><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href="Condition-condition-acs-example.html">Condition Acute ST segment elevation myocardial infarction</a></p><p><b>use</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role AD}">Admission diagnosis</span></p><p><b>rank</b>: 1</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href="Condition-condition-t2dm-example.html">Condition Diabetes mellitus type 2</a></p><p><b>use</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role CC}">Chief complaint</span></p><p><b>rank</b>: 2</p></blockquote><h3>Hospitalizations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>AdmitSource</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/admit-source emd}">From accident/emergency department</span></td></tr></table><p><b>serviceProvider</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p></div>
+  </text>
+  <identifier>
+    <system value="http://pgh.gov.ph/fhir/Identifier/encounter-id"/>
+    <value value="ENC-2026-0612-001"/>
+  </identifier>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="EMER"/>
+    <display value="emergency"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="EMER"/>
+      <display value="emergency"/>
+    </coding>
+    <text value="Emergency Department Visit"/>
+  </type>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActPriority"/>
+      <code value="EM"/>
+      <display value="emergency"/>
+    </coding>
+  </priority>
+  <subject>
+    <reference value="Patient/patient-acs-example"/>
+  </subject>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="ATND"/>
+        <display value="attender"/>
+      </coding>
+    </type>
+    <individual>
+      <reference value="Practitioner/practitioner-ed-example"/>
+    </individual>
+  </participant>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="ADM"/>
+        <display value="admitter"/>
+      </coding>
+    </type>
+    <individual>
+      <reference value="PractitionerRole/practitionerrole-ed-example"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2026-06-12T08:30:00+08:00"/>
+    <end value="2026-06-12T10:30:00+08:00"/>
+  </period>
+  <reasonReference>
+    <reference value="Condition/condition-acs-example"/>
+  </reasonReference>
+  <diagnosis>
+    <condition>
+      <reference value="Condition/condition-acs-example"/>
+    </condition>
+    <use>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+        <code value="AD"/>
+        <display value="Admission diagnosis"/>
+      </coding>
+    </use>
+    <rank value="1"/>
+  </diagnosis>
+  <diagnosis>
+    <condition>
+      <reference value="Condition/condition-t2dm-example"/>
+    </condition>
+    <use>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+        <code value="CC"/>
+        <display value="Chief complaint"/>
+      </coding>
+    </use>
+    <rank value="2"/>
+  </diagnosis>
+  <hospitalization>
+    <admitSource>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/admit-source"/>
+        <code value="emd"/>
+        <display value="From accident/emergency department"/>
+      </coding>
+    </admitSource>
+  </hospitalization>
+  <serviceProvider>
+    <reference value="Organization/organization-pgh-example"/>
+  </serviceProvider>
+</Encounter>

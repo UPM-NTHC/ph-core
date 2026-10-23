@@ -1,0 +1,64 @@
+{
+  "resourceType" : "Observation",
+  "id" : "observation-cholesterol-total-acs",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-cholesterol-total-acs</b></p><a name=\"observation-cholesterol-total-acs\"> </a><a name=\"hcobservation-cholesterol-total-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2093-3}\">Cholesterol [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>value</b>: 240 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>0 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>200 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td></tr></table></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory",
+      "display" : "Laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "2093-3",
+      "display" : "Cholesterol [Mass/volume] in Serum or Plasma"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/patient-acs-example"
+  },
+  "encounter" : {
+    "reference" : "Encounter/encounter-ed-example"
+  },
+  "effectiveDateTime" : "2026-06-12T08:45:00+08:00",
+  "performer" : [{
+    "reference" : "Organization/organization-pgh-example"
+  }],
+  "valueQuantity" : {
+    "value" : 240,
+    "unit" : "mg/dL",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mg/dL"
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "H",
+      "display" : "High"
+    }]
+  }],
+  "referenceRange" : [{
+    "low" : {
+      "value" : 0,
+      "unit" : "mg/dL",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/dL"
+    },
+    "high" : {
+      "value" : 200,
+      "unit" : "mg/dL",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg/dL"
+    }
+  }]
+}

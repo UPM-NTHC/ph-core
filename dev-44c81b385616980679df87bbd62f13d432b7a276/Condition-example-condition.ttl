@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Condition/example-condition> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-condition"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition example-condition</b></p><a name=\"example-condition\"> </a><a name=\"hcexample-condition\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 44054006}\">Diabetes mellitus type 2</span></p><p><b>subject</b>: <a href=\"Patient-example-patient.html\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-example-encounter.html\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-clinical>
+       ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:44054006 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "44054006" ] ;
+       fhir:display [ fhir:v "Diabetes mellitus type 2" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/example-patient> ;
+     fhir:reference [ fhir:v "Patient/example-patient" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/example-encounter> ;
+     fhir:reference [ fhir:v "Encounter/example-encounter" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

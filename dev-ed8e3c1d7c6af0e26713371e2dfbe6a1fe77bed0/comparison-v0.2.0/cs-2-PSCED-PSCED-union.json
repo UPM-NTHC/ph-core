@@ -1,0 +1,36 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "bb78b133-e6d5-40ba-aed4-b8be82514327-5",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/bb78b133-e6d5-40ba-aed4-b8be82514327-5",
+  "name" : "UnionPSCEDAndPSCED",
+  "title" : "Union of Mock PSCED And PSCED",
+  "status" : "draft",
+  "date" : "2026-10-23T04:37:24+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "concept" : [{
+    "code" : "C201301",
+    "display" : "Elementary Graduate",
+    "definition" : "Completed elementary education"
+  },
+  {
+    "code" : "C201302",
+    "display" : "High School Graduate",
+    "definition" : "Completed secondary education"
+  },
+  {
+    "code" : "C201303",
+    "display" : "College Graduate",
+    "definition" : "Completed bachelor's degree"
+  },
+  {
+    "code" : "C201304",
+    "display" : "Postgraduate",
+    "definition" : "Completed master's or doctoral degree"
+  }]
+}

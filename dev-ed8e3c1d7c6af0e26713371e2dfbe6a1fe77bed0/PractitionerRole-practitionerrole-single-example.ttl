@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-single-example> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "practitionerrole-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole practitionerrole-single-example</b></p><a name=\"practitionerrole-single-example\"> </a><a name=\"hcpractitionerrole-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a></p></div><p><b>identifier</b>: <code>http://doh.gov.ph/fhir/Identifier/practitioner-role-id</code>/PR-OPD-001</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-practitioner-single-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>organization</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>code</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/phcore/CodeSystem/prc 2200}\">Physician</span></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 394802001}\">General medicine</span></p><p><b>location</b>: <a href=\"Location-location-single-example.html\">Location Philippine General Hospital</a></p><p><b>telecom</b>: <a href=\"tel:+63-2-8651-7800\">+63-2-8651-7800</a>, <a href=\"mailto:maria.santos@doh.gov.ph\">maria.santos@doh.gov.ph</a></p></div>"
+  ] ;
+  fhir:PractitionerRole.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://doh.gov.ph/fhir/Identifier/practitioner-role-id" ] ;
+     fhir:Identifier.value [ fhir:value "PR-OPD-001" ]
+  ] ;
+  fhir:PractitionerRole.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:PractitionerRole.practitioner [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+  ] ;
+  fhir:PractitionerRole.organization [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/organization-pgh-example" ]
+  ] ;
+  fhir:PractitionerRole.code [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/prc" ] ;
+       fhir:Coding.code [ fhir:value "2200" ] ;
+       fhir:Coding.display [ fhir:value "Physician" ]
+     ]
+  ] ;
+  fhir:PractitionerRole.specialty [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:394802001 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "394802001" ] ;
+       fhir:Coding.display [ fhir:value "General medicine" ]
+     ]
+  ] ;
+  fhir:PractitionerRole.location [
+     fhir:index 0 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/Location/location-single-example> ;
+     fhir:Reference.reference [ fhir:value "Location/location-single-example" ]
+  ] ;
+  fhir:PractitionerRole.telecom [
+     fhir:index 0 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+63-2-8651-7800" ]
+  ], [
+     fhir:index 1 ;
+     fhir:ContactPoint.system [ fhir:value "email" ] ;
+     fhir:ContactPoint.value [ fhir:value "maria.santos@doh.gov.ph" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

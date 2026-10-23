@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="encounter-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">An ambulatory visit for Juan Dela Cruz that has been completed.</div>
+  </text>
+  <identifier>
+    <system value="http://example.org/encounter-id"/>
+    <value value="ENC-12345"/>
+  </identifier>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+    <display value="ambulatory"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="AMB"/>
+      <display value="ambulatory"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="ATND"/>
+        <display value="attender"/>
+      </coding>
+    </type>
+    <individual>
+      <reference value="Practitioner/practitioner-single-example"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2023-01-01T10:00:00Z"/>
+    <end value="2023-01-01T11:00:00Z"/>
+  </period>
+  <reasonReference>
+    <reference value="Condition/condition-single-example"/>
+  </reasonReference>
+  <diagnosis>
+    <condition>
+      <reference value="Condition/condition-single-example"/>
+    </condition>
+  </diagnosis>
+  <serviceProvider>
+    <reference value="Organization/organization-single-example"/>
+  </serviceProvider>
+</Encounter>

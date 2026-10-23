@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="example-practitioner"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner example-practitioner</b></p><a name="example-practitioner"> </a><a name="hcexample-practitioner"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-practitioner.html">PH Core Practitioner</a></p></div><p><b>name</b>: Maria Clara Santos </p><p><b>telecom</b>: <a href="tel:+63-912-345-6789">+63-912-345-6789</a>, <a href="mailto:maria.santos@example.ph">maria.santos@example.ph</a></p><p><b>address</b>: 1234 Mabini Street Manila NCR 1000 PH (home)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1985-05-15</p></div>
+  </text>
+  <name>
+    <family value="Santos"/>
+    <given value="Maria"/>
+    <given value="Clara"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63-912-345-6789"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="maria.santos@example.ph"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <use value="home"/>
+    <line value="1234 Mabini Street"/>
+    <city value="Manila"/>
+    <state value="NCR"/>
+    <postalCode value="1000"/>
+    <country value="PH"/>
+  </address>
+  <gender value="female"/>
+  <birthDate value="1985-05-15"/>
+</Practitioner>

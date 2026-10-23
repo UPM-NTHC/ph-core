@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/indigenous-groups-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "indigenous-groups-vs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet indigenous-groups-vs</b></p><a name=\"indigenous-groups-vs\"> </a><a name=\"hcindigenous-groups-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-indigenous-groups-cs.html\"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.0</span></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://fhir.doh.gov.ph/phcore/ValueSet/indigenous-groups-vs"^^xsd:anyURI ;
+     fhir:l <https://fhir.doh.gov.ph/phcore/ValueSet/indigenous-groups-vs>
+  ] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "IndigenousGroupsVS"] ; # 
+  fhir:title [ fhir:v "Indigenous Groups ValueSet"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-06-10T01:16:31+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-NTHC" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A value set representing the recognized Indigenous groups to which a person may belong."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs>
+       ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

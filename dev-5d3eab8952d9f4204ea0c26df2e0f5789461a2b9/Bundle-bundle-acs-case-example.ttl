@@ -1,0 +1,2404 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Bundle/bundle-acs-case-example> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bundle-acs-case-example"] ; # 
+  fhir:type [ fhir:v "transaction"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Patient"^^xsd:anyURI ;
+         fhir:l fhir:Patient
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Organization"^^xsd:anyURI ;
+         fhir:l fhir:Organization
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Practitioner"^^xsd:anyURI ;
+         fhir:l fhir:Practitioner
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-ed-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-ed-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-ed-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "PractitionerRole"^^xsd:anyURI ;
+         fhir:l fhir:PractitionerRole
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Condition/condition-t2dm-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-t2dm-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Condition/condition-t2dm-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Condition"^^xsd:anyURI ;
+         fhir:l fhir:Condition
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Condition"^^xsd:anyURI ;
+         fhir:l fhir:Condition
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Encounter"^^xsd:anyURI ;
+         fhir:l fhir:Encounter
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-bp-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-bp-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-bp-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-hr-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-hr-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-hr-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-rr-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-rr-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-rr-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-spo2-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-spo2-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-spo2-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-temp-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-temp-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-temp-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-pain-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-pain-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-pain-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-troponin-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-troponin-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-troponin-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-glucose-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-glucose-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-glucose-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-hba1c-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-hba1c-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-hba1c-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-total-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-total-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-total-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-ldl-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-ldl-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-ldl-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-ecg-acs"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-ecg-acs>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-ecg-acs> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Composition/composition-ed-note-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Composition/composition-ed-note-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Composition/composition-ed-note-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Composition"^^xsd:anyURI ;
+         fhir:l fhir:Composition
+       ]
+     ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> a fhir:Patient ;
+  fhir:id [ fhir:v "patient-acs-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patient-acs-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient patient-acs-example</b></p><a name=\"patient-acs-example\"> </a><a name=\"hcpatient-acs-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-patient.html\">PH Core Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"tel:+63-917-123-4567\">+63-917-123-4567</a></li><li>123 Mabini Street Barangay Malinis City of Las Piñas 1740 PH (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>General Practitioner: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></li><li>Managing Organization: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"race of a patient.\"><a href=\"StructureDefinition-race.html\">Race</a></td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-Race 2036-2}\">Filipino</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The nationality of the patient.\">Patient Nationality:</td><td colspan=\"3\"><ul><li>code: <span title=\"Codes:{urn:iso:std:iso:3166 PH}\">Philippines</span></li><li>period: 1981-03-15 --&gt; (ongoing)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Highest educational attainment of the patient.\"><a href=\"StructureDefinition-educational-attainment.html\">Educational Attainment</a></td><td colspan=\"3\"><span title=\"Codes:{https://psa.gov.ph/classification/psced/level C201301}\">Elementary Graduate</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient's occupation.\">Occupation:</td><td colspan=\"3\"><ul><li>occupationClassification: <span title=\"Codes:{https://psa.gov.ph/classification/psoc/unit 911102}\">Street Food Vendor</span></li><li>occupationLength: 2015-01-01 --&gt; (ongoing)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"If the patient is a member of an indigenous group.\"><a href=\"StructureDefinition-indigenous-people.html\">Indigenous People</a></td><td colspan=\"3\">false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The patient's professed religious affiliations.\"><a href=\"http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-patient-religion.html\">Patient Religion</a></td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation 1041}\">Roman Catholic Church</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "code"^^xsd:anyURI ;
+         fhir:l fhir:code
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+             fhir:l <urn:iso:std:iso:3166>
+           ] ;
+           fhir:code [ fhir:v "PH" ] ;
+           fhir:display [ fhir:v "Philippines" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "period"^^xsd:anyURI ;
+         fhir:l fhir:period
+       ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "1981-03-15"^^xsd:date ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/patient-nationality"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/patient-nationality>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/patient-religion"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/patient-religion>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation>
+         ] ;
+         fhir:code [ fhir:v "1041" ] ;
+         fhir:display [ fhir:v "Roman Catholic Church" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people>
+     ] ;
+     fhir:value [
+       a fhir:Boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/race"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/race>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-Race"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-Race>
+         ] ;
+         fhir:code [ fhir:v "2036-2" ] ;
+         fhir:display [ fhir:v "Filipino" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psced/level"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psced/level>
+         ] ;
+         fhir:code [ fhir:v "C201301" ] ;
+         fhir:display [ fhir:v "Elementary Graduate" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "occupationClassification"^^xsd:anyURI ;
+         fhir:l fhir:occupationClassification
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psoc/unit"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psoc/unit>
+           ] ;
+           fhir:code [ fhir:v "911102" ] ;
+           fhir:display [ fhir:v "Street Food Vendor" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "occupationLength"^^xsd:anyURI ;
+         fhir:l fhir:occupationLength
+       ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2015-01-01"^^xsd:date ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation>
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"^^xsd:anyURI ;
+       fhir:l <http://philhealth.gov.ph/fhir/Identifier/philhealth-id>
+     ] ;
+     fhir:value [ fhir:v "63-584789845-5" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Dela Cruz" ] ;
+     fhir:given ( [ fhir:v "Juan" ] [ fhir:v "Carlos" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-917-123-4567" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1981-03-15"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380200000" ] ;
+         fhir:display [ fhir:v "City of Las Piñas" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/region>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1300000000" ] ;
+         fhir:display [ fhir:v "National Capital Region" ]
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:type [ fhir:v "both" ] ;
+     fhir:line ( [ fhir:v "123 Mabini Street" ] [ fhir:v "Barangay Malinis" ] ) ;
+     fhir:city [ fhir:v "City of Las Piñas" ] ;
+     fhir:district [ fhir:v "NCR" ] ;
+     fhir:postalCode [ fhir:v "1740" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) ; # 
+  fhir:generalPractitioner ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] . # 
+
+<https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> a fhir:Organization ;
+  fhir:id [ fhir:v "organization-pgh-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_organization-pgh-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization organization-pgh-example</b></p><a name=\"organization-pgh-example\"> </a><a name=\"hcorganization-pgh-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p></div><p><b>identifier</b>: <a href=\"NamingSystem-DOHNHFRCodeNS.html\" title=\"Health Facility Code (HFC) from the National Health Facility Registry.\">DOHNHFRCode</a>/1234567890, <a href=\"NamingSystem-PhilHealthPANNS.html\" title=\"The unique number issued by PhilHealth to accredited institutions.\">PhilHealthPAN</a>/PAN-2024-56789, <a href=\"NamingSystem-PhilHealthPENNS.html\" title=\"The unique number issued by PhilHealth to employers.\">PhilHealthPEN</a>/PEN-987654321</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Philippine General Hospital</p><p><b>telecom</b>: <a href=\"tel:+63-2-8651-7800\">+63-2-8651-7800</a>, <a href=\"mailto:contact@pgh.gov.ph\">contact@pgh.gov.ph</a></p><p><b>address</b>: Taft Avenue Manila 1000 PH (work)</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td>Hospital Administrator</td><td><a href=\"tel:+63-2-8651-7801\">+63-2-8651-7801</a></td><td>Taft Avenue Manila 1000 PH (work)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code>
+     ] ;
+     fhir:value [ fhir:v "1234567890" ]
+  ] [
+     fhir:system [
+       fhir:v "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"^^xsd:anyURI ;
+       fhir:l <http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber>
+     ] ;
+     fhir:value [ fhir:v "PAN-2024-56789" ]
+  ] [
+     fhir:system [
+       fhir:v "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"^^xsd:anyURI ;
+       fhir:l <http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber>
+     ] ;
+     fhir:value [ fhir:v "PEN-987654321" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/organization-type>
+       ] ;
+       fhir:code [ fhir:v "prov" ] ;
+       fhir:display [ fhir:v "Healthcare Provider" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Philippine General Hospital"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-2-8651-7800" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "contact@pgh.gov.ph" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/region>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1300000000" ] ;
+         fhir:display [ fhir:v "National Capital Region" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380600000" ] ;
+         fhir:display [ fhir:v "City of Manila" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1339000003" ] ;
+         fhir:display [ fhir:v "Ermita" ]
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:type [ fhir:v "both" ] ;
+     fhir:line ( [ fhir:v "Taft Avenue" ] ) ;
+     fhir:city [ fhir:v "Manila" ] ;
+     fhir:district [ fhir:v "NCR" ] ;
+     fhir:postalCode [ fhir:v "1000" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:name [
+       fhir:text [ fhir:v "Hospital Administrator" ]
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "+63-2-8651-7801" ]
+     ] ) ;
+     fhir:address [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/region>
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psgc>
+           ] ;
+           fhir:code [ fhir:v "1300000000" ] ;
+           fhir:display [ fhir:v "National Capital Region" ]
+         ]
+       ] [
+         fhir:url [
+           fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psgc>
+           ] ;
+           fhir:code [ fhir:v "1380600000" ] ;
+           fhir:display [ fhir:v "City of Manila" ]
+         ]
+       ] [
+         fhir:url [
+           fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay>
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psgc>
+           ] ;
+           fhir:code [ fhir:v "1339000003" ] ;
+           fhir:display [ fhir:v "Ermita" ]
+         ]
+       ] ) ;
+       fhir:use [ fhir:v "work" ] ;
+       fhir:line ( [ fhir:v "Taft Avenue" ] ) ;
+       fhir:city [ fhir:v "Manila" ] ;
+       fhir:postalCode [ fhir:v "1000" ] ;
+       fhir:country [ fhir:v "PH" ]
+     ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> a fhir:Practitioner ;
+  fhir:id [ fhir:v "practitioner-ed-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_practitioner-ed-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner practitioner-ed-example</b></p><a name=\"practitioner-ed-example\"> </a><a name=\"hcpractitioner-ed-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a></p></div><blockquote><p><b>Person Recorded Sex Or Gender</b></p><ul><li>value: <span title=\"Codes:{http://snomed.info/sct 248152002}\">Female (finding)</span></li><li>type: <span title=\"Codes:{http://loinc.org 76689-9}\">Sex Assigned at Birth</span></li></ul></blockquote><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title=\"Codes:{http://loinc.org LA22879-3}\">Identifies as female</span></li></ul></blockquote><blockquote><p><b>Individual Pronouns</b></p><ul><li>value: <span title=\"Codes:{http://loinc.org LA29519-8}\">she/her/her/hers/herself</span></li></ul></blockquote><p><b>name</b>: Maria Clara Santos (Official)</p><p><b>telecom</b>: <a href=\"tel:+63-912-345-6789\">+63-912-345-6789</a>, <a href=\"mailto:maria.santos@pgh.gov.ph\">maria.santos@pgh.gov.ph</a></p><p><b>address</b>: 1234 Mabini Street Manila 1000 PH (home)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1985-05-15</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Period</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td><code>http://prc.gov.ph/fhir/Identifier/prc-license</code>/0123456</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0360 MD}\">Doctor of Medicine</span></td><td>2010-07-15 --&gt; (ongoing)</td><td><a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></td></tr></table><p><b>communication</b>: <span title=\"Codes:{urn:ietf:bcp:47 fil}\">Filipino</span>, <span title=\"Codes:{urn:ietf:bcp:47 en}\">English</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:248152002 ;
+           fhir:system [
+             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+             fhir:l <http://snomed.info/sct>
+           ] ;
+           fhir:code [ fhir:v "248152002" ] ;
+           fhir:display [ fhir:v "Female (finding)" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "type"^^xsd:anyURI ;
+         fhir:l fhir:type
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:76689-9 ;
+           fhir:system [
+             fhir:v "http://loinc.org"^^xsd:anyURI ;
+             fhir:l <http://loinc.org>
+           ] ;
+           fhir:code [ fhir:v "76689-9" ] ;
+           fhir:display [ fhir:v "Sex Assigned at Birth" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:LA22879-3 ;
+           fhir:system [
+             fhir:v "http://loinc.org"^^xsd:anyURI ;
+             fhir:l <http://loinc.org>
+           ] ;
+           fhir:code [ fhir:v "LA22879-3" ] ;
+           fhir:display [ fhir:v "Identifies as female" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-genderIdentity>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:LA29519-8 ;
+           fhir:system [
+             fhir:v "http://loinc.org"^^xsd:anyURI ;
+             fhir:l <http://loinc.org>
+           ] ;
+           fhir:code [ fhir:v "LA29519-8" ] ;
+           fhir:display [ fhir:v "she/her/her/hers/herself" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-pronouns"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-pronouns>
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Santos" ] ;
+     fhir:given ( [ fhir:v "Maria" ] [ fhir:v "Clara" ] ) ;
+     fhir:suffix ( [ fhir:v "MD" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-912-345-6789" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "maria.santos@pgh.gov.ph" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1339000003" ] ;
+         fhir:display [ fhir:v "Ermita" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380600000" ] ;
+         fhir:display [ fhir:v "City of Manila" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/region>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1300000000" ] ;
+         fhir:display [ fhir:v "National Capital Region" ]
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:type [ fhir:v "both" ] ;
+     fhir:line ( [ fhir:v "1234 Mabini Street" ] ) ;
+     fhir:city [ fhir:v "Manila" ] ;
+     fhir:district [ fhir:v "NCR" ] ;
+     fhir:postalCode [ fhir:v "1000" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1985-05-15"^^xsd:date] ; # 
+  fhir:qualification ( [
+     fhir:identifier ( [
+       fhir:system [
+         fhir:v "http://prc.gov.ph/fhir/Identifier/prc-license"^^xsd:anyURI ;
+         fhir:l <http://prc.gov.ph/fhir/Identifier/prc-license>
+       ] ;
+       fhir:value [ fhir:v "0123456" ]
+     ] ) ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0360"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0360>
+         ] ;
+         fhir:code [ fhir:v "MD" ] ;
+         fhir:display [ fhir:v "Doctor of Medicine" ]
+       ] )
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2010-07-15"^^xsd:date ]
+     ] ;
+     fhir:issuer [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+       fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+     ]
+  ] ) ; # 
+  fhir:communication ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:ietf:bcp:47"^^xsd:anyURI ;
+         fhir:l <urn:ietf:bcp:47>
+       ] ;
+       fhir:code [ fhir:v "fil" ] ;
+       fhir:display [ fhir:v "Filipino" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:ietf:bcp:47"^^xsd:anyURI ;
+         fhir:l <urn:ietf:bcp:47>
+       ] ;
+       fhir:code [ fhir:v "en" ] ;
+       fhir:display [ fhir:v "English" ]
+     ] )
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-ed-example> a fhir:PractitionerRole ;
+  fhir:id [ fhir:v "practitionerrole-ed-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_practitionerrole-ed-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole practitionerrole-ed-example</b></p><a name=\"practitionerrole-ed-example\"> </a><a name=\"hcpractitionerrole-ed-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a></p></div><p><b>identifier</b>: <code>http://doh.gov.ph/fhir/Identifier/practitioner-role-id</code>/PR-ED-001</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>organization</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}\">Doctor</span></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 773568002}\">Emergency medicine</span></p><p><b>telecom</b>: <a href=\"tel:+63-2-8651-7802\">+63-2-8651-7802</a>, <a href=\"mailto:ed.attending@pgh.gov.ph\">ed.attending@pgh.gov.ph</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://doh.gov.ph/fhir/Identifier/practitioner-role-id"^^xsd:anyURI ;
+       fhir:l <http://doh.gov.ph/fhir/Identifier/practitioner-role-id>
+     ] ;
+     fhir:value [ fhir:v "PR-ED-001" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:practitioner [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ; # 
+  fhir:organization [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/practitioner-role"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/practitioner-role>
+       ] ;
+       fhir:code [ fhir:v "doctor" ] ;
+       fhir:display [ fhir:v "Doctor" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:773568002 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "773568002" ] ;
+       fhir:display [ fhir:v "Emergency medicine" ]
+     ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-2-8651-7802" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "ed.attending@pgh.gov.ph" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Condition/condition-t2dm-example> a fhir:Condition ;
+  fhir:id [ fhir:v "condition-t2dm-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_condition-t2dm-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition condition-t2dm-example</b></p><a name=\"condition-t2dm-example\"> </a><a name=\"hccondition-t2dm-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-condition.html\">PH Core Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Chronic Condition</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 44054006}\">Type 2 Diabetes Mellitus</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>onset</b>: 2020-03-15</p><p><b>recordedDate</b>: 2020-03-15 10:30:00+0800</p><p><b>note</b>: </p><blockquote><div><p>Patient diagnosed with T2DM during routine health screening. Currently on Metformin 500mg twice daily. Last HbA1c: 8.2% (poor control). Advised on diet and exercise management.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-clinical>
+       ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-ver-status>
+       ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-category>
+       ] ;
+       fhir:code [ fhir:v "problem-list-item" ] ;
+       fhir:display [ fhir:v "Problem List Item" ]
+     ] ) ;
+     fhir:text [ fhir:v "Chronic Condition" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:44054006 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "44054006" ] ;
+       fhir:display [ fhir:v "Diabetes mellitus type 2" ]
+     ] ) ;
+     fhir:text [ fhir:v "Type 2 Diabetes Mellitus" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:DateTime ;
+     fhir:v "2020-03-15"^^xsd:date
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2020-03-15T10:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient diagnosed with T2DM during routine health screening. Currently on Metformin 500mg twice daily. Last HbA1c: 8.2% (poor control). Advised on diet and exercise management." ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> a fhir:Condition ;
+  fhir:id [ fhir:v "condition-acs-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_condition-acs-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition condition-acs-example</b></p><a name=\"condition-acs-example\"> </a><a name=\"hccondition-acs-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-condition.html\">PH Core Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Acute Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 401303003}\">Acute Coronary Syndrome - STEMI</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>onset</b>: 2026-06-12 08:30:00+0800</p><p><b>recordedDate</b>: 2026-06-12 08:45:00+0800</p><p><b>recorder</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>note</b>: </p><blockquote><div><p>45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm. 12-lead ECG shows ST-elevation in leads V1-V4 consistent with anterior STEMI. Troponin I elevated at 2.5 ng/mL.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-clinical>
+       ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-ver-status>
+       ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-category>
+       ] ;
+       fhir:code [ fhir:v "encounter-diagnosis" ] ;
+       fhir:display [ fhir:v "Encounter Diagnosis" ]
+     ] ) ;
+     fhir:text [ fhir:v "Acute Diagnosis" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:401303003 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "401303003" ] ;
+       fhir:display [ fhir:v "Acute ST segment elevation myocardial infarction" ]
+     ] ) ;
+     fhir:text [ fhir:v "Acute Coronary Syndrome - STEMI" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2026-06-12T08:45:00+08:00"^^xsd:dateTime] ; # 
+  fhir:recorder [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm. 12-lead ECG shows ST-elevation in leads V1-V4 consistent with anterior STEMI. Troponin I elevated at 2.5 ng/mL." ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> a fhir:Encounter ;
+  fhir:id [ fhir:v "encounter-ed-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_encounter-ed-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter encounter-ed-example</b></p><a name=\"encounter-ed-example\"> </a><a name=\"hcencounter-ed-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-encounter.html\">PH Core Encounter</a></p></div><p><b>identifier</b>: <code>http://pgh.gov.ph/fhir/Identifier/encounter-id</code>/ENC-2026-0612-001</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-EMER\">ActCode: EMER</a> (emergency)</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EMER}\">Emergency Department Visit</span></p><p><b>priority</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActPriority EM}\">emergency</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}\">attender</span></p><p><b>individual</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ADM}\">admitter</span></p><p><b>individual</b>: <a href=\"PractitionerRole-practitionerrole-ed-example.html\">PractitionerRole Doctor</a></p></blockquote><p><b>period</b>: 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</p><p><b>reasonReference</b>: <a href=\"Condition-condition-acs-example.html\">Condition Acute ST segment elevation myocardial infarction</a></p><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href=\"Condition-condition-acs-example.html\">Condition Acute ST segment elevation myocardial infarction</a></p><p><b>use</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role AD}\">Admission diagnosis</span></p><p><b>rank</b>: 1</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href=\"Condition-condition-t2dm-example.html\">Condition Diabetes mellitus type 2</a></p><p><b>use</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role CC}\">Chief complaint</span></p><p><b>rank</b>: 2</p></blockquote><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>AdmitSource</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/admit-source emd}\">From accident/emergency department</span></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://pgh.gov.ph/fhir/Identifier/encounter-id"^^xsd:anyURI ;
+       fhir:l <http://pgh.gov.ph/fhir/Identifier/encounter-id>
+     ] ;
+     fhir:value [ fhir:v "ENC-2026-0612-001" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "EMER" ] ;
+     fhir:display [ fhir:v "emergency" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+       ] ;
+       fhir:code [ fhir:v "EMER" ] ;
+       fhir:display [ fhir:v "emergency" ]
+     ] ) ;
+     fhir:text [ fhir:v "Emergency Department Visit" ]
+  ] ) ; # 
+  fhir:priority [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActPriority"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActPriority>
+       ] ;
+       fhir:code [ fhir:v "EM" ] ;
+       fhir:display [ fhir:v "emergency" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ParticipationType>
+         ] ;
+         fhir:code [ fhir:v "ATND" ] ;
+         fhir:display [ fhir:v "attender" ]
+       ] )
+     ] ) ;
+     fhir:individual [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+     ]
+  ] [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ParticipationType>
+         ] ;
+         fhir:code [ fhir:v "ADM" ] ;
+         fhir:display [ fhir:v "admitter" ]
+       ] )
+     ] ) ;
+     fhir:individual [
+       fhir:l <https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-ed-example> ;
+       fhir:reference [ fhir:v "PractitionerRole/practitionerrole-ed-example" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2026-06-12T08:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2026-06-12T10:30:00+08:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:reasonReference ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ;
+     fhir:reference [ fhir:v "Condition/condition-acs-example" ]
+  ] ) ; # 
+  fhir:diagnosis ( [
+     fhir:condition [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ;
+       fhir:reference [ fhir:v "Condition/condition-acs-example" ]
+     ] ;
+     fhir:use [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/diagnosis-role"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/diagnosis-role>
+         ] ;
+         fhir:code [ fhir:v "AD" ] ;
+         fhir:display [ fhir:v "Admission diagnosis" ]
+       ] )
+     ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] [
+     fhir:condition [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-t2dm-example> ;
+       fhir:reference [ fhir:v "Condition/condition-t2dm-example" ]
+     ] ;
+     fhir:use [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/diagnosis-role"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/diagnosis-role>
+         ] ;
+         fhir:code [ fhir:v "CC" ] ;
+         fhir:display [ fhir:v "Chief complaint" ]
+       ] )
+     ] ;
+     fhir:rank [ fhir:v "2"^^xsd:positiveInteger ]
+  ] ) ; # 
+  fhir:hospitalization [
+     fhir:admitSource [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/admit-source"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/admit-source>
+         ] ;
+         fhir:code [ fhir:v "emd" ] ;
+         fhir:display [ fhir:v "From accident/emergency department" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:serviceProvider [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-bp-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-bp-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-bp-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-bp-acs</b></p><a name=\"observation-bp-acs\"> </a><a name=\"hcobservation-bp-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85354-9}\">Blood pressure panel with all children optional</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 368209003}\">Right arm</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8480-6}\">Systolic blood pressure</span></p><p><b>value</b>: 160 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8462-4}\">Diastolic blood pressure</span></p><p><b>value</b>: 95 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "vital-signs" ] ;
+       fhir:display [ fhir:v "Vital Signs" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:85354-9 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "85354-9" ] ;
+       fhir:display [ fhir:v "Blood pressure panel with all children optional" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ) ; # 
+  fhir:bodySite [
+     fhir:coding ( [
+       a sct:368209003 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "368209003" ] ;
+       fhir:display [ fhir:v "Right arm" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:8480-6 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "8480-6" ] ;
+         fhir:display [ fhir:v "Systolic blood pressure" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "160"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mmHg" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mm[Hg]" ]
+     ] ;
+     fhir:interpretation ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+         ] ;
+         fhir:code [ fhir:v "H" ] ;
+         fhir:display [ fhir:v "High" ]
+       ] )
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:8462-4 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "8462-4" ] ;
+         fhir:display [ fhir:v "Diastolic blood pressure" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "95"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mmHg" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mm[Hg]" ]
+     ] ;
+     fhir:interpretation ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+         ] ;
+         fhir:code [ fhir:v "H" ] ;
+         fhir:display [ fhir:v "High" ]
+       ] )
+     ] )
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-hr-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-hr-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-hr-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-hr-acs</b></p><a name=\"observation-hr-acs\"> </a><a name=\"hcobservation-hr-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8867-4}\">Heart rate</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 110 beats/minute<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/min = '/min')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "vital-signs" ] ;
+       fhir:display [ fhir:v "Vital Signs" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:8867-4 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "8867-4" ] ;
+       fhir:display [ fhir:v "Heart rate" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "110"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "beats/minute" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "/min" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "H" ] ;
+       fhir:display [ fhir:v "High" ]
+     ] )
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-rr-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-rr-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-rr-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-rr-acs</b></p><a name=\"observation-rr-acs\"> </a><a name=\"hcobservation-rr-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 9279-1}\">Respiratory rate</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 24 breaths/minute<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/min = '/min')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "vital-signs" ] ;
+       fhir:display [ fhir:v "Vital Signs" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:9279-1 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "9279-1" ] ;
+       fhir:display [ fhir:v "Respiratory rate" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "24"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "breaths/minute" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "/min" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "H" ] ;
+       fhir:display [ fhir:v "High" ]
+     ] )
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-spo2-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-spo2-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-spo2-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-spo2-acs</b></p><a name=\"observation-spo2-acs\"> </a><a name=\"hcobservation-spo2-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2708-6}\">Oxygen saturation in Arterial blood</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 92 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation L}\">Low</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>95 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></td><td>100 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "vital-signs" ] ;
+       fhir:display [ fhir:v "Vital Signs" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:2708-6 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "2708-6" ] ;
+       fhir:display [ fhir:v "Oxygen saturation in Arterial blood" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "92"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "%" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "%" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "L" ] ;
+       fhir:display [ fhir:v "Low" ]
+     ] )
+  ] ) ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v "95"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "%" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "%" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v "100"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "%" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "%" ]
+     ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-temp-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-temp-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-temp-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-temp-acs</b></p><a name=\"observation-temp-acs\"> </a><a name=\"hcobservation-temp-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8310-5}\">Body temperature</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 37.2 degrees Celsius<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeCel = 'Cel')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "vital-signs" ] ;
+       fhir:display [ fhir:v "Vital Signs" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:8310-5 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "8310-5" ] ;
+       fhir:display [ fhir:v "Body temperature" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 37.2 ] ;
+     fhir:unit [ fhir:v "degrees Celsius" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "Cel" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "N" ] ;
+       fhir:display [ fhir:v "Normal" ]
+     ] )
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-pain-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-pain-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-pain-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-pain-acs</b></p><a name=\"observation-pain-acs\"> </a><a name=\"hcobservation-pain-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 72514-3}\">Pain severity - 0-10 verbal numeric rating [Score] - Reported</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 8 score<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{score} = '{score}')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation HH}\">Critical high</span></p><p><b>note</b>: </p><blockquote><div><p>Patient reports crushing substernal chest pain radiating to left arm.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "survey" ] ;
+       fhir:display [ fhir:v "Survey" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:72514-3 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "72514-3" ] ;
+       fhir:display [ fhir:v "Pain severity - 0-10 verbal numeric rating [Score] - Reported" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "8"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "score" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "{score}" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "HH" ] ;
+       fhir:display [ fhir:v "Critical high" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient reports crushing substernal chest pain radiating to left arm." ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-troponin-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-troponin-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-troponin-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-troponin-acs</b></p><a name=\"observation-troponin-acs\"> </a><a name=\"hcobservation-troponin-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 10839-9}\">Troponin I.cardiac [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>value</b>: 2.5 ng/mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeng/mL = 'ng/mL')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><p><b>note</b>: </p><blockquote><div><p>Elevated troponin consistent with acute myocardial infarction.</p>\n</div></blockquote><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>0 ng/mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeng/mL = 'ng/mL')</span></td><td>0.04 ng/mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeng/mL = 'ng/mL')</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:10839-9 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "10839-9" ] ;
+       fhir:display [ fhir:v "Troponin I.cardiac [Mass/volume] in Serum or Plasma" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:45:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 2.5 ] ;
+     fhir:unit [ fhir:v "ng/mL" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "ng/mL" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "H" ] ;
+       fhir:display [ fhir:v "High" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Elevated troponin consistent with acute myocardial infarction." ]
+  ] ) ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v "0"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "ng/mL" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "ng/mL" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v 0.04 ] ;
+       fhir:unit [ fhir:v "ng/mL" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "ng/mL" ]
+     ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-glucose-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-glucose-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-glucose-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-glucose-acs</b></p><a name=\"observation-glucose-acs\"> </a><a name=\"hcobservation-glucose-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2345-7}\">Glucose [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>value</b>: 180 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><p><b>note</b>: </p><blockquote><div><p>Elevated glucose consistent with stress hyperglycemia and known T2DM.</p>\n</div></blockquote><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>70 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>140 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:2345-7 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "2345-7" ] ;
+       fhir:display [ fhir:v "Glucose [Mass/volume] in Serum or Plasma" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:45:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "180"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "mg/dL" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "mg/dL" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "H" ] ;
+       fhir:display [ fhir:v "High" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Elevated glucose consistent with stress hyperglycemia and known T2DM." ]
+  ] ) ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v "70"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg/dL" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg/dL" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v "140"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg/dL" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg/dL" ]
+     ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-hba1c-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-hba1c-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-hba1c-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-hba1c-acs</b></p><a name=\"observation-hba1c-acs\"> </a><a name=\"hcobservation-hba1c-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 4548-4}\">Hemoglobin A1c/Hemoglobin.total in Blood</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>value</b>: 8.2 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><p><b>note</b>: </p><blockquote><div><p>HbA1c indicates poor glycemic control over past 3 months.</p>\n</div></blockquote><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>4 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></td><td>5.7 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:4548-4 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "4548-4" ] ;
+       fhir:display [ fhir:v "Hemoglobin A1c/Hemoglobin.total in Blood" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:45:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v 8.2 ] ;
+     fhir:unit [ fhir:v "%" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "%" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "H" ] ;
+       fhir:display [ fhir:v "High" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "HbA1c indicates poor glycemic control over past 3 months." ]
+  ] ) ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v "4"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "%" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "%" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v 5.7 ] ;
+       fhir:unit [ fhir:v "%" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "%" ]
+     ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-total-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-cholesterol-total-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-cholesterol-total-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-cholesterol-total-acs</b></p><a name=\"observation-cholesterol-total-acs\"> </a><a name=\"hcobservation-cholesterol-total-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2093-3}\">Cholesterol [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>value</b>: 240 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>0 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>200 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:2093-3 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "2093-3" ] ;
+       fhir:display [ fhir:v "Cholesterol [Mass/volume] in Serum or Plasma" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:45:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "240"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "mg/dL" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "mg/dL" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "H" ] ;
+       fhir:display [ fhir:v "High" ]
+     ] )
+  ] ) ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v "0"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg/dL" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg/dL" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v "200"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg/dL" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg/dL" ]
+     ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-cholesterol-ldl-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-cholesterol-ldl-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-cholesterol-ldl-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-cholesterol-ldl-acs</b></p><a name=\"observation-cholesterol-ldl-acs\"> </a><a name=\"hcobservation-cholesterol-ldl-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2089-1}\">Cholesterol in LDL [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:45:00+0800</p><p><b>performer</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>value</b>: 160 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td style=\"display: none\">*</td><td>0 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td><td>100 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg/dL = 'mg/dL')</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "laboratory" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:2089-1 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "2089-1" ] ;
+       fhir:display [ fhir:v "Cholesterol in LDL [Mass/volume] in Serum or Plasma" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:45:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "160"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "mg/dL" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "mg/dL" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "H" ] ;
+       fhir:display [ fhir:v "High" ]
+     ] )
+  ] ) ; # 
+  fhir:referenceRange ( [
+     fhir:low [
+       fhir:value [ fhir:v "0"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg/dL" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg/dL" ]
+     ] ;
+     fhir:high [
+       fhir:value [ fhir:v "100"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg/dL" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mg/dL" ]
+     ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-ecg-acs> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-ecg-acs"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-ecg-acs\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-ecg-acs</b></p><a name=\"observation-ecg-acs\"> </a><a name=\"hcobservation-ecg-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category procedure}\">Procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 11524-6}\">EKG study</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:35:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: ST-elevation in leads V1-V4, reciprocal ST-depression in leads II, III, aVF. Rhythm: sinus tachycardia at 110 bpm.</p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation HH}\">Critical high</span></p><p><b>note</b>: </p><blockquote><div><p>ECG findings consistent with acute anterior ST-elevation myocardial infarction.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "procedure" ] ;
+       fhir:display [ fhir:v "Procedure" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:11524-6 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "11524-6" ] ;
+       fhir:display [ fhir:v "EKG study" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:35:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:String ;
+     fhir:v "ST-elevation in leads V1-V4, reciprocal ST-depression in leads II, III, aVF. Rhythm: sinus tachycardia at 110 bpm."
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "HH" ] ;
+       fhir:display [ fhir:v "Critical high" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "ECG findings consistent with acute anterior ST-elevation myocardial infarction." ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Composition/composition-ed-note-example> a fhir:Composition ;
+  fhir:id [ fhir:v "composition-ed-note-example"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Composition_composition-ed-note-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Composition composition-ed-note-example</b></p><a name=\"composition-ed-note-example\"> </a><a name=\"hccomposition-ed-note-example\"> </a><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 18842-5}\">ED Clinical Note</span></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>date</b>: 2026-06-12 10:30:00+0800</p><p><b>author</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>title</b>: Emergency Department Clinical Note — Acute Coronary Syndrome</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>Legal</td><td>2026-06-12 10:30:00+0800</td><td><a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></td></tr></table><p><b>custodian</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a loinc:18842-5 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "18842-5" ] ;
+       fhir:display [ fhir:v "Discharge summary" ]
+     ] ) ;
+     fhir:text [ fhir:v "ED Clinical Note" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:date [ fhir:v "2026-06-12T10:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Emergency Department Clinical Note — Acute Coronary Syndrome"] ; # 
+  fhir:confidentiality [ fhir:v "N"] ; # 
+  fhir:attester ( [
+     fhir:mode [ fhir:v "legal" ] ;
+     fhir:time [ fhir:v "2026-06-12T10:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:party [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+     ]
+  ] ) ; # 
+  fhir:custodian [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] ; # 
+  fhir:section ( [
+     fhir:title [ fhir:v "Chief Complaint" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:10154-3 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "10154-3" ] ;
+         fhir:display [ fhir:v "Chief complaint Reported" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm, associated with dyspnea and diaphoresis.</p></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ;
+       fhir:reference [ fhir:v "Condition/condition-acs-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "History of Present Illness" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:10164-2 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "10164-2" ] ;
+         fhir:display [ fhir:v "History of present illness Narrative" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Patient Juan Dela Cruz, 45M, Filipino, presented to PGH ED at 08:30 with acute chest pain. Pain described as crushing, 8/10 severity, substernal with radiation to left arm. Associated with shortness of breath and sweating. No relief with rest. Known T2DM since 2020. Current smoker (1 pack/day x 20 years).</p></div>"^^rdf:XMLLiteral ]
+     ]
+  ] [
+     fhir:title [ fhir:v "Vital Signs" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:8716-3 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "8716-3" ] ;
+         fhir:display [ fhir:v "Vital signs note" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>BP: 160/95 mmHg (elevated)</li><li>HR: 110 bpm (tachycardic)</li><li>RR: 24/min (tachypneic)</li><li>SpO2: 92% RA (hypoxemic)</li><li>Temp: 37.2°C</li><li>Pain: 8/10</li></ul></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-bp-acs> ;
+       fhir:reference [ fhir:v "Observation/observation-bp-acs" ]
+     ] [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-hr-acs> ;
+       fhir:reference [ fhir:v "Observation/observation-hr-acs" ]
+     ] [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-rr-acs> ;
+       fhir:reference [ fhir:v "Observation/observation-rr-acs" ]
+     ] [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-spo2-acs> ;
+       fhir:reference [ fhir:v "Observation/observation-spo2-acs" ]
+     ] [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-temp-acs> ;
+       fhir:reference [ fhir:v "Observation/observation-temp-acs" ]
+     ] [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-pain-acs> ;
+       fhir:reference [ fhir:v "Observation/observation-pain-acs" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Assessment and Plan" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:18776-5 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "18776-5" ] ;
+         fhir:display [ fhir:v "Plan of care note" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><strong>Assessment:</strong> Acute Coronary Syndrome — Anterior STEMI (ST-elevation V1-V4 on ECG, elevated troponin 2.5 ng/mL).</p><p><strong>Plan:</strong> 1) Aspirin 325mg chewed, Clopidogrel 600mg loading, Metoprolol 25mg PO. 2) Cardiology consult for emergent PCI. 3) Admit to CCU post-PCI.</p></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ;
+       fhir:reference [ fhir:v "Condition/condition-acs-example" ]
+     ] )
+  ] [
+     fhir:title [ fhir:v "Active Conditions" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11493-4 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "11493-4" ] ;
+         fhir:display [ fhir:v "Hospital discharge studies summary Narrative" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "generated" ] ;
+       fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Type 2 Diabetes Mellitus (diagnosed 2020, on Metformin)</li><li>Acute Coronary Syndrome — Anterior STEMI (diagnosed today)</li></ul></div>"^^rdf:XMLLiteral ]
+     ] ;
+     fhir:entry ( [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-t2dm-example> ;
+       fhir:reference [ fhir:v "Condition/condition-t2dm-example" ]
+     ] [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ;
+       fhir:reference [ fhir:v "Condition/condition-acs-example" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="transaction-example"/>
+  <language value="en"/>
+  <type value="transaction"/>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Patient/example-patient"/>
+    <resource>
+      <Patient>
+        <id value="example-patient"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_example-patient"> </a><p class="res-header-id"><b>Generated Narrative: Patient example-patient</b></p><a name="example-patient"> </a><a name="hcexample-patient"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-patient.html">PH Core Patient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3">123 Mabini Street Barangay Malinis Quezon City 1100 PH </td></tr><tr><td style="background-color: #f3f5da" title="race of a patient."><a href="StructureDefinition-race.html">Race</a></td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-Race 2036-2}">Filipino</span></td></tr><tr><td style="background-color: #f3f5da" title="The nationality of the patient.">Patient Nationality:</td><td colspan="3"><ul><li>code: <span title="Codes:{urn:iso:std:iso:3166 PH}">Philippines</span></li><li>period: 2020-01-01 --&gt; 2023-01-01</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The patient's professed religious affiliations."><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-patient-religion.html">Patient Religion</a></td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation 1007}">Atheism</span></td></tr></table></div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+          <extension url="code">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:iso:std:iso:3166"/>
+                <code value="PH"/>
+                <display value="Philippines"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="period">
+            <valuePeriod>
+              <start value="2020-01-01"/>
+              <end value="2023-01-01"/>
+            </valuePeriod>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+              <code value="1007"/>
+              <display value="Atheism"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/race">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-Race"/>
+              <code value="2036-2"/>
+              <display value="Filipino"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <identifier>
+          <system value="http://philhealth.gov.ph/fhir/Identifier/philhealth-id"/>
+          <value value="63-584789845-5"/>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <family value="Dela Cruz"/>
+          <given value="Juan Jane"/>
+          <given value="Dela Fuente"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="1980-01-01"/>
+        <address>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1380100001"/>
+              <display value="Barangay 1"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1380200000"/>
+              <display value="City of Las Piñas"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/province">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="0402100000"/>
+              <display value="Cavite"/>
+            </valueCoding>
+          </extension>
+          <line value="123 Mabini Street"/>
+          <line value="Barangay Malinis"/>
+          <city value="Quezon City"/>
+          <district value="NCR"/>
+          <postalCode value="1100"/>
+          <country value="PH"/>
+        </address>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Encounter/example-encounter"/>
+    <resource>
+      <Encounter>
+        <id value="example-encounter"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_example-encounter"> </a><p class="res-header-id"><b>Generated Narrative: Encounter example-encounter</b></p><a name="example-encounter"> </a><a name="hcexample-encounter"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-encounter.html">PH Core Encounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>subject</b>: <a href="Patient-example-patient.html">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p></div>
+        </text>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <subject>
+          <reference value="Patient/example-patient"/>
+        </subject>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Condition/example-condition"/>
+    <resource>
+      <Condition>
+        <id value="example-condition"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_example-condition"> </a><p class="res-header-id"><b>Generated Narrative: Condition example-condition</b></p><a name="example-condition"> </a><a name="hcexample-condition"> </a><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 44054006}">Diabetes mellitus type 2</span></p><p><b>subject</b>: <a href="Patient-example-patient.html">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-example-encounter.html">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p></div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+        </clinicalStatus>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="44054006"/>
+            <display value="Diabetes mellitus type 2"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/example-patient"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/example-encounter"/>
+        </encounter>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Medication/example-medication"/>
+    <resource>
+      <Medication>
+        <id value="example-medication"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Medication_example-medication"> </a><p class="res-header-id"><b>Generated Narrative: Medication example-medication</b></p><a name="example-medication"> </a><a name="hcexample-medication"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-medication.html">PH Core Medication</a></p></div></div>
+        </text>
+      </Medication>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Medication"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-bp-example"/>
+    <resource>
+      <Observation>
+        <id value="observation-bp-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-bp-example"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-bp-example</b></p><a name="observation-bp-example"> </a><a name="hcobservation-bp-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>identifier</b>: <a href="http://terminology.hl7.org/7.1.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281</p><p><b>basedOn</b>: Identifier: <code>https://acme.org/identifiers</code>/1234</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 85354-9}">Blood pressure systolic &amp; diastolic</span></p><p><b>subject</b>: <a href="Patient-patient-single-example.html">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>effective</b>: 2012-09-17</p><p><b>performer</b>: <a href="Practitioner-practitioner-single-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation L}">Below low normal</span></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 368209003}">Right arm</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8480-6}">Systolic blood pressure</span></p><p><b>value</b>: 107 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8462-4}">Diastolic blood pressure</span></p><p><b>value</b>: 60 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation L}">Below low normal</span></p></blockquote></div>
+        </text>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281"/>
+        </identifier>
+        <basedOn>
+          <identifier>
+            <system value="https://acme.org/identifiers"/>
+            <value value="1234"/>
+          </identifier>
+        </basedOn>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85354-9"/>
+            <display value="Blood pressure panel with all children optional"/>
+          </coding>
+          <text value="Blood pressure systolic &amp; diastolic"/>
+        </code>
+        <subject>
+          <reference value="Patient/patient-single-example"/>
+        </subject>
+        <effectiveDateTime value="2012-09-17"/>
+        <performer>
+          <reference value="Practitioner/practitioner-single-example"/>
+        </performer>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="L"/>
+            <display value="Low"/>
+          </coding>
+          <text value="Below low normal"/>
+        </interpretation>
+        <bodySite>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="368209003"/>
+            <display value="Right arm"/>
+          </coding>
+        </bodySite>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8480-6"/>
+              <display value="Systolic blood pressure"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="107"/>
+            <unit value="mmHg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+          </valueQuantity>
+          <interpretation>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+              <code value="N"/>
+              <display value="Normal"/>
+            </coding>
+            <text value="Normal"/>
+          </interpretation>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8462-4"/>
+              <display value="Diastolic blood pressure"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="60"/>
+            <unit value="mmHg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+          </valueQuantity>
+          <interpretation>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+              <code value="L"/>
+              <display value="Low"/>
+            </coding>
+            <text value="Below low normal"/>
+          </interpretation>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/AllergyIntolerance/example-allergy"/>
+    <resource>
+      <AllergyIntolerance>
+        <id value="example-allergy"/>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="AllergyIntolerance_example-allergy"> </a><p class="res-header-id"><b>Generated Narrative: AllergyIntolerance example-allergy</b></p><a name="example-allergy"> </a><a name="hcexample-allergy"> </a><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}">Active</span></p><p><b>criticality</b>: High Risk</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 294494002}">Benethamine penicillin allergy</span></p><p><b>patient</b>: <a href="Patient-example-patient.html">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p></div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+        </clinicalStatus>
+        <criticality value="high"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="294494002"/>
+            <display value="Benethamine penicillin allergy"/>
+          </coding>
+        </code>
+        <patient>
+          <reference value="Patient/example-patient"/>
+        </patient>
+      </AllergyIntolerance>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="AllergyIntolerance"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Practitioner/example-practitioner"/>
+    <resource>
+      <Practitioner>
+        <id value="example-practitioner"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_example-practitioner"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner example-practitioner</b></p><a name="example-practitioner"> </a><a name="hcexample-practitioner"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-practitioner.html">PH Core Practitioner</a></p></div><p><b>name</b>: Maria Clara Santos </p><p><b>telecom</b>: <a href="tel:+63-912-345-6789">+63-912-345-6789</a>, <a href="mailto:maria.santos@example.ph">maria.santos@example.ph</a></p><p><b>address</b>: 1234 Mabini Street Manila NCR 1000 PH (home)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1985-05-15</p></div>
+        </text>
+        <name>
+          <family value="Santos"/>
+          <given value="Maria"/>
+          <given value="Clara"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="+63-912-345-6789"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="maria.santos@example.ph"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <use value="home"/>
+          <line value="1234 Mabini Street"/>
+          <city value="Manila"/>
+          <state value="NCR"/>
+          <postalCode value="1000"/>
+          <country value="PH"/>
+        </address>
+        <gender value="female"/>
+        <birthDate value="1985-05-15"/>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+</Bundle>

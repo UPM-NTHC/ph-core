@@ -1,0 +1,150 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "indigenous-groups-cs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem indigenous-groups-cs</b></p><a name=\"indigenous-groups-cs\"> </a><a name=\"hcindigenous-groups-cs\"> </a><p>This case-sensitive code system <code>https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">Aetas<a name=\"indigenous-groups-cs-Aetas\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Ati<a name=\"indigenous-groups-cs-Ati\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Badjaos<a name=\"indigenous-groups-cs-Badjaos\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Batak<a name=\"indigenous-groups-cs-Batak\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Blaan<a name=\"indigenous-groups-cs-Blaan\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Bontoc<a name=\"indigenous-groups-cs-Bontoc\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Bukidnon<a name=\"indigenous-groups-cs-Bukidnon\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Higaonon<a name=\"indigenous-groups-cs-Higaonon\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Ibaloi<a name=\"indigenous-groups-cs-Ibaloi\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Igorot<a name=\"indigenous-groups-cs-Igorot\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Ilongots<a name=\"indigenous-groups-cs-Ilongots\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Isnag<a name=\"indigenous-groups-cs-Isnag\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Isneg<a name=\"indigenous-groups-cs-Isneg\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Kalinga<a name=\"indigenous-groups-cs-Kalinga\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Kankanaey<a name=\"indigenous-groups-cs-Kankanaey\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Lumad<a name=\"indigenous-groups-cs-Lumad\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Mamanwa<a name=\"indigenous-groups-cs-Mamanwa\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Mandaya<a name=\"indigenous-groups-cs-Mandaya\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Mangyan<a name=\"indigenous-groups-cs-Mangyan\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Manobo<a name=\"indigenous-groups-cs-Manobo\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Mansaka<a name=\"indigenous-groups-cs-Mansaka\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Palawano<a name=\"indigenous-groups-cs-Palawano\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Palaweño<a name=\"indigenous-groups-cs-Palawe.241o\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Sangir<a name=\"indigenous-groups-cs-Sangir\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Subanen<a name=\"indigenous-groups-cs-Subanen\"> </a></td></tr><tr><td style=\"white-space:nowrap\">T`boli<a name=\"indigenous-groups-cs-T.96boli\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Tagabawa<a name=\"indigenous-groups-cs-Tagabawa\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Tagakaulo<a name=\"indigenous-groups-cs-Tagakaulo\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Tagbanwa<a name=\"indigenous-groups-cs-Tagbanwa\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Tasaday<a name=\"indigenous-groups-cs-Tasaday\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Tinguian<a name=\"indigenous-groups-cs-Tinguian\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Tumandok<a name=\"indigenous-groups-cs-Tumandok\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Others<a name=\"indigenous-groups-cs-Others\"> </a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs"^^xsd:anyURI ;
+     fhir:l <https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs>
+  ] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "IndigenousGroupsCS"] ; # 
+  fhir:title [ fhir:v "Indigenous Groups CodeSystem"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-06-09T05:37:22+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-NTHC" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "33"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "Aetas" ] ;
+     fhir:display [ fhir:v "Aetas" ]
+  ] [
+     fhir:code [ fhir:v "Ati" ] ;
+     fhir:display [ fhir:v "Ati" ]
+  ] [
+     fhir:code [ fhir:v "Badjaos" ] ;
+     fhir:display [ fhir:v "Badjaos" ]
+  ] [
+     fhir:code [ fhir:v "Batak" ] ;
+     fhir:display [ fhir:v "Batak" ]
+  ] [
+     fhir:code [ fhir:v "Blaan" ] ;
+     fhir:display [ fhir:v "Blaan" ]
+  ] [
+     fhir:code [ fhir:v "Bontoc" ] ;
+     fhir:display [ fhir:v "Bontoc" ]
+  ] [
+     fhir:code [ fhir:v "Bukidnon" ] ;
+     fhir:display [ fhir:v "Bukidnon" ]
+  ] [
+     fhir:code [ fhir:v "Higaonon" ] ;
+     fhir:display [ fhir:v "Higaonon" ]
+  ] [
+     fhir:code [ fhir:v "Ibaloi" ] ;
+     fhir:display [ fhir:v "Ibaloi" ]
+  ] [
+     fhir:code [ fhir:v "Igorot" ] ;
+     fhir:display [ fhir:v "Igorot" ]
+  ] [
+     fhir:code [ fhir:v "Ilongots" ] ;
+     fhir:display [ fhir:v "Ilongots" ]
+  ] [
+     fhir:code [ fhir:v "Isnag" ] ;
+     fhir:display [ fhir:v "Isnag" ]
+  ] [
+     fhir:code [ fhir:v "Isneg" ] ;
+     fhir:display [ fhir:v "Isneg" ]
+  ] [
+     fhir:code [ fhir:v "Kalinga" ] ;
+     fhir:display [ fhir:v "Kalinga" ]
+  ] [
+     fhir:code [ fhir:v "Kankanaey" ] ;
+     fhir:display [ fhir:v "Kankanaey" ]
+  ] [
+     fhir:code [ fhir:v "Lumad" ] ;
+     fhir:display [ fhir:v "Lumad" ]
+  ] [
+     fhir:code [ fhir:v "Mamanwa" ] ;
+     fhir:display [ fhir:v "Mamanwa" ]
+  ] [
+     fhir:code [ fhir:v "Mandaya" ] ;
+     fhir:display [ fhir:v "Mandaya" ]
+  ] [
+     fhir:code [ fhir:v "Mangyan" ] ;
+     fhir:display [ fhir:v "Mangyan" ]
+  ] [
+     fhir:code [ fhir:v "Manobo" ] ;
+     fhir:display [ fhir:v "Manobo" ]
+  ] [
+     fhir:code [ fhir:v "Mansaka" ] ;
+     fhir:display [ fhir:v "Mansaka" ]
+  ] [
+     fhir:code [ fhir:v "Palawano" ] ;
+     fhir:display [ fhir:v "Palawano" ]
+  ] [
+     fhir:code [ fhir:v "Palaweño" ] ;
+     fhir:display [ fhir:v "Palaweño" ]
+  ] [
+     fhir:code [ fhir:v "Sangir" ] ;
+     fhir:display [ fhir:v "Sangir" ]
+  ] [
+     fhir:code [ fhir:v "Subanen" ] ;
+     fhir:display [ fhir:v "Subanen" ]
+  ] [
+     fhir:code [ fhir:v "T`boli" ] ;
+     fhir:display [ fhir:v "T`boli" ]
+  ] [
+     fhir:code [ fhir:v "Tagabawa" ] ;
+     fhir:display [ fhir:v "Tagabawa" ]
+  ] [
+     fhir:code [ fhir:v "Tagakaulo" ] ;
+     fhir:display [ fhir:v "Tagakaulo" ]
+  ] [
+     fhir:code [ fhir:v "Tagbanwa" ] ;
+     fhir:display [ fhir:v "Tagbanwa" ]
+  ] [
+     fhir:code [ fhir:v "Tasaday" ] ;
+     fhir:display [ fhir:v "Tasaday" ]
+  ] [
+     fhir:code [ fhir:v "Tinguian" ] ;
+     fhir:display [ fhir:v "Tinguian" ]
+  ] [
+     fhir:code [ fhir:v "Tumandok" ] ;
+     fhir:display [ fhir:v "Tumandok" ]
+  ] [
+     fhir:code [ fhir:v "Others" ] ;
+     fhir:display [ fhir:v "Others" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

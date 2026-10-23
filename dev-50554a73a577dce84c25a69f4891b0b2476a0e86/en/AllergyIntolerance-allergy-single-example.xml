@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="allergy-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+    <text value="Active"/>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+    <text value="Confirmed"/>
+  </verificationStatus>
+  <criticality value="high"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="294494002"/>
+      <display value="Benethamine penicillin allergy"/>
+    </coding>
+    <text value="Benethamine penicillin allergy"/>
+  </code>
+  <patient>
+    <reference value="Patient/patient-single-example"/>
+  </patient>
+  <onsetDateTime value="2023-01-15"/>
+  <note>
+    <text value="Patient reported rash and swelling after penicillin administration."/>
+  </note>
+  <reaction>
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="271807003"/>
+        <display value="Eruption of skin"/>
+      </coding>
+      <text value="Skin rash"/>
+    </manifestation>
+    <severity value="severe"/>
+  </reaction>
+</AllergyIntolerance>

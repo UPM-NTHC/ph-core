@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<HealthcareService xmlns="http://hl7.org/fhir">
+  <id value="healthcareservice-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Philippine General Hospital Outpatient Department - General Medicine is an active healthcare service providing outpatient consultations. It is managed by the Department of Health - Satellite Office and located at Philippine General Hospital, Taft Avenue, Manila.</div>
+  </text>
+  <identifier>
+    <system value="http://pgh.gov.ph/fhir/Identifier/service-id"/>
+    <value value="PGH-OPD-GMED-001"/>
+  </identifier>
+  <active value="true"/>
+  <providedBy>
+    <reference value="Organization/organization-single-example"/>
+  </providedBy>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/service-category"/>
+      <code value="27"/>
+      <display value="Specialist Medical"/>
+    </coding>
+    <text value="Specialist Medical"/>
+  </category>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/service-type"/>
+      <code value="124"/>
+      <display value="General Practice"/>
+    </coding>
+    <text value="General Practice"/>
+  </type>
+  <specialty>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="394802001"/>
+      <display value="General medicine"/>
+    </coding>
+    <text value="General medicine"/>
+  </specialty>
+  <location>
+    <reference value="Location/location-single-example"/>
+  </location>
+  <name value="Outpatient Department - General Medicine"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63-2-5548-0000"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="opd.gmed@pgh.gov.ph"/>
+    <use value="work"/>
+  </telecom>
+  <availableTime>
+    <daysOfWeek value="mon"/>
+    <daysOfWeek value="tue"/>
+    <daysOfWeek value="wed"/>
+    <daysOfWeek value="thu"/>
+    <daysOfWeek value="fri"/>
+    <availableStartTime value="08:00:00"/>
+    <availableEndTime value="17:00:00"/>
+  </availableTime>
+  <notAvailable>
+    <description value="Closed on public holidays"/>
+  </notAvailable>
+</HealthcareService>

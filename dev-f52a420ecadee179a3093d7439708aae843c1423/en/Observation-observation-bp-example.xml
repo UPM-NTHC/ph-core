@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation-bp-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation observation-bp-example</b></p><a name="observation-bp-example"> </a><a name="hcobservation-bp-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>identifier</b>: <a href="http://terminology.hl7.org/7.2.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281</p><p><b>basedOn</b>: Identifier: <code>https://acme.org/identifiers</code>/1234</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 85354-9}">Blood pressure systolic &amp; diastolic</span></p><p><b>subject</b>: <a href="Patient-patient-single-example.html">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>effective</b>: 2012-09-17</p><p><b>performer</b>: <a href="Practitioner-practitioner-single-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation L}">Below low normal</span></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 368209003}">Right arm</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8480-6}">Systolic blood pressure</span></p><p><b>value</b>: 107 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8462-4}">Diastolic blood pressure</span></p><p><b>value</b>: 60 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation L}">Below low normal</span></p></blockquote></div>
+  </text>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281"/>
+  </identifier>
+  <basedOn>
+    <identifier>
+      <system value="https://acme.org/identifiers"/>
+      <value value="1234"/>
+    </identifier>
+  </basedOn>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="85354-9"/>
+      <display value="Blood pressure panel with all children optional"/>
+    </coding>
+    <text value="Blood pressure systolic &amp; diastolic"/>
+  </code>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <effectiveDateTime value="2012-09-17"/>
+  <performer>
+    <reference value="Practitioner/practitioner-single-example"/>
+  </performer>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="L"/>
+      <display value="Low"/>
+    </coding>
+    <text value="Below low normal"/>
+  </interpretation>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="368209003"/>
+      <display value="Right arm"/>
+    </coding>
+  </bodySite>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8480-6"/>
+        <display value="Systolic blood pressure"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="107"/>
+      <unit value="mmHg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+    <interpretation>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+        <code value="N"/>
+        <display value="Normal"/>
+      </coding>
+      <text value="Normal"/>
+    </interpretation>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8462-4"/>
+        <display value="Diastolic blood pressure"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="60"/>
+      <unit value="mmHg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm[Hg]"/>
+    </valueQuantity>
+    <interpretation>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+        <code value="L"/>
+        <display value="Low"/>
+      </coding>
+      <text value="Below low normal"/>
+    </interpretation>
+  </component>
+</Observation>

@@ -1,0 +1,81 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "occupational-classifications",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet occupational-classifications</b></p><a name=\"occupational-classifications\"> </a><a name=\"hcoccupational-classifications\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on system Mock PSOC version 0.1.0</p><p>This value set contains 4 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name=\"occupational-classifications-https://psa.gov.ph/classification/psoc/unit-111102\"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0111102</td><td>Hospital Administrator</td><td>Manages hospital operations</td></tr><tr><td><a name=\"occupational-classifications-https://psa.gov.ph/classification/psoc/unit-111103\"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0111103</td><td>Medical Department Head</td><td>Head of a medical department</td></tr><tr><td><a name=\"occupational-classifications-https://psa.gov.ph/classification/psoc/unit-121101\"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0121101</td><td>General Manager</td><td>Manages overall operations of an organization</td></tr><tr><td><a name=\"occupational-classifications-https://psa.gov.ph/classification/psoc/unit-211101\"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0211101</td><td>Medical Doctor</td><td>Licensed physician practicing medicine</td></tr></table></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/occupational-classifications",
+  "version" : "0.2.0",
+  "name" : "OccupationClassifications",
+  "title" : "Occupation Classifications",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-10T05:12:58+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psoc/unit",
+      "concept" : [{
+        "code" : "111102",
+        "display" : "Hospital Administrator"
+      },
+      {
+        "code" : "111103",
+        "display" : "Medical Department Head"
+      },
+      {
+        "code" : "121101",
+        "display" : "General Manager"
+      },
+      {
+        "code" : "211101",
+        "display" : "Medical Doctor"
+      }]
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-04-07T00:00:00Z",
+    "total" : 4,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "version",
+      "valueUri" : "https://psa.gov.ph/classification/psoc/unit|0.1.0"
+    }],
+    "contains" : [{
+      "system" : "https://psa.gov.ph/classification/psoc/unit",
+      "code" : "111102",
+      "display" : "Hospital Administrator"
+    },
+    {
+      "system" : "https://psa.gov.ph/classification/psoc/unit",
+      "code" : "111103",
+      "display" : "Medical Department Head"
+    },
+    {
+      "system" : "https://psa.gov.ph/classification/psoc/unit",
+      "code" : "121101",
+      "display" : "General Manager"
+    },
+    {
+      "system" : "https://psa.gov.ph/classification/psoc/unit",
+      "code" : "211101",
+      "display" : "Medical Doctor"
+    }]
+  }
+}

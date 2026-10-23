@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "condition-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</div>"
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ] ;
+       fhir:Coding.display [ fhir:value "Active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ] ;
+       fhir:Coding.display [ fhir:value "Confirmed" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-category" ] ;
+       fhir:Coding.code [ fhir:value "problem-list-item" ] ;
+       fhir:Coding.display [ fhir:value "Problem List Item" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:44054006 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "44054006" ] ;
+       fhir:Coding.display [ fhir:value "Diabetes mellitus type 2" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Type 2 Diabetes Mellitus" ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:Condition.encounter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-single-example" ]
+  ] ;
+  fhir:Condition.onsetDateTime [ fhir:value "2020-03-15"^^xsd:date] ;
+  fhir:Condition.recordedDate [ fhir:value "2020-03-15T10:30:00Z"^^xsd:dateTime] ;
+  fhir:Condition.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Patient advised on diet and exercise management." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Condition/condition-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

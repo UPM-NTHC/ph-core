@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Medication/medication-single-example> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "medication-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Twinact (Telmisartan + Amlodipine) 40mg/5mg tablet from PH FDA CPR.</div>"
+  ] ;
+  fhir:Medication.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://verification.fda.gov.ph" ] ;
+       fhir:Coding.code [ fhir:value "DRP-10144" ] ;
+       fhir:Coding.display [ fhir:value "Twinact" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Twinact 40mg/5mg tablet" ]
+  ] ;
+  fhir:Medication.form [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:385055001 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "385055001" ] ;
+       fhir:Coding.display [ fhir:value "Tablet" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Medication/medication-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

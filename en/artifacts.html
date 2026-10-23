@@ -1,0 +1,1611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - Draft PH Core Implementation Guide v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Draft PH Core Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Draft PH Core Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/phcore/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc"
+     data-fhir="generated">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Requirements: Actor Definitions</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Data Type Profiles</a>
+      </li>
+      <li>
+         <a href="#4">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#7">Terminology: Naming Systems</a>
+      </li>
+      <li>
+         <a href="#8">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     data-fhir="generated">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Requirements: Actor Definitions </h3>
+    <p>The following artifacts define the types of individuals and/or systems that will interact as part of the use cases covered by this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ActorDefinition-Consumer.html" title="ActorDefinition/Consumer">
+                  <span title="ActorDefinition/Consumer">PH Core Consumer
+</span>
+               </a>
+            </td>
+            <td>
+<p>A PH Core Consumer is a system that receives and uses PH Core resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ActorDefinition-Creator.html" title="ActorDefinition/Creator">
+                  <span title="ActorDefinition/Creator">PH Core Creator
+</span>
+               </a>
+            </td>
+            <td>
+<p>A PH Core Creator is a system which produces/assembles/creates PH Core resources.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ActorDefinition-Server.html" title="ActorDefinition/Server">
+                  <span title="ActorDefinition/Server">PH Core Server
+</span>
+               </a>
+            </td>
+            <td>
+<p>A PH Core Server is a FHIR server that stores and provides access to PH Core resources.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-allergyintolerance.html"
+                  title="StructureDefinition/ph-core-allergyintolerance">
+                  <span title="StructureDefinition/ph-core-allergyintolerance">PH Core AllergyIntolerance
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for an AllergyIntolerance resource to record, search, and fetch basic allergy intolerance information for a patient. It is based on the <a href="https://www.hl7.org/fhir/R4/allergyintolerance.html">FHIR R4 AllergyIntolerance</a> resource and identifies the <em>additional</em> mandatory core elements, extensions, vocabularies and value sets that <strong>SHALL</strong> be present in the AllergyIntolerance when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-claim.html"
+                  title="StructureDefinition/ph-core-claim">
+                  <span title="StructureDefinition/ph-core-claim">PH Core Claim
+</span>
+               </a>
+            </td>
+            <td>
+<p>Captures information about a request for reimbursement or payment for health care products and services within the Philippine health system, including specific benefit packages such as Animal Bites and TB DOTS programs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-condition.html"
+                  title="StructureDefinition/ph-core-condition">
+                  <span title="StructureDefinition/ph-core-condition">PH Core Condition
+</span>
+               </a>
+            </td>
+            <td>
+<p>Captures Condition.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-encounter.html"
+                  title="StructureDefinition/ph-core-encounter">
+                  <span title="StructureDefinition/ph-core-encounter">PH Core Encounter
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for an Encounter resource to record, search, and fetch basic encounter information for a patient. It is based on the <a href="https://www.hl7.org/fhir/R4/encounter.html">FHIR R4 Encounter</a> resource and identifies the <em>additional</em> mandatory core elements, extensions, vocabularies and value sets that <strong>SHALL</strong> be present in the Encounter when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-healthcareservice.html"
+                  title="StructureDefinition/ph-core-healthcareservice">
+                  <span title="StructureDefinition/ph-core-healthcareservice">PH Core HealthcareService
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile sets minimum expectations for a HealthcareService resource to record, search, and fetch information about healthcare services offered by an organization or at a location in the Philippine context. It is based on the <a href="https://www.hl7.org/fhir/R4/healthcareservice.html">FHIR R4 HealthcareService</a> resource and identifies the <em>additional</em> mandatory core elements, extensions, vocabularies and value sets that <strong>SHALL</strong> be present in the HealthcareService when conforming to this profile. It provides the floor for standards development for specific use cases in a Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-immunization.html"
+                  title="StructureDefinition/ph-core-immunization">
+                  <span title="StructureDefinition/ph-core-immunization">PH Core Immunization
+</span>
+               </a>
+            </td>
+            <td>
+<p>Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-location.html"
+                  title="StructureDefinition/ph-core-location">
+                  <span title="StructureDefinition/ph-core-location">PH Core Location
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile localizes the FHIR R4 Location resource to the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-medication.html"
+                  title="StructureDefinition/ph-core-medication">
+                  <span title="StructureDefinition/ph-core-medication">PH Core Medication
+</span>
+               </a>
+            </td>
+            <td>
+<p>This resource is primarily used for the identification and definition of a medication, including ingredients, for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-medicationadministration.html"
+                  title="StructureDefinition/ph-core-medicationadministration">
+                  <span title="StructureDefinition/ph-core-medicationadministration">PH Core Medication Administration
+</span>
+               </a>
+            </td>
+            <td>
+<p>Captures key FHIR Medication Administration data for the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-medicationdispense.html"
+                  title="StructureDefinition/ph-core-medicationdispense">
+                  <span title="StructureDefinition/ph-core-medicationdispense">PH Core Medication Dispense
+</span>
+               </a>
+            </td>
+            <td>
+<p>Captures key FHIR Medication Dispense data for the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-medicationrequest.html"
+                  title="StructureDefinition/ph-core-medicationrequest">
+                  <span title="StructureDefinition/ph-core-medicationrequest">PH Core Medication Request
+</span>
+               </a>
+            </td>
+            <td>
+<p>Captures key FHIR Medication Request data for the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-medicationstatement.html"
+                  title="StructureDefinition/ph-core-medicationstatement">
+                  <span title="StructureDefinition/ph-core-medicationstatement">PH Core Medication Statement
+</span>
+               </a>
+            </td>
+            <td>
+<p>Captures key FHIR Medication Statement data for the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-observation.html"
+                  title="StructureDefinition/ph-core-observation">
+                  <span title="StructureDefinition/ph-core-observation">PH Core Observation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Measurements and simple assertions made about a patient, device or other subject.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-organization.html"
+                  title="StructureDefinition/ph-core-organization">
+                  <span title="StructureDefinition/ph-core-organization">PH Core Organization
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile localizes the FHIR R4 Organization resource to the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-patient.html"
+                  title="StructureDefinition/ph-core-patient">
+                  <span title="StructureDefinition/ph-core-patient">PH Core Patient
+</span>
+               </a>
+            </td>
+            <td>
+<p>Captures key demographic and administrative information about individuals receiving care or other health-related services.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-practitioner.html"
+                  title="StructureDefinition/ph-core-practitioner">
+                  <span title="StructureDefinition/ph-core-practitioner">PH Core Practitioner
+</span>
+               </a>
+            </td>
+            <td>
+<p>The PH Core Practitioner Profile inherits from the <a href="https://hl7.org/fhir/R4/practitioner.html">FHIR R4 Practitioner resource</a>; refer to it for scope and usage definitions. This profile sets minimum expectations for the Practitioner resource to record, search, and fetch basic demographics and administrative information about an individual practitioner in a Philippine context. It specifies which core elements, extensions, vocabularies, and value sets SHALL be present and constrains how the elements are used. It provides the floor for standards development for Philippine use cases.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-practitionerrole.html"
+                  title="StructureDefinition/ph-core-practitionerrole">
+                  <span title="StructureDefinition/ph-core-practitionerrole">PH Core PractitionerRole
+</span>
+               </a>
+            </td>
+            <td>
+<p>The PH Core Practitioner Role Profile inherits from the <a href="https://hl7.org/fhir/R4/practitionerrole.html">FHIR R4 PractitionerRole resource</a>; refer to it for scope and usage definitions. This profile sets minimum expectations for the PractitionerRole resource to record, search, and fetch basic demographics and administrative information about an individual practitioner role in a Philippine context. It specifies which core elements, extensions, vocabularies, and value sets SHALL be present and constrains how the elements are used. It provides the floor for standards development for Philippine use cases.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-procedure.html"
+                  title="StructureDefinition/ph-core-procedure">
+                  <span title="StructureDefinition/ph-core-procedure">PH Core Procedure
+</span>
+               </a>
+            </td>
+            <td>
+<p>An action that is or was performed on or for a patient, practitioner, device, organization, or location.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-provenance.html"
+                  title="StructureDefinition/ph-core-provenance">
+                  <span title="StructureDefinition/ph-core-provenance">PH Core Provenance
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile localizes the FHIR R4 Provenance resource to the Philippine context, capturing key information about who, what, when, and where for a set of resources. It is used to track the authorship and history of healthcare data in Philippine health information systems.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-relatedperson.html"
+                  title="StructureDefinition/ph-core-relatedperson">
+                  <span title="StructureDefinition/ph-core-relatedperson">PH Core RelatedPerson
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-serviceRequest.html"
+                  title="StructureDefinition/ph-core-serviceRequest">
+                  <span title="StructureDefinition/ph-core-serviceRequest">PH Core ServiceRequest
+</span>
+               </a>
+            </td>
+            <td>
+<p>The PH Core ServiceRequest Profile is a Philippine-specific FHIR profile that represents a record of a request for services such as diagnostic investigations, treatments, or operations to be performed within the Philippine health system. It constrains the base FHIR ServiceRequest resource by defining minimum expectations on core elements, extensions, vocabularies, and value sets relevant to local clinical and administrative workflows. It serves as a nationally consistent baseline for recording, searching, and fetching service request information to support interoperable health information exchange across Philippine health facilities and programs.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-task.html"
+                  title="StructureDefinition/ph-core-task">
+                  <span title="StructureDefinition/ph-core-task">PH Core Task
+</span>
+               </a>
+            </td>
+            <td>
+<p>This profile localizes the FHIR R4 Task resource to the Philippine context.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Data Type Profiles </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-doh-nhfr-code.html"
+                  title="StructureDefinition/ph-core-doh-nhfr-code">
+                  <span title="StructureDefinition/ph-core-doh-nhfr-code">DOH NHFR Code
+</span>
+               </a>
+            </td>
+            <td>
+<p>Health Facility Code (HFC) from the National Health Facility Registry</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-address.html"
+                  title="StructureDefinition/ph-core-address">
+                  <span title="StructureDefinition/ph-core-address">PH Core Address
+</span>
+               </a>
+            </td>
+            <td>
+<p>An address for the individual.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-name.html"
+                  title="StructureDefinition/ph-core-name">
+                  <span title="StructureDefinition/ph-core-name">PH Core Name
+</span>
+               </a>
+            </td>
+            <td>
+<p>A name of a person in the philippine context.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-philhealth-id.html"
+                  title="StructureDefinition/ph-core-philhealth-id">
+                  <span title="StructureDefinition/ph-core-philhealth-id">PIN - PhilHealth Identification Number Identifier
+</span>
+               </a>
+            </td>
+            <td>
+<p>The permanent and unique number issued by PhilHealth to individual members and to each and every dependent.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-philhealth-pan.html"
+                  title="StructureDefinition/ph-core-philhealth-pan">
+                  <span title="StructureDefinition/ph-core-philhealth-pan">PhilHealth Accreditation Number
+</span>
+               </a>
+            </td>
+            <td>
+<p>The unique number issued by PhilHealth to accredited institutions.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-philhealth-pen.html"
+                  title="StructureDefinition/ph-core-philhealth-pen">
+                  <span title="StructureDefinition/ph-core-philhealth-pen">PhilHealth Employer Number
+</span>
+               </a>
+            </td>
+            <td>
+<p>The unique number issued by PhilHealth to employers.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-philsys-id.html"
+                  title="StructureDefinition/ph-core-philsys-id">
+                  <span title="StructureDefinition/ph-core-philsys-id">PhilSys Identification Number (PhilSys ID) Identifier
+</span>
+               </a>
+            </td>
+            <td>
+<p>The National ID Number PSA issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-administered-product.html"
+                  title="StructureDefinition/administered-product">
+                  <span title="StructureDefinition/administered-product">Administered Product
+</span>
+               </a>
+            </td>
+            <td>
+<p>The vaccine product that was administered.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-barangay.html"
+                  title="StructureDefinition/barangay">
+                  <span title="StructureDefinition/barangay">Barangay
+</span>
+               </a>
+            </td>
+            <td>
+<p>Barangay from the standard geographic code.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-batch-number.html"
+                  title="StructureDefinition/batch-number">
+                  <span title="StructureDefinition/batch-number">Batch Number
+</span>
+               </a>
+            </td>
+            <td>
+<p>The batch number of the vaccine administered.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-city-municipality.html"
+                  title="StructureDefinition/city-municipality">
+                  <span title="StructureDefinition/city-municipality">City/Municipality
+</span>
+               </a>
+            </td>
+            <td>
+<p>City/municipality from the standard geographic code.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-educational-attainment.html"
+                  title="StructureDefinition/educational-attainment">
+                  <span title="StructureDefinition/educational-attainment">Educational Attainment
+</span>
+               </a>
+            </td>
+            <td>
+<p>Highest educational attainment of the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-indigenous-group.html"
+                  title="StructureDefinition/indigenous-group">
+                  <span title="StructureDefinition/indigenous-group">Indigenous Group
+</span>
+               </a>
+            </td>
+            <td>
+<p>Indigenous / ethnic group that the patient belongs to.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-indigenous-people.html"
+                  title="StructureDefinition/indigenous-people">
+                  <span title="StructureDefinition/indigenous-people">Indigenous People
+</span>
+               </a>
+            </td>
+            <td>
+<p>If the patient is a member of an indigenous group.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-occupation.html"
+                  title="StructureDefinition/occupation">
+                  <span title="StructureDefinition/occupation">Occupation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Patient's occupation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ph-core-pwd-disability.html"
+                  title="StructureDefinition/ph-core-pwd-disability">
+                  <span title="StructureDefinition/ph-core-pwd-disability">PH Core PWD Disability Registration
+</span>
+               </a>
+            </td>
+            <td>
+<p>Extension for Person With Disability (PWD) registration information. Captures PWD ID number, type of disability, and ID expiration date as issued by the PDAO (Persons with Disability Affairs Office).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-province.html"
+                  title="StructureDefinition/province">
+                  <span title="StructureDefinition/province">Province
+</span>
+               </a>
+            </td>
+            <td>
+<p>Province from the standard geographic code.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-race.html" title="StructureDefinition/race">
+                  <span title="StructureDefinition/race">Race
+</span>
+               </a>
+            </td>
+            <td>
+<p>race of a patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-region.html"
+                  title="StructureDefinition/region">
+                  <span title="StructureDefinition/region">Region
+</span>
+               </a>
+            </td>
+            <td>
+<p>Region from the standard geographic code.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-barangays.html" title="ValueSet/barangays">
+                  <span title="ValueSet/barangays">Barangays
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-cities.html" title="ValueSet/cities">
+                  <span title="ValueSet/cities">Cities
+</span>
+               </a>
+            </td>
+            <td>
+<p>All city values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-drugs-vs.html" title="ValueSet/drugs-vs">
+                  <span title="ValueSet/drugs-vs">Drugs
+</span>
+               </a>
+            </td>
+            <td>
+<p>This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-educational-attainments.html"
+                  title="ValueSet/educational-attainments">
+                  <span title="ValueSet/educational-attainments">Educational Attainments
+</span>
+               </a>
+            </td>
+            <td>
+<p>All categories of educational programs, courses, and attainment levels in the Philippines, based on the Philippine Standard Classification of Education (PSCED) published by the Philippine Statistics Authority (PSA)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-indigenous-groups-vs.html"
+                  title="ValueSet/indigenous-groups-vs">
+                  <span title="ValueSet/indigenous-groups-vs">Indigenous Groups ValueSet
+</span>
+               </a>
+            </td>
+            <td>
+<p>A value set representing the recognized Indigenous groups to which a person may belong.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-occupational-classifications.html"
+                  title="ValueSet/occupational-classifications">
+                  <span title="ValueSet/occupational-classifications">Occupation Classifications
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-ph-core-disability-type-vs.html"
+                  title="ValueSet/ph-core-disability-type-vs">
+                  <span title="ValueSet/ph-core-disability-type-vs">PH Core Disability Type Value Set
+</span>
+               </a>
+            </td>
+            <td>
+<p>Value set for types of disability as defined by the Philippine government for PWD registration.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-provinces.html" title="ValueSet/provinces">
+                  <span title="ValueSet/provinces">Provinces
+</span>
+               </a>
+            </td>
+            <td>
+<p>All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-regions.html" title="ValueSet/regions">
+                  <span title="ValueSet/regions">Regions
+</span>
+               </a>
+            </td>
+            <td>
+<p>The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-indigenous-groups-cs.html"
+                  title="CodeSystem/indigenous-groups-cs">
+                  <span title="CodeSystem/indigenous-groups-cs">Indigenous Groups CodeSystem
+</span>
+               </a>
+            </td>
+            <td>
+<p>A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-PSCED.html" title="CodeSystem/PSCED">
+                  <span title="CodeSystem/PSCED">Mock PSCED
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mock of the Philippine Standard Classification of Education.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-PSGC.html" title="CodeSystem/PSGC">
+                  <span title="CodeSystem/PSGC">Mock PSGC
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mock of the Philippine Standard Geographic Code.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-PSOC.html" title="CodeSystem/PSOC">
+                  <span title="CodeSystem/PSOC">Mock PSOC
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mock of the Philippine Standard Occupational Classification.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-ph-core-disability-type-cs.html"
+                  title="CodeSystem/ph-core-disability-type-cs">
+                  <span title="CodeSystem/ph-core-disability-type-cs">PH Core Disability Type Code System
+</span>
+               </a>
+            </td>
+            <td>
+<p>Code system for types of disability as defined by the Philippine government for PWD registration.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-PHFDACPRCS.html" title="CodeSystem/PHFDACPRCS">
+                  <span title="CodeSystem/PHFDACPRCS">PH FDA Certificate of Product Registration (CPR) CodeSystem
+</span>
+               </a>
+            </td>
+            <td>
+<p>Registered drug products from the Philippine Food and Drug Administration (FDA)</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Terminology: Naming Systems </h3>
+    <p>These define identifier and/or code system identities used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-DOHNHFRCodeNS.html"
+                  title="NamingSystem/DOHNHFRCodeNS">
+                  <span title="NamingSystem/DOHNHFRCodeNS">DOH National Health Facility Registry Code
+</span>
+               </a>
+            </td>
+            <td>
+<p>Health Facility Code (HFC) from the National Health Facility Registry.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-DOHProcedureIDNS.html"
+                  title="NamingSystem/DOHProcedureIDNS">
+                  <span title="NamingSystem/DOHProcedureIDNS">DOH Procedure Identifier
+</span>
+               </a>
+            </td>
+            <td>
+<p>Identifier system for procedures assigned by the Department of Health (DOH) health facilities.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-PhilHealthPANNS.html"
+                  title="NamingSystem/PhilHealthPANNS">
+                  <span title="NamingSystem/PhilHealthPANNS">PAN - PhilHealth Accreditation Number
+</span>
+               </a>
+            </td>
+            <td>
+<p>The unique number issued by PhilHealth to accredited institutions.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-PhilHealthPENNS.html"
+                  title="NamingSystem/PhilHealthPENNS">
+                  <span title="NamingSystem/PhilHealthPENNS">PEN - PhilHealth Employer Number
+</span>
+               </a>
+            </td>
+            <td>
+<p>The unique number issued by PhilHealth to employers.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-PhilHealthIDNS.html"
+                  title="NamingSystem/PhilHealthIDNS">
+                  <span title="NamingSystem/PhilHealthIDNS">PIN - PhilHealth Identification Number NamingSystem
+</span>
+               </a>
+            </td>
+            <td>
+<p>The permanent and unique number issued by PhilHealth to individual members and to each and every dependent.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-PhilHealthProcedureIDNS.html"
+                  title="NamingSystem/PhilHealthProcedureIDNS">
+                  <span title="NamingSystem/PhilHealthProcedureIDNS">PhilHealth Procedure Identifier
+</span>
+               </a>
+            </td>
+            <td>
+<p>Identifier system for procedures assigned by PhilHealth for claims and reimbursement purposes.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="NamingSystem-PhilSysIDNS.html" title="NamingSystem/PhilSysIDNS">
+                  <span title="NamingSystem/PhilSysIDNS">PhilSys Identification Number (PhilSys ID) NamingSystem
+</span>
+               </a>
+            </td>
+            <td>
+<p>The National ID Number issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="HealthcareService-healthcareservice-single-example.html"
+                  title="HealthcareService/healthcareservice-single-example">
+                  <span title="HealthcareService/healthcareservice-single-example">Example PH Core HealthcareService
+</span>
+               </a>
+            </td>
+            <td>
+<p>Philippine General Hospital Outpatient Department providing General Medicine consultations as a PH Core HealthcareService.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Location-location-single-example.html"
+                  title="Location/location-single-example">
+                  <span title="Location/location-single-example">Example PH Core Location
+</span>
+               </a>
+            </td>
+            <td>
+<p>Philippine General Hospital - A government tertiary hospital located in Manila, Philippines.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Organization-organization-single-example.html"
+                  title="Organization/organization-single-example">
+                  <span title="Organization/organization-single-example">Example PH Core Organization
+</span>
+               </a>
+            </td>
+            <td>
+<p>An example instance of a PH Core Organization conforming to the Philippine localization profile. Demonstrates all identifier types (NHFR, PAN, PEN) and Must Support fields.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-allergy-single-example.html"
+                  title="AllergyIntolerance/allergy-single-example">
+                  <span title="AllergyIntolerance/allergy-single-example">allergy-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-blood-pressure.html"
+                  title="Observation/blood-pressure">
+                  <span title="Observation/blood-pressure">blood-pressure
+</span>
+               </a>
+            </td>
+            <td>
+<p>Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Claim-claim-single-example.html"
+                  title="Claim/claim-single-example">
+                  <span title="Claim/claim-single-example">claim-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>A PhilHealth outpatient consultation claim for Juan Dela Cruz submitted by Dr. Maria Clara Santos for management of Type 2 Diabetes Mellitus.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-condition-single-example.html"
+                  title="Condition/condition-single-example">
+                  <span title="Condition/condition-single-example">condition-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-encounter-single-example.html"
+                  title="Encounter/encounter-single-example">
+                  <span title="Encounter/encounter-single-example">encounter-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>An ambulatory visit for Juan Dela Cruz that has been completed.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="AllergyIntolerance-example-allergy.html"
+                  title="AllergyIntolerance/example-allergy">
+                  <span title="AllergyIntolerance/example-allergy">example-allergy
+</span>
+               </a>
+            </td>
+            <td>
+<p>Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Condition-example-condition.html"
+                  title="Condition/example-condition">
+                  <span title="Condition/example-condition">example-condition
+</span>
+               </a>
+            </td>
+            <td>
+<p>Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-example-encounter.html"
+                  title="Encounter/example-encounter">
+                  <span title="Encounter/example-encounter">example-encounter
+</span>
+               </a>
+            </td>
+            <td>
+<p>An ambulatory encounter for Juan Dela Cruz that has been completed.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Immunization-example-immunization.html"
+                  title="Immunization/example-immunization">
+                  <span title="Immunization/example-immunization">example-immunization
+</span>
+               </a>
+            </td>
+            <td>
+<p>Flu shot for H5N1-1203.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-example-medication.html"
+                  title="Medication/example-medication">
+                  <span title="Medication/example-medication">example-medication
+</span>
+               </a>
+            </td>
+            <td>
+<p>A medication resource with no specific details provided.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-example-patient.html" title="Patient/example-patient">
+                  <span title="Patient/example-patient">example-patient
+</span>
+               </a>
+            </td>
+            <td>
+<p>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-example-practitioner.html"
+                  title="Practitioner/example-practitioner">
+                  <span title="Practitioner/example-practitioner">example-practitioner
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dr. Maria Clara Santos, a female practitioner born on 1985-05-15, resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Immunization-immunization-single-example.html"
+                  title="Immunization/immunization-single-example">
+                  <span title="Immunization/immunization-single-example">immunization-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Juan Dela Cruz received a completed intramuscular influenza (H5N1-1203) vaccine at Philippine General Hospital on January 10, 2013.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Medication-medication-single-example.html"
+                  title="Medication/medication-single-example">
+                  <span title="Medication/medication-single-example">medication-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Twinact (Telmisartan + Amlodipine) from PH FDA CPR.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationAdministration-medicationadministration-single-example.html"
+                  title="MedicationAdministration/medicationadministration-single-example">
+                  <span title="MedicationAdministration/medicationadministration-single-example">medicationadministration-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Juan Dela Cruz takes Twinact (Telmisartan + Amlodipine) tablet as prescribed.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationDispense-medicationdispense-single-example.html"
+                  title="MedicationDispense/medicationdispense-single-example">
+                  <span title="MedicationDispense/medicationdispense-single-example">medicationdispense-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Pharmacy dispenses Twinact (Telmisartan + Amlodipine) to Juan Dela Cruz based on Dr. Santos prescription.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationRequest-medicationrequest-single-example.html"
+                  title="MedicationRequest/medicationrequest-single-example">
+                  <span title="MedicationRequest/medicationrequest-single-example">medicationrequest-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dr. Maria Clara Santos prescribes Twinact (Telmisartan + Amlodipine) for Juan Dela Cruz to treat hypertension.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="MedicationStatement-medicationstatement-single-example.html"
+                  title="MedicationStatement/medicationstatement-single-example">
+                  <span title="MedicationStatement/medicationstatement-single-example">medicationstatement-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Patient Juan Dela Cruz reports taking Twinact (Telmisartan + Amlodipine) for hypertension.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-based-on-service-example.html"
+                  title="Observation/observation-based-on-service-example">
+                  <span title="Observation/observation-based-on-service-example">observation-based-on-service-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Hemoglobin A1c lab result based on a service request for diabetes monitoring.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-bp-example.html"
+                  title="Observation/observation-bp-example">
+                  <span title="Observation/observation-bp-example">observation-bp-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-derived-bmi-example.html"
+                  title="Observation/observation-derived-bmi-example">
+                  <span title="Observation/observation-derived-bmi-example">observation-derived-bmi-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>BMI calculated from height and weight observations for Juan Dela Cruz.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-environmental-temp-example.html"
+                  title="Observation/observation-environmental-temp-example">
+                  <span title="Observation/observation-environmental-temp-example">observation-environmental-temp-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Environmental temperature observation for a hospital ward (Location as subject).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-glucose-example.html"
+                  title="Observation/observation-glucose-example">
+                  <span title="Observation/observation-glucose-example">observation-glucose-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Fasting blood glucose observation for Juan Dela Cruz.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-height-example.html"
+                  title="Observation/observation-height-example">
+                  <span title="Observation/observation-height-example">observation-height-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Body height observation for Juan Dela Cruz.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-lab-panel-example.html"
+                  title="Observation/observation-lab-panel-example">
+                  <span title="Observation/observation-lab-panel-example">observation-lab-panel-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Basic Metabolic Panel with references to individual electrolyte observations.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-part-of-procedure-example.html"
+                  title="Observation/observation-part-of-procedure-example">
+                  <span title="Observation/observation-part-of-procedure-example">observation-part-of-procedure-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Intraoperative blood pressure observation during appendectomy procedure.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-performer-role-example.html"
+                  title="Observation/observation-performer-role-example">
+                  <span title="Observation/observation-performer-role-example">observation-performer-role-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Heart rate observation performed by a practitioner in a specific role.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-potassium-example.html"
+                  title="Observation/observation-potassium-example">
+                  <span title="Observation/observation-potassium-example">observation-potassium-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Serum potassium observation for Juan Dela Cruz.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-sodium-example.html"
+                  title="Observation/observation-sodium-example">
+                  <span title="Observation/observation-sodium-example">observation-sodium-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Serum sodium observation for Juan Dela Cruz.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-vitals-encounter-example.html"
+                  title="Observation/observation-vitals-encounter-example">
+                  <span title="Observation/observation-vitals-encounter-example">observation-vitals-encounter-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Body temperature observation for Juan Dela Cruz taken during an ambulatory encounter.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-observation-weight-example.html"
+                  title="Observation/observation-weight-example">
+                  <span title="Observation/observation-weight-example">observation-weight-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Body weight observation for Juan Dela Cruz.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-patient-single-example.html"
+                  title="Patient/patient-single-example">
+                  <span title="Patient/patient-single-example">patient-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Coverage-philhealth-coverage-example.html"
+                  title="Coverage/philhealth-coverage-example">
+                  <span title="Coverage/philhealth-coverage-example">philhealth-coverage-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>PhilHealth coverage for Juan Dela Cruz with member ID 63-584789845-5.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-practitioner-single-example.html"
+                  title="Practitioner/practitioner-single-example">
+                  <span title="Practitioner/practitioner-single-example">practitioner-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-15, residing in Manila, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph. She speaks Filipino and English.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="PractitionerRole-practitionerrole-single-example.html"
+                  title="PractitionerRole/practitionerrole-single-example">
+                  <span title="PractitionerRole/practitionerrole-single-example">practitionerrole-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Dr. Maria Clara Santos is a General Practitioner working with the Department of Health. One of her assignments is at the Philippine General Hospital.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Procedure-procedure-single-example.html"
+                  title="Procedure/procedure-single-example">
+                  <span title="Procedure/procedure-single-example">procedure-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>A comprehensive example of an appendectomy procedure performed on Juan Dela Cruz, demonstrating extensive use of Procedure resource elements including identifiers, status history, multiple performers, body site, complications, and follow-up care.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Provenance-provenance-single-example.html"
+                  title="Provenance/provenance-single-example">
+                  <span title="Provenance/provenance-single-example">provenance-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Provenance record documenting that Dr. Maria Clara Santos created the blood pressure observation for Juan Dela Cruz on September 17, 2012, on behalf of the Department of Health - Central Office.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="RelatedPerson-relatedperson-single-example.html"
+                  title="RelatedPerson/relatedperson-single-example">
+                  <span title="RelatedPerson/relatedperson-single-example">relatedperson-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Maria Cruz Santos is a female born on 1 January 1955, mother of the patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ServiceRequest-servicerequest-single-example.html"
+                  title="ServiceRequest/servicerequest-single-example">
+                  <span title="ServiceRequest/servicerequest-single-example">servicerequest-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>A laboratory service request for fasting blood glucose test ordered by Dr. Maria Clara Santos for patient Juan Dela Cruz during an ambulatory encounter.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Task-task-single-example.html" title="Task/task-single-example">
+                  <span title="Task/task-single-example">task-single-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>A laboratory task for Juan Dela Cruz requested by Dr. Maria Clara Santos. The task is to collect a blood sample for a routine CBC test.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Bundle-transaction-example.html"
+                  title="Bundle/transaction-example">
+                  <span title="Bundle/transaction-example">transaction-example
+</span>
+               </a>
+            </td>
+            <td>
+<p>Juan Dela Cruz has his blood pressure checked by Dr. Maria Clara Santos.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  
+          Package fhir.ph.core#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-08 09:59:00 +0000">
+    2026-06-08
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

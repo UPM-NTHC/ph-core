@@ -1,0 +1,97 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Basic/Consumer> a fhir:Basic ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "Consumer"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ActorDefinition Consumer</b></p><a name=\"Consumer\"> </a><a name=\"hcConsumer\"> </a><table class=\"grid\"><tr><td><b>Actor: Consumer </b></td><td>PH Core Consumer</td><td>Type: system </td></tr><tr><td colspan=\"3\"><div><p>A PH Core Consumer is a system that receives PH Core resources and uses the content of these resources. This includes electronic health records (EHRs), clinical decision support systems, health analytics platforms, and other applications that consume PH Core resources.</p>\n</div></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.url" ] ;
+     fhir:Extension.valueUri [ fhir:value "https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.version" ] ;
+     fhir:Extension.valueString [ fhir:value "0.2.0" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.name" ] ;
+     fhir:Extension.valueString [ fhir:value "Consumer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.title" ] ;
+     fhir:Extension.valueString [ fhir:value "PH Core Consumer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.status" ] ;
+     fhir:Extension.valueCode [ fhir:value "draft" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.experimental" ] ;
+     fhir:Extension.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.date" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2026-09-09T08:40:24+00:00"^^xsd:dateTime ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.publisher" ] ;
+     fhir:Extension.valueString [ fhir:value "UP Manila National TeleHealth Center" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.contact" ] ;
+     fhir:Extension.valueContactDetail [
+       fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+       fhir:ContactDetail.telecom [
+         fhir:index -1 ;
+         fhir:ContactPoint.system [ fhir:value "url" ] ;
+         fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.description" ] ;
+     fhir:Extension.valueMarkdown [ fhir:value "A PH Core Consumer is a system that receives PH Core resources and uses the content of these resources." ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.jurisdiction" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+         fhir:Coding.code [ fhir:value "PH" ] ;
+         fhir:Coding.display [ fhir:value "Philippines" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.type" ] ;
+     fhir:Extension.valueCode [ fhir:value "system" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.documentation" ] ;
+     fhir:Extension.valueMarkdown [ fhir:value "A PH Core Consumer is a system that receives PH Core resources and uses the content of these resources. This includes electronic health records (EHRs), clinical decision support systems, health analytics platforms, and other applications that consume PH Core resources." ]
+  ] ;
+  fhir:Basic.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/fhir-types" ] ;
+       fhir:Coding.code [ fhir:value "ActorDefinition" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Basic/Consumer.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

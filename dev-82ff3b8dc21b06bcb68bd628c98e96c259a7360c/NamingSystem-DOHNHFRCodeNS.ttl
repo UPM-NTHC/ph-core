@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/NamingSystem/DOHNHFRCodeNS> a fhir:NamingSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DOHNHFRCodeNS"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: NamingSystem DOHNHFRCodeNS</b></p><a name=\"DOHNHFRCodeNS\"> </a><a name=\"hcDOHNHFRCodeNS\"> </a><h3>Summary</h3><table class=\"grid\"><tr><td>Defining URL</td><td>https://fhir.doh.gov.ph/phcore/NamingSystem/DOHNHFRCodeNS</td></tr><tr><td>Version</td><td>0.2.0</td></tr><tr><td>Name</td><td>DOHNHFRCode</td></tr><tr><td>Status</td><td>draft</td></tr><tr><td>Definition</td><td><div><p>Health Facility Code (HFC) from the National Health Facility Registry.</p>\n</div></td></tr><tr><td>Publisher</td><td>UP Manila National TeleHealth Center</td></tr></table><h3>Identifiers</h3><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>URI</td><td>https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url>
+     ] ;
+     fhir:value [
+       a fhir:Uri ;
+       fhir:v "https://fhir.doh.gov.ph/phcore/NamingSystem/DOHNHFRCodeNS"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/NamingSystem/DOHNHFRCodeNS>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "0.2.0"
+     ]
+  ] ) ; # 
+  fhir:name [ fhir:v "DOHNHFRCode"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:kind [ fhir:v "identifier"] ; # 
+  fhir:date [ fhir:v "2025-06-18"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-NTHC" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Health Facility Code (HFC) from the National Health Facility Registry."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:uniqueId ( [
+     fhir:type [ fhir:v "uri" ] ;
+     fhir:value [ fhir:v "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

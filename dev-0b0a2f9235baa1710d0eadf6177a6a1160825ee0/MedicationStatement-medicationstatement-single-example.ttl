@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationStatement/medicationstatement-single-example> a fhir:MedicationStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medicationstatement-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Juan Dela Cruz reports taking Twinact 40mg/5mg tablet (Telmisartan + Amlodipine) once daily for hypertension, starting March 10, 2025.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://verification.fda.gov.ph"^^xsd:anyURI ;
+         fhir:l <https://verification.fda.gov.ph>
+       ] ;
+       fhir:code [ fhir:v "DRP-10144" ] ;
+       fhir:display [ fhir:v "Twinact" ]
+     ] ) ;
+     fhir:text [ fhir:v "Twinact 40mg/5mg tablet" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:context [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-single-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2025-03-10"^^xsd:date ] ;
+     fhir:end [ fhir:v "2025-03-15"^^xsd:date ]
+  ] ; # 
+  fhir:dateAsserted [ fhir:v "2025-03-10T10:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:informationSource [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:38341003 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "38341003" ] ;
+       fhir:display [ fhir:v "Hypertensive disorder" ]
+     ] )
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient reports taking medication once daily for hypertension" ]
+  ] ) ; # 
+  fhir:dosage ( [
+     fhir:sequence [ fhir:v 1 ] ;
+     fhir:text [ fhir:v "Take 1 tablet once daily" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:route [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration>
+         ] ;
+         fhir:code [ fhir:v "PO" ] ;
+         fhir:display [ fhir:v "Swallow, oral" ]
+       ] )
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

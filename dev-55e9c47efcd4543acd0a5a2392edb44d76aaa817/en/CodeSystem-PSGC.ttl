@@ -1,0 +1,929 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/PSGC> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "PSGC"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSGC</b></p><a name=\"PSGC\"> </a><a name=\"hcPSGC\"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psgc</code> provides <b>a fragment</b> that includes following codes in an undefined hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0100000000<a name=\"PSGC-0100000000\"> </a></td><td>Region I (Ilocos Region)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0102800000<a name=\"PSGC-0102800000\"> </a></td><td>Ilocos Norte</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102801000<a name=\"PSGC-0102801000\"> </a></td><td>Adams</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0102801001<a name=\"PSGC-0102801001\"> </a></td><td>Adams</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102802000<a name=\"PSGC-0102802000\"> </a></td><td>Bacarra</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0102802001<a name=\"PSGC-0102802001\"> </a></td><td>Bani</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0102802002<a name=\"PSGC-0102802002\"> </a></td><td>Buyon</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0102802003<a name=\"PSGC-0102802003\"> </a></td><td>Cabaruan</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0102802004<a name=\"PSGC-0102802004\"> </a></td><td>Cabulalaan</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0102802005<a name=\"PSGC-0102802005\"> </a></td><td>Cabusligan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102803000<a name=\"PSGC-0102803000\"> </a></td><td>Badoc</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102804000<a name=\"PSGC-0102804000\"> </a></td><td>Bangui</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102805000<a name=\"PSGC-0102805000\"> </a></td><td>City of Batac</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102806000<a name=\"PSGC-0102806000\"> </a></td><td>Burgos</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102807000<a name=\"PSGC-0102807000\"> </a></td><td>Carasi</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102808000<a name=\"PSGC-0102808000\"> </a></td><td>Currimao</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102809000<a name=\"PSGC-0102809000\"> </a></td><td>Dingras</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102810000<a name=\"PSGC-0102810000\"> </a></td><td>Dumalneg</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102811000<a name=\"PSGC-0102811000\"> </a></td><td>Banna</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102812000<a name=\"PSGC-0102812000\"> </a></td><td>City of Laoag </td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102813000<a name=\"PSGC-0102813000\"> </a></td><td>Marcos</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0102900000<a name=\"PSGC-0102900000\"> </a></td><td>Ilocos Sur</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102901000<a name=\"PSGC-0102901000\"> </a></td><td>Alilem</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0102901001<a name=\"PSGC-0102901001\"> </a></td><td>Alilem Daya </td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102906000<a name=\"PSGC-0102906000\"> </a></td><td>City of Candon</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0102934000<a name=\"PSGC-0102934000\"> </a></td><td>City of Vigan </td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0103300000<a name=\"PSGC-0103300000\"> </a></td><td>La Union</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0103314000<a name=\"PSGC-0103314000\"> </a></td><td>City of San Fernando </td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0105500000<a name=\"PSGC-0105500000\"> </a></td><td>Pangasinan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0105503000<a name=\"PSGC-0105503000\"> </a></td><td>City of Alaminos</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0105518000<a name=\"PSGC-0105518000\"> </a></td><td>City of Dagupan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0105532000<a name=\"PSGC-0105532000\"> </a></td><td>City of San Carlos</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0105546000<a name=\"PSGC-0105546000\"> </a></td><td>City of Urdaneta</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0200000000<a name=\"PSGC-0200000000\"> </a></td><td>Region II (Cagayan Valley)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0200900000<a name=\"PSGC-0200900000\"> </a></td><td>Batanes</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0200901000<a name=\"PSGC-0200901000\"> </a></td><td>Basco </td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0200901001<a name=\"PSGC-0200901001\"> </a></td><td>Ihubok II</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0201500000<a name=\"PSGC-0201500000\"> </a></td><td>Cagayan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0201501000<a name=\"PSGC-0201501000\"> </a></td><td>Abulug</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0201501001<a name=\"PSGC-0201501001\"> </a></td><td>Alinunu</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0201529000<a name=\"PSGC-0201529000\"> </a></td><td>Tuguegarao City </td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0203100000<a name=\"PSGC-0203100000\"> </a></td><td>Isabela</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0203108000<a name=\"PSGC-0203108000\"> </a></td><td>City of Cauayan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0203114000<a name=\"PSGC-0203114000\"> </a></td><td>City of Ilagan </td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0203135000<a name=\"PSGC-0203135000\"> </a></td><td>City of Santiago</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0300000000<a name=\"PSGC-0300000000\"> </a></td><td>Region III (Central Luzon)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0300800000<a name=\"PSGC-0300800000\"> </a></td><td>Bataan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0300801000<a name=\"PSGC-0300801000\"> </a></td><td>Abucay</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0300801001<a name=\"PSGC-0300801001\"> </a></td><td>Bangkal</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0300803000<a name=\"PSGC-0300803000\"> </a></td><td>City of Balanga </td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0301400000<a name=\"PSGC-0301400000\"> </a></td><td>Bulacan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0301401000<a name=\"PSGC-0301401000\"> </a></td><td>Angat</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0301401001<a name=\"PSGC-0301401001\"> </a></td><td>Banaban</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0301403000<a name=\"PSGC-0301403000\"> </a></td><td>City of Baliwag</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0301410000<a name=\"PSGC-0301410000\"> </a></td><td>City of Malolos </td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0301412000<a name=\"PSGC-0301412000\"> </a></td><td>City of Meycauayan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0301420000<a name=\"PSGC-0301420000\"> </a></td><td>City of San Jose Del Monte</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0330100000<a name=\"PSGC-0330100000\"> </a></td><td>City of Angeles</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0331400000<a name=\"PSGC-0331400000\"> </a></td><td>City of Olongapo</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0304903000<a name=\"PSGC-0304903000\"> </a></td><td>City of Cabanatuan</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0304908000<a name=\"PSGC-0304908000\"> </a></td><td>City of Gapan</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0304917000<a name=\"PSGC-0304917000\"> </a></td><td>Science City of Muñoz</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0304919000<a name=\"PSGC-0304919000\"> </a></td><td>City of Palayan </td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0304926000<a name=\"PSGC-0304926000\"> </a></td><td>San Jose City</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0305409000<a name=\"PSGC-0305409000\"> </a></td><td>Mabalacat City</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0305416000<a name=\"PSGC-0305416000\"> </a></td><td>City of San Fernando </td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0306916000<a name=\"PSGC-0306916000\"> </a></td><td>City of Tarlac </td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0400000000<a name=\"PSGC-0400000000\"> </a></td><td>Region IV-A (CALABARZON)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0401000000<a name=\"PSGC-0401000000\"> </a></td><td>Batangas</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0401001000<a name=\"PSGC-0401001000\"> </a></td><td>Agoncillo</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0401001001<a name=\"PSGC-0401001001\"> </a></td><td>Adia</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0401005000<a name=\"PSGC-0401005000\"> </a></td><td>Batangas City </td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0401007000<a name=\"PSGC-0401007000\"> </a></td><td>City of Calaca</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0401014000<a name=\"PSGC-0401014000\"> </a></td><td>City of Lipa</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0401028000<a name=\"PSGC-0401028000\"> </a></td><td>City of Sto. Tomas</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0401031000<a name=\"PSGC-0401031000\"> </a></td><td>City of Tanauan</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0402100000<a name=\"PSGC-0402100000\"> </a></td><td>Cavite</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0402101000<a name=\"PSGC-0402101000\"> </a></td><td>Alfonso</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0402101001<a name=\"PSGC-0402101001\"> </a></td><td>Amuyong</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0403400000<a name=\"PSGC-0403400000\"> </a></td><td>Laguna</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0405600000<a name=\"PSGC-0405600000\"> </a></td><td>Quezon</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0405800000<a name=\"PSGC-0405800000\"> </a></td><td>Rizal</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0500000000<a name=\"PSGC-0500000000\"> </a></td><td>Region V (Bicol Region)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0500500000<a name=\"PSGC-0500500000\"> </a></td><td>Albay</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0500501000<a name=\"PSGC-0500501000\"> </a></td><td>Bacacay</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0500501001<a name=\"PSGC-0500501001\"> </a></td><td>Baclayon</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0501600000<a name=\"PSGC-0501600000\"> </a></td><td>Camarines Norte</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0501601000<a name=\"PSGC-0501601000\"> </a></td><td>Basud</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0501601001<a name=\"PSGC-0501601001\"> </a></td><td>Angas</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0600000000<a name=\"PSGC-0600000000\"> </a></td><td>Region VI (Western Visayas)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0600400000<a name=\"PSGC-0600400000\"> </a></td><td>Aklan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0600401000<a name=\"PSGC-0600401000\"> </a></td><td>Altavas</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0600401001<a name=\"PSGC-0600401001\"> </a></td><td>Cabangila</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0600600000<a name=\"PSGC-0600600000\"> </a></td><td>Antique</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0600601000<a name=\"PSGC-0600601000\"> </a></td><td>Anini-Y</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0600601001<a name=\"PSGC-0600601001\"> </a></td><td>Bayo Grande</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0700000000<a name=\"PSGC-0700000000\"> </a></td><td>Region VII (Central Visayas)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0701200000<a name=\"PSGC-0701200000\"> </a></td><td>Bohol</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0701201000<a name=\"PSGC-0701201000\"> </a></td><td>Alburquerque</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0701201001<a name=\"PSGC-0701201001\"> </a></td><td>Bahi</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0702200000<a name=\"PSGC-0702200000\"> </a></td><td>Cebu</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0702201000<a name=\"PSGC-0702201000\"> </a></td><td>Alcantara</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0702201001<a name=\"PSGC-0702201001\"> </a></td><td>Cabadiangan</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0800000000<a name=\"PSGC-0800000000\"> </a></td><td>Region VIII (Eastern Visayas)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0802600000<a name=\"PSGC-0802600000\"> </a></td><td>Eastern Samar</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0802601000<a name=\"PSGC-0802601000\"> </a></td><td>Arteche</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0802601001<a name=\"PSGC-0802601001\"> </a></td><td>Aguinaldo</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0803700000<a name=\"PSGC-0803700000\"> </a></td><td>Leyte</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0803701000<a name=\"PSGC-0803701000\"> </a></td><td>Abuyog</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0803701001<a name=\"PSGC-0803701001\"> </a></td><td>Alangilan</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">0900000000<a name=\"PSGC-0900000000\"> </a></td><td>Region IX (Zamboanga Peninsula)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0906600000<a name=\"PSGC-0906600000\"> </a></td><td>Sulu</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0906601000<a name=\"PSGC-0906601000\"> </a></td><td>Indanan</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0906601001<a name=\"PSGC-0906601001\"> </a></td><td>Adjid</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  0907200000<a name=\"PSGC-0907200000\"> </a></td><td>Zamboanga del Norte</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    0907201000<a name=\"PSGC-0907201000\"> </a></td><td>City of Dapitan</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      0907201001<a name=\"PSGC-0907201001\"> </a></td><td>Aliguay</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1000000000<a name=\"PSGC-1000000000\"> </a></td><td>Region X (Northern Mindanao)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1001300000<a name=\"PSGC-1001300000\"> </a></td><td>Bukidnon</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1001301000<a name=\"PSGC-1001301000\"> </a></td><td>Baungon</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1001301001<a name=\"PSGC-1001301001\"> </a></td><td>Balintad</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1001800000<a name=\"PSGC-1001800000\"> </a></td><td>Camiguin</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1001801000<a name=\"PSGC-1001801000\"> </a></td><td>Catarman</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1001801001<a name=\"PSGC-1001801001\"> </a></td><td>Alga</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1100000000<a name=\"PSGC-1100000000\"> </a></td><td>Region XI (Davao Region)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1102300000<a name=\"PSGC-1102300000\"> </a></td><td>Davao del Norte</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1102301000<a name=\"PSGC-1102301000\"> </a></td><td>Asuncion</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1102301004<a name=\"PSGC-1102301004\"> </a></td><td>Binancian</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1102400000<a name=\"PSGC-1102400000\"> </a></td><td>Davao del Sur</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1102401000<a name=\"PSGC-1102401000\"> </a></td><td>Bansalan</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1102401001<a name=\"PSGC-1102401001\"> </a></td><td>Alegre</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1200000000<a name=\"PSGC-1200000000\"> </a></td><td>Region XII (SOCCSKSARGEN)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1204700000<a name=\"PSGC-1204700000\"> </a></td><td>Cotabato</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1204701000<a name=\"PSGC-1204701000\"> </a></td><td>Alamada</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1204701001<a name=\"PSGC-1204701001\"> </a></td><td>Bao</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1206300000<a name=\"PSGC-1206300000\"> </a></td><td>South Cotabato</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1206302000<a name=\"PSGC-1206302000\"> </a></td><td>Banga</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1206302002<a name=\"PSGC-1206302002\"> </a></td><td>Benitez </td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1300000000<a name=\"PSGC-1300000000\"> </a></td><td>National Capital Region (NCR)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1380100000<a name=\"PSGC-1380100000\"> </a></td><td>City of Caloocan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380100001<a name=\"PSGC-1380100001\"> </a></td><td>Barangay 1</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1380200000<a name=\"PSGC-1380200000\"> </a></td><td>City of Las Piñas</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1380600000<a name=\"PSGC-1380600000\"> </a></td><td>City of Manila</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380601000<a name=\"PSGC-1380601000\"> </a></td><td>Tondo I/II</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380602000<a name=\"PSGC-1380602000\"> </a></td><td>Binondo</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380603000<a name=\"PSGC-1380603000\"> </a></td><td>Quiapo</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380604000<a name=\"PSGC-1380604000\"> </a></td><td>San Nicolas</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380605000<a name=\"PSGC-1380605000\"> </a></td><td>Santa Cruz</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380606000<a name=\"PSGC-1380606000\"> </a></td><td>Sampaloc</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380607000<a name=\"PSGC-1380607000\"> </a></td><td>San Miguel</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380608000<a name=\"PSGC-1380608000\"> </a></td><td>Ermita</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380609000<a name=\"PSGC-1380609000\"> </a></td><td>Intramuros</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380610000<a name=\"PSGC-1380610000\"> </a></td><td>Malate</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380611000<a name=\"PSGC-1380611000\"> </a></td><td>Paco</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380612000<a name=\"PSGC-1380612000\"> </a></td><td>Pandacan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380613000<a name=\"PSGC-1380613000\"> </a></td><td>Port Area</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1380614000<a name=\"PSGC-1380614000\"> </a></td><td>Santa Ana</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1400000000<a name=\"PSGC-1400000000\"> </a></td><td>Cordillera Administrative Region (CAR)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1400100000<a name=\"PSGC-1400100000\"> </a></td><td>Abra</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1400101000<a name=\"PSGC-1400101000\"> </a></td><td>Bangued </td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1400101001<a name=\"PSGC-1400101001\"> </a></td><td>Agtangao</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1401100000<a name=\"PSGC-1401100000\"> </a></td><td>Benguet</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1401101000<a name=\"PSGC-1401101000\"> </a></td><td>Atok</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1401101001<a name=\"PSGC-1401101001\"> </a></td><td>Abiang</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1402700000<a name=\"PSGC-1402700000\"> </a></td><td>Ifugao</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1403200000<a name=\"PSGC-1403200000\"> </a></td><td>Kalinga</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1404400000<a name=\"PSGC-1404400000\"> </a></td><td>Mountain Province</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1408100000<a name=\"PSGC-1408100000\"> </a></td><td>Apayao</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1600000000<a name=\"PSGC-1600000000\"> </a></td><td>Region XIII (Caraga)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1600200000<a name=\"PSGC-1600200000\"> </a></td><td>Agusan del Norte</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1600201000<a name=\"PSGC-1600201000\"> </a></td><td>Buenavista</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1600201001<a name=\"PSGC-1600201001\"> </a></td><td>Abilan</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1600300000<a name=\"PSGC-1600300000\"> </a></td><td>Agusan del Sur</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1600301000<a name=\"PSGC-1600301000\"> </a></td><td>City of Bayugan</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1600301001<a name=\"PSGC-1600301001\"> </a></td><td>Calaitan</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1700000000<a name=\"PSGC-1700000000\"> </a></td><td>MIMAROPA Region</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1704000000<a name=\"PSGC-1704000000\"> </a></td><td>Marinduque</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1704001000<a name=\"PSGC-1704001000\"> </a></td><td>Boac </td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1704001001<a name=\"PSGC-1704001001\"> </a></td><td>Agot</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1705100000<a name=\"PSGC-1705100000\"> </a></td><td>Occidental Mindoro</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1705101000<a name=\"PSGC-1705101000\"> </a></td><td>Abra De Ilog</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1705101001<a name=\"PSGC-1705101001\"> </a></td><td>Balao</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1800000000<a name=\"PSGC-1800000000\"> </a></td><td>Negros Island Region (NIR)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1804500000<a name=\"PSGC-1804500000\"> </a></td><td>Negros Occidental</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1804502000<a name=\"PSGC-1804502000\"> </a></td><td>City of Bago</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1804502001<a name=\"PSGC-1804502001\"> </a></td><td>Abuanan</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1804600000<a name=\"PSGC-1804600000\"> </a></td><td>Negros Oriental</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1804601000<a name=\"PSGC-1804601000\"> </a></td><td>Amlan</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1804601001<a name=\"PSGC-1804601001\"> </a></td><td>Bio-os</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">1900000000<a name=\"PSGC-1900000000\"> </a></td><td>Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1900700000<a name=\"PSGC-1900700000\"> </a></td><td>Basilan</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1900702000<a name=\"PSGC-1900702000\"> </a></td><td>City of Lamitan </td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1900702001<a name=\"PSGC-1900702001\"> </a></td><td>Arco</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1903600000<a name=\"PSGC-1903600000\"> </a></td><td>Lanao del Sur</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1903601000<a name=\"PSGC-1903601000\"> </a></td><td>Bacolod-Kalawi</td></tr><tr><td>4</td><td style=\"white-space:nowrap\">      1903601001<a name=\"PSGC-1903601001\"> </a></td><td>Ampao</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://psa.gov.ph/classification/psgc"] ;
+  fhir:CodeSystem.version [ fhir:value "0.2.0"] ;
+  fhir:CodeSystem.name [ fhir:value "PSGC"] ;
+  fhir:CodeSystem.title [ fhir:value "PSGC"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-09T08:36:51+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:CodeSystem.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Fragment declaration of the official Philippine Standard Geographic Code (published quarterly by the Philippine Statistics Authority)."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "fragment"] ;
+  fhir:CodeSystem.concept [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0100000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region I (Ilocos Region)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0102800000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Ilocos Norte" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102801000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Adams" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0102801001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Adams" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102802000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Bacarra" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0102802001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Bani" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0102802002" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Buyon" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0102802003" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Cabaruan" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0102802004" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Cabulalaan" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0102802005" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Cabusligan" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102803000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Badoc" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102804000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Bangui" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102805000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Batac" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102806000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Burgos" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102807000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Carasi" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102808000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Currimao" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102809000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Dingras" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102810000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Dumalneg" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102811000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Banna" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102812000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Laoag " ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102813000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Marcos" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0102900000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Ilocos Sur" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102901000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Alilem" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0102901001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Alilem Daya " ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102906000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Candon" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0102934000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Vigan " ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0103300000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "La Union" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0103314000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of San Fernando " ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0105500000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Pangasinan" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0105503000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Alaminos" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0105518000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Dagupan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0105532000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of San Carlos" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0105546000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Urdaneta" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0200000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region II (Cagayan Valley)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0200900000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Batanes" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0200901000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Basco " ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0200901001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Ihubok II" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0201500000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Cagayan" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0201501000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Abulug" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0201501001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Alinunu" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0201529000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Tuguegarao City " ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0203100000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Isabela" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0203108000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Cauayan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0203114000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Ilagan " ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0203135000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Santiago" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0300000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region III (Central Luzon)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0300800000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Bataan" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0300801000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Abucay" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0300801001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Bangkal" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0300803000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Balanga " ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0301400000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Bulacan" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0301401000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Angat" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0301401001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Banaban" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0301403000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Baliwag" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0301410000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Malolos " ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0301412000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Meycauayan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0301420000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of San Jose Del Monte" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0330100000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "City of Angeles" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0331400000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "City of Olongapo" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0304903000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "City of Cabanatuan" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0304908000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "City of Gapan" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0304917000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Science City of Muñoz" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0304919000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "City of Palayan " ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0304926000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "San Jose City" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0305409000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Mabalacat City" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0305416000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "City of San Fernando " ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0306916000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "City of Tarlac " ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0400000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region IV-A (CALABARZON)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0401000000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Batangas" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0401001000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Agoncillo" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0401001001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Adia" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0401005000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Batangas City " ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0401007000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Calaca" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0401014000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Lipa" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0401028000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Sto. Tomas" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0401031000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Tanauan" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0402100000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Cavite" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0402101000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Alfonso" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0402101001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Amuyong" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0403400000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Laguna" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0405600000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Quezon" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0405800000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Rizal" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0500000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region V (Bicol Region)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0500500000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Albay" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0500501000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Bacacay" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0500501001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Baclayon" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0501600000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Camarines Norte" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0501601000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Basud" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0501601001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Angas" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0600000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region VI (Western Visayas)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0600400000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Aklan" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0600401000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Altavas" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0600401001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Cabangila" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0600600000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Antique" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0600601000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Anini-Y" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0600601001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Bayo Grande" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0700000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region VII (Central Visayas)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0701200000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Bohol" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0701201000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Alburquerque" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0701201001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Bahi" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0702200000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Cebu" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0702201000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Alcantara" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0702201001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Cabadiangan" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0800000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region VIII (Eastern Visayas)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0802600000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Eastern Samar" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0802601000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Arteche" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0802601001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Aguinaldo" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0803700000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Leyte" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0803701000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Abuyog" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0803701001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Alangilan" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "0900000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region IX (Zamboanga Peninsula)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0906600000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Sulu" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0906601000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Indanan" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0906601001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Adjid" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "0907200000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Zamboanga del Norte" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "0907201000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Dapitan" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "0907201001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Aliguay" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1000000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region X (Northern Mindanao)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1001300000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Bukidnon" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1001301000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Baungon" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1001301001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Balintad" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1001800000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Camiguin" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1001801000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Catarman" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1001801001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Alga" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1100000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region XI (Davao Region)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1102300000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Davao del Norte" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1102301000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Asuncion" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1102301004" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Binancian" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1102400000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Davao del Sur" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1102401000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Bansalan" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1102401001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Alegre" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1200000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region XII (SOCCSKSARGEN)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1204700000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Cotabato" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1204701000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Alamada" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1204701001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Bao" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1206300000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "South Cotabato" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1206302000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Banga" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1206302002" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Benitez " ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1300000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "National Capital Region (NCR)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1380100000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "City of Caloocan" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380100001" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Barangay 1" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1380200000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "City of Las Piñas" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1380600000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "City of Manila" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380601000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Tondo I/II" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380602000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Binondo" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380603000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Quiapo" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380604000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "San Nicolas" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380605000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Santa Cruz" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380606000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Sampaloc" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380607000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "San Miguel" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380608000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Ermita" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380609000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Intramuros" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380610000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Malate" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380611000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Paco" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380612000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Pandacan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380613000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Port Area" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1380614000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Santa Ana" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1400000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cordillera Administrative Region (CAR)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1400100000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Abra" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1400101000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Bangued " ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1400101001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Agtangao" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1401100000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Benguet" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1401101000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Atok" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1401101001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Abiang" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1402700000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Ifugao" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1403200000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Kalinga" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1404400000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Mountain Province" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1408100000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Apayao" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1600000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Region XIII (Caraga)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1600200000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Agusan del Norte" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1600201000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Buenavista" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1600201001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Abilan" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1600300000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Agusan del Sur" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1600301000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Bayugan" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1600301001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Calaitan" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1700000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "MIMAROPA Region" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1704000000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Marinduque" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1704001000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Boac " ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1704001001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Agot" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1705100000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Occidental Mindoro" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1705101000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Abra De Ilog" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1705101001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Balao" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1800000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Negros Island Region (NIR)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1804500000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Negros Occidental" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1804502000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Bago" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1804502001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Abuanan" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1804600000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Negros Oriental" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1804601000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Amlan" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1804601001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Bio-os" ]
+         ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1900000000" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1900700000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Basilan" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1900702000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "City of Lamitan " ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1900702001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Arco" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "1903600000" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Lanao del Sur" ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1903601000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Bacolod-Kalawi" ] ;
+         fhir:CodeSystem.concept.concept [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.code [ fhir:value "1903601001" ] ;
+           fhir:CodeSystem.concept.display [ fhir:value "Ampao" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/PSGC.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

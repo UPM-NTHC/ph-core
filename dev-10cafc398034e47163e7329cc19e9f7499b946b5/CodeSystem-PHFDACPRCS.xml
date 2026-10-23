@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="PHFDACPRCS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem PHFDACPRCS</b></p><a name="PHFDACPRCS"> </a><a name="hcPHFDACPRCS"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class="grid"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>productInfo</td><td>productInfo</td><td>string</td><td>Product information document</td></tr><tr><td>genericName</td><td>genericName</td><td>string</td><td>Generic/INN name of the drug</td></tr><tr><td>dosageStrength</td><td>dosageStrength</td><td>string</td><td>Dosage strength/concentration</td></tr><tr><td>dosageForm</td><td>dosageForm</td><td>string</td><td>Dosage form (e.g., Tablet, Injection)</td></tr><tr><td>classification</td><td>classification</td><td>string</td><td>Drug classification (RX, OTC, etc.)</td></tr><tr><td>packaging</td><td>packaging</td><td>string</td><td>Packaging description</td></tr><tr><td>pharmacologicCategory</td><td>pharmacologicCategory</td><td>string</td><td>Pharmacologic/therapeutic category</td></tr><tr><td>manufacturer</td><td>manufacturer</td><td>string</td><td>Drug manufacturer</td></tr><tr><td>countryOfOrigin</td><td>countryOfOrigin</td><td>string</td><td>Country where manufactured</td></tr><tr><td>trader</td><td>trader</td><td>string</td><td>Trading company</td></tr><tr><td>importer</td><td>importer</td><td>string</td><td>Importing company</td></tr><tr><td>distributor</td><td>distributor</td><td>string</td><td>Distributing company</td></tr><tr><td>applicationType</td><td>applicationType</td><td>string</td><td>Type of FDA application</td></tr><tr><td>issuanceDate</td><td>issuanceDate</td><td>string</td><td>Registration issuance date</td></tr><tr><td>expiryDate</td><td>expiryDate</td><td>string</td><td>Registration expiry date</td></tr></table><p><b>Concepts</b></p><p>This case-insensitive code system <code>https://verification.fda.gov.ph</code> provides <b>a fragment</b> that includes following codes in a Is-A hierarchy:</p><table class="codes"><tr><td><b>Lvl</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>genericName</b></td><td><b>dosageStrength</b></td><td><b>dosageForm</b></td><td><b>classification</b></td><td><b>packaging</b></td><td><b>pharmacologicCategory</b></td><td><b>manufacturer</b></td><td><b>countryOfOrigin</b></td><td><b>importer</b></td><td><b>distributor</b></td><td><b>applicationType</b></td><td><b>issuanceDate</b></td><td><b>expiryDate</b></td></tr><tr><td>1</td><td style="white-space:nowrap">PH-FDA-DRUGS<a name="PHFDACPRCS-PH-FDA-DRUGS"> </a></td><td>Philippine FDA Registered Drug Products</td><td>Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines</td><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/></tr><tr><td>2</td><td style="white-space:nowrap">  DRP-10144<a name="PHFDACPRCS-DRP-10144"> </a></td><td>Twinact</td><td/><td>Telmisartan + Amlodipine (as besilate)</td><td>40 mg 5 mg</td><td>Tablet</td><td>Prescription Drug (RX)</td><td>Alu/Alu blister pack x 10's (Box of 30's)</td><td>-</td><td>Dasan Pharmaceutical Co., Ltd.</td><td>Korea</td><td>Unilab, Inc.</td><td>Unilab, Inc.</td><td>Initial (Reconstruction)</td><td>16 January 2024</td><td>30 July 2026</td></tr><tr><td>2</td><td style="white-space:nowrap">  1193768<a name="PHFDACPRCS-1193768"> </a></td><td>Ascorfed-Z Cap</td><td/><td>Ascorbic Acid + Zinc</td><td>500 mg (equivalent to 562.5 mg Sodium Ascorbate)/10 mg (equivalent to 27.5 mg Zinc Sulfate Monohydrate)</td><td>Capsule</td><td>Over-the-Counter (OTC) Drug</td><td>Alu/Deep Red PVC Blister Pack x 10's / (Box of 30's and 100's)</td><td>Vitamin/Mineral</td><td/><td/><td/><td/><td/><td/><td/></tr></table></div>
+  </text>
+  <url value="https://verification.fda.gov.ph"/>
+  <version value="0.2.0"/>
+  <name value="PHFDACPRCS"/>
+  <title value="PH FDA Certificate of Product Registration (CPR) CodeSystem"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-21"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="Registered drug products from the Philippine Food and Drug Administration (FDA)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="false"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="fragment"/>
+  <property>
+    <code value="productInfo"/>
+    <description value="Product information document"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="genericName"/>
+    <description value="Generic/INN name of the drug"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="dosageStrength"/>
+    <description value="Dosage strength/concentration"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="dosageForm"/>
+    <description value="Dosage form (e.g., Tablet, Injection)"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="classification"/>
+    <description value="Drug classification (RX, OTC, etc.)"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="packaging"/>
+    <description value="Packaging description"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="pharmacologicCategory"/>
+    <description value="Pharmacologic/therapeutic category"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="manufacturer"/>
+    <description value="Drug manufacturer"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="countryOfOrigin"/>
+    <description value="Country where manufactured"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="trader"/>
+    <description value="Trading company"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="importer"/>
+    <description value="Importing company"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="distributor"/>
+    <description value="Distributing company"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="applicationType"/>
+    <description value="Type of FDA application"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="issuanceDate"/>
+    <description value="Registration issuance date"/>
+    <type value="string"/>
+  </property>
+  <property>
+    <code value="expiryDate"/>
+    <description value="Registration expiry date"/>
+    <type value="string"/>
+  </property>
+  <concept>
+    <code value="PH-FDA-DRUGS"/>
+    <display value="Philippine FDA Registered Drug Products"/>
+    <definition value="Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines"/>
+    <concept>
+      <code value="DRP-10144"/>
+      <display value="Twinact"/>
+      <property>
+        <code value="genericName"/>
+        <valueString value="Telmisartan + Amlodipine (as besilate)"/>
+      </property>
+      <property>
+        <code value="dosageStrength"/>
+        <valueString value="40 mg 5 mg"/>
+      </property>
+      <property>
+        <code value="dosageForm"/>
+        <valueString value="Tablet"/>
+      </property>
+      <property>
+        <code value="classification"/>
+        <valueString value="Prescription Drug (RX)"/>
+      </property>
+      <property>
+        <code value="packaging"/>
+        <valueString value="Alu/Alu blister pack x 10's (Box of 30's)"/>
+      </property>
+      <property>
+        <code value="pharmacologicCategory"/>
+        <valueString value="-"/>
+      </property>
+      <property>
+        <code value="manufacturer"/>
+        <valueString value="Dasan Pharmaceutical Co., Ltd."/>
+      </property>
+      <property>
+        <code value="countryOfOrigin"/>
+        <valueString value="Korea"/>
+      </property>
+      <property>
+        <code value="importer"/>
+        <valueString value="Unilab, Inc."/>
+      </property>
+      <property>
+        <code value="distributor"/>
+        <valueString value="Unilab, Inc."/>
+      </property>
+      <property>
+        <code value="applicationType"/>
+        <valueString value="Initial (Reconstruction)"/>
+      </property>
+      <property>
+        <code value="issuanceDate"/>
+        <valueString value="16 January 2024"/>
+      </property>
+      <property>
+        <code value="expiryDate"/>
+        <valueString value="30 July 2026"/>
+      </property>
+    </concept>
+    <concept>
+      <code value="1193768"/>
+      <display value="Ascorfed-Z Cap"/>
+      <property>
+        <code value="genericName"/>
+        <valueString value="Ascorbic Acid + Zinc"/>
+      </property>
+      <property>
+        <code value="dosageStrength"/>
+        <valueString value="500 mg (equivalent to 562.5 mg Sodium Ascorbate)/10 mg (equivalent to 27.5 mg Zinc Sulfate Monohydrate)"/>
+      </property>
+      <property>
+        <code value="dosageForm"/>
+        <valueString value="Capsule"/>
+      </property>
+      <property>
+        <code value="classification"/>
+        <valueString value="Over-the-Counter (OTC) Drug"/>
+      </property>
+      <property>
+        <code value="packaging"/>
+        <valueString value="Alu/Deep Red PVC Blister Pack x 10's / (Box of 30's and 100's)"/>
+      </property>
+      <property>
+        <code value="pharmacologicCategory"/>
+        <valueString value="Vitamin/Mineral"/>
+      </property>
+    </concept>
+  </concept>
+</CodeSystem>

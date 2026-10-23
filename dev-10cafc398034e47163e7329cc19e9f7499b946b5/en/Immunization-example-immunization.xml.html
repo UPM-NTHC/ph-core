@@ -1,0 +1,345 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>example-immunization - XML Representation - Draft PH Core Implementation Guide v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4.77"}
+    h3,h4,h5,h6{--heading-prefix:"4.77"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Draft PH Core Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>example-immunization</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-format -->
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Draft PH Core Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/phcore/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Immunization-example-immunization.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li class="active">
+      <a href="#">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Immunization-example-immunization.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Immunization-example-immunization.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+
+<h2 id="root">: example-immunization</h2>
+
+
+<p><a href="Immunization-example-immunization.xml" no-download="true">Raw xml</a> | <a href="Immunization-example-immunization.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization">Immunization</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/resource.html#Immunization.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;example-immunization&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/resource.html#Immunization.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/resource.html#Immunization.meta">meta</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/resource.html#Immunization.language">language</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;en&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/domainresource.html#Immunization.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Immunization example-immunization&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;example-immunization&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcexample-immunization&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profile: &lt;a href=&quot;StructureDefinition-ph-core-immunization.html&quot;&gt;PH Core Immunization&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;a href=&quot;http://terminology.hl7.org/7.1.0/NamingSystem-uri.html&quot; title=&quot;As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.&quot;&gt;Uniform Resource Identifier (URI)&lt;/a&gt;/urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;vaccineCode&lt;/b&gt;: &lt;span title=&quot;Codes:{http://hl7.org/fhir/sid/cvx 123}&quot;&gt;influenza, H5N1-1203&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=&quot;Patient-example-patient.html&quot;&gt;Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;a href=&quot;Encounter-encounter-single-example.html&quot;&gt;Encounter: identifier = http://example.org/encounter-id#ENC-12345; status = finished; class = ambulatory (ActCode#AMB); type = ambulatory; period = 2023-01-01 10:00:00+0000 --&amp;gt; 2023-01-01 11:00:00+0000&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;occurrence&lt;/b&gt;: 2013-01-10&lt;/p&gt;&lt;p&gt;&lt;b&gt;primarySource&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;lotNumber&lt;/b&gt;: AAJN11K&lt;/p&gt;&lt;p&gt;&lt;b&gt;expirationDate&lt;/b&gt;: 2015-02-15&lt;/p&gt;&lt;p&gt;&lt;b&gt;site&lt;/b&gt;: &lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActSite LA}&quot;&gt;left arm&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;route&lt;/b&gt;: &lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration IM}&quot;&gt;Injection, intramuscular&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;doseQuantity&lt;/b&gt;: 5 mg&lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt; (Details: UCUM  codemg = 'mg')&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Performers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Function&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;display: none&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/v2-0443 OP}&quot;&gt;Ordering Provider&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;Practitioner-example-practitioner.html&quot;&gt;Practitioner Maria Clara Santos &lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;note&lt;/b&gt;: &lt;/p&gt;&lt;blockquote&gt;&lt;div&gt;&lt;p&gt;Notes on adminstration of vaccine&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;isSubpotent&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;fundingSource&lt;/b&gt;: &lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/immunization-funding-source private}&quot;&gt;Private&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/<a href="http://hl7.org/fhir/R4/domainresource.html#Immunization.text">text</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:ietf:rfc:3986&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.identifier">identifier</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;completed&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.vaccineCode">vaccineCode</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/sid/cvx&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;123&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;influenza, H5N1-1203&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.vaccineCode">vaccineCode</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.patient">patient</a>&gt;<a href="Patient-example-patient.html" style="color: Maroon">&#x1F517;</a> 
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/example-patient&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.patient">patient</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.encounter">encounter</a>&gt;<a href="Encounter-encounter-single-example.html" style="color: Maroon">&#x1F517;</a> 
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Encounter/encounter-single-example&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.encounter">encounter</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.occurrence_x_">occurrenceDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2013-01-10&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.primarySource">primarySource</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.lotNumber">lotNumber</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;AAJN11K&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.expirationDate">expirationDate</a> <a href="http://hl7.org/fhir/R4/datatypes.html#date">value</a>=&quot;2015-02-15&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.site">site</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-ActSite&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;LA&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;left arm&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.site">site</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.route">route</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;IM&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Injection, intramuscular&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.route">route</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.doseQuantity">doseQuantity</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#decimal">value</a>=&quot;5&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://unitsofmeasure.org&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;mg&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.doseQuantity">doseQuantity</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.performer">performer</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.performer.function">function</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v2-0443&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;OP&quot;/&gt;
+      &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.performer.function">function</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.performer.actor">actor</a>&gt;<a href="Practitioner-example-practitioner.html" style="color: Maroon">&#x1F517;</a> 
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/example-practitioner&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.performer.actor">actor</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.performer">performer</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.note">note</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;Notes on adminstration of vaccine&quot;/&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.note">note</a>&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.isSubpotent">isSubpotent</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.fundingSource">fundingSource</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/immunization-funding-source&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;private&quot;/&gt;
+    &lt;/<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+  &lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.fundingSource">fundingSource</a>&gt;
+&lt;/<a href="http://hl7.org/fhir/R4/immunization.html#Immunization">Immunization</a>&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  
+          Package fhir.ph.core#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-10 07:33:00 +0000">
+    2026-06-10
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

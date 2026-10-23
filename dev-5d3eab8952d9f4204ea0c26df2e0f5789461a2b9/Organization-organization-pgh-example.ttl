@@ -1,0 +1,175 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "organization-pgh-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization organization-pgh-example</b></p><a name=\"organization-pgh-example\"> </a><a name=\"hcorganization-pgh-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p></div><p><b>identifier</b>: <a href=\"NamingSystem-DOHNHFRCodeNS.html\" title=\"Health Facility Code (HFC) from the National Health Facility Registry.\">DOHNHFRCode</a>/1234567890, <a href=\"NamingSystem-PhilHealthPANNS.html\" title=\"The unique number issued by PhilHealth to accredited institutions.\">PhilHealthPAN</a>/PAN-2024-56789, <a href=\"NamingSystem-PhilHealthPENNS.html\" title=\"The unique number issued by PhilHealth to employers.\">PhilHealthPEN</a>/PEN-987654321</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Philippine General Hospital</p><p><b>telecom</b>: <a href=\"tel:+63-2-8651-7800\">+63-2-8651-7800</a>, <a href=\"mailto:contact@pgh.gov.ph\">contact@pgh.gov.ph</a></p><p><b>address</b>: Taft Avenue Manila 1000 PH (work)</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td>Hospital Administrator</td><td><a href=\"tel:+63-2-8651-7801\">+63-2-8651-7801</a></td><td>Taft Avenue Manila 1000 PH (work)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code>
+     ] ;
+     fhir:value [ fhir:v "1234567890" ]
+  ] [
+     fhir:system [
+       fhir:v "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"^^xsd:anyURI ;
+       fhir:l <http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber>
+     ] ;
+     fhir:value [ fhir:v "PAN-2024-56789" ]
+  ] [
+     fhir:system [
+       fhir:v "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"^^xsd:anyURI ;
+       fhir:l <http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber>
+     ] ;
+     fhir:value [ fhir:v "PEN-987654321" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/organization-type>
+       ] ;
+       fhir:code [ fhir:v "prov" ] ;
+       fhir:display [ fhir:v "Healthcare Provider" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Philippine General Hospital"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-2-8651-7800" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "contact@pgh.gov.ph" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/region>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1300000000" ] ;
+         fhir:display [ fhir:v "National Capital Region" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380600000" ] ;
+         fhir:display [ fhir:v "City of Manila" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1339000003" ] ;
+         fhir:display [ fhir:v "Ermita" ]
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:type [ fhir:v "both" ] ;
+     fhir:line ( [ fhir:v "Taft Avenue" ] ) ;
+     fhir:city [ fhir:v "Manila" ] ;
+     fhir:district [ fhir:v "NCR" ] ;
+     fhir:postalCode [ fhir:v "1000" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:name [
+       fhir:text [ fhir:v "Hospital Administrator" ]
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "+63-2-8651-7801" ]
+     ] ) ;
+     fhir:address [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/region>
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psgc>
+           ] ;
+           fhir:code [ fhir:v "1300000000" ] ;
+           fhir:display [ fhir:v "National Capital Region" ]
+         ]
+       ] [
+         fhir:url [
+           fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psgc>
+           ] ;
+           fhir:code [ fhir:v "1380600000" ] ;
+           fhir:display [ fhir:v "City of Manila" ]
+         ]
+       ] [
+         fhir:url [
+           fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay>
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psgc>
+           ] ;
+           fhir:code [ fhir:v "1339000003" ] ;
+           fhir:display [ fhir:v "Ermita" ]
+         ]
+       ] ) ;
+       fhir:use [ fhir:v "work" ] ;
+       fhir:line ( [ fhir:v "Taft Avenue" ] ) ;
+       fhir:city [ fhir:v "Manila" ] ;
+       fhir:postalCode [ fhir:v "1000" ] ;
+       fhir:country [ fhir:v "PH" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

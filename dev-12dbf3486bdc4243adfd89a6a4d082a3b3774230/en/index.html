@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Home - Draft PH Core Implementation Guide v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Draft PH Core Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Draft PH Core Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/phcore/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Home</h2>
+  
+
+
+
+
+  <table class="colsd" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.2.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core|0.2.0"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="5">
+        
+          Draft
+          
+
+            as of 
+2026-10-21
+
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">PHCoreImplementationGuide</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<style>
+/* Container centers inline content */
+.svg-wrap {
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center; /* center smaller images without forcing them to grow */
+}
+
+/* Keep intrinsic size (no upscaling), allow downscaling to fit width,
+   but constrain very tall/large images by viewport height so they don't stretch the page. */
+.svg-wrap svg {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;       /* allow downscaling to container width */
+  height: auto !important; 
+  box-sizing: border-box;
+}
+</style>
+
+<h1 id="draft-philippine-core-fhir-implementation-guide-ph-core-ig">Draft Philippine Core FHIR Implementation Guide (PH Core IG)</h1>
+<div class="svg-wrap">
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" width="100%" viewBox="0 0 1400 200" preserveAspectRatio="xMidYMin meet">
+  <title id="title">DRAFT – PH-Core IG Disclaimer</title>
+  <desc id="desc">This guide is a draft and under active development. Not for public consumption.</desc>
+
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+      .panel { fill: #fff8d9; stroke: #e0c24f; stroke-width: 2; rx: 10; ry: 10; }
+      .header { fill: #c0392b; }
+      .title { fill: #ffffff; font-weight: 800; font-size: 40px; letter-spacing: 6px; }
+      .body  { fill: #222222; font-size: 30px; font-weight: 600; }
+      .muted { fill: #555555; font-size: 30px; }
+    </style>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="rgba(0,0,0,0.18)" />
+    </filter>
+    <linearGradient id="headerGloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d24b3e" />
+      <stop offset="1" stop-color="#b33427" />
+    </linearGradient>
+  </defs>
+
+  <!-- Card panel -->
+  <rect class="panel" x="6" y="6" width="1388" height="188" filter="url(#shadow)" />
+
+  <!-- Red header bar with DRAFT -->
+  <rect class="header" x="6" y="6" width="1388" height="64" rx="10" ry="10" fill="url(#headerGloss)" />
+  <text class="title" x="700" y="46" text-anchor="middle" dominant-baseline="middle">DRAFT</text>
+
+  <!-- Body text -->
+  <g transform="translate(0,10)">
+    <text class="body" x="66" y="112">This is still under development and not yet active for public consumption.</text>
+    <text class="muted" x="66" y="148">Content, data models, and implementation details are subject to change.</text>
+    <text class="muted" x="66" y="182"></text>
+  </g>
+
+  <!-- Optional right icon -->
+  <g transform="translate(1310,100) scale(1.8)" aria-hidden="true">
+    <circle cx="0" cy="0" r="30" fill="#f4d03f" stroke="#b7950b" stroke-width="2" />
+    <text x="0" y="19" text-anchor="middle" font-size="60" font-weight="700" fill="#c0392b">!</text>
+  </g>
+</svg>
+</div>
+<blockquote>
+  <p><strong>Project Status: In Development</strong><br />
+This Implementation Guide is under active development and is not yet available for public or production use. Content, data models, and implementation details are subject to change.</p>
+</blockquote>
+
+<p>The Philippine Core FHIR Implementation Guide (PH Core IG) defines the nationally agreed core clinical and administrative data standards for interoperable health information exchange in the Philippines. It provides a common, implementable foundation for health systems to consistently exchange data using the HL7® FHIR® standard.</p>
+
+<p>PH Core IG sits between the PH Base IG (foundational national rules) and program- or use case–specific IGs (such as the NHDR IG). It standardizes commonly used FHIR profiles, extensions, terminology bindings, and conformance expectations that are applicable across health programs, facilities, and systems nationwide.</p>
+
+<h1 id="project-background">Project Background</h1>
+
+<p>PH Core is actively being developed by UP Manila National TeleHealth Center, under the guidance of the Phillippines Department of Health, with technical assistance from CSIRO Australia.</p>
+
+<p>The initial draft of IG will be tested in the Connectathon to validate proof of concept and direction settings for the Philippines Core IG development process.</p>
+
+<h1 id="purpose-and-scope">Purpose and Scope</h1>
+
+<p>The PH Core IG aims to:</p>
+<ol>
+  <li>Promote nationwide consistency and interoperability of health data</li>
+  <li>Support alignment with national policies such as JAO 2021-0002</li>
+  <li>Enable reuse of HL7 and international FHIR artifacts</li>
+  <li>Provide clear, testable specifications for system implementers</li>
+</ol>
+
+<p>This guide focuses on core clinical and administrative resources (e.g., Patient, Practitioner, Organization, Encounter, Observation) that are widely applicable across multiple use cases. It does not define program-specific workflows or reporting payloads, which are addressed by downstream Implementation Guides.</p>
+
+<h1 id="usage-of-this-guide">Usage of this Guide</h1>
+<ul>
+  <li>Health information systems implement PH Core profiles as a baseline for interoperability</li>
+  <li>Program-specific IGs inherit from PH Core and apply additional constraints</li>
+  <li>Developers and vendors use the guide to build and validate FHIR-conformant systems</li>
+  <li>Policy and governance bodies use it as a reference for national standardization</li>
+</ul>
+
+<h1 id="development-and-governance">Development and Governance</h1>
+
+<p>The PH Core IG is developed through a collaborative, open, and standards-based process, involving the Department of Health (DOH), PhilHealth, UP Manila, and key technical partners. Development follows international best practices, uses open-source tooling (FHIR Shorthand, GitHub, IG Publisher), and is governed through structured review and change control mechanisms.</p>
+
+<h1 id="relationship-with-other-igs">Relationship with other IGs</h1>
+
+<p><strong>PH Core:</strong></p>
+<ul>
+  <li>defines a set of conformance requirements that enforce a set of ‘minimum requirements’ on the local concepts, specifying rules for the elements, extensions, vocabularies, and value sets, and the RESTful API interactions.</li>
+  <li>for use by the stakeholders in the Philippines when implementing FHIR to provide a common implementation and to be built upon when creating further profiles and implementation guides.</li>
+  <li>conformance may become tied to regulatory and/or contractual agreements in order to necessitate adoption to this more prescriptive specification.</li>
+</ul>
+
+<p>The context of PH Core within the set of FHIR Standards is shown in the diagram below.</p>
+
+<p>&lt;?xml version="1.0" encoding="us-ascii" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="439px" preserveAspectRatio="none" style="width:858px;height:439px;background:#FFFFFF;" version="1.1" viewBox="0 0 858 439" width="858px" zoomAndPan="magnify"><defs></defs><g><!--cluster r4--><g id="cluster_r4"><path d="M477.5,6 L495.5,6 A3.75,3.75 0 0 1 498,8.5 L505,28.2969 L584.5,28.2969 A2.5,2.5 0 0 1 587,30.7969 L587,96.5 A2.5,2.5 0 0 1 584.5,99 L477.5,99 A2.5,2.5 0 0 1 475,96.5 L475,8.5 A2.5,2.5 0 0 1 477.5,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"></path><line style="stroke:#000000;stroke-width:1.5;" x1="475" x2="505" y1="28.2969" y2="28.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="17" x="479" y="20.9951">r4</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="96" x="487" y="43.292">&#171;fhir_version&#187;</text></g><!--cluster ph_core--><g id="cluster_ph_core"><path d="M8.5,123 L72.5,123 A3.75,3.75 0 0 1 75,125.5 L82,145.2969 L690.5,145.2969 A2.5,2.5 0 0 1 693,147.7969 L693,430 A2.5,2.5 0 0 1 690.5,432.5 L8.5,432.5 A2.5,2.5 0 0 1 6,430 L6,125.5 A2.5,2.5 0 0 1 8.5,123 " fill="none" style="stroke:#000000;stroke-width:1.5;"></path><line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="82" y1="145.2969" y2="145.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="63" x="10" y="137.9951">ph_core</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="33" x="337" y="160.292">&#171;IG&#187;</text></g><!--cluster profiles--><g id="cluster_profiles"><path d="M391.5,182 L452.5,182 A3.75,3.75 0 0 1 455,184.5 L462,204.2969 L666.5,204.2969 A2.5,2.5 0 0 1 669,206.7969 L669,406 A2.5,2.5 0 0 1 666.5,408.5 L391.5,408.5 A2.5,2.5 0 0 1 389,406 L389,184.5 A2.5,2.5 0 0 1 391.5,182 " fill="none" style="stroke:#000000;stroke-width:1.5;"></path><line style="stroke:#000000;stroke-width:1.5;" x1="389" x2="462" y1="204.2969" y2="204.2969"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="60" x="393" y="196.9951">profiles</text></g><!--cluster ph_nhdr--><g id="cluster_ph_nhdr"><path d="M719.5,272.5 L784.5,272.5 A3.75,3.75 0 0 1 787,275 L794,294.7969 L848.5,294.7969 A2.5,2.5 0 0 1 851,297.2969 L851,430 A2.5,2.5 0 0 1 848.5,432.5 L719.5,432.5 A2.5,2.5 0 0 1 717,430 L717,275 A2.5,2.5 0 0 1 719.5,272.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"></path><line style="stroke:#000000;stroke-width:1.5;" x1="717" x2="794" y1="294.7969" y2="294.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="64" x="721" y="287.4951">ph_nhdr</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="33" x="771.5" y="309.792">&#171;IG&#187;</text></g><!--cluster profiles_nhdr--><g id="cluster_profiles_nhdr"><path d="M743.5,331.5 L804.5,331.5 A3.75,3.75 0 0 1 807,334 L814,353.7969 L824.5,353.7969 A2.5,2.5 0 0 1 827,356.2969 L827,406 A2.5,2.5 0 0 1 824.5,408.5 L743.5,408.5 A2.5,2.5 0 0 1 741,406 L741,334 A2.5,2.5 0 0 1 743.5,331.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"></path><line style="stroke:#000000;stroke-width:1.5;" x1="741" x2="814" y1="353.7969" y2="353.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="60" x="745" y="346.4951">profiles</text></g><!--class R4Patient--><g id="elem_R4Patient"><rect codeLine="11" fill="#F1F1F1" height="26.2969" id="R4Patient" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="54" x="504" y="57"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="507" y="74.9951">Patient</text></g><path d="M276.5,203.5 L353.5,203.5 A3.75,3.75 0 0 1 356,206 L363,225.7969 L367.5,225.7969 A2.5,2.5 0 0 1 370,228.2969 L370,253.5938 A2.5,2.5 0 0 1 367.5,256.0938 L276.5,256.0938 A2.5,2.5 0 0 1 274,253.5938 L274,206 A2.5,2.5 0 0 1 276.5,203.5 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><line style="stroke:#181818;stroke-width:0.5;" x1="274" x2="363" y1="225.7969" y2="225.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="278" y="218.4951">extensions</text><!--class PHCoreAddress--><g id="elem_PHCoreAddress"><rect codeLine="23" fill="#F1F1F1" height="26.2969" id="PHCoreAddress" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="405.5" y="217"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="408.5" y="234.9951">Address</text></g><!--class PHCoreOtherID--><g id="elem_PHCoreOtherID"><rect codeLine="24" fill="#F1F1F1" height="26.2969" id="PHCoreOtherID" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="59" x="593.5" y="217"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="596.5" y="234.9951">OtherID</text></g><!--class PHCorePatient--><g id="elem_PHCorePatient"><rect codeLine="25" fill="#F1F1F1" height="26.2969" id="PHCorePatient" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="54" x="504" y="217"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="507" y="234.9951">Patient</text></g><!--class PHCorePddRegistration--><g id="elem_PHCorePddRegistration"><rect codeLine="26" fill="#F1F1F1" height="26.2969" id="PHCorePddRegistration" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89" x="404.5" y="366.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="407.5" y="384.4951">Registration</text></g><!--class PHCorePhilHealthID--><g id="elem_PHCorePhilHealthID"><rect codeLine="27" fill="#F1F1F1" height="26.2969" id="PHCorePhilHealthID" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="88" x="529" y="366.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="532" y="384.4951">PhilHealthID</text></g><path d="M148,203.5 L222,203.5 A3.75,3.75 0 0 1 224.5,206 L231.5,225.7969 L236,225.7969 A2.5,2.5 0 0 1 238.5,228.2969 L238.5,253.5938 A2.5,2.5 0 0 1 236,256.0938 L148,256.0938 A2.5,2.5 0 0 1 145.5,253.5938 L145.5,206 A2.5,2.5 0 0 1 148,203.5 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><line style="stroke:#181818;stroke-width:0.5;" x1="145.5" x2="231.5" y1="225.7969" y2="225.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="149.5" y="218.4951">vocabulary</text><path d="M24.5,203.5 L93.5,203.5 A3.75,3.75 0 0 1 96,206 L103,225.7969 L107.5,225.7969 A2.5,2.5 0 0 1 110,228.2969 L110,253.5938 A2.5,2.5 0 0 1 107.5,256.0938 L24.5,256.0938 A2.5,2.5 0 0 1 22,253.5938 L22,206 A2.5,2.5 0 0 1 24.5,203.5 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"></path><line style="stroke:#181818;stroke-width:0.5;" x1="22" x2="103" y1="225.7969" y2="225.7969"></line><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="26" y="218.4951">extension</text><!--class NhdrPatient--><g id="elem_NhdrPatient"><rect codeLine="50" fill="#F1F1F1" height="26.2969" id="NhdrPatient" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="54" x="757" y="366.5"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="760" y="384.4951">Patient</text></g><!--reverse link R4Patient to PHCorePatient--><g id="link_R4Patient_PHCorePatient"><path codeLine="29" d="M531,103.31 C531,138.33 531,192.44 531,216.61 " fill="none" id="R4Patient-backto-PHCorePatient" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="524,103.14,531,83.14,538,103.14,524,103.14" style="stroke:#181818;stroke-width:1.0;"></polygon></g><!--reverse link PHCorePatient to NhdrPatient--><g id="link_PHCorePatient_NhdrPatient"><path codeLine="52" d="M565.93,252.65 C569.25,254.14 572.64,255.46 576,256.5 C615.62,268.79 631.35,247.08 669,264.5 C719.01,287.64 759.85,342.17 776.25,366.46 " fill="none" id="PHCorePatient-backto-NhdrPatient" style="stroke:#181818;stroke-width:1.0;"></path><polygon fill="none" points="562.41,258.71,548.15,243.03,569.07,246.39,562.41,258.71" style="stroke:#181818;stroke-width:1.0;"></polygon></g></g></svg></p>
+
+<h1 id="usage">Usage</h1>
+
+<p>PH Core is particularly useful in defining:</p>
+
+<ul>
+  <li>A testable level of system conformance</li>
+  <li>Assumed support by client applications</li>
+  <li>The basis of downstream implementation guides</li>
+</ul>
+
+<p>Implementation of capabilities defined in PH Core enables specifications, applications and business logic to be developed with confidence.</p>
+
+<p>This document is a working specification that may be directly implemented by FHIR®© system producers.</p>
+
+<p>FHIR®© Connectathon events are key to the verification of the guide as being suitable for implementation. This implementation guide will be used as the basis for the Philippines Connectathon events.</p>
+
+<h1 id="dependencies">Dependencies</h1>
+
+<p>This publication includes IP covered under the following statements.</p>
+<ul>
+<li>These codes are excerpted from ASTM Standard, E1762-95(2013) - Standard Guide for Electronic Authentication of Health Care Information, Copyright by ASTM International, 100 Barr Harbor Drive, West Conshohocken, PA 19428. Copies of this standard are available through the ASTM Web Site at www.astm.org.<div data-fhir="generated" id="ipp_1" onclick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_1" style="display: none">
+<ul>
+<li><a href="http://hl7.org/fhir/R4/codesystem-signature-type.html">Signature Type Codes</a>: <a href="Provenance-provenance-single-example.html">Provenance/provenance-single-example</a></li>
+</ul>
+</div></li>
+<li>This material contains content from <a href="http://loinc.org">LOINC</a>. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the <a href="http://loinc.org/license">license</a>. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.<div data-fhir="generated" id="ipp_2" onclick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_2" style="display: none">
+<ul>
+<li>LOINC: <a href="Bundle-transaction-example.html">Bundle/transaction-example</a>, <a href="Observation-blood-pressure.html">Observation/blood-pressure</a><span id="ips_2" onclick="document.getElementById('ips_2').innerHTML = document.getElementById('ips2_2').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 14 more</span></span><span id="ips2_2" style="display: none">, <a href="Observation-observation-based-on-service-example.html">Observation/observation-based-on-service-example</a>, <a href="Observation-observation-bp-example.html">Observation/observation-bp-example</a>, <a href="Observation-observation-derived-bmi-example.html">Observation/observation-derived-bmi-example</a>, <a href="Observation-observation-environmental-temp-example.html">Observation/observation-environmental-temp-example</a>, <a href="Observation-observation-glucose-example.html">Observation/observation-glucose-example</a>, <a href="Observation-observation-height-example.html">Observation/observation-height-example</a>, <a href="Observation-observation-lab-panel-example.html">Observation/observation-lab-panel-example</a>, <a href="Observation-observation-part-of-procedure-example.html">Observation/observation-part-of-procedure-example</a>, <a href="Observation-observation-performer-role-example.html">Observation/observation-performer-role-example</a>, <a href="Observation-observation-potassium-example.html">Observation/observation-potassium-example</a>, <a href="Observation-observation-sodium-example.html">Observation/observation-sodium-example</a>, <a href="Observation-observation-vitals-encounter-example.html">Observation/observation-vitals-encounter-example</a>, <a href="Observation-observation-weight-example.html">Observation/observation-weight-example</a> and <a href="Practitioner-practitioner-single-example.html">Practitioner/practitioner-single-example</a></span></li>
+</ul>
+</div></li>
+<li>This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact <a href="https://www.snomed.org/get-snomed">https://www.snomed.org/get-snomed</a> or <a href="mailto:info@snomed.org">info@snomed.org</a>.<div data-fhir="generated" id="ipp_3" onclick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_3" style="display: none">
+<ul>
+<li><a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED Clinical Terms&amp;reg; (SNOMED CT&amp;reg;)</a>: <a href="AllergyIntolerance-allergy-single-example.html">AllergyIntolerance/allergy-single-example</a>, <a href="AllergyIntolerance-example-allergy.html">AllergyIntolerance/example-allergy</a><span id="ips_3" onclick="document.getElementById('ips_3').innerHTML = document.getElementById('ips2_3').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 17 more</span></span><span id="ips2_3" style="display: none">, <a href="Bundle-transaction-example.html">Bundle/transaction-example</a>, <a href="Claim-claim-single-example.html">Claim/claim-single-example</a>, <a href="Condition-condition-single-example.html">Condition/condition-single-example</a>, <a href="Condition-example-condition.html">Condition/example-condition</a>, <a href="Immunization-immunization-single-example.html">Immunization/immunization-single-example</a>, <a href="Medication-medication-single-example.html">Medication/medication-single-example</a>, <a href="MedicationDispense-medicationdispense-single-example.html">MedicationDispense/medicationdispense-single-example</a>, <a href="MedicationRequest-medicationrequest-single-example.html">MedicationRequest/medicationrequest-single-example</a>, <a href="MedicationStatement-medicationstatement-single-example.html">MedicationStatement/medicationstatement-single-example</a>, <a href="Observation-blood-pressure.html">Observation/blood-pressure</a>, <a href="Observation-observation-bp-example.html">Observation/observation-bp-example</a>, <a href="HealthcareService-healthcareservice-single-example.html">Outpatient Department - General Medicine</a>, <a href="Practitioner-practitioner-single-example.html">Practitioner/practitioner-single-example</a>, <a href="PractitionerRole-practitionerrole-single-example.html">PractitionerRole/practitionerrole-single-example</a>, <a href="Procedure-procedure-single-example.html">Procedure/procedure-single-example</a>, <a href="ServiceRequest-servicerequest-single-example.html">ServiceRequest/servicerequest-single-example</a> and <a href="Task-task-single-example.html">Task/task-single-example</a></span></li>
+</ul>
+</div></li>
+<li>This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: <a href="https://terminology.hl7.org/license.html">https://terminology.hl7.org/license.html</a><div data-fhir="generated" id="ipp_4" onclick="if (document.getElementById('ipp2_4').innerHTML != '') {document.getElementById('ipp_4').innerHTML = document.getElementById('ipp2_4').innerHTML; document.getElementById('ipp2_4').innerHTML = ''}"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div id="ipp2_4" style="display: none">
+<ul>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a>: <a href="AllergyIntolerance-allergy-single-example.html">AllergyIntolerance/allergy-single-example</a>, <a href="AllergyIntolerance-example-allergy.html">AllergyIntolerance/example-allergy</a> and <a href="Bundle-transaction-example.html">Bundle/transaction-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-allergyintolerance-verification.html">AllergyIntolerance Verification Status</a>: <a href="AllergyIntolerance-allergy-single-example.html">AllergyIntolerance/allergy-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-claim-type.html">Claim Type Codes</a>: <a href="Claim-claim-single-example.html">Claim/claim-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-claimcareteamrole.html">Claim Care Team Role Codes</a>: <a href="Claim-claim-single-example.html">Claim/claim-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-category.html">Condition Category Codes</a>: <a href="Condition-condition-single-example.html">Condition/condition-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>: <a href="Bundle-transaction-example.html">Bundle/transaction-example</a>, <a href="Condition-condition-single-example.html">Condition/condition-single-example</a> and <a href="Condition-example-condition.html">Condition/example-condition</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>: <a href="Condition-condition-single-example.html">Condition/condition-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-ex-diagnosistype.html">Example Diagnosis Type Codes</a>: <a href="Claim-claim-single-example.html">Claim/claim-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-immunization-funding-source.html">Immunization Funding Source</a>: <a href="Immunization-example-immunization.html">Immunization/example-immunization</a> and <a href="Immunization-immunization-single-example.html">Immunization/immunization-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-location-physical-type.html">Location type</a>: <a href="Location-location-single-example.html">Philippine General Hospital</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-medicationdispense-performer-function.html">MedicationDispense Performer Function Codes</a>: <a href="MedicationDispense-medicationdispense-single-example.html">MedicationDispense/medicationdispense-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-observation-category.html">Observation Category Codes</a>: <a href="Bundle-transaction-example.html">Bundle/transaction-example</a>, <a href="Observation-blood-pressure.html">Observation/blood-pressure</a><span id="ips_15" onclick="document.getElementById('ips_15').innerHTML = document.getElementById('ips2_15').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 13 more</span></span><span id="ips2_15" style="display: none">, <a href="Observation-observation-based-on-service-example.html">Observation/observation-based-on-service-example</a>, <a href="Observation-observation-bp-example.html">Observation/observation-bp-example</a>, <a href="Observation-observation-derived-bmi-example.html">Observation/observation-derived-bmi-example</a>, <a href="Observation-observation-environmental-temp-example.html">Observation/observation-environmental-temp-example</a>, <a href="Observation-observation-glucose-example.html">Observation/observation-glucose-example</a>, <a href="Observation-observation-height-example.html">Observation/observation-height-example</a>, <a href="Observation-observation-lab-panel-example.html">Observation/observation-lab-panel-example</a>, <a href="Observation-observation-part-of-procedure-example.html">Observation/observation-part-of-procedure-example</a>, <a href="Observation-observation-performer-role-example.html">Observation/observation-performer-role-example</a>, <a href="Observation-observation-potassium-example.html">Observation/observation-potassium-example</a>, <a href="Observation-observation-sodium-example.html">Observation/observation-sodium-example</a>, <a href="Observation-observation-vitals-encounter-example.html">Observation/observation-vitals-encounter-example</a> and <a href="Observation-observation-weight-example.html">Observation/observation-weight-example</a></span></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-payeetype.html">Payee Type Codes</a>: <a href="Claim-claim-single-example.html">Claim/claim-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-practitioner-role.html">Practitioner role</a>: <a href="PractitionerRole-practitionerrole-single-example.html">PractitionerRole/practitionerrole-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-processpriority.html">Process Priority Codes</a>: <a href="Claim-claim-single-example.html">Claim/claim-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>: <a href="StructureDefinition-ph-core-provenance.html">PHCoreProvenance</a> and <a href="Provenance-provenance-single-example.html">Provenance/provenance-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-service-category.html">Service category</a>: <a href="HealthcareService-healthcareservice-single-example.html">Outpatient Department - General Medicine</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-service-type.html">Service type</a>: <a href="HealthcareService-healthcareservice-single-example.html">Outpatient Department - General Medicine</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v2-0131.html">contactRole2</a>: <a href="StructureDefinition-ph-core-patient.html">PHCorePatient</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v2-0203.html">identifierType</a>: <a href="RelatedPerson-relatedperson-single-example.html">RelatedPerson/relatedperson-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v2-0360.html">degreeLicenseCertificate</a>: <a href="Practitioner-practitioner-single-example.html">Practitioner/practitioner-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v2-0443.html">providerRole</a>: <a href="Immunization-example-immunization.html">Immunization/example-immunization</a>, <a href="Immunization-immunization-single-example.html">Immunization/immunization-single-example</a> and <a href="MedicationAdministration-medicationadministration-single-example.html">MedicationAdministration/medicationadministration-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-ActCode.html">ActCode</a>: <a href="Bundle-transaction-example.html">Bundle/transaction-example</a>, <a href="Encounter-encounter-single-example.html">Encounter/encounter-single-example</a> and <a href="Encounter-example-encounter.html">Encounter/example-encounter</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-ActReason.html">ActReason</a>: <a href="Provenance-provenance-single-example.html">Provenance/provenance-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-ActSite.html">ActSite</a>: <a href="Immunization-example-immunization.html">Immunization/example-immunization</a> and <a href="Immunization-immunization-single-example.html">Immunization/immunization-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-DataOperation.html">DataOperation</a>: <a href="Provenance-provenance-single-example.html">Provenance/provenance-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-MaritalStatus.html">MaritalStatus</a>: <a href="StructureDefinition-ph-core-patient.html">PHCorePatient</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-NullFlavor.html">NullFlavor</a>: <a href="StructureDefinition-ph-core-patient.html">PHCorePatient</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>: <a href="Bundle-transaction-example.html">Bundle/transaction-example</a>, <a href="Observation-blood-pressure.html">Observation/blood-pressure</a><span id="ips_32" onclick="document.getElementById('ips_32').innerHTML = document.getElementById('ips2_32').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 7 more</span></span><span id="ips2_32" style="display: none">, <a href="Observation-observation-based-on-service-example.html">Observation/observation-based-on-service-example</a>, <a href="Observation-observation-bp-example.html">Observation/observation-bp-example</a>, <a href="Observation-observation-derived-bmi-example.html">Observation/observation-derived-bmi-example</a>, <a href="Observation-observation-glucose-example.html">Observation/observation-glucose-example</a>, <a href="Observation-observation-performer-role-example.html">Observation/observation-performer-role-example</a>, <a href="Observation-observation-potassium-example.html">Observation/observation-potassium-example</a> and <a href="Observation-observation-sodium-example.html">Observation/observation-sodium-example</a></span></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-ParticipationType.html">ParticipationType</a>: <a href="Encounter-encounter-single-example.html">Encounter/encounter-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-Race.html">Race</a>: <a href="Bundle-transaction-example.html">Bundle/transaction-example</a>, <a href="Patient-example-patient.html">Patient/example-patient</a>, <a href="Patient-patient-single-example.html">Patient/patient-single-example</a> and <a href="StructureDefinition-race.html">Race</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-ReligiousAffiliation.html">Religious Affiliation</a>: <a href="Bundle-transaction-example.html">Bundle/transaction-example</a>, <a href="Patient-example-patient.html">Patient/example-patient</a> and <a href="Patient-patient-single-example.html">Patient/patient-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-RoleCode.html">RoleCode</a>: <a href="StructureDefinition-ph-core-patient.html">PHCorePatient</a>, <a href="Location-location-single-example.html">Philippine General Hospital</a> and <a href="RelatedPerson-relatedperson-single-example.html">RelatedPerson/relatedperson-single-example</a></li>
+<li><a href="http://terminology.hl7.org/7.4.0/CodeSystem-v3-RouteOfAdministration.html">RouteOfAdministration</a>: <a href="Immunization-example-immunization.html">Immunization/example-immunization</a>, <a href="Immunization-immunization-single-example.html">Immunization/immunization-single-example</a>, <a href="MedicationAdministration-medicationadministration-single-example.html">MedicationAdministration/medicationadministration-single-example</a>, <a href="MedicationRequest-medicationrequest-single-example.html">MedicationRequest/medicationrequest-single-example</a> and <a href="MedicationStatement-medicationstatement-single-example.html">MedicationStatement/medicationstatement-single-example</a></li>
+</ul>
+</div></li>
+</ul>
+<!--$$1$$-->
+<p>This is an R4 IG. None of the features it uses are changed in R4B, so it can be used as is with R4B systems. Packages for both <a href="../package.r4.tgz">R4 (fhir.ph.core.r4)</a> and <a href="../package.r4b.tgz">R4B (fhir.ph.core.r4b)</a> are available.</p>
+<!--$$2$$-->
+<div><table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="dep" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Implementation Guide Reference">IG</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Explains why this dependency exists">Comment</span></th></tr><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ph-core/ph-core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <span title="Canonical: https://fhir.doh.gov.ph/phcore">Draft PH Core Implementation Guide</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/fhir.ph.core/0.2.0">fhir.ph.core#0.2.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ph-core/ph-core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://terminology.hl7.org/7.4.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/7.4.0">hl7.terminology.r4#7.4.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on HL7 Terminology</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ph-core/ph-core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://hl7.org/fhir/extensions/5.3.0" title="Canonical: http://hl7.org/fhir/extensions">FHIR Extensions Pack</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.extensions.r4/5.3.0">hl7.fhir.uv.extensions.r4#5.3.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on the HL7 Extension Pack</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #fcf7c0" id="ac" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ph-core/ph-core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,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ZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6ZjNlMmQ5MzgtMDE4Yi00YmEyLThiMzQtNDBiM2Q4MmJjZDMzIgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0ZTMwYzM5LTllYWItNGJjZS1hMjU0LTUxOGY3ODRjODg0NiIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmUxNzgzM2U1LWQ1ZWMtNDM3NC1hYzJlLTk0YzVlN2I5OGUzNyIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09Ik1hYyBPUyIKICAgR0lNUDpUaW1lU3RhbXA9IjE3MjYxMzMyOTE1MjEwMDciCiAgIEdJTVA6VmVyc2lvbj0iMi4xMC4zMCIKICAgdGlmZjpPcmllbnRhdGlvbj0iMSIKICAgeG1wOkNyZWF0b3JUb29sPSJHSU1QIDIuMTAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmN2Q4YzdkZC1mMGNlLTQxNWYtOWQ1ZS04NGE2YThmNGZkMDUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTWFjIE9TKSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyNC0wOS0xMlQxNzoyODoxMSswODowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz7Mhr9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH6AkMCRwLD3FR3AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC8SURBVBjTY/gPAf9e/YUwmBig4Nh7CA0T+H/7JqrAhzf3UQR+TeB4DGEx/mdgYPhy/vg32W/iIUxQFW+Xvf7h9tb03AOolv8rHU84/Wf69fsRVOAt80F1+Tcal/k/QAVuqfx0e/tRmVmBBSrAyyPG8zTglpmEEFRAgUfkj8Z9BUVO2ddQFeIC/wQYFBj4PnMwMDCwMDAwCDB95RJj+8DDygsVYBFiY2Bj4f4nCncpA8OfH/9/8zMzMDAwAAB49kdRfpOTuAAAAABJRU5ErkJggg==" alt="." style="background-color: #fcf7c0; background-color: inherit" title="NPM Package IG Dependency" class="hierarchy" /> <a href="http://hl7.org/fhir/tools/1.1.2" title="Canonical: http://hl7.org/fhir/tools">FHIR Tooling Extensions IG</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.tools.r4/1.1.2">hl7.fhir.uv.tools.r4#1.1.2</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">for example references</td></tr>
+</table></div>
+<table class="grid"><tr><td><p><b>Package hl7.fhir.uv.extensions.r4#5.3.0</b></p>
+<p>This IG defines the global extensions - the ones defined for everyone. These extensions are always in scope wherever FHIR is being used (built Sat, May 16, 2026 18:32+1000+10:00)</p>
+</td></tr></table>
+<table class="grid"><tr><td><p><b>Package hl7.fhir.uv.tools.r4#1.1.2</b></p>
+<p>This IG defines the extensions that the tools use internally. Some of these extensions are content that are being evaluated for elevation into the main spec, and others are tooling concerns (built Tue, Mar 24, 2026 11:13+1100+11:00)</p>
+</td></tr></table>
+<!--$$3$$-->
+<div><table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="dep" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Implementation Guide Reference">IG</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Explains why this dependency exists">Comment</span></th></tr><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ph-core/ph-core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <span title="Canonical: https://fhir.doh.gov.ph/phcore">Draft PH Core Implementation Guide</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/fhir.ph.core/0.2.0">fhir.ph.core#0.2.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ph-core/ph-core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://terminology.hl7.org/7.4.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/7.4.0">hl7.terminology.r4#7.4.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on HL7 Terminology</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ph-core/ph-core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy" /> <a href="http://hl7.org/fhir/extensions/5.3.0" title="Canonical: http://hl7.org/fhir/extensions">FHIR Extensions Pack</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.extensions.r4/5.3.0">hl7.fhir.uv.extensions.r4#5.3.0</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on the HL7 Extension Pack</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #fcf7c0" id="ac" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/ph-core/ph-core/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy" /><img src="data:image/png;base64,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ZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6ZjNlMmQ5MzgtMDE4Yi00YmEyLThiMzQtNDBiM2Q4MmJjZDMzIgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0ZTMwYzM5LTllYWItNGJjZS1hMjU0LTUxOGY3ODRjODg0NiIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmUxNzgzM2U1LWQ1ZWMtNDM3NC1hYzJlLTk0YzVlN2I5OGUzNyIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09Ik1hYyBPUyIKICAgR0lNUDpUaW1lU3RhbXA9IjE3MjYxMzMyOTE1MjEwMDciCiAgIEdJTVA6VmVyc2lvbj0iMi4xMC4zMCIKICAgdGlmZjpPcmllbnRhdGlvbj0iMSIKICAgeG1wOkNyZWF0b3JUb29sPSJHSU1QIDIuMTAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmN2Q4YzdkZC1mMGNlLTQxNWYtOWQ1ZS04NGE2YThmNGZkMDUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTWFjIE9TKSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyNC0wOS0xMlQxNzoyODoxMSswODowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz7Mhr9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH6AkMCRwLD3FR3AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC8SURBVBjTY/gPAf9e/YUwmBig4Nh7CA0T+H/7JqrAhzf3UQR+TeB4DGEx/mdgYPhy/vg32W/iIUxQFW+Xvf7h9tb03AOolv8rHU84/Wf69fsRVOAt80F1+Tcal/k/QAVuqfx0e/tRmVmBBSrAyyPG8zTglpmEEFRAgUfkj8Z9BUVO2ddQFeIC/wQYFBj4PnMwMDCwMDAwCDB95RJj+8DDygsVYBFiY2Bj4f4nCncpA8OfH/9/8zMzMDAwAAB49kdRfpOTuAAAAABJRU5ErkJggg==" alt="." style="background-color: #fcf7c0; background-color: inherit" title="NPM Package IG Dependency" class="hierarchy" /> <a href="http://hl7.org/fhir/tools/1.1.2" title="Canonical: http://hl7.org/fhir/tools">FHIR Tooling Extensions IG</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.tools.r4/1.1.2">hl7.fhir.uv.tools.r4#1.1.2</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">for example references</td></tr>
+</table></div>
+<!--$$3$$-->
+<table style="border: 1px #F0F0F0 solid;"><thead><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th><b>Implementation Guide</b></th><th><b>Version(s)</b></th><th><b>Reason</b></th></tr></thead><tbody><tr style="font-size: 11px; font-family: verdana; vertical-align: top; background-color: white"><td><span class="copy-text" title="canonical: http://hl7.org/fhir/extensions"><a style="font-size: 11px; font-family: verdana; font-weight:bold" href="http://hl7.org/fhir/extensions/5.3.0">FHIR Extensions Pack</a><button class="btn-copy" title="Click to copy URL" data-clipboard-text="http://hl7.org/fhir/extensions" /></span></td><td><span class="copy-text" title="package: hl7.fhir.uv.extensions.r4#5.3.0"><a style="font-size: 11px; font-family: verdana; font-weight: bold" href="https://simplifier.net/packages/hl7.fhir.uv.extensions.r4/5.3.0">5.3.0</a><button class="btn-copy" title="Click to copy package" data-clipboard-text="hl7.fhir.uv.extensions.r4#5.3.0" /></span></td><td><p>Automatically added as a dependency - all IGs depend on the HL7 Extension Pack</p>
+</td></tr><tr style="font-size: 11px; font-family: verdana; vertical-align: top; background-color: #F7F7F7"><td><span class="copy-text" title="canonical: http://hl7.org/fhir"><a style="font-size: 11px; font-family: verdana; font-weight:normal" href="http://hl7.org/fhir/R4">FHIR R4 package : Core</a><button class="btn-copy" title="Click to copy URL" data-clipboard-text="http://hl7.org/fhir" /></span></td><td><span class="copy-text" title="package: hl7.fhir.r4.core#4.0.1"><a style="font-size: 11px; font-family: verdana; font-weight: normal" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1">4.0.1</a><button class="btn-copy" title="Click to copy package" data-clipboard-text="hl7.fhir.r4.core#4.0.1" /></span></td><td style="font-style: italic;">Imported by HL7 Terminology (THO) (and potentially others)</td></tr><tr style="font-size: 11px; font-family: verdana; vertical-align: top; background-color: white"><td><span class="copy-text" title="canonical: http://terminology.hl7.org"><a style="font-size: 11px; font-family: verdana; font-weight:bold" href="http://terminology.hl7.org/7.4.0">HL7 Terminology (THO)</a><button class="btn-copy" title="Click to copy URL" data-clipboard-text="http://terminology.hl7.org" /></span></td><td><span class="copy-text" title="package: hl7.terminology.r4#7.4.0"><a style="font-size: 11px; font-family: verdana; font-weight: bold" href="https://simplifier.net/packages/hl7.terminology.r4/7.4.0">7.4.0</a><button class="btn-copy" title="Click to copy package" data-clipboard-text="hl7.terminology.r4#7.4.0" /></span></td><td><p>Automatically added as a dependency - all IGs depend on HL7 Terminology</p>
+</td></tr></tbody></table>
+<!--$$3$$-->
+<p><i>There are no Global profiles defined</i></p>
+<!--$$4$$-->
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  
+          Package fhir.ph.core#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-10-21 14:45:00 +0000">
+    2026-10-21
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

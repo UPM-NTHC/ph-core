@@ -1,0 +1,226 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "patient-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "code"^^xsd:anyURI ;
+         fhir:l fhir:code
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+             fhir:l <urn:iso:std:iso:3166>
+           ] ;
+           fhir:code [ fhir:v "PH" ] ;
+           fhir:display [ fhir:v "Philippines" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "period"^^xsd:anyURI ;
+         fhir:l fhir:period
+       ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2020-01-01"^^xsd:date ] ;
+         fhir:end [ fhir:v "2023-01-01"^^xsd:date ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/patient-nationality"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/patient-nationality>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/patient-religion"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/patient-religion>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation>
+         ] ;
+         fhir:code [ fhir:v "1007" ] ;
+         fhir:display [ fhir:v "Atheism" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people>
+     ] ;
+     fhir:value [
+       a fhir:Boolean ;
+       fhir:v true
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-group"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-group>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs>
+         ] ;
+         fhir:code [ fhir:v "Aetas" ] ;
+         fhir:display [ fhir:v "Aetas" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/race"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/race>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-Race"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-Race>
+         ] ;
+         fhir:code [ fhir:v "2036-2" ] ;
+         fhir:display [ fhir:v "Filipino" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psced/level"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psced/level>
+         ] ;
+         fhir:code [ fhir:v "C201301" ] ;
+         fhir:display [ fhir:v "Elementary Graduate" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "occupationClassification"^^xsd:anyURI ;
+         fhir:l fhir:occupationClassification
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psoc/unit"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psoc/unit>
+           ] ;
+           fhir:code [ fhir:v "111102" ] ;
+           fhir:display [ fhir:v "Hospital Administrator" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "occupationLength"^^xsd:anyURI ;
+         fhir:l fhir:occupationLength
+       ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2020-01-01"^^xsd:date ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation>
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"^^xsd:anyURI ;
+       fhir:l <http://philhealth.gov.ph/fhir/Identifier/philhealth-id>
+     ] ;
+     fhir:value [ fhir:v "63-584789845-5" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Dela Cruz" ] ;
+     fhir:given ( [ fhir:v "Juan Jane" ] [ fhir:v "Dela Fuente" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1980-01-01"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380100001" ] ;
+         fhir:display [ fhir:v "Barangay 1" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380200000" ] ;
+         fhir:display [ fhir:v "City of Las Piñas" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/province"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/province>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "0402100000" ] ;
+         fhir:display [ fhir:v "Cavite" ]
+       ]
+     ] ) ;
+     fhir:line ( [ fhir:v "123 Mabini Street" ] [ fhir:v "Barangay Malinis" ] ) ;
+     fhir:city [ fhir:v "Quezon City" ] ;
+     fhir:district [ fhir:v "NCR" ] ;
+     fhir:postalCode [ fhir:v "1100" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

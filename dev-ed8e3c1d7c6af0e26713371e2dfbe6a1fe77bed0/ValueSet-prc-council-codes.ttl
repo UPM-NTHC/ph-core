@@ -1,0 +1,233 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/prc-council-codes> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "prc-council-codes"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet prc-council-codes</b></p><a name=\"prc-council-codes\"> </a><a name=\"hcprc-council-codes\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-prc.html\"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/prc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.1</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-ACC\">ACC</a></td><td>Accountancy</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-AER\">AER</a></td><td>Aeronautical Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-ABE\">ABE</a></td><td>Agricultural &amp; Biosystems Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-AGR\">AGR</a></td><td>Agriculture</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-ARC\">ARC</a></td><td>Architecture</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-CHE\">CHE</a></td><td>Chemical Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-CHM\">CHM</a></td><td>Chemistry</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OCE\">OCE</a></td><td>Civil Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-CRM\">CRM</a></td><td>Criminology</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OCB\">OCB</a></td><td>Customs Broker</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-DNT\">DNT</a></td><td>Dentistry</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OEE\">OEE</a></td><td>Electrical Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-ECE\">ECE</a></td><td>Electronics Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OEP\">OEP</a></td><td>Environmental Planning</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-FIS\">FIS</a></td><td>Fisheries</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-FRT\">FRT</a></td><td>Forestry</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OGE\">OGE</a></td><td>Geodetic Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-GEO\">GEO</a></td><td>Geology</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OGC\">OGC</a></td><td>Guidance &amp; Counseling</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OID\">OID</a></td><td>Interior Design</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OLA\">OLA</a></td><td>Landscape Architecture</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-LIB\">LIB</a></td><td>Librarian</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OMP\">OMP</a></td><td>Master Plumbing</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-MEE\">MEE</a></td><td>Mechanical Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OMT\">OMT</a></td><td>Medical Technology</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-MED\">MED</a></td><td>Medicine</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OME\">OME</a></td><td>Metallurgical Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-MDW\">MDW</a></td><td>Midwifery</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-MIN\">MIN</a></td><td>Mining Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-NAME\">NAME</a></td><td>Naval Architecture</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-NRS\">NRS</a></td><td>Nursing</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-NAD\">NAD</a></td><td>Nutrition &amp; Dietetics</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OCT\">OCT</a></td><td>Occupational Therapy</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OPT\">OPT</a></td><td>Optometry</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-PHA\">PHA</a></td><td>Pharmacy</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-PHT\">PHT</a></td><td>Physical Therapy</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-PTR\">PTR</a></td><td>Professional Teachers</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-PSYCH\">PSYCH</a></td><td>Psychology</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-RAD\">RAD</a></td><td>Radiologic Technology</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-RAE\">RAE</a></td><td>Real Estate Service</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-RES\">RES</a></td><td>Respiratory Therapy</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-SAN\">SAN</a></td><td>Sanitary Engineering</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-OSW\">OSW</a></td><td>Social Workers</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-VET\">VET</a></td><td>Veterinary Medicine</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.doh.gov.ph/phcore/ValueSet/prc-council-codes"] ;
+  fhir:ValueSet.version [ fhir:value "0.2.1"] ;
+  fhir:ValueSet.name [ fhir:value "PRCCouncilCodesVS"] ;
+  fhir:ValueSet.title [ fhir:value "PRC Council Codes ValueSet"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-10-17"^^xsd:date] ;
+  fhir:ValueSet.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "The Council and Code entries in the PRC CPDAS profession table as of 12 January 2021. The source says its profession codes are used for attendance sheets at accredited CPD programs."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.purpose [ fhir:value "Use for the CPD Council classification shown in the dated PRC CPDAS table."] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/prc" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "ACC" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Accountancy" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AER" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aeronautical Engineering" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "ABE" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Agricultural & Biosystems Engineering" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AGR" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Agriculture" ]
+       ], [
+         fhir:index 4 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "ARC" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Architecture" ]
+       ], [
+         fhir:index 5 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "CHE" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chemical Engineering" ]
+       ], [
+         fhir:index 6 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "CHM" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chemistry" ]
+       ], [
+         fhir:index 7 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OCE" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Civil Engineering" ]
+       ], [
+         fhir:index 8 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "CRM" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Criminology" ]
+       ], [
+         fhir:index 9 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OCB" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Customs Broker" ]
+       ], [
+         fhir:index 10 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "DNT" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dentistry" ]
+       ], [
+         fhir:index 11 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OEE" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Electrical Engineering" ]
+       ], [
+         fhir:index 12 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "ECE" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Electronics Engineering" ]
+       ], [
+         fhir:index 13 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OEP" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Environmental Planning" ]
+       ], [
+         fhir:index 14 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "FIS" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fisheries" ]
+       ], [
+         fhir:index 15 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "FRT" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Forestry" ]
+       ], [
+         fhir:index 16 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OGE" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Geodetic Engineering" ]
+       ], [
+         fhir:index 17 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "GEO" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Geology" ]
+       ], [
+         fhir:index 18 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OGC" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Guidance & Counseling" ]
+       ], [
+         fhir:index 19 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OID" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Interior Design" ]
+       ], [
+         fhir:index 20 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OLA" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Landscape Architecture" ]
+       ], [
+         fhir:index 21 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "LIB" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Librarian" ]
+       ], [
+         fhir:index 22 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OMP" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Master Plumbing" ]
+       ], [
+         fhir:index 23 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MEE" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mechanical Engineering" ]
+       ], [
+         fhir:index 24 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OMT" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medical Technology" ]
+       ], [
+         fhir:index 25 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MED" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medicine" ]
+       ], [
+         fhir:index 26 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OME" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Metallurgical Engineering" ]
+       ], [
+         fhir:index 27 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MDW" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Midwifery" ]
+       ], [
+         fhir:index 28 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MIN" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mining Engineering" ]
+       ], [
+         fhir:index 29 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NAME" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Naval Architecture" ]
+       ], [
+         fhir:index 30 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NRS" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nursing" ]
+       ], [
+         fhir:index 31 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NAD" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nutrition & Dietetics" ]
+       ], [
+         fhir:index 32 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OCT" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Occupational Therapy" ]
+       ], [
+         fhir:index 33 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OPT" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Optometry" ]
+       ], [
+         fhir:index 34 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PHA" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacy" ]
+       ], [
+         fhir:index 35 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PHT" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physical Therapy" ]
+       ], [
+         fhir:index 36 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PTR" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Professional Teachers" ]
+       ], [
+         fhir:index 37 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PSYCH" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Psychology" ]
+       ], [
+         fhir:index 38 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "RAD" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Radiologic Technology" ]
+       ], [
+         fhir:index 39 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "RAE" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Real Estate Service" ]
+       ], [
+         fhir:index 40 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "RES" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory Therapy" ]
+       ], [
+         fhir:index 41 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "SAN" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sanitary Engineering" ]
+       ], [
+         fhir:index 42 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OSW" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Social Workers" ]
+       ], [
+         fhir:index 43 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "VET" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Veterinary Medicine" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/prc-council-codes.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,48 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "practitionerrole-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole practitionerrole-single-example</b></p><a name=\"practitionerrole-single-example\"> </a><a name=\"hcpractitionerrole-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a></p></div><p><b>identifier</b>: <code>http://doh.gov.ph/fhir/Identifier/practitioner-role-id</code>/PR-OPD-001</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-practitioner-single-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>organization</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>code</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/phcore/CodeSystem/prc 2200}\">Physician</span></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 394802001}\">General medicine</span></p><p><b>location</b>: <a href=\"Location-location-single-example.html\">Location Philippine General Hospital</a></p><p><b>telecom</b>: <a href=\"tel:+63-2-8651-7800\">+63-2-8651-7800</a>, <a href=\"mailto:maria.santos@doh.gov.ph\">maria.santos@doh.gov.ph</a></p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://doh.gov.ph/fhir/Identifier/practitioner-role-id",
+    "value" : "PR-OPD-001"
+  }],
+  "active" : true,
+  "practitioner" : {
+    "reference" : "Practitioner/practitioner-single-example"
+  },
+  "organization" : {
+    "reference" : "Organization/organization-pgh-example"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "https://fhir.doh.gov.ph/phcore/CodeSystem/prc",
+      "code" : "2200",
+      "display" : "Physician"
+    }]
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "394802001",
+      "display" : "General medicine"
+    }]
+  }],
+  "location" : [{
+    "reference" : "Location/location-single-example"
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+63-2-8651-7800"
+  },
+  {
+    "system" : "email",
+    "value" : "maria.santos@doh.gov.ph"
+  }]
+}

@@ -1,0 +1,240 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/PHFDACPRCS> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PHFDACPRCS"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PHFDACPRCS</b></p><a name=\"PHFDACPRCS\"> </a><a name=\"hcPHFDACPRCS\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>productInfo</td><td>productInfo</td><td>string</td><td>Product information document</td></tr><tr><td>genericName</td><td>genericName</td><td>string</td><td>Generic/INN name of the drug</td></tr><tr><td>dosageStrength</td><td>dosageStrength</td><td>string</td><td>Dosage strength/concentration</td></tr><tr><td>dosageForm</td><td>dosageForm</td><td>string</td><td>Dosage form (e.g., Tablet, Injection)</td></tr><tr><td>classification</td><td>classification</td><td>string</td><td>Drug classification (RX, OTC, etc.)</td></tr><tr><td>packaging</td><td>packaging</td><td>string</td><td>Packaging description</td></tr><tr><td>pharmacologicCategory</td><td>pharmacologicCategory</td><td>string</td><td>Pharmacologic/therapeutic category</td></tr><tr><td>manufacturer</td><td>manufacturer</td><td>string</td><td>Drug manufacturer</td></tr><tr><td>countryOfOrigin</td><td>countryOfOrigin</td><td>string</td><td>Country where manufactured</td></tr><tr><td>trader</td><td>trader</td><td>string</td><td>Trading company</td></tr><tr><td>importer</td><td>importer</td><td>string</td><td>Importing company</td></tr><tr><td>distributor</td><td>distributor</td><td>string</td><td>Distributing company</td></tr><tr><td>applicationType</td><td>applicationType</td><td>string</td><td>Type of FDA application</td></tr><tr><td>issuanceDate</td><td>issuanceDate</td><td>string</td><td>Registration issuance date</td></tr><tr><td>expiryDate</td><td>expiryDate</td><td>string</td><td>Registration expiry date</td></tr></table><p><b>Concepts</b></p><p>This case-insensitive code system <code>https://verification.fda.gov.ph</code> provides <b>a fragment</b> that includes following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>genericName</b></td><td><b>dosageStrength</b></td><td><b>dosageForm</b></td><td><b>classification</b></td><td><b>packaging</b></td><td><b>pharmacologicCategory</b></td><td><b>manufacturer</b></td><td><b>countryOfOrigin</b></td><td><b>importer</b></td><td><b>distributor</b></td><td><b>applicationType</b></td><td><b>issuanceDate</b></td><td><b>expiryDate</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">PH-FDA-DRUGS<a name=\"PHFDACPRCS-PH-FDA-DRUGS\"> </a></td><td>Philippine FDA Registered Drug Products</td><td>Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines</td><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/><td/></tr><tr><td>2</td><td style=\"white-space:nowrap\">  DRP-10144<a name=\"PHFDACPRCS-DRP-10144\"> </a></td><td>Twinact</td><td/><td>Telmisartan + Amlodipine (as besilate)</td><td>40 mg 5 mg</td><td>Tablet</td><td>Prescription Drug (RX)</td><td>Alu/Alu blister pack x 10's (Box of 30's)</td><td>-</td><td>Dasan Pharmaceutical Co., Ltd.</td><td>Korea</td><td>Unilab, Inc.</td><td>Unilab, Inc.</td><td>Initial (Reconstruction)</td><td>16 January 2024</td><td>30 July 2026</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  1193768<a name=\"PHFDACPRCS-1193768\"> </a></td><td>Ascorfed-Z Cap</td><td/><td>Ascorbic Acid + Zinc</td><td>500 mg (equivalent to 562.5 mg Sodium Ascorbate)/10 mg (equivalent to 27.5 mg Zinc Sulfate Monohydrate)</td><td>Capsule</td><td>Over-the-Counter (OTC) Drug</td><td>Alu/Deep Red PVC Blister Pack x 10's / (Box of 30's and 100's)</td><td>Vitamin/Mineral</td><td/><td/><td/><td/><td/><td/><td/></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://verification.fda.gov.ph"^^xsd:anyURI ;
+     fhir:l <https://verification.fda.gov.ph>
+  ] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "PHFDACPRCS"] ; # 
+  fhir:title [ fhir:v "PH FDA Certificate of Product Registration (CPR) CodeSystem"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-03-21"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-NTHC" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Registered drug products from the Philippine Food and Drug Administration (FDA)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v false] ; # 
+  fhir:hierarchyMeaning [ fhir:v "is-a"] ; # 
+  fhir:content [ fhir:v "fragment"] ; # 
+  fhir:property ( [
+     fhir:code [ fhir:v "productInfo" ] ;
+     fhir:description [ fhir:v "Product information document" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "genericName" ] ;
+     fhir:description [ fhir:v "Generic/INN name of the drug" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "dosageStrength" ] ;
+     fhir:description [ fhir:v "Dosage strength/concentration" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "dosageForm" ] ;
+     fhir:description [ fhir:v "Dosage form (e.g., Tablet, Injection)" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "classification" ] ;
+     fhir:description [ fhir:v "Drug classification (RX, OTC, etc.)" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "packaging" ] ;
+     fhir:description [ fhir:v "Packaging description" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "pharmacologicCategory" ] ;
+     fhir:description [ fhir:v "Pharmacologic/therapeutic category" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "manufacturer" ] ;
+     fhir:description [ fhir:v "Drug manufacturer" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "countryOfOrigin" ] ;
+     fhir:description [ fhir:v "Country where manufactured" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "trader" ] ;
+     fhir:description [ fhir:v "Trading company" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "importer" ] ;
+     fhir:description [ fhir:v "Importing company" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "distributor" ] ;
+     fhir:description [ fhir:v "Distributing company" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "applicationType" ] ;
+     fhir:description [ fhir:v "Type of FDA application" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "issuanceDate" ] ;
+     fhir:description [ fhir:v "Registration issuance date" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] [
+     fhir:code [ fhir:v "expiryDate" ] ;
+     fhir:description [ fhir:v "Registration expiry date" ] ;
+     fhir:type [ fhir:v "string" ]
+  ] ) ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "PH-FDA-DRUGS" ] ;
+     fhir:display [ fhir:v "Philippine FDA Registered Drug Products" ] ;
+     fhir:definition [ fhir:v "Root concept for all FDA Certificate of Product Registration (CPR) registered medications in the Philippines" ] ;
+     fhir:concept ( [
+       fhir:code [ fhir:v "DRP-10144" ] ;
+       fhir:display [ fhir:v "Twinact" ] ;
+       fhir:property ( [
+         fhir:code [ fhir:v "genericName" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Telmisartan + Amlodipine (as besilate)"
+         ]
+       ] [
+         fhir:code [ fhir:v "dosageStrength" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "40 mg 5 mg"
+         ]
+       ] [
+         fhir:code [ fhir:v "dosageForm" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Tablet"
+         ]
+       ] [
+         fhir:code [ fhir:v "classification" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Prescription Drug (RX)"
+         ]
+       ] [
+         fhir:code [ fhir:v "packaging" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Alu/Alu blister pack x 10's (Box of 30's)"
+         ]
+       ] [
+         fhir:code [ fhir:v "pharmacologicCategory" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "-"
+         ]
+       ] [
+         fhir:code [ fhir:v "manufacturer" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Dasan Pharmaceutical Co., Ltd."
+         ]
+       ] [
+         fhir:code [ fhir:v "countryOfOrigin" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Korea"
+         ]
+       ] [
+         fhir:code [ fhir:v "importer" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Unilab, Inc."
+         ]
+       ] [
+         fhir:code [ fhir:v "distributor" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Unilab, Inc."
+         ]
+       ] [
+         fhir:code [ fhir:v "applicationType" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Initial (Reconstruction)"
+         ]
+       ] [
+         fhir:code [ fhir:v "issuanceDate" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "16 January 2024"
+         ]
+       ] [
+         fhir:code [ fhir:v "expiryDate" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "30 July 2026"
+         ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "1193768" ] ;
+       fhir:display [ fhir:v "Ascorfed-Z Cap" ] ;
+       fhir:property ( [
+         fhir:code [ fhir:v "genericName" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Ascorbic Acid + Zinc"
+         ]
+       ] [
+         fhir:code [ fhir:v "dosageStrength" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "500 mg (equivalent to 562.5 mg Sodium Ascorbate)/10 mg (equivalent to 27.5 mg Zinc Sulfate Monohydrate)"
+         ]
+       ] [
+         fhir:code [ fhir:v "dosageForm" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Capsule"
+         ]
+       ] [
+         fhir:code [ fhir:v "classification" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Over-the-Counter (OTC) Drug"
+         ]
+       ] [
+         fhir:code [ fhir:v "packaging" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Alu/Deep Red PVC Blister Pack x 10's / (Box of 30's and 100's)"
+         ]
+       ] [
+         fhir:code [ fhir:v "pharmacologicCategory" ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Vitamin/Mineral"
+         ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

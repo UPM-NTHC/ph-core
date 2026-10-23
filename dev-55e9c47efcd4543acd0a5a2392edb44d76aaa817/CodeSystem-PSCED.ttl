@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/PSCED> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "PSCED"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSCED</b></p><a name=\"PSCED\"> </a><a name=\"hcPSCED\"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psced/level</code> provides some codes <b>that are example only</b>:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">C201301<a name=\"PSCED-C201301\"> </a></td><td>Elementary Graduate</td><td>Completed elementary education</td></tr><tr><td style=\"white-space:nowrap\">C201302<a name=\"PSCED-C201302\"> </a></td><td>High School Graduate</td><td>Completed secondary education</td></tr><tr><td style=\"white-space:nowrap\">C201303<a name=\"PSCED-C201303\"> </a></td><td>College Graduate</td><td>Completed bachelor's degree</td></tr><tr><td style=\"white-space:nowrap\">C201304<a name=\"PSCED-C201304\"> </a></td><td>Postgraduate</td><td>Completed master's or doctoral degree</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://psa.gov.ph/classification/psced/level"] ;
+  fhir:CodeSystem.version [ fhir:value "0.2.0"] ;
+  fhir:CodeSystem.name [ fhir:value "PSCED"] ;
+  fhir:CodeSystem.title [ fhir:value "Mock PSCED"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-09T08:36:51+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Mock of the Philippine Standard Classification of Education."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "example"] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "C201301" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Elementary Graduate" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Completed elementary education" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "C201302" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "High School Graduate" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Completed secondary education" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "C201303" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "College Graduate" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Completed bachelor's degree" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "C201304" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Postgraduate" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Completed master's or doctoral degree" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/PSCED.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

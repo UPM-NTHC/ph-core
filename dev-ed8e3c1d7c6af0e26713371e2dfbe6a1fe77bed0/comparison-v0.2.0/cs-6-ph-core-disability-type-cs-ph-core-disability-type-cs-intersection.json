@@ -1,0 +1,54 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "bb78b133-e6d5-40ba-aed4-b8be82514327-15",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/bb78b133-e6d5-40ba-aed4-b8be82514327-15",
+  "name" : "IntersectionPHCoreDisabilityTypeCSAndPHCoreDisabilityTypeCS",
+  "title" : "Intersection of PH Core Disability Type Code System And PH Core Disability Type Code System",
+  "status" : "draft",
+  "date" : "2026-10-23T04:37:24+00:00",
+  "concept" : [{
+    "code" : "visual",
+    "display" : "Visual Disability",
+    "definition" : "Complete or partial loss of sight/visual function."
+  },
+  {
+    "code" : "hearing",
+    "display" : "Hearing Disability",
+    "definition" : "Complete or partial loss of hearing/hearing function."
+  },
+  {
+    "code" : "speech",
+    "display" : "Speech Impairment",
+    "definition" : "Complete or partial loss of speech or communication function."
+  },
+  {
+    "code" : "physical",
+    "display" : "Physical/Orthopedic Disability",
+    "definition" : "Impairment in physical/orthopedic function including locomotor disabilities."
+  },
+  {
+    "code" : "intellectual",
+    "display" : "Intellectual Disability",
+    "definition" : "Significant limitations in intellectual functioning and adaptive behavior."
+  },
+  {
+    "code" : "learning",
+    "display" : "Learning Disability",
+    "definition" : "Neurological disorders affecting acquisition and use of listening, speaking, reading, writing, reasoning, or mathematical abilities."
+  },
+  {
+    "code" : "psychosocial",
+    "display" : "Psychosocial Disability",
+    "definition" : "Mental health conditions and psychosocial impairments."
+  },
+  {
+    "code" : "visual-low-vision",
+    "display" : "Low Vision",
+    "definition" : "Significant visual impairment not correctable by standard glasses/contact lenses."
+  },
+  {
+    "code" : "visual-blindness",
+    "display" : "Blindness",
+    "definition" : "Complete loss of vision or light perception."
+  }]
+}

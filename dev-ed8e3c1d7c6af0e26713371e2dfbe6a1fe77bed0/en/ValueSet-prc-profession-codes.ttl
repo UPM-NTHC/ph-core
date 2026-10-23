@@ -1,0 +1,322 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/prc-profession-codes> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "prc-profession-codes"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet prc-profession-codes</b></p><a name=\"prc-profession-codes\"> </a><a name=\"hcprc-profession-codes\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-prc.html\"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/prc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.1</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-100\">100</a></td><td>Certified Public Accountant</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-3400\">3400</a></td><td>Aeronautical Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-200\">200</a></td><td>Agricultural And Biosystems Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-4200\">4200</a></td><td>Agriculturist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-300\">300</a></td><td>Architect</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-410\">410</a></td><td>Chemical Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-510\">510</a></td><td>Chemist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-520\">520</a></td><td>Chemical Technician</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-600\">600</a></td><td>Civil Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-3500\">3500</a></td><td>Criminologist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-800\">800</a></td><td>Customs Broker</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-910\">910</a></td><td>Dentist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-920\">920</a></td><td>Dental Hygienist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-930\">930</a></td><td>Dental Technologist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1100\">1100</a></td><td>Registered Electrical Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1110\">1110</a></td><td>Professional Electrical Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1150\">1150</a></td><td>Registered Master Electrician</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1200\">1200</a></td><td>Electronics And Communications Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1201\">1201</a></td><td>Professional Electronics Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1202\">1202</a></td><td>Electronics Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1203\">1203</a></td><td>Electronics Technician</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-3600\">3600</a></td><td>Environmental Planner</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-4300\">4300</a></td><td>Fisheries Technologist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1300\">1300</a></td><td>Forester</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1410\">1410</a></td><td>Geodetic Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1510\">1510</a></td><td>Geologist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1520\">1520</a></td><td>Geologic Aide</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-4100\">4100</a></td><td>Guidance Counselor</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-310\">310</a></td><td>Interior Designer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-320\">320</a></td><td>Landscape Architect</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-3800\">3800</a></td><td>Librarian</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1900\">1900</a></td><td>Master Plumber</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2010\">2010</a></td><td>Professional Mechanical Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2040\">2040</a></td><td>Mechanical Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2060\">2060</a></td><td>Certified Plant Mechanic</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2110\">2110</a></td><td>Medical Technologist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2120\">2120</a></td><td>Medical Laboratory Technician</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2200\">2200</a></td><td>Physician</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1810\">1810</a></td><td>Metallurgical Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1820\">1820</a></td><td>Metallurgical Plant Foreman</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2310\">2310</a></td><td>Midwife (Ra 2382)</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2320\">2320</a></td><td>Midwife</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2410\">2410</a></td><td>Mining Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2420\">2420</a></td><td>Certified Mine Foreman</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2440\">2440</a></td><td>Certified Quarry Foreman</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2500\">2500</a></td><td>Naval Architect &amp; Marine Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2600\">2600</a></td><td>Nurse</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-1010\">1010</a></td><td>Nutritionist Dietitian</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2920\">2920</a></td><td>Occupational Therapist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2700\">2700</a></td><td>Optometrist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2710\">2710</a></td><td>Ocular Pharmacologist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2810\">2810</a></td><td>Pharmacist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2820\">2820</a></td><td>Chinese Druggist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-2910\">2910</a></td><td>Physical Therapist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-4000\">4000</a></td><td>Professional Teacher</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-4520\">4520</a></td><td>Psychologist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-4530\">4530</a></td><td>Psychometrician</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-3710\">3710</a></td><td>Radiologic Technologist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-3720\">3720</a></td><td>X-Ray Technologist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-4410\">4410</a></td><td>Real Estate Consultant</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-4420\">4420</a></td><td>Real Estate Appraiser</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-4430\">4430</a></td><td>Real Estate Broker</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-4510\">4510</a></td><td>Respiratory Therapist</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-3000\">3000</a></td><td>Sanitary Engineer</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-3200\">3200</a></td><td>Social Worker</td></tr><tr><td><a href=\"CodeSystem-prc.html#prc-3300\">3300</a></td><td>Veterinarian</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.doh.gov.ph/phcore/ValueSet/prc-profession-codes"] ;
+  fhir:ValueSet.version [ fhir:value "0.2.1"] ;
+  fhir:ValueSet.name [ fhir:value "PRCProfessionCodesVS"] ;
+  fhir:ValueSet.title [ fhir:value "PRC Profession Codes ValueSet"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-10-17"^^xsd:date] ;
+  fhir:ValueSet.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "The 66 numerical profession codes in the PRC CPDAS table as of 12 January 2021. PRC states that the codes are used on attendance sheets for accredited CPD programs, and notes that the FAQ is subject to regular updating. Use these codes for a qualification or practitioner role only when the CPDAS profession classification matches; the code does not assert current license validity."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.purpose [ fhir:value "Preferred classification for PRC profession codes when they accurately describe the qualification held."] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/prc" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "100" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Certified Public Accountant" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3400" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aeronautical Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "200" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Agricultural And Biosystems Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4200" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Agriculturist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "300" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Architect" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "410" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chemical Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "510" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chemist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "520" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chemical Technician" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "600" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Civil Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3500" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Criminologist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "800" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Customs Broker" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "910" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dentist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "920" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Hygienist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "930" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Technologist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1100" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Registered Electrical Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1110" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Professional Electrical Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1150" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Registered Master Electrician" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1200" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Electronics And Communications Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1201" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Professional Electronics Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1202" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Electronics Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1203" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Electronics Technician" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3600" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Environmental Planner" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4300" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fisheries Technologist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1300" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Forester" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1410" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Geodetic Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1510" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Geologist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1520" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Geologic Aide" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4100" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Guidance Counselor" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "310" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Interior Designer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "320" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Landscape Architect" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3800" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Librarian" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1900" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Master Plumber" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2010" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Professional Mechanical Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2040" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mechanical Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2060" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Certified Plant Mechanic" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2110" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medical Technologist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2120" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medical Laboratory Technician" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2200" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physician" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1810" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Metallurgical Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1820" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Metallurgical Plant Foreman" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2310" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Midwife (Ra 2382)" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2320" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Midwife" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2410" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mining Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2420" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Certified Mine Foreman" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2440" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Certified Quarry Foreman" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2500" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Naval Architect & Marine Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2600" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nurse" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1010" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nutritionist Dietitian" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2920" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Occupational Therapist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2700" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Optometrist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2710" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ocular Pharmacologist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2810" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2820" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Chinese Druggist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "2910" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Physical Therapist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Professional Teacher" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4520" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Psychologist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4530" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Psychometrician" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3710" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Radiologic Technologist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3720" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "X-Ray Technologist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4410" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Real Estate Consultant" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4420" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Real Estate Appraiser" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4430" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Real Estate Broker" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4510" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Respiratory Therapist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sanitary Engineer" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3200" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Social Worker" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3300" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Veterinarian" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/prc-profession-codes.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

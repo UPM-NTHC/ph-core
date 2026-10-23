@@ -1,0 +1,30 @@
+# Anonymous Patient with Mother's Maiden Name - Draft PH Core Implementation Guide v0.2.1
+
+## Example Patient: Anonymous Patient with Mother's Maiden Name
+
+The patient's own name is recorded as unknown. The mother's full maiden name, Maria Cruz Santos, is available from the source record and is included only as supplementary matching information; it does not identify the patient by itself.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Patient",
+  "id" : "patient-anonymous-mothers-maiden-name-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"]
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName",
+    "valueString" : "Maria Cruz Santos"
+  }],
+  "name" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+      "valueCode" : "unknown"
+    }]
+  }]
+}
+
+```

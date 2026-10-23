@@ -1,0 +1,92 @@
+{
+  "resourceType" : "Organization",
+  "id" : "organization-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization organization-single-example</b></p><a name=\"organization-single-example\"> </a><a name=\"hcorganization-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p></div><p><b>identifier</b>: <code>https://nhfr.doh.gov.ph/</code>/0987654321, <code>https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code</code>/HCPN-EXAMPLE-MANILA-001, <code>http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber</code>/PAN-2024-00001, <code>http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber</code>/PEN-000000001, <code>http://my-hospital.org/internal-id</code>/HOSP-INT-12345</p><p><b>active</b>: true</p><p><b>name</b>: Example Manila Health Center</p><p><b>telecom</b>: <a href=\"tel:+63-2-8651-7800\">+63-2-8651-7800</a>, <a href=\"mailto:contact@doh.gov.ph\">contact@doh.gov.ph</a></p><p><b>address</b>: 123 Hospital Street 1000 PH (work)</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td>Health Facility Contact</td><td><a href=\"tel:+63-2-8651-7800\">+63-2-8651-7800</a></td><td>125 Central Office Street 1000 PH (work)</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "https://nhfr.doh.gov.ph/",
+    "value" : "0987654321"
+  },
+  {
+    "system" : "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code",
+    "value" : "HCPN-EXAMPLE-MANILA-001"
+  },
+  {
+    "system" : "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber",
+    "value" : "PAN-2024-00001"
+  },
+  {
+    "system" : "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber",
+    "value" : "PEN-000000001"
+  },
+  {
+    "system" : "http://my-hospital.org/internal-id",
+    "value" : "HOSP-INT-12345"
+  }],
+  "active" : true,
+  "name" : "Example Manila Health Center",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+63-2-8651-7800",
+    "use" : "work"
+  },
+  {
+    "system" : "email",
+    "value" : "contact@doh.gov.ph",
+    "use" : "work"
+  }],
+  "address" : [{
+    "extension" : [{
+      "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/region",
+      "valueCoding" : {
+        "system" : "https://psa.gov.ph/classification/psgc",
+        "code" : "1300000000"
+      }
+    },
+    {
+      "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+      "valueCoding" : {
+        "system" : "https://psa.gov.ph/classification/psgc",
+        "code" : "1380600000"
+      }
+    }],
+    "use" : "work",
+    "line" : ["123 Hospital Street"],
+    "postalCode" : "1000",
+    "country" : "PH"
+  }],
+  "contact" : [{
+    "name" : {
+      "text" : "Health Facility Contact"
+    },
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "+63-2-8651-7800"
+    }],
+    "address" : {
+      "extension" : [{
+        "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/region",
+        "valueCoding" : {
+          "system" : "https://psa.gov.ph/classification/psgc",
+          "code" : "1300000000"
+        }
+      },
+      {
+        "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+        "valueCoding" : {
+          "system" : "https://psa.gov.ph/classification/psgc",
+          "code" : "1380600000"
+        }
+      }],
+      "use" : "work",
+      "line" : ["125 Central Office Street"],
+      "postalCode" : "1000",
+      "country" : "PH"
+    }
+  }]
+}

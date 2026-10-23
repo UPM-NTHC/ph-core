@@ -1,0 +1,52 @@
+{
+  "resourceType" : "Observation",
+  "id" : "observation-pain-acs",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-pain-acs</b></p><a name=\"observation-pain-acs\"> </a><a name=\"hcobservation-pain-acs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category survey}\">Survey</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 72514-3}\">Pain severity - 0-10 verbal numeric rating [Score] - Reported</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>effective</b>: 2026-06-12 08:30:00+0800</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 8 score<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{score} = '{score}')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation HH}\">Critical high</span></p><p><b>note</b>: </p><blockquote><div><p>Patient reports crushing substernal chest pain radiating to left arm.</p>\n</div></blockquote></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "survey",
+      "display" : "Survey"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "72514-3",
+      "display" : "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/patient-acs-example"
+  },
+  "encounter" : {
+    "reference" : "Encounter/encounter-ed-example"
+  },
+  "effectiveDateTime" : "2026-06-12T08:30:00+08:00",
+  "performer" : [{
+    "reference" : "Practitioner/practitioner-ed-example"
+  }],
+  "valueQuantity" : {
+    "value" : 8,
+    "unit" : "score",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "{score}"
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "HH",
+      "display" : "Critical high"
+    }]
+  }],
+  "note" : [{
+    "text" : "Patient reports crushing substernal chest pain radiating to left arm."
+  }]
+}

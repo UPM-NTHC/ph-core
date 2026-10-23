@@ -1,0 +1,58 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "encounter-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter encounter-single-example</b></p><a name=\"encounter-single-example\"> </a><a name=\"hcencounter-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-encounter.html\">PH Core Encounter</a></p></div><p><b>identifier</b>: <code>http://example.org/encounter-id</code>/ENC-12345</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.4.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode AMB}\">ambulatory</span></p><p><b>subject</b>: <a href=\"Patient-patient-single-example.html\">Juan Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}\">attender</span></td><td><a href=\"Practitioner-practitioner-single-example.html\">Practitioner Maria Clara Santos (official)</a></td></tr></table><p><b>period</b>: 2025-03-15 09:00:00+0800 --&gt; 2025-03-15 11:30:00+0800</p><p><b>reasonReference</b>: <a href=\"Condition-condition-single-example.html\">Condition Diabetes mellitus type 2</a></p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Condition</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Condition-condition-single-example.html\">Condition Diabetes mellitus type 2</a></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://example.org/encounter-id",
+    "value" : "ENC-12345"
+  }],
+  "status" : "finished",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "AMB",
+    "display" : "ambulatory"
+  },
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "AMB",
+      "display" : "ambulatory"
+    }]
+  }],
+  "subject" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "participant" : [{
+    "type" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+        "code" : "ATND",
+        "display" : "attender"
+      }]
+    }],
+    "individual" : {
+      "reference" : "Practitioner/practitioner-single-example"
+    }
+  }],
+  "period" : {
+    "start" : "2025-03-15T09:00:00+08:00",
+    "end" : "2025-03-15T11:30:00+08:00"
+  },
+  "reasonReference" : [{
+    "reference" : "Condition/condition-single-example"
+  }],
+  "diagnosis" : [{
+    "condition" : {
+      "reference" : "Condition/condition-single-example"
+    }
+  }],
+  "serviceProvider" : {
+    "reference" : "Organization/organization-pgh-example"
+  }
+}

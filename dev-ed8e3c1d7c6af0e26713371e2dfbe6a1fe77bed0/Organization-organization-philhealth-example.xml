@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="organization-philhealth-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization organization-philhealth-example</b></p><a name="organization-philhealth-example"> </a><a name="hcorganization-philhealth-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-organization.html">PH Core Organization</a></p></div><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type ins}">Insurance Company</span></p><p><b>name</b>: Philippine Health Insurance Corporation (illustrative)</p></div>
+  </text>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="ins"/>
+      <display value="Insurance Company"/>
+    </coding>
+  </type>
+  <name value="Philippine Health Insurance Corporation (illustrative)"/>
+</Organization>

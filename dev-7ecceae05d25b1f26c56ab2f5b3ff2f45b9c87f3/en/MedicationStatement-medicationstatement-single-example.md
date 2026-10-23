@@ -1,0 +1,71 @@
+# medicationstatement-single-example - Draft PH Core Implementation Guide v0.2.0
+
+## Example MedicationStatement: medicationstatement-single-example
+
+Patient Juan Dela Cruz reports taking Twinact 40mg/5mg tablet (Telmisartan + Amlodipine) once daily for hypertension, starting March 10, 2025.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "MedicationStatement",
+  "id" : "medicationstatement-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement"]
+  },
+  "status" : "active",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://verification.fda.gov.ph",
+      "code" : "DRP-10144",
+      "display" : "Twinact"
+    }],
+    "text" : "Twinact 40mg/5mg tablet"
+  },
+  "subject" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "context" : {
+    "reference" : "Encounter/encounter-single-example"
+  },
+  "effectivePeriod" : {
+    "start" : "2025-03-10",
+    "end" : "2025-03-15"
+  },
+  "dateAsserted" : "2025-03-10T10:30:00+08:00",
+  "informationSource" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "38341003",
+      "display" : "Hypertensive disorder"
+    }]
+  }],
+  "note" : [{
+    "text" : "Patient reports taking medication once daily for hypertension"
+  }],
+  "dosage" : [{
+    "sequence" : 1,
+    "text" : "Take 1 tablet once daily",
+    "timing" : {
+      "repeat" : {
+        "frequency" : 1,
+        "period" : 1,
+        "periodUnit" : "d"
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "code" : "PO",
+        "display" : "Swallow, oral"
+      }]
+    }
+  }]
+}
+
+```

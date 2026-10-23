@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/prc-all-codes> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "prc-all-codes"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet prc-all-codes</b></p><a name=\"prc-all-codes\"> </a><a name=\"hcprc-all-codes\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-prc.html\"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/prc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.1</span></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.doh.gov.ph/phcore/ValueSet/prc-all-codes"] ;
+  fhir:ValueSet.version [ fhir:value "0.2.1"] ;
+  fhir:ValueSet.name [ fhir:value "PRCAllCodesVS"] ;
+  fhir:ValueSet.title [ fhir:value "PRC All Codes ValueSet"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-10-17"^^xsd:date] ;
+  fhir:ValueSet.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "The complete set of all concepts defined by PRCCodeSystem version 0.1.0, including its root and structural grouping concepts. This immutable technical ValueSet is the CodeSystem's full-content ValueSet; use the category-specific PRC ValueSets for code selection."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.immutable [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.purpose [ fhir:value "Identify the complete contents of PRCCodeSystem version 0.1.0 for CodeSystem.valueSet metadata and terminology server compatibility."] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/prc" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/prc-all-codes.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

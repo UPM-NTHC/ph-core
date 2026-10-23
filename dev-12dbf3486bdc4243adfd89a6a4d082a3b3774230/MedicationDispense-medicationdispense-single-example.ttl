@@ -1,0 +1,96 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationDispense/medicationdispense-single-example> a fhir:MedicationDispense ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "medicationdispense-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationdispense" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationdispense>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pharmacy dispensed 30 tablets of Twinact 40mg/5mg (Telmisartan + Amlodipine) to Juan Dela Cruz on March 15, 2025, based on prescription from Dr. Maria Clara Santos.</div>"
+  ] ;
+  fhir:MedicationDispense.status [ fhir:value "completed"] ;
+  fhir:MedicationDispense.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://verification.fda.gov.ph" ] ;
+       fhir:Coding.code [ fhir:value "DRP-10144" ] ;
+       fhir:Coding.display [ fhir:value "Twinact" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Twinact 40mg/5mg tablet" ]
+  ] ;
+  fhir:MedicationDispense.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:MedicationDispense.context [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-single-example" ]
+  ] ;
+  fhir:MedicationDispense.performer [
+     fhir:index 0 ;
+     fhir:MedicationDispense.performer.function [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function" ] ;
+         fhir:Coding.code [ fhir:value "finalchecker" ] ;
+         fhir:Coding.display [ fhir:value "Final Checker" ]
+       ]
+     ] ;
+     fhir:MedicationDispense.performer.actor [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+     ]
+  ] ;
+  fhir:MedicationDispense.authorizingPrescription [
+     fhir:index 0 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/MedicationRequest/medicationrequest-single-example> ;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/medicationrequest-single-example" ]
+  ] ;
+  fhir:MedicationDispense.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:373784005 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "373784005" ] ;
+       fhir:Coding.display [ fhir:value "Dispensing medication" ]
+     ]
+  ] ;
+  fhir:MedicationDispense.quantity [
+     fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "Tablet" ] ;
+     fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ] ;
+     fhir:Quantity.code [ fhir:value "732936001" ]
+  ] ;
+  fhir:MedicationDispense.daysSupply [
+     fhir:Quantity.value [ fhir:value "7"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "days" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "d" ]
+  ] ;
+  fhir:MedicationDispense.whenPrepared [ fhir:value "2025-03-15T10:30:00+08:00"^^xsd:dateTime] ;
+  fhir:MedicationDispense.whenHandedOver [ fhir:value "2025-03-15T11:00:00+08:00"^^xsd:dateTime] ;
+  fhir:MedicationDispense.dosageInstruction [
+     fhir:index 0 ;
+     fhir:Dosage.sequence [ fhir:value "1"^^xsd:integer ] ;
+     fhir:Dosage.text [ fhir:value "Take 1 tablet once daily" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationDispense/medicationdispense-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

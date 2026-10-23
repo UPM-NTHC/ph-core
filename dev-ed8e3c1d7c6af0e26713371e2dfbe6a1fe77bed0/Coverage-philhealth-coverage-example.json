@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Coverage",
+  "id" : "philhealth-coverage-example",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Coverage philhealth-coverage-example</b></p><a name=\"philhealth-coverage-example\"> </a><a name=\"hcphilhealth-coverage-example\"> </a><p><b>status</b>: Active</p><p><b>subscriber</b>: <a href=\"Patient-patient-single-example.html\">Juan Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>subscriberId</b>: 63-584789845-5</p><p><b>beneficiary</b>: <a href=\"Patient-patient-single-example.html\">Juan Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>payor</b>: <a href=\"Organization-organization-philhealth-example.html\">Organization Philippine Health Insurance Corporation (illustrative)</a></p></div>"
+  },
+  "status" : "active",
+  "subscriber" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "subscriberId" : "63-584789845-5",
+  "beneficiary" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "payor" : [{
+    "reference" : "Organization/organization-philhealth-example"
+  }]
+}

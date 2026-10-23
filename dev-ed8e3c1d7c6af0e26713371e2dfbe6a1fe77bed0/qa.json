@@ -1,0 +1,19 @@
+{
+  "url" : "https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core",
+  "name" : "PHCoreImplementationGuide",
+  "title" : "Draft PH Core Implementation Guide",
+  "description" : "This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH Core profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.",
+  "status" : "draft",
+  "package-id" : "fhir.ph.core",
+  "ig-ver" : "0.2.1",
+  "date" : "Fri, 23 Oct, 2026 04:35:45 +0000",
+  "dateISO8601" : "2026-10-23T04:35:45+00:00",
+  "errs" : 0,
+  "warnings" : 35,
+  "hints" : 72,
+  "suppressed-hints" : 274,
+  "suppressed-warnings" : 24,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1537248440
+}

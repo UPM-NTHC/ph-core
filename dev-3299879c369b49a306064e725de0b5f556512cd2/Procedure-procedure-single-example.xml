@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="procedure-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Procedure procedure-single-example</b></p><a name="procedure-single-example"> </a><a name="hcprocedure-single-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-procedure.html">PH Core Procedure</a></p></div><p><b>identifier</b>: <a href="NamingSystem-DOHProcedureIDNS.html" title="Identifier system for procedures assigned by the Department of Health (DOH) health facilities.">DOHProcedureID</a>/PROC-2024-000123 (use: usual, ), <a href="NamingSystem-PhilHealthProcedureIDNS.html" title="Identifier system for procedures assigned by PhilHealth for claims and reimbursement purposes.">PhilHealthProcedureID</a>/PH-APP-789456 (use: secondary, )</p><p><b>basedOn</b>: ServiceRequest for emergency appendectomy</p><p><b>partOf</b>: Episode of care for acute abdomen treatment</p><p><b>status</b>: Completed</p><p><b>statusReason</b>: <span title="Codes:{http://snomed.info/sct 385669000}">Successful</span></p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 387713003}">Surgical procedure</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 80146002}">Laparoscopic appendectomy</span></p><p><b>subject</b>: <a href="Patient-patient-single-example.html">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-single-example.html">Encounter: identifier = http://example.org/encounter-id#ENC-12345; status = finished; class = ambulatory (ActCode#AMB); type = ambulatory; period = 2023-01-01 10:00:00+0000 --&gt; 2023-01-01 11:00:00+0000</a></p><p><b>performed</b>: 2024-01-15 08:30:00+0800 --&gt; 2024-01-15 10:15:00+0800</p><p><b>recorder</b>: <a href="Practitioner-practitioner-single-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>asserter</b>: <a href="RelatedPerson-relatedperson-single-example.html">RelatedPerson Maria Cruz Santos(official)</a></p><blockquote><p><b>performer</b></p><p><b>function</b>: <span title="Codes:{http://snomed.info/sct 223366009}">Healthcare professional</span></p><p><b>actor</b>: <a href="Practitioner-practitioner-single-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>onBehalfOf</b>: <a href="Organization-organization-single-example.html">Organization Department of Health - Sattelite Office</a></p></blockquote><blockquote><p><b>performer</b></p><p><b>function</b>: <span title="Codes:{http://snomed.info/sct 133932002}">Caregiver</span></p><p><b>actor</b>: <a href="RelatedPerson-relatedperson-single-example.html">RelatedPerson Maria Cruz Santos(official)</a></p></blockquote><p><b>reasonCode</b>: <span title="Codes:{http://snomed.info/sct 74400008}">Acute appendicitis with peritonitis</span></p><p><b>reasonReference</b>: <a href="Condition-condition-single-example.html">Condition Diabetes mellitus type 2</a></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 66754008}">Right lower quadrant abdomen</span></p><p><b>outcome</b>: <span title="Codes:{http://snomed.info/sct 385669000}">Procedure completed without complications</span></p><p><b>followUp</b>: <span title="Codes:{http://snomed.info/sct 226007004}">Follow-up visit in 7 days for wound check</span></p><p><b>note</b>: @2024-01-15 10:30:00+0800</p><blockquote><div><p>Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact. No perforation noted.</p>
+</div></blockquote><p><b>usedCode</b>: <span title="Codes:{http://snomed.info/sct 261424001}">Laparoscopic instruments</span></p></div>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <system value="https://fhir.doh.gov.ph/phcore/NamingSystem/procedure-id"/>
+    <value value="PROC-2024-000123"/>
+  </identifier>
+  <identifier>
+    <use value="secondary"/>
+    <system value="http://philhealth.gov.ph/procedure"/>
+    <value value="PH-APP-789456"/>
+  </identifier>
+  <basedOn>
+    <display value="ServiceRequest for emergency appendectomy"/>
+  </basedOn>
+  <partOf>
+    <display value="Episode of care for acute abdomen treatment"/>
+  </partOf>
+  <status value="completed"/>
+  <statusReason>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="385669000"/>
+      <display value="Successful"/>
+    </coding>
+  </statusReason>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="387713003"/>
+      <display value="Surgical procedure"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="80146002"/>
+      <display value="Appendectomy"/>
+    </coding>
+    <text value="Laparoscopic appendectomy"/>
+  </code>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/encounter-single-example"/>
+  </encounter>
+  <performedPeriod>
+    <start value="2024-01-15T08:30:00+08:00"/>
+    <end value="2024-01-15T10:15:00+08:00"/>
+  </performedPeriod>
+  <recorder>
+    <reference value="Practitioner/practitioner-single-example"/>
+  </recorder>
+  <asserter>
+    <reference value="RelatedPerson/relatedperson-single-example"/>
+  </asserter>
+  <performer>
+    <function>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="223366009"/>
+        <display value="Healthcare professional"/>
+      </coding>
+    </function>
+    <actor>
+      <reference value="Practitioner/practitioner-single-example"/>
+    </actor>
+    <onBehalfOf>
+      <reference value="Organization/organization-single-example"/>
+    </onBehalfOf>
+  </performer>
+  <performer>
+    <function>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="133932002"/>
+        <display value="Caregiver"/>
+      </coding>
+    </function>
+    <actor>
+      <reference value="RelatedPerson/relatedperson-single-example"/>
+    </actor>
+  </performer>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="74400008"/>
+      <display value="Appendicitis"/>
+    </coding>
+    <text value="Acute appendicitis with peritonitis"/>
+  </reasonCode>
+  <reasonReference>
+    <reference value="Condition/condition-single-example"/>
+  </reasonReference>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="66754008"/>
+      <display value="Appendix structure"/>
+    </coding>
+    <text value="Right lower quadrant abdomen"/>
+  </bodySite>
+  <outcome>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="385669000"/>
+      <display value="Successful"/>
+    </coding>
+    <text value="Procedure completed without complications"/>
+  </outcome>
+  <followUp>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="226007004"/>
+      <display value="Post-surgical wound care"/>
+    </coding>
+    <text value="Follow-up visit in 7 days for wound check"/>
+  </followUp>
+  <note>
+    <time value="2024-01-15T10:30:00+08:00"/>
+    <text value="Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact. No perforation noted."/>
+  </note>
+  <usedCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="261424001"/>
+      <display value="Primary operation"/>
+    </coding>
+    <text value="Laparoscopic instruments"/>
+  </usedCode>
+</Procedure>

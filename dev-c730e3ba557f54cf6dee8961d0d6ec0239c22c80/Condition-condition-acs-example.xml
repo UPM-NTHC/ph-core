@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="condition-acs-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition condition-acs-example</b></p><a name="condition-acs-example"> </a><a name="hccondition-acs-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-condition.html">PH Core Condition</a></p></div><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Acute Diagnosis</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 401303003}">Acute Coronary Syndrome - STEMI</span></p><p><b>subject</b>: <a href="Patient-patient-acs-example.html">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>onset</b>: 2026-06-12 08:30:00+0800</p><p><b>recordedDate</b>: 2026-06-12 08:45:00+0800</p><p><b>recorder</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>note</b>: </p><blockquote><div><p>45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm. 12-lead ECG shows ST-elevation in leads V1-V4 consistent with anterior STEMI. Troponin I elevated at 2.5 ng/mL.</p>
+</div></blockquote></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="encounter-diagnosis"/>
+      <display value="Encounter Diagnosis"/>
+    </coding>
+    <text value="Acute Diagnosis"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="401303003"/>
+      <display value="Acute ST segment elevation myocardial infarction"/>
+    </coding>
+    <text value="Acute Coronary Syndrome - STEMI"/>
+  </code>
+  <subject>
+    <reference value="Patient/patient-acs-example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/encounter-ed-example"/>
+  </encounter>
+  <onsetDateTime value="2026-06-12T08:30:00+08:00"/>
+  <recordedDate value="2026-06-12T08:45:00+08:00"/>
+  <recorder>
+    <reference value="Practitioner/practitioner-ed-example"/>
+  </recorder>
+  <note>
+    <text value="45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm. 12-lead ECG shows ST-elevation in leads V1-V4 consistent with anterior STEMI. Troponin I elevated at 2.5 ng/mL."/>
+  </note>
+</Condition>

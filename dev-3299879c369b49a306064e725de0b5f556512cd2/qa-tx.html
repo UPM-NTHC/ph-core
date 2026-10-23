@@ -1,0 +1,255 @@
+<hr/><a name="l1"> </a>
+<p>#1</p>
+<pre>
+GET https://tx.fhir.org/r4/metadata HTTP/1.1
+Accept: application/fhir+json; fhirVersion=4.0
+User-Agent: fhir/publisher
+</pre>
+<pre>
+200
+access-control-allow-credentials:true
+connection:keep-alive
+content-length:4220
+content-type:application/fhir+json; charset=utf-8
+date:Wed, 09 Sep 2026 08:49:24 GMT
+etag:W/&quot;107c-3n31Bt2Y7rSDRNi2IY/s1Ql6MJI&quot;
+server:nginx
+vary:Origin
+x-powered-by:Express
+x-request-id:tx-753151
+
+{&quot;resourceType&quot;:&quot;CapabilityStatement&quot;,&quot;id&quot;:&quot;FhirServer&quot;,&quot;extension&quot;:[{&quot;extension&quot;:[{&quot;url&quot;:&quot;definition&quot;,&quot;valueCanonical&quot;:&quot;http://hl7.org/fhir/uv/tx-tests/FeatureDefinition/test-version&quot;},{&quot;url&quot;:&quot;value&quot;,&quot;valueCode&quot;:&quot;1.9.5-SNAPSHOT&quot;},{&quot;extension&quot;:[{&quot;url&quot;:&quot;name&quot;,&quot;valueCode&quot;:&quot;mode&quot;},{&quot;url&quot;:&quot;value&quot;,&quot;valueCode&quot;:&quot;tx.fhir.org&quot;}],&quot;url&quot;:&quot;qualifier&quot;}],&quot;url&quot;:&quot;http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature&quot;},{&quot;extension&quot;:[{&quot;url&quot;:&quot;definition&quot;,&quot;valueCanonical&quot;:&quot;http://hl7.org/fhir/uv/tx-ecosystem/FeatureDefinition/CodeSystemAsParameter&quot;},{&quot;url&quot;:&quot;value&quot;,&quot;valueBoolean&quot;:true}],&quot;url&quot;:&quot;http://hl7.org/fhir/uv/application-feature/StructureDefinition/feature&quot;}],&quot;url&quot;:&quot;http://tx.fhir.org/r4/CapabilityStatement/tx&quot;,&quot;version&quot;:&quot;4.0.1-0.13.2&quot;,&quot;name&quot;:&quot;FHIRTerminologyServer&quot;,&quot;title&quot;:&quot;FHIR Terminology Server&quot;,&quot;status&quot;:&quot;active&quot;,&quot;date&quot;:&quot;2026-09-09T08:49:24.708Z&quot;,&quot;contact&quot;:[{&quot;telecom&quot;:[{&quot;system&quot;:&quot;other&quot;,&quot;value&quot;:&quot;http://example.org/&quot;}]}],&quot;description&quot;:&quot;FHIR Terminology Server&quot;,&quot;kind&quot;:&quot;instance&quot;,&quot;instantiates&quot;:[&quot;http://hl7.org/fhir/CapabilityStatement/terminology-server&quot;],&quot;software&quot;:{&quot;name&quot;:&quot;FHIRsmith&quot;,&quot;version&quot;:&quot;0.13.2&quot;,&quot;releaseDate&quot;:&quot;2026-09-09T08:49:24.708Z&quot;},&quot;implementation&quot;:{&quot;description&quot;:&quot;FHIR Server running at http://tx.fhir.org/r4&quot;,&quot;url&quot;:&quot;http://tx.fhir.org/r4&quot;},&quot;fhirVersion&quot;:&quot;4.0.1&quot;,&quot;format&quot;:[&quot;application/fhir+xml&quot;,&quot;application/fhir+json&quot;],&quot;rest&quot;:[{&quot;mode&quot;:&quot;server&quot;,&quot;security&quot;:{&quot;cors&quot;:true},&quot;resource&quot;:[{&quot;type&quot;:&quot;CodeSystem&quot;,&quot;interaction&quot;:[{&quot;code&quot;:&quot;read&quot;,&quot;documentation&quot;:&quot;Read a code system&quot;},{&quot;code&quot;:&quot;search-type&quot;,&quot;documentation&quot;:&quot;Search the code systems&quot;}],&quot;searchParam&quot;:[{&quot;name&quot;:&quot;url&quot;,&quot;type&quot;:&quot;uri&quot;},{&quot;name&quot;:&quot;version&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;title&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;_id&quot;,&quot;type&quot;:&quot;token&quot;}],&quot;operation&quot;:[{&quot;name&quot;:&quot;lookup&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup&quot;},{&quot;name&quot;:&quot;validate-code&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/CodeSystem-validate-code&quot;},{&quot;name&quot;:&quot;subsumes&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/CodeSystem-subsumes&quot;}]},{&quot;type&quot;:&quot;ValueSet&quot;,&quot;interaction&quot;:[{&quot;code&quot;:&quot;read&quot;,&quot;documentation&quot;:&quot;Read a ValueSet&quot;},{&quot;code&quot;:&quot;search-type&quot;,&quot;documentation&quot;:&quot;Search the value sets&quot;}],&quot;searchParam&quot;:[{&quot;name&quot;:&quot;url&quot;,&quot;type&quot;:&quot;uri&quot;},{&quot;name&quot;:&quot;version&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;title&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;_id&quot;,&quot;type&quot;:&quot;token&quot;}],&quot;operation&quot;:[{&quot;name&quot;:&quot;expand&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ValueSet-expand&quot;},{&quot;name&quot;:&quot;validate-code&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ValueSet-validate-code&quot;},{&quot;name&quot;:&quot;compare&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/tools/OperationDefinition/ValueSet-compare&quot;}]},{&quot;type&quot;:&quot;ConceptMap&quot;,&quot;interaction&quot;:[{&quot;code&quot;:&quot;read&quot;,&quot;documentation&quot;:&quot;Read a ConceptMap&quot;},{&quot;code&quot;:&quot;search-type&quot;,&quot;documentation&quot;:&quot;Search the concept maps&quot;}],&quot;searchParam&quot;:[{&quot;name&quot;:&quot;url&quot;,&quot;type&quot;:&quot;uri&quot;},{&quot;name&quot;:&quot;version&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;name&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;title&quot;,&quot;type&quot;:&quot;string&quot;},{&quot;name&quot;:&quot;status&quot;,&quot;type&quot;:&quot;token&quot;},{&quot;name&quot;:&quot;_id&quot;,&quot;type&quot;:&quot;token&quot;}],&quot;operation&quot;:[{&quot;name&quot;:&quot;translate&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ConceptMap-translate&quot;},{&quot;name&quot;:&quot;closure&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ConceptMap-closure&quot;}]}],&quot;interaction&quot;:[{&quot;code&quot;:&quot;transaction&quot;}],&quot;operation&quot;:[{&quot;name&quot;:&quot;expand&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ValueSet-expand&quot;},{&quot;name&quot;:&quot;lookup&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/CodeSystem-lookup&quot;},{&quot;name&quot;:&quot;subsumes&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/CodeSystem-subsumes&quot;},{&quot;name&quot;:&quot;validate-code&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/Resource-validate-code&quot;},{&quot;name&quot;:&quot;translate&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ConceptMap-translate&quot;},{&quot;name&quot;:&quot;closure&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/ConceptMap-closure&quot;},{&quot;name&quot;:&quot;compare&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/tools/OperationDefinition/ValueSet-compare&quot;},{&quot;name&quot;:&quot;cache-control&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/tools/OperationDefinition/cache-control&quot;},{&quot;name&quot;:&quot;versions&quot;,&quot;definition&quot;:&quot;http://hl7.org/fhir/OperationDefinition/fhir-versions&quot;}]}]}
+</pre>
+<hr/><a name="l2"> </a>
+<p>#2</p>
+<pre>
+POST https://tx.fhir.org/r4/$cache-control?mode=start HTTP/1.1
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"sealed","valueBoolean":false}]}
+</pre>
+<pre>
+200
+access-control-allow-credentials:true
+connection:keep-alive
+content-length:151
+content-type:application/fhir+json; charset=utf-8
+date:Wed, 09 Sep 2026 08:49:24 GMT
+etag:W/&quot;97-ov5GGrEfJbl8SiZIG3wjw6RlpIk&quot;
+server:nginx
+vary:Origin
+x-powered-by:Express
+x-request-id:tx-753152
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;cache-id&quot;,&quot;valueId&quot;:&quot;f8e1bdbe-fcb2-49f3-84fd-e97d402217bd&quot;},{&quot;name&quot;:&quot;sealed&quot;,&quot;valueBoolean&quot;:false}]}
+</pre>
+<hr/><a name="l3"> </a>
+<p>#3</p>
+<pre>
+POST https://tx.fhir.org/r4/ValueSet/$expand HTTP/1.1
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+X-Cache-Id: f8e1bdbe-fcb2-49f3-84fd-e97d402217bd
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"defaultDisplayLanguage","valueCode":"en"},{"name":"includeDefinition","valueBoolean":false},{"name":"excludeNested","valueBoolean":true},{"name":"count","valueInteger":1000},{"name":"offset","valueInteger":0},{"name":"valueSet","resource":{"resourceType":"ValueSet","status":"active","compose":{"inactive":true,"include":[{"system":"https://psa.gov.ph/classification/psced/level","concept":[{"code":"C201301","display":"Elementary Graduate"},{"code":"C201302","display":"High School Graduate"},{"code":"C201303","display":"College Graduate"},{"code":"C201304","display":"Postgraduate"}]}]}}}]}
+</pre>
+<pre>
+422
+access-control-allow-credentials:true
+connection:keep-alive
+content-length:463
+content-type:application/fhir+json; charset=utf-8
+date:Wed, 09 Sep 2026 08:49:43 GMT
+etag:W/&quot;1cf-fsjv9uAYVbCAajKxNdDY1U2oRjk&quot;
+server:nginx
+vary:Origin
+x-powered-by:Express
+x-request-id:tx-753181
+
+{&quot;resourceType&quot;:&quot;OperationOutcome&quot;,&quot;issue&quot;:[{&quot;severity&quot;:&quot;error&quot;,&quot;code&quot;:&quot;not-found&quot;,&quot;details&quot;:{&quot;text&quot;:&quot;A definition for CodeSystem 'https://psa.gov.ph/classification/psced/level' could not be found, so the value set cannot be expanded&quot;,&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/tools/CodeSystem/tx-issue-type&quot;,&quot;code&quot;:&quot;not-found&quot;}]},&quot;extension&quot;:[{&quot;url&quot;:&quot;http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id&quot;,&quot;valueString&quot;:&quot;UNKNOWN_CODESYSTEM_EXP&quot;}]}]}
+</pre>
+<hr/><a name="l4"> </a>
+<p>#4</p>
+<pre>
+POST https://tx.fhir.org/r4/ValueSet/$expand HTTP/1.1
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+X-Cache-Id: f8e1bdbe-fcb2-49f3-84fd-e97d402217bd
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"defaultDisplayLanguage","valueCode":"en"},{"name":"includeDefinition","valueBoolean":false},{"name":"excludeNested","valueBoolean":true},{"name":"count","valueInteger":1000},{"name":"offset","valueInteger":0},{"name":"valueSet","resource":{"resourceType":"ValueSet","status":"active","compose":{"inactive":true,"include":[{"system":"https://psa.gov.ph/classification/psoc/unit","concept":[{"code":"111102","display":"Hospital Administrator"},{"code":"111103","display":"Medical Department Head"},{"code":"121101","display":"General Manager"},{"code":"211101","display":"Medical Doctor"}]}]}}}]}
+</pre>
+<pre>
+422
+access-control-allow-credentials:true
+connection:keep-alive
+content-length:461
+content-type:application/fhir+json; charset=utf-8
+date:Wed, 09 Sep 2026 08:49:43 GMT
+etag:W/&quot;1cd-8Ufi3p2mC7G9jUTHBSsGNmeix3I&quot;
+server:nginx
+vary:Origin
+x-powered-by:Express
+x-request-id:tx-753182
+
+{&quot;resourceType&quot;:&quot;OperationOutcome&quot;,&quot;issue&quot;:[{&quot;severity&quot;:&quot;error&quot;,&quot;code&quot;:&quot;not-found&quot;,&quot;details&quot;:{&quot;text&quot;:&quot;A definition for CodeSystem 'https://psa.gov.ph/classification/psoc/unit' could not be found, so the value set cannot be expanded&quot;,&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/tools/CodeSystem/tx-issue-type&quot;,&quot;code&quot;:&quot;not-found&quot;}]},&quot;extension&quot;:[{&quot;url&quot;:&quot;http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id&quot;,&quot;valueString&quot;:&quot;UNKNOWN_CODESYSTEM_EXP&quot;}]}]}
+</pre>
+<hr/><a name="l5"> </a>
+<p>#5</p>
+<pre>
+POST https://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.1
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+X-Cache-Id: f8e1bdbe-fcb2-49f3-84fd-e97d402217bd
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"https://psa.gov.ph/classification/psced/level","code":"C201301","display":"Elementary Graduate"}},{"name":"displayLanguage","valueString":"en"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+</pre>
+<pre>
+200
+access-control-allow-credentials:true
+connection:keep-alive
+content-length:979
+content-type:application/fhir+json; charset=utf-8
+date:Wed, 09 Sep 2026 08:49:58 GMT
+etag:W/&quot;3d3-nHHYQoubCynP9iRekVHF3DO50TM&quot;
+server:nginx
+vary:Origin
+x-powered-by:Express
+x-request-id:tx-753339
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;issues&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;OperationOutcome&quot;,&quot;issue&quot;:[{&quot;severity&quot;:&quot;error&quot;,&quot;code&quot;:&quot;not-found&quot;,&quot;details&quot;:{&quot;text&quot;:&quot;A definition for CodeSystem 'https://psa.gov.ph/classification/psced/level' could not be found, so the code cannot be validated&quot;,&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/tools/CodeSystem/tx-issue-type&quot;,&quot;code&quot;:&quot;not-found&quot;}]},&quot;expression&quot;:[&quot;Coding.system&quot;],&quot;extension&quot;:[{&quot;url&quot;:&quot;http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id&quot;,&quot;valueString&quot;:&quot;UNKNOWN_CODESYSTEM&quot;}]}]}},{&quot;name&quot;:&quot;result&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;message&quot;,&quot;valueString&quot;:&quot;A definition for CodeSystem 'https://psa.gov.ph/classification/psced/level' could not be found, so the code cannot be validated&quot;},{&quot;name&quot;:&quot;system&quot;,&quot;valueUri&quot;:&quot;https://psa.gov.ph/classification/psced/level&quot;},{&quot;name&quot;:&quot;code&quot;,&quot;valueCode&quot;:&quot;C201301&quot;},{&quot;name&quot;:&quot;x-caused-by-unknown-system&quot;,&quot;valueCanonical&quot;:&quot;https://psa.gov.ph/classification/psced/level&quot;}]}
+</pre>
+<hr/><a name="l6"> </a>
+<p>#6</p>
+<pre>
+POST https://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.1
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+X-Cache-Id: f8e1bdbe-fcb2-49f3-84fd-e97d402217bd
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"https://psa.gov.ph/classification/psoc/unit","code":"911102","display":"Street Food Vendor"}},{"name":"displayLanguage","valueString":"en"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+</pre>
+<pre>
+200
+access-control-allow-credentials:true
+connection:keep-alive
+content-length:970
+content-type:application/fhir+json; charset=utf-8
+date:Wed, 09 Sep 2026 08:49:58 GMT
+etag:W/&quot;3ca-8kX66/8rrzo9rM20UJdudbFL71w&quot;
+server:nginx
+vary:Origin
+x-powered-by:Express
+x-request-id:tx-753340
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;issues&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;OperationOutcome&quot;,&quot;issue&quot;:[{&quot;severity&quot;:&quot;error&quot;,&quot;code&quot;:&quot;not-found&quot;,&quot;details&quot;:{&quot;text&quot;:&quot;A definition for CodeSystem 'https://psa.gov.ph/classification/psoc/unit' could not be found, so the code cannot be validated&quot;,&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/tools/CodeSystem/tx-issue-type&quot;,&quot;code&quot;:&quot;not-found&quot;}]},&quot;expression&quot;:[&quot;Coding.system&quot;],&quot;extension&quot;:[{&quot;url&quot;:&quot;http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id&quot;,&quot;valueString&quot;:&quot;UNKNOWN_CODESYSTEM&quot;}]}]}},{&quot;name&quot;:&quot;result&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;message&quot;,&quot;valueString&quot;:&quot;A definition for CodeSystem 'https://psa.gov.ph/classification/psoc/unit' could not be found, so the code cannot be validated&quot;},{&quot;name&quot;:&quot;system&quot;,&quot;valueUri&quot;:&quot;https://psa.gov.ph/classification/psoc/unit&quot;},{&quot;name&quot;:&quot;code&quot;,&quot;valueCode&quot;:&quot;911102&quot;},{&quot;name&quot;:&quot;x-caused-by-unknown-system&quot;,&quot;valueCanonical&quot;:&quot;https://psa.gov.ph/classification/psoc/unit&quot;}]}
+</pre>
+<hr/><a name="l7"> </a>
+<p>#7</p>
+<pre>
+POST https://tx.fhir.org/r4/CodeSystem/$validate-code? HTTP/1.1
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+X-Cache-Id: f8e1bdbe-fcb2-49f3-84fd-e97d402217bd
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"https://psa.gov.ph/classification/psoc/unit","code":"111102","display":"Hospital Administrator"}},{"name":"displayLanguage","valueString":"en"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"diagnostics","valueBoolean":true}]}
+</pre>
+<pre>
+200
+access-control-allow-credentials:true
+connection:keep-alive
+content-length:970
+content-type:application/fhir+json; charset=utf-8
+date:Wed, 09 Sep 2026 08:49:58 GMT
+etag:W/&quot;3ca-pQHRqDqEPtOj59URdQGUXRNblFc&quot;
+server:nginx
+vary:Origin
+x-powered-by:Express
+x-request-id:tx-753347
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[{&quot;name&quot;:&quot;issues&quot;,&quot;resource&quot;:{&quot;resourceType&quot;:&quot;OperationOutcome&quot;,&quot;issue&quot;:[{&quot;severity&quot;:&quot;error&quot;,&quot;code&quot;:&quot;not-found&quot;,&quot;details&quot;:{&quot;text&quot;:&quot;A definition for CodeSystem 'https://psa.gov.ph/classification/psoc/unit' could not be found, so the code cannot be validated&quot;,&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/tools/CodeSystem/tx-issue-type&quot;,&quot;code&quot;:&quot;not-found&quot;}]},&quot;expression&quot;:[&quot;Coding.system&quot;],&quot;extension&quot;:[{&quot;url&quot;:&quot;http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id&quot;,&quot;valueString&quot;:&quot;UNKNOWN_CODESYSTEM&quot;}]}]}},{&quot;name&quot;:&quot;result&quot;,&quot;valueBoolean&quot;:false},{&quot;name&quot;:&quot;message&quot;,&quot;valueString&quot;:&quot;A definition for CodeSystem 'https://psa.gov.ph/classification/psoc/unit' could not be found, so the code cannot be validated&quot;},{&quot;name&quot;:&quot;system&quot;,&quot;valueUri&quot;:&quot;https://psa.gov.ph/classification/psoc/unit&quot;},{&quot;name&quot;:&quot;code&quot;,&quot;valueCode&quot;:&quot;111102&quot;},{&quot;name&quot;:&quot;x-caused-by-unknown-system&quot;,&quot;valueCanonical&quot;:&quot;https://psa.gov.ph/classification/psoc/unit&quot;}]}
+</pre>
+<hr/><a name="l8"> </a>
+<p>#8</p>
+<pre>
+POST https://tx.fhir.org/r4/ValueSet/$expand HTTP/1.1
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+X-Cache-Id: f8e1bdbe-fcb2-49f3-84fd-e97d402217bd
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"defaultDisplayLanguage","valueCode":"en"},{"name":"includeDefinition","valueBoolean":false},{"name":"excludeNested","valueBoolean":true},{"name":"count","valueInteger":1000},{"name":"offset","valueInteger":0},{"name":"valueSet","resource":{"resourceType":"ValueSet","status":"active","compose":{"inactive":false,"include":[{"system":"https://psa.gov.ph/classification/psced/level","concept":[{"code":"C201301","display":"Elementary Graduate"},{"code":"C201302","display":"High School Graduate"},{"code":"C201303","display":"College Graduate"},{"code":"C201304","display":"Postgraduate"}]}]}}}]}
+</pre>
+<pre>
+422
+access-control-allow-credentials:true
+connection:keep-alive
+content-length:463
+content-type:application/fhir+json; charset=utf-8
+date:Wed, 09 Sep 2026 08:50:38 GMT
+etag:W/&quot;1cf-fsjv9uAYVbCAajKxNdDY1U2oRjk&quot;
+server:nginx
+vary:Origin
+x-powered-by:Express
+x-request-id:tx-753800
+
+{&quot;resourceType&quot;:&quot;OperationOutcome&quot;,&quot;issue&quot;:[{&quot;severity&quot;:&quot;error&quot;,&quot;code&quot;:&quot;not-found&quot;,&quot;details&quot;:{&quot;text&quot;:&quot;A definition for CodeSystem 'https://psa.gov.ph/classification/psced/level' could not be found, so the value set cannot be expanded&quot;,&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/tools/CodeSystem/tx-issue-type&quot;,&quot;code&quot;:&quot;not-found&quot;}]},&quot;extension&quot;:[{&quot;url&quot;:&quot;http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id&quot;,&quot;valueString&quot;:&quot;UNKNOWN_CODESYSTEM_EXP&quot;}]}]}
+</pre>
+<hr/><a name="l9"> </a>
+<p>#9</p>
+<pre>
+POST https://tx.fhir.org/r4/ValueSet/$expand HTTP/1.1
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+X-Cache-Id: f8e1bdbe-fcb2-49f3-84fd-e97d402217bd
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters","parameter":[{"name":"x-system-cache-id","valueString":"dc8fd4bc-091a-424a-8a3b-6198ef146891"},{"name":"defaultDisplayLanguage","valueCode":"en"},{"name":"includeDefinition","valueBoolean":false},{"name":"excludeNested","valueBoolean":true},{"name":"count","valueInteger":1000},{"name":"offset","valueInteger":0},{"name":"valueSet","resource":{"resourceType":"ValueSet","status":"active","compose":{"inactive":false,"include":[{"system":"https://psa.gov.ph/classification/psoc/unit","concept":[{"code":"111102","display":"Hospital Administrator"},{"code":"111103","display":"Medical Department Head"},{"code":"121101","display":"General Manager"},{"code":"211101","display":"Medical Doctor"}]}]}}}]}
+</pre>
+<pre>
+422
+access-control-allow-credentials:true
+connection:keep-alive
+content-length:461
+content-type:application/fhir+json; charset=utf-8
+date:Wed, 09 Sep 2026 08:50:39 GMT
+etag:W/&quot;1cd-8Ufi3p2mC7G9jUTHBSsGNmeix3I&quot;
+server:nginx
+vary:Origin
+x-powered-by:Express
+x-request-id:tx-753804
+
+{&quot;resourceType&quot;:&quot;OperationOutcome&quot;,&quot;issue&quot;:[{&quot;severity&quot;:&quot;error&quot;,&quot;code&quot;:&quot;not-found&quot;,&quot;details&quot;:{&quot;text&quot;:&quot;A definition for CodeSystem 'https://psa.gov.ph/classification/psoc/unit' could not be found, so the value set cannot be expanded&quot;,&quot;coding&quot;:[{&quot;system&quot;:&quot;http://hl7.org/fhir/tools/CodeSystem/tx-issue-type&quot;,&quot;code&quot;:&quot;not-found&quot;}]},&quot;extension&quot;:[{&quot;url&quot;:&quot;http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id&quot;,&quot;valueString&quot;:&quot;UNKNOWN_CODESYSTEM_EXP&quot;}]}]}
+</pre>
+<hr/><a name="l10"> </a>
+<p>#10</p>
+<pre>
+POST https://tx.fhir.org/r4/$cache-control?mode=end HTTP/1.1
+Accept: application/fhir+json; fhirVersion=4.0
+Content-Type: application/fhir+json; fhirVersion=4.0;charset=UTF-8
+X-Cache-Id: f8e1bdbe-fcb2-49f3-84fd-e97d402217bd
+User-Agent: fhir/publisher
+
+{"resourceType":"Parameters"}
+</pre>
+<pre>
+200
+access-control-allow-credentials:true
+connection:keep-alive
+content-length:44
+content-type:application/fhir+json; charset=utf-8
+date:Wed, 09 Sep 2026 08:51:41 GMT
+etag:W/&quot;2c-x1uJoaQHjLTPHoTrltn2q6mUG9w&quot;
+server:nginx
+vary:Origin
+x-powered-by:Express
+x-request-id:tx-754021
+
+{&quot;resourceType&quot;:&quot;Parameters&quot;,&quot;parameter&quot;:[]}
+</pre>

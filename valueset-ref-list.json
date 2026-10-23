@@ -1,0 +1,173 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/ValueSet/marital-status",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Marital Status Codes",
+    "title" : "MaritalStatus",
+    "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.29"],
+    "sources" : ["2.16.840.1.113883.4.642.3.29"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/provenance-agent-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProvenanceParticipantType",
+    "title" : "Provenance participant type",
+    "description" : "The type of participation a provenance participant.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/provenance-participant-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1003"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1003"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-provenance.html" : "PH Core Provenance"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "PatientRelationshipType",
+    "title" : "Patient relationship type",
+    "description" : "A set of codes that can be used to indicate the relationship between a Patient and a Related Person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "http://terminology.hl7.org/CodeSystem/v2-0131"],
+    "oids" : ["2.16.840.1.113883.4.642.3.449"],
+    "sources" : ["2.16.840.1.113883.4.642.3.449"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-patient.html" : "PH Core Patient"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-Race",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Race",
+    "title" : "Race",
+    "description" : "In the United States, federal standards for classifying data on race determine the categories used by federal agencies and exert a strong influence on categorization by state and local agencies and private sector organizations. The federal standards do not conceptually define race, and they recognize the absence of an anthropological or scientific basis for racial classification. Instead, the federal standards acknowledge that race is a social-political construct in which an individual's own identification with one more race categories is preferred to observer identification. The standards use a variety of features to define five minimum race categories. Among these features are descent from \"the original peoples\" of a specified region or nation. The minimum race categories are American Indian or Alaska Native, Asian, Black or African American, Native Hawaiian or Other Pacific Islander, and White. The federal standards stipulate that race data need not be limited to the five minimum categories, but any expansion must be collapsible to those categories.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Race"],
+    "oids" : ["2.16.840.1.113883.1.11.14914"],
+    "sources" : ["2.16.840.1.113883.1.11.14914"],
+    "uses" : {
+    },
+    "StructureDefinition-race.html" : "Race"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/barangays",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "Barangays",
+    "title" : "Barangays",
+    "description" : "The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psgc"],
+    "uses" : {
+    },
+    "StructureDefinition-barangay.html" : "Barangay",
+    "StructureDefinition-ph-core-pwd-disability.html" : "PH Core PWD Disability Registration"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/cities",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "Cities",
+    "title" : "Cities",
+    "description" : "All city values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psgc"],
+    "uses" : {
+    },
+    "StructureDefinition-city-municipality.html" : "City/Municipality"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "DrugsVS",
+    "title" : "Drugs",
+    "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA.",
+    "systems" : ["https://verification.fda.gov.ph"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-medicationadministration.html" : "PH Core Medication Administration",
+    "StructureDefinition-ph-core-medicationrequest.html" : "PH Core Medication Request",
+    "StructureDefinition-ph-core-medication.html" : "PH Core Medication",
+    "StructureDefinition-ph-core-medicationdispense.html" : "PH Core Medication Dispense",
+    "StructureDefinition-ph-core-medicationstatement.html" : "PH Core Medication Statement"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/educational-attainments",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "EducationalAttainments",
+    "title" : "Educational Attainments",
+    "description" : "All categories of educational programs, courses, and attainment levels in the Philippines, based on the Philippine Standard Classification of Education (PSCED) published by the Philippine Statistics Authority (PSA)",
+    "systems" : ["https://psa.gov.ph/classification/psced/level"],
+    "uses" : {
+    },
+    "StructureDefinition-educational-attainment.html" : "Educational Attainment"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/indigenous-groups-vs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "IndigenousGroupsVS",
+    "title" : "Indigenous Groups ValueSet",
+    "description" : "A value set representing the recognized Indigenous groups to which a person may belong.",
+    "systems" : ["https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-indigenous-group.html" : "Indigenous Group"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/occupational-classifications",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "OccupationClassifications",
+    "title" : "Occupation Classifications",
+    "description" : "The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psoc/unit"],
+    "uses" : {
+    },
+    "StructureDefinition-occupation.html" : "Occupation"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/ph-core-disability-type-vs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "PHCoreDisabilityTypeVS",
+    "title" : "PH Core Disability Type Value Set",
+    "description" : "Value set for types of disability as defined by the Philippine government for PWD registration.",
+    "systems" : ["https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-ph-core-pwd-disability.html" : "PH Core PWD Disability Registration"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/provinces",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "Provinces",
+    "title" : "Provinces",
+    "description" : "All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psgc"],
+    "uses" : {
+    },
+    "StructureDefinition-province.html" : "Province"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/regions",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "Regions",
+    "title" : "Regions",
+    "description" : "The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psgc"],
+    "uses" : {
+    },
+    "StructureDefinition-region.html" : "Region"
+  }]
+}

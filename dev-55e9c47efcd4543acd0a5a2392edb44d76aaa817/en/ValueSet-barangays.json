@@ -1,0 +1,201 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "barangays",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet barangays</b></p><a name=\"barangays\"> </a><a name=\"hcbarangays\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102801001\">0102801001</a></td><td>Adams</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802001\">0102802001</a></td><td>Bani</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802002\">0102802002</a></td><td>Buyon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802003\">0102802003</a></td><td>Cabaruan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802004\">0102802004</a></td><td>Cabulalaan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802005\">0102802005</a></td><td>Cabusligan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102901001\">0102901001</a></td><td>Alilem Daya </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0200901001\">0200901001</a></td><td>Ihubok II</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0201501001\">0201501001</a></td><td>Alinunu</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0300801001\">0300801001</a></td><td>Bangkal</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301401001\">0301401001</a></td><td>Banaban</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401001001\">0401001001</a></td><td>Adia</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0402101001\">0402101001</a></td><td>Amuyong</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0500501001\">0500501001</a></td><td>Baclayon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0501601001\">0501601001</a></td><td>Angas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600401001\">0600401001</a></td><td>Cabangila</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600601001\">0600601001</a></td><td>Bayo Grande</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0701201001\">0701201001</a></td><td>Bahi</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0702201001\">0702201001</a></td><td>Cabadiangan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0802601001\">0802601001</a></td><td>Aguinaldo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0803701001\">0803701001</a></td><td>Alangilan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0906601001\">0906601001</a></td><td>Adjid</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0907201001\">0907201001</a></td><td>Aliguay</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001301001\">1001301001</a></td><td>Balintad</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001801001\">1001801001</a></td><td>Alga</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102301004\">1102301004</a></td><td>Binancian</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102401001\">1102401001</a></td><td>Alegre</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1204701001\">1204701001</a></td><td>Bao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1206302002\">1206302002</a></td><td>Benitez </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380100001\">1380100001</a></td><td>Barangay 1</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380608000\">1380608000</a></td><td>Ermita</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1400101001\">1400101001</a></td><td>Agtangao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1401101001\">1401101001</a></td><td>Abiang</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600201001\">1600201001</a></td><td>Abilan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600301001\">1600301001</a></td><td>Calaitan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1704001001\">1704001001</a></td><td>Agot</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1705101001\">1705101001</a></td><td>Balao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804502001\">1804502001</a></td><td>Abuanan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804601001\">1804601001</a></td><td>Bio-os</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1900702001\">1900702001</a></td><td>Arco</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1903601001\">1903601001</a></td><td>Ampao</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/barangays",
+  "version" : "0.2.0",
+  "name" : "Barangays",
+  "title" : "Barangays",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-09-09T08:36:51+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psgc",
+      "concept" : [{
+        "code" : "0102801001",
+        "display" : "Adams"
+      },
+      {
+        "code" : "0102802001",
+        "display" : "Bani"
+      },
+      {
+        "code" : "0102802002",
+        "display" : "Buyon"
+      },
+      {
+        "code" : "0102802003",
+        "display" : "Cabaruan"
+      },
+      {
+        "code" : "0102802004",
+        "display" : "Cabulalaan"
+      },
+      {
+        "code" : "0102802005",
+        "display" : "Cabusligan"
+      },
+      {
+        "code" : "0102901001",
+        "display" : "Alilem Daya "
+      },
+      {
+        "code" : "0200901001",
+        "display" : "Ihubok II"
+      },
+      {
+        "code" : "0201501001",
+        "display" : "Alinunu"
+      },
+      {
+        "code" : "0300801001",
+        "display" : "Bangkal"
+      },
+      {
+        "code" : "0301401001",
+        "display" : "Banaban"
+      },
+      {
+        "code" : "0401001001",
+        "display" : "Adia"
+      },
+      {
+        "code" : "0402101001",
+        "display" : "Amuyong"
+      },
+      {
+        "code" : "0500501001",
+        "display" : "Baclayon"
+      },
+      {
+        "code" : "0501601001",
+        "display" : "Angas"
+      },
+      {
+        "code" : "0600401001",
+        "display" : "Cabangila"
+      },
+      {
+        "code" : "0600601001",
+        "display" : "Bayo Grande"
+      },
+      {
+        "code" : "0701201001",
+        "display" : "Bahi"
+      },
+      {
+        "code" : "0702201001",
+        "display" : "Cabadiangan"
+      },
+      {
+        "code" : "0802601001",
+        "display" : "Aguinaldo"
+      },
+      {
+        "code" : "0803701001",
+        "display" : "Alangilan"
+      },
+      {
+        "code" : "0906601001",
+        "display" : "Adjid"
+      },
+      {
+        "code" : "0907201001",
+        "display" : "Aliguay"
+      },
+      {
+        "code" : "1001301001",
+        "display" : "Balintad"
+      },
+      {
+        "code" : "1001801001",
+        "display" : "Alga"
+      },
+      {
+        "code" : "1102301004",
+        "display" : "Binancian"
+      },
+      {
+        "code" : "1102401001",
+        "display" : "Alegre"
+      },
+      {
+        "code" : "1204701001",
+        "display" : "Bao"
+      },
+      {
+        "code" : "1206302002",
+        "display" : "Benitez "
+      },
+      {
+        "code" : "1380100001",
+        "display" : "Barangay 1"
+      },
+      {
+        "code" : "1380608000",
+        "display" : "Ermita"
+      },
+      {
+        "code" : "1400101001",
+        "display" : "Agtangao"
+      },
+      {
+        "code" : "1401101001",
+        "display" : "Abiang"
+      },
+      {
+        "code" : "1600201001",
+        "display" : "Abilan"
+      },
+      {
+        "code" : "1600301001",
+        "display" : "Calaitan"
+      },
+      {
+        "code" : "1704001001",
+        "display" : "Agot"
+      },
+      {
+        "code" : "1705101001",
+        "display" : "Balao"
+      },
+      {
+        "code" : "1804502001",
+        "display" : "Abuanan"
+      },
+      {
+        "code" : "1804601001",
+        "display" : "Bio-os"
+      },
+      {
+        "code" : "1900702001",
+        "display" : "Arco"
+      },
+      {
+        "code" : "1903601001",
+        "display" : "Ampao"
+      }]
+    }]
+  }
+}

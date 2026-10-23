@@ -1,0 +1,115 @@
+{
+  "resourceType" : "Organization",
+  "id" : "organization-pgh-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization organization-pgh-example</b></p><a name=\"organization-pgh-example\"> </a><a name=\"hcorganization-pgh-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p></div><p><b>identifier</b>: <a href=\"NamingSystem-DOHNHFRCodeNS.html\" title=\"Health Facility Code (HFC) from the National Health Facility Registry.\">DOHNHFRCode</a>/1234567890, <a href=\"NamingSystem-PhilHealthPANNS.html\" title=\"The unique number issued by PhilHealth to accredited institutions.\">PhilHealthPAN</a>/PAN-2024-56789, <a href=\"NamingSystem-PhilHealthPENNS.html\" title=\"The unique number issued by PhilHealth to employers.\">PhilHealthPEN</a>/PEN-987654321</p><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Philippine General Hospital</p><p><b>telecom</b>: <a href=\"tel:+63-2-8651-7800\">+63-2-8651-7800</a>, <a href=\"mailto:contact@pgh.gov.ph\">contact@pgh.gov.ph</a></p><p><b>address</b>: Taft Avenue Manila 1000 PH (work)</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td>Hospital Administrator</td><td><a href=\"tel:+63-2-8651-7801\">+63-2-8651-7801</a></td><td>Taft Avenue Manila 1000 PH (work)</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code",
+    "value" : "1234567890"
+  },
+  {
+    "system" : "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber",
+    "value" : "PAN-2024-56789"
+  },
+  {
+    "system" : "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber",
+    "value" : "PEN-987654321"
+  }],
+  "active" : true,
+  "type" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+      "code" : "prov",
+      "display" : "Healthcare Provider"
+    }]
+  }],
+  "name" : "Philippine General Hospital",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+63-2-8651-7800",
+    "use" : "work"
+  },
+  {
+    "system" : "email",
+    "value" : "contact@pgh.gov.ph",
+    "use" : "work"
+  }],
+  "address" : [{
+    "extension" : [{
+      "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/region",
+      "valueCoding" : {
+        "system" : "https://psa.gov.ph/classification/psgc",
+        "code" : "1300000000",
+        "display" : "National Capital Region"
+      }
+    },
+    {
+      "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+      "valueCoding" : {
+        "system" : "https://psa.gov.ph/classification/psgc",
+        "code" : "1380600000",
+        "display" : "City of Manila"
+      }
+    },
+    {
+      "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay",
+      "valueCoding" : {
+        "system" : "https://psa.gov.ph/classification/psgc",
+        "code" : "1339000003",
+        "display" : "Ermita"
+      }
+    }],
+    "use" : "work",
+    "type" : "both",
+    "line" : ["Taft Avenue"],
+    "city" : "Manila",
+    "district" : "NCR",
+    "postalCode" : "1000",
+    "country" : "PH"
+  }],
+  "contact" : [{
+    "name" : {
+      "text" : "Hospital Administrator"
+    },
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "+63-2-8651-7801"
+    }],
+    "address" : {
+      "extension" : [{
+        "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/region",
+        "valueCoding" : {
+          "system" : "https://psa.gov.ph/classification/psgc",
+          "code" : "1300000000",
+          "display" : "National Capital Region"
+        }
+      },
+      {
+        "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+        "valueCoding" : {
+          "system" : "https://psa.gov.ph/classification/psgc",
+          "code" : "1380600000",
+          "display" : "City of Manila"
+        }
+      },
+      {
+        "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay",
+        "valueCoding" : {
+          "system" : "https://psa.gov.ph/classification/psgc",
+          "code" : "1339000003",
+          "display" : "Ermita"
+        }
+      }],
+      "use" : "work",
+      "line" : ["Taft Avenue"],
+      "city" : "Manila",
+      "postalCode" : "1000",
+      "country" : "PH"
+    }
+  }]
+}

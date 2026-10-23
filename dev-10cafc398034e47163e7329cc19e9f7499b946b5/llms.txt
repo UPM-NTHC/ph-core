@@ -1,0 +1,168 @@
+# fhir.ph.core#0.2.0: Draft PH Core Implementation Guide(en)
+
+## Pages
+
+* [Home](en/index.md)
+* [PH Core Creator](en/ActorDefinition-Creator.md)
+* [PH Core Consumer](en/ActorDefinition-Consumer.ai.md)
+* [PH Core Consumer](en/ActorDefinition-Consumer-testing.md)
+* [PH Core Creator - TTL Representation](en/ActorDefinition-Creator.ttl.md)
+* [PH Core Creator](en/ActorDefinition-Creator.ai.md)
+* [PH Core Server - JSON Representation](en/ActorDefinition-Server.json.md)
+* [](en/ActorDefinition-Server.change.history.md)
+* [PH Core Server](en/ActorDefinition-Server.ai.md)
+* [PH Core Server - XML Representation](en/ActorDefinition-Server.xml.md)
+* [PH Core Consumer - XML Representation](en/ActorDefinition-Consumer.xml.md)
+* [Other Ids](en/otherIds.md)
+* [PH Core Server](en/ActorDefinition-Server.md)
+* [PH Core Consumer - TTL Representation](en/ActorDefinition-Consumer.ttl.md)
+* [PH Core Server - TTL Representation](en/ActorDefinition-Server.ttl.md)
+* [PH Core Server](en/ActorDefinition-Server-testing.md)
+* [PH Core Consumer](en/ActorDefinition-Consumer.md)
+* [](en/ActorDefinition-Creator.change.history.md)
+* [Artifacts Summary](en/artifacts.md)
+* [Terminology](en/terminology.md)
+* [](en/ActorDefinition-Consumer.change.history.md)
+* [PH Core Creator](en/ActorDefinition-Creator-testing.md)
+* [PH Core Consumer - JSON Representation](en/ActorDefinition-Consumer.json.md)
+* [PH Core Creator - JSON Representation](en/ActorDefinition-Creator.json.md)
+* [PH Core Creator - XML Representation](en/ActorDefinition-Creator.xml.md)
+
+## Resources
+
+### CodeSystems
+
+* [PH FDA Certificate of Product Registration (CPR) CodeSystem](en/CodeSystem-PHFDACPRCS.md)
+* [Mock PSCED](en/CodeSystem-PSCED.md)
+* [Mock PSGC](en/CodeSystem-PSGC.md)
+* [Mock PSOC](en/CodeSystem-PSOC.md)
+* [Indigenous Groups CodeSystem](en/CodeSystem-indigenous-groups-cs.md)
+* [PH Core Disability Type Code System](en/CodeSystem-ph-core-disability-type-cs.md)
+
+### ValueSets
+
+* [Barangays](en/ValueSet-barangays.md)
+* [Cities](en/ValueSet-cities.md)
+* [Drugs](en/ValueSet-drugs-vs.md)
+* [Educational Attainments](en/ValueSet-educational-attainments.md)
+* [Indigenous Groups ValueSet](en/ValueSet-indigenous-groups-vs.md)
+* [Occupation Classifications](en/ValueSet-occupational-classifications.md)
+* [PH Core Disability Type Value Set](en/ValueSet-ph-core-disability-type-vs.md)
+* [Provinces](en/ValueSet-provinces.md)
+* [Regions](en/ValueSet-regions.md)
+
+### Complex-type Profiles
+
+* [PH Core Address](en/StructureDefinition-ph-core-address.md)
+* [DOH NHFR Code](en/StructureDefinition-ph-core-doh-nhfr-code.md)
+* [PH Core Name](en/StructureDefinition-ph-core-name.md)
+* [PIN - PhilHealth Identification Number Identifier](en/StructureDefinition-ph-core-philhealth-id.md)
+* [PhilHealth Accreditation Number](en/StructureDefinition-ph-core-philhealth-pan.md)
+* [PhilHealth Employer Number](en/StructureDefinition-ph-core-philhealth-pen.md)
+* [PhilSys Identification Number (PhilSys ID) Identifier](en/StructureDefinition-ph-core-philsys-id.md)
+
+### Resource Profiles
+
+* [PH Core AllergyIntolerance](en/StructureDefinition-ph-core-allergyintolerance.md)
+* [PH Core Claim](en/StructureDefinition-ph-core-claim.md)
+* [PH Core Condition](en/StructureDefinition-ph-core-condition.md)
+* [PH Core Encounter](en/StructureDefinition-ph-core-encounter.md)
+* [PH Core HealthcareService](en/StructureDefinition-ph-core-healthcareservice.md)
+* [PH Core Immunization](en/StructureDefinition-ph-core-immunization.md)
+* [PH Core Location](en/StructureDefinition-ph-core-location.md)
+* [PH Core Medication](en/StructureDefinition-ph-core-medication.md)
+* [PH Core Medication Administration](en/StructureDefinition-ph-core-medicationadministration.md)
+* [PH Core Medication Dispense](en/StructureDefinition-ph-core-medicationdispense.md)
+* [PH Core Medication Request](en/StructureDefinition-ph-core-medicationrequest.md)
+* [PH Core Medication Statement](en/StructureDefinition-ph-core-medicationstatement.md)
+* [PH Core Observation](en/StructureDefinition-ph-core-observation.md)
+* [PH Core Organization](en/StructureDefinition-ph-core-organization.md)
+* [PH Core Patient](en/StructureDefinition-ph-core-patient.md)
+* [PH Core Practitioner](en/StructureDefinition-ph-core-practitioner.md)
+* [PH Core PractitionerRole](en/StructureDefinition-ph-core-practitionerrole.md)
+* [PH Core Procedure](en/StructureDefinition-ph-core-procedure.md)
+* [PH Core Provenance](en/StructureDefinition-ph-core-provenance.md)
+* [PH Core RelatedPerson](en/StructureDefinition-ph-core-relatedperson.md)
+* [PH Core ServiceRequest](en/StructureDefinition-ph-core-serviceRequest.md)
+* [PH Core Task](en/StructureDefinition-ph-core-task.md)
+
+### Extensions
+
+* [Administered Product](en/StructureDefinition-administered-product.md)
+* [Barangay](en/StructureDefinition-barangay.md)
+* [Batch Number](en/StructureDefinition-batch-number.md)
+* [City/Municipality](en/StructureDefinition-city-municipality.md)
+* [Educational Attainment](en/StructureDefinition-educational-attainment.md)
+* [Indigenous Group](en/StructureDefinition-indigenous-group.md)
+* [Indigenous People](en/StructureDefinition-indigenous-people.md)
+* [Occupation](en/StructureDefinition-occupation.md)
+* [PH Core PWD Disability Registration](en/StructureDefinition-ph-core-pwd-disability.md)
+* [Province](en/StructureDefinition-province.md)
+* [Race](en/StructureDefinition-race.md)
+* [Region](en/StructureDefinition-region.md)
+
+### Basics
+
+* [Consumer](en/Basic-Consumer.md)
+* [Creator](en/Basic-Creator.md)
+* [Server](en/Basic-Server.md)
+
+### ImplementationGuides
+
+* [Draft PH Core Implementation Guide](en/ImplementationGuide-fhir.ph.core.md)
+
+### NamingSystems
+
+* [DOHNHFRCode](en/NamingSystem-DOHNHFRCodeNS.md)
+* [DOHProcedureID](en/NamingSystem-DOHProcedureIDNS.md)
+* [PhilHealthID](en/NamingSystem-PhilHealthIDNS.md)
+* [PhilHealthPAN](en/NamingSystem-PhilHealthPANNS.md)
+* [PhilHealthPEN](en/NamingSystem-PhilHealthPENNS.md)
+* [PhilHealthProcedureID](en/NamingSystem-PhilHealthProcedureIDNS.md)
+* [PhilSysID](en/NamingSystem-PhilSysIDNS.md)
+
+### Examples
+
+* [allergy-single-example (AllergyIntolerance)](en/AllergyIntolerance-allergy-single-example.md)
+* [example-allergy (AllergyIntolerance)](en/AllergyIntolerance-example-allergy.md)
+* [transaction-example (Bundle)](en/Bundle-transaction-example.md)
+* [claim-single-example (Claim)](en/Claim-claim-single-example.md)
+* [condition-single-example (Condition)](en/Condition-condition-single-example.md)
+* [example-condition (Condition)](en/Condition-example-condition.md)
+* [philhealth-coverage-example (Coverage)](en/Coverage-philhealth-coverage-example.md)
+* [encounter-single-example (Encounter)](en/Encounter-encounter-single-example.md)
+* [example-encounter (Encounter)](en/Encounter-example-encounter.md)
+* [Outpatient Department - General Medicine (HealthcareService)](en/HealthcareService-healthcareservice-single-example.md)
+* [example-immunization (Immunization)](en/Immunization-example-immunization.md)
+* [immunization-single-example (Immunization)](en/Immunization-immunization-single-example.md)
+* [Philippine General Hospital (Location)](en/Location-location-single-example.md)
+* [example-medication (Medication)](en/Medication-example-medication.md)
+* [medication-single-example (Medication)](en/Medication-medication-single-example.md)
+* [medicationadministration-single-example (MedicationAdministration)](en/MedicationAdministration-medicationadministration-single-example.md)
+* [medicationdispense-single-example (MedicationDispense)](en/MedicationDispense-medicationdispense-single-example.md)
+* [medicationrequest-single-example (MedicationRequest)](en/MedicationRequest-medicationrequest-single-example.md)
+* [medicationstatement-single-example (MedicationStatement)](en/MedicationStatement-medicationstatement-single-example.md)
+* [observation-based-on-service-example (Observation)](en/Observation-observation-based-on-service-example.md)
+* [observation-bp-example (Observation)](en/Observation-observation-bp-example.md)
+* [observation-derived-bmi-example (Observation)](en/Observation-observation-derived-bmi-example.md)
+* [observation-environmental-temp-example (Observation)](en/Observation-observation-environmental-temp-example.md)
+* [observation-glucose-example (Observation)](en/Observation-observation-glucose-example.md)
+* [observation-height-example (Observation)](en/Observation-observation-height-example.md)
+* [observation-lab-panel-example (Observation)](en/Observation-observation-lab-panel-example.md)
+* [observation-part-of-procedure-example (Observation)](en/Observation-observation-part-of-procedure-example.md)
+* [observation-performer-role-example (Observation)](en/Observation-observation-performer-role-example.md)
+* [observation-potassium-example (Observation)](en/Observation-observation-potassium-example.md)
+* [observation-sodium-example (Observation)](en/Observation-observation-sodium-example.md)
+* [observation-vitals-encounter-example (Observation)](en/Observation-observation-vitals-encounter-example.md)
+* [observation-weight-example (Observation)](en/Observation-observation-weight-example.md)
+* [Department of Health - Sattelite Office (Organization)](en/Organization-organization-single-example.md)
+* [example-patient (Patient)](en/Patient-example-patient.md)
+* [patient-single-example (Patient)](en/Patient-patient-single-example.md)
+* [example-practitioner (Practitioner)](en/Practitioner-example-practitioner.md)
+* [practitioner-single-example (Practitioner)](en/Practitioner-practitioner-single-example.md)
+* [practitionerrole-single-example (PractitionerRole)](en/PractitionerRole-practitionerrole-single-example.md)
+* [procedure-single-example (Procedure)](en/Procedure-procedure-single-example.md)
+* [provenance-single-example (Provenance)](en/Provenance-provenance-single-example.md)
+* [relatedperson-single-example (RelatedPerson)](en/RelatedPerson-relatedperson-single-example.md)
+* [servicerequest-single-example (ServiceRequest)](en/ServiceRequest-servicerequest-single-example.md)
+* [task-single-example (Task)](en/Task-task-single-example.md)

@@ -1,0 +1,46 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "practitionerrole-ed-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole practitionerrole-ed-example</b></p><a name=\"practitionerrole-ed-example\"> </a><a name=\"hcpractitionerrole-ed-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a></p></div><p><b>identifier</b>: <code>http://doh.gov.ph/fhir/Identifier/practitioner-role-id</code>/PR-ED-001</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>organization</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}\">Doctor</span></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 773568002}\">Emergency medicine</span></p><p><b>telecom</b>: <a href=\"tel:+63-2-8651-7802\">+63-2-8651-7802</a>, <a href=\"mailto:ed.attending@pgh.gov.ph\">ed.attending@pgh.gov.ph</a></p></div>"
+  },
+  "identifier" : [{
+    "system" : "http://doh.gov.ph/fhir/Identifier/practitioner-role-id",
+    "value" : "PR-ED-001"
+  }],
+  "active" : true,
+  "practitioner" : {
+    "reference" : "Practitioner/practitioner-ed-example"
+  },
+  "organization" : {
+    "reference" : "Organization/organization-pgh-example"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/practitioner-role",
+      "code" : "doctor",
+      "display" : "Doctor"
+    }]
+  }],
+  "specialty" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "773568002",
+      "display" : "Emergency medicine"
+    }]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+63-2-8651-7802",
+    "use" : "work"
+  },
+  {
+    "system" : "email",
+    "value" : "ed.attending@pgh.gov.ph",
+    "use" : "work"
+  }]
+}

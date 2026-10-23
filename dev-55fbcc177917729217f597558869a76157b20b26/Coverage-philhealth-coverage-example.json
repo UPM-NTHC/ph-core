@@ -1,0 +1,19 @@
+{
+  "resourceType" : "Coverage",
+  "id" : "philhealth-coverage-example",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">PhilHealth coverage for Juan Dela Cruz with member ID 63-584789845-5.</div>"
+  },
+  "status" : "active",
+  "subscriber" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "subscriberId" : "63-584789845-5",
+  "beneficiary" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "payor" : [{
+    "reference" : "Organization/organization-single-example"
+  }]
+}

@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/AllergyIntolerance/allergy-single-example> a fhir:AllergyIntolerance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "allergy-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AllergyIntolerance allergy-single-example</b></p><a name=\"allergy-single-example\"> </a><a name=\"hcallergy-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-allergyintolerance.html\">PH Core AllergyIntolerance</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}\">Confirmed</span></p><p><b>criticality</b>: High Risk</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 294494002}\">Benethamine penicillin allergy</span></p><p><b>patient</b>: <a href=\"Patient-patient-single-example.html\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>onset</b>: 2023-01-15</p><p><b>note</b>: </p><blockquote><div><p>Patient reported rash and swelling after penicillin administration.</p>\n</div></blockquote><h3>Reactions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Manifestation</b></td><td><b>Severity</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 271807003}\">Skin rash</span></td><td>Severe</td></tr></table></div>"
+  ] ;
+  fhir:AllergyIntolerance.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ] ;
+       fhir:Coding.display [ fhir:value "Active" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Active" ]
+  ] ;
+  fhir:AllergyIntolerance.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ] ;
+       fhir:Coding.display [ fhir:value "Confirmed" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Confirmed" ]
+  ] ;
+  fhir:AllergyIntolerance.criticality [ fhir:value "high"] ;
+  fhir:AllergyIntolerance.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:294494002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "294494002" ] ;
+       fhir:Coding.display [ fhir:value "Benethamine penicillin allergy" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Benethamine penicillin allergy" ]
+  ] ;
+  fhir:AllergyIntolerance.patient [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:AllergyIntolerance.onsetDateTime [ fhir:value "2023-01-15"^^xsd:date] ;
+  fhir:AllergyIntolerance.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Patient reported rash and swelling after penicillin administration." ]
+  ] ;
+  fhir:AllergyIntolerance.reaction [
+     fhir:index 0 ;
+     fhir:AllergyIntolerance.reaction.manifestation [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         a sct:271807003 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "271807003" ] ;
+         fhir:Coding.display [ fhir:value "Eruption of skin" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "Skin rash" ]
+     ] ;
+     fhir:AllergyIntolerance.reaction.severity [ fhir:value "severe" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/AllergyIntolerance/allergy-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

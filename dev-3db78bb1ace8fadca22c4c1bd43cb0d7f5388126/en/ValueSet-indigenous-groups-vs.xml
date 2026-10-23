@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="indigenous-groups-vs"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet indigenous-groups-vs</b></p><a name="indigenous-groups-vs"> </a><a name="hcindigenous-groups-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-indigenous-groups-cs.html"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.2.0</span></li></ul></div>
+  </text>
+  <url value="https://fhir.doh.gov.ph/phcore/ValueSet/indigenous-groups-vs"/>
+  <version value="0.2.0"/>
+  <name value="IndigenousGroupsVS"/>
+  <title value="Indigenous Groups ValueSet"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-12T04:48:36+00:00"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="A value set representing the recognized Indigenous groups to which a person may belong."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs"/>
+    </include>
+  </compose>
+</ValueSet>

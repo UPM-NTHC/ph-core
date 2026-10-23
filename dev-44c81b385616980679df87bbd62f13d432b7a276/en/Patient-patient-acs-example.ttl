@@ -1,0 +1,211 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "patient-acs-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient patient-acs-example</b></p><a name=\"patient-acs-example\"> </a><a name=\"hcpatient-acs-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-patient.html\">PH Core Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"tel:+63-917-123-4567\">+63-917-123-4567</a></li><li>123 Mabini Street Barangay Malinis City of Las Piñas 1740 PH (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>General Practitioner: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></li><li>Managing Organization: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"race of a patient.\"><a href=\"StructureDefinition-race.html\">Race</a></td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-Race 2036-2}\">Filipino</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The nationality of the patient.\">Patient Nationality:</td><td colspan=\"3\"><ul><li>code: <span title=\"Codes:{urn:iso:std:iso:3166 PH}\">Philippines</span></li><li>period: 1981-03-15 --&gt; (ongoing)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Highest educational attainment of the patient.\"><a href=\"StructureDefinition-educational-attainment.html\">Educational Attainment</a></td><td colspan=\"3\"><span title=\"Codes:{https://psa.gov.ph/classification/psced/level C201301}\">Elementary Graduate</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient's occupation.\">Occupation:</td><td colspan=\"3\"><ul><li>occupationClassification: <span title=\"Codes:{https://psa.gov.ph/classification/psoc/unit 911102}\">Street Food Vendor</span></li><li>occupationLength: 2015-01-01 --&gt; (ongoing)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"If the patient is a member of an indigenous group.\"><a href=\"StructureDefinition-indigenous-people.html\">Indigenous People</a></td><td colspan=\"3\">false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The patient's professed religious affiliations.\"><a href=\"http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-patient-religion.html\">Patient Religion</a></td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation 1041}\">Roman Catholic Church</span></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "code"^^xsd:anyURI ;
+         fhir:l fhir:code
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+             fhir:l <urn:iso:std:iso:3166>
+           ] ;
+           fhir:code [ fhir:v "PH" ] ;
+           fhir:display [ fhir:v "Philippines" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "period"^^xsd:anyURI ;
+         fhir:l fhir:period
+       ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "1981-03-15"^^xsd:date ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/patient-nationality"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/patient-nationality>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/patient-religion"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/patient-religion>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation>
+         ] ;
+         fhir:code [ fhir:v "1041" ] ;
+         fhir:display [ fhir:v "Roman Catholic Church" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people>
+     ] ;
+     fhir:value [
+       a fhir:Boolean ;
+       fhir:v false
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/race"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/race>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-Race"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-Race>
+         ] ;
+         fhir:code [ fhir:v "2036-2" ] ;
+         fhir:display [ fhir:v "Filipino" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psced/level"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psced/level>
+         ] ;
+         fhir:code [ fhir:v "C201301" ] ;
+         fhir:display [ fhir:v "Elementary Graduate" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "occupationClassification"^^xsd:anyURI ;
+         fhir:l fhir:occupationClassification
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psoc/unit"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psoc/unit>
+           ] ;
+           fhir:code [ fhir:v "911102" ] ;
+           fhir:display [ fhir:v "Street Food Vendor" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "occupationLength"^^xsd:anyURI ;
+         fhir:l fhir:occupationLength
+       ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2015-01-01"^^xsd:date ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation>
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"^^xsd:anyURI ;
+       fhir:l <http://philhealth.gov.ph/fhir/Identifier/philhealth-id>
+     ] ;
+     fhir:value [ fhir:v "63-584789845-5" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Dela Cruz" ] ;
+     fhir:given ( [ fhir:v "Juan" ] [ fhir:v "Carlos" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-917-123-4567" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1981-03-15"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380200000" ] ;
+         fhir:display [ fhir:v "City of Las Piñas" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/region>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1300000000" ] ;
+         fhir:display [ fhir:v "National Capital Region" ]
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:type [ fhir:v "both" ] ;
+     fhir:line ( [ fhir:v "123 Mabini Street" ] [ fhir:v "Barangay Malinis" ] ) ;
+     fhir:city [ fhir:v "City of Las Piñas" ] ;
+     fhir:district [ fhir:v "NCR" ] ;
+     fhir:postalCode [ fhir:v "1740" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) ; # 
+  fhir:generalPractitioner ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,65 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "provinces",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet provinces</b></p><a name=\"provinces\"> </a><a name=\"hcprovinces\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0402100000\">0402100000</a></td><td>Cavite</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0403400000\">0403400000</a></td><td>Laguna</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0405600000\">0405600000</a></td><td>Quezon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0405800000\">0405800000</a></td><td>Rizal</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1704000000\">1704000000</a></td><td>Marinduque</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1705100000\">1705100000</a></td><td>Occidental Mindoro</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0133000000\">0133000000</a></td><td>La Union</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/provinces",
+  "version" : "0.2.0",
+  "name" : "Provinces",
+  "title" : "Provinces",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-08T09:59:08+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psgc",
+      "concept" : [{
+        "code" : "0402100000",
+        "display" : "Cavite"
+      },
+      {
+        "code" : "0403400000",
+        "display" : "Laguna"
+      },
+      {
+        "code" : "0405600000",
+        "display" : "Quezon"
+      },
+      {
+        "code" : "0405800000",
+        "display" : "Rizal"
+      },
+      {
+        "code" : "1704000000",
+        "display" : "Marinduque"
+      },
+      {
+        "code" : "1705100000",
+        "display" : "Occidental Mindoro"
+      },
+      {
+        "code" : "0133000000",
+        "display" : "La Union"
+      }]
+    }]
+  }
+}

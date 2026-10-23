@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="transaction-example"/>
+  <language value="en"/>
+  <type value="transaction"/>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Patient/patient-single-example"/>
+    <resource>
+      <Patient>
+        <id value="patient-single-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_patient-single-example"> </a>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+          <extension url="code">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:iso:std:iso:3166"/>
+                <code value="PH"/>
+                <display value="Philippines"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="period">
+            <valuePeriod>
+              <start value="2020-01-01"/>
+              <end value="2023-01-01"/>
+            </valuePeriod>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+              <code value="1007"/>
+              <display value="Atheism"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people">
+          <valueBoolean value="true"/>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-group">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs"/>
+              <code value="Aetas"/>
+              <display value="Aetas"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/race">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-Race"/>
+              <code value="2036-2"/>
+              <display value="Filipino"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment">
+          <valueCodeableConcept>
+            <coding>
+              <system value="https://psa.gov.ph/classification/psced/level"/>
+              <code value="C201301"/>
+              <display value="Elementary Graduate"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation">
+          <extension url="occupationClassification">
+            <valueCodeableConcept>
+              <coding>
+                <system value="https://psa.gov.ph/classification/psoc/unit"/>
+                <code value="111102"/>
+                <display value="Hospital Administrator"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="occupationLength">
+            <valuePeriod>
+              <start value="2020-01-01"/>
+            </valuePeriod>
+          </extension>
+        </extension>
+        <identifier>
+          <system value="http://philhealth.gov.ph/fhir/Identifier/philhealth-id"/>
+          <value value="63-584789845-5"/>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <family value="Dela Cruz"/>
+          <given value="Juan Jane"/>
+          <given value="Dela Fuente"/>
+        </name>
+        <gender value="male"/>
+        <birthDate value="1980-01-01"/>
+        <address>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1380100001"/>
+              <display value="Barangay 1"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1380200000"/>
+              <display value="City of Las Piñas"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/province">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="0402100000"/>
+              <display value="Cavite"/>
+            </valueCoding>
+          </extension>
+          <line value="123 Mabini Street"/>
+          <line value="Barangay Malinis"/>
+          <city value="Quezon City"/>
+          <district value="NCR"/>
+          <postalCode value="1100"/>
+          <country value="PH"/>
+        </address>
+      </Patient>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Patient"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example"/>
+    <resource>
+      <Practitioner>
+        <id value="practitioner-single-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_practitioner-single-example"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner practitioner-single-example</b></p><a name="practitioner-single-example"> </a><a name="hcpractitioner-single-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-practitioner.html">PH Core Practitioner</a></p></div><blockquote><p><b>Person Recorded Sex Or Gender</b></p><ul><li>value: <span title="Codes:{http://snomed.info/sct 248152002}">Female (finding)</span></li><li>type: <span title="Codes:{http://loinc.org 76689-9}">Sex Assigned at Birth</span></li></ul></blockquote><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title="Codes:{http://loinc.org LA22879-3}">Identifies as female</span></li></ul></blockquote><blockquote><p><b>Individual Pronouns</b></p><ul><li>value: <span title="Codes:{http://loinc.org LA29519-8}">she/her/her/hers/herself</span></li></ul></blockquote><p><b>name</b>: Maria Clara Santos (Official)</p><p><b>telecom</b>: <a href="tel:+63-912-345-6789">+63-912-345-6789</a>, <a href="mailto:maria.santos@example.ph">maria.santos@example.ph</a></p><p><b>address</b>: 1234 Mabini Street 1000 PH (home)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1985-05-15</p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Period</b></td><td><b>Issuer</b></td></tr><tr><td style="display: none">*</td><td><code>http://prc.gov.ph/fhir/Identifier/prc-license</code>/0123456</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0360 MD}">Doctor of Medicine</span></td><td>2010-07-15 --&gt; (ongoing)</td><td><a href="Organization-organization-single-example.html">Organization Department of Health - Sattelite Office</a></td></tr></table><p><b>communication</b>: <span title="Codes:{urn:ietf:bcp:47 fil}">Filipino</span>, <span title="Codes:{urn:ietf:bcp:47 en}">English</span></p></div>
+        </text>
+        <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+          <extension url="value">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="248152002"/>
+                <display value="Female (finding)"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <extension url="type">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="76689-9"/>
+                <display value="Sex Assigned at Birth"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+          <extension url="value">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="LA22879-3"/>
+                <display value="Identifies as female"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
+          <extension url="value">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="LA29519-8"/>
+                <display value="she/her/her/hers/herself"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </extension>
+        <name>
+          <use value="official"/>
+          <family value="Santos"/>
+          <given value="Maria"/>
+          <given value="Clara"/>
+          <suffix value="MD"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="+63-912-345-6789"/>
+          <use value="mobile"/>
+        </telecom>
+        <telecom>
+          <system value="email"/>
+          <value value="maria.santos@example.ph"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1339000003"/>
+              <display value="Ermita"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1380600000"/>
+              <display value="City of Manila"/>
+            </valueCoding>
+          </extension>
+          <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+            <valueCoding>
+              <system value="https://psa.gov.ph/classification/psgc"/>
+              <code value="1300000000"/>
+              <display value="National Capital Region"/>
+            </valueCoding>
+          </extension>
+          <use value="home"/>
+          <line value="1234 Mabini Street"/>
+          <postalCode value="1000"/>
+          <country value="PH"/>
+        </address>
+        <gender value="female"/>
+        <birthDate value="1985-05-15"/>
+        <qualification>
+          <identifier>
+            <system value="http://prc.gov.ph/fhir/Identifier/prc-license"/>
+            <value value="0123456"/>
+          </identifier>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0360"/>
+              <code value="MD"/>
+              <display value="Doctor of Medicine"/>
+            </coding>
+          </code>
+          <period>
+            <start value="2010-07-15"/>
+          </period>
+          <issuer>
+            <reference value="Organization/organization-single-example"/>
+          </issuer>
+        </qualification>
+        <communication>
+          <coding>
+            <system value="urn:ietf:bcp:47"/>
+            <code value="fil"/>
+            <display value="Filipino"/>
+          </coding>
+        </communication>
+        <communication>
+          <coding>
+            <system value="urn:ietf:bcp:47"/>
+            <code value="en"/>
+            <display value="English"/>
+          </coding>
+        </communication>
+      </Practitioner>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example"/>
+    <resource>
+      <Encounter>
+        <id value="encounter-single-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Encounter_encounter-single-example"> </a>An ambulatory visit for Juan Dela Cruz that has been completed.</div>
+        </text>
+        <identifier>
+          <system value="http://example.org/encounter-id"/>
+          <value value="ENC-12345"/>
+        </identifier>
+        <status value="finished"/>
+        <class>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+          <code value="AMB"/>
+          <display value="ambulatory"/>
+        </class>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="AMB"/>
+            <display value="ambulatory"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/patient-single-example"/>
+        </subject>
+        <participant>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+              <code value="ATND"/>
+              <display value="attender"/>
+            </coding>
+          </type>
+          <individual>
+            <reference value="Practitioner/practitioner-single-example"/>
+          </individual>
+        </participant>
+        <period>
+          <start value="2023-01-01T10:00:00Z"/>
+          <end value="2023-01-01T11:00:00Z"/>
+        </period>
+        <reasonReference>
+          <reference value="Condition/condition-single-example"/>
+        </reasonReference>
+        <diagnosis>
+          <condition>
+            <reference value="Condition/condition-single-example"/>
+          </condition>
+        </diagnosis>
+        <serviceProvider>
+          <reference value="Organization/organization-single-example"/>
+        </serviceProvider>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Encounter"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Condition/condition-single-example"/>
+    <resource>
+      <Condition>
+        <id value="condition-single-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_condition-single-example"> </a>Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+            <code value="problem-list-item"/>
+            <display value="Problem List Item"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="44054006"/>
+            <display value="Diabetes mellitus type 2"/>
+          </coding>
+          <text value="Type 2 Diabetes Mellitus"/>
+        </code>
+        <subject>
+          <reference value="Patient/patient-single-example"/>
+        </subject>
+        <encounter>
+          <reference value="Encounter/encounter-single-example"/>
+        </encounter>
+        <onsetDateTime value="2020-03-15"/>
+        <recordedDate value="2020-03-15T10:30:00Z"/>
+        <note>
+          <text value="Patient advised on diet and exercise management."/>
+        </note>
+      </Condition>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Condition"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Medication/medication-single-example"/>
+    <resource>
+      <Medication>
+        <id value="medication-single-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Medication_medication-single-example"> </a><p class="res-header-id"><b>Generated Narrative: Medication medication-single-example</b></p><a name="medication-single-example"> </a><a name="hcmedication-single-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-medication.html">PH Core Medication</a></p></div><p><b>code</b>: <span title="Codes:{https://verification.fda.gov.ph DRP-10144}">Twinact 40mg/5mg tablet</span></p><p><b>form</b>: <span title="Codes:{http://snomed.info/sct 385055001}">Tablet</span></p></div>
+        </text>
+        <code>
+          <coding>
+            <system value="https://verification.fda.gov.ph"/>
+            <code value="DRP-10144"/>
+            <display value="Twinact"/>
+          </coding>
+          <text value="Twinact 40mg/5mg tablet"/>
+        </code>
+        <form>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="385055001"/>
+            <display value="Tablet"/>
+          </coding>
+        </form>
+      </Medication>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Medication"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Observation/observation-bp-example"/>
+    <resource>
+      <Observation>
+        <id value="observation-bp-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Observation_observation-bp-example"> </a><p class="res-header-id"><b>Generated Narrative: Observation observation-bp-example</b></p><a name="observation-bp-example"> </a><a name="hcobservation-bp-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></p></div><p><b>identifier</b>: <a href="http://terminology.hl7.org/7.1.0/NamingSystem-uri.html" title="As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt 
+
+This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: 
+
+Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.
+
+This OID may also be used in CD.codeSystem.">Uniform Resource Identifier (URI)</a>/urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281</p><p><b>basedOn</b>: Identifier: <code>https://acme.org/identifiers</code>/1234</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 85354-9}">Blood pressure systolic &amp; diastolic</span></p><p><b>subject</b>: <a href="Patient-patient-single-example.html">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>effective</b>: 2012-09-17</p><p><b>performer</b>: <a href="Practitioner-practitioner-single-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation L}">Below low normal</span></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 368209003}">Right arm</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8480-6}">Systolic blood pressure</span></p><p><b>value</b>: 107 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}">Normal</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://loinc.org 8462-4}">Diastolic blood pressure</span></p><p><b>value</b>: 60 mmHg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation L}">Below low normal</span></p></blockquote></div>
+        </text>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281"/>
+        </identifier>
+        <basedOn>
+          <identifier>
+            <system value="https://acme.org/identifiers"/>
+            <value value="1234"/>
+          </identifier>
+        </basedOn>
+        <status value="final"/>
+        <category>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="85354-9"/>
+            <display value="Blood pressure panel with all children optional"/>
+          </coding>
+          <text value="Blood pressure systolic &amp; diastolic"/>
+        </code>
+        <subject>
+          <reference value="Patient/patient-single-example"/>
+        </subject>
+        <effectiveDateTime value="2012-09-17"/>
+        <performer>
+          <reference value="Practitioner/practitioner-single-example"/>
+        </performer>
+        <interpretation>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+            <code value="L"/>
+            <display value="Low"/>
+          </coding>
+          <text value="Below low normal"/>
+        </interpretation>
+        <bodySite>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="368209003"/>
+            <display value="Right arm"/>
+          </coding>
+        </bodySite>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8480-6"/>
+              <display value="Systolic blood pressure"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="107"/>
+            <unit value="mmHg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+          </valueQuantity>
+          <interpretation>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+              <code value="N"/>
+              <display value="Normal"/>
+            </coding>
+            <text value="Normal"/>
+          </interpretation>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="8462-4"/>
+              <display value="Diastolic blood pressure"/>
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="60"/>
+            <unit value="mmHg"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mm[Hg]"/>
+          </valueQuantity>
+          <interpretation>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+              <code value="L"/>
+              <display value="Low"/>
+            </coding>
+            <text value="Below low normal"/>
+          </interpretation>
+        </component>
+      </Observation>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Observation"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/AllergyIntolerance/allergy-single-example"/>
+    <resource>
+      <AllergyIntolerance>
+        <id value="allergy-single-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="AllergyIntolerance_allergy-single-example"> </a>Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</div>
+        </text>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+            <code value="active"/>
+            <display value="Active"/>
+          </coding>
+          <text value="Active"/>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+            <code value="confirmed"/>
+            <display value="Confirmed"/>
+          </coding>
+          <text value="Confirmed"/>
+        </verificationStatus>
+        <criticality value="high"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="294494002"/>
+            <display value="Benethamine penicillin allergy"/>
+          </coding>
+          <text value="Benethamine penicillin allergy"/>
+        </code>
+        <patient>
+          <reference value="Patient/patient-single-example"/>
+        </patient>
+        <onsetDateTime value="2023-01-15"/>
+        <note>
+          <text value="Patient reported rash and swelling after penicillin administration."/>
+        </note>
+        <reaction>
+          <manifestation>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="271807003"/>
+              <display value="Eruption of skin"/>
+            </coding>
+            <text value="Skin rash"/>
+          </manifestation>
+          <severity value="severe"/>
+        </reaction>
+      </AllergyIntolerance>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="AllergyIntolerance"/>
+    </request>
+  </entry>
+  <entry>
+    <fullUrl value="https://fhir.doh.gov.ph/phcore/Immunization/immunization-single-example"/>
+    <resource>
+      <Immunization>
+        <id value="immunization-single-example"/>
+        <meta>
+          <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization"/>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Immunization_immunization-single-example"> </a>Juan Dela Cruz received a completed intramuscular influenza (H5N1-1203) vaccine in the left arm on January 10, 2013, at Philippine General Hospital. The vaccine lot number was AAJN11K and was privately funded. Dose 1 was administered by Dr. Maria Clara Santos.</div>
+        </text>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/batch-number">
+          <valueString value="AAJN11K"/>
+        </extension>
+        <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/administered-product">
+          <valueReference>
+            <reference value="Medication/medication-single-example"/>
+          </valueReference>
+        </extension>
+        <identifier>
+          <system value="urn:ietf:rfc:3986"/>
+          <value value="urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"/>
+        </identifier>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <system value="http://hl7.org/fhir/sid/cvx"/>
+            <code value="123"/>
+            <display value="influenza, H5N1-1203"/>
+          </coding>
+          <text value="Influenza H5N1-1203 Vaccine"/>
+        </vaccineCode>
+        <patient>
+          <reference value="Patient/patient-single-example"/>
+        </patient>
+        <encounter>
+          <reference value="Encounter/encounter-single-example"/>
+        </encounter>
+        <occurrenceDateTime value="2013-01-10"/>
+        <primarySource value="true"/>
+        <location>
+          <reference value="Location/location-single-example"/>
+        </location>
+        <lotNumber value="AAJN11K"/>
+        <expirationDate value="2015-02-15"/>
+        <site>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActSite"/>
+            <code value="LA"/>
+            <display value="left arm"/>
+          </coding>
+          <text value="Left arm"/>
+        </site>
+        <route>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
+            <code value="IM"/>
+            <display value="Injection, intramuscular"/>
+          </coding>
+          <text value="Intramuscular injection"/>
+        </route>
+        <doseQuantity>
+          <value value="5"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </doseQuantity>
+        <performer>
+          <function>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
+              <code value="OP"/>
+              <display value="Ordering Provider"/>
+            </coding>
+            <text value="Ordering Provider"/>
+          </function>
+          <actor>
+            <reference value="Practitioner/practitioner-single-example"/>
+            <display value="Dr. Maria Clara Santos"/>
+          </actor>
+        </performer>
+        <note>
+          <text value="Notes on administration of vaccine"/>
+        </note>
+        <isSubpotent value="true"/>
+        <fundingSource>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/immunization-funding-source"/>
+            <code value="private"/>
+            <display value="Private"/>
+          </coding>
+          <text value="Private"/>
+        </fundingSource>
+        <protocolApplied>
+          <targetDisease>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="772828001"/>
+              <display value="Influenza caused by Influenza A virus subtype H5N1"/>
+            </coding>
+            <text value="Influenza H5N1"/>
+          </targetDisease>
+          <doseNumberPositiveInt value="1"/>
+        </protocolApplied>
+      </Immunization>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="Practitioner"/>
+    </request>
+  </entry>
+</Bundle>

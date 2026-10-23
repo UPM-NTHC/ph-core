@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="indigenous-groups-cs"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem indigenous-groups-cs</b></p><a name="indigenous-groups-cs"> </a><a name="hcindigenous-groups-cs"> </a><p>This case-sensitive code system <code>https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td></tr><tr><td style="white-space:nowrap">Aetas<a name="indigenous-groups-cs-Aetas"> </a></td></tr><tr><td style="white-space:nowrap">Ati<a name="indigenous-groups-cs-Ati"> </a></td></tr><tr><td style="white-space:nowrap">Badjaos<a name="indigenous-groups-cs-Badjaos"> </a></td></tr><tr><td style="white-space:nowrap">Batak<a name="indigenous-groups-cs-Batak"> </a></td></tr><tr><td style="white-space:nowrap">Blaan<a name="indigenous-groups-cs-Blaan"> </a></td></tr><tr><td style="white-space:nowrap">Bontoc<a name="indigenous-groups-cs-Bontoc"> </a></td></tr><tr><td style="white-space:nowrap">Bukidnon<a name="indigenous-groups-cs-Bukidnon"> </a></td></tr><tr><td style="white-space:nowrap">Higaonon<a name="indigenous-groups-cs-Higaonon"> </a></td></tr><tr><td style="white-space:nowrap">Ibaloi<a name="indigenous-groups-cs-Ibaloi"> </a></td></tr><tr><td style="white-space:nowrap">Igorot<a name="indigenous-groups-cs-Igorot"> </a></td></tr><tr><td style="white-space:nowrap">Ilongots<a name="indigenous-groups-cs-Ilongots"> </a></td></tr><tr><td style="white-space:nowrap">Isnag<a name="indigenous-groups-cs-Isnag"> </a></td></tr><tr><td style="white-space:nowrap">Isneg<a name="indigenous-groups-cs-Isneg"> </a></td></tr><tr><td style="white-space:nowrap">Kalinga<a name="indigenous-groups-cs-Kalinga"> </a></td></tr><tr><td style="white-space:nowrap">Kankanaey<a name="indigenous-groups-cs-Kankanaey"> </a></td></tr><tr><td style="white-space:nowrap">Lumad<a name="indigenous-groups-cs-Lumad"> </a></td></tr><tr><td style="white-space:nowrap">Mamanwa<a name="indigenous-groups-cs-Mamanwa"> </a></td></tr><tr><td style="white-space:nowrap">Mandaya<a name="indigenous-groups-cs-Mandaya"> </a></td></tr><tr><td style="white-space:nowrap">Mangyan<a name="indigenous-groups-cs-Mangyan"> </a></td></tr><tr><td style="white-space:nowrap">Manobo<a name="indigenous-groups-cs-Manobo"> </a></td></tr><tr><td style="white-space:nowrap">Mansaka<a name="indigenous-groups-cs-Mansaka"> </a></td></tr><tr><td style="white-space:nowrap">Palawano<a name="indigenous-groups-cs-Palawano"> </a></td></tr><tr><td style="white-space:nowrap">Palaweño<a name="indigenous-groups-cs-Palawe.241o"> </a></td></tr><tr><td style="white-space:nowrap">Sangir<a name="indigenous-groups-cs-Sangir"> </a></td></tr><tr><td style="white-space:nowrap">Subanen<a name="indigenous-groups-cs-Subanen"> </a></td></tr><tr><td style="white-space:nowrap">T`boli<a name="indigenous-groups-cs-T.96boli"> </a></td></tr><tr><td style="white-space:nowrap">Tagabawa<a name="indigenous-groups-cs-Tagabawa"> </a></td></tr><tr><td style="white-space:nowrap">Tagakaulo<a name="indigenous-groups-cs-Tagakaulo"> </a></td></tr><tr><td style="white-space:nowrap">Tagbanwa<a name="indigenous-groups-cs-Tagbanwa"> </a></td></tr><tr><td style="white-space:nowrap">Tasaday<a name="indigenous-groups-cs-Tasaday"> </a></td></tr><tr><td style="white-space:nowrap">Tinguian<a name="indigenous-groups-cs-Tinguian"> </a></td></tr><tr><td style="white-space:nowrap">Tumandok<a name="indigenous-groups-cs-Tumandok"> </a></td></tr><tr><td style="white-space:nowrap">Others<a name="indigenous-groups-cs-Others"> </a></td></tr></table></div>
+  </text>
+  <url value="https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs"/>
+  <version value="0.2.0"/>
+  <name value="IndigenousGroupsCS"/>
+  <title value="Indigenous Groups CodeSystem"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-10T02:11:38+00:00"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="33"/>
+  <concept>
+    <code value="Aetas"/>
+    <display value="Aetas"/>
+  </concept>
+  <concept>
+    <code value="Ati"/>
+    <display value="Ati"/>
+  </concept>
+  <concept>
+    <code value="Badjaos"/>
+    <display value="Badjaos"/>
+  </concept>
+  <concept>
+    <code value="Batak"/>
+    <display value="Batak"/>
+  </concept>
+  <concept>
+    <code value="Blaan"/>
+    <display value="Blaan"/>
+  </concept>
+  <concept>
+    <code value="Bontoc"/>
+    <display value="Bontoc"/>
+  </concept>
+  <concept>
+    <code value="Bukidnon"/>
+    <display value="Bukidnon"/>
+  </concept>
+  <concept>
+    <code value="Higaonon"/>
+    <display value="Higaonon"/>
+  </concept>
+  <concept>
+    <code value="Ibaloi"/>
+    <display value="Ibaloi"/>
+  </concept>
+  <concept>
+    <code value="Igorot"/>
+    <display value="Igorot"/>
+  </concept>
+  <concept>
+    <code value="Ilongots"/>
+    <display value="Ilongots"/>
+  </concept>
+  <concept>
+    <code value="Isnag"/>
+    <display value="Isnag"/>
+  </concept>
+  <concept>
+    <code value="Isneg"/>
+    <display value="Isneg"/>
+  </concept>
+  <concept>
+    <code value="Kalinga"/>
+    <display value="Kalinga"/>
+  </concept>
+  <concept>
+    <code value="Kankanaey"/>
+    <display value="Kankanaey"/>
+  </concept>
+  <concept>
+    <code value="Lumad"/>
+    <display value="Lumad"/>
+  </concept>
+  <concept>
+    <code value="Mamanwa"/>
+    <display value="Mamanwa"/>
+  </concept>
+  <concept>
+    <code value="Mandaya"/>
+    <display value="Mandaya"/>
+  </concept>
+  <concept>
+    <code value="Mangyan"/>
+    <display value="Mangyan"/>
+  </concept>
+  <concept>
+    <code value="Manobo"/>
+    <display value="Manobo"/>
+  </concept>
+  <concept>
+    <code value="Mansaka"/>
+    <display value="Mansaka"/>
+  </concept>
+  <concept>
+    <code value="Palawano"/>
+    <display value="Palawano"/>
+  </concept>
+  <concept>
+    <code value="Palaweño"/>
+    <display value="Palaweño"/>
+  </concept>
+  <concept>
+    <code value="Sangir"/>
+    <display value="Sangir"/>
+  </concept>
+  <concept>
+    <code value="Subanen"/>
+    <display value="Subanen"/>
+  </concept>
+  <concept>
+    <code value="T`boli"/>
+    <display value="T`boli"/>
+  </concept>
+  <concept>
+    <code value="Tagabawa"/>
+    <display value="Tagabawa"/>
+  </concept>
+  <concept>
+    <code value="Tagakaulo"/>
+    <display value="Tagakaulo"/>
+  </concept>
+  <concept>
+    <code value="Tagbanwa"/>
+    <display value="Tagbanwa"/>
+  </concept>
+  <concept>
+    <code value="Tasaday"/>
+    <display value="Tasaday"/>
+  </concept>
+  <concept>
+    <code value="Tinguian"/>
+    <display value="Tinguian"/>
+  </concept>
+  <concept>
+    <code value="Tumandok"/>
+    <display value="Tumandok"/>
+  </concept>
+  <concept>
+    <code value="Others"/>
+    <display value="Others"/>
+  </concept>
+</CodeSystem>

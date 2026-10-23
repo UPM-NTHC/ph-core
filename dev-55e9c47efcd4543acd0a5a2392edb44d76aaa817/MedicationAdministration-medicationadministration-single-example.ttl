@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationAdministration/medicationadministration-single-example> a fhir:MedicationAdministration ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "medicationadministration-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz took 1 tablet of Twinact (Telmisartan + Amlodipine) orally on March 15, 2025 at 2:00 PM as prescribed.</div>"
+  ] ;
+  fhir:MedicationAdministration.status [ fhir:value "completed"] ;
+  fhir:MedicationAdministration.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://verification.fda.gov.ph" ] ;
+       fhir:Coding.code [ fhir:value "DRP-10144" ] ;
+       fhir:Coding.display [ fhir:value "Twinact" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Twinact 40mg/5mg tablet" ]
+  ] ;
+  fhir:MedicationAdministration.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:MedicationAdministration.context [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-single-example" ]
+  ] ;
+  fhir:MedicationAdministration.effectiveDateTime [ fhir:value "2025-03-15T14:00:00+08:00"^^xsd:dateTime] ;
+  fhir:MedicationAdministration.performer [
+     fhir:index 0 ;
+     fhir:MedicationAdministration.performer.function [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0443" ] ;
+         fhir:Coding.code [ fhir:value "PP" ] ;
+         fhir:Coding.display [ fhir:value "Primary Care Provider" ]
+       ]
+     ] ;
+     fhir:MedicationAdministration.performer.actor [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+       fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+     ]
+  ] ;
+  fhir:MedicationAdministration.request [
+     fhir:link <https://fhir.doh.gov.ph/phcore/MedicationRequest/medicationrequest-single-example> ;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/medicationrequest-single-example" ]
+  ] ;
+  fhir:MedicationAdministration.dosage [
+     fhir:MedicationAdministration.dosage.text [ fhir:value "1 tablet taken orally" ] ;
+     fhir:MedicationAdministration.dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration" ] ;
+         fhir:Coding.code [ fhir:value "PO" ] ;
+         fhir:Coding.display [ fhir:value "Swallow, oral" ]
+       ]
+     ] ;
+     fhir:MedicationAdministration.dosage.dose [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "tablet" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "1" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationAdministration/medicationadministration-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

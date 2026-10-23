@@ -1,0 +1,198 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Procedure/procedure-single-example> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "procedure-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Procedure:</b> Laparoscopic appendectomy (SNOMED CT: 80146002)</p><p><b>Subject:</b> Juan Dela Cruz</p><p><b>Status:</b> Completed</p><p><b>Performed:</b> January 15, 2024, 08:30 - 10:15 (Asia/Manila)</p><p><b>Performer:</b> Dr. Maria Clara Santos (Healthcare professional) on behalf of Department of Health - Central Office</p><p><b>Reason:</b> Acute appendicitis with peritonitis (SNOMED CT: 74400008)</p><p><b>Body Site:</b> Entire appendix - Right lower quadrant abdomen</p><p><b>Outcome:</b> Successful - Procedure completed without complications</p><p><b>Follow-up:</b> Postsurgical wound care in 7 days</p><p><b>Notes:</b> Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact.</p></div>"
+  ] ;
+  fhir:Procedure.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.use [ fhir:value "usual" ] ;
+     fhir:Identifier.system [ fhir:value "https://fhir.doh.gov.ph/phcore/NamingSystem/procedure-id" ] ;
+     fhir:Identifier.value [ fhir:value "PROC-2024-000123" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Identifier.use [ fhir:value "secondary" ] ;
+     fhir:Identifier.system [ fhir:value "http://philhealth.gov.ph/procedure" ] ;
+     fhir:Identifier.value [ fhir:value "PH-APP-789456" ]
+  ] ;
+  fhir:Procedure.basedOn [
+     fhir:index -1 ;
+     fhir:Reference.display [ fhir:value "ServiceRequest for emergency appendectomy" ]
+  ] ;
+  fhir:Procedure.partOf [
+     fhir:index -1 ;
+     fhir:Reference.display [ fhir:value "Episode of care for acute abdomen treatment" ]
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.statusReason [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:385669000 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "385669000" ] ;
+       fhir:Coding.display [ fhir:value "Successful" ]
+     ]
+  ] ;
+  fhir:Procedure.category [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:387713003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "387713003" ] ;
+       fhir:Coding.display [ fhir:value "Surgical procedure" ]
+     ]
+  ] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:80146002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "80146002" ] ;
+       fhir:Coding.display [ fhir:value "Appendectomy" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Laparoscopic appendectomy" ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-single-example" ]
+  ] ;
+  fhir:Procedure.performedPeriod [
+     fhir:Period.start [ fhir:value "2024-01-15T08:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2024-01-15T10:15:00+08:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Procedure.recorder [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+  ] ;
+  fhir:Procedure.asserter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/RelatedPerson/relatedperson-single-example> ;
+     fhir:Reference.reference [ fhir:value "RelatedPerson/relatedperson-single-example" ]
+  ] ;
+  fhir:Procedure.performer [
+     fhir:index -1 ;
+     fhir:Procedure.performer.function [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a sct:223366009 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "223366009" ] ;
+         fhir:Coding.display [ fhir:value "Healthcare professional" ]
+       ]
+     ] ;
+     fhir:Procedure.performer.actor [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+     ] ;
+     fhir:Procedure.performer.onBehalfOf [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+       fhir:Reference.reference [ fhir:value "Organization/organization-single-example" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Procedure.performer.function [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a sct:133932002 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "133932002" ] ;
+         fhir:Coding.display [ fhir:value "Caregiver" ]
+       ]
+     ] ;
+     fhir:Procedure.performer.actor [
+       fhir:link <https://fhir.doh.gov.ph/phcore/RelatedPerson/relatedperson-single-example> ;
+       fhir:Reference.reference [ fhir:value "RelatedPerson/relatedperson-single-example" ]
+     ]
+  ] ;
+  fhir:Procedure.reasonCode [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:74400008 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "74400008" ] ;
+       fhir:Coding.display [ fhir:value "Appendicitis" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Acute appendicitis with peritonitis" ]
+  ] ;
+  fhir:Procedure.reasonReference [
+     fhir:index -1 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ;
+     fhir:Reference.reference [ fhir:value "Condition/condition-single-example" ]
+  ] ;
+  fhir:Procedure.bodySite [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:66754008 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "66754008" ] ;
+       fhir:Coding.display [ fhir:value "Appendix structure" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Right lower quadrant abdomen" ]
+  ] ;
+  fhir:Procedure.outcome [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:385669000 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "385669000" ] ;
+       fhir:Coding.display [ fhir:value "Successful" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Procedure completed without complications" ]
+  ] ;
+  fhir:Procedure.followUp [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:226007004 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "226007004" ] ;
+       fhir:Coding.display [ fhir:value "Post-surgical wound care" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Follow-up visit in 7 days for wound check" ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index -1 ;
+     fhir:Annotation.time [ fhir:value "2024-01-15T10:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:Annotation.text [ fhir:value "Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact. No perforation noted." ]
+  ] ;
+  fhir:Procedure.usedCode [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:261424001 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "261424001" ] ;
+       fhir:Coding.display [ fhir:value "Primary operation" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Laparoscopic instruments" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Procedure/procedure-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

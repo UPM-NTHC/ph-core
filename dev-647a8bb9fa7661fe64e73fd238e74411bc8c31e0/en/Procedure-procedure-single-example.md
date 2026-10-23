@@ -1,0 +1,167 @@
+# procedure-single-example - Draft PH Core Implementation Guide v0.2.0
+
+## Example Procedure: procedure-single-example
+
+**Procedure:** Laparoscopic appendectomy (SNOMED CT: 80146002)
+
+**Subject:** Juan Dela Cruz
+
+**Status:** Completed
+
+**Performed:** January 15, 2024, 08:30 - 10:15 (Asia/Manila)
+
+**Performer:** Dr. Maria Clara Santos (Healthcare professional) on behalf of Department of Health - Central Office
+
+**Reason:** Acute appendicitis with peritonitis (SNOMED CT: 74400008)
+
+**Body Site:** Entire appendix - Right lower quadrant abdomen
+
+**Outcome:** Successful - Procedure completed without complications
+
+**Follow-up:** Postsurgical wound care in 7 days
+
+**Notes:** Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Procedure",
+  "id" : "procedure-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure"]
+  },
+  "identifier" : [{
+    "use" : "usual",
+    "system" : "https://fhir.doh.gov.ph/phcore/NamingSystem/procedure-id",
+    "value" : "PROC-2024-000123"
+  },
+  {
+    "use" : "secondary",
+    "system" : "http://philhealth.gov.ph/procedure",
+    "value" : "PH-APP-789456"
+  }],
+  "basedOn" : [{
+    "display" : "ServiceRequest for emergency appendectomy"
+  }],
+  "partOf" : [{
+    "display" : "Episode of care for acute abdomen treatment"
+  }],
+  "status" : "completed",
+  "statusReason" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "385669000",
+      "display" : "Successful"
+    }]
+  },
+  "category" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "387713003",
+      "display" : "Surgical procedure"
+    }]
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "80146002",
+      "display" : "Appendectomy"
+    }],
+    "text" : "Laparoscopic appendectomy"
+  },
+  "subject" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "encounter" : {
+    "reference" : "Encounter/encounter-single-example"
+  },
+  "performedPeriod" : {
+    "start" : "2024-01-15T08:30:00+08:00",
+    "end" : "2024-01-15T10:15:00+08:00"
+  },
+  "recorder" : {
+    "reference" : "Practitioner/practitioner-single-example"
+  },
+  "asserter" : {
+    "reference" : "RelatedPerson/relatedperson-single-example"
+  },
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "223366009",
+        "display" : "Healthcare professional"
+      }]
+    },
+    "actor" : {
+      "reference" : "Practitioner/practitioner-single-example"
+    },
+    "onBehalfOf" : {
+      "reference" : "Organization/organization-single-example"
+    }
+  },
+  {
+    "function" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "133932002",
+        "display" : "Caregiver"
+      }]
+    },
+    "actor" : {
+      "reference" : "RelatedPerson/relatedperson-single-example"
+    }
+  }],
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "74400008",
+      "display" : "Appendicitis"
+    }],
+    "text" : "Acute appendicitis with peritonitis"
+  }],
+  "reasonReference" : [{
+    "reference" : "Condition/condition-single-example"
+  }],
+  "bodySite" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "66754008",
+      "display" : "Appendix structure"
+    }],
+    "text" : "Right lower quadrant abdomen"
+  }],
+  "outcome" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "385669000",
+      "display" : "Successful"
+    }],
+    "text" : "Procedure completed without complications"
+  },
+  "followUp" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "226007004",
+      "display" : "Post-surgical wound care"
+    }],
+    "text" : "Follow-up visit in 7 days for wound check"
+  }],
+  "note" : [{
+    "time" : "2024-01-15T10:30:00+08:00",
+    "text" : "Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact. No perforation noted."
+  }],
+  "usedCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "261424001",
+      "display" : "Primary operation"
+    }],
+    "text" : "Laparoscopic instruments"
+  }]
+}
+
+```

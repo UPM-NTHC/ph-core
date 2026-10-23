@@ -1,0 +1,7 @@
+{
+  "version" : "0.2.1",
+  "fhirVersion" : ["4.0.1"],
+  "date" : "20261023043545",
+  "name" : "fhir.ph.core",
+  "jurisdiction" : "urn:iso:std:iso:3166#PH"
+}

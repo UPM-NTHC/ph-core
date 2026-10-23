@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="barangays"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet barangays</b></p><a name="barangays"> </a><a name="hcbarangays"> </a><ul><li>Include these codes as defined in <a href="CodeSystem-PSGC.html"><code>https://psa.gov.ph/classification/psgc</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.2.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1380100001">1380100001</a></td><td>Barangay 1</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0133070250">0133070250</a></td><td>Paringao</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://fhir.doh.gov.ph/phcore/ValueSet/barangays"/>
+  <version value="0.2.0"/>
+  <name value="Barangays"/>
+  <title value="Barangays"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-10T02:11:38+00:00"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://psa.gov.ph/classification/psgc"/>
+      <concept>
+        <code value="1380100001"/>
+        <display value="Barangay 1"/>
+      </concept>
+      <concept>
+        <code value="0133070250"/>
+        <display value="Paringao"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

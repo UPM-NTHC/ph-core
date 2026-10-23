@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Task/task-single-example> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "task-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">A laboratory task has been requested for Juan Dela Cruz by Dr. Maria Clara Santos. The task involves collecting a blood sample for routine CBC testing. The task status is requested with routine priority, scheduled for execution between 09:00 and 10:00 on March 15, 2024. The Department of Health - Central Office is the assigned owner for this task. Additional note: Patient has confirmed appointment. Please ensure fasting status is verified before sample collection.</div>"
+  ] ;
+  fhir:Task.status [ fhir:value "requested"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.priority [ fhir:value "routine"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:82078001 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "82078001" ] ;
+       fhir:Coding.display [ fhir:value "Collection of blood specimen for laboratory" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Blood sample collection" ]
+  ] ;
+  fhir:Task.description [ fhir:value "Collect blood sample for complete blood count (CBC) testing"] ;
+  fhir:Task.for [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:Task.encounter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-single-example" ]
+  ] ;
+  fhir:Task.executionPeriod [
+     fhir:Period.start [ fhir:value "2024-03-15T09:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2024-03-15T10:00:00+08:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2024-03-15T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.lastModified [ fhir:value "2024-03-15T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+  ] ;
+  fhir:Task.owner [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/organization-single-example" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index -1 ;
+     fhir:Annotation.authorReference [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+     ] ;
+     fhir:Annotation.time [ fhir:value "2024-03-15T08:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:Annotation.text [ fhir:value "Patient has confirmed appointment. Please ensure fasting status is verified before sample collection." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Task/task-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

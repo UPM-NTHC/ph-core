@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="ExamplePHCoreCapabilityStatement"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-capability-statement"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CapabilityStatement ExamplePHCoreCapabilityStatement</b></p><a name="ExamplePHCoreCapabilityStatement"> </a><a name="hcExamplePHCoreCapabilityStatement"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-capability-statement.html">PH Core CapabilityStatement</a></p></div><h2 id="title">PH Core Server CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.2.0 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>json</code>, <code>xml</code></li><li>Published on: 2026-06-22 </li><li>Published by: UP Manila National TeleHealth Center </li></ul><blockquote class="impl-note"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id="rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>server</code></h3></div><div class="panel-body"><div><p>FHIR RESTful server supporting PH Core profiles and interactions validated at the June 2026 Aklan Connectathon. Supports standard CRUD operations, search, and transaction Bundles for atomic resource submission. Both POST (create-new) and PUT (conditional update/upsert) patterns are supported for each resource type, matching the two Connectathon-validated example Bundles.</p>
+</div><div class="lead"><em>Security</em></div><div class="row"><div class="col-lg-6">Enable CORS: no</div><div class="col-lg-6">Security services supported: <code>SMART-on-FHIR</code></div></div><blockquote><div><p>Implementations SHOULD use SMART on FHIR or equivalent bearer-token authentication. Transport security (TLS) is REQUIRED. See the PH Core IG security guidance for base requirements.</p>
+</div></blockquote><div class="lead"><em>Summary of System-wide Interactions</em></div><ul><li><strong>SHALL </strong>support the <code>transaction</code>interaction described as follows:<div><p>Transaction Bundle support for atomic submission of clinical packages. The ACS case example uses PUT for idempotent upsert; the general transaction example uses POST for new resource creation.</p>
+</div></li><li><strong>MAY </strong>support the <code>batch</code>interaction.</li></ul></div></div><h3 id="resourcesCap1">Capabilities by Resource/Profile</h3><h4 id="resourcesSummary1">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class="bg-info">R</span></b>ead, <b><span class="bg-info">S</span></b>earch, <b><span class="bg-info">U</span></b>pdate, and <b><span class="bg-info">C</span></b>reate, are always shown, while <b><span class="bg-info">VR</span></b>ead, <b><span class="bg-info">P</span></b>atch, <b><span class="bg-info">D</span></b>elete, <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">I</span></b>nstance, or <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class="table-responsive"><table class="table table-condensed table-hover"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class="text-center"><b title="GET a resource (read interaction)">R</b></th><th class="text-center"><b title="GET all set of resources of the type (search interaction)">S</b></th><th class="text-center"><b title="PUT a new resource version (update interaction)">U</b></th><th class="text-center"><b title="POST a new resource (create interaction)">C</b></th><th><b title="Required and recommended search parameters">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href="#Patient1-1">Patient</a></td><td><a href="StructureDefinition-ph-core-patient.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, identifier, name, birthdate, gender</td><td/><td/><td/></tr><tr><td><a href="#Practitioner1-2">Practitioner</a></td><td><a href="StructureDefinition-ph-core-practitioner.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, identifier, name</td><td/><td/><td/></tr><tr><td><a href="#Organization1-3">Organization</a></td><td><a href="StructureDefinition-ph-core-organization.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, identifier, name</td><td/><td/><td/></tr><tr><td><a href="#PractitionerRole1-4">PractitionerRole</a></td><td><a href="StructureDefinition-ph-core-practitionerrole.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, identifier, practitioner, organization</td><td/><td/><td/></tr><tr><td><a href="#Location1-5">Location</a></td><td><a href="StructureDefinition-ph-core-location.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-location</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, name, organization</td><td/><td/><td/></tr><tr><td><a href="#RelatedPerson1-6">RelatedPerson</a></td><td><a href="StructureDefinition-ph-core-relatedperson.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-relatedperson</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, patient</td><td/><td/><td/></tr><tr><td><a href="#Encounter1-7">Encounter</a></td><td><a href="StructureDefinition-ph-core-encounter.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, subject, date, status, location</td><td/><td/><td/></tr><tr><td><a href="#Condition1-8">Condition</a></td><td><a href="StructureDefinition-ph-core-condition.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, subject, encounter, clinical-status, code</td><td/><td/><td/></tr><tr><td><a href="#Observation1-9">Observation</a></td><td><a href="StructureDefinition-ph-core-observation.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, subject, encounter, code, date, category</td><td/><td/><td/></tr><tr><td><a href="#Procedure1-10">Procedure</a></td><td><a href="StructureDefinition-ph-core-procedure.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, subject, encounter, date, code</td><td/><td/><td/></tr><tr><td><a href="#Immunization1-11">Immunization</a></td><td><a href="StructureDefinition-ph-core-immunization.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, patient, vaccine-code, date</td><td/><td/><td/></tr><tr><td><a href="#AllergyIntolerance1-12">AllergyIntolerance</a></td><td><a href="StructureDefinition-ph-core-allergyintolerance.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, patient, clinical-status</td><td/><td/><td/></tr><tr><td><a href="#HealthcareService1-13">HealthcareService</a></td><td><a href="StructureDefinition-ph-core-healthcareservice.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, location, organization, name</td><td/><td/><td/></tr><tr><td><a href="#ServiceRequest1-14">ServiceRequest</a></td><td><a href="StructureDefinition-ph-core-serviceRequest.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, subject, status</td><td/><td/><td/></tr><tr><td><a href="#Provenance1-15">Provenance</a></td><td><a href="StructureDefinition-ph-core-provenance.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, target, agent</td><td/><td/><td/></tr><tr><td><a href="#Task1-16">Task</a></td><td><a href="StructureDefinition-ph-core-task.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, patient, status, owner</td><td/><td/><td/></tr><tr><td><a href="#Composition1-17">Composition</a></td><td><a href="http://hl7.org/fhir/R4/composition.html">http://hl7.org/fhir/StructureDefinition/Composition</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, subject, encounter, date, type</td><td/><td/><td/></tr><tr><td><a href="#Medication1-18">Medication</a></td><td><a href="StructureDefinition-ph-core-medication.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="MAY">y?</span></td><td>_id, code</td><td/><td/><td/></tr><tr><td><a href="#MedicationRequest1-19">MedicationRequest</a></td><td><a href="StructureDefinition-ph-core-medicationrequest.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="MAY">y?</span></td><td>_id, subject, encounter, medication</td><td/><td/><td/></tr><tr><td><a href="#MedicationStatement1-20">MedicationStatement</a></td><td><a href="StructureDefinition-ph-core-medicationstatement.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="MAY">y?</span></td><td>_id, subject, context</td><td/><td/><td/></tr><tr><td><a href="#MedicationDispense1-21">MedicationDispense</a></td><td><a href="StructureDefinition-ph-core-medicationdispense.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationdispense</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="MAY">y?</span></td><td>_id, subject, context</td><td/><td/><td/></tr><tr><td><a href="#MedicationAdministration1-22">MedicationAdministration</a></td><td><a href="StructureDefinition-ph-core-medicationadministration.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="MAY">y?</span></td><td>_id, subject, context</td><td/><td/><td/></tr><tr><td><a href="#Claim1-23">Claim</a></td><td><a href="StructureDefinition-ph-core-claim.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"><span title="MAY">y?</span></td><td>_id, patient</td><td/><td/><td/></tr></tbody></table></div><hr/><div class="panel panel-default"><div class="panel-heading"><h4 id="Patient1-1" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>Patient</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-patient.html">PH Core Patient</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Patient demographics with Philippine-specific extensions (nationality, religion, ethnicity, PWD disability, occupation, education). Supports PhilHealth and PhilSys identifiers. Must Support: name (given split into first/middle), birthDate, gender, telecom, address (PSGC hierarchy), identifier.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div><p>Search by PhilHealth ID or PhilSys ID.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>birthdate</td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>gender</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Practitioner1-2" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>Practitioner</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-practitioner.html">PH Core Practitioner</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Practitioner resource for healthcare providers. Includes SOGIE extensions (genderIdentity, individualPronouns, sex). Must Support: name, telecom, address, birthDate, gender, identifier (PRC license).</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div><p>Search by PRC license number.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Organization1-3" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>Organization</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-organization.html">PH Core Organization</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Organization resource for healthcare facilities. Supports NHFR facility code, HCPN network code, PEN, and PAN identifiers. Address constrained to PHCoreAddress with PSGC geographic coding. PartOf for facility hierarchy.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div><p>Search by NHFR facility code, HCPN code, PEN, or PAN.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="PractitionerRole1-4" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>PractitionerRole</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-practitionerrole.html">PH Core PractitionerRole</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>PractitionerRole linking practitioners to facilities and locations. Used in the ACS scenario for ED attending physician role assignment.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>practitioner</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>organization</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Location1-5" class="panel-title"><span style="float: right;">Resource Conformance: SHOULD </span>Location</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-location.html">PH Core Location</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Location resource for healthcare service locations and sites within facilities. Address constrained to PHCoreAddress with PSGC geographic hierarchy. Used as reference from Encounter and PractitionerRole.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>organization</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="RelatedPerson1-6" class="panel-title"><span style="float: right;">Resource Conformance: SHOULD </span>RelatedPerson</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-relatedperson.html">PH Core RelatedPerson</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>RelatedPerson for patient contacts, next of kin, guardians, and emergency contacts. Supports PhilHealth and PhilSys identifiers with PH Core naming and address constraints.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Encounter1-7" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>Encounter</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-encounter.html">PH Core Encounter</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Encounter resource for clinical visits and encounters. class is required and Must Support. Hospitalization details supported. Location references PHCoreLocation. Used in both ACS (ED encounter) and general (ambulatory) scenarios.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>status</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>location</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Condition1-8" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>Condition</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-condition.html">PH Core Condition</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Condition resource for diagnoses and problems. category, encounter, note, severity, subject, and code are Must Support. Used for encounter diagnosis (ACS) and problem-list (T2DM comorbidity).</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>clinical-status</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>code</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Observation1-9" class="panel-title"><span style="float: right;">Resource Conformance: SHALL </span>Observation</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Observation resource for clinical measurements, vital signs, and lab results. subject, encounter, performer, basedOn, and partOf constrained to PH Core profiles. Used extensively in the ACS scenario: vital signs (BP, HR, RR, SpO2, temp, pain) and lab results (troponin, glucose, HbA1c, cholesterol, ECG).</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>code</td><td><code>token</code></td><td><div><p>Search by LOINC code for specific observation types (e.g., 85354-9 for BP, 8480-6 for BP systolic).</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>category</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Procedure1-10" class="panel-title"><span style="float: right;">Resource Conformance: SHOULD </span>Procedure</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-procedure.html">PH Core Procedure</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Procedure resource for clinical procedures and treatments. subject (Patient/Group) and status are Must Support with obligations. encounter is Must Support.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>code</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Immunization1-11" class="panel-title"><span style="float: right;">Resource Conformance: SHOULD </span>Immunization</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-immunization.html">PH Core Immunization</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Immunization resource for vaccination records. Includes extensions for BatchNumber and AdministeredProduct. patient, status, lotNumber, and occurrenceDateTime are Must Support with obligations.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>vaccine-code</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="AllergyIntolerance1-12" class="panel-title"><span style="float: right;">Resource Conformance: SHOULD </span>AllergyIntolerance</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-allergyintolerance.html">PH Core AllergyIntolerance</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>AllergyIntolerance resource for patient allergies and adverse reactions. patient is 1..1 Must Support. reaction and onset are Must Support.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>clinical-status</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="HealthcareService1-13" class="panel-title"><span style="float: right;">Resource Conformance: SHOULD </span>HealthcareService</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-healthcareservice.html">PH Core HealthcareService</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>HealthcareService resource for available clinical services. identifier, active, providedBy, location, name, and telecom are Must Support with obligations.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>location</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>organization</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="ServiceRequest1-14" class="panel-title"><span style="float: right;">Resource Conformance: SHOULD </span>ServiceRequest</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-serviceRequest.html">PH Core ServiceRequest</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>ServiceRequest resource for orders and requests. subject and status are 1..1 Must Support. encounter and requester are Must Support.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>status</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Provenance1-15" class="panel-title"><span style="float: right;">Resource Conformance: SHOULD </span>Provenance</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-provenance.html">PH Core Provenance</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Provenance resource for audit trail and data provenance. Agent sliced into ProvenanceAuthor and ProvenanceTransmitter. Agent.who constrained to PH Core profiles. Location references PHCoreLocation.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>target</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>agent</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Task1-16" class="panel-title"><span style="float: right;">Resource Conformance: SHOULD </span>Task</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-task.html">PH Core Task</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Task resource for workflow tracking. executionPeriod, for, and note are Must Support. status is 1..1 Must Support. References constrained to PH Core profiles.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>status</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>owner</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Composition1-17" class="panel-title"><span style="float: right;">Resource Conformance: SHOULD </span>Composition</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/composition.html">Composition</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Composition resource for clinical documents. Used in the ACS scenario for the ED Physician's Note containing the complete clinical narrative. Currently uses base FHIR profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>type</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Medication1-18" class="panel-title"><span style="float: right;">Resource Conformance: MAY </span>Medication</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-medication.html">PH Core Medication</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Medication resource for medicinal products. Code bound to DrugsVS (PH FDA drug codes). EXPERIMENTAL profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>code</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="MedicationRequest1-19" class="panel-title"><span style="float: right;">Resource Conformance: MAY </span>MedicationRequest</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-medicationrequest.html">PH Core Medication Request</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>MedicationRequest resource for prescription orders. subject, encounter, medicationReference, requester, and performer constrained to PH Core profiles. DrugsVS binding. EXPERIMENTAL profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>medication</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="MedicationStatement1-20" class="panel-title"><span style="float: right;">Resource Conformance: MAY </span>MedicationStatement</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-medicationstatement.html">PH Core Medication Statement</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>MedicationStatement resource for medication usage records. subject (Patient), context (Encounter), and medicationReference constrained. DrugsVS binding. EXPERIMENTAL profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>context</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="MedicationDispense1-21" class="panel-title"><span style="float: right;">Resource Conformance: MAY </span>MedicationDispense</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-medicationdispense.html">PH Core Medication Dispense</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>MedicationDispense resource for medication dispense records. subject, context, medicationReference, performer, location, and authorizingPrescription constrained. DrugsVS binding. EXPERIMENTAL profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>context</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="MedicationAdministration1-22" class="panel-title"><span style="float: right;">Resource Conformance: MAY </span>MedicationAdministration</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-medicationadministration.html">PH Core Medication Administration</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>MedicationAdministration resource for medication administration records. subject, context, medicationReference, performer, request, and partOf constrained. DrugsVS binding. EXPERIMENTAL profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>context</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Claim1-23" class="panel-title"><span style="float: right;">Resource Conformance: MAY </span>Claim</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-claim.html">PH Core Claim</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Claim resource for healthcare reimbursement claims. patient, insurer, provider, payee, and careTeam constrained to PH Core profiles.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div>
+  </text>
+  <url value="https://fhir.doh.gov.ph/phcore/CapabilityStatement/ExamplePHCoreCapabilityStatement"/>
+  <version value="0.2.0"/>
+  <name value="PHCoreServerCapabilityStatement"/>
+  <title value="PH Core Server CapabilityStatement"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-22"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="CapabilityStatement for the PH Core Implementation Guide. Defines the conformance requirements for FHIR servers implementing the minimum set of Philippine Realm resource constraints. Validated at the June 2026 Aklan Connectathon with the Juan Dela Cruz ACS scenario. Transaction Bundles are supported for atomic submission of clinical packages. Both POST (create) and PUT (update/upsert) patterns are demonstrated in Connectathon-validated examples."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="json"/>
+  <format value="xml"/>
+  <rest>
+    <mode value="server"/>
+    <documentation value="FHIR RESTful server supporting PH Core profiles and interactions validated at the June 2026 Aklan Connectathon. Supports standard CRUD operations, search, and transaction Bundles for atomic resource submission. Both POST (create-new) and PUT (conditional update/upsert) patterns are supported for each resource type, matching the two Connectathon-validated example Bundles."/>
+    <security>
+      <service>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/restful-security-service"/>
+          <code value="SMART-on-FHIR"/>
+          <display value="SMART-on-FHIR"/>
+        </coding>
+      </service>
+      <description value="Implementations SHOULD use SMART on FHIR or equivalent bearer-token authentication. Transport security (TLS) is REQUIRED. See the PH Core IG security guidance for base requirements."/>
+    </security>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="Patient"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"/>
+      <documentation value="Patient demographics with Philippine-specific extensions (nationality, religion, ethnicity, PWD disability, occupation, education). Supports PhilHealth and PhilSys identifiers. Must Support: name (given split into first/middle), birthDate, gender, telecom, address (PSGC hierarchy), identifier."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <type value="token"/>
+        <documentation value="Search by PhilHealth ID or PhilSys ID."/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="birthdate"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="gender"/>
+        <type value="token"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="Practitioner"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"/>
+      <documentation value="Practitioner resource for healthcare providers. Includes SOGIE extensions (genderIdentity, individualPronouns, sex). Must Support: name, telecom, address, birthDate, gender, identifier (PRC license)."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <type value="token"/>
+        <documentation value="Search by PRC license number."/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <type value="string"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="Organization"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"/>
+      <documentation value="Organization resource for healthcare facilities. Supports NHFR facility code, HCPN network code, PEN, and PAN identifiers. Address constrained to PHCoreAddress with PSGC geographic coding. PartOf for facility hierarchy."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <type value="token"/>
+        <documentation value="Search by NHFR facility code, HCPN code, PEN, or PAN."/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <type value="string"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="PractitionerRole"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole"/>
+      <documentation value="PractitionerRole linking practitioners to facilities and locations. Used in the ACS scenario for ED attending physician role assignment."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="identifier"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="practitioner"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="organization"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <type value="Location"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-location"/>
+      <documentation value="Location resource for healthcare service locations and sites within facilities. Address constrained to PHCoreAddress with PSGC geographic hierarchy. Used as reference from Encounter and PractitionerRole."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <type value="string"/>
+      </searchParam>
+      <searchParam>
+        <name value="organization"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <type value="RelatedPerson"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-relatedperson"/>
+      <documentation value="RelatedPerson for patient contacts, next of kin, guardians, and emergency contacts. Supports PhilHealth and PhilSys identifiers with PH Core naming and address constraints."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="Encounter"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"/>
+      <documentation value="Encounter resource for clinical visits and encounters. class is required and Must Support. Hospitalization details supported. Location references PHCoreLocation. Used in both ACS (ED encounter) and general (ambulatory) scenarios."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="location"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="Condition"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"/>
+      <documentation value="Condition resource for diagnoses and problems. category, encounter, note, severity, subject, and code are Must Support. Used for encounter diagnosis (ACS) and problem-list (T2DM comorbidity)."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="encounter"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="clinical-status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="code"/>
+        <type value="token"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <type value="Observation"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+      <documentation value="Observation resource for clinical measurements, vital signs, and lab results. subject, encounter, performer, basedOn, and partOf constrained to PH Core profiles. Used extensively in the ACS scenario: vital signs (BP, HR, RR, SpO2, temp, pain) and lab results (troponin, glucose, HbA1c, cholesterol, ECG)."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="encounter"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="code"/>
+        <type value="token"/>
+        <documentation value="Search by LOINC code for specific observation types (e.g., 85354-9 for BP, 8480-6 for BP systolic)."/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="category"/>
+        <type value="token"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <type value="Procedure"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure"/>
+      <documentation value="Procedure resource for clinical procedures and treatments. subject (Patient/Group) and status are Must Support with obligations. encounter is Must Support."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="encounter"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="code"/>
+        <type value="token"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <type value="Immunization"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization"/>
+      <documentation value="Immunization resource for vaccination records. Includes extensions for BatchNumber and AdministeredProduct. patient, status, lotNumber, and occurrenceDateTime are Must Support with obligations."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="vaccine-code"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <type value="date"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <type value="AllergyIntolerance"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance"/>
+      <documentation value="AllergyIntolerance resource for patient allergies and adverse reactions. patient is 1..1 Must Support. reaction and onset are Must Support."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="clinical-status"/>
+        <type value="token"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <type value="HealthcareService"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice"/>
+      <documentation value="HealthcareService resource for available clinical services. identifier, active, providedBy, location, name, and telecom are Must Support with obligations."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="location"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="organization"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="name"/>
+        <type value="string"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <type value="ServiceRequest"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest"/>
+      <documentation value="ServiceRequest resource for orders and requests. subject and status are 1..1 Must Support. encounter and requester are Must Support."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <type value="token"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <type value="Provenance"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance"/>
+      <documentation value="Provenance resource for audit trail and data provenance. Agent sliced into ProvenanceAuthor and ProvenanceTransmitter. Agent.who constrained to PH Core profiles. Location references PHCoreLocation."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="target"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="agent"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <type value="Task"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task"/>
+      <documentation value="Task resource for workflow tracking. executionPeriod, for, and note are Must Support. status is 1..1 Must Support. References constrained to PH Core profiles."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="status"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="owner"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHOULD"/>
+      </extension>
+      <type value="Composition"/>
+      <profile value="http://hl7.org/fhir/StructureDefinition/Composition"/>
+      <documentation value="Composition resource for clinical documents. Used in the ACS scenario for the ED Physician's Note containing the complete clinical narrative. Currently uses base FHIR profile."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="encounter"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <type value="date"/>
+      </searchParam>
+      <searchParam>
+        <name value="type"/>
+        <type value="token"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <type value="Medication"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"/>
+      <documentation value="Medication resource for medicinal products. Code bound to DrugsVS (PH FDA drug codes). EXPERIMENTAL profile."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="code"/>
+        <type value="token"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <type value="MedicationRequest"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest"/>
+      <documentation value="MedicationRequest resource for prescription orders. subject, encounter, medicationReference, requester, and performer constrained to PH Core profiles. DrugsVS binding. EXPERIMENTAL profile."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="encounter"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="medication"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <type value="MedicationStatement"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement"/>
+      <documentation value="MedicationStatement resource for medication usage records. subject (Patient), context (Encounter), and medicationReference constrained. DrugsVS binding. EXPERIMENTAL profile."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="context"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <type value="MedicationDispense"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationdispense"/>
+      <documentation value="MedicationDispense resource for medication dispense records. subject, context, medicationReference, performer, location, and authorizingPrescription constrained. DrugsVS binding. EXPERIMENTAL profile."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="context"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <type value="MedicationAdministration"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration"/>
+      <documentation value="MedicationAdministration resource for medication administration records. subject, context, medicationReference, performer, request, and partOf constrained. DrugsVS binding. EXPERIMENTAL profile."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="update"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="subject"/>
+        <type value="reference"/>
+      </searchParam>
+      <searchParam>
+        <name value="context"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <type value="Claim"/>
+      <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim"/>
+      <documentation value="Claim resource for healthcare reimbursement claims. patient, insurer, provider, payee, and careTeam constrained to PH Core profiles."/>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHALL"/>
+        </extension>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="MAY"/>
+        </extension>
+        <code value="create"/>
+      </interaction>
+      <searchParam>
+        <name value="_id"/>
+        <type value="token"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <type value="reference"/>
+      </searchParam>
+    </resource>
+    <interaction>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL"/>
+      </extension>
+      <code value="transaction"/>
+      <documentation value="Transaction Bundle support for atomic submission of clinical packages. The ACS case example uses PUT for idempotent upsert; the general transaction example uses POST for new resource creation."/>
+    </interaction>
+    <interaction>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="MAY"/>
+      </extension>
+      <code value="batch"/>
+    </interaction>
+  </rest>
+</CapabilityStatement>

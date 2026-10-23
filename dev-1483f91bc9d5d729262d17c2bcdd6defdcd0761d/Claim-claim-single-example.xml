@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="claim-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Claim:</b> PhilHealth Outpatient Consultation</p><p><b>Status:</b> Active</p><p><b>Patient:</b> Juan Dela Cruz (PhilHealth ID: 63-584789845-5)</p><p><b>Created:</b> March 15, 2024</p><p><b>Insurer:</b> Philippine Health Insurance Corporation (PhilHealth)</p><p><b>Provider:</b> Dr. Maria Clara Santos</p><p><b>Diagnosis:</b> Type 2 Diabetes Mellitus (Principal)</p><p><b>Service:</b> Outpatient Consultation on March 15, 2024 - PHP 500.00</p></div>
+  </text>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+      <code value="professional"/>
+      <display value="Professional"/>
+    </coding>
+  </type>
+  <use value="claim"/>
+  <patient>
+    <reference value="Patient/patient-single-example"/>
+  </patient>
+  <created value="2024-03-15"/>
+  <insurer>
+    <reference value="Organization/organization-single-example"/>
+  </insurer>
+  <provider>
+    <reference value="Practitioner/practitioner-single-example"/>
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority"/>
+      <code value="normal"/>
+      <display value="Normal"/>
+    </coding>
+  </priority>
+  <payee>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/payeetype"/>
+        <code value="provider"/>
+        <display value="Provider"/>
+      </coding>
+    </type>
+    <party>
+      <reference value="Practitioner/practitioner-single-example"/>
+    </party>
+  </payee>
+  <careTeam>
+    <sequence value="1"/>
+    <provider>
+      <reference value="Practitioner/practitioner-single-example"/>
+    </provider>
+    <responsible value="true"/>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claimcareteamrole"/>
+        <code value="primary"/>
+        <display value="Primary Provider"/>
+      </coding>
+    </role>
+  </careTeam>
+  <diagnosis>
+    <sequence value="1"/>
+    <diagnosisReference>
+      <reference value="Condition/condition-single-example"/>
+    </diagnosisReference>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype"/>
+        <code value="principal"/>
+        <display value="Principal Diagnosis"/>
+      </coding>
+    </type>
+  </diagnosis>
+  <insurance>
+    <sequence value="1"/>
+    <focal value="true"/>
+    <identifier>
+      <system value="http://philhealth.gov.ph/fhir/Identifier/philhealth-id"/>
+      <value value="63-584789845-5"/>
+    </identifier>
+    <coverage>
+      <reference value="Coverage/philhealth-coverage-example"/>
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1"/>
+    <careTeamSequence value="1"/>
+    <diagnosisSequence value="1"/>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="11429006"/>
+        <display value="Consultation"/>
+      </coding>
+      <text value="Outpatient Consultation"/>
+    </productOrService>
+    <servicedDate value="2024-03-15"/>
+    <quantity>
+      <value value="1"/>
+    </quantity>
+    <unitPrice>
+      <value value="500"/>
+      <currency value="PHP"/>
+    </unitPrice>
+    <net>
+      <value value="500"/>
+      <currency value="PHP"/>
+    </net>
+  </item>
+</Claim>

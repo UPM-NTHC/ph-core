@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "condition-acs-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition condition-acs-example</b></p><a name=\"condition-acs-example\"> </a><a name=\"hccondition-acs-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-condition.html\">PH Core Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Acute Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 401303003}\">Acute Coronary Syndrome - STEMI</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>onset</b>: 2026-06-12 08:30:00+0800</p><p><b>recordedDate</b>: 2026-06-12 08:45:00+0800</p><p><b>recorder</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>note</b>: </p><blockquote><div><p>45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm. 12-lead ECG shows ST-elevation in leads V1-V4 consistent with anterior STEMI. Troponin I elevated at 2.5 ng/mL.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-clinical>
+       ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-ver-status>
+       ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-category>
+       ] ;
+       fhir:code [ fhir:v "encounter-diagnosis" ] ;
+       fhir:display [ fhir:v "Encounter Diagnosis" ]
+     ] ) ;
+     fhir:text [ fhir:v "Acute Diagnosis" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:401303003 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "401303003" ] ;
+       fhir:display [ fhir:v "Acute ST segment elevation myocardial infarction" ]
+     ] ) ;
+     fhir:text [ fhir:v "Acute Coronary Syndrome - STEMI" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:reference [ fhir:v "Patient/patient-acs-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-ed-example" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:DateTime ;
+     fhir:v "2026-06-12T08:30:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2026-06-12T08:45:00+08:00"^^xsd:dateTime] ; # 
+  fhir:recorder [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm. 12-lead ECG shows ST-elevation in leads V1-V4 consistent with anterior STEMI. Troponin I elevated at 2.5 ng/mL." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

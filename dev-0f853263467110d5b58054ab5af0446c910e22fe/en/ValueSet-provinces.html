@@ -1,0 +1,390 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Provinces - Draft PH Core Implementation Guide v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style>
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ph-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.ph-table thead {
+  display: table-header-group;
+}
+
+.ph-table th {
+  background-color: #555555;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid #444444;
+}
+
+.ph-table td {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.ph-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ph-table tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.ph-table tbody tr:hover {
+  background-color: #ebf8ff;
+  transition: background-color 0.2s ease;
+}
+
+.ph-table td code {
+  background-color: #edf2f7;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.55"}
+    h3,h4,h5,h6{--heading-prefix:"5.55"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Draft PH Core Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="sample-case.html">Sample Case</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Provinces</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-valueset -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Draft PH Core Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/phcore/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-provinces.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-provinces.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-provinces.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: Provinces
+(Experimental)
+  </h2>
+  <table class="colsd" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://fhir.doh.gov.ph/phcore/ValueSet/provinces<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://fhir.doh.gov.ph/phcore/ValueSet/provinces"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.2.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://fhir.doh.gov.ph/phcore/ValueSet/provinces|0.2.0"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="5">
+        
+          Draft
+          
+
+            as of 
+2026-06-22
+
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">Provinces</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-province.html">Province</a></li>
+</ul>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="provinces"> </a><a name="hcprovinces"> </a>
+<ul><li>Include these codes as defined in <a href="CodeSystem-PSGC.html"><code>https://psa.gov.ph/classification/psgc</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.2.0</span><table class="none" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0102800000">0102800000</a></td><td>Ilocos Norte</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0102900000">0102900000</a></td><td>Ilocos Sur</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0103300000">0103300000</a></td><td>La Union</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0105500000">0105500000</a></td><td>Pangasinan</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0200900000">0200900000</a></td><td>Batanes</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0201500000">0201500000</a></td><td>Cagayan</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0203100000">0203100000</a></td><td>Isabela</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0300800000">0300800000</a></td><td>Bataan</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0301400000">0301400000</a></td><td>Bulacan</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0401000000">0401000000</a></td><td>Batangas</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0402100000">0402100000</a></td><td>Cavite</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0403400000">0403400000</a></td><td>Laguna</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0405600000">0405600000</a></td><td>Quezon</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0405800000">0405800000</a></td><td>Rizal</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0500500000">0500500000</a></td><td>Albay</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0501600000">0501600000</a></td><td>Camarines Norte</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0600400000">0600400000</a></td><td>Aklan</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0600600000">0600600000</a></td><td>Antique</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0701200000">0701200000</a></td><td>Bohol</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0702200000">0702200000</a></td><td>Cebu</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0802600000">0802600000</a></td><td>Eastern Samar</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0803700000">0803700000</a></td><td>Leyte</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0906600000">0906600000</a></td><td>Sulu</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-0907200000">0907200000</a></td><td>Zamboanga del Norte</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1001300000">1001300000</a></td><td>Bukidnon</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1001800000">1001800000</a></td><td>Camiguin</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1102300000">1102300000</a></td><td>Davao del Norte</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1102400000">1102400000</a></td><td>Davao del Sur</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1204700000">1204700000</a></td><td>Cotabato</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1206300000">1206300000</a></td><td>South Cotabato</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1400100000">1400100000</a></td><td>Abra</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1401100000">1401100000</a></td><td>Benguet</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1402700000">1402700000</a></td><td>Ifugao</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1403200000">1403200000</a></td><td>Kalinga</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1404400000">1404400000</a></td><td>Mountain Province</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1408100000">1408100000</a></td><td>Apayao</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1600200000">1600200000</a></td><td>Agusan del Norte</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1600300000">1600300000</a></td><td>Agusan del Sur</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1704000000">1704000000</a></td><td>Marinduque</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1705100000">1705100000</a></td><td>Occidental Mindoro</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1804500000">1804500000</a></td><td>Negros Occidental</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1804600000">1804600000</a></td><td>Negros Oriental</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1900700000">1900700000</a></td><td>Basilan</td></tr><tr><td><a href="CodeSystem-PSGC.html#PSGC-1903600000">1903600000</a></td><td>Lanao del Sur</td></tr></table></li></ul></div>
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"/><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on <a href="CodeSystem-PSGC.html">codesystem PSGC v0.2.0 (CodeSystem)</a><span class="copy-text-inline"><button data-clipboard-text="https://psa.gov.ph/classification/psgc|0.2.0" title="Click to Copy URL" class="btn-copy"> </button></span></p><p>This value set contains 44 concepts</p><table class="codes" data-fhir="generated"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0102800000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0102800000">0102800000</a></td><td>Ilocos Norte</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0102800000&quot;, &quot;display&quot;: &quot;Ilocos Norte&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0102800000&quot;&gt;&lt;display value=&quot;Ilocos Norte&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0102900000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0102900000">0102900000</a></td><td>Ilocos Sur</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0102900000&quot;, &quot;display&quot;: &quot;Ilocos Sur&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0102900000&quot;&gt;&lt;display value=&quot;Ilocos Sur&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0103300000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0103300000">0103300000</a></td><td>La Union</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0103300000&quot;, &quot;display&quot;: &quot;La Union&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0103300000&quot;&gt;&lt;display value=&quot;La Union&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0105500000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0105500000">0105500000</a></td><td>Pangasinan</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0105500000&quot;, &quot;display&quot;: &quot;Pangasinan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0105500000&quot;&gt;&lt;display value=&quot;Pangasinan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0200900000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0200900000">0200900000</a></td><td>Batanes</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0200900000&quot;, &quot;display&quot;: &quot;Batanes&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0200900000&quot;&gt;&lt;display value=&quot;Batanes&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0201500000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0201500000">0201500000</a></td><td>Cagayan</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0201500000&quot;, &quot;display&quot;: &quot;Cagayan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0201500000&quot;&gt;&lt;display value=&quot;Cagayan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0203100000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0203100000">0203100000</a></td><td>Isabela</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0203100000&quot;, &quot;display&quot;: &quot;Isabela&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0203100000&quot;&gt;&lt;display value=&quot;Isabela&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0300800000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0300800000">0300800000</a></td><td>Bataan</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0300800000&quot;, &quot;display&quot;: &quot;Bataan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0300800000&quot;&gt;&lt;display value=&quot;Bataan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0301400000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0301400000">0301400000</a></td><td>Bulacan</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0301400000&quot;, &quot;display&quot;: &quot;Bulacan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0301400000&quot;&gt;&lt;display value=&quot;Bulacan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0401000000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0401000000">0401000000</a></td><td>Batangas</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0401000000&quot;, &quot;display&quot;: &quot;Batangas&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0401000000&quot;&gt;&lt;display value=&quot;Batangas&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0402100000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0402100000">0402100000</a></td><td>Cavite</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0402100000&quot;, &quot;display&quot;: &quot;Cavite&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0402100000&quot;&gt;&lt;display value=&quot;Cavite&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0403400000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0403400000">0403400000</a></td><td>Laguna</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0403400000&quot;, &quot;display&quot;: &quot;Laguna&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0403400000&quot;&gt;&lt;display value=&quot;Laguna&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0405600000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0405600000">0405600000</a></td><td>Quezon</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0405600000&quot;, &quot;display&quot;: &quot;Quezon&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0405600000&quot;&gt;&lt;display value=&quot;Quezon&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0405800000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0405800000">0405800000</a></td><td>Rizal</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0405800000&quot;, &quot;display&quot;: &quot;Rizal&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0405800000&quot;&gt;&lt;display value=&quot;Rizal&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0500500000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0500500000">0500500000</a></td><td>Albay</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0500500000&quot;, &quot;display&quot;: &quot;Albay&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0500500000&quot;&gt;&lt;display value=&quot;Albay&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0501600000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0501600000">0501600000</a></td><td>Camarines Norte</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0501600000&quot;, &quot;display&quot;: &quot;Camarines Norte&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0501600000&quot;&gt;&lt;display value=&quot;Camarines Norte&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0600400000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0600400000">0600400000</a></td><td>Aklan</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0600400000&quot;, &quot;display&quot;: &quot;Aklan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0600400000&quot;&gt;&lt;display value=&quot;Aklan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0600600000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0600600000">0600600000</a></td><td>Antique</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0600600000&quot;, &quot;display&quot;: &quot;Antique&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0600600000&quot;&gt;&lt;display value=&quot;Antique&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0701200000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0701200000">0701200000</a></td><td>Bohol</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0701200000&quot;, &quot;display&quot;: &quot;Bohol&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0701200000&quot;&gt;&lt;display value=&quot;Bohol&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0702200000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0702200000">0702200000</a></td><td>Cebu</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0702200000&quot;, &quot;display&quot;: &quot;Cebu&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0702200000&quot;&gt;&lt;display value=&quot;Cebu&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0802600000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0802600000">0802600000</a></td><td>Eastern Samar</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0802600000&quot;, &quot;display&quot;: &quot;Eastern Samar&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0802600000&quot;&gt;&lt;display value=&quot;Eastern Samar&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0803700000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0803700000">0803700000</a></td><td>Leyte</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0803700000&quot;, &quot;display&quot;: &quot;Leyte&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0803700000&quot;&gt;&lt;display value=&quot;Leyte&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0906600000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0906600000">0906600000</a></td><td>Sulu</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0906600000&quot;, &quot;display&quot;: &quot;Sulu&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0906600000&quot;&gt;&lt;display value=&quot;Sulu&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-0907200000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-0907200000">0907200000</a></td><td>Zamboanga del Norte</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;0907200000&quot;, &quot;display&quot;: &quot;Zamboanga del Norte&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;0907200000&quot;&gt;&lt;display value=&quot;Zamboanga del Norte&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1001300000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1001300000">1001300000</a></td><td>Bukidnon</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1001300000&quot;, &quot;display&quot;: &quot;Bukidnon&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1001300000&quot;&gt;&lt;display value=&quot;Bukidnon&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1001800000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1001800000">1001800000</a></td><td>Camiguin</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1001800000&quot;, &quot;display&quot;: &quot;Camiguin&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1001800000&quot;&gt;&lt;display value=&quot;Camiguin&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1102300000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1102300000">1102300000</a></td><td>Davao del Norte</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1102300000&quot;, &quot;display&quot;: &quot;Davao del Norte&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1102300000&quot;&gt;&lt;display value=&quot;Davao del Norte&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1102400000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1102400000">1102400000</a></td><td>Davao del Sur</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1102400000&quot;, &quot;display&quot;: &quot;Davao del Sur&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1102400000&quot;&gt;&lt;display value=&quot;Davao del Sur&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1204700000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1204700000">1204700000</a></td><td>Cotabato</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1204700000&quot;, &quot;display&quot;: &quot;Cotabato&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1204700000&quot;&gt;&lt;display value=&quot;Cotabato&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1206300000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1206300000">1206300000</a></td><td>South Cotabato</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1206300000&quot;, &quot;display&quot;: &quot;South Cotabato&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1206300000&quot;&gt;&lt;display value=&quot;South Cotabato&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1400100000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1400100000">1400100000</a></td><td>Abra</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1400100000&quot;, &quot;display&quot;: &quot;Abra&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1400100000&quot;&gt;&lt;display value=&quot;Abra&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1401100000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1401100000">1401100000</a></td><td>Benguet</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1401100000&quot;, &quot;display&quot;: &quot;Benguet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1401100000&quot;&gt;&lt;display value=&quot;Benguet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1402700000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1402700000">1402700000</a></td><td>Ifugao</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1402700000&quot;, &quot;display&quot;: &quot;Ifugao&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1402700000&quot;&gt;&lt;display value=&quot;Ifugao&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1403200000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1403200000">1403200000</a></td><td>Kalinga</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1403200000&quot;, &quot;display&quot;: &quot;Kalinga&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1403200000&quot;&gt;&lt;display value=&quot;Kalinga&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1404400000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1404400000">1404400000</a></td><td>Mountain Province</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1404400000&quot;, &quot;display&quot;: &quot;Mountain Province&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1404400000&quot;&gt;&lt;display value=&quot;Mountain Province&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1408100000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1408100000">1408100000</a></td><td>Apayao</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1408100000&quot;, &quot;display&quot;: &quot;Apayao&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1408100000&quot;&gt;&lt;display value=&quot;Apayao&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1600200000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1600200000">1600200000</a></td><td>Agusan del Norte</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1600200000&quot;, &quot;display&quot;: &quot;Agusan del Norte&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1600200000&quot;&gt;&lt;display value=&quot;Agusan del Norte&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1600300000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1600300000">1600300000</a></td><td>Agusan del Sur</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1600300000&quot;, &quot;display&quot;: &quot;Agusan del Sur&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1600300000&quot;&gt;&lt;display value=&quot;Agusan del Sur&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1704000000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1704000000">1704000000</a></td><td>Marinduque</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1704000000&quot;, &quot;display&quot;: &quot;Marinduque&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1704000000&quot;&gt;&lt;display value=&quot;Marinduque&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1705100000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1705100000">1705100000</a></td><td>Occidental Mindoro</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1705100000&quot;, &quot;display&quot;: &quot;Occidental Mindoro&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1705100000&quot;&gt;&lt;display value=&quot;Occidental Mindoro&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1804500000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1804500000">1804500000</a></td><td>Negros Occidental</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1804500000&quot;, &quot;display&quot;: &quot;Negros Occidental&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1804500000&quot;&gt;&lt;display value=&quot;Negros Occidental&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1804600000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1804600000">1804600000</a></td><td>Negros Oriental</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1804600000&quot;, &quot;display&quot;: &quot;Negros Oriental&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1804600000&quot;&gt;&lt;display value=&quot;Negros Oriental&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1900700000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1900700000">1900700000</a></td><td>Basilan</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1900700000&quot;, &quot;display&quot;: &quot;Basilan&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1900700000&quot;&gt;&lt;display value=&quot;Basilan&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-https://psa.gov.ph/classification/psgc-1903600000"> </a><code>https://psa.gov.ph/classification/psgc</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PSGC.html#PSGC-1903600000">1903600000</a></td><td>Lanao del Sur</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;https://psa.gov.ph/classification/psgc&quot;, &quot;version&quot;: &quot;0.2.0&quot;, &quot;code&quot;: &quot;1903600000&quot;, &quot;display&quot;: &quot;Lanao del Sur&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;https://psa.gov.ph/classification/psgc&quot;&gt;&lt;version value=&quot;0.2.0&quot;&gt;&lt;code value=&quot;1903600000&quot;&gt;&lt;display value=&quot;Lanao del Sur&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr></table></div>
+
+  <hr/>
+  <p>
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology">Description of the above table(s)</a>.
+  </p>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  
+          Package fhir.ph.core#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-22 14:12:00 +0000">
+    2026-06-22
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

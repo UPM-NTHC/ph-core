@@ -1,0 +1,1266 @@
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>PSGC - TTL Representation - Draft PH Core Implementation Guide v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style>
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ph-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.ph-table thead {
+  display: table-header-group;
+}
+
+.ph-table th {
+  background-color: #555555;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid #444444;
+}
+
+.ph-table td {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.ph-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ph-table tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.ph-table tbody tr:hover {
+  background-color: #ebf8ff;
+  transition: background-color 0.2s ease;
+}
+
+.ph-table td code {
+  background-color: #edf2f7;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.60"}
+    h3,h4,h5,h6{--heading-prefix:"5.60"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Draft PH Core Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="sample-case.html">Sample Case</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PSGC</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-instance-format -->
+<div style="counter-reset: section 9" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Draft PH Core Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/phcore/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="CodeSystem-PSGC.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-PSGC.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-PSGC.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+
+<h2 id="root">: PSGC</h2>
+
+  <table class="colsd" data-fhir="generated">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+
+            as of 
+2026-09-09
+
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="CodeSystem-PSGC.ttl" no-download="true">Raw ttl</a> | <a href="CodeSystem-PSGC.ttl" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/CodeSystem/PSGC&gt; a fhir:CodeSystem ;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;PSGC&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.language">fhir:Resource.language</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;en&quot;] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#CodeSystem.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem PSGC&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;PSGC\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcPSGC\&quot;&gt; &lt;/a&gt;&lt;p&gt;This case-sensitive code system &lt;code&gt;https://psa.gov.ph/classification/psgc&lt;/code&gt; provides &lt;b&gt;a fragment&lt;/b&gt; that includes following codes in an undefined hierarchy:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Lvl&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0100000000&lt;a name=\&quot;PSGC-0100000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region I (Ilocos Region)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0102800000&lt;a name=\&quot;PSGC-0102800000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ilocos Norte&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102801000&lt;a name=\&quot;PSGC-0102801000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Adams&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0102801001&lt;a name=\&quot;PSGC-0102801001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Adams&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102802000&lt;a name=\&quot;PSGC-0102802000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bacarra&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0102802001&lt;a name=\&quot;PSGC-0102802001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bani&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0102802002&lt;a name=\&quot;PSGC-0102802002\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Buyon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0102802003&lt;a name=\&quot;PSGC-0102802003\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cabaruan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0102802004&lt;a name=\&quot;PSGC-0102802004\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cabulalaan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0102802005&lt;a name=\&quot;PSGC-0102802005\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cabusligan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102803000&lt;a name=\&quot;PSGC-0102803000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Badoc&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102804000&lt;a name=\&quot;PSGC-0102804000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bangui&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102805000&lt;a name=\&quot;PSGC-0102805000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Batac&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102806000&lt;a name=\&quot;PSGC-0102806000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Burgos&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102807000&lt;a name=\&quot;PSGC-0102807000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Carasi&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102808000&lt;a name=\&quot;PSGC-0102808000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Currimao&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102809000&lt;a name=\&quot;PSGC-0102809000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dingras&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102810000&lt;a name=\&quot;PSGC-0102810000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Dumalneg&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102811000&lt;a name=\&quot;PSGC-0102811000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Banna&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102812000&lt;a name=\&quot;PSGC-0102812000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Laoag &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102813000&lt;a name=\&quot;PSGC-0102813000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Marcos&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0102900000&lt;a name=\&quot;PSGC-0102900000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ilocos Sur&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102901000&lt;a name=\&quot;PSGC-0102901000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alilem&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0102901001&lt;a name=\&quot;PSGC-0102901001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alilem Daya &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102906000&lt;a name=\&quot;PSGC-0102906000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Candon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0102934000&lt;a name=\&quot;PSGC-0102934000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Vigan &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0103300000&lt;a name=\&quot;PSGC-0103300000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;La Union&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0103314000&lt;a name=\&quot;PSGC-0103314000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of San Fernando &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0105500000&lt;a name=\&quot;PSGC-0105500000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pangasinan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0105503000&lt;a name=\&quot;PSGC-0105503000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Alaminos&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0105518000&lt;a name=\&quot;PSGC-0105518000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Dagupan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0105532000&lt;a name=\&quot;PSGC-0105532000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of San Carlos&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0105546000&lt;a name=\&quot;PSGC-0105546000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Urdaneta&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0200000000&lt;a name=\&quot;PSGC-0200000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region II (Cagayan Valley)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0200900000&lt;a name=\&quot;PSGC-0200900000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Batanes&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0200901000&lt;a name=\&quot;PSGC-0200901000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Basco &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0200901001&lt;a name=\&quot;PSGC-0200901001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ihubok II&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0201500000&lt;a name=\&quot;PSGC-0201500000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cagayan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0201501000&lt;a name=\&quot;PSGC-0201501000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Abulug&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0201501001&lt;a name=\&quot;PSGC-0201501001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alinunu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0201529000&lt;a name=\&quot;PSGC-0201529000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Tuguegarao City &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0203100000&lt;a name=\&quot;PSGC-0203100000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Isabela&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0203108000&lt;a name=\&quot;PSGC-0203108000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Cauayan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0203114000&lt;a name=\&quot;PSGC-0203114000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Ilagan &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0203135000&lt;a name=\&quot;PSGC-0203135000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Santiago&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0300000000&lt;a name=\&quot;PSGC-0300000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region III (Central Luzon)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0300800000&lt;a name=\&quot;PSGC-0300800000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bataan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0300801000&lt;a name=\&quot;PSGC-0300801000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Abucay&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0300801001&lt;a name=\&quot;PSGC-0300801001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bangkal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0300803000&lt;a name=\&quot;PSGC-0300803000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Balanga &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0301400000&lt;a name=\&quot;PSGC-0301400000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bulacan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0301401000&lt;a name=\&quot;PSGC-0301401000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Angat&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0301401001&lt;a name=\&quot;PSGC-0301401001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Banaban&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0301403000&lt;a name=\&quot;PSGC-0301403000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Baliwag&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0301410000&lt;a name=\&quot;PSGC-0301410000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Malolos &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0301412000&lt;a name=\&quot;PSGC-0301412000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Meycauayan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0301420000&lt;a name=\&quot;PSGC-0301420000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of San Jose Del Monte&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0330100000&lt;a name=\&quot;PSGC-0330100000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Angeles&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0331400000&lt;a name=\&quot;PSGC-0331400000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Olongapo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0304903000&lt;a name=\&quot;PSGC-0304903000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Cabanatuan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0304908000&lt;a name=\&quot;PSGC-0304908000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Gapan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0304917000&lt;a name=\&quot;PSGC-0304917000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Science City of Muñoz&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0304919000&lt;a name=\&quot;PSGC-0304919000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Palayan &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0304926000&lt;a name=\&quot;PSGC-0304926000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;San Jose City&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0305409000&lt;a name=\&quot;PSGC-0305409000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mabalacat City&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0305416000&lt;a name=\&quot;PSGC-0305416000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of San Fernando &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0306916000&lt;a name=\&quot;PSGC-0306916000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Tarlac &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0400000000&lt;a name=\&quot;PSGC-0400000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region IV-A (CALABARZON)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0401000000&lt;a name=\&quot;PSGC-0401000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Batangas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0401001000&lt;a name=\&quot;PSGC-0401001000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Agoncillo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0401001001&lt;a name=\&quot;PSGC-0401001001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Adia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0401005000&lt;a name=\&quot;PSGC-0401005000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Batangas City &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0401007000&lt;a name=\&quot;PSGC-0401007000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Calaca&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0401014000&lt;a name=\&quot;PSGC-0401014000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Lipa&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0401028000&lt;a name=\&quot;PSGC-0401028000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Sto. Tomas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0401031000&lt;a name=\&quot;PSGC-0401031000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Tanauan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0402100000&lt;a name=\&quot;PSGC-0402100000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cavite&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0402101000&lt;a name=\&quot;PSGC-0402101000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alfonso&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0402101001&lt;a name=\&quot;PSGC-0402101001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Amuyong&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0403400000&lt;a name=\&quot;PSGC-0403400000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Laguna&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0405600000&lt;a name=\&quot;PSGC-0405600000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Quezon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0405800000&lt;a name=\&quot;PSGC-0405800000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Rizal&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0500000000&lt;a name=\&quot;PSGC-0500000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region V (Bicol Region)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0500500000&lt;a name=\&quot;PSGC-0500500000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Albay&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0500501000&lt;a name=\&quot;PSGC-0500501000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bacacay&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0500501001&lt;a name=\&quot;PSGC-0500501001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Baclayon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0501600000&lt;a name=\&quot;PSGC-0501600000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Camarines Norte&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0501601000&lt;a name=\&quot;PSGC-0501601000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Basud&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0501601001&lt;a name=\&quot;PSGC-0501601001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Angas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0600000000&lt;a name=\&quot;PSGC-0600000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region VI (Western Visayas)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0600400000&lt;a name=\&quot;PSGC-0600400000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Aklan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0600401000&lt;a name=\&quot;PSGC-0600401000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Altavas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0600401001&lt;a name=\&quot;PSGC-0600401001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cabangila&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0600600000&lt;a name=\&quot;PSGC-0600600000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Antique&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0600601000&lt;a name=\&quot;PSGC-0600601000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Anini-Y&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0600601001&lt;a name=\&quot;PSGC-0600601001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bayo Grande&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0700000000&lt;a name=\&quot;PSGC-0700000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region VII (Central Visayas)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0701200000&lt;a name=\&quot;PSGC-0701200000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bohol&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0701201000&lt;a name=\&quot;PSGC-0701201000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alburquerque&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0701201001&lt;a name=\&quot;PSGC-0701201001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bahi&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0702200000&lt;a name=\&quot;PSGC-0702200000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cebu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0702201000&lt;a name=\&quot;PSGC-0702201000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alcantara&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0702201001&lt;a name=\&quot;PSGC-0702201001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cabadiangan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0800000000&lt;a name=\&quot;PSGC-0800000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region VIII (Eastern Visayas)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0802600000&lt;a name=\&quot;PSGC-0802600000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Eastern Samar&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0802601000&lt;a name=\&quot;PSGC-0802601000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Arteche&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0802601001&lt;a name=\&quot;PSGC-0802601001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Aguinaldo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0803700000&lt;a name=\&quot;PSGC-0803700000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Leyte&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0803701000&lt;a name=\&quot;PSGC-0803701000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Abuyog&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0803701001&lt;a name=\&quot;PSGC-0803701001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alangilan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;0900000000&lt;a name=\&quot;PSGC-0900000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region IX (Zamboanga Peninsula)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0906600000&lt;a name=\&quot;PSGC-0906600000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sulu&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0906601000&lt;a name=\&quot;PSGC-0906601000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Indanan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0906601001&lt;a name=\&quot;PSGC-0906601001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Adjid&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  0907200000&lt;a name=\&quot;PSGC-0907200000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Zamboanga del Norte&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    0907201000&lt;a name=\&quot;PSGC-0907201000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Dapitan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      0907201001&lt;a name=\&quot;PSGC-0907201001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Aliguay&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;1000000000&lt;a name=\&quot;PSGC-1000000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region X (Northern Mindanao)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1001300000&lt;a name=\&quot;PSGC-1001300000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bukidnon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1001301000&lt;a name=\&quot;PSGC-1001301000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Baungon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1001301001&lt;a name=\&quot;PSGC-1001301001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Balintad&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1001800000&lt;a name=\&quot;PSGC-1001800000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Camiguin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1001801000&lt;a name=\&quot;PSGC-1001801000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Catarman&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1001801001&lt;a name=\&quot;PSGC-1001801001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alga&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;1100000000&lt;a name=\&quot;PSGC-1100000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region XI (Davao Region)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1102300000&lt;a name=\&quot;PSGC-1102300000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Davao del Norte&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1102301000&lt;a name=\&quot;PSGC-1102301000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Asuncion&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1102301004&lt;a name=\&quot;PSGC-1102301004\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Binancian&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1102400000&lt;a name=\&quot;PSGC-1102400000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Davao del Sur&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1102401000&lt;a name=\&quot;PSGC-1102401000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bansalan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1102401001&lt;a name=\&quot;PSGC-1102401001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alegre&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;1200000000&lt;a name=\&quot;PSGC-1200000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region XII (SOCCSKSARGEN)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1204700000&lt;a name=\&quot;PSGC-1204700000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cotabato&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1204701000&lt;a name=\&quot;PSGC-1204701000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alamada&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1204701001&lt;a name=\&quot;PSGC-1204701001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bao&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1206300000&lt;a name=\&quot;PSGC-1206300000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;South Cotabato&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1206302000&lt;a name=\&quot;PSGC-1206302000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Banga&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1206302002&lt;a name=\&quot;PSGC-1206302002\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Benitez &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;1300000000&lt;a name=\&quot;PSGC-1300000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;National Capital Region (NCR)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1380100000&lt;a name=\&quot;PSGC-1380100000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Caloocan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380100001&lt;a name=\&quot;PSGC-1380100001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Barangay 1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1380200000&lt;a name=\&quot;PSGC-1380200000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Las Piñas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1380600000&lt;a name=\&quot;PSGC-1380600000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Manila&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380601000&lt;a name=\&quot;PSGC-1380601000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Tondo I/II&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380602000&lt;a name=\&quot;PSGC-1380602000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Binondo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380603000&lt;a name=\&quot;PSGC-1380603000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Quiapo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380604000&lt;a name=\&quot;PSGC-1380604000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;San Nicolas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380605000&lt;a name=\&quot;PSGC-1380605000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Santa Cruz&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380606000&lt;a name=\&quot;PSGC-1380606000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Sampaloc&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380607000&lt;a name=\&quot;PSGC-1380607000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;San Miguel&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380608000&lt;a name=\&quot;PSGC-1380608000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ermita&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380609000&lt;a name=\&quot;PSGC-1380609000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Intramuros&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380610000&lt;a name=\&quot;PSGC-1380610000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Malate&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380611000&lt;a name=\&quot;PSGC-1380611000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Paco&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380612000&lt;a name=\&quot;PSGC-1380612000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Pandacan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380613000&lt;a name=\&quot;PSGC-1380613000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Port Area&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1380614000&lt;a name=\&quot;PSGC-1380614000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Santa Ana&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;1400000000&lt;a name=\&quot;PSGC-1400000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Cordillera Administrative Region (CAR)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1400100000&lt;a name=\&quot;PSGC-1400100000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Abra&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1400101000&lt;a name=\&quot;PSGC-1400101000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bangued &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1400101001&lt;a name=\&quot;PSGC-1400101001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Agtangao&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1401100000&lt;a name=\&quot;PSGC-1401100000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Benguet&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1401101000&lt;a name=\&quot;PSGC-1401101000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Atok&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1401101001&lt;a name=\&quot;PSGC-1401101001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Abiang&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1402700000&lt;a name=\&quot;PSGC-1402700000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ifugao&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1403200000&lt;a name=\&quot;PSGC-1403200000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Kalinga&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1404400000&lt;a name=\&quot;PSGC-1404400000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Mountain Province&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1408100000&lt;a name=\&quot;PSGC-1408100000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Apayao&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;1600000000&lt;a name=\&quot;PSGC-1600000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Region XIII (Caraga)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1600200000&lt;a name=\&quot;PSGC-1600200000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Agusan del Norte&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1600201000&lt;a name=\&quot;PSGC-1600201000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Buenavista&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1600201001&lt;a name=\&quot;PSGC-1600201001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Abilan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1600300000&lt;a name=\&quot;PSGC-1600300000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Agusan del Sur&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1600301000&lt;a name=\&quot;PSGC-1600301000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Bayugan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1600301001&lt;a name=\&quot;PSGC-1600301001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Calaitan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;1700000000&lt;a name=\&quot;PSGC-1700000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;MIMAROPA Region&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1704000000&lt;a name=\&quot;PSGC-1704000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Marinduque&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1704001000&lt;a name=\&quot;PSGC-1704001000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Boac &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1704001001&lt;a name=\&quot;PSGC-1704001001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Agot&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1705100000&lt;a name=\&quot;PSGC-1705100000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Occidental Mindoro&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1705101000&lt;a name=\&quot;PSGC-1705101000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Abra De Ilog&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1705101001&lt;a name=\&quot;PSGC-1705101001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Balao&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;1800000000&lt;a name=\&quot;PSGC-1800000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Negros Island Region (NIR)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1804500000&lt;a name=\&quot;PSGC-1804500000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Negros Occidental&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1804502000&lt;a name=\&quot;PSGC-1804502000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Bago&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1804502001&lt;a name=\&quot;PSGC-1804502001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Abuanan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1804600000&lt;a name=\&quot;PSGC-1804600000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Negros Oriental&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1804601000&lt;a name=\&quot;PSGC-1804601000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Amlan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1804601001&lt;a name=\&quot;PSGC-1804601001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bio-os&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;1900000000&lt;a name=\&quot;PSGC-1900000000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1900700000&lt;a name=\&quot;PSGC-1900700000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Basilan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1900702000&lt;a name=\&quot;PSGC-1900702000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;City of Lamitan &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1900702001&lt;a name=\&quot;PSGC-1900702001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Arco&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  1903600000&lt;a name=\&quot;PSGC-1903600000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Lanao del Sur&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;    1903601000&lt;a name=\&quot;PSGC-1903601000\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Bacolod-Kalawi&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;      1903601001&lt;a name=\&quot;PSGC-1903601001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ampao&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">fhir:CodeSystem.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;https://psa.gov.ph/classification/psgc&quot;] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">fhir:CodeSystem.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.2.0&quot;] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">fhir:CodeSystem.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;PSGC&quot;] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">fhir:CodeSystem.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;PSGC&quot;] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">fhir:CodeSystem.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;draft&quot;] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.experimental">fhir:CodeSystem.experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">fhir:CodeSystem.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2026-09-09T08:40:24+00:00&quot;^^xsd:dateTime] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">fhir:CodeSystem.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;UP Manila National TeleHealth Center&quot;] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">fhir:CodeSystem.contact</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:ContactDetail.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;UP Manila National TeleHealth Center&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;url&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;https://github.com/UP-NTHC&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">fhir:CodeSystem.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Fragment declaration of the official Philippine Standard Geographic Code (published quarterly by the Philippine Statistics Authority).&quot;] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.jurisdiction">fhir:CodeSystem.jurisdiction</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:iso:std:iso:3166&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;PH&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Philippines&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">fhir:CodeSystem.caseSensitive</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">fhir:CodeSystem.content</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;fragment&quot;] ;
+  <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">fhir:CodeSystem.concept</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0100000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region I (Ilocos Region)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102800000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Ilocos Norte&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102801000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Adams&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102801001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Adams&quot; ]
+         ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102802000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bacarra&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102802001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bani&quot; ]
+         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102802002&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Buyon&quot; ]
+         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102802003&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cabaruan&quot; ]
+         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102802004&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cabulalaan&quot; ]
+         ], [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102802005&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cabusligan&quot; ]
+         ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102803000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Badoc&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102804000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bangui&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102805000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Batac&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102806000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Burgos&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102807000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Carasi&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102808000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Currimao&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102809000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Dingras&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102810000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Dumalneg&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102811000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Banna&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102812000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Laoag &quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102813000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Marcos&quot; ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102900000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Ilocos Sur&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102901000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alilem&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102901001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alilem Daya &quot; ]
+         ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102906000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Candon&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0102934000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Vigan &quot; ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0103300000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;La Union&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0103314000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of San Fernando &quot; ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0105500000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Pangasinan&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0105503000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Alaminos&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0105518000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Dagupan&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0105532000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of San Carlos&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0105546000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Urdaneta&quot; ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0200000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region II (Cagayan Valley)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0200900000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Batanes&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0200901000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Basco &quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0200901001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Ihubok II&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0201500000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cagayan&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0201501000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Abulug&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0201501001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alinunu&quot; ]
+         ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0201529000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Tuguegarao City &quot; ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0203100000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Isabela&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0203108000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Cauayan&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0203114000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Ilagan &quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0203135000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Santiago&quot; ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0300000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region III (Central Luzon)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0300800000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bataan&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0300801000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Abucay&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0300801001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bangkal&quot; ]
+         ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0300803000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Balanga &quot; ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0301400000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bulacan&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0301401000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Angat&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0301401001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Banaban&quot; ]
+         ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0301403000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Baliwag&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0301410000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Malolos &quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0301412000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Meycauayan&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0301420000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of San Jose Del Monte&quot; ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0330100000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Angeles&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0331400000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Olongapo&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0304903000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Cabanatuan&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0304908000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Gapan&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0304917000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Science City of Muñoz&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0304919000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Palayan &quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0304926000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;San Jose City&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0305409000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Mabalacat City&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0305416000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of San Fernando &quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0306916000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Tarlac &quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0400000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region IV-A (CALABARZON)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0401000000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Batangas&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0401001000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Agoncillo&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0401001001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Adia&quot; ]
+         ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0401005000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Batangas City &quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0401007000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Calaca&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0401014000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Lipa&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0401028000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Sto. Tomas&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0401031000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Tanauan&quot; ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0402100000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cavite&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0402101000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alfonso&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0402101001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Amuyong&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0403400000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Laguna&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0405600000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Quezon&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0405800000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Rizal&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0500000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region V (Bicol Region)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0500500000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Albay&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0500501000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bacacay&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0500501001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Baclayon&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0501600000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Camarines Norte&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0501601000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Basud&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0501601001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Angas&quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0600000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region VI (Western Visayas)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0600400000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Aklan&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0600401000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Altavas&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0600401001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cabangila&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0600600000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Antique&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0600601000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Anini-Y&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0600601001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bayo Grande&quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0700000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region VII (Central Visayas)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0701200000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bohol&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0701201000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alburquerque&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0701201001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bahi&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0702200000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cebu&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0702201000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alcantara&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0702201001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cabadiangan&quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0800000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region VIII (Eastern Visayas)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0802600000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Eastern Samar&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0802601000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Arteche&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0802601001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Aguinaldo&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0803700000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Leyte&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0803701000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Abuyog&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0803701001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alangilan&quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0900000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region IX (Zamboanga Peninsula)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0906600000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Sulu&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0906601000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Indanan&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0906601001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Adjid&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0907200000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Zamboanga del Norte&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0907201000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Dapitan&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;0907201001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Aliguay&quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1000000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region X (Northern Mindanao)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1001300000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bukidnon&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1001301000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Baungon&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1001301001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Balintad&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1001800000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Camiguin&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1001801000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Catarman&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1001801001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alga&quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1100000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region XI (Davao Region)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1102300000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Davao del Norte&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1102301000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Asuncion&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1102301004&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Binancian&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1102400000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Davao del Sur&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1102401000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bansalan&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1102401001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alegre&quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1200000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region XII (SOCCSKSARGEN)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1204700000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cotabato&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1204701000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alamada&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1204701001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bao&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1206300000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;South Cotabato&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1206302000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Banga&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1206302002&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Benitez &quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1300000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;National Capital Region (NCR)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380100000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Caloocan&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380100001&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Barangay 1&quot; ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380200000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Las Piñas&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380600000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Manila&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380601000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Tondo I/II&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380602000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Binondo&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380603000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Quiapo&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380604000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;San Nicolas&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380605000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Santa Cruz&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380606000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Sampaloc&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380607000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;San Miguel&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380608000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Ermita&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380609000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Intramuros&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380610000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Malate&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380611000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Paco&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380612000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Pandacan&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380613000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Port Area&quot; ]
+       ], [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1380614000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Santa Ana&quot; ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1400000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cordillera Administrative Region (CAR)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1400100000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Abra&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1400101000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bangued &quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1400101001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Agtangao&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1401100000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Benguet&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1401101000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Atok&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1401101001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Abiang&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1402700000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Ifugao&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1403200000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Kalinga&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1404400000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Mountain Province&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1408100000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Apayao&quot; ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1600000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Region XIII (Caraga)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1600200000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Agusan del Norte&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1600201000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Buenavista&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1600201001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Abilan&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1600300000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Agusan del Sur&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1600301000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Bayugan&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1600301001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Calaitan&quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1700000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;MIMAROPA Region&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1704000000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Marinduque&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1704001000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Boac &quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1704001001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Agot&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1705100000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Occidental Mindoro&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1705101000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Abra De Ilog&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1705101001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Balao&quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1800000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Negros Island Region (NIR)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1804500000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Negros Occidental&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1804502000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Bago&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1804502001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Abuanan&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1804600000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Negros Oriental&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1804601000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Amlan&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1804601001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bio-os&quot; ]
+         ]
+       ]
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1900000000&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1900700000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Basilan&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1900702000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;City of Lamitan &quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1900702001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Arco&quot; ]
+         ]
+       ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1903600000&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Lanao del Sur&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1903601000&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Bacolod-Kalawi&quot; ] ;
+         <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.concept">fhir:CodeSystem.concept.concept</a> [
+           <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">fhir:CodeSystem.concept.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;1903601001&quot; ] ;
+           <a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">fhir:CodeSystem.concept.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Ampao&quot; ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/CodeSystem/PSGC.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/CodeSystem/PSGC.ttl&gt; .
+
+</pre>
+
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  
+          Package fhir.ph.core#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-09-09 08:40:00 +0000">
+    2026-09-09
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

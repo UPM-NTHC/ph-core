@@ -1,0 +1,36 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "bb78b133-e6d5-40ba-aed4-b8be82514327-137",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/bb78b133-e6d5-40ba-aed4-b8be82514327-137",
+  "name" : "UnionEducationalAttainmentsAndEducationalAttainments",
+  "title" : "Union of Educational Attainments And Educational Attainments",
+  "status" : "draft",
+  "date" : "2026-10-23T04:37:24+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "C201301",
+        "display" : "Elementary Graduate"
+      },
+      {
+        "code" : "C201302",
+        "display" : "High School Graduate"
+      },
+      {
+        "code" : "C201303",
+        "display" : "College Graduate"
+      },
+      {
+        "code" : "C201304",
+        "display" : "Postgraduate"
+      }]
+    }]
+  }
+}

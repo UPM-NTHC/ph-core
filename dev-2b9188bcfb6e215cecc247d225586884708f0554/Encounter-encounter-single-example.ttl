@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "encounter-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">An ambulatory visit for Juan Dela Cruz that has been completed.</div>"
+  ] ;
+  fhir:Encounter.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://example.org/encounter-id" ] ;
+     fhir:Identifier.value [ fhir:value "ENC-12345" ]
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "AMB" ] ;
+     fhir:Coding.display [ fhir:value "ambulatory" ]
+  ] ;
+  fhir:Encounter.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "AMB" ] ;
+       fhir:Coding.display [ fhir:value "ambulatory" ]
+     ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:Encounter.participant [
+     fhir:index 0 ;
+     fhir:Encounter.participant.type [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ParticipationType" ] ;
+         fhir:Coding.code [ fhir:value "ATND" ] ;
+         fhir:Coding.display [ fhir:value "attender" ]
+       ]
+     ] ;
+     fhir:Encounter.participant.individual [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+     ]
+  ] ;
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2023-01-01T10:00:00Z"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2023-01-01T11:00:00Z"^^xsd:dateTime ]
+  ] ;
+  fhir:Encounter.reasonReference [
+     fhir:index 0 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ;
+     fhir:Reference.reference [ fhir:value "Condition/condition-single-example" ]
+  ] ;
+  fhir:Encounter.diagnosis [
+     fhir:index 0 ;
+     fhir:Encounter.diagnosis.condition [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ;
+       fhir:Reference.reference [ fhir:value "Condition/condition-single-example" ]
+     ]
+  ] ;
+  fhir:Encounter.serviceProvider [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/organization-single-example" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

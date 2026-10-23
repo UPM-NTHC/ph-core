@@ -1,0 +1,189 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Composition/composition-ed-note-example> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "composition-ed-note-example"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition composition-ed-note-example</b></p><a name=\"composition-ed-note-example\"> </a><a name=\"hccomposition-ed-note-example\"> </a><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 18842-5}\">ED Clinical Note</span></p><p><b>encounter</b>: <a href=\"Encounter-encounter-ed-example.html\">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>date</b>: 2026-06-12 10:30:00+0800</p><p><b>author</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>title</b>: Emergency Department Clinical Note — Acute Coronary Syndrome</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style=\"display: none\">*</td><td>Legal</td><td>2026-06-12 10:30:00+0800</td><td><a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></td></tr></table><p><b>custodian</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p></div>"
+  ] ;
+  fhir:Composition.status [ fhir:value "final"] ;
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:18842-5 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "18842-5" ] ;
+       fhir:Coding.display [ fhir:value "Discharge summary" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "ED Clinical Note" ]
+  ] ;
+  fhir:Composition.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-acs-example" ]
+  ] ;
+  fhir:Composition.encounter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-ed-example" ]
+  ] ;
+  fhir:Composition.date [ fhir:value "2026-06-12T10:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Composition.author [
+     fhir:index -1 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-ed-example" ]
+  ] ;
+  fhir:Composition.title [ fhir:value "Emergency Department Clinical Note — Acute Coronary Syndrome"] ;
+  fhir:Composition.confidentiality [ fhir:value "N"] ;
+  fhir:Composition.attester [
+     fhir:index -1 ;
+     fhir:Composition.attester.mode [ fhir:value "legal" ] ;
+     fhir:Composition.attester.time [ fhir:value "2026-06-12T10:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:Composition.attester.party [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-ed-example" ]
+     ]
+  ] ;
+  fhir:Composition.custodian [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/organization-pgh-example" ]
+  ] ;
+  fhir:Composition.section [
+     fhir:index -1 ;
+     fhir:Composition.section.title [ fhir:value "Chief Complaint" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a loinc:10154-3 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "10154-3" ] ;
+         fhir:Coding.display [ fhir:value "Chief complaint Reported" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm, associated with dyspnea and diaphoresis.</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ;
+       fhir:Reference.reference [ fhir:value "Condition/condition-acs-example" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Composition.section.title [ fhir:value "History of Present Illness" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a loinc:10164-2 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "10164-2" ] ;
+         fhir:Coding.display [ fhir:value "History of present illness Narrative" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Patient Juan Dela Cruz, 45M, Filipino, presented to PGH ED at 08:30 with acute chest pain. Pain described as crushing, 8/10 severity, substernal with radiation to left arm. Associated with shortness of breath and sweating. No relief with rest. Known T2DM since 2020. Current smoker (1 pack/day x 20 years).</p></div>"
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Composition.section.title [ fhir:value "Vital Signs" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a loinc:8716-3 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "8716-3" ] ;
+         fhir:Coding.display [ fhir:value "Vital signs note" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>BP: 160/95 mmHg (elevated)</li><li>HR: 110 bpm (tachycardic)</li><li>RR: 24/min (tachypneic)</li><li>SpO2: 92% RA (hypoxemic)</li><li>Temp: 37.2°C</li><li>Pain: 8/10</li></ul></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/Observation/observation-bp-acs> ;
+       fhir:Reference.reference [ fhir:value "Observation/observation-bp-acs" ]
+     ], [
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/Observation/observation-hr-acs> ;
+       fhir:Reference.reference [ fhir:value "Observation/observation-hr-acs" ]
+     ], [
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/Observation/observation-rr-acs> ;
+       fhir:Reference.reference [ fhir:value "Observation/observation-rr-acs" ]
+     ], [
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/Observation/observation-spo2-acs> ;
+       fhir:Reference.reference [ fhir:value "Observation/observation-spo2-acs" ]
+     ], [
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/Observation/observation-temp-acs> ;
+       fhir:Reference.reference [ fhir:value "Observation/observation-temp-acs" ]
+     ], [
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/Observation/observation-pain-acs> ;
+       fhir:Reference.reference [ fhir:value "Observation/observation-pain-acs" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Composition.section.title [ fhir:value "Assessment and Plan" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a loinc:18776-5 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "18776-5" ] ;
+         fhir:Coding.display [ fhir:value "Plan of care note" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><strong>Assessment:</strong> Acute Coronary Syndrome — Anterior STEMI (ST-elevation V1-V4 on ECG, elevated troponin 2.5 ng/mL).</p><p><strong>Plan:</strong> 1) Aspirin 325mg chewed, Clopidogrel 600mg loading, Metoprolol 25mg PO. 2) Cardiology consult for emergent PCI. 3) Admit to CCU post-PCI.</p></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ;
+       fhir:Reference.reference [ fhir:value "Condition/condition-acs-example" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Composition.section.title [ fhir:value "Active Conditions" ] ;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a loinc:11493-4 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "11493-4" ] ;
+         fhir:Coding.display [ fhir:value "Hospital discharge studies summary Narrative" ]
+       ]
+     ] ;
+     fhir:Composition.section.text [
+       fhir:Narrative.status [ fhir:value "generated" ] ;
+       fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Type 2 Diabetes Mellitus (diagnosed 2020, on Metformin)</li><li>Acute Coronary Syndrome — Anterior STEMI (diagnosed today)</li></ul></div>"
+     ] ;
+     fhir:Composition.section.entry [
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-t2dm-example> ;
+       fhir:Reference.reference [ fhir:value "Condition/condition-t2dm-example" ]
+     ], [
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ;
+       fhir:Reference.reference [ fhir:value "Condition/condition-acs-example" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Composition/composition-ed-note-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

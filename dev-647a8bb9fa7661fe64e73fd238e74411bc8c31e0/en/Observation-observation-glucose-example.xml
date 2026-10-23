@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation-glucose-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Fasting blood glucose: 95 mg/dL (Normal) for Juan Dela Cruz.</div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="1558-6"/>
+      <display value="Fasting glucose [Mass/volume] in Serum or Plasma"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <effectiveDateTime value="2024-01-15T08:00:00Z"/>
+  <performer>
+    <reference value="Organization/organization-single-example"/>
+  </performer>
+  <valueQuantity>
+    <value value="95"/>
+    <unit value="mg/dL"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mg/dL"/>
+  </valueQuantity>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="N"/>
+      <display value="Normal"/>
+    </coding>
+  </interpretation>
+  <referenceRange>
+    <low>
+      <value value="70"/>
+      <unit value="mg/dL"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/dL"/>
+    </low>
+    <high>
+      <value value="100"/>
+      <unit value="mg/dL"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/dL"/>
+    </high>
+  </referenceRange>
+</Observation>

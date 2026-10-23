@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="relatedperson-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-relatedperson"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Maria Cruz Santos, born on January 1, 1955, is the mother of the patient. She resides at 123 Mabini Street, 1100, Philippines. Her PhilSys ID is 1234-1234567-1.</div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="NI"/>
+      </coding>
+    </type>
+    <system value="http://philsys.gov.ph/fhir/Identifier/philsys-id"/>
+    <value value="1234-1234567-1"/>
+  </identifier>
+  <patient>
+    <reference value="Patient/patient-single-example"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="MTH"/>
+      <display value="mother"/>
+    </coding>
+    <text value="Mother"/>
+  </relationship>
+  <name>
+    <use value="official"/>
+    <text value="Maria Cruz Santos"/>
+    <family value="Santos"/>
+    <given value="Maria"/>
+    <given value="Cruz"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63-912-345-6789"/>
+    <use value="mobile"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="1955-01-01"/>
+  <address>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0133070250"/>
+        <display value="Paringao"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0133070000"/>
+        <display value="Bauang"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/province">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0133000000"/>
+        <display value="La Union"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0100000000"/>
+        <display value="Ilocos Region"/>
+      </valueCoding>
+    </extension>
+    <line value="123 Mabini Street"/>
+    <postalCode value="1100"/>
+    <country value="PH"/>
+  </address>
+</RelatedPerson>

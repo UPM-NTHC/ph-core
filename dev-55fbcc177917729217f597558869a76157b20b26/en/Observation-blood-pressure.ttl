@@ -1,0 +1,167 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Observation/blood-pressure> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "blood-pressure"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">On 17 September 2012, a blood pressure observation was recorded for Juan Dela Cruz. The systolic pressure was 107 mmHg (Normal), and the diastolic pressure was 60 mmHg (Below low normal). The measurement was taken from the right arm and performed by a practitioner.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281" ]
+  ] ) ; # 
+  fhir:basedOn ( [
+     fhir:identifier [
+       fhir:system [
+         fhir:v "https://acme.org/identifiers"^^xsd:anyURI ;
+         fhir:l <https://acme.org/identifiers>
+       ] ;
+       fhir:value [ fhir:v "1234" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "vital-signs" ] ;
+       fhir:display [ fhir:v "Vital Signs" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:85354-9 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "85354-9" ] ;
+       fhir:display [ fhir:v "Blood pressure panel with all children optional" ]
+     ] ) ;
+     fhir:text [ fhir:v "Blood pressure systolic & diastolic" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/example-patient> ;
+     fhir:reference [ fhir:v "Patient/example-patient" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2012-09-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/example-practitioner> ;
+     fhir:reference [ fhir:v "Practitioner/example-practitioner" ]
+  ] ) ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "L" ] ;
+       fhir:display [ fhir:v "Low" ]
+     ] ) ;
+     fhir:text [ fhir:v "Below low normal" ]
+  ] ) ; # 
+  fhir:bodySite [
+     fhir:coding ( [
+       a sct:368209003 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "368209003" ] ;
+       fhir:display [ fhir:v "Right arm" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:8480-6 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "8480-6" ] ;
+         fhir:display [ fhir:v "Systolic blood pressure" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "107"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mmHg" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mm[Hg]" ]
+     ] ;
+     fhir:interpretation ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+         ] ;
+         fhir:code [ fhir:v "N" ] ;
+         fhir:display [ fhir:v "Normal" ]
+       ] ) ;
+       fhir:text [ fhir:v "Normal" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:8462-4 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "8462-4" ] ;
+         fhir:display [ fhir:v "Diastolic blood pressure" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "60"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mmHg" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mm[Hg]" ]
+     ] ;
+     fhir:interpretation ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+         ] ;
+         fhir:code [ fhir:v "L" ] ;
+         fhir:display [ fhir:v "Low" ]
+       ] ) ;
+       fhir:text [ fhir:v "Below low normal" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

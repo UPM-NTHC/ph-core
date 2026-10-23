@@ -1,0 +1,1118 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Bundle/transaction-example> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "transaction-example"] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:type [ fhir:v "transaction"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Patient/patient-single-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Patient"^^xsd:anyURI ;
+         fhir:l fhir:Patient
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Practitioner"^^xsd:anyURI ;
+         fhir:l fhir:Practitioner
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Encounter"^^xsd:anyURI ;
+         fhir:l fhir:Encounter
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Condition/condition-single-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Condition"^^xsd:anyURI ;
+         fhir:l fhir:Condition
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Medication/medication-single-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Medication/medication-single-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Medication/medication-single-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Medication"^^xsd:anyURI ;
+         fhir:l fhir:Medication
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Observation/observation-bp-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Observation/observation-bp-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Observation/observation-bp-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Observation"^^xsd:anyURI ;
+         fhir:l fhir:Observation
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/AllergyIntolerance/allergy-single-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/AllergyIntolerance/allergy-single-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/AllergyIntolerance/allergy-single-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "AllergyIntolerance"^^xsd:anyURI ;
+         fhir:l fhir:AllergyIntolerance
+       ]
+     ]
+  ] [
+     fhir:fullUrl [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Immunization/immunization-single-example"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Immunization/immunization-single-example>
+     ] ;
+     fhir:resource ( <https://fhir.doh.gov.ph/phcore/Immunization/immunization-single-example> ) ;
+     fhir:request [
+       fhir:method [ fhir:v "POST" ] ;
+       fhir:url [
+         fhir:v "Practitioner"^^xsd:anyURI ;
+         fhir:l fhir:Practitioner
+       ]
+     ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> a fhir:Patient ;
+  fhir:id [ fhir:v "patient-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_patient-single-example\"> </a>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "code"^^xsd:anyURI ;
+         fhir:l fhir:code
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+             fhir:l <urn:iso:std:iso:3166>
+           ] ;
+           fhir:code [ fhir:v "PH" ] ;
+           fhir:display [ fhir:v "Philippines" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "period"^^xsd:anyURI ;
+         fhir:l fhir:period
+       ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2020-01-01"^^xsd:date ] ;
+         fhir:end [ fhir:v "2023-01-01"^^xsd:date ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/patient-nationality"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/patient-nationality>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/patient-religion"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/patient-religion>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation>
+         ] ;
+         fhir:code [ fhir:v "1007" ] ;
+         fhir:display [ fhir:v "Atheism" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people>
+     ] ;
+     fhir:value [
+       a fhir:Boolean ;
+       fhir:v true
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-group"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-group>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs>
+         ] ;
+         fhir:code [ fhir:v "Aetas" ] ;
+         fhir:display [ fhir:v "Aetas" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/race"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/race>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-Race"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-Race>
+         ] ;
+         fhir:code [ fhir:v "2036-2" ] ;
+         fhir:display [ fhir:v "Filipino" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment>
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psced/level"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psced/level>
+         ] ;
+         fhir:code [ fhir:v "C201301" ] ;
+         fhir:display [ fhir:v "Elementary Graduate" ]
+       ] )
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "occupationClassification"^^xsd:anyURI ;
+         fhir:l fhir:occupationClassification
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psoc/unit"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psoc/unit>
+           ] ;
+           fhir:code [ fhir:v "111102" ] ;
+           fhir:display [ fhir:v "Hospital Administrator" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "occupationLength"^^xsd:anyURI ;
+         fhir:l fhir:occupationLength
+       ] ;
+       fhir:value [
+         a fhir:Period ;
+         fhir:start [ fhir:v "2020-01-01"^^xsd:date ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation>
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"^^xsd:anyURI ;
+       fhir:l <http://philhealth.gov.ph/fhir/Identifier/philhealth-id>
+     ] ;
+     fhir:value [ fhir:v "63-584789845-5" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Dela Cruz" ] ;
+     fhir:given ( [ fhir:v "Juan Jane" ] [ fhir:v "Dela Fuente" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1980-01-01"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380100001" ] ;
+         fhir:display [ fhir:v "Barangay 1" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380200000" ] ;
+         fhir:display [ fhir:v "City of Las Piñas" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/province"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/province>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "0402100000" ] ;
+         fhir:display [ fhir:v "Cavite" ]
+       ]
+     ] ) ;
+     fhir:line ( [ fhir:v "123 Mabini Street" ] [ fhir:v "Barangay Malinis" ] ) ;
+     fhir:city [ fhir:v "Quezon City" ] ;
+     fhir:district [ fhir:v "NCR" ] ;
+     fhir:postalCode [ fhir:v "1100" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> a fhir:Practitioner ;
+  fhir:id [ fhir:v "practitioner-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_practitioner-single-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner practitioner-single-example</b></p><a name=\"practitioner-single-example\"> </a><a name=\"hcpractitioner-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a></p></div><blockquote><p><b>Person Recorded Sex Or Gender</b></p><ul><li>value: <span title=\"Codes:{http://snomed.info/sct 248152002}\">Female (finding)</span></li><li>type: <span title=\"Codes:{http://loinc.org 76689-9}\">Sex Assigned at Birth</span></li></ul></blockquote><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title=\"Codes:{http://loinc.org LA22879-3}\">Identifies as female</span></li></ul></blockquote><blockquote><p><b>Individual Pronouns</b></p><ul><li>value: <span title=\"Codes:{http://loinc.org LA29519-8}\">she/her/her/hers/herself</span></li></ul></blockquote><p><b>name</b>: Maria Clara Santos (Official)</p><p><b>telecom</b>: <a href=\"tel:+63-912-345-6789\">+63-912-345-6789</a>, <a href=\"mailto:maria.santos@example.ph\">maria.santos@example.ph</a></p><p><b>address</b>: 1234 Mabini Street 1000 PH (home)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1985-05-15</p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Period</b></td><td><b>Issuer</b></td></tr><tr><td style=\"display: none\">*</td><td><code>http://prc.gov.ph/fhir/Identifier/prc-license</code>/0123456</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0360 MD}\">Doctor of Medicine</span></td><td>2010-07-15 --&gt; (ongoing)</td><td><a href=\"Organization-organization-single-example.html\">Organization Department of Health - Sattelite Office</a></td></tr></table><p><b>communication</b>: <span title=\"Codes:{urn:ietf:bcp:47 fil}\">Filipino</span>, <span title=\"Codes:{urn:ietf:bcp:47 en}\">English</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:248152002 ;
+           fhir:system [
+             fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+             fhir:l <http://snomed.info/sct>
+           ] ;
+           fhir:code [ fhir:v "248152002" ] ;
+           fhir:display [ fhir:v "Female (finding)" ]
+         ] )
+       ]
+     ] [
+       fhir:url [
+         fhir:v "type"^^xsd:anyURI ;
+         fhir:l fhir:type
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:76689-9 ;
+           fhir:system [
+             fhir:v "http://loinc.org"^^xsd:anyURI ;
+             fhir:l <http://loinc.org>
+           ] ;
+           fhir:code [ fhir:v "76689-9" ] ;
+           fhir:display [ fhir:v "Sex Assigned at Birth" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:LA22879-3 ;
+           fhir:system [
+             fhir:v "http://loinc.org"^^xsd:anyURI ;
+             fhir:l <http://loinc.org>
+           ] ;
+           fhir:code [ fhir:v "LA22879-3" ] ;
+           fhir:display [ fhir:v "Identifies as female" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-genderIdentity>
+     ]
+  ] [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "value"^^xsd:anyURI ;
+         fhir:l fhir:value
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a loinc:LA29519-8 ;
+           fhir:system [
+             fhir:v "http://loinc.org"^^xsd:anyURI ;
+             fhir:l <http://loinc.org>
+           ] ;
+           fhir:code [ fhir:v "LA29519-8" ] ;
+           fhir:display [ fhir:v "she/her/her/hers/herself" ]
+         ] )
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/individual-pronouns"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/individual-pronouns>
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Santos" ] ;
+     fhir:given ( [ fhir:v "Maria" ] [ fhir:v "Clara" ] ) ;
+     fhir:suffix ( [ fhir:v "MD" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-912-345-6789" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "maria.santos@example.ph" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1339000003" ] ;
+         fhir:display [ fhir:v "Ermita" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380600000" ] ;
+         fhir:display [ fhir:v "City of Manila" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/region>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1300000000" ] ;
+         fhir:display [ fhir:v "National Capital Region" ]
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "1234 Mabini Street" ] ) ;
+     fhir:postalCode [ fhir:v "1000" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1985-05-15"^^xsd:date] ; # 
+  fhir:qualification ( [
+     fhir:identifier ( [
+       fhir:system [
+         fhir:v "http://prc.gov.ph/fhir/Identifier/prc-license"^^xsd:anyURI ;
+         fhir:l <http://prc.gov.ph/fhir/Identifier/prc-license>
+       ] ;
+       fhir:value [ fhir:v "0123456" ]
+     ] ) ;
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0360"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0360>
+         ] ;
+         fhir:code [ fhir:v "MD" ] ;
+         fhir:display [ fhir:v "Doctor of Medicine" ]
+       ] )
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2010-07-15"^^xsd:date ]
+     ] ;
+     fhir:issuer [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+       fhir:reference [ fhir:v "Organization/organization-single-example" ]
+     ]
+  ] ) ; # 
+  fhir:communication ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:ietf:bcp:47"^^xsd:anyURI ;
+         fhir:l <urn:ietf:bcp:47>
+       ] ;
+       fhir:code [ fhir:v "fil" ] ;
+       fhir:display [ fhir:v "Filipino" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:ietf:bcp:47"^^xsd:anyURI ;
+         fhir:l <urn:ietf:bcp:47>
+       ] ;
+       fhir:code [ fhir:v "en" ] ;
+       fhir:display [ fhir:v "English" ]
+     ] )
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> a fhir:Encounter ;
+  fhir:id [ fhir:v "encounter-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_encounter-single-example\"> </a>An ambulatory visit for Juan Dela Cruz that has been completed.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://example.org/encounter-id"^^xsd:anyURI ;
+       fhir:l <http://example.org/encounter-id>
+     ] ;
+     fhir:value [ fhir:v "ENC-12345" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+       ] ;
+       fhir:code [ fhir:v "AMB" ] ;
+       fhir:display [ fhir:v "ambulatory" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ParticipationType>
+         ] ;
+         fhir:code [ fhir:v "ATND" ] ;
+         fhir:display [ fhir:v "attender" ]
+       ] )
+     ] ) ;
+     fhir:individual [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2023-01-01T10:00:00Z"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2023-01-01T11:00:00Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:reasonReference ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ;
+     fhir:reference [ fhir:v "Condition/condition-single-example" ]
+  ] ) ; # 
+  fhir:diagnosis ( [
+     fhir:condition [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ;
+       fhir:reference [ fhir:v "Condition/condition-single-example" ]
+     ]
+  ] ) ; # 
+  fhir:serviceProvider [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:reference [ fhir:v "Organization/organization-single-example" ]
+  ] . # 
+
+<https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> a fhir:Condition ;
+  fhir:id [ fhir:v "condition-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_condition-single-example\"> </a>Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-clinical>
+       ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-ver-status>
+       ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/condition-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/condition-category>
+       ] ;
+       fhir:code [ fhir:v "problem-list-item" ] ;
+       fhir:display [ fhir:v "Problem List Item" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:44054006 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "44054006" ] ;
+       fhir:display [ fhir:v "Diabetes mellitus type 2" ]
+     ] ) ;
+     fhir:text [ fhir:v "Type 2 Diabetes Mellitus" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-single-example" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:DateTime ;
+     fhir:v "2020-03-15"^^xsd:date
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2020-03-15T10:30:00Z"^^xsd:dateTime] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient advised on diet and exercise management." ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Medication/medication-single-example> a fhir:Medication ;
+  fhir:id [ fhir:v "medication-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_medication-single-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Medication medication-single-example</b></p><a name=\"medication-single-example\"> </a><a name=\"hcmedication-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-medication.html\">PH Core Medication</a></p></div><p><b>code</b>: <span title=\"Codes:{https://verification.fda.gov.ph DRP-10144}\">Twinact 40mg/5mg tablet</span></p><p><b>form</b>: <span title=\"Codes:{http://snomed.info/sct 385055001}\">Tablet</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://verification.fda.gov.ph"^^xsd:anyURI ;
+         fhir:l <https://verification.fda.gov.ph>
+       ] ;
+       fhir:code [ fhir:v "DRP-10144" ] ;
+       fhir:display [ fhir:v "Twinact" ]
+     ] ) ;
+     fhir:text [ fhir:v "Twinact 40mg/5mg tablet" ]
+  ] ; # 
+  fhir:form [
+     fhir:coding ( [
+       a sct:385055001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "385055001" ] ;
+       fhir:display [ fhir:v "Tablet" ]
+     ] )
+  ] . # 
+
+<https://fhir.doh.gov.ph/phcore/Observation/observation-bp-example> a fhir:Observation ;
+  fhir:id [ fhir:v "observation-bp-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_observation-bp-example\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-bp-example</b></p><a name=\"observation-bp-example\"> </a><a name=\"hcobservation-bp-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/7.1.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281</p><p><b>basedOn</b>: Identifier: <code>https://acme.org/identifiers</code>/1234</p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85354-9}\">Blood pressure systolic &amp; diastolic</span></p><p><b>subject</b>: <a href=\"Patient-patient-single-example.html\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>effective</b>: 2012-09-17</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-single-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation L}\">Below low normal</span></p><p><b>bodySite</b>: <span title=\"Codes:{http://snomed.info/sct 368209003}\">Right arm</span></p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8480-6}\">Systolic blood pressure</span></p><p><b>value</b>: 107 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation N}\">Normal</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8462-4}\">Diastolic blood pressure</span></p><p><b>value</b>: 60 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation L}\">Below low normal</span></p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281" ]
+  ] ) ; # 
+  fhir:basedOn ( [
+     fhir:identifier [
+       fhir:system [
+         fhir:v "https://acme.org/identifiers"^^xsd:anyURI ;
+         fhir:l <https://acme.org/identifiers>
+       ] ;
+       fhir:value [ fhir:v "1234" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/observation-category>
+       ] ;
+       fhir:code [ fhir:v "vital-signs" ] ;
+       fhir:display [ fhir:v "Vital Signs" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:85354-9 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "85354-9" ] ;
+       fhir:display [ fhir:v "Blood pressure panel with all children optional" ]
+     ] ) ;
+     fhir:text [ fhir:v "Blood pressure systolic & diastolic" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2012-09-17"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+  ] ) ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "L" ] ;
+       fhir:display [ fhir:v "Low" ]
+     ] ) ;
+     fhir:text [ fhir:v "Below low normal" ]
+  ] ) ; # 
+  fhir:bodySite [
+     fhir:coding ( [
+       a sct:368209003 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "368209003" ] ;
+       fhir:display [ fhir:v "Right arm" ]
+     ] )
+  ] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:8480-6 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "8480-6" ] ;
+         fhir:display [ fhir:v "Systolic blood pressure" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "107"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mmHg" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mm[Hg]" ]
+     ] ;
+     fhir:interpretation ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+         ] ;
+         fhir:code [ fhir:v "N" ] ;
+         fhir:display [ fhir:v "Normal" ]
+       ] ) ;
+       fhir:text [ fhir:v "Normal" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         a loinc:8462-4 ;
+         fhir:system [
+           fhir:v "http://loinc.org"^^xsd:anyURI ;
+           fhir:l <http://loinc.org>
+         ] ;
+         fhir:code [ fhir:v "8462-4" ] ;
+         fhir:display [ fhir:v "Diastolic blood pressure" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "60"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mmHg" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "mm[Hg]" ]
+     ] ;
+     fhir:interpretation ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+         ] ;
+         fhir:code [ fhir:v "L" ] ;
+         fhir:display [ fhir:v "Low" ]
+       ] ) ;
+       fhir:text [ fhir:v "Below low normal" ]
+     ] )
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/AllergyIntolerance/allergy-single-example> a fhir:AllergyIntolerance ;
+  fhir:id [ fhir:v "allergy-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"AllergyIntolerance_allergy-single-example\"> </a>Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical>
+       ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] ) ;
+     fhir:text [ fhir:v "Active" ]
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/allergyintolerance-verification>
+       ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] ) ;
+     fhir:text [ fhir:v "Confirmed" ]
+  ] ; # 
+  fhir:criticality [ fhir:v "high"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:294494002 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "294494002" ] ;
+       fhir:display [ fhir:v "Benethamine penicillin allergy" ]
+     ] ) ;
+     fhir:text [ fhir:v "Benethamine penicillin allergy" ]
+  ] ; # 
+  fhir:patient [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:DateTime ;
+     fhir:v "2023-01-15"^^xsd:date
+  ] ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Patient reported rash and swelling after penicillin administration." ]
+  ] ) ; # 
+  fhir:reaction ( [
+     fhir:manifestation ( [
+       fhir:coding ( [
+         a sct:271807003 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "271807003" ] ;
+         fhir:display [ fhir:v "Eruption of skin" ]
+       ] ) ;
+       fhir:text [ fhir:v "Skin rash" ]
+     ] ) ;
+     fhir:severity [ fhir:v "severe" ]
+  ] ) . # 
+
+<https://fhir.doh.gov.ph/phcore/Immunization/immunization-single-example> a fhir:Immunization ;
+  fhir:id [ fhir:v "immunization-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Immunization_immunization-single-example\"> </a>Juan Dela Cruz received a completed intramuscular influenza (H5N1-1203) vaccine in the left arm on January 10, 2013, at Philippine General Hospital. The vaccine lot number was AAJN11K and was privately funded. Dose 1 was administered by Dr. Maria Clara Santos.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/batch-number"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/batch-number>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "AAJN11K"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/administered-product"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/administered-product>
+     ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Medication/medication-single-example> ;
+       fhir:reference [ fhir:v "Medication/medication-single-example" ]
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/cvx"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/cvx>
+       ] ;
+       fhir:code [ fhir:v "123" ] ;
+       fhir:display [ fhir:v "influenza, H5N1-1203" ]
+     ] ) ;
+     fhir:text [ fhir:v "Influenza H5N1-1203 Vaccine" ]
+  ] ; # 
+  fhir:patient [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-single-example" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:DateTime ;
+     fhir:v "2013-01-10"^^xsd:date
+  ] ; # 
+  fhir:primarySource [ fhir:v true] ; # 
+  fhir:location [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Location/location-single-example> ;
+     fhir:reference [ fhir:v "Location/location-single-example" ]
+  ] ; # 
+  fhir:lotNumber [ fhir:v "AAJN11K"] ; # 
+  fhir:expirationDate [ fhir:v "2015-02-15"^^xsd:date] ; # 
+  fhir:site [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActSite"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActSite>
+       ] ;
+       fhir:code [ fhir:v "LA" ] ;
+       fhir:display [ fhir:v "left arm" ]
+     ] ) ;
+     fhir:text [ fhir:v "Left arm" ]
+  ] ; # 
+  fhir:route [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration>
+       ] ;
+       fhir:code [ fhir:v "IM" ] ;
+       fhir:display [ fhir:v "Injection, intramuscular" ]
+     ] ) ;
+     fhir:text [ fhir:v "Intramuscular injection" ]
+  ] ; # 
+  fhir:doseQuantity [
+     fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "mg" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:function [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0443"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0443>
+         ] ;
+         fhir:code [ fhir:v "OP" ] ;
+         fhir:display [ fhir:v "Ordering Provider" ]
+       ] ) ;
+       fhir:text [ fhir:v "Ordering Provider" ]
+     ] ;
+     fhir:actor [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ] ;
+       fhir:display [ fhir:v "Dr. Maria Clara Santos" ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Notes on administration of vaccine" ]
+  ] ) ; # 
+  fhir:isSubpotent [ fhir:v true] ; # 
+  fhir:fundingSource [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/immunization-funding-source"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/immunization-funding-source>
+       ] ;
+       fhir:code [ fhir:v "private" ] ;
+       fhir:display [ fhir:v "Private" ]
+     ] ) ;
+     fhir:text [ fhir:v "Private" ]
+  ] ; # 
+  fhir:protocolApplied ( [
+     fhir:targetDisease ( [
+       fhir:coding ( [
+         a sct:772828001 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "772828001" ] ;
+         fhir:display [ fhir:v "Influenza caused by Influenza A virus subtype H5N1" ]
+       ] ) ;
+       fhir:text [ fhir:v "Influenza H5N1" ]
+     ] ) ;
+     fhir:doseNumber [
+       a fhir:PositiveInt ;
+       fhir:v "1"^^xsd:positiveInteger
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

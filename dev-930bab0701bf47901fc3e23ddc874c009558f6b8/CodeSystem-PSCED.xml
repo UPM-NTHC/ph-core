@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="PSCED"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem PSCED</b></p><a name="PSCED"> </a><a name="hcPSCED"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psced/level</code> provides some codes <b>that are example only</b>:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">C201301<a name="PSCED-C201301"> </a></td><td>Elementary Graduate</td><td>Completed elementary education</td></tr><tr><td style="white-space:nowrap">C201302<a name="PSCED-C201302"> </a></td><td>High School Graduate</td><td>Completed secondary education</td></tr><tr><td style="white-space:nowrap">C201303<a name="PSCED-C201303"> </a></td><td>College Graduate</td><td>Completed bachelor's degree</td></tr><tr><td style="white-space:nowrap">C201304<a name="PSCED-C201304"> </a></td><td>Postgraduate</td><td>Completed master's or doctoral degree</td></tr></table></div>
+  </text>
+  <url value="https://psa.gov.ph/classification/psced/level"/>
+  <version value="0.2.0"/>
+  <name value="PSCED"/>
+  <title value="Mock PSCED"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-10T05:12:58+00:00"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="Mock of the Philippine Standard Classification of Education."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="example"/>
+  <concept>
+    <code value="C201301"/>
+    <display value="Elementary Graduate"/>
+    <definition value="Completed elementary education"/>
+  </concept>
+  <concept>
+    <code value="C201302"/>
+    <display value="High School Graduate"/>
+    <definition value="Completed secondary education"/>
+  </concept>
+  <concept>
+    <code value="C201303"/>
+    <display value="College Graduate"/>
+    <definition value="Completed bachelor's degree"/>
+  </concept>
+  <concept>
+    <code value="C201304"/>
+    <display value="Postgraduate"/>
+    <definition value="Completed master's or doctoral degree"/>
+  </concept>
+</CodeSystem>

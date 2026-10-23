@@ -1,0 +1,36 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "bb78b133-e6d5-40ba-aed4-b8be82514327-140",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/bb78b133-e6d5-40ba-aed4-b8be82514327-140",
+  "name" : "UnionOccupationClassificationsAndOccupationClassifications",
+  "title" : "Union of Occupation Classifications And Occupation Classifications",
+  "status" : "draft",
+  "date" : "2026-10-23T04:37:24+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "111102",
+        "display" : "Hospital Administrator"
+      },
+      {
+        "code" : "111103",
+        "display" : "Medical Department Head"
+      },
+      {
+        "code" : "121101",
+        "display" : "General Manager"
+      },
+      {
+        "code" : "211101",
+        "display" : "Medical Doctor"
+      }]
+    }]
+  }
+}

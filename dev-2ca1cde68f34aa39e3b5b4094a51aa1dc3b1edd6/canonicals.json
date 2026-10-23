@@ -1,0 +1,483 @@
+[{
+  "id" : "Consumer",
+  "type" : "ActorDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/ActorDefinition/Consumer",
+  "version" : "0.2.0",
+  "name" : "Consumer"
+},
+{
+  "id" : "Creator",
+  "type" : "ActorDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/ActorDefinition/Creator",
+  "version" : "0.2.0",
+  "name" : "Creator"
+},
+{
+  "id" : "Server",
+  "type" : "ActorDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/ActorDefinition/Server",
+  "version" : "0.2.0",
+  "name" : "Server"
+},
+{
+  "id" : "indigenous-groups-cs",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs",
+  "version" : "0.2.0",
+  "name" : "IndigenousGroupsCS"
+},
+{
+  "id" : "ph-core-disability-type-cs",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs",
+  "version" : "0.2.0",
+  "name" : "PHCoreDisabilityTypeCS"
+},
+{
+  "id" : "fhir.ph.core",
+  "type" : "ImplementationGuide",
+  "url" : "https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core",
+  "version" : "0.2.0",
+  "name" : "PHCoreImplementationGuide"
+},
+{
+  "id" : "DOHNHFRCodeNS",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/NamingSystem/DOHNHFRCodeNS",
+  "version" : "0.2.0",
+  "name" : "DOHNHFRCode"
+},
+{
+  "id" : "DOHProcedureIDNS",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/NamingSystem/DOHProcedureIDNS",
+  "version" : "0.2.0",
+  "name" : "DOHProcedureID"
+},
+{
+  "id" : "HCPNCodeNS",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/NamingSystem/HCPNCodeNS",
+  "version" : "0.2.0",
+  "name" : "HCPNCode"
+},
+{
+  "id" : "PhilHealthIDNS",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/NamingSystem/PhilHealthIDNS",
+  "version" : "0.2.0",
+  "name" : "PhilHealthID"
+},
+{
+  "id" : "PhilHealthPANNS",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/NamingSystem/PhilHealthPANNS",
+  "version" : "0.2.0",
+  "name" : "PhilHealthPAN"
+},
+{
+  "id" : "PhilHealthPENNS",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/NamingSystem/PhilHealthPENNS",
+  "version" : "0.2.0",
+  "name" : "PhilHealthPEN"
+},
+{
+  "id" : "PhilHealthProcedureIDNS",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/NamingSystem/PhilHealthProcedureIDNS",
+  "version" : "0.2.0",
+  "name" : "PhilHealthProcedureID"
+},
+{
+  "id" : "PhilSysIDNS",
+  "type" : "NamingSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/NamingSystem/PhilSysIDNS",
+  "version" : "0.2.0",
+  "name" : "PhilSysID"
+},
+{
+  "id" : "administered-product",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/administered-product",
+  "version" : "0.2.0",
+  "name" : "AdministeredProduct"
+},
+{
+  "id" : "barangay",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay",
+  "version" : "0.2.0",
+  "name" : "Barangay"
+},
+{
+  "id" : "batch-number",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/batch-number",
+  "version" : "0.2.0",
+  "name" : "BatchNumber"
+},
+{
+  "id" : "city-municipality",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+  "version" : "0.2.0",
+  "name" : "CityMunicipality"
+},
+{
+  "id" : "educational-attainment",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment",
+  "version" : "0.2.0",
+  "name" : "EducationalAttainment"
+},
+{
+  "id" : "indigenous-group",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-group",
+  "version" : "0.2.0",
+  "name" : "IndigenousGroup"
+},
+{
+  "id" : "indigenous-people",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people",
+  "version" : "0.2.0",
+  "name" : "IndigenousPeople"
+},
+{
+  "id" : "occupation",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation",
+  "version" : "0.2.0",
+  "name" : "Occupation"
+},
+{
+  "id" : "ph-core-address",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-address",
+  "version" : "0.2.0",
+  "name" : "PHCoreAddress"
+},
+{
+  "id" : "ph-core-allergyintolerance",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance",
+  "version" : "0.2.0",
+  "name" : "PHCoreAllergyIntolerance"
+},
+{
+  "id" : "ph-core-claim",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim",
+  "version" : "0.2.0",
+  "name" : "PHCoreClaim"
+},
+{
+  "id" : "ph-core-condition",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition",
+  "version" : "0.2.0",
+  "name" : "PHCoreCondition"
+},
+{
+  "id" : "ph-core-doh-nhfr-code",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-doh-nhfr-code",
+  "version" : "0.2.0",
+  "name" : "PHCoreDOHNHFRCode"
+},
+{
+  "id" : "ph-core-encounter",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter",
+  "version" : "0.2.0",
+  "name" : "PHCoreEncounter"
+},
+{
+  "id" : "ph-core-hcpn-code",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-hcpn-code",
+  "version" : "0.2.0",
+  "name" : "PHCoreHCPNCode"
+},
+{
+  "id" : "ph-core-healthcareservice",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice",
+  "version" : "0.2.0",
+  "name" : "PHCoreHealthcareService"
+},
+{
+  "id" : "ph-core-immunization",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization",
+  "version" : "0.2.0",
+  "name" : "PHCoreImmunization"
+},
+{
+  "id" : "ph-core-location",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-location",
+  "version" : "0.2.0",
+  "name" : "PHCoreLocation"
+},
+{
+  "id" : "ph-core-medication",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication",
+  "version" : "0.2.0",
+  "name" : "PHCoreMedication"
+},
+{
+  "id" : "ph-core-medicationadministration",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration",
+  "version" : "0.2.0",
+  "name" : "PHCoreMedicationAdministration"
+},
+{
+  "id" : "ph-core-medicationdispense",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationdispense",
+  "version" : "0.2.0",
+  "name" : "PHCoreMedicationDispense"
+},
+{
+  "id" : "ph-core-medicationrequest",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest",
+  "version" : "0.2.0",
+  "name" : "PHCoreMedicationRequest"
+},
+{
+  "id" : "ph-core-medicationstatement",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement",
+  "version" : "0.2.0",
+  "name" : "PHCoreMedicationStatement"
+},
+{
+  "id" : "ph-core-name",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-name",
+  "version" : "0.2.0",
+  "name" : "PHCoreName"
+},
+{
+  "id" : "ph-core-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation",
+  "version" : "0.2.0",
+  "name" : "PHCoreObservation"
+},
+{
+  "id" : "ph-core-organization",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization",
+  "version" : "0.2.0",
+  "name" : "PHCoreOrganization"
+},
+{
+  "id" : "ph-core-patient",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient",
+  "version" : "0.2.0",
+  "name" : "PHCorePatient"
+},
+{
+  "id" : "ph-core-philhealth-id",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-philhealth-id",
+  "version" : "0.2.0",
+  "name" : "PHCorePhilHealthID"
+},
+{
+  "id" : "ph-core-philhealth-pan",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-philhealth-pan",
+  "version" : "0.2.0",
+  "name" : "PHCorePhilHealthPAN"
+},
+{
+  "id" : "ph-core-philhealth-pen",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-philhealth-pen",
+  "version" : "0.2.0",
+  "name" : "PHCorePhilHealthPEN"
+},
+{
+  "id" : "ph-core-philsys-id",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-philsys-id",
+  "version" : "0.2.0",
+  "name" : "PHCorePhilSysID"
+},
+{
+  "id" : "ph-core-practitioner",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner",
+  "version" : "0.2.0",
+  "name" : "PHCorePractitioner"
+},
+{
+  "id" : "ph-core-practitionerrole",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole",
+  "version" : "0.2.0",
+  "name" : "PHCorePractitionerRole"
+},
+{
+  "id" : "ph-core-procedure",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure",
+  "version" : "0.2.0",
+  "name" : "PHCoreProcedure"
+},
+{
+  "id" : "ph-core-provenance",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance",
+  "version" : "0.2.0",
+  "name" : "PHCoreProvenance"
+},
+{
+  "id" : "ph-core-pwd-disability",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-pwd-disability",
+  "version" : "0.2.0",
+  "name" : "PHCorePWDDisability"
+},
+{
+  "id" : "ph-core-relatedperson",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-relatedperson",
+  "version" : "0.2.0",
+  "name" : "PHCoreRelatedPerson"
+},
+{
+  "id" : "ph-core-serviceRequest",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest",
+  "version" : "0.2.0",
+  "name" : "PHCoreServiceRequest"
+},
+{
+  "id" : "ph-core-task",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task",
+  "version" : "0.2.0",
+  "name" : "PHCoreTask"
+},
+{
+  "id" : "province",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/province",
+  "version" : "0.2.0",
+  "name" : "Province"
+},
+{
+  "id" : "race",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/race",
+  "version" : "0.2.0",
+  "name" : "Race"
+},
+{
+  "id" : "region",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/region",
+  "version" : "0.2.0",
+  "name" : "Region"
+},
+{
+  "id" : "barangays",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/barangays",
+  "version" : "0.2.0",
+  "name" : "Barangays"
+},
+{
+  "id" : "cities",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/cities",
+  "version" : "0.2.0",
+  "name" : "Cities"
+},
+{
+  "id" : "drugs-vs",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs",
+  "version" : "0.2.0",
+  "name" : "DrugsVS"
+},
+{
+  "id" : "educational-attainments",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/educational-attainments",
+  "version" : "0.2.0",
+  "name" : "EducationalAttainments"
+},
+{
+  "id" : "indigenous-groups-vs",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/indigenous-groups-vs",
+  "version" : "0.2.0",
+  "name" : "IndigenousGroupsVS"
+},
+{
+  "id" : "occupational-classifications",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/occupational-classifications",
+  "version" : "0.2.0",
+  "name" : "OccupationClassifications"
+},
+{
+  "id" : "ph-core-disability-type-vs",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/ph-core-disability-type-vs",
+  "version" : "0.2.0",
+  "name" : "PHCoreDisabilityTypeVS"
+},
+{
+  "id" : "provinces",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/provinces",
+  "version" : "0.2.0",
+  "name" : "Provinces"
+},
+{
+  "id" : "regions",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/regions",
+  "version" : "0.2.0",
+  "name" : "Regions"
+},
+{
+  "id" : "PSCED",
+  "type" : "CodeSystem",
+  "url" : "https://psa.gov.ph/classification/psced/level",
+  "version" : "0.2.0",
+  "name" : "PSCED"
+},
+{
+  "id" : "PSGC",
+  "type" : "CodeSystem",
+  "url" : "https://psa.gov.ph/classification/psgc",
+  "version" : "0.2.0",
+  "name" : "PSGC"
+},
+{
+  "id" : "PSOC",
+  "type" : "CodeSystem",
+  "url" : "https://psa.gov.ph/classification/psoc/unit",
+  "version" : "0.2.0",
+  "name" : "PSOC"
+},
+{
+  "id" : "PHFDACPRCS",
+  "type" : "CodeSystem",
+  "url" : "https://verification.fda.gov.ph",
+  "version" : "0.2.0",
+  "name" : "PHFDACPRCS"
+}]

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="medication-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Twinact (Telmisartan + Amlodipine) 40mg/5mg tablet from PH FDA CPR.</div>
+  </text>
+  <code>
+    <coding>
+      <system value="https://verification.fda.gov.ph"/>
+      <code value="DRP-10144"/>
+      <display value="Twinact"/>
+    </coding>
+    <text value="Twinact 40mg/5mg tablet"/>
+  </code>
+  <form>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="385055001"/>
+      <display value="Tablet"/>
+    </coding>
+  </form>
+</Medication>

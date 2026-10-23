@@ -1,0 +1,57 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "regions",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet regions</b></p><a name=\"regions\"> </a><a name=\"hcregions\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1300000000\">1300000000</a></td><td>National Capital Region</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102800000\">0102800000</a></td><td>Ilocos Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102900000\">0102900000</a></td><td>Ilocos Sur</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0103300000\">0103300000</a></td><td>La Union</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0100000000\">0100000000</a></td><td>Ilocos Region</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/regions",
+  "version" : "0.2.0",
+  "name" : "Regions",
+  "title" : "Regions",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-10T05:12:58+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psgc",
+      "concept" : [{
+        "code" : "1300000000",
+        "display" : "National Capital Region"
+      },
+      {
+        "code" : "0102800000",
+        "display" : "Ilocos Norte"
+      },
+      {
+        "code" : "0102900000",
+        "display" : "Ilocos Sur"
+      },
+      {
+        "code" : "0103300000",
+        "display" : "La Union"
+      },
+      {
+        "code" : "0100000000",
+        "display" : "Ilocos Region"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="ph-core-disability-type-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet ph-core-disability-type-vs</b></p><a name="ph-core-disability-type-vs"> </a><a name="hcph-core-disability-type-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-ph-core-disability-type-cs.html"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.2.0</span></li></ul></div>
+  </text>
+  <url value="https://fhir.doh.gov.ph/phcore/ValueSet/ph-core-disability-type-vs"/>
+  <version value="0.2.0"/>
+  <name value="PHCoreDisabilityTypeVS"/>
+  <title value="PH Core Disability Type Value Set"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-10T01:10:31+00:00"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="Value set for types of disability as defined by the Philippine government for PWD registration."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs"/>
+    </include>
+  </compose>
+</ValueSet>

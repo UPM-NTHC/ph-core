@@ -1,0 +1,45 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "bb78b133-e6d5-40ba-aed4-b8be82514327-23",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/bb78b133-e6d5-40ba-aed4-b8be82514327-23",
+  "name" : "UnionDrugsVSAndSNOMEDCTMedicationCodes",
+  "title" : "Union of Drugs And SNOMED CT Medication Codes",
+  "status" : "draft",
+  "date" : "2026-10-23T04:37:24+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://verification.fda.gov.ph"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "410942007"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "373873005"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "106181007"
+      }]
+    }]
+  }
+}

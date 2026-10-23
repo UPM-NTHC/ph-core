@@ -1,0 +1,98 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ph-core-disability-type-cs"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ph-core-disability-type-cs</b></p><a name=\"ph-core-disability-type-cs\"> </a><a name=\"hcph-core-disability-type-cs\"> </a><p>This case-sensitive code system <code>https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">visual<a name=\"ph-core-disability-type-cs-visual\"> </a></td><td>Visual Disability</td><td>Complete or partial loss of sight/visual function.</td></tr><tr><td style=\"white-space:nowrap\">hearing<a name=\"ph-core-disability-type-cs-hearing\"> </a></td><td>Hearing Disability</td><td>Complete or partial loss of hearing/hearing function.</td></tr><tr><td style=\"white-space:nowrap\">speech<a name=\"ph-core-disability-type-cs-speech\"> </a></td><td>Speech Impairment</td><td>Complete or partial loss of speech or communication function.</td></tr><tr><td style=\"white-space:nowrap\">physical<a name=\"ph-core-disability-type-cs-physical\"> </a></td><td>Physical/Orthopedic Disability</td><td>Impairment in physical/orthopedic function including locomotor disabilities.</td></tr><tr><td style=\"white-space:nowrap\">intellectual<a name=\"ph-core-disability-type-cs-intellectual\"> </a></td><td>Intellectual Disability</td><td>Significant limitations in intellectual functioning and adaptive behavior.</td></tr><tr><td style=\"white-space:nowrap\">learning<a name=\"ph-core-disability-type-cs-learning\"> </a></td><td>Learning Disability</td><td>Neurological disorders affecting acquisition and use of listening, speaking, reading, writing, reasoning, or mathematical abilities.</td></tr><tr><td style=\"white-space:nowrap\">psychosocial<a name=\"ph-core-disability-type-cs-psychosocial\"> </a></td><td>Psychosocial Disability</td><td>Mental health conditions and psychosocial impairments.</td></tr><tr><td style=\"white-space:nowrap\">visual-low-vision<a name=\"ph-core-disability-type-cs-visual-low-vision\"> </a></td><td>Low Vision</td><td>Significant visual impairment not correctable by standard glasses/contact lenses.</td></tr><tr><td style=\"white-space:nowrap\">visual-blindness<a name=\"ph-core-disability-type-cs-visual-blindness\"> </a></td><td>Blindness</td><td>Complete loss of vision or light perception.</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs"] ;
+  fhir:CodeSystem.version [ fhir:value "0.2.0"] ;
+  fhir:CodeSystem.name [ fhir:value "PHCoreDisabilityTypeCS"] ;
+  fhir:CodeSystem.title [ fhir:value "PH Core Disability Type Code System"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-09T08:09:08+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Code system for types of disability as defined by the Philippine government for PWD registration."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "9"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "visual" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Visual Disability" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Complete or partial loss of sight/visual function." ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "hearing" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hearing Disability" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Complete or partial loss of hearing/hearing function." ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "speech" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Speech Impairment" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Complete or partial loss of speech or communication function." ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "physical" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Physical/Orthopedic Disability" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Impairment in physical/orthopedic function including locomotor disabilities." ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "intellectual" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Intellectual Disability" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Significant limitations in intellectual functioning and adaptive behavior." ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "learning" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Learning Disability" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Neurological disorders affecting acquisition and use of listening, speaking, reading, writing, reasoning, or mathematical abilities." ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "psychosocial" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Psychosocial Disability" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Mental health conditions and psychosocial impairments." ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "visual-low-vision" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Low Vision" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Significant visual impairment not correctable by standard glasses/contact lenses." ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "visual-blindness" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Blindness" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Complete loss of vision or light perception." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

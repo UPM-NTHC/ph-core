@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ServiceRequest/servicerequest-single-example> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "servicerequest-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest servicerequest-single-example</b></p><a name=\"servicerequest-single-example\"> </a><a name=\"hcservicerequest-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-serviceRequest.html\">PH Core ServiceRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 108252007}\">Laboratory procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 33747003}\">Fasting blood glucose test</span></p><p><b>subject</b>: <a href=\"Patient-patient-single-example.html\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-single-example.html\">Encounter: identifier = http://example.org/encounter-id#ENC-12345; status = finished; class = ambulatory (ActCode#AMB); type = ambulatory; period = 2023-01-01 10:00:00+0000 --&gt; 2023-01-01 11:00:00+0000</a></p><p><b>occurrence</b>: 2024-03-15 10:00:00+0800</p><p><b>authoredOn</b>: 2024-03-15 09:30:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-practitioner-single-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>supportingInfo</b>: <a href=\"Condition-condition-single-example.html\">Condition Diabetes mellitus type 2</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:108252007 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "108252007" ] ;
+       fhir:display [ fhir:v "Laboratory procedure" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:33747003 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "33747003" ] ;
+       fhir:display [ fhir:v "Glucose measurement, blood" ]
+     ] ) ;
+     fhir:text [ fhir:v "Fasting blood glucose test" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-single-example" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:DateTime ;
+     fhir:v "2024-03-15T10:00:00+08:00"^^xsd:dateTime
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2024-03-15T09:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+  ] ; # 
+  fhir:supportingInfo ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ;
+     fhir:reference [ fhir:v "Condition/condition-single-example" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

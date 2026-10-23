@@ -1,0 +1,142 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Immunization/immunization-single-example> a fhir:Immunization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "immunization-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization immunization-single-example</b></p><a name=\"immunization-single-example\"> </a><a name=\"hcimmunization-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-immunization.html\">PH Core Immunization</a></p></div><p><b>Batch Number</b>: AAJN11K</p><p><b>Administered Product</b>: <a href=\"Medication-medication-single-example.html\">Medication Twinact</a></p><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/7.3.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt #xD;#xA;#xD;#xA;This oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: #xD;#xA;#xD;#xA;Note that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.#xD;#xA;#xD;#xA;This OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234</p><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{http://hl7.org/fhir/sid/cvx 123}\">Influenza H5N1-1203 Vaccine</span></p><p><b>patient</b>: <a href=\"Patient-patient-single-example.html\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-single-example.html\">Encounter: identifier = http://example.org/encounter-id#ENC-12345; status = finished; class = ambulatory (ActCode#AMB); type = ambulatory; period = 2023-01-01 10:00:00+0000 --&gt; 2023-01-01 11:00:00+0000</a></p><p><b>occurrence</b>: 2013-01-10</p><p><b>primarySource</b>: true</p><p><b>location</b>: <a href=\"Location-location-single-example.html\">Location Philippine General Hospital</a></p><p><b>lotNumber</b>: AAJN11K</p><p><b>expirationDate</b>: 2015-02-15</p><p><b>site</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActSite LA}\">Left arm</span></p><p><b>route</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration IM}\">Intramuscular injection</span></p><p><b>doseQuantity</b>: 5 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0443 OP}\">Ordering Provider</span></td><td><a href=\"Practitioner-practitioner-single-example.html\">Dr. Maria Clara Santos</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Notes on administration of vaccine</p>\n</div></blockquote><p><b>isSubpotent</b>: true</p><p><b>fundingSource</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/immunization-funding-source private}\">Private</span></p><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>TargetDisease</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 772828001}\">Influenza H5N1</span></td><td>1</td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/batch-number" ] ;
+     fhir:Extension.valueString [ fhir:value "AAJN11K" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/administered-product" ] ;
+     fhir:Extension.valueReference [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Medication/medication-single-example> ;
+       fhir:Reference.reference [ fhir:value "Medication/medication-single-example" ]
+     ]
+  ] ;
+  fhir:Immunization.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234" ]
+  ] ;
+  fhir:Immunization.status [ fhir:value "completed"] ;
+  fhir:Immunization.vaccineCode [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/cvx" ] ;
+       fhir:Coding.code [ fhir:value "123" ] ;
+       fhir:Coding.display [ fhir:value "influenza, H5N1-1203" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Influenza H5N1-1203 Vaccine" ]
+  ] ;
+  fhir:Immunization.patient [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:Immunization.encounter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-single-example" ]
+  ] ;
+  fhir:Immunization.occurrenceDateTime [ fhir:value "2013-01-10"^^xsd:date] ;
+  fhir:Immunization.primarySource [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Immunization.location [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Location/location-single-example> ;
+     fhir:Reference.reference [ fhir:value "Location/location-single-example" ]
+  ] ;
+  fhir:Immunization.lotNumber [ fhir:value "AAJN11K"] ;
+  fhir:Immunization.expirationDate [ fhir:value "2015-02-15"^^xsd:date] ;
+  fhir:Immunization.site [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActSite" ] ;
+       fhir:Coding.code [ fhir:value "LA" ] ;
+       fhir:Coding.display [ fhir:value "left arm" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Left arm" ]
+  ] ;
+  fhir:Immunization.route [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration" ] ;
+       fhir:Coding.code [ fhir:value "IM" ] ;
+       fhir:Coding.display [ fhir:value "Injection, intramuscular" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Intramuscular injection" ]
+  ] ;
+  fhir:Immunization.doseQuantity [
+     fhir:Quantity.value [ fhir:value "5"^^xsd:decimal ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "mg" ]
+  ] ;
+  fhir:Immunization.performer [
+     fhir:index 0 ;
+     fhir:Immunization.performer.function [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0443" ] ;
+         fhir:Coding.code [ fhir:value "OP" ] ;
+         fhir:Coding.display [ fhir:value "Ordering Provider" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "Ordering Provider" ]
+     ] ;
+     fhir:Immunization.performer.actor [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ] ;
+       fhir:Reference.display [ fhir:value "Dr. Maria Clara Santos" ]
+     ]
+  ] ;
+  fhir:Immunization.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Notes on administration of vaccine" ]
+  ] ;
+  fhir:Immunization.isSubpotent [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Immunization.fundingSource [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/immunization-funding-source" ] ;
+       fhir:Coding.code [ fhir:value "private" ] ;
+       fhir:Coding.display [ fhir:value "Private" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Private" ]
+  ] ;
+  fhir:Immunization.protocolApplied [
+     fhir:index 0 ;
+     fhir:Immunization.protocolApplied.targetDisease [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         a sct:772828001 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "772828001" ] ;
+         fhir:Coding.display [ fhir:value "Influenza caused by Influenza A virus subtype H5N1" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "Influenza H5N1" ]
+     ] ;
+     fhir:Immunization.protocolApplied.doseNumberPositiveInt [ fhir:value "1"^^xsd:positiveInteger ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Immunization/immunization-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ServiceRequest/servicerequest-single-example> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "servicerequest-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">A laboratory service request for fasting blood glucose test ordered by Dr. Maria Clara Santos for patient Juan Dela Cruz during an ambulatory encounter.</div>"
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "active"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:108252007 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "108252007" ] ;
+       fhir:Coding.display [ fhir:value "Laboratory procedure" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:33747003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "33747003" ] ;
+       fhir:Coding.display [ fhir:value "Glucose measurement, blood" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:ServiceRequest.encounter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-single-example" ]
+  ] ;
+  fhir:ServiceRequest.occurrenceDateTime [ fhir:value "2024-03-15T10:00:00+08:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2024-03-15T09:30:00+08:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.requester [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+  ] ;
+  fhir:ServiceRequest.supportingInfo [
+     fhir:index -1 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ;
+     fhir:Reference.reference [ fhir:value "Condition/condition-single-example" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ServiceRequest/servicerequest-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

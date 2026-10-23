@@ -1,0 +1,54 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "PSCED",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSCED</b></p><a name=\"PSCED\"> </a><a name=\"hcPSCED\"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psced/level</code> provides some codes <b>that are example only</b>:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">C201301<a name=\"PSCED-C201301\"> </a></td><td>Elementary Graduate</td><td>Completed elementary education</td></tr><tr><td style=\"white-space:nowrap\">C201302<a name=\"PSCED-C201302\"> </a></td><td>High School Graduate</td><td>Completed secondary education</td></tr><tr><td style=\"white-space:nowrap\">C201303<a name=\"PSCED-C201303\"> </a></td><td>College Graduate</td><td>Completed bachelor's degree</td></tr><tr><td style=\"white-space:nowrap\">C201304<a name=\"PSCED-C201304\"> </a></td><td>Postgraduate</td><td>Completed master's or doctoral degree</td></tr></table></div>"
+  },
+  "url" : "https://psa.gov.ph/classification/psced/level",
+  "version" : "0.2.0",
+  "name" : "PSCED",
+  "title" : "Mock PSCED",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-10T01:16:31+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "Mock of the Philippine Standard Classification of Education.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "example",
+  "concept" : [{
+    "code" : "C201301",
+    "display" : "Elementary Graduate",
+    "definition" : "Completed elementary education"
+  },
+  {
+    "code" : "C201302",
+    "display" : "High School Graduate",
+    "definition" : "Completed secondary education"
+  },
+  {
+    "code" : "C201303",
+    "display" : "College Graduate",
+    "definition" : "Completed bachelor's degree"
+  },
+  {
+    "code" : "C201304",
+    "display" : "Postgraduate",
+    "definition" : "Completed master's or doctoral degree"
+  }]
+}

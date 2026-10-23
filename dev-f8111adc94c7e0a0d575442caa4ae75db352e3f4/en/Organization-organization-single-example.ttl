@@ -1,0 +1,168 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "organization-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">The Department of Health - Central Office (NHFR: 1234567890, PAN: PAN-2024-56789, PEN: PEN-987654321) is an active PH Core Organization located at 123, Barangay 1, City of Las Piñas, Benguet, 1740, Philippines. The organization can be contacted via phone at +63-2-8651-7800 or email at contact@doh.gov.ph.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code>
+     ] ;
+     fhir:value [ fhir:v "1234567890" ]
+  ] [
+     fhir:system [
+       fhir:v "http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"^^xsd:anyURI ;
+       fhir:l <http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber>
+     ] ;
+     fhir:value [ fhir:v "PAN-2024-56789" ]
+  ] [
+     fhir:system [
+       fhir:v "http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"^^xsd:anyURI ;
+       fhir:l <http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber>
+     ] ;
+     fhir:value [ fhir:v "PEN-987654321" ]
+  ] [
+     fhir:system [
+       fhir:v "http://my-hospital.org/internal-id"^^xsd:anyURI ;
+       fhir:l <http://my-hospital.org/internal-id>
+     ] ;
+     fhir:value [ fhir:v "HOSP-INT-12345" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name [ fhir:v "Department of Health - Sattelite Office"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-2-8651-7800" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "contact@doh.gov.ph" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/region>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1401100000" ] ;
+         fhir:display [ fhir:v "Benguet" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380200000" ] ;
+         fhir:display [ fhir:v "City of Las Piñas" ]
+       ]
+     ] [
+       fhir:url [
+         fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"^^xsd:anyURI ;
+         fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay>
+       ] ;
+       fhir:value [
+         a fhir:Coding ;
+         fhir:system [
+           fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+           fhir:l <https://psa.gov.ph/classification/psgc>
+         ] ;
+         fhir:code [ fhir:v "1380100001" ] ;
+         fhir:display [ fhir:v "Barangay 1" ]
+       ]
+     ] ) ;
+     fhir:use [ fhir:v "work" ] ;
+     fhir:line ( [ fhir:v "123 Hospital Street" ] ) ;
+     fhir:postalCode [ fhir:v "1740" ] ;
+     fhir:country [ fhir:v "PH" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:name [
+       fhir:text [ fhir:v "Health Facility Contact" ]
+     ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "+63-2-8651-7800" ]
+     ] ) ;
+     fhir:address [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/region"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/region>
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psgc>
+           ] ;
+           fhir:code [ fhir:v "1401100000" ] ;
+           fhir:display [ fhir:v "Benguet" ]
+         ]
+       ] [
+         fhir:url [
+           fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality>
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psgc>
+           ] ;
+           fhir:code [ fhir:v "1380200000" ] ;
+           fhir:display [ fhir:v "City of Las Piñas" ]
+         ]
+       ] [
+         fhir:url [
+           fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"^^xsd:anyURI ;
+           fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay>
+         ] ;
+         fhir:value [
+           a fhir:Coding ;
+           fhir:system [
+             fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+             fhir:l <https://psa.gov.ph/classification/psgc>
+           ] ;
+           fhir:code [ fhir:v "1380100001" ] ;
+           fhir:display [ fhir:v "Barangay 1" ]
+         ]
+       ] ) ;
+       fhir:use [ fhir:v "work" ] ;
+       fhir:line ( [ fhir:v "125 Central Office Street" ] ) ;
+       fhir:postalCode [ fhir:v "1740" ] ;
+       fhir:country [ fhir:v "PH" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

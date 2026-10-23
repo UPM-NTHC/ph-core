@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="location-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-location"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Philippine General Hospital Main Building - A tertiary hospital located in Manila.</div>
+  </text>
+  <status value="active"/>
+  <name value="Philippine General Hospital"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="HOSP"/>
+      <display value="Hospital"/>
+    </coding>
+    <text value="Hospital"/>
+  </type>
+  <address>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1300000000"/>
+        <display value="National Capital Region"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1380600000"/>
+        <display value="City of Manila"/>
+      </valueCoding>
+    </extension>
+    <use value="work"/>
+    <line value="Taft Avenue"/>
+    <postalCode value="1000"/>
+    <country value="PH"/>
+  </address>
+  <physicalType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+      <code value="bu"/>
+      <display value="Building"/>
+    </coding>
+    <text value="Building"/>
+  </physicalType>
+  <position>
+    <longitude value="120.9856"/>
+    <latitude value="14.5764"/>
+  </position>
+  <managingOrganization>
+    <reference value="Organization/organization-single-example"/>
+  </managingOrganization>
+</Location>

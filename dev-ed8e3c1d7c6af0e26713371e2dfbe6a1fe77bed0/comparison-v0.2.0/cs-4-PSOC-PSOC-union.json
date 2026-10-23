@@ -1,0 +1,36 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "bb78b133-e6d5-40ba-aed4-b8be82514327-11",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/bb78b133-e6d5-40ba-aed4-b8be82514327-11",
+  "name" : "UnionPSOCAndPSOC",
+  "title" : "Union of Mock PSOC And PSOC",
+  "status" : "draft",
+  "date" : "2026-10-23T04:37:24+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "concept" : [{
+    "code" : "111102",
+    "display" : "Hospital Administrator",
+    "definition" : "Manages hospital operations"
+  },
+  {
+    "code" : "111103",
+    "display" : "Medical Department Head",
+    "definition" : "Head of a medical department"
+  },
+  {
+    "code" : "121101",
+    "display" : "General Manager",
+    "definition" : "Manages overall operations of an organization"
+  },
+  {
+    "code" : "211101",
+    "display" : "Medical Doctor",
+    "definition" : "Licensed physician practicing medicine"
+  }]
+}

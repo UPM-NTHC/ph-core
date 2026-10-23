@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/regions> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "regions"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet regions</b></p><a name=\"regions\"> </a><a name=\"hcregions\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1300000000\">1300000000</a></td><td>National Capital Region</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102800000\">0102800000</a></td><td>Ilocos Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102900000\">0102900000</a></td><td>Ilocos Sur</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0103300000\">0103300000</a></td><td>La Union</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0100000000\">0100000000</a></td><td>Ilocos Region</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://fhir.doh.gov.ph/phcore/ValueSet/regions"^^xsd:anyURI ;
+     fhir:l <https://fhir.doh.gov.ph/phcore/ValueSet/regions>
+  ] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "Regions"] ; # 
+  fhir:title [ fhir:v "Regions"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-06-12T06:10:41+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-NTHC" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA)."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+         fhir:l <https://psa.gov.ph/classification/psgc>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "1300000000" ] ;
+         fhir:display [ fhir:v "National Capital Region" ]
+       ] [
+         fhir:code [ fhir:v "0102800000" ] ;
+         fhir:display [ fhir:v "Ilocos Norte" ]
+       ] [
+         fhir:code [ fhir:v "0102900000" ] ;
+         fhir:display [ fhir:v "Ilocos Sur" ]
+       ] [
+         fhir:code [ fhir:v "0103300000" ] ;
+         fhir:display [ fhir:v "La Union" ]
+       ] [
+         fhir:code [ fhir:v "0100000000" ] ;
+         fhir:display [ fhir:v "Ilocos Region" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

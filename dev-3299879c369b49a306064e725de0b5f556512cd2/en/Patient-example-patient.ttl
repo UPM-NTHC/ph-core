@@ -1,0 +1,133 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Patient/example-patient> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "example-patient"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient example-patient</b></p><a name=\"example-patient\"> </a><a name=\"hcexample-patient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-patient.html\">PH Core Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">123 Mabini Street Barangay Malinis Quezon City 1100 PH </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"race of a patient.\"><a href=\"StructureDefinition-race.html\">Race</a></td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-Race 2036-2}\">Filipino</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The nationality of the patient.\">Patient Nationality:</td><td colspan=\"3\"><ul><li>code: <span title=\"Codes:{urn:iso:std:iso:3166 PH}\">Philippines</span></li><li>period: 2020-01-01 --&gt; 2023-01-01</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The patient's professed religious affiliations.\"><a href=\"http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-patient-religion.html\">Patient Religion</a></td><td colspan=\"3\"><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation 1007}\">Atheism</span></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "code" ] ;
+       fhir:Extension.valueCodeableConcept [
+         fhir:CodeableConcept.coding [
+           fhir:index -1 ;
+           fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+           fhir:Coding.code [ fhir:value "PH" ] ;
+           fhir:Coding.display [ fhir:value "Philippines" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "period" ] ;
+       fhir:Extension.valuePeriod [
+         fhir:Period.start [ fhir:value "2020-01-01"^^xsd:date ] ;
+         fhir:Period.end [ fhir:value "2023-01-01"^^xsd:date ]
+       ]
+     ] ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/patient-nationality" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/patient-religion" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation" ] ;
+         fhir:Coding.code [ fhir:value "1007" ] ;
+         fhir:Coding.display [ fhir:value "Atheism" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/race" ] ;
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-Race" ] ;
+         fhir:Coding.code [ fhir:value "2036-2" ] ;
+         fhir:Coding.display [ fhir:value "Filipino" ]
+       ]
+     ]
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "http://philhealth.gov.ph/fhir/Identifier/philhealth-id" ] ;
+     fhir:Identifier.value [ fhir:value "63-584789845-5" ]
+  ] ;
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Patient.name [
+     fhir:index -1 ;
+     fhir:HumanName.family [ fhir:value "Dela Cruz" ] ;
+     fhir:HumanName.given [
+       fhir:value "Juan Jane" ;
+       fhir:index -1
+     ], [
+       fhir:value "Dela Fuente" ;
+       fhir:index -1
+     ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1980-01-01"^^xsd:date] ;
+  fhir:Patient.address [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "1380100001" ] ;
+         fhir:Coding.display [ fhir:value "Barangay 1" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "1380200000" ] ;
+         fhir:Coding.display [ fhir:value "City of Las Piñas" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/province" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0402100000" ] ;
+         fhir:Coding.display [ fhir:value "Cavite" ]
+       ]
+     ] ;
+     fhir:Address.line [
+       fhir:value "123 Mabini Street" ;
+       fhir:index -1
+     ], [
+       fhir:value "Barangay Malinis" ;
+       fhir:index -1
+     ] ;
+     fhir:Address.city [ fhir:value "Quezon City" ] ;
+     fhir:Address.district [ fhir:value "NCR" ] ;
+     fhir:Address.postalCode [ fhir:value "1100" ] ;
+     fhir:Address.country [ fhir:value "PH" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Patient/example-patient.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

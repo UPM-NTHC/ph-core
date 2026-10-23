@@ -1,0 +1,92 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationStatement/medicationstatement-single-example> a fhir:MedicationStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "medicationstatement-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Juan Dela Cruz reports taking Twinact 40mg/5mg tablet (Telmisartan + Amlodipine) once daily for hypertension, starting March 10, 2025.</div>"
+  ] ;
+  fhir:MedicationStatement.status [ fhir:value "active"] ;
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://verification.fda.gov.ph" ] ;
+       fhir:Coding.code [ fhir:value "DRP-10144" ] ;
+       fhir:Coding.display [ fhir:value "Twinact" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Twinact 40mg/5mg tablet" ]
+  ] ;
+  fhir:MedicationStatement.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:MedicationStatement.context [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-single-example" ]
+  ] ;
+  fhir:MedicationStatement.effectivePeriod [
+     fhir:Period.start [ fhir:value "2025-03-10"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2025-03-15"^^xsd:date ]
+  ] ;
+  fhir:MedicationStatement.dateAsserted [ fhir:value "2025-03-10T10:30:00+08:00"^^xsd:dateTime] ;
+  fhir:MedicationStatement.informationSource [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:MedicationStatement.reasonCode [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:38341003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "38341003" ] ;
+       fhir:Coding.display [ fhir:value "Hypertensive disorder" ]
+     ]
+  ] ;
+  fhir:MedicationStatement.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Patient reports taking medication once daily for hypertension" ]
+  ] ;
+  fhir:MedicationStatement.dosage [
+     fhir:index -1 ;
+     fhir:Dosage.sequence [ fhir:value "1"^^xsd:integer ] ;
+     fhir:Dosage.text [ fhir:value "Take 1 tablet once daily" ] ;
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.frequency [ fhir:value "1"^^xsd:positiveInteger ] ;
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ] ;
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ] ;
+     fhir:Dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration" ] ;
+         fhir:Coding.code [ fhir:value "PO" ] ;
+         fhir:Coding.display [ fhir:value "Swallow, oral" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationStatement/medicationstatement-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

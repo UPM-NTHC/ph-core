@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation-performer-role-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Heart rate: 72 beats/minute (Normal) for Juan Dela Cruz, performed by Dr. Santos in her General Practitioner role.</div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="8867-4"/>
+      <display value="Heart rate"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <effectiveDateTime value="2024-01-20T08:30:00Z"/>
+  <performer>
+    <reference value="PractitionerRole/practitionerrole-single-example"/>
+  </performer>
+  <valueQuantity>
+    <value value="72"/>
+    <unit value="beats/minute"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="/min"/>
+  </valueQuantity>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="N"/>
+      <display value="Normal"/>
+    </coding>
+  </interpretation>
+</Observation>

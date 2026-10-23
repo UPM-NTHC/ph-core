@@ -1,0 +1,39 @@
+{
+  "resourceType" : "Observation",
+  "id" : "observation-weight-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation observation-weight-example</b></p><a name=\"observation-weight-example\"> </a><a name=\"hcobservation-weight-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-observation.html\">PH Core Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 29463-7}\">Body weight</span></p><p><b>subject</b>: <a href=\"Patient-patient-single-example.html\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>effective</b>: 2023-06-15 09:00:00+0000</p><p><b>performer</b>: <a href=\"Practitioner-practitioner-single-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>value</b>: 70 kg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekg = 'kg')</span></p></div>"
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "vital-signs",
+      "display" : "Vital Signs"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "29463-7",
+      "display" : "Body weight"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "effectiveDateTime" : "2023-06-15T09:00:00Z",
+  "performer" : [{
+    "reference" : "Practitioner/practitioner-single-example"
+  }],
+  "valueQuantity" : {
+    "value" : 70,
+    "unit" : "kg",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "kg"
+  }
+}

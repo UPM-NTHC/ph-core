@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Provenance xmlns="http://hl7.org/fhir">
+  <id value="provenance-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Provenance record documenting that Dr. Maria Clara Santos created the blood pressure observation for Juan Dela Cruz on September 17, 2012, on behalf of the Department of Health - Central Office.</div>
+  </text>
+  <target>
+    <reference value="Observation/observation-bp-example"/>
+  </target>
+  <occurredDateTime value="2012-09-17T08:30:00+08:00"/>
+  <recorded value="2012-09-17T08:30:15+08:00"/>
+  <reason>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="TREAT"/>
+      <display value="treatment"/>
+    </coding>
+  </reason>
+  <activity>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-DataOperation"/>
+      <code value="CREATE"/>
+      <display value="create"/>
+    </coding>
+  </activity>
+  <agent>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+        <code value="author"/>
+        <display value="Author"/>
+      </coding>
+    </type>
+    <who>
+      <reference value="Practitioner/practitioner-single-example"/>
+    </who>
+    <onBehalfOf>
+      <reference value="Organization/organization-single-example"/>
+    </onBehalfOf>
+  </agent>
+  <signature>
+    <type>
+      <system value="urn:iso-astm:E1762-95:2013"/>
+      <code value="1.2.840.10065.1.12.1.1"/>
+      <display value="Author's Signature"/>
+    </type>
+    <when value="2012-09-17T08:30:15+08:00"/>
+    <who>
+      <reference value="Practitioner/practitioner-single-example"/>
+    </who>
+    <targetFormat value="xml"/>
+    <sigFormat value="xml"/>
+    <data value="dGhpcyBibG9iIGlzIHNuZWFrZWQ="/>
+  </signature>
+</Provenance>

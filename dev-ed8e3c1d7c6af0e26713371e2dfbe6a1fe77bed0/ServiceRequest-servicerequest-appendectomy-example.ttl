@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ServiceRequest/servicerequest-appendectomy-example> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "servicerequest-appendectomy-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest servicerequest-appendectomy-example</b></p><a name=\"servicerequest-appendectomy-example\"> </a><a name=\"hcservicerequest-appendectomy-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-serviceRequest.html\">PH Core ServiceRequest</a></p></div><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 80146002}\">Appendectomy</span></p><p><b>subject</b>: <a href=\"Patient-patient-single-example.html\">Juan Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-surgery-example.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2024-01-15 07:30:00+0800 --&gt; 2024-01-16 12:00:00+0800</a></p><p><b>authoredOn</b>: 2024-01-15 08:00:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-practitioner-single-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>reasonReference</b>: <a href=\"Condition-condition-appendicitis-example.html\">Condition Appendicitis</a></p></div>"
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "completed"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:80146002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "80146002" ] ;
+       fhir:Coding.display [ fhir:value "Appendectomy" ]
+     ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:ServiceRequest.encounter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-surgery-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-surgery-example" ]
+  ] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2024-01-15T08:00:00+08:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.requester [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+  ] ;
+  fhir:ServiceRequest.reasonReference [
+     fhir:index 0 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-appendicitis-example> ;
+     fhir:Reference.reference [ fhir:value "Condition/condition-appendicitis-example" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ServiceRequest/servicerequest-appendectomy-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

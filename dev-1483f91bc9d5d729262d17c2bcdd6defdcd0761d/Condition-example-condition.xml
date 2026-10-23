@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="example-condition"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition example-condition</b></p><a name="example-condition"> </a><a name="hcexample-condition"> </a><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 44054006}">Diabetes mellitus type 2</span></p><p><b>subject</b>: <a href="Patient-example-patient.html">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-example-encounter.html">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="44054006"/>
+      <display value="Diabetes mellitus type 2"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example-patient"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/example-encounter"/>
+  </encounter>
+</Condition>

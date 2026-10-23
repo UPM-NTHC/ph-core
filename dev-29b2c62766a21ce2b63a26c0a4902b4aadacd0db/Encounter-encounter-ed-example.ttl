@@ -1,0 +1,147 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "encounter-ed-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter encounter-ed-example</b></p><a name=\"encounter-ed-example\"> </a><a name=\"hcencounter-ed-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-encounter.html\">PH Core Encounter</a></p></div><p><b>identifier</b>: <code>http://pgh.gov.ph/fhir/Identifier/encounter-id</code>/ENC-2026-0612-001</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-EMER\">ActCode: EMER</a> (emergency)</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EMER}\">Emergency Department Visit</span></p><p><b>priority</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActPriority EM}\">emergency</span></p><p><b>subject</b>: <a href=\"Patient-patient-acs-example.html\">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}\">attender</span></p><p><b>individual</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ParticipationType ADM}\">admitter</span></p><p><b>individual</b>: <a href=\"PractitionerRole-practitionerrole-ed-example.html\">PractitionerRole Doctor</a></p></blockquote><p><b>period</b>: 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</p><p><b>reasonReference</b>: <a href=\"Condition-condition-acs-example.html\">Condition Acute ST segment elevation myocardial infarction</a></p><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href=\"Condition-condition-acs-example.html\">Condition Acute ST segment elevation myocardial infarction</a></p><p><b>use</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role AD}\">Admission diagnosis</span></p><p><b>rank</b>: 1</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href=\"Condition-condition-t2dm-example.html\">Condition Diabetes mellitus type 2</a></p><p><b>use</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role CC}\">Chief complaint</span></p><p><b>rank</b>: 2</p></blockquote><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>AdmitSource</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/admit-source emd}\">From accident/emergency department</span></td></tr></table><p><b>serviceProvider</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p></div>"
+  ] ;
+  fhir:Encounter.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://pgh.gov.ph/fhir/Identifier/encounter-id" ] ;
+     fhir:Identifier.value [ fhir:value "ENC-2026-0612-001" ]
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "EMER" ] ;
+     fhir:Coding.display [ fhir:value "emergency" ]
+  ] ;
+  fhir:Encounter.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "EMER" ] ;
+       fhir:Coding.display [ fhir:value "emergency" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Emergency Department Visit" ]
+  ] ;
+  fhir:Encounter.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActPriority" ] ;
+       fhir:Coding.code [ fhir:value "EM" ] ;
+       fhir:Coding.display [ fhir:value "emergency" ]
+     ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-acs-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-acs-example" ]
+  ] ;
+  fhir:Encounter.participant [
+     fhir:index 0 ;
+     fhir:Encounter.participant.type [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ParticipationType" ] ;
+         fhir:Coding.code [ fhir:value "ATND" ] ;
+         fhir:Coding.display [ fhir:value "attender" ]
+       ]
+     ] ;
+     fhir:Encounter.participant.individual [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-ed-example" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Encounter.participant.type [
+       fhir:index 0 ;
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ParticipationType" ] ;
+         fhir:Coding.code [ fhir:value "ADM" ] ;
+         fhir:Coding.display [ fhir:value "admitter" ]
+       ]
+     ] ;
+     fhir:Encounter.participant.individual [
+       fhir:link <https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-ed-example> ;
+       fhir:Reference.reference [ fhir:value "PractitionerRole/practitionerrole-ed-example" ]
+     ]
+  ] ;
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2026-06-12T08:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-06-12T10:30:00+08:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Encounter.reasonReference [
+     fhir:index 0 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ;
+     fhir:Reference.reference [ fhir:value "Condition/condition-acs-example" ]
+  ] ;
+  fhir:Encounter.diagnosis [
+     fhir:index 0 ;
+     fhir:Encounter.diagnosis.condition [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-acs-example> ;
+       fhir:Reference.reference [ fhir:value "Condition/condition-acs-example" ]
+     ] ;
+     fhir:Encounter.diagnosis.use [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/diagnosis-role" ] ;
+         fhir:Coding.code [ fhir:value "AD" ] ;
+         fhir:Coding.display [ fhir:value "Admission diagnosis" ]
+       ]
+     ] ;
+     fhir:Encounter.diagnosis.rank [ fhir:value "1"^^xsd:positiveInteger ]
+  ], [
+     fhir:index 1 ;
+     fhir:Encounter.diagnosis.condition [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-t2dm-example> ;
+       fhir:Reference.reference [ fhir:value "Condition/condition-t2dm-example" ]
+     ] ;
+     fhir:Encounter.diagnosis.use [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/diagnosis-role" ] ;
+         fhir:Coding.code [ fhir:value "CC" ] ;
+         fhir:Coding.display [ fhir:value "Chief complaint" ]
+       ]
+     ] ;
+     fhir:Encounter.diagnosis.rank [ fhir:value "2"^^xsd:positiveInteger ]
+  ] ;
+  fhir:Encounter.hospitalization [
+     fhir:Encounter.hospitalization.admitSource [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/admit-source" ] ;
+         fhir:Coding.code [ fhir:value "emd" ] ;
+         fhir:Coding.display [ fhir:value "From accident/emergency department" ]
+       ]
+     ]
+  ] ;
+  fhir:Encounter.serviceProvider [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/organization-pgh-example" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Encounter/encounter-ed-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -9,6 +9,7 @@ Description: "All categories of educational programs, courses, and attainment le
 * include $PSCED#C201304 "Postgraduate"
 
 // Pre-computed expansion eliminates terminology server dependency
+* ^expansion.identifier = "https://fhir.doh.gov.ph/phcore/ValueSet/educational-attainments/expansion/0.2.1"
 * ^expansion.timestamp = "2026-04-07T00:00:00Z"
 * ^expansion.total = 4
 * ^expansion.offset = 0

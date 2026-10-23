@@ -4,7 +4,7 @@ graph TB
     IDENTIFY --> CHECK{Check existing<br/>PH Core profiles}
     
     CHECK -->|Profile exists| USE[Use existing<br/>PH Core profile]
-    CHECK -->|No profile| COUNT{Used by ≥2<br/>independent IGs?}
+    CHECK -->|No profile| COUNT{Used by ≥2 independent IGs<br/>AND MS in ≥2 independent IGs?}
     
     COUNT -->|Yes| CANDIDATE[Mark as PH Core<br/>candidate]
     COUNT -->|No| EXCEPTION{Exception criteria?<br/>Policy priority / Critical / Safety}

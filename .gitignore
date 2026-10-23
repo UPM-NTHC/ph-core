@@ -8,3 +8,5 @@ Thumbs.db
 /.asciidoctorconfig.adoc
 .vscode/settings.json
 .gitignore
+
+.github/.*.*

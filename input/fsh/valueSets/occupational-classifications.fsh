@@ -9,6 +9,7 @@ Description: "The Occupation codes valueset includes Occupational Classification
 * include $PSOC#211101 "Medical Doctor"
 
 // Pre-computed expansion eliminates terminology server dependency
+* ^expansion.identifier = "https://fhir.doh.gov.ph/phcore/ValueSet/occupational-classifications/expansion/0.2.1"
 * ^expansion.timestamp = "2026-04-07T00:00:00Z"
 * ^expansion.total = 4
 * ^expansion.offset = 0

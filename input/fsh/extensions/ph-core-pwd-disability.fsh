@@ -7,6 +7,8 @@ Id: ph-core-pwd-disability
 Title: "PH Core PWD Disability Registration"
 Context: Patient
 Description: "Extension for Person With Disability (PWD) registration information. Captures PWD ID number, type of disability, and ID expiration date as issued by the PDAO (Persons with Disability Affairs Office)."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * insert ExperimentalStructureDefinition
 
 * extension contains
@@ -25,10 +27,10 @@ Description: "Extension for Person With Disability (PWD) registration informatio
 * extension[disabilityType].valueCodeableConcept from PHCoreDisabilityTypeVS (extensible)
 
 * extension[idExpirationDate] ^short = "PWD ID Expiration Date"
-* extension[idExpirationDate] ^definition = "The expiration date of the PWD ID card. PWD IDs are typically valid for 3 years or 5 years for senior citizens with disability."
+* extension[idExpirationDate] ^definition = "The expiration date of the PWD ID card. Record an expiration date only when supplied by the issuing source; do not infer one from age or disability category. Validity rules depend on the applicable dated policy."
 * extension[idExpirationDate].value[x] only date
 
-* extension[issuingLGU] ^short = "Issuing LGU (Barangay)"
-* extension[issuingLGU] ^definition = "The barangay-level Local Government Unit (LGU) that issued the PWD ID, specified using PSGC code. This captures the issuing authority location, which may differ from the patient's current address. Note: This represents the LGU office location; alternative concepts could include PDAO (Persons with Disability Affairs Office) identifier or specific issuing authority if different from the barangay LGU."
+* extension[issuingLGU] ^short = "Issuing LGU (Barangay) in PSGC code"
+* extension[issuingLGU] ^definition = "The barangay-level Local Government Unit (LGU) that issued the PWD ID, specified using PSGC code. It does not identify a PDAO or establish that the barangay is the legal issuing authority. National issuer semantics and a suitable representation require human appraisal before this field is used for authority verification."
 * extension[issuingLGU].value[x] only CodeableConcept
 * extension[issuingLGU].valueCodeableConcept from Barangays (extensible)

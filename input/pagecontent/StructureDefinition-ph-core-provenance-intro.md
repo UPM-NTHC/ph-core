@@ -1,75 +1,22 @@
-## Overview
+### Purpose
 
-The PH Core Provenance Profile inherits from the FHIR Provenance resource; refer to it for scope and usage definitions. This profile sets minimum expectations for the Provenance resource to record, search, and fetch provenance information associated with a record. It covers the minimal information to support lineage of information in Philippine health information systems.
+Use PH Core Provenance to identify the resources described by an activity, when it was recorded, and who created, updated, or transmitted the information.
 
-## Example Usage Scenarios
+### Required content
 
-- Query for Provenance records associated with a Condition
-- Query for Provenance records associated with an Observation
-- Query for Provenance records associated with an Immunization
+Every conforming record **MUST** contain:
 
-## Mandatory and Must Support Data Elements
+- At least one `target`, identifying the resource described by this record.
+- `recorded`, the date and time the activity was recorded, including a timezone.
+- At least one `agent`, with `agent.who` identifying who participated.
 
-**Each Provenance Must Have:**
+### Agent roles and organizations
 
-- a reference to the resource(s) the Provenance record is supporting (`target`)
-- a date and time for the activity (`recorded`)
+Use author and transmitter agents to distinguish responsibility for the information from its transmission:
 
-**Each Provenance Must Support:**
+- **Author:** the individual, organization, or device responsible for creating or updating the information described by the activity.
+- **Transmitter:** the entity that provided the copy to the receiving system.
 
-- the author responsible for the information (`agent[ProvenanceAuthor]`)
-- the transmitter that provided the information (`agent[ProvenanceTransmitter]`)
-- the organization the agent is representing (`agent.onBehalfOf`) - required when agent is a Practitioner or Device
+Each author or transmitter slice is optional. When present, its `type` **MUST** include the corresponding `author` or `transmitter` coding. Other agent types are allowed.
 
-## Reference Profiles
-
-| Element | PH Core Profiles | Base FHIR |
-|---------|-----------------|-----------|
-| `agent.who` | PHCorePractitioner, PHCorePractitionerRole, PHCoreOrganization, PHCorePatient, PHCoreRelatedPerson | Device |
-| `agent.onBehalfOf` | PHCoreOrganization | - |
-| `location` | PHCoreLocation | - |
-{:.ph-table}
-
-## Profile Specific Implementation Guidance
-
-### Agent Slicing
-
-The `agent` element is sliced to distinguish between authors and transmitters:
-
-| Slice | Type | Purpose |
-|-------|------|---------|
-| `ProvenanceAuthor` | author | Entity that created the data |
-| `ProvenanceTransmitter` | transmitter | Entity that transmitted the data |
-{:.ph-table}
-
-### Constraint: provenance-1
-
-**`onBehalfOf` SHALL be present when `agent.who` is a Practitioner or Device**
-
-This ensures that when an individual practitioner or device is the agent, the responsible organization is always identified.
-
-## Supported Resource Types
-
-This Provenance profile can be used with the following resource types:
-
-### PH Core Profiles
-
-| Profile |
-|---------|
-| [PHCoreEncounter](StructureDefinition-ph-core-encounter.html) |
-| [PHCoreImmunization](StructureDefinition-ph-core-immunization.html) |
-| [PHCoreObservation](StructureDefinition-ph-core-observation.html) |
-| [PHCorePatient](StructureDefinition-ph-core-patient.html) |
-| [PHCoreProcedure](StructureDefinition-ph-core-procedure.html) |
-| [PHCoreRelatedPerson](StructureDefinition-ph-core-relatedperson.html) |
-{:.ph-table}
-
-### Base FHIR Resources
-
-The following resources do not have PH Core profiles yet and use base FHIR R4:
-
-- Condition
-- DiagnosticReport
-- DocumentReference
-- MedicationRequest
-- ServiceRequest
+When `agent.who` is a Practitioner or Device, `agent.onBehalfOf` **SHALL** identify the represented PH Core Organization.

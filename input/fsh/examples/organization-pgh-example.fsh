@@ -16,7 +16,10 @@ Description: "Philippine General Hospital (PGH) — A government tertiary hospit
 
 * name = "Philippine General Hospital"
 
-* type = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
+* type[0] = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"
+
+// JAO Hospital Statistics #9 "Nature of Ownership"
+* type[ownership] = OrganizationOwnershipCS#government "Government"
 
 * telecom[0].system = #phone
 * telecom[=].value = "+63-2-8651-7800"

@@ -4,15 +4,13 @@ Usage: #example
 Title: "Example PH Core HealthcareService"
 Description: "Philippine General Hospital Outpatient Department providing General Medicine consultations as a PH Core HealthcareService."
 
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Philippine General Hospital Outpatient Department - General Medicine is an active healthcare service providing outpatient consultations. It is managed by the Department of Health - Satellite Office and located at Philippine General Hospital, Taft Avenue, Manila.</div>"
 
 * identifier.system = "http://pgh.gov.ph/fhir/Identifier/service-id"
 * identifier.value = "PGH-OPD-GMED-001"
 
 * active = true
 
-* providedBy = Reference(Organization/organization-single-example)
+* providedBy = Reference(Organization/organization-pgh-example)
 
 * category = http://terminology.hl7.org/CodeSystem/service-category#27 "Specialist Medical"
 * category.text = "Specialist Medical"

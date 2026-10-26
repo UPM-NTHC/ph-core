@@ -3,6 +3,8 @@ Parent: Observation
 Id: ph-core-observation
 Title: "PH Core Observation"
 Description: "Measurements and simple assertions made about a patient, device or other subject."
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 0
 * subject only Reference(PHCorePatient or Group or Device or Location)
 * encounter only Reference(PHCoreEncounter)
 
@@ -11,17 +13,3 @@ Description: "Measurements and simple assertions made about a patient, device or
 * partOf only Reference(PHCoreMedicationAdministration or PHCoreMedicationDispense or PHCoreMedicationStatement or PHCoreProcedure or PHCoreImmunization or ImagingStudy)
 * hasMember only Reference(PHCoreObservation or Observation or QuestionnaireResponse or MolecularSequence)
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or PHCoreObservation or Observation or MolecularSequence)
-
-* insert CodeableConceptSO(category)
-* insert CodeableConceptSO(code)
-* insert CodeableConceptSO(valueCodeableConcept)
-* insert CodeableConceptSO(dataAbsentReason)
-* insert CodeableConceptSO(interpretation)
-* insert CodeableConceptSO(bodySite)
-* insert CodeableConceptSO(method)
-* insert CodeableConceptSO(referenceRange.type)
-* insert CodeableConceptSO(referenceRange.appliesTo)
-* insert CodeableConceptSO(component.code)
-* insert CodeableConceptSO(component.valueCodeableConcept)
-* insert CodeableConceptSO(component.dataAbsentReason)
-* insert CodeableConceptSO(component.interpretation)

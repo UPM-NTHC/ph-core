@@ -41,7 +41,7 @@
 - **Source**: FSH definitions, narrative content, and configuration in `input/`
 - **Generated**: SUSHI output, final IG documentation, and temporary build products
 - **Publisher**: HL7 FHIR IG Publisher (Java-based)
-- **Canonical base**: `https://fhir.doh.gov.ph/ph-core`
+- **Canonical base**: `https://fhir.doh.gov.ph/phcore`
 
 ## Code Style & Conventions
 
@@ -51,7 +51,6 @@
 - **ID pattern**: Use lowercase with hyphens (e.g., `ph-core-patient`)
 - **Branch naming**: Use hyphens, never slashes (e.g., `feat-name` not `feat/name`)
 
-> 📚 **For detailed conventions** (naming patterns, Profile Development Rules, Reference Hierarchy, etc.), see [CONTRIBUTING.md](.github/CONTRIBUTING.md#code-style--conventions).
 
 ## Contribution Workflow
 
@@ -61,7 +60,7 @@
 4. Open PR linking to issue: `Fixes #247`
 5. Merge only when CI is green, use squash merge, delete branch after
 
-> 📚 **For detailed contribution guidelines** (Issue labels, Development Setup, Code Review Process, etc.), see [CONTRIBUTING.md](.github/CONTRIBUTING.md).
+> 📚 **For detailed contribution guidelines** (Issue labels, Development Setup, Code Review Process, etc.), see [CONTRIBUTING.md](.github/contributing.md).
 
 ## Debugging Tips
 
@@ -69,3 +68,8 @@
 - **Build hangs**: Use offline mode (`-tx n/a`) for faster builds when working with large codesystems
 - **Memory issues**: Increase Java heap with `export JAVA_TOOL_OPTIONS="-Xmx4g"`
 - **Validation**: Review `output/qa.html` for errors, warnings, and broken links
+- **`Refusing to fetch from non-public address 64:ff9b::...`**: your network uses
+  DNS64/NAT64 and occasionally hands Java a synthesized IPv6 address, which the
+  Publisher's SSRF guard rejects. Force IPv4 and retry:
+  `JAVA_OPTS="-Djava.net.preferIPv4Stack=true" ./_build.sh` (or add the flag to
+  `JAVA_OPTS` before a direct `java -jar ...` invocation).

@@ -1,6 +1,6 @@
 ValueSet: DrugsVS
 Id: drugs-vs
 Title: "Drugs"
-Description: "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from FDA."
+Description: "Codes from the locally authored FDA CPR."
 * insert ShareableValueSet
 * include codes from system PHFDACPRCS

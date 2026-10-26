@@ -7,7 +7,7 @@ This directory contains Mermaid diagram source files for PH Core documentation.
 1. **ig-structure.mmd** - IG Structure Overview
 2. **profile-inheritance.mmd** - Profile Inheritance Chain
 3. **reference-hierarchy.mmd** - Profile Reference Hierarchy
-4. **inclusion-flow.mmd** - Profile Inclusion Flow (≥2 IG Rule)
+4. **inclusion-flow.mmd** - Profile Inclusion Flow (≥2 IG use and ≥2 IG MS)
 5. **identifier-systems.mmd** - Identifier Systems Map
 6. **terminology-flow.mmd** - Terminology Publication Flow
 7. **contribution-workflow.mmd** - Contribution Workflow

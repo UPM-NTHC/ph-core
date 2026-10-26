@@ -58,37 +58,27 @@ jobs:
           sudo gem install jekyll
           sudo npm install -g fsh-sushi
 
-      # Cache the pinned IG Publisher JAR. The version is also part of the
-      # terminology-cache key because publisher upgrades can change validation
-      # and cache behavior.
-      - name: Cache IG Publisher
-        uses: actions/cache@v4
-        with:
-          path: ./input-cache/publisher.jar
-          key: ig-publisher-2.3.4-${{ runner.os }}
-
       - name: Cache terminology data
         uses: actions/cache@v4
         with:
           path: ./input-cache/txcache
-          key: txcache-${{ runner.os }}-publisher-2.3.4-${{ hashFiles('sushi-config.yaml', 'input/fsh/**/*.fsh') }}
+          key: txcache-${{ runner.os }}-${{ hashFiles('sushi-config.yaml', 'input/fsh/**/*.fsh') }}
           restore-keys: |
-            txcache-${{ runner.os }}-publisher-2.3.4-
+            txcache-${{ runner.os }}-
 
       - name: Build IG
         timeout-minutes: 15
         run: |
           mkdir -p ./input-cache
-          # Pin CI to a reviewed Publisher release for reproducible validation.
-          if [ ! -f ./input-cache/publisher.jar ]; then
-            curl --fail --location --show-error \
-              https://github.com/HL7/fhir-ig-publisher/releases/download/2.3.4/publisher.jar \
-              --output ./input-cache/publisher.jar
-          fi
+
+          # Download the latest IG Publisher on each build.
+          curl --fail --location --show-error \
+            https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
+            --output ./input-cache/publisher.jar
+
           export JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:-} -Dfile.encoding=UTF-8"
-          # Terminology validation remains mandatory. Use the explicit HTTPS R4
-          # endpoint and restored terminology cache; fail within the step timeout
-          # if the service cannot complete validation instead of disabling it.
+
+          # Keep terminology validation enabled using the HTTPS R4 endpoint.
           java -jar ./input-cache/publisher.jar -ig . -tx https://tx.fhir.org/r4
           
       - name: Upload build artifacts

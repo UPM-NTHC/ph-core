@@ -1,0 +1,38 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Coverage/philhealth-coverage-example> a fhir:Coverage ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "philhealth-coverage-example"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Coverage philhealth-coverage-example</b></p><a name=\"philhealth-coverage-example\"> </a><a name=\"hcphilhealth-coverage-example\"> </a><p><b>status</b>: Active</p><p><b>subscriber</b>: <a href=\"Patient-patient-single-example.html\">Juan Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>subscriberId</b>: 63-584789845-5</p><p><b>beneficiary</b>: <a href=\"Patient-patient-single-example.html\">Juan Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>payor</b>: <a href=\"Organization-organization-philhealth-example.html\">Organization Philippine Health Insurance Corporation (illustrative)</a></p></div>"
+  ] ;
+  fhir:Coverage.status [ fhir:value "active"] ;
+  fhir:Coverage.subscriber [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:Coverage.subscriberId [ fhir:value "63-584789845-5"] ;
+  fhir:Coverage.beneficiary [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:Coverage.payor [
+     fhir:index -1 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-philhealth-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/organization-philhealth-example" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Coverage/philhealth-coverage-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

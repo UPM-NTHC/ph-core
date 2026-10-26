@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="practitionerrole-ed-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PractitionerRole practitionerrole-ed-example</b></p><a name="practitionerrole-ed-example"> </a><a name="hcpractitionerrole-ed-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-practitionerrole.html">PH Core PractitionerRole</a></p></div><p><b>identifier</b>: <code>http://doh.gov.ph/fhir/Identifier/practitioner-role-id</code>/PR-ED-001</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>organization</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p><p><b>code</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}">Doctor</span></p><p><b>specialty</b>: <span title="Codes:{http://snomed.info/sct 773568002}">Emergency medicine</span></p><p><b>telecom</b>: <a href="tel:+63-2-8651-7802">+63-2-8651-7802</a>, <a href="mailto:ed.attending@pgh.gov.ph">ed.attending@pgh.gov.ph</a></p></div>
+  </text>
+  <identifier>
+    <system value="http://doh.gov.ph/fhir/Identifier/practitioner-role-id"/>
+    <value value="PR-ED-001"/>
+  </identifier>
+  <active value="true"/>
+  <practitioner>
+    <reference value="Practitioner/practitioner-ed-example"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/organization-pgh-example"/>
+  </organization>
+  <code>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/practitioner-role"/>
+      <code value="doctor"/>
+      <display value="Doctor"/>
+    </coding>
+  </code>
+  <specialty>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="773568002"/>
+      <display value="Emergency medicine"/>
+    </coding>
+  </specialty>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63-2-8651-7802"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="ed.attending@pgh.gov.ph"/>
+    <use value="work"/>
+  </telecom>
+</PractitionerRole>

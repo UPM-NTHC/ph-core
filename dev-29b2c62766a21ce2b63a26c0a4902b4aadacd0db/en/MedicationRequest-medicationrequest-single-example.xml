@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="medicationrequest-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Dr. Maria Clara Santos prescribed Twinact 40mg/5mg tablet (Telmisartan + Amlodipine), 1 tablet once daily to treat hypertension for Juan Dela Cruz.</div>
+  </text>
+  <status value="active"/>
+  <intent value="order"/>
+  <priority value="routine"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="https://verification.fda.gov.ph"/>
+      <code value="DRP-10144"/>
+      <display value="Twinact"/>
+    </coding>
+    <text value="Twinact 40mg/5mg tablet"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/encounter-single-example"/>
+  </encounter>
+  <authoredOn value="2025-03-15T09:00:00+08:00"/>
+  <requester>
+    <reference value="Practitioner/practitioner-single-example"/>
+  </requester>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="38341003"/>
+      <display value="Hypertensive disorder"/>
+    </coding>
+  </reasonCode>
+  <note>
+    <text value="Take complete course of antibiotics as prescribed"/>
+  </note>
+  <dosageInstruction>
+    <sequence value="1"/>
+    <text value="Take 1 tablet once daily"/>
+    <timing>
+      <repeat>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
+        <code value="PO"/>
+        <display value="Swallow, oral"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="1"/>
+        <unit value="tablet"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="1"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+  <dispenseRequest>
+    <numberOfRepeatsAllowed value="0"/>
+    <quantity>
+      <value value="30"/>
+      <unit value="Tablet"/>
+      <system value="http://snomed.info/sct"/>
+      <code value="732936001"/>
+    </quantity>
+  </dispenseRequest>
+</MedicationRequest>

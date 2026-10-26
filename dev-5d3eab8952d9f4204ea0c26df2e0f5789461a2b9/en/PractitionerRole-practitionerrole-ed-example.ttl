@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/PractitionerRole/practitionerrole-ed-example> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "practitionerrole-ed-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole practitionerrole-ed-example</b></p><a name=\"practitionerrole-ed-example\"> </a><a name=\"hcpractitionerrole-ed-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-practitionerrole.html\">PH Core PractitionerRole</a></p></div><p><b>identifier</b>: <code>http://doh.gov.ph/fhir/Identifier/practitioner-role-id</code>/PR-ED-001</p><p><b>active</b>: true</p><p><b>practitioner</b>: <a href=\"Practitioner-practitioner-ed-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>organization</b>: <a href=\"Organization-organization-pgh-example.html\">Organization Philippine General Hospital</a></p><p><b>code</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/practitioner-role doctor}\">Doctor</span></p><p><b>specialty</b>: <span title=\"Codes:{http://snomed.info/sct 773568002}\">Emergency medicine</span></p><p><b>telecom</b>: <a href=\"tel:+63-2-8651-7802\">+63-2-8651-7802</a>, <a href=\"mailto:ed.attending@pgh.gov.ph\">ed.attending@pgh.gov.ph</a></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://doh.gov.ph/fhir/Identifier/practitioner-role-id"^^xsd:anyURI ;
+       fhir:l <http://doh.gov.ph/fhir/Identifier/practitioner-role-id>
+     ] ;
+     fhir:value [ fhir:v "PR-ED-001" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:practitioner [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-ed-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-ed-example" ]
+  ] ; # 
+  fhir:organization [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-pgh-example> ;
+     fhir:reference [ fhir:v "Organization/organization-pgh-example" ]
+  ] ; # 
+  fhir:code ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/practitioner-role"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/practitioner-role>
+       ] ;
+       fhir:code [ fhir:v "doctor" ] ;
+       fhir:display [ fhir:v "Doctor" ]
+     ] )
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:773568002 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "773568002" ] ;
+       fhir:display [ fhir:v "Emergency medicine" ]
+     ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-2-8651-7802" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "ed.attending@pgh.gov.ph" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

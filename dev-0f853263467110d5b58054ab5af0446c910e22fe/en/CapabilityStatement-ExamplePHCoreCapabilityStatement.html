@@ -1,0 +1,409 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>PH Core Server CapabilityStatement - Draft PH Core Implementation Guide v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style>
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ph-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.ph-table thead {
+  display: table-header-group;
+}
+
+.ph-table th {
+  background-color: #555555;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid #444444;
+}
+
+.ph-table td {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.ph-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ph-table tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.ph-table tbody tr:hover {
+  background-color: #ebf8ff;
+  transition: background-color 0.2s ease;
+}
+
+.ph-table td code {
+  background-color: #edf2f7;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5.4"}
+    h3,h4,h5,h6{--heading-prefix:"5.4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Draft PH Core Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="sample-case.html">Sample Case</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PH Core Server CapabilityStatement</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<!-- layouts\layout-canonical -->
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Draft PH Core Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/phcore/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CapabilityStatement-ExamplePHCoreCapabilityStatement.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CapabilityStatement-ExamplePHCoreCapabilityStatement.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CapabilityStatement-ExamplePHCoreCapabilityStatement.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+
+  <h2 id="root">CapabilityStatement: PH Core Server CapabilityStatement
+(Experimental)
+  </h2>
+
+  <table class="colsd" data-fhir="generated">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://fhir.doh.gov.ph/phcore/CapabilityStatement/ExamplePHCoreCapabilityStatement<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://fhir.doh.gov.ph/phcore/CapabilityStatement/ExamplePHCoreCapabilityStatement"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.2.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://fhir.doh.gov.ph/phcore/CapabilityStatement/ExamplePHCoreCapabilityStatement|0.2.0"/></span>
+      </td>
+      <td style="text-align: right;border-left-style: hidden" title="Enable this to see changes since the last official release">
+        <span id="toggle-change-display"><label style="margin:0;font-weight:normal" for="showChanges">Highlight text changes?</label>
+  
+        <input style="margin:0" type="checkbox" id="showChanges" onchange="toggleChanges()"/>
+  
+      </span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="5">
+        
+          Draft
+          
+
+            as of 
+2026-06-22
+
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">PHCoreServerCapabilityStatement</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+<p>
+<p>CapabilityStatement for the PH Core Implementation Guide. Defines the conformance requirements for FHIR servers implementing the minimum set of Philippine Realm resource constraints. Validated at the June 2026 Aklan Connectathon with the Juan Dela Cruz ACS scenario. Transaction Bundles are supported for atomic submission of clinical packages. Both POST (create) and PUT (update/upsert) patterns are demonstrated in Connectathon-validated examples.</p>
+
+</p>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+<!--  <p>
+  Formats: <a href="CapabilityStatement-ExamplePHCoreCapabilityStatement.xml.html">XML</a>, <a href="CapabilityStatement-ExamplePHCoreCapabilityStatement.json.html">JSON</a>, <a href="CapabilityStatement-ExamplePHCoreCapabilityStatement.ttl.html">Turtle</a>
+  </p>-->
+
+  
+  <p>
+      <a href="../ExamplePHCoreCapabilityStatement.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="../ExamplePHCoreCapabilityStatement.openapi.json" download>Download</a>
+  </p>
+  
+
+
+  <div data-fhir="generated"><p class="res-header-id"/><a name="ExamplePHCoreCapabilityStatement"> </a><a name="hcExamplePHCoreCapabilityStatement"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en</p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-capability-statement.html">PH Core CapabilityStatement</a></p></div><h2 id="title">PH Core Server CapabilityStatement</h2><ul><li>Implementation Guide Version: 0.2.0 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>json</code>, <code>xml</code></li><li>Published on: 2026-06-22 </li><li>Published by: UP Manila National TeleHealth Center </li></ul><blockquote class="impl-note"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id="rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>server</code></h3></div><div class="panel-body"><div><p>FHIR RESTful server supporting PH Core profiles and interactions validated at the June 2026 Aklan Connectathon. Supports standard CRUD operations, search, and transaction Bundles for atomic resource submission. Both POST (create-new) and PUT (conditional update/upsert) patterns are supported for each resource type, matching the two Connectathon-validated example Bundles.</p>
+</div><div class="lead"><em>Security</em></div><div class="row"><div class="col-lg-6">Enable CORS: no</div><div class="col-lg-6">Security services supported: <code>SMART-on-FHIR</code></div></div><blockquote><div><p>Implementations SHOULD use SMART on FHIR or equivalent bearer-token authentication. Transport security (TLS) is REQUIRED. See the PH Core IG security guidance for base requirements.</p>
+</div></blockquote><div class="lead"><em>Summary of System-wide Interactions</em></div><ul><li><strong>SHALL </strong>support the <code>transaction</code>interaction described as follows:<div><p>Transaction Bundle support for atomic submission of clinical packages. The ACS case example uses PUT for idempotent upsert; the general transaction example uses POST for new resource creation.</p>
+</div></li><li><strong>MAY </strong>support the <code>batch</code>interaction.</li></ul></div></div><h3 id="resourcesCap1">Capabilities by Resource/Profile</h3><h4 id="resourcesSummary1">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class="bg-info">R</span></b>ead, <b><span class="bg-info">S</span></b>earch, <b><span class="bg-info">U</span></b>pdate, and <b><span class="bg-info">C</span></b>reate, are always shown, while <b><span class="bg-info">VR</span></b>ead, <b><span class="bg-info">P</span></b>atch, <b><span class="bg-info">D</span></b>elete, <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">I</span></b>nstance, or <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class="table-responsive"><table class="table table-condensed table-hover"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class="text-center"><b title="GET a resource (read interaction)">R</b></th><th class="text-center"><b title="GET all set of resources of the type (search interaction)">S</b></th><th class="text-center"><b title="PUT a new resource version (update interaction)">U</b></th><th class="text-center"><b title="POST a new resource (create interaction)">C</b></th><th><b title="Required and recommended search parameters">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href="#Patient1-1">Patient</a></td><td><a href="StructureDefinition-ph-core-patient.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, identifier, name, birthdate, gender</td><td/><td/><td/></tr><tr><td><a href="#Practitioner1-2">Practitioner</a></td><td><a href="StructureDefinition-ph-core-practitioner.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, identifier, name</td><td/><td/><td/></tr><tr><td><a href="#Organization1-3">Organization</a></td><td><a href="StructureDefinition-ph-core-organization.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, identifier, name</td><td/><td/><td/></tr><tr><td><a href="#PractitionerRole1-4">PractitionerRole</a></td><td><a href="StructureDefinition-ph-core-practitionerrole.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, identifier, practitioner, organization</td><td/><td/><td/></tr><tr><td><a href="#Location1-5">Location</a></td><td><a href="StructureDefinition-ph-core-location.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-location</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, name, organization</td><td/><td/><td/></tr><tr><td><a href="#RelatedPerson1-6">RelatedPerson</a></td><td><a href="StructureDefinition-ph-core-relatedperson.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-relatedperson</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, patient</td><td/><td/><td/></tr><tr><td><a href="#Encounter1-7">Encounter</a></td><td><a href="StructureDefinition-ph-core-encounter.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, subject, date, status, location</td><td/><td/><td/></tr><tr><td><a href="#Condition1-8">Condition</a></td><td><a href="StructureDefinition-ph-core-condition.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, subject, encounter, clinical-status, code</td><td/><td/><td/></tr><tr><td><a href="#Observation1-9">Observation</a></td><td><a href="StructureDefinition-ph-core-observation.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td>_id, subject, encounter, code, date, category</td><td/><td/><td/></tr><tr><td><a href="#Procedure1-10">Procedure</a></td><td><a href="StructureDefinition-ph-core-procedure.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, subject, encounter, date, code</td><td/><td/><td/></tr><tr><td><a href="#Immunization1-11">Immunization</a></td><td><a href="StructureDefinition-ph-core-immunization.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, patient, vaccine-code, date</td><td/><td/><td/></tr><tr><td><a href="#AllergyIntolerance1-12">AllergyIntolerance</a></td><td><a href="StructureDefinition-ph-core-allergyintolerance.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, patient, clinical-status</td><td/><td/><td/></tr><tr><td><a href="#HealthcareService1-13">HealthcareService</a></td><td><a href="StructureDefinition-ph-core-healthcareservice.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, location, organization, name</td><td/><td/><td/></tr><tr><td><a href="#ServiceRequest1-14">ServiceRequest</a></td><td><a href="StructureDefinition-ph-core-serviceRequest.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, subject, status</td><td/><td/><td/></tr><tr><td><a href="#Provenance1-15">Provenance</a></td><td><a href="StructureDefinition-ph-core-provenance.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, target, agent</td><td/><td/><td/></tr><tr><td><a href="#Task1-16">Task</a></td><td><a href="StructureDefinition-ph-core-task.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, patient, status, owner</td><td/><td/><td/></tr><tr><td><a href="#Composition1-17">Composition</a></td><td><a href="http://hl7.org/fhir/R4/composition.html">http://hl7.org/fhir/StructureDefinition/Composition</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHOULD">Y</span></td><td class="text-center"><span title="SHOULD">Y</span></td><td>_id, subject, encounter, date, type</td><td/><td/><td/></tr><tr><td><a href="#Medication1-18">Medication</a></td><td><a href="StructureDefinition-ph-core-medication.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="MAY">y?</span></td><td>_id, code</td><td/><td/><td/></tr><tr><td><a href="#MedicationRequest1-19">MedicationRequest</a></td><td><a href="StructureDefinition-ph-core-medicationrequest.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="MAY">y?</span></td><td>_id, subject, encounter, medication</td><td/><td/><td/></tr><tr><td><a href="#MedicationStatement1-20">MedicationStatement</a></td><td><a href="StructureDefinition-ph-core-medicationstatement.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="MAY">y?</span></td><td>_id, subject, context</td><td/><td/><td/></tr><tr><td><a href="#MedicationDispense1-21">MedicationDispense</a></td><td><a href="StructureDefinition-ph-core-medicationdispense.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationdispense</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="MAY">y?</span></td><td>_id, subject, context</td><td/><td/><td/></tr><tr><td><a href="#MedicationAdministration1-22">MedicationAdministration</a></td><td><a href="StructureDefinition-ph-core-medicationadministration.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="MAY">y?</span></td><td class="text-center"><span title="MAY">y?</span></td><td>_id, subject, context</td><td/><td/><td/></tr><tr><td><a href="#Claim1-23">Claim</a></td><td><a href="StructureDefinition-ph-core-claim.html">https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim</a></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"><span title="SHALL"><b>Y</b></span></td><td class="text-center"/><td class="text-center"><span title="MAY">y?</span></td><td>_id, patient</td><td/><td/><td/></tr></tbody></table></div><hr/><div class="panel panel-default"><div role="tab" id="heading1-1" class="panel-heading"><h4 id="Patient1-1" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-1" aria-expanded="true" href="#collapse1-1"><span style="float: right;">Resource Conformance: SHALL</span>Patient</a></h4></div><div role="tabpanel" aria-labelledby="heading1-1" id="collapse1-1" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-patient.html">PH Core Patient</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Patient demographics with Philippine-specific extensions (nationality, religion, ethnicity, PWD disability, occupation, education). Supports PhilHealth and PhilSys identifiers. Must Support: name (given split into first/middle), birthDate, gender, telecom, address (PSGC hierarchy), identifier.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div><p>Search by PhilHealth ID or PhilSys ID.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>birthdate</td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>gender</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-2" class="panel-heading"><h4 id="Practitioner1-2" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-2" aria-expanded="true" href="#collapse1-2"><span style="float: right;">Resource Conformance: SHALL</span>Practitioner</a></h4></div><div role="tabpanel" aria-labelledby="heading1-2" id="collapse1-2" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-practitioner.html">PH Core Practitioner</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Practitioner resource for healthcare providers. Includes SOGIE extensions (genderIdentity, individualPronouns, sex). Must Support: name, telecom, address, birthDate, gender, identifier (PRC license).</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div><p>Search by PRC license number.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-3" class="panel-heading"><h4 id="Organization1-3" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-3" aria-expanded="true" href="#collapse1-3"><span style="float: right;">Resource Conformance: SHALL</span>Organization</a></h4></div><div role="tabpanel" aria-labelledby="heading1-3" id="collapse1-3" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-organization.html">PH Core Organization</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Organization resource for healthcare facilities. Supports NHFR facility code, HCPN network code, PEN, and PAN identifiers. Address constrained to PHCoreAddress with PSGC geographic coding. PartOf for facility hierarchy.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div><p>Search by NHFR facility code, HCPN code, PEN, or PAN.</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-4" class="panel-heading"><h4 id="PractitionerRole1-4" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-4" aria-expanded="true" href="#collapse1-4"><span style="float: right;">Resource Conformance: SHALL</span>PractitionerRole</a></h4></div><div role="tabpanel" aria-labelledby="heading1-4" id="collapse1-4" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-practitionerrole.html">PH Core PractitionerRole</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>PractitionerRole linking practitioners to facilities and locations. Used in the ACS scenario for ED attending physician role assignment.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>identifier</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>practitioner</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>organization</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-5" class="panel-heading"><h4 id="Location1-5" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-5" aria-expanded="true" href="#collapse1-5"><span style="float: right;">Resource Conformance: SHOULD</span>Location</a></h4></div><div role="tabpanel" aria-labelledby="heading1-5" id="collapse1-5" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-location.html">PH Core Location</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Location resource for healthcare service locations and sites within facilities. Address constrained to PHCoreAddress with PSGC geographic hierarchy. Used as reference from Encounter and PractitionerRole.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>organization</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-6" class="panel-heading"><h4 id="RelatedPerson1-6" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-6" aria-expanded="true" href="#collapse1-6"><span style="float: right;">Resource Conformance: SHOULD</span>RelatedPerson</a></h4></div><div role="tabpanel" aria-labelledby="heading1-6" id="collapse1-6" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-relatedperson.html">PH Core RelatedPerson</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>RelatedPerson for patient contacts, next of kin, guardians, and emergency contacts. Supports PhilHealth and PhilSys identifiers with PH Core naming and address constraints.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-7" class="panel-heading"><h4 id="Encounter1-7" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-7" aria-expanded="true" href="#collapse1-7"><span style="float: right;">Resource Conformance: SHALL</span>Encounter</a></h4></div><div role="tabpanel" aria-labelledby="heading1-7" id="collapse1-7" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-encounter.html">PH Core Encounter</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Encounter resource for clinical visits and encounters. class is required and Must Support. Hospitalization details supported. Location references PHCoreLocation. Used in both ACS (ED encounter) and general (ambulatory) scenarios.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>status</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>location</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-8" class="panel-heading"><h4 id="Condition1-8" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-8" aria-expanded="true" href="#collapse1-8"><span style="float: right;">Resource Conformance: SHALL</span>Condition</a></h4></div><div role="tabpanel" aria-labelledby="heading1-8" id="collapse1-8" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-condition.html">PH Core Condition</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Condition resource for diagnoses and problems. category, encounter, note, severity, subject, and code are Must Support. Used for encounter diagnosis (ACS) and problem-list (T2DM comorbidity).</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>clinical-status</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>code</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-9" class="panel-heading"><h4 id="Observation1-9" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-9" aria-expanded="true" href="#collapse1-9"><span style="float: right;">Resource Conformance: SHALL</span>Observation</a></h4></div><div role="tabpanel" aria-labelledby="heading1-9" id="collapse1-9" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-observation.html">PH Core Observation</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Observation resource for clinical measurements, vital signs, and lab results. subject, encounter, performer, basedOn, and partOf constrained to PH Core profiles. Used extensively in the ACS scenario: vital signs (BP, HR, RR, SpO2, temp, pain) and lab results (troponin, glucose, HbA1c, cholesterol, ECG).</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>code</td><td><code>token</code></td><td><div><p>Search by LOINC code for specific observation types (e.g., 85354-9 for BP, 8480-6 for BP systolic).</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>category</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-10" class="panel-heading"><h4 id="Procedure1-10" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-10" aria-expanded="true" href="#collapse1-10"><span style="float: right;">Resource Conformance: SHOULD</span>Procedure</a></h4></div><div role="tabpanel" aria-labelledby="heading1-10" id="collapse1-10" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-procedure.html">PH Core Procedure</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Procedure resource for clinical procedures and treatments. subject (Patient/Group) and status are Must Support with obligations. encounter is Must Support.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>code</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-11" class="panel-heading"><h4 id="Immunization1-11" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-11" aria-expanded="true" href="#collapse1-11"><span style="float: right;">Resource Conformance: SHOULD</span>Immunization</a></h4></div><div role="tabpanel" aria-labelledby="heading1-11" id="collapse1-11" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-immunization.html">PH Core Immunization</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Immunization resource for vaccination records. Includes extensions for BatchNumber and AdministeredProduct. patient, status, lotNumber, and occurrenceDateTime are Must Support with obligations.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>vaccine-code</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-12" class="panel-heading"><h4 id="AllergyIntolerance1-12" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-12" aria-expanded="true" href="#collapse1-12"><span style="float: right;">Resource Conformance: SHOULD</span>AllergyIntolerance</a></h4></div><div role="tabpanel" aria-labelledby="heading1-12" id="collapse1-12" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-allergyintolerance.html">PH Core AllergyIntolerance</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>AllergyIntolerance resource for patient allergies and adverse reactions. patient is 1..1 Must Support. reaction and onset are Must Support.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>clinical-status</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-13" class="panel-heading"><h4 id="HealthcareService1-13" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-13" aria-expanded="true" href="#collapse1-13"><span style="float: right;">Resource Conformance: SHOULD</span>HealthcareService</a></h4></div><div role="tabpanel" aria-labelledby="heading1-13" id="collapse1-13" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-healthcareservice.html">PH Core HealthcareService</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>HealthcareService resource for available clinical services. identifier, active, providedBy, location, name, and telecom are Must Support with obligations.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>location</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>organization</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>name</td><td><code>string</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-14" class="panel-heading"><h4 id="ServiceRequest1-14" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-14" aria-expanded="true" href="#collapse1-14"><span style="float: right;">Resource Conformance: SHOULD</span>ServiceRequest</a></h4></div><div role="tabpanel" aria-labelledby="heading1-14" id="collapse1-14" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-serviceRequest.html">PH Core ServiceRequest</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>ServiceRequest resource for orders and requests. subject and status are 1..1 Must Support. encounter and requester are Must Support.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>status</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-15" class="panel-heading"><h4 id="Provenance1-15" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-15" aria-expanded="true" href="#collapse1-15"><span style="float: right;">Resource Conformance: SHOULD</span>Provenance</a></h4></div><div role="tabpanel" aria-labelledby="heading1-15" id="collapse1-15" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-provenance.html">PH Core Provenance</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Provenance resource for audit trail and data provenance. Agent sliced into ProvenanceAuthor and ProvenanceTransmitter. Agent.who constrained to PH Core profiles. Location references PHCoreLocation.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>target</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>agent</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-16" class="panel-heading"><h4 id="Task1-16" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-16" aria-expanded="true" href="#collapse1-16"><span style="float: right;">Resource Conformance: SHOULD</span>Task</a></h4></div><div role="tabpanel" aria-labelledby="heading1-16" id="collapse1-16" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-task.html">PH Core Task</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Task resource for workflow tracking. executionPeriod, for, and note are Must Support. status is 1..1 Must Support. References constrained to PH Core profiles.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>status</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>owner</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-17" class="panel-heading"><h4 id="Composition1-17" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-17" aria-expanded="true" href="#collapse1-17"><span style="float: right;">Resource Conformance: SHOULD</span>Composition</a></h4></div><div role="tabpanel" aria-labelledby="heading1-17" id="collapse1-17" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="http://hl7.org/fhir/R4/composition.html">Composition</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>SHOULD</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Composition resource for clinical documents. Used in the ACS scenario for the ED Physician's Note containing the complete clinical narrative. Currently uses base FHIR profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>type</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-18" class="panel-heading"><h4 id="Medication1-18" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-18" aria-expanded="true" href="#collapse1-18"><span style="float: right;">Resource Conformance: MAY</span>Medication</a></h4></div><div role="tabpanel" aria-labelledby="heading1-18" id="collapse1-18" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-medication.html">PH Core Medication</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Medication resource for medicinal products. Code bound to DrugsVS (PH FDA drug codes). EXPERIMENTAL profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>code</td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-19" class="panel-heading"><h4 id="MedicationRequest1-19" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-19" aria-expanded="true" href="#collapse1-19"><span style="float: right;">Resource Conformance: MAY</span>MedicationRequest</a></h4></div><div role="tabpanel" aria-labelledby="heading1-19" id="collapse1-19" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-medicationrequest.html">PH Core Medication Request</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>MedicationRequest resource for prescription orders. subject, encounter, medicationReference, requester, and performer constrained to PH Core profiles. DrugsVS binding. EXPERIMENTAL profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>medication</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-20" class="panel-heading"><h4 id="MedicationStatement1-20" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-20" aria-expanded="true" href="#collapse1-20"><span style="float: right;">Resource Conformance: MAY</span>MedicationStatement</a></h4></div><div role="tabpanel" aria-labelledby="heading1-20" id="collapse1-20" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-medicationstatement.html">PH Core Medication Statement</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>MedicationStatement resource for medication usage records. subject (Patient), context (Encounter), and medicationReference constrained. DrugsVS binding. EXPERIMENTAL profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>context</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-21" class="panel-heading"><h4 id="MedicationDispense1-21" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-21" aria-expanded="true" href="#collapse1-21"><span style="float: right;">Resource Conformance: MAY</span>MedicationDispense</a></h4></div><div role="tabpanel" aria-labelledby="heading1-21" id="collapse1-21" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-medicationdispense.html">PH Core Medication Dispense</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>MedicationDispense resource for medication dispense records. subject, context, medicationReference, performer, location, and authorizingPrescription constrained. DrugsVS binding. EXPERIMENTAL profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>context</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-22" class="panel-heading"><h4 id="MedicationAdministration1-22" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-22" aria-expanded="true" href="#collapse1-22"><span style="float: right;">Resource Conformance: MAY</span>MedicationAdministration</a></h4></div><div role="tabpanel" aria-labelledby="heading1-22" id="collapse1-22" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-medicationadministration.html">PH Core Medication Administration</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>, <code>update</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>MedicationAdministration resource for medication administration records. subject, context, medicationReference, performer, request, and partOf constrained. DrugsVS binding. EXPERIMENTAL profile.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>subject</td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>context</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div><div class="panel panel-default"><div role="tab" id="heading1-23" class="panel-heading"><h4 id="Claim1-23" class="panel-title"><a data-toggle="collapse" role="button" aria-controls="collapse1-23" aria-expanded="true" href="#collapse1-23"><span style="float: right;">Resource Conformance: MAY</span>Claim</a></h4></div><div role="tabpanel" aria-labelledby="heading1-23" id="collapse1-23" class="panel-collapse in"><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-ph-core-claim.html">PH Core Claim</a></div><div class="col-lg-3"><span class="lead">Profile Conformance</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Interaction summary</span><br/><ul><li><strong>SHALL</strong> support <code>read</code>, <code>search-type</code>.</li><li><strong>MAY</strong> support <code>create</code>.</li></ul></div></div><p/><div class="row"><div class="col-12"><span class="lead">Documentation</span><blockquote><div><p>Claim resource for healthcare reimbursement claims. patient, insurer, provider, payee, and careTeam constrained to PH Core profiles.</p>
+</div></blockquote></div></div><div class="row"><div class="col-lg-7"><span class="lead">Search Parameters</span><table class="table table-condensed table-hover"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>_id</td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div/></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  
+          Package fhir.ph.core#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-22 14:12:00 +0000">
+    2026-06-22
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

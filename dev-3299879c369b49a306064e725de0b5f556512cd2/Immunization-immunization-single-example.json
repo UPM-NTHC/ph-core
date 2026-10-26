@@ -1,0 +1,105 @@
+{
+  "resourceType" : "Immunization",
+  "id" : "immunization-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization immunization-single-example</b></p><a name=\"immunization-single-example\"> </a><a name=\"hcimmunization-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-immunization.html\">PH Core Immunization</a></p></div><p><b>Batch Number</b>: AAJN11K</p><p><b>Administered Product</b>: <a href=\"Medication-medication-single-example.html\">Medication Twinact</a></p><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/7.3.0/NamingSystem-uri.html\" title=\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \r\n\r\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \r\n\r\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\r\n\r\nThis OID may also be used in CD.codeSystem.\">Uniform Resource Identifier (URI)</a>/urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234</p><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{http://hl7.org/fhir/sid/cvx 123}\">Influenza H5N1-1203 Vaccine</span></p><p><b>patient</b>: <a href=\"Patient-patient-single-example.html\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-single-example.html\">Encounter: identifier = http://example.org/encounter-id#ENC-12345; status = finished; class = ambulatory (ActCode#AMB); type = ambulatory; period = 2023-01-01 10:00:00+0000 --&gt; 2023-01-01 11:00:00+0000</a></p><p><b>occurrence</b>: 2013-01-10</p><p><b>primarySource</b>: true</p><p><b>location</b>: <a href=\"Location-location-single-example.html\">Location Philippine General Hospital</a></p><p><b>lotNumber</b>: AAJN11K</p><p><b>expirationDate</b>: 2015-02-15</p><p><b>site</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActSite LA}\">Left arm</span></p><p><b>route</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration IM}\">Intramuscular injection</span></p><p><b>doseQuantity</b>: 5 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0443 OP}\">Ordering Provider</span></td><td><a href=\"Practitioner-practitioner-single-example.html\">Dr. Maria Clara Santos</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Notes on administration of vaccine</p>\n</div></blockquote><p><b>isSubpotent</b>: true</p><p><b>fundingSource</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/immunization-funding-source private}\">Private</span></p><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>TargetDisease</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 772828001}\">Influenza H5N1</span></td><td>1</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/batch-number",
+    "valueString" : "AAJN11K"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/administered-product",
+    "valueReference" : {
+      "reference" : "Medication/medication-single-example"
+    }
+  }],
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+  }],
+  "status" : "completed",
+  "vaccineCode" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "123",
+      "display" : "influenza, H5N1-1203"
+    }],
+    "text" : "Influenza H5N1-1203 Vaccine"
+  },
+  "patient" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "encounter" : {
+    "reference" : "Encounter/encounter-single-example"
+  },
+  "occurrenceDateTime" : "2013-01-10",
+  "primarySource" : true,
+  "location" : {
+    "reference" : "Location/location-single-example"
+  },
+  "lotNumber" : "AAJN11K",
+  "expirationDate" : "2015-02-15",
+  "site" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+      "code" : "LA",
+      "display" : "left arm"
+    }],
+    "text" : "Left arm"
+  },
+  "route" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+      "code" : "IM",
+      "display" : "Injection, intramuscular"
+    }],
+    "text" : "Intramuscular injection"
+  },
+  "doseQuantity" : {
+    "value" : 5,
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mg"
+  },
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+        "code" : "OP",
+        "display" : "Ordering Provider"
+      }],
+      "text" : "Ordering Provider"
+    },
+    "actor" : {
+      "reference" : "Practitioner/practitioner-single-example",
+      "display" : "Dr. Maria Clara Santos"
+    }
+  }],
+  "note" : [{
+    "text" : "Notes on administration of vaccine"
+  }],
+  "isSubpotent" : true,
+  "fundingSource" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/immunization-funding-source",
+      "code" : "private",
+      "display" : "Private"
+    }],
+    "text" : "Private"
+  },
+  "protocolApplied" : [{
+    "targetDisease" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "772828001",
+        "display" : "Influenza caused by Influenza A virus subtype H5N1"
+      }],
+      "text" : "Influenza H5N1"
+    }],
+    "doseNumberPositiveInt" : 1
+  }]
+}

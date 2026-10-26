@@ -1,0 +1,157 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Claim/claim-single-example> a fhir:Claim ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "claim-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Claim:</b> PhilHealth Outpatient Consultation</p><p><b>Status:</b> Active</p><p><b>Patient:</b> Juan Dela Cruz (PhilHealth ID: 63-584789845-5)</p><p><b>Created:</b> March 15, 2024</p><p><b>Insurer:</b> Philippine Health Insurance Corporation (PhilHealth)</p><p><b>Provider:</b> Dr. Maria Clara Santos</p><p><b>Diagnosis:</b> Type 2 Diabetes Mellitus (Principal)</p><p><b>Service:</b> Outpatient Consultation on March 15, 2024 - PHP 500.00</p></div>"
+  ] ;
+  fhir:Claim.status [ fhir:value "active"] ;
+  fhir:Claim.type [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ] ;
+       fhir:Coding.code [ fhir:value "professional" ] ;
+       fhir:Coding.display [ fhir:value "Professional" ]
+     ]
+  ] ;
+  fhir:Claim.use [ fhir:value "claim"] ;
+  fhir:Claim.patient [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:Claim.created [ fhir:value "2024-03-15"^^xsd:date] ;
+  fhir:Claim.insurer [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/organization-single-example" ]
+  ] ;
+  fhir:Claim.provider [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+  ] ;
+  fhir:Claim.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/processpriority" ] ;
+       fhir:Coding.code [ fhir:value "normal" ] ;
+       fhir:Coding.display [ fhir:value "Normal" ]
+     ]
+  ] ;
+  fhir:Claim.payee [
+     fhir:Claim.payee.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/payeetype" ] ;
+         fhir:Coding.code [ fhir:value "provider" ] ;
+         fhir:Coding.display [ fhir:value "Provider" ]
+       ]
+     ] ;
+     fhir:Claim.payee.party [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+     ]
+  ] ;
+  fhir:Claim.careTeam [
+     fhir:index -1 ;
+     fhir:Claim.careTeam.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Claim.careTeam.provider [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+     ] ;
+     fhir:Claim.careTeam.responsible [ fhir:value "true"^^xsd:boolean ] ;
+     fhir:Claim.careTeam.role [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/claimcareteamrole" ] ;
+         fhir:Coding.code [ fhir:value "primary" ] ;
+         fhir:Coding.display [ fhir:value "Primary Provider" ]
+       ]
+     ]
+  ] ;
+  fhir:Claim.diagnosis [
+     fhir:index -1 ;
+     fhir:Claim.diagnosis.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Claim.diagnosis.diagnosisReference [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ;
+       fhir:Reference.reference [ fhir:value "Condition/condition-single-example" ]
+     ] ;
+     fhir:Claim.diagnosis.type [
+       fhir:index -1 ;
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ex-diagnosistype" ] ;
+         fhir:Coding.code [ fhir:value "principal" ] ;
+         fhir:Coding.display [ fhir:value "Principal Diagnosis" ]
+       ]
+     ]
+  ] ;
+  fhir:Claim.insurance [
+     fhir:index -1 ;
+     fhir:Claim.insurance.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Claim.insurance.focal [ fhir:value "true"^^xsd:boolean ] ;
+     fhir:Claim.insurance.identifier [
+       fhir:Identifier.system [ fhir:value "http://philhealth.gov.ph/fhir/Identifier/philhealth-id" ] ;
+       fhir:Identifier.value [ fhir:value "63-584789845-5" ]
+     ] ;
+     fhir:Claim.insurance.coverage [
+       fhir:link <https://fhir.doh.gov.ph/phcore/Coverage/philhealth-coverage-example> ;
+       fhir:Reference.reference [ fhir:value "Coverage/philhealth-coverage-example" ]
+     ]
+  ] ;
+  fhir:Claim.item [
+     fhir:index -1 ;
+     fhir:Claim.item.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Claim.item.careTeamSequence [
+       fhir:value "1"^^xsd:positiveInteger ;
+       fhir:index -1
+     ] ;
+     fhir:Claim.item.diagnosisSequence [
+       fhir:value "1"^^xsd:positiveInteger ;
+       fhir:index -1
+     ] ;
+     fhir:Claim.item.productOrService [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a sct:11429006 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "11429006" ] ;
+         fhir:Coding.display [ fhir:value "Consultation" ]
+       ] ;
+       fhir:CodeableConcept.text [ fhir:value "Outpatient Consultation" ]
+     ] ;
+     fhir:Claim.item.servicedDate [ fhir:value "2024-03-15"^^xsd:date ] ;
+     fhir:Claim.item.quantity [
+       fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+     ] ;
+     fhir:Claim.item.unitPrice [
+       fhir:Money.value [ fhir:value "500"^^xsd:decimal ] ;
+       fhir:Money.currency [ fhir:value "PHP" ]
+     ] ;
+     fhir:Claim.item.net [
+       fhir:Money.value [ fhir:value "500"^^xsd:decimal ] ;
+       fhir:Money.currency [ fhir:value "PHP" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Claim/claim-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

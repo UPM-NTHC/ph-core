@@ -1,0 +1,86 @@
+# medicationrequest-single-example - Draft PH Core Implementation Guide v0.2.0
+
+## Example MedicationRequest: medicationrequest-single-example
+
+Dr. Maria Clara Santos prescribed Twinact 40mg/5mg tablet (Telmisartan + Amlodipine), 1 tablet once daily to treat hypertension for Juan Dela Cruz.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "medicationrequest-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest"]
+  },
+  "status" : "active",
+  "intent" : "order",
+  "priority" : "routine",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://verification.fda.gov.ph",
+      "code" : "DRP-10144",
+      "display" : "Twinact"
+    }],
+    "text" : "Twinact 40mg/5mg tablet"
+  },
+  "subject" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "encounter" : {
+    "reference" : "Encounter/encounter-single-example"
+  },
+  "authoredOn" : "2025-03-15T09:00:00+08:00",
+  "requester" : {
+    "reference" : "Practitioner/practitioner-single-example"
+  },
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "38341003",
+      "display" : "Hypertensive disorder"
+    }]
+  }],
+  "note" : [{
+    "text" : "Take complete course of antibiotics as prescribed"
+  }],
+  "dosageInstruction" : [{
+    "sequence" : 1,
+    "text" : "Take 1 tablet once daily",
+    "timing" : {
+      "repeat" : {
+        "frequency" : 1,
+        "period" : 1,
+        "periodUnit" : "d"
+      }
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+        "code" : "PO",
+        "display" : "Swallow, oral"
+      }]
+    },
+    "doseAndRate" : [{
+      "doseQuantity" : {
+        "value" : 1,
+        "unit" : "tablet",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "1"
+      }
+    }]
+  }],
+  "dispenseRequest" : {
+    "numberOfRepeatsAllowed" : 0,
+    "quantity" : {
+      "value" : 30,
+      "unit" : "Tablet",
+      "system" : "http://snomed.info/sct",
+      "code" : "732936001"
+    }
+  }
+}
+
+```

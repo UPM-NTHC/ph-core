@@ -1,0 +1,7 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs,0.2.0,draft,,IndigenousGroupsCS,Indigenous Groups CodeSystem,"A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong.",
+https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs,0.2.0,draft,,PHCoreDisabilityTypeCS,PH Core Disability Type Code System,"Code system for types of disability as defined by the Philippine government for PWD registration.",
+https://psa.gov.ph/classification/psced/level,0.2.0,draft,,PSCED,Mock PSCED,"Mock of the Philippine Standard Classification of Education.",
+https://psa.gov.ph/classification/psgc,0.2.0,draft,,PSGC,Mock PSGC,"Mock of the Philippine Standard Geographic Code.",
+https://psa.gov.ph/classification/psoc/unit,0.2.0,draft,,PSOC,Mock PSOC,"Mock of the Philippine Standard Occupational Classification.",
+https://verification.fda.gov.ph,0.2.0,active,,PHFDACPRCS,PH FDA Certificate of Product Registration (CPR) CodeSystem,"Registered drug products from the Philippine Food and Drug Administration (FDA)",

@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "070c6222-fa90-429c-98d0-fb5e959be485-135",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/070c6222-fa90-429c-98d0-fb5e959be485-135",
+  "name" : "IntersectionDrugsVSAndDrugsVS",
+  "title" : "Intersection of Drugs And Drugs",
+  "status" : "draft",
+  "date" : "2026-10-26T05:37:34+00:00"
+}

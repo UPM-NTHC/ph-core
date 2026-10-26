@@ -1,0 +1,119 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/barangays",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "Barangays",
+    "title" : "Barangays",
+    "description" : "The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psgc"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/cities",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "Cities",
+    "title" : "Cities",
+    "description" : "All city, municipality, and sub-municipality values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psgc"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/drugs-vs",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "DrugsVS",
+    "title" : "Drugs",
+    "description" : "Codes from the locally authored FDA CPR.",
+    "systems" : ["https://verification.fda.gov.ph"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/educational-attainments",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "EducationalAttainments",
+    "title" : "Educational Attainments",
+    "description" : "All categories of educational programs, courses, and attainment levels in the Philippines, based on the Philippine Standard Classification of Education (PSCED) published by the Philippine Statistics Authority (PSA)",
+    "systems" : ["https://psa.gov.ph/classification/psced/level"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/indigenous-status-vs",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "IndigenousStatusVS",
+    "title" : "Indigenous Groups ValueSet",
+    "description" : "Codes from the provisional locally authored indigenous-status list. National classification source, coverage and binding require appraisal.",
+    "systems" : ["https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-status-cs"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/occupational-classifications",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "OccupationClassifications",
+    "title" : "Occupation Classifications",
+    "description" : "The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psoc/unit"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/ph-core-disability-type-vs",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PHCoreDisabilityTypeVS",
+    "title" : "PH Core Disability Type Value Set",
+    "description" : "Value set for types of disability as defined by the Philippine government for PWD registration.",
+    "systems" : ["https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/prc-all-codes",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PRCAllCodesVS",
+    "title" : "PRC All Codes ValueSet",
+    "description" : "The complete set of all concepts defined by PRCCodeSystem version 0.1.0, including its root and structural grouping concepts. This immutable technical ValueSet is the CodeSystem's full-content ValueSet; use the category-specific PRC ValueSets for code selection.",
+    "systems" : ["https://fhir.doh.gov.ph/phcore/CodeSystem/prc"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/prc-council-codes",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PRCCouncilCodesVS",
+    "title" : "PRC Council Codes ValueSet",
+    "description" : "The Council and Code entries in the PRC CPDAS profession table as of 12 January 2021. The source says its profession codes are used for attendance sheets at accredited CPD programs.",
+    "systems" : ["https://fhir.doh.gov.ph/phcore/CodeSystem/prc"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/prc-licensure-examinations",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PRCLicensureExaminationsVS",
+    "title" : "PRC Licensure Examinations ValueSet",
+    "description" : "The 59 PRC examination and assessment codes in the standardized nomenclature list posted 18 March 2026. Codes are examination identifiers, not professional qualifications or license numbers.",
+    "systems" : ["https://fhir.doh.gov.ph/phcore/CodeSystem/prc"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/prc-profession-codes",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PRCProfessionCodesVS",
+    "title" : "PRC Profession Codes ValueSet",
+    "description" : "The 66 numerical profession codes in the PRC CPDAS table as of 12 January 2021. PRC states that the codes are used on attendance sheets for accredited CPD programs, and notes that the FAQ is subject to regular updating. Use these codes for a qualification or practitioner role only when the CPDAS profession classification matches; the code does not assert current license validity.",
+    "systems" : ["https://fhir.doh.gov.ph/phcore/CodeSystem/prc"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/provinces",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "Provinces",
+    "title" : "Provinces",
+    "description" : "All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psgc"]
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/regions",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "Regions",
+    "title" : "Regions",
+    "description" : "The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+    "systems" : ["https://psa.gov.ph/classification/psgc"]
+  }]
+}

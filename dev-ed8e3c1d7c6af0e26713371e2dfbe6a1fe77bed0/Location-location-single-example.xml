@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="location-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-location"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Location location-single-example</b></p><a name="location-single-example"> </a><a name="hclocation-single-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-location.html">PH Core Location</a></p></div><p><b>status</b>: Active</p><p><b>name</b>: Philippine General Hospital</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode HOSP}">Hospital</span></p><p><b>address</b>: Taft Avenue 1000 PH (work)</p><p><b>physicalType</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type bu}">Building</span></p><h3>Positions</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Longitude</b></td><td><b>Latitude</b></td></tr><tr><td style="display: none">*</td><td>120.9856</td><td>14.5764</td></tr></table><p><b>managingOrganization</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p></div>
+  </text>
+  <status value="active"/>
+  <name value="Philippine General Hospital"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="HOSP"/>
+      <display value="Hospital"/>
+    </coding>
+    <text value="Hospital"/>
+  </type>
+  <address>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1300000000"/>
+        <display value="National Capital Region (NCR)"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1380600000"/>
+        <display value="City of Manila"/>
+      </valueCoding>
+    </extension>
+    <use value="work"/>
+    <line value="Taft Avenue"/>
+    <postalCode value="1000"/>
+    <country value="PH"/>
+  </address>
+  <physicalType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+      <code value="bu"/>
+      <display value="Building"/>
+    </coding>
+    <text value="Building"/>
+  </physicalType>
+  <position>
+    <longitude value="120.9856"/>
+    <latitude value="14.5764"/>
+  </position>
+  <managingOrganization>
+    <reference value="Organization/organization-pgh-example"/>
+  </managingOrganization>
+</Location>

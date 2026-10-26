@@ -1,0 +1,39 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "prc-all-codes",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet prc-all-codes</b></p><a name=\"prc-all-codes\"> </a><a name=\"hcprc-all-codes\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-prc.html\"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/prc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.1</span></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/prc-all-codes",
+  "version" : "0.2.1",
+  "name" : "PRCAllCodesVS",
+  "title" : "PRC All Codes ValueSet",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-10-17",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "The complete set of all concepts defined by PRCCodeSystem version 0.1.0, including its root and structural grouping concepts. This immutable technical ValueSet is the CodeSystem's full-content ValueSet; use the category-specific PRC ValueSets for code selection.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "immutable" : true,
+  "purpose" : "Identify the complete contents of PRCCodeSystem version 0.1.0 for CodeSystem.valueSet metadata and terminology server compatibility.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.doh.gov.ph/phcore/CodeSystem/prc"
+    }]
+  }
+}

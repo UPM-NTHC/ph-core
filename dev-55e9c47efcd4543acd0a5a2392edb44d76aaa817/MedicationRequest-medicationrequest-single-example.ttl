@@ -1,0 +1,107 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationRequest/medicationrequest-single-example> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "medicationrequest-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr. Maria Clara Santos prescribed Twinact 40mg/5mg tablet (Telmisartan + Amlodipine), 1 tablet once daily to treat hypertension for Juan Dela Cruz.</div>"
+  ] ;
+  fhir:MedicationRequest.status [ fhir:value "active"] ;
+  fhir:MedicationRequest.intent [ fhir:value "order"] ;
+  fhir:MedicationRequest.priority [ fhir:value "routine"] ;
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://verification.fda.gov.ph" ] ;
+       fhir:Coding.code [ fhir:value "DRP-10144" ] ;
+       fhir:Coding.display [ fhir:value "Twinact" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Twinact 40mg/5mg tablet" ]
+  ] ;
+  fhir:MedicationRequest.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-single-example" ]
+  ] ;
+  fhir:MedicationRequest.encounter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter-single-example" ]
+  ] ;
+  fhir:MedicationRequest.authoredOn [ fhir:value "2025-03-15T09:00:00+08:00"^^xsd:dateTime] ;
+  fhir:MedicationRequest.requester [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-single-example" ]
+  ] ;
+  fhir:MedicationRequest.reasonCode [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:38341003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "38341003" ] ;
+       fhir:Coding.display [ fhir:value "Hypertensive disorder" ]
+     ]
+  ] ;
+  fhir:MedicationRequest.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Take complete course of antibiotics as prescribed" ]
+  ] ;
+  fhir:MedicationRequest.dosageInstruction [
+     fhir:index 0 ;
+     fhir:Dosage.sequence [ fhir:value "1"^^xsd:integer ] ;
+     fhir:Dosage.text [ fhir:value "Take 1 tablet once daily" ] ;
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.frequency [ fhir:value "1"^^xsd:positiveInteger ] ;
+         fhir:Timing.repeat.period [ fhir:value "1"^^xsd:decimal ] ;
+         fhir:Timing.repeat.periodUnit [ fhir:value "d" ]
+       ]
+     ] ;
+     fhir:Dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration" ] ;
+         fhir:Coding.code [ fhir:value "PO" ] ;
+         fhir:Coding.display [ fhir:value "Swallow, oral" ]
+       ]
+     ] ;
+     fhir:Dosage.doseAndRate [
+       fhir:index 0 ;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ] ;
+         fhir:Quantity.unit [ fhir:value "tablet" ] ;
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+         fhir:Quantity.code [ fhir:value "1" ]
+       ]
+     ]
+  ] ;
+  fhir:MedicationRequest.dispenseRequest [
+     fhir:MedicationRequest.dispenseRequest.numberOfRepeatsAllowed [ fhir:value "0"^^xsd:nonNegativeInteger ] ;
+     fhir:MedicationRequest.dispenseRequest.quantity [
+       fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "Tablet" ] ;
+       fhir:Quantity.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Quantity.code [ fhir:value "732936001" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationRequest/medicationrequest-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

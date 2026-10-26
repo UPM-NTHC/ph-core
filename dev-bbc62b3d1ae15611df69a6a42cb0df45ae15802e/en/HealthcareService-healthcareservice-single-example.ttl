@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/HealthcareService/healthcareservice-single-example> a fhir:HealthcareService ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "healthcareservice-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Philippine General Hospital Outpatient Department - General Medicine is an active healthcare service providing outpatient consultations. It is managed by the Department of Health - Satellite Office and located at Philippine General Hospital, Taft Avenue, Manila.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "http://pgh.gov.ph/fhir/Identifier/service-id"^^xsd:anyURI ;
+       fhir:l <http://pgh.gov.ph/fhir/Identifier/service-id>
+     ] ;
+     fhir:value [ fhir:v "PGH-OPD-GMED-001" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:providedBy [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:reference [ fhir:v "Organization/organization-single-example" ]
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/service-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/service-category>
+       ] ;
+       fhir:code [ fhir:v "27" ] ;
+       fhir:display [ fhir:v "Specialist Medical" ]
+     ] ) ;
+     fhir:text [ fhir:v "Specialist Medical" ]
+  ] ) ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/service-type"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/service-type>
+       ] ;
+       fhir:code [ fhir:v "124" ] ;
+       fhir:display [ fhir:v "General Practice" ]
+     ] ) ;
+     fhir:text [ fhir:v "General Practice" ]
+  ] ) ; # 
+  fhir:specialty ( [
+     fhir:coding ( [
+       a sct:394802001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "394802001" ] ;
+       fhir:display [ fhir:v "General medicine" ]
+     ] ) ;
+     fhir:text [ fhir:v "General medicine" ]
+  ] ) ; # 
+  fhir:location ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Location/location-single-example> ;
+     fhir:reference [ fhir:v "Location/location-single-example" ]
+  ] ) ; # 
+  fhir:name [ fhir:v "Outpatient Department - General Medicine"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "+63-2-5548-0000" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "opd.gmed@pgh.gov.ph" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] ) ; # 
+  fhir:availableTime ( [
+     fhir:daysOfWeek ( [ fhir:v "mon" ] [ fhir:v "tue" ] [ fhir:v "wed" ] [ fhir:v "thu" ] [ fhir:v "fri" ] ) ;
+     fhir:availableStartTime [ fhir:v "08:00:00"^^xsd:time ] ;
+     fhir:availableEndTime [ fhir:v "17:00:00"^^xsd:time ]
+  ] ) ; # 
+  fhir:notAvailable ( [
+     fhir:description [ fhir:v "Closed on public holidays" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

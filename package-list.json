@@ -1,0 +1,350 @@
+{
+  "package-id": "ph.core.fhir",
+  "title": "PH Core FHIR Implementation Guide",
+  "canonical": "https://up-manila-silab.github.io/ph-core",
+  "introduction": "Philippine Core FHIR Implementation Guide",
+  "list": [
+    {
+      "version": "dev-06bc4bf371163e843f02882b5041b63e5051b34f",
+      "date": "2026-10-26",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-06bc4bf371163e843f02882b5041b63e5051b34f",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": true
+    },
+    {
+      "version": "dev-4b8f1bd1efb88062c82854bf5209140af3054d93",
+      "date": "2026-10-26",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-4b8f1bd1efb88062c82854bf5209140af3054d93",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-ed8e3c1d7c6af0e26713371e2dfbe6a1fe77bed0",
+      "date": "2026-10-23",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-ed8e3c1d7c6af0e26713371e2dfbe6a1fe77bed0",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-12dbf3486bdc4243adfd89a6a4d082a3b3774230",
+      "date": "2026-10-21",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-12dbf3486bdc4243adfd89a6a4d082a3b3774230",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-3299879c369b49a306064e725de0b5f556512cd2",
+      "date": "2026-09-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-3299879c369b49a306064e725de0b5f556512cd2",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-2b9188bcfb6e215cecc247d225586884708f0554",
+      "date": "2026-09-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-2b9188bcfb6e215cecc247d225586884708f0554",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-55e9c47efcd4543acd0a5a2392edb44d76aaa817",
+      "date": "2026-09-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-55e9c47efcd4543acd0a5a2392edb44d76aaa817",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-29b2c62766a21ce2b63a26c0a4902b4aadacd0db",
+      "date": "2026-09-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-29b2c62766a21ce2b63a26c0a4902b4aadacd0db",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-0b0a2f9235baa1710d0eadf6177a6a1160825ee0",
+      "date": "2026-09-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-0b0a2f9235baa1710d0eadf6177a6a1160825ee0",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-0f853263467110d5b58054ab5af0446c910e22fe",
+      "date": "2026-06-22",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-0f853263467110d5b58054ab5af0446c910e22fe",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-1b482dbed07af84dd6e2e4e1ccf137f8e165072f",
+      "date": "2026-06-20",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-1b482dbed07af84dd6e2e4e1ccf137f8e165072f",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-2ca1cde68f34aa39e3b5b4094a51aa1dc3b1edd6",
+      "date": "2026-06-20",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-2ca1cde68f34aa39e3b5b4094a51aa1dc3b1edd6",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-252e264e05de033ecc03aad9453ef2762e1623fb",
+      "date": "2026-06-20",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-252e264e05de033ecc03aad9453ef2762e1623fb",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-c730e3ba557f54cf6dee8961d0d6ec0239c22c80",
+      "date": "2026-06-20",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-c730e3ba557f54cf6dee8961d0d6ec0239c22c80",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-1483f91bc9d5d729262d17c2bcdd6defdcd0761d",
+      "date": "2026-06-20",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-1483f91bc9d5d729262d17c2bcdd6defdcd0761d",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-44c81b385616980679df87bbd62f13d432b7a276",
+      "date": "2026-06-17",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-44c81b385616980679df87bbd62f13d432b7a276",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-f52a420ecadee179a3093d7439708aae843c1423",
+      "date": "2026-06-17",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-f52a420ecadee179a3093d7439708aae843c1423",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-bbc62b3d1ae15611df69a6a42cb0df45ae15802e",
+      "date": "2026-06-17",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-bbc62b3d1ae15611df69a6a42cb0df45ae15802e",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-61d22fb2a32d67718f9958a83b5cf003ca9fec85",
+      "date": "2026-06-16",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-61d22fb2a32d67718f9958a83b5cf003ca9fec85",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-e4e0dfa4744f55ef12e145df276217e0ee9f02aa",
+      "date": "2026-06-16",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-e4e0dfa4744f55ef12e145df276217e0ee9f02aa",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-82ff3b8dc21b06bcb68bd628c98e96c259a7360c",
+      "date": "2026-06-15",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-82ff3b8dc21b06bcb68bd628c98e96c259a7360c",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-5d3eab8952d9f4204ea0c26df2e0f5789461a2b9",
+      "date": "2026-06-12",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-5d3eab8952d9f4204ea0c26df2e0f5789461a2b9",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-3db78bb1ace8fadca22c4c1bd43cb0d7f5388126",
+      "date": "2026-06-12",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-3db78bb1ace8fadca22c4c1bd43cb0d7f5388126",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-10cafc398034e47163e7329cc19e9f7499b946b5",
+      "date": "2026-06-10",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-10cafc398034e47163e7329cc19e9f7499b946b5",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-930bab0701bf47901fc3e23ddc874c009558f6b8",
+      "date": "2026-06-10",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-930bab0701bf47901fc3e23ddc874c009558f6b8",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-55fbcc177917729217f597558869a76157b20b26",
+      "date": "2026-06-10",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-55fbcc177917729217f597558869a76157b20b26",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-0cc6121d721b029efd087f3110da10c617e65024",
+      "date": "2026-06-10",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-0cc6121d721b029efd087f3110da10c617e65024",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-a28cb82ba48b62c9190e26d511b741054de4975a",
+      "date": "2026-06-10",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-a28cb82ba48b62c9190e26d511b741054de4975a",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-146d7cafc054c33bfb5393550d7f4ccd5697bd36",
+      "date": "2026-06-10",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-146d7cafc054c33bfb5393550d7f4ccd5697bd36",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-710a609a5208f853f82ee5fe7a9e51981331315d",
+      "date": "2026-06-10",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-710a609a5208f853f82ee5fe7a9e51981331315d",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-2c84173d0e8b712c770241fa75916ad85b2a95d1",
+      "date": "2026-06-10",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-2c84173d0e8b712c770241fa75916ad85b2a95d1",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-50554a73a577dce84c25a69f4891b0b2476a0e86",
+      "date": "2026-06-10",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-50554a73a577dce84c25a69f4891b0b2476a0e86",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-cb127d4092d210d87dbdfa7f24e8c9e80161b2e3",
+      "date": "2026-06-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-cb127d4092d210d87dbdfa7f24e8c9e80161b2e3",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-9a578a54e5b1bee2ca07164f04928e92f8e38457",
+      "date": "2026-06-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-9a578a54e5b1bee2ca07164f04928e92f8e38457",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-647a8bb9fa7661fe64e73fd238e74411bc8c31e0",
+      "date": "2026-06-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-647a8bb9fa7661fe64e73fd238e74411bc8c31e0",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-7ecceae05d25b1f26c56ab2f5b3ff2f45b9c87f3",
+      "date": "2026-06-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-7ecceae05d25b1f26c56ab2f5b3ff2f45b9c87f3",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-f8111adc94c7e0a0d575442caa4ae75db352e3f4",
+      "date": "2026-06-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-f8111adc94c7e0a0d575442caa4ae75db352e3f4",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    },
+    {
+      "version": "dev-929b5eb097dba029949c5c8f0c1b5f9006e5ef29",
+      "date": "2026-06-09",
+      "path": "https://up-manila-silab.github.io/ph-core/dev-929b5eb097dba029949c5c8f0c1b5f9006e5ef29",
+      "status": "draft",
+      "fhirversion": "4.0.1",
+      "sequence": "Draft",
+      "current": false
+    }
+  ]
+}

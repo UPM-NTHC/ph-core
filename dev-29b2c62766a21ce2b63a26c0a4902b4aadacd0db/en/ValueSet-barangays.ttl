@@ -1,0 +1,221 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/barangays> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "barangays"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet barangays</b></p><a name=\"barangays\"> </a><a name=\"hcbarangays\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102801001\">0102801001</a></td><td>Adams</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802001\">0102802001</a></td><td>Bani</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802002\">0102802002</a></td><td>Buyon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802003\">0102802003</a></td><td>Cabaruan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802004\">0102802004</a></td><td>Cabulalaan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802005\">0102802005</a></td><td>Cabusligan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102901001\">0102901001</a></td><td>Alilem Daya </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0200901001\">0200901001</a></td><td>Ihubok II</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0201501001\">0201501001</a></td><td>Alinunu</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0300801001\">0300801001</a></td><td>Bangkal</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301401001\">0301401001</a></td><td>Banaban</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401001001\">0401001001</a></td><td>Adia</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0402101001\">0402101001</a></td><td>Amuyong</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0500501001\">0500501001</a></td><td>Baclayon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0501601001\">0501601001</a></td><td>Angas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600401001\">0600401001</a></td><td>Cabangila</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600601001\">0600601001</a></td><td>Bayo Grande</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0701201001\">0701201001</a></td><td>Bahi</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0702201001\">0702201001</a></td><td>Cabadiangan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0802601001\">0802601001</a></td><td>Aguinaldo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0803701001\">0803701001</a></td><td>Alangilan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0906601001\">0906601001</a></td><td>Adjid</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0907201001\">0907201001</a></td><td>Aliguay</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001301001\">1001301001</a></td><td>Balintad</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001801001\">1001801001</a></td><td>Alga</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102301004\">1102301004</a></td><td>Binancian</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102401001\">1102401001</a></td><td>Alegre</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1204701001\">1204701001</a></td><td>Bao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1206302002\">1206302002</a></td><td>Benitez </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380100001\">1380100001</a></td><td>Barangay 1</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380608000\">1380608000</a></td><td>Ermita</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1400101001\">1400101001</a></td><td>Agtangao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1401101001\">1401101001</a></td><td>Abiang</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600201001\">1600201001</a></td><td>Abilan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600301001\">1600301001</a></td><td>Calaitan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1704001001\">1704001001</a></td><td>Agot</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1705101001\">1705101001</a></td><td>Balao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804502001\">1804502001</a></td><td>Abuanan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804601001\">1804601001</a></td><td>Bio-os</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1900702001\">1900702001</a></td><td>Arco</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1903601001\">1903601001</a></td><td>Ampao</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.doh.gov.ph/phcore/ValueSet/barangays"] ;
+  fhir:ValueSet.version [ fhir:value "0.2.0"] ;
+  fhir:ValueSet.name [ fhir:value "Barangays"] ;
+  fhir:ValueSet.title [ fhir:value "Barangays"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-09T08:09:08+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA)."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102801001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Adams" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102802001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bani" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102802002" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Buyon" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102802003" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cabaruan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102802004" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cabulalaan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102802005" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cabusligan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102901001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alilem Daya " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0200901001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ihubok II" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0201501001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alinunu" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0300801001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bangkal" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0301401001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Banaban" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0401001001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Adia" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0402101001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amuyong" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0500501001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Baclayon" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0501601001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Angas" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0600401001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cabangila" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0600601001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bayo Grande" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0701201001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bahi" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0702201001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cabadiangan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0802601001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aguinaldo" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0803701001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alangilan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0906601001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Adjid" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0907201001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aliguay" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1001301001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Balintad" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1001801001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alga" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1102301004" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Binancian" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1102401001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alegre" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1204701001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bao" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1206302002" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Benitez " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380100001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Barangay 1" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380608000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ermita" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1400101001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Agtangao" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1401101001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abiang" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1600201001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abilan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1600301001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Calaitan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1704001001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Agot" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1705101001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Balao" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1804502001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abuanan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1804601001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bio-os" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1900702001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Arco" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1903601001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ampao" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/barangays.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,58 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-status-cs",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "IndigenousStatusCS",
+    "title" : "Indigenous Groups CodeSystem",
+    "description" : "Provisional locally authored list of indigenous-status labels."
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PHCoreDisabilityTypeCS",
+    "title" : "PH Core Disability Type Code System",
+    "description" : "Provisional locally authored disability-category examples for PWD registration. The codes and definitions require comparison with the controlling Philippine classification."
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/prc",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PRCCodeSystem",
+    "title" : "PRC CodeSystem",
+    "description" : "Consolidated PH Core terminology for PRC CPDAS Council codes, CPDAS numerical profession codes, and PRC licensure examination codes. CPDAS council and profession concepts reflect the FAQ as of 12 January 2021; PRC examination concepts reflect the standardized list posted 18 March 2026. The hierarchy groups related concepts and does not assert an is-a relationship. The 2021 CPDAS table says its numeric profession codes are for CPD attendance sheets and is subject to regular updating. The 2026 Food Technology and Speech-Language Pathology examination boards have abstract local grouping nodes because the 2021 CPDAS table has no council codes for them; those nodes are not CouncilCode values."
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psced/level",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PSCED",
+    "title" : "PSCED",
+    "description" : "The Philippine Standard Classification of Education."
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psgc",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PSGC",
+    "title" : "PSGC",
+    "description" : "The Philippine Standard Geographic Code."
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psoc/unit",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PSOC",
+    "title" : "PSOC",
+    "description" : "The Philippine Standard Occupational Classification."
+  },
+  {
+    "url" : "https://verification.fda.gov.ph",
+    "version" : "0.2.1",
+    "status" : "active",
+    "name" : "PHFDACPRCS",
+    "title" : "PH FDA Certificate of Product Registration (CPR) CodeSystem",
+    "description" : "Registered drug products from the Philippine Food and Drug Administration (FDA)"
+  }]
+}

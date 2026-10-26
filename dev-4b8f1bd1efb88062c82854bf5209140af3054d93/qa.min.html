@@ -1,0 +1,997 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 0, errors = 0, warn = 27, info = 72-->
+<head>
+  <title>PHCoreImplementationGuide : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    button { padding: 0px 8px; font-size: 12px; cursor: pointer; border-radius: 2px; border: 1px solid #ccc; background-color: #f0f0f0 }
+    button:hover { background-color: #e0e0e0; }
+    .code-value { display: inline; }
+    .code-hidden { display: none; }
+    span.toggle  { font-size: 10px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
+    function toggleCodes() {
+      const codes = document.getElementsByClassName('code-value');
+      for (let code of codes) {
+        code.classList.toggle('code-hidden');
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for PHCoreImplementationGuide</h1>
+ <p>Generated Mon Oct 26 05:38:35 UTC 2026, FHIR version 4.0.1 for fhir.ph.core#0.2.1 (canonical = <a href="https://fhir.doh.gov.ph/phcore">https://fhir.doh.gov.ph/phcore</a> (<a href="https://fhir.doh.gov.ph/phcore/history.html">history</a>)). See <a href="qa.html">Full QA Report</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v3.0.1</span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = fhir.ph.core, Canonical = https://fhir.doh.gov.ph/phcore</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Language Info:</td><td>Stated Languages: n/a. IG Resource Lang: en. 1 of 109 (0%) of resources have a language. <a href="https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-resource-language-policy">Population Policy</a>: NONE</td></tr>
+ <tr><td><a href="https://confluence.hl7.org/spaces/FHIR/pages/144970227/IG+Publication+Request+Documentation">Publication Request</a>:</td><td>No publication request found <img src="information.png" height="16px" width="16px"/></td></tr>
+ <tr><td>Supressed Messages:</td><td><a href="#suppressed">12 Suppressed Issues</a>
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="dep" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th scope="col" style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th scope="col" style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><span title="The version of the package">Version</span></th><th scope="col" style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th><th scope="col" style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th scope="col" style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th scope="col" style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="dep-a" data-fhir="generated-heirarchy"><td role="rowheader" style="background-color: white; background-image: url(/home/runner/work/ph-core/ph-core/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC); border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top; white-space: nowrap" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="" style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> fhir.ph.core</td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">0.2.1</td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">https://fhir.doh.gov.ph/phcore</td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"></td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="dep-aa" data-fhir="generated-heirarchy"><td role="rowheader" style="background-color: #F7F7F7; background-image: url(/home/runner/work/ph-core/ph-core/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC); border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top; white-space: nowrap" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="" style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">fhir.ph.core / </span>hl7.terminology.r4</td><td style="background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">7.4.0 <span aria-hidden="true" style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span><span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only"> Latest Milestone Release. </span></td><td style="background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">http://terminology.hl7.org</td><td style="background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">http://terminology.hl7.org/7.4.0</td><td style="background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="dep-ab" data-fhir="generated-heirarchy"><td role="rowheader" style="background-color: white; background-image: url(/home/runner/work/ph-core/ph-core/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC); border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top; white-space: nowrap" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACwSURBVDhP7ZLBDsIwCIaLZz34xG3f2cQYo5UfYalJoY07ePFL4GcbpZSVWmvJgwifG+njkLDACgfVIehAQ5ffdMDvxSS2Dmqty62UUmS1rIWD8UuWd9xxVt1AnoaSGx6Buap+0G80K3BTtbtwhLPZQL0CSIA9OwUXON7dZkBeASTAThb3bffMjnCHGy00ZgUeqi5f3YOcsw01vsqYMrMljwgLrBDOwP53xL+D3R2k9ALHsmr3Yu73+gAAAABJRU5ErkJggg==" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="" style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">fhir.ph.core / </span>hl7.fhir.uv.extensions.r4</td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">5.3.0 <span aria-hidden="true" style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span><span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only"> Latest Milestone Release. </span></td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">http://hl7.org/fhir/extensions</td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">http://hl7.org/fhir/extensions/5.3.0</td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="dep-aba" data-fhir="generated-heirarchy"><td role="rowheader" style="background-color: #F7F7F7; background-image: url(/home/runner/work/ph-core/ph-core/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC); border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top; white-space: nowrap" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="" style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACfSURBVDhP7ZJBD4IwDIVbrvqft/1kEw8egNKHrRKyjiXG4MEvWVtYebwuYxGhCGZsC9tjlaZAD4PlKnBgZcgPOSildFtJKb0PFgJYOWdNz3rDxfKLbR9Wc4RE9LAypCmguAO3fEXws0GOBNAghehm9YyXyh1Bra+CyJEAGlhHwB/X2mfeczTCiFD70GkK6AiTlSEf34PvXuUe/gLnCxAtVClV++yUSjoAAAAASUVORK5CYII=" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="" style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">fhir.ph.core / hl7.fhir.uv.extensions.r4 / </span>hl7.terminology.r4</td><td style="background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">7.1.0 <span aria-hidden="true" style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="Outdated Release">O</span><span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only"> Outdated Release. </span></td><td style="background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">http://terminology.hl7.org</td><td style="background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">http://terminology.hl7.org/7.1.0</td><td style="background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">Latest Release is 7.4.0</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="dep-abaa" data-fhir="generated-heirarchy"><td role="rowheader" style="background-color: white; background-image: url(/home/runner/work/ph-core/ph-core/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC); border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top; white-space: nowrap" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIZgEiYEgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAIElEQVQ4y2P8//8/AyWAiYFCMGrAqAGjBowaMGoAAgAALL0DKYQ0DPIAAAAASUVORK5CYII=" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="" style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">fhir.ph.core / hl7.fhir.uv.extensions.r4 / hl7.terminology.r4 / </span>hl7.fhir.uv.extensions.r4</td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">5.2.0 <span aria-hidden="true" style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="Outdated Release">O</span><span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only"> Outdated Release. </span></td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">http://hl7.org/fhir/extensions</td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">http://hl7.org/fhir/extensions/5.2.0</td><td style="background-color: white; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">Latest Release is 5.3.0</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #fcf7c0" id="dep-ac" data-fhir="generated-heirarchy"><td role="rowheader" style="background-color: #fcf7c0; background-image: url(/home/runner/work/ph-core/ph-core/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==); border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top; white-space: nowrap" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="" style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAEvnpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjarVdbdsQmDP1nFV0CEojHcnie0x10+b14EM5kkmbS1k4sLGQk7pVEYsZff07zBy4mScZLTCGHYHH57DMXDJJ9XPV6kvXXc79YHTzpzZlgqByke7xm3voBPca03/N2QmqvCx1PBSO5J0rZ+vqsr3tBTp8X2hE4eni2fX+wF3K8I/KP97YjCjnFp631tj37rUr3r3eRgwSKHk/PNsaQMU5sfQSefQXq4uUeGG1PqtB3NWXExMORs3g6t6N069e7ApnxJMcGhuQiXtilayJdwFtQiRCwcH4sPIs9YH7E5sbom+udbVk4mWMZf2DtTpDn/Dgj+ka/0+CwlsKecM+02nDkl3oSXUgn3PHDHz2ndjw/6cF2+AiF+Uj3nD3Na9PYRfEBWIS9Kd3KNYJdXSheXwXc0QaDrE0YrDvjTrbYhhTotqHSKsaZGNxP8tSp0KRxyUYNIXoeHCGZm2F3KRNIytzcSga/bpockSMdScGuXTnkHZ9Y6HKbL3eNku3GdoIpExZDWv3727xrOOeqJSKbDlaIi1c1IApLoH8JmIERmhtUuQDW+/O1eHVgUC6YEzZYbDWPJarQnVzuItrBUCAftUex7wUAEVwLgiEHBmwgJxQQUWSORAAygaCC0FGNXMEAiXBHkOydCyAH1QHf+CbSZcrCDzW6qvPGiQso2rSqGGR5L8if6BNyqIgTLyJBoiTJUoILq/JCiGG15xJd9FFiiDEmE3MsySWfJIUUU0o5lczZoX1LRp3mlHMuBU4LVi74usCglMrVVV+lhhprqtnU0pA+zTdpocWWWm6lc3cdBd5Djz313MuggVQafsgII4408igTqTbd9FNmmNHMNPMsh7VN68v9C9Zos8YXU8swHtagjVGXoNVOZHEGxtgTCI9gDYwhsRdnNpH3vJhbnOE8QlUII0hZ5HRajIFBP4hl0uFuM2eA4v/Cm4np4o3/K3NmUfcmc6+8fcVaX6dEuxh7lOEC1TpU34yzcMIPjt/vpflqgi6BlVvdGkC8VVHIyzr8Pkljv5n4rbwXykvgtAK0/aGiPvYklbhn6TtpfjJ4UzoT9t6n7YpHLS8j+6M07xp+LdGpdiBm2qzKcmLqQUnid6X55QfphsJpsvSFkwFQkk4kg38byU8RHb7jw+EaWR2JqOeoARZT92Somj2jaEq58n5c5knRmrpqVXXdqy67A8EpomE3LcaOqX5RzMcyqxJ2b4VlbsXx3OQs7Q8aLdzKoXwpQoOKgj36sXMn2/pJt+l/Sk3zkqs8zk4VMZobfT6EpMMlPejC1px+2e7EP1jWE6j8c0zmi/pJCgxXbSPtTo6ssYRwZtF4zO48RQ2bNig66Ha+Qft1Zg+vy5STsvZG6HRBq7Mmxnpa49Rg6vlY9ON4XIwvE8v8Q6YVeYklO/UqGpSQgs25P/dxqodbPrXrtanevULCB8/mnZq8TyV7CNAmzLsg1v8i45SVfhl0K0m34g9q46AW3sXodEX1VHRZOXXp1cicDhaSQpTn5wbGdyf7rheY3/bUl6Nys4Bak/FSEScb+4kp/Lb6f5Lsjtv+8bBfp4jXxJP5uW/8dFLHiT+IsvkbxL7pfRLafrkAAAEiaUNDUElDQyBwcm9maWxlAAB4nJ2Qv0rDUBTGf6niP+qkOKhDBteCg2ZyqQqhoBBjBatTmqRYTGJIUopv4Jvow3QQBJ/BWcHZ70YHB7N44eP8OJzzffdeaNlJmJbzu5BmVeH63cHl4MpefGOZtrTFXhCWedfzTmg8n69Ypr50jFfz3J9nIYrLUHUmZWFeVGAdiJ1plRuWWL/t+0fiB7EdpVkkfhLvRGlk2Oz6aTIJfzzNbdpxdnFu+tI2Lj1O8bAZMmFMQkVHNVPnGId9VZeCgHtKQtWEWL2pZipuRKWcXA5FfZFu05C3Wed5ShnKYywvk3BHKk+Th/nf77WPs3rT2pjlQRHUrTmpNRrB+yOsDmDtGVauG7KWfr+tYcapZ/75xi8Ik1B1a4BIzwAADRxpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6ZjNlMmQ5MzgtMDE4Yi00YmEyLThiMzQtNDBiM2Q4MmJjZDMzIgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjQ0ZTMwYzM5LTllYWItNGJjZS1hMjU0LTUxOGY3ODRjODg0NiIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmUxNzgzM2U1LWQ1ZWMtNDM3NC1hYzJlLTk0YzVlN2I5OGUzNyIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09Ik1hYyBPUyIKICAgR0lNUDpUaW1lU3RhbXA9IjE3MjYxMzMyOTE1MjEwMDciCiAgIEdJTVA6VmVyc2lvbj0iMi4xMC4zMCIKICAgdGlmZjpPcmllbnRhdGlvbj0iMSIKICAgeG1wOkNyZWF0b3JUb29sPSJHSU1QIDIuMTAiPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmN2Q4YzdkZC1mMGNlLTQxNWYtOWQ1ZS04NGE2YThmNGZkMDUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTWFjIE9TKSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyNC0wOS0xMlQxNzoyODoxMSswODowMCIvPgogICAgPC9yZGY6U2VxPgogICA8L3htcE1NOkhpc3Rvcnk+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgCjw/eHBhY2tldCBlbmQ9InciPz7Mhr9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH6AkMCRwLD3FR3AAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAC8SURBVBjTY/gPAf9e/YUwmBig4Nh7CA0T+H/7JqrAhzf3UQR+TeB4DGEx/mdgYPhy/vg32W/iIUxQFW+Xvf7h9tb03AOolv8rHU84/Wf69fsRVOAt80F1+Tcal/k/QAVuqfx0e/tRmVmBBSrAyyPG8zTglpmEEFRAgUfkj8Z9BUVO2ddQFeIC/wQYFBj4PnMwMDCwMDAwCDB95RJj+8DDygsVYBFiY2Bj4f4nCncpA8OfH/9/8zMzMDAwAAB49kdRfpOTuAAAAABJRU5ErkJggg==" alt="" style="background-color: #fcf7c0; background-color: inherit" title="NPM Package IG Dependency" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">fhir.ph.core / </span>hl7.fhir.uv.tools.r4</td><td style="background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">1.3.0 <span aria-hidden="true" style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span><span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only"> Latest Milestone Release. </span></td><td style="background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">http://hl7.org/fhir/tools</td><td style="background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">http://hl7.org/fhir/tools/1.3.0</td><td style="background-color: #fcf7c0; border: 0px #F0F0F0 solid; padding: 0px 4px 0px 4px; text-align : var(--ig-left,left); vertical-align: top" class="hierarchy">Internal Dependency</td></tr>
+</table><para>Templates: fhir2.base.template#current</para></div></td></tr>
+ <tr><td>Related IGs:</td><td>n/a</td></tr>
+ <tr><td>Dependent IGs:</td><td><a href="qa-dep.html">no references</a></td></tr>
+ <tr><td>Global Profiles:</td><td>(none declared)</td></tr>
+ <tr><td>Terminology Server(s):</td><td><a href="https://tx.fhir.org/r4">https://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>R5 Dependencies:</td><td><ul><li><a href="http://build.fhir.org/namingsystem.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.url</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.publisher</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.version</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.description</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.name</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.contact</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.title</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.date</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.type</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.useContext</a></li><li><a href="http://build.fhir.org/namingsystem.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.documentation</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.capabilities</a></li><li><a href="http://build.fhir.org/actordefinition.html">http://hl7.org/fhir/5.0/StructureDefinition/extension-ActorDefinition.status</a></li></ul></td></tr>
+ <tr><td>Draft Dependencies:</td><td><ul>
+  <li>
+hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-parameter-code.html">GuideParameterCode</a>
+ (16 uses),     <code>_id</code>
+ (22 uses),     <code>_lastUpdated</code>
+ (22 uses),     <code>_profile</code>
+ (22 uses),     <code>_tag</code>
+ (22 uses),     <code>_security</code>
+ (22 uses),     <code>_source</code>
+ (22 uses),     <code>patient</code>
+ (11 uses),     <code>identifier</code>
+ (11 uses),     <code>clinical-status</code>
+ (1 uses),     <code>verification-status</code>
+ (1 uses),     <code>code</code>
+ (7 uses),     <code>date</code>
+ (5 uses),     <code>category</code>
+ (1 uses),     <code>Validate a resource</code>
+ (22 uses),     <code>patient</code>
+ (1 uses),     <code>identifier</code>
+ (1 uses),     <code>status</code>
+ (1 uses),     <code>created</code>
+ (1 uses),     <code>use</code>
+ (1 uses),     <code>provider</code>
+ (1 uses),     <code>insurer</code>
+ (1 uses),     <code>encounter</code>
+ (1 uses),     <code>clinical-status</code>
+ (1 uses),     <code>verification-status</code>
+ (1 uses),     <code>onset-date</code>
+ (1 uses),     <code>recorded-date</code>
+ (1 uses),     <code>encounter</code>
+ (1 uses),     <code>category</code>
+ (1 uses),     <code>status</code>
+ (1 uses),     <code>class</code>
+ (1 uses),     <code>service-provider</code>
+ (1 uses),     <code>location</code>
+ (1 uses),     <code>diagnosis</code>
+ (1 uses),     <code>identifier</code>
+ (1 uses),     <code>name</code>
+ (1 uses),     <code>active</code>
+ (1 uses),     <code>organization</code>
+ (1 uses),     <code>location</code>
+ (1 uses),     <code>service-type</code>
+ (1 uses),     <code>specialty</code>
+ (1 uses),     <code>status</code>
+ (1 uses),     <code>vaccine-code</code>
+ (1 uses),     <code>lot-number</code>
+ (1 uses),     <code>identifier</code>
+ (1 uses),     <code>name</code>
+ (1 uses),     <code>status</code>
+ (1 uses),     <code>type</code>
+ (1 uses),     <code>organization</code>
+ (1 uses),     <code>partof</code>
+ (1 uses),     <code>address</code>
+ (1 uses),     <code>identifier</code>
+ (1 uses),     <code>status</code>
+ (1 uses),     <code>form</code>
+ (1 uses),     <code>manufacturer</code>
+ (1 uses),     <code>status</code>
+ (4 uses),     <code>effective-time</code>
+ (1 uses),     <code>context</code>
+ (1 uses),     <code>medication</code>
+ (4 uses),     <code>whenhandedover</code>
+ (1 uses),     <code>whenprepared</code>
+ (1 uses),     <code>type</code>
+ (1 uses),     <code>prescription</code>
+ (1 uses),     <code>intent</code>
+ (1 uses),     <code>authoredon</code>
+ (1 uses),     <code>encounter</code>
+ (1 uses),     <code>effective</code>
+ (1 uses),     <code>category</code>
+ (1 uses),     <code>status</code>
+ (1 uses),     <code>category</code>
+ (1 uses),     <code>encounter</code>
+ (3 uses),     <code>identifier</code>
+ (1 uses),     <code>name</code>
+ (1 uses),     <code>active</code>
+ (1 uses),     <code>type</code>
+ (1 uses),     <code>address</code>
+ (1 uses),     <code>partof</code>
+ (1 uses),     <code>identifier</code>
+ (1 uses),     <code>name</code>
+ (1 uses),     <code>family</code>
+ (2 uses),     <code>given</code>
+ (2 uses),     <code>birthdate</code>
+ (1 uses),     <code>gender</code>
+ (1 uses),     <code>active</code>
+ (1 uses),     <code>name</code>
+ (1 uses),     <code>active</code>
+ (1 uses),     <code>communication</code>
+ (1 uses),     <code>practitioner</code>
+ (1 uses),     <code>organization</code>
+ (1 uses),     <code>identifier</code>
+ (1 uses),     <code>active</code>
+ (1 uses),     <code>role</code>
+ (1 uses),     <code>specialty</code>
+ (1 uses),     <code>location</code>
+ (1 uses),     <code>service</code>
+ (1 uses),     <code>status</code>
+ (1 uses),     <code>performer</code>
+ (1 uses),     <code>target</code>
+ (1 uses),     <code>recorded</code>
+ (1 uses),     <code>when</code>
+ (1 uses),     <code>agent</code>
+ (1 uses),     <code>agent-type</code>
+ (1 uses),     <code>agent-role</code>
+ (1 uses),     <code>patient</code>
+ (1 uses),     <code>identifier</code>
+ (1 uses),     <code>name</code>
+ (1 uses),     <code>relationship</code>
+ (1 uses),     <code>active</code>
+ (1 uses),     <code>status</code>
+ (1 uses),     <code>intent</code>
+ (1 uses),     <code>authored</code>
+ (1 uses),     <code>occurrence</code>
+ (1 uses),     <code>requester</code>
+ (1 uses),     <code>performer</code>
+ (1 uses),     <code>patient</code>
+ (1 uses),     <code>identifier</code>
+ (1 uses),     <code>status</code>
+ (1 uses),     <code>business-status</code>
+ (1 uses),     <code>code</code>
+ (1 uses),     <code>authored-on</code>
+ (1 uses),     <code>modified</code>
+ (1 uses),     <code>owner</code>
+ (1 uses),     <code>requester</code>
+ (1 uses),     <code>focus</code>
+ (1 uses),     <code>encounter</code>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/codesystem-concept-properties.html">FHIR Defined Concept Properties</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/allergyintolerance.html">AllergyIntolerance</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a>
+ (27 uses),     <a href="http://hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html">AllergyIntoleranceClinicalStatusCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html">AllergyIntoleranceVerificationStatusCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-allergy-intolerance-type.html">AllergyIntoleranceType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html">AllergyIntoleranceCategory</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-allergy-intolerance-criticality.html">AllergyIntoleranceCriticality</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-allergyintolerance-code.html">AllergyIntoleranceSubstance/Product,ConditionAndNegationCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/valueset-substance-code.html">SubstanceCode</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-clinical-findings.html">SNOMEDCTClinicalFindings</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-reaction-event-severity.html">AllergyIntoleranceSeverity</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/claim.html">Claim</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-fm-status.html">FinancialResourceStatusCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-claim-type.html">ClaimTypeCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-claim-subtype.html">ExampleClaimSubTypeCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-claim-use.html">Use</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-process-priority.html">ProcessPriorityCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-fundsreserve.html">Funds Reservation Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-related-claim-relationship.html">ExampleRelatedClaimRelationshipCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/devicerequest.html">DeviceRequest</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4/visionprescription.html">VisionPrescription</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-payeetype.html">Claim Payee Type Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a>
+ (11 uses),     <a href="http://hl7.org/fhir/R4/location.html">Location</a>
+ (9 uses),     <a href="http://hl7.org/fhir/R4/valueset-claim-careteamrole.html">ClaimCareTeamRoleCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-provider-qualification.html">ExampleProviderQualificationCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-claim-informationcategory.html">ClaimInformationCategoryCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-claim-exception.html">ExceptionCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-missing-tooth-reason.html">MissingToothReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/condition.html">Condition</a>
+ (18 uses),     <a href="http://hl7.org/fhir/R4/valueset-icd-10.html">ICD-10Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-ex-diagnosistype.html">ExampleDiagnosisTypeCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-ex-diagnosis-on-admission.html">ExampleDiagnosisOnAdmissionCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-ex-diagnosisrelatedgroup.html">ExampleDiagnosisRelatedGroupCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-ex-procedure-type.html">ExampleProcedureTypeCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-icd-10-procedures.html">ICD-10ProcedureCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/device.html">Device</a>
+ (38 uses),     <a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/claimresponse.html">ClaimResponse</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-ex-revenue-center.html">ExampleRevenueCenterCodes</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-ex-benefitcategory.html">BenefitCategoryCodes</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-uscls.html">USCLSCodes</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-claim-modifiers.html">ModifierTypeCodes</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-ex-program-code.html">ExampleProgramReasonCodes</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-place.html">ExampleServicePlaceCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-tooth.html">OralSiteCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-surface.html">SurfaceCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-clinical.html">ConditionClinicalStatusCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-ver-status.html">ConditionVerificationStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-category.html">ConditionCategoryCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-severity.html">Condition/DiagnosisSeverity</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-code.html">Condition/Problem/DiagnosisCodes</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-body-site.html">SNOMEDCTBodyStructures</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-stage.html">ConditionStage</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/clinicalimpression.html">ClinicalImpression</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a>
+ (10 uses),     <a href="http://hl7.org/fhir/R4/valueset-condition-stage-type.html">ConditionStageType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html">ManifestationAndSymptomCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-status.html">EncounterStatus</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-type.html">EncounterType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-type.html">ServiceType</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/group.html">Group</a>
+ (17 uses),     <a href="http://hl7.org/fhir/R4/episodeofcare.html">EpisodeOfCare</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-participant-type.html">ParticipantType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-reason.html">EncounterReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/immunizationrecommendation.html">ImmunizationRecommendation</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4/valueset-diagnosis-role.html">DiagnosisRole</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/account.html">Account</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-admit-source.html">AdmitSource</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-diet.html">Diet</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-special-courtesy.html">SpecialCourtesy</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-special-arrangements.html">SpecialArrangements</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/organization.html">Organization</a>
+ (21 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-discharge-disposition.html">DischargeDisposition</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-location-status.html">EncounterLocationStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-location-physical-type.html">LocationType</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/healthcareservice.html">HealthcareService</a>
+ (5 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-category.html">ServiceCategory</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-provision-conditions.html">ServiceProvisionConditions</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-program.html">Program</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-referral-method.html">ReferralMethod</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/endpoint.html">Endpoint</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/immunization.html">Immunization</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-status.html">ImmunizationStatusCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-status-reason.html">ImmunizationStatusReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-origin.html">ImmunizationOriginCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-site.html">CodesForImmunizationSiteOfAdministration</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-route.html">ImmunizationRouteCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-function.html">ImmunizationFunctionCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-reason.html">ImmunizationReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-subpotent-reason.html">ImmunizationSubpotentReason</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-program-eligibility.html">ImmunizationProgramEligibility</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-funding-source.html">ImmunizationFundingSource</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-immunization-target-disease.html">ImmunizationTargetDiseaseCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-location-status.html">LocationStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-location-mode.html">LocationMode</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/medication.html">Medication</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-codes.html">SNOMEDCTMedicationCodes</a>
+ (14 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-status.html">Medication Status Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-form-codes.html">SNOMEDCTFormCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/substance.html">Substance</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/medicationadministration.html">MedicationAdministration</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-admin-status.html">MedicationAdministration Status Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html">SNOMEDCTReasonMedicationNotGivenCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-admin-category.html">MedicationAdministration Category Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-med-admin-perform-function.html">MedicationAdministration Performer Function Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html">ReasonMedicationGivenCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-approach-site-codes.html">SNOMEDCTAnatomicalStructureForAdministrationSiteCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-administration-method-codes.html">SNOMEDCTAdministrationMethodCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/provenance.html">Provenance</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4/medicationdispense.html">MedicationDispense</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-medicationdispense-status.html">MedicationDispense Status Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/detectedissue.html">DetectedIssue</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-medicationdispense-status-reason.html">MedicationDispense Status Reason Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medicationdispense-category.html">MedicationDispense Category Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medicationdispense-performer-function.html">MedicationDispense Performer Function Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medicationrequest-status.html">medicationrequest Status</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medicationrequest-status-reason.html">medicationRequest Status Reason Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medicationrequest-intent.html">medicationRequest Intent</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medicationrequest-category.html">medicationRequest Category Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-request-priority.html">RequestPriority</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/careteam.html">CareTeam</a>
+ (8 uses),     <a href="http://hl7.org/fhir/R4/valueset-performer-role.html">ProcedurePerformerRoleCodes</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/careplan.html">CarePlan</a>
+ (9 uses),     <a href="http://hl7.org/fhir/R4/valueset-medicationrequest-course-of-therapy.html">medicationRequest Course of Therapy Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/medicationstatement.html">MedicationStatement</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-statement-status.html">Medication Status Codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-reason-medication-status-codes.html">SNOMEDCTDrugTherapyStatusCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-statement-category.html">Medication usage category codes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/nutritionorder.html">NutritionOrder</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/imagingstudy.html">ImagingStudy</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/valueset-observation-category.html">ObservationCategoryCodes</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-observation-codes.html">LOINCCodes</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-observation-methods.html">ObservationMethods</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/devicemetric.html">DeviceMetric</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-referencerange-meaning.html">ObservationReferenceRangeMeaningCodes</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html">ObservationReferenceRangeAppliesToCodes</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/molecularsequence.html">MolecularSequence</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4/media.html">Media</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-organization-type.html">OrganizationType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-contactentity-type.html">ContactEntityType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-practitioner-role.html">PractitionerRole</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/plandefinition.html">PlanDefinition</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/activitydefinition.html">ActivityDefinition</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/measure.html">Measure</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-event-status.html">EventStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-procedure-category.html">ProcedureCategoryCodes(SNOMEDCT)</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-procedure-code.html">ProcedureCodes(SNOMEDCT)</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-procedure-reason.html">ProcedureReasonCodes</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-procedure-outcome.html">ProcedureOutcomeCodes(SNOMEDCT)</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/composition.html">Composition</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-procedure-followup.html">ProcedureFollowUpCodes(SNOMEDCT)</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-device-action.html">ProcedureDeviceActionCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-device-kind.html">FHIRDeviceTypes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-provenance-activity-type.html">ProvenanceActivityType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-provenance-agent-type.html">ProvenanceParticipantType</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-security-role-type.html">SecurityRoleType</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/valueset-provenance-entity-role.html">ProvenanceEntityRole</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-relatedperson-relationshiptype.html">PatientRelationshipType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-request-status.html">RequestStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-request-intent.html">RequestIntent</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-servicerequest-category.html">ServiceRequestCategoryCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html">ServiceRequestOrderDetailsCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html">SNOMEDCTMedicationAsNeededReasonCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-participant-role.html">ParticipantRoles</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/task.html">Task</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-task-status.html">TaskStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-task-intent.html">TaskIntent</a>
+ (1 uses)
+  </li>
+  <li>
+hl7.fhir.uv.extensions.r4#5.3.0:     <a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-elementdefinition-suppress.html">Suppress</a>
+ (8 uses)
+  </li>
+</ul>
+</td></tr>
+ <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> <a href="comparison-v0.2.0/index.html">Comparison with version 0.2.0</a></td></tr>
+ <tr><td>IPA Comparison:</td><td> n/a</td></tr>
+ <tr><td>IPS Comparison:</td><td> n/a</td></tr>
+ <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
+ <tr><td>Summary:</td><td> errors = 0, warn = 27, info = 72, broken links = 0, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-PHFDACPRCS"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PHFDACPRCS</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>15</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-PSCED"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSCED</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-PSGC"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSGC</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-PSOC"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSOC</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-indigenous-status-cs"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-indigenous-status-cs</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-ph-core-disability-type-cs"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-ph-core-disability-type-cs</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-prc"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-prc</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_StructureDefinition-barangay"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-barangay</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_StructureDefinition-batch-number"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-batch-number</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_StructureDefinition-ph-core-pwd-disability"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-pwd-disability</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_StructureDefinition-province"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-province</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-barangays"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-barangays</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-cities"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-cities</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-drugs-vs"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-drugs-vs</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-educational-attainments"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-educational-attainments</b></a></td><td><b>0</b></td><td><b>3</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-indigenous-status-vs"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-indigenous-status-vs</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-occupational-classifications"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-occupational-classifications</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-ph-core-disability-type-vs"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-ph-core-disability-type-vs</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-prc-all-codes"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-prc-all-codes</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-prc-council-codes"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-prc-council-codes</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-prc-licensure-examinations"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-prc-licensure-examinations</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-prc-profession-codes"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-prc-profession-codes</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-provinces"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-provinces</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-regions"><b>/home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-regions</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
+ <table class="grid">
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-PHFDACPRCS"> </a>
+<h2><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[0] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('productInfo') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[1] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('genericName') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[2] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('dosageStrength') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[3] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('dosageForm') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[4] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('classification') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[5] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('packaging') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[6] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('pharmacologicCategory') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[7] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('manufacturer') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[8] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('countryOfOrigin') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[9] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('trader') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[10] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('importer') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[11] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('distributor') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[12] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('applicationType') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[13] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('issuanceDate') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem.property[14] (l1/c7392)</b></td><td><b>information</b></td><td><b>This property has only a code ('expiryDate') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_PROPERTY_UNKNOWN_CODE</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource CodeSystem/PHFDACPRCS should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-PSCED"> </a>
+<h2><a href="CodeSystem-PSCED.html">fsh-generated/resources/CodeSystem-PSCED.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource CodeSystem/PSCED should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-PSGC"> </a>
+<h2><a href="CodeSystem-PSGC.html">fsh-generated/resources/CodeSystem-PSGC.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource CodeSystem/PSGC should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-PSOC"> </a>
+<h2><a href="CodeSystem-PSOC.html">fsh-generated/resources/CodeSystem-PSOC.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource CodeSystem/PSOC should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-indigenous-status-cs"> </a>
+<h2><a href="CodeSystem-indigenous-status-cs.html">fsh-generated/resources/CodeSystem-indigenous-status-cs.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource CodeSystem/indigenous-status-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-ph-core-disability-type-cs"> </a>
+<h2><a href="CodeSystem-ph-core-disability-type-cs.html">fsh-generated/resources/CodeSystem-ph-core-disability-type-cs.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource CodeSystem/ph-core-disability-type-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_CodeSystem-prc"> </a>
+<h2><a href="CodeSystem-prc.html">fsh-generated/resources/CodeSystem-prc.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource CodeSystem/prc should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_StructureDefinition-barangay"> </a>
+<h2><a href="StructureDefinition-barangay.html">fsh-generated/resources/StructureDefinition-barangay.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Resource</b></td><td><b>information</b></td><td><b>The resource StructureDefinition/barangay could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'https:&#8203;/&#8203;/fhir&#8203;.doh&#8203;.gov&#8203;.ph&#8203;/phcore&#8203;/StructureDefinition&#8203;/barangay')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_StructureDefinition-batch-number"> </a>
+<h2><a href="StructureDefinition-batch-number.html">fsh-generated/resources/StructureDefinition-batch-number.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Resource</b></td><td><b>information</b></td><td><b>The resource StructureDefinition/batch-number could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'https:&#8203;/&#8203;/fhir&#8203;.doh&#8203;.gov&#8203;.ph&#8203;/phcore&#8203;/StructureDefinition&#8203;/batch-number')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_StructureDefinition-ph-core-pwd-disability"> </a>
+<h2><a href="StructureDefinition-ph-core-pwd-disability.html">fsh-generated/resources/StructureDefinition-ph-core-pwd-disability.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Resource</b></td><td><b>information</b></td><td><b>The resource StructureDefinition/ph-core-pwd-disability could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'https:&#8203;/&#8203;/fhir&#8203;.doh&#8203;.gov&#8203;.ph&#8203;/phcore&#8203;/StructureDefinition&#8203;/ph-core-pwd-disability')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_StructureDefinition-province"> </a>
+<h2><a href="StructureDefinition-province.html">fsh-generated/resources/StructureDefinition-province.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>Resource</b></td><td><b>information</b></td><td><b>The resource StructureDefinition/province could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'https:&#8203;/&#8203;/fhir&#8203;.doh&#8203;.gov&#8203;.ph&#8203;/phcore&#8203;/StructureDefinition&#8203;/province')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-barangays"> </a>
+<h2><a href="ValueSet-barangays.html">fsh-generated/resources/ValueSet-barangays.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.compose.include[0] (l1/c6855)</b></td><td><b>information</b></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INCLUDE_CS_CONTENT</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/barangays should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-cities"> </a>
+<h2><a href="ValueSet-cities.html">fsh-generated/resources/ValueSet-cities.json</a> <span id="svi13" class="toggle" onclick="toggle('vi13')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi13')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi13"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.compose.include[0] (l1/c15053)</b></td><td><b>information</b></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INCLUDE_CS_CONTENT</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/cities should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-drugs-vs"> </a>
+<h2><a href="ValueSet-drugs-vs.html">fsh-generated/resources/ValueSet-drugs-vs.json</a> <span id="svi14" class="toggle" onclick="toggle('vi14')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi14')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi14"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.compose.include[0] (l1/c1027)</b></td><td><b>information</b></td><td><b>The value set references CodeSystem 'https://verification.fda.gov.ph' which has status 'fragment'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INCLUDE_CS_CONTENT</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/drugs-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-educational-attainments"> </a>
+<h2><a href="ValueSet-educational-attainments.html">fsh-generated/resources/ValueSet-educational-attainments.json</a> <span id="svi15" class="toggle" onclick="toggle('vi15')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi15')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi15"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.compose.include[0] (l1/c2829)</b></td><td><b>information</b></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psced/level' which has status 'fragment'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INCLUDE_CS_CONTENT</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.expansion (l1/c3432)</b></td><td><b>warning</b></td><td><b>This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.expansion (l1/c3432)</b></td><td><b>warning</b></td><td><b>Because the expansion uses system 'https://psa.gov.ph/classification/psced/level' without a version, it should list the system using the expansion parameter 'used-codesystem'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/educational-attainments should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-indigenous-status-vs"> </a>
+<h2><a href="ValueSet-indigenous-status-vs.html">fsh-generated/resources/ValueSet-indigenous-status-vs.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/indigenous-status-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-occupational-classifications"> </a>
+<h2><a href="ValueSet-occupational-classifications.html">fsh-generated/resources/ValueSet-occupational-classifications.json</a> <span id="svi17" class="toggle" onclick="toggle('vi17')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi17')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi17"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.compose.include[0] (l1/c2992)</b></td><td><b>information</b></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psoc/unit' which has status 'fragment'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INCLUDE_CS_CONTENT</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.expansion (l1/c3691)</b></td><td><b>warning</b></td><td><b>Because the expansion uses system 'https://psa.gov.ph/classification/psoc/unit' without a version, it should list the system using the expansion parameter 'used-codesystem'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/occupational-classifications should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-ph-core-disability-type-vs"> </a>
+<h2><a href="ValueSet-ph-core-disability-type-vs.html">fsh-generated/resources/ValueSet-ph-core-disability-type-vs.json</a> <span id="svi18" class="toggle" onclick="toggle('vi18')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi18')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi18"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/ph-core-disability-type-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-prc-all-codes"> </a>
+<h2><a href="ValueSet-prc-all-codes.html">fsh-generated/resources/ValueSet-prc-all-codes.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi19"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/prc-all-codes should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-prc-council-codes"> </a>
+<h2><a href="ValueSet-prc-council-codes.html">fsh-generated/resources/ValueSet-prc-council-codes.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi20"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/prc-council-codes should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-prc-licensure-examinations"> </a>
+<h2><a href="ValueSet-prc-licensure-examinations.html">fsh-generated/resources/ValueSet-prc-licensure-examinations.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/prc-licensure-examinations should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-prc-profession-codes"> </a>
+<h2><a href="ValueSet-prc-profession-codes.html">fsh-generated/resources/ValueSet-prc-profession-codes.json</a> <span id="svi22" class="toggle" onclick="toggle('vi22')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi22')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi22"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/prc-profession-codes should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-provinces"> </a>
+<h2><a href="ValueSet-provinces.html">fsh-generated/resources/ValueSet-provinces.json</a> <span id="svi23" class="toggle" onclick="toggle('vi23')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi23')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi23"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.compose.include[0] (l1/c7582)</b></td><td><b>information</b></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INCLUDE_CS_CONTENT</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/provinces should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_ph-core_ph-core_fsh-generated_resources_ValueSet-regions"> </a>
+<h2><a href="ValueSet-regions.html">fsh-generated/resources/ValueSet-regions.json</a> <span id="svi24" class="toggle" onclick="toggle('vi24')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi24')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi24"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td><td><b>Validating</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ValueSet.compose.include[0] (l1/c4527)</b></td><td><b>information</b></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_INCLUDE_CS_CONTENT</span></td><td>--</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Resource</b></td><td><b>warning</b></td><td><b>The resource ValueSet/regions should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/ig-guidance/oids.html)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td><td>--</td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p><b>  The deprecation is caused by R5 validation, which cannot be suppressed.</b></p><ul>
+ <li>MSG_DEPENDS_ON_DEPRECATED <span style="color: maroon">(0 uses)</span></li>
+</ul>
+<p><b>  This is an experimental IG and does not require stable code systems</b></p><ul>
+ <li>MSG_EXPERIMENTAL <span style="color: navy">(41 uses)</span></li>
+</ul>
+<p><b>  the validator reports this valid expectation extension as an unnamed slice.</b></p><ul>
+ <li>This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice) <span style="color: navy">(27 uses)</span></li>
+</ul>
+<p><b>AU Core shares the same issue warnings, so we are suppressing it for now.</b></p><ul>
+ <li>The Binding on the type slicer MedicationAdministration.medication[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for Reference <span style="color: navy">(1 uses)</span></li>
+ <li>The Binding on the type slicer MedicationDispense.medication[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for Reference <span style="color: navy">(1 uses)</span></li>
+ <li>The Binding on the type slicer MedicationRequest.medication[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for Reference <span style="color: navy">(1 uses)</span></li>
+ <li>The Binding on the type slicer MedicationStatement.medication[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for Reference <span style="color: navy">(1 uses)</span></li>
+</ul>
+<p><b>Replacing maxValueSet with a required additional binding changed validation behavior for optional CodeableConcepts.</b></p><ul>
+ <li>The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead' <span style="color: navy">(1 uses)</span></li>
+</ul>
+<p><b>Suppressed Messages commonly suppressed by AU Core</b></p><ul>
+ <li>This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice) <span style="color: navy">(200 uses)</span></li>
+</ul>
+<p><b>Suppressed Messages commonly suppressed by US Core</b></p><ul>
+ <li>No definition could be found for URL value% <span style="color: navy">(24 uses)</span></li>
+ <li>Reference to draft CodeSystem https://fhir.doh.gov.ph/phcore/CodeSystem/prc|0.2.1 <span style="color: navy">(4 uses)</span></li>
+</ul>
+<p><b>The angle-bracket notation names HL7 v2 datatypes in the daysSupply mapping; it is literal source documentation, not authored HTML markup.</b></p><ul>
+ <li>The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk <span style="color: navy">(1 uses)</span></li>
+</ul>
+<a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="CODESYSTEM_PROPERTY_UNKNOWN_CODE"> </a>
+<h2>CODESYSTEM_PROPERTY_UNKNOWN_CODE</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('productInfo') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('genericName') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('dosageStrength') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('dosageForm') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('classification') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('packaging') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('pharmacologicCategory') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('manufacturer') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('countryOfOrigin') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('trader') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('importer') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('distributor') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('applicationType') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('issuanceDate') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="CodeSystem-PHFDACPRCS.html">fsh-generated/resources/CodeSystem-PHFDACPRCS.json</a></td><td><b>This property has only a code ('expiryDate') and not a URI, so it has no clearly defined meaning in the terminology ecosystem</b></td><td>--</td>
+   </tr>
+</table>
+<hr/>
+<a name="Details_for__matching_against_Profile_"> </a>
+<h2>Details_for__matching_against_Profile_</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="Organization-organization-single-example.html">fsh-generated/resources/Organization-organization-single-example.json</a></td><td><b>This element does not match any known slice defined in the profile https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization|0.2.1 (this may not be a problem, but you should check that it's not intended to match a slice)</b></td><td><a href="StructureDefinition-ph-core-organization.html">PH Core Organization</a></td>
+   </tr>
+</table>
+<hr/>
+<a name="VALUESET_INCLUDE_CS_CONTENT"> </a>
+<h2>VALUESET_INCLUDE_CS_CONTENT</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-barangays.html">fsh-generated/resources/ValueSet-barangays.json</a></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-cities.html">fsh-generated/resources/ValueSet-cities.json</a></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-drugs-vs.html">fsh-generated/resources/ValueSet-drugs-vs.json</a></td><td><b>The value set references CodeSystem 'https://verification.fda.gov.ph' which has status 'fragment'</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-educational-attainments.html">fsh-generated/resources/ValueSet-educational-attainments.json</a></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psced/level' which has status 'fragment'</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-occupational-classifications.html">fsh-generated/resources/ValueSet-occupational-classifications.json</a></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psoc/unit' which has status 'fragment'</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-provinces.html">fsh-generated/resources/ValueSet-provinces.json</a></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'</b></td><td>--</td>
+   </tr>
+   <tr style="background-color: #fffff2">
+     <td><a href="ValueSet-regions.html">fsh-generated/resources/ValueSet-regions.json</a></td><td><b>The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'</b></td><td>--</td>
+   </tr>
+</table>
+</body>
+</html>

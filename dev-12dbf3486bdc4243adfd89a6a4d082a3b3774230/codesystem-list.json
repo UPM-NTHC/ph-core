@@ -1,0 +1,50 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-groups-cs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "IndigenousGroupsCS",
+    "title" : "Indigenous Groups CodeSystem",
+    "description" : "A list of codes representing the recognized indigenous groups in the Philippines to which a person may belong."
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "PHCoreDisabilityTypeCS",
+    "title" : "PH Core Disability Type Code System",
+    "description" : "Code system for types of disability as defined by the Philippine government for PWD registration."
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psced/level",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "PSCED",
+    "title" : "Mock PSCED",
+    "description" : "Mock of the Philippine Standard Classification of Education."
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psgc",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "PSGC",
+    "title" : "Mock PSGC",
+    "description" : "Mock of the Philippine Standard Geographic Code."
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psoc/unit",
+    "version" : "0.2.0",
+    "status" : "draft",
+    "name" : "PSOC",
+    "title" : "Mock PSOC",
+    "description" : "Mock of the Philippine Standard Occupational Classification."
+  },
+  {
+    "url" : "https://verification.fda.gov.ph",
+    "version" : "0.2.0",
+    "status" : "active",
+    "name" : "PHFDACPRCS",
+    "title" : "PH FDA Certificate of Product Registration (CPR) CodeSystem",
+    "description" : "Registered drug products from the Philippine Food and Drug Administration (FDA)"
+  }]
+}

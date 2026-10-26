@@ -1,0 +1,413 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "cities",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet cities</b></p><a name=\"cities\"> </a><a name=\"hccities\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102801000\">0102801000</a></td><td>Adams</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802000\">0102802000</a></td><td>Bacarra</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102803000\">0102803000</a></td><td>Badoc</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102804000\">0102804000</a></td><td>Bangui</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102805000\">0102805000</a></td><td>City of Batac</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102806000\">0102806000</a></td><td>Burgos</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102807000\">0102807000</a></td><td>Carasi</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102808000\">0102808000</a></td><td>Currimao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102809000\">0102809000</a></td><td>Dingras</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102810000\">0102810000</a></td><td>Dumalneg</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102811000\">0102811000</a></td><td>Banna</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102812000\">0102812000</a></td><td>City of Laoag </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102813000\">0102813000</a></td><td>Marcos</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102901000\">0102901000</a></td><td>Alilem</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102906000\">0102906000</a></td><td>City of Candon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102934000\">0102934000</a></td><td>City of Vigan </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0103314000\">0103314000</a></td><td>City of San Fernando </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0105503000\">0105503000</a></td><td>City of Alaminos</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0105518000\">0105518000</a></td><td>City of Dagupan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0105532000\">0105532000</a></td><td>City of San Carlos</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0105546000\">0105546000</a></td><td>City of Urdaneta</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0200901000\">0200901000</a></td><td>Basco </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0201501000\">0201501000</a></td><td>Abulug</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0201529000\">0201529000</a></td><td>Tuguegarao City </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0203108000\">0203108000</a></td><td>City of Cauayan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0203114000\">0203114000</a></td><td>City of Ilagan </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0203135000\">0203135000</a></td><td>City of Santiago</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0330100000\">0330100000</a></td><td>City of Angeles</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0331400000\">0331400000</a></td><td>City of Olongapo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0300801000\">0300801000</a></td><td>Abucay</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0300803000\">0300803000</a></td><td>City of Balanga </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301401000\">0301401000</a></td><td>Angat</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301403000\">0301403000</a></td><td>City of Baliwag</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301410000\">0301410000</a></td><td>City of Malolos </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301412000\">0301412000</a></td><td>City of Meycauayan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301420000\">0301420000</a></td><td>City of San Jose Del Monte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0304903000\">0304903000</a></td><td>City of Cabanatuan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0304908000\">0304908000</a></td><td>City of Gapan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0304917000\">0304917000</a></td><td>Science City of Muñoz</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0304919000\">0304919000</a></td><td>City of Palayan </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0304926000\">0304926000</a></td><td>San Jose City</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0305409000\">0305409000</a></td><td>Mabalacat City</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0305416000\">0305416000</a></td><td>City of San Fernando </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0306916000\">0306916000</a></td><td>City of Tarlac </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401001000\">0401001000</a></td><td>Agoncillo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401005000\">0401005000</a></td><td>Batangas City </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401007000\">0401007000</a></td><td>City of Calaca</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401014000\">0401014000</a></td><td>City of Lipa</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401028000\">0401028000</a></td><td>City of Sto. Tomas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401031000\">0401031000</a></td><td>City of Tanauan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0402101000\">0402101000</a></td><td>Alfonso</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0500501000\">0500501000</a></td><td>Bacacay</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0501601000\">0501601000</a></td><td>Basud</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600401000\">0600401000</a></td><td>Altavas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600601000\">0600601000</a></td><td>Anini-Y</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0701201000\">0701201000</a></td><td>Alburquerque</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0702201000\">0702201000</a></td><td>Alcantara</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0802601000\">0802601000</a></td><td>Arteche</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0803701000\">0803701000</a></td><td>Abuyog</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0906601000\">0906601000</a></td><td>Indanan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0907201000\">0907201000</a></td><td>City of Dapitan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001301000\">1001301000</a></td><td>Baungon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001801000\">1001801000</a></td><td>Catarman</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102301000\">1102301000</a></td><td>Asuncion</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102401000\">1102401000</a></td><td>Bansalan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1204701000\">1204701000</a></td><td>Alamada</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1206302000\">1206302000</a></td><td>Banga</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380100000\">1380100000</a></td><td>City of Caloocan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380200000\">1380200000</a></td><td>City of Las Piñas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380600000\">1380600000</a></td><td>City of Manila</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380601000\">1380601000</a></td><td>Tondo I/II</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380602000\">1380602000</a></td><td>Binondo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380603000\">1380603000</a></td><td>Quiapo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380604000\">1380604000</a></td><td>San Nicolas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380605000\">1380605000</a></td><td>Santa Cruz</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380606000\">1380606000</a></td><td>Sampaloc</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380607000\">1380607000</a></td><td>San Miguel</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380608000\">1380608000</a></td><td>Ermita</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380609000\">1380609000</a></td><td>Intramuros</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380610000\">1380610000</a></td><td>Malate</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380611000\">1380611000</a></td><td>Paco</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380612000\">1380612000</a></td><td>Pandacan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380613000\">1380613000</a></td><td>Port Area</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380614000\">1380614000</a></td><td>Santa Ana</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1400101000\">1400101000</a></td><td>Bangued </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1401101000\">1401101000</a></td><td>Atok</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600201000\">1600201000</a></td><td>Buenavista</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600301000\">1600301000</a></td><td>City of Bayugan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1704001000\">1704001000</a></td><td>Boac </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1705101000\">1705101000</a></td><td>Abra De Ilog</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804502000\">1804502000</a></td><td>City of Bago</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804601000\">1804601000</a></td><td>Amlan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1900702000\">1900702000</a></td><td>City of Lamitan </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1903601000\">1903601000</a></td><td>Bacolod-Kalawi</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/cities",
+  "version" : "0.2.0",
+  "name" : "Cities",
+  "title" : "Cities",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-09-09T08:48:14+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "All city, municipality, and sub-municipality values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psgc",
+      "concept" : [{
+        "code" : "0102801000",
+        "display" : "Adams"
+      },
+      {
+        "code" : "0102802000",
+        "display" : "Bacarra"
+      },
+      {
+        "code" : "0102803000",
+        "display" : "Badoc"
+      },
+      {
+        "code" : "0102804000",
+        "display" : "Bangui"
+      },
+      {
+        "code" : "0102805000",
+        "display" : "City of Batac"
+      },
+      {
+        "code" : "0102806000",
+        "display" : "Burgos"
+      },
+      {
+        "code" : "0102807000",
+        "display" : "Carasi"
+      },
+      {
+        "code" : "0102808000",
+        "display" : "Currimao"
+      },
+      {
+        "code" : "0102809000",
+        "display" : "Dingras"
+      },
+      {
+        "code" : "0102810000",
+        "display" : "Dumalneg"
+      },
+      {
+        "code" : "0102811000",
+        "display" : "Banna"
+      },
+      {
+        "code" : "0102812000",
+        "display" : "City of Laoag "
+      },
+      {
+        "code" : "0102813000",
+        "display" : "Marcos"
+      },
+      {
+        "code" : "0102901000",
+        "display" : "Alilem"
+      },
+      {
+        "code" : "0102906000",
+        "display" : "City of Candon"
+      },
+      {
+        "code" : "0102934000",
+        "display" : "City of Vigan "
+      },
+      {
+        "code" : "0103314000",
+        "display" : "City of San Fernando "
+      },
+      {
+        "code" : "0105503000",
+        "display" : "City of Alaminos"
+      },
+      {
+        "code" : "0105518000",
+        "display" : "City of Dagupan"
+      },
+      {
+        "code" : "0105532000",
+        "display" : "City of San Carlos"
+      },
+      {
+        "code" : "0105546000",
+        "display" : "City of Urdaneta"
+      },
+      {
+        "code" : "0200901000",
+        "display" : "Basco "
+      },
+      {
+        "code" : "0201501000",
+        "display" : "Abulug"
+      },
+      {
+        "code" : "0201529000",
+        "display" : "Tuguegarao City "
+      },
+      {
+        "code" : "0203108000",
+        "display" : "City of Cauayan"
+      },
+      {
+        "code" : "0203114000",
+        "display" : "City of Ilagan "
+      },
+      {
+        "code" : "0203135000",
+        "display" : "City of Santiago"
+      },
+      {
+        "code" : "0330100000",
+        "display" : "City of Angeles"
+      },
+      {
+        "code" : "0331400000",
+        "display" : "City of Olongapo"
+      },
+      {
+        "code" : "0300801000",
+        "display" : "Abucay"
+      },
+      {
+        "code" : "0300803000",
+        "display" : "City of Balanga "
+      },
+      {
+        "code" : "0301401000",
+        "display" : "Angat"
+      },
+      {
+        "code" : "0301403000",
+        "display" : "City of Baliwag"
+      },
+      {
+        "code" : "0301410000",
+        "display" : "City of Malolos "
+      },
+      {
+        "code" : "0301412000",
+        "display" : "City of Meycauayan"
+      },
+      {
+        "code" : "0301420000",
+        "display" : "City of San Jose Del Monte"
+      },
+      {
+        "code" : "0304903000",
+        "display" : "City of Cabanatuan"
+      },
+      {
+        "code" : "0304908000",
+        "display" : "City of Gapan"
+      },
+      {
+        "code" : "0304917000",
+        "display" : "Science City of Muñoz"
+      },
+      {
+        "code" : "0304919000",
+        "display" : "City of Palayan "
+      },
+      {
+        "code" : "0304926000",
+        "display" : "San Jose City"
+      },
+      {
+        "code" : "0305409000",
+        "display" : "Mabalacat City"
+      },
+      {
+        "code" : "0305416000",
+        "display" : "City of San Fernando "
+      },
+      {
+        "code" : "0306916000",
+        "display" : "City of Tarlac "
+      },
+      {
+        "code" : "0401001000",
+        "display" : "Agoncillo"
+      },
+      {
+        "code" : "0401005000",
+        "display" : "Batangas City "
+      },
+      {
+        "code" : "0401007000",
+        "display" : "City of Calaca"
+      },
+      {
+        "code" : "0401014000",
+        "display" : "City of Lipa"
+      },
+      {
+        "code" : "0401028000",
+        "display" : "City of Sto. Tomas"
+      },
+      {
+        "code" : "0401031000",
+        "display" : "City of Tanauan"
+      },
+      {
+        "code" : "0402101000",
+        "display" : "Alfonso"
+      },
+      {
+        "code" : "0500501000",
+        "display" : "Bacacay"
+      },
+      {
+        "code" : "0501601000",
+        "display" : "Basud"
+      },
+      {
+        "code" : "0600401000",
+        "display" : "Altavas"
+      },
+      {
+        "code" : "0600601000",
+        "display" : "Anini-Y"
+      },
+      {
+        "code" : "0701201000",
+        "display" : "Alburquerque"
+      },
+      {
+        "code" : "0702201000",
+        "display" : "Alcantara"
+      },
+      {
+        "code" : "0802601000",
+        "display" : "Arteche"
+      },
+      {
+        "code" : "0803701000",
+        "display" : "Abuyog"
+      },
+      {
+        "code" : "0906601000",
+        "display" : "Indanan"
+      },
+      {
+        "code" : "0907201000",
+        "display" : "City of Dapitan"
+      },
+      {
+        "code" : "1001301000",
+        "display" : "Baungon"
+      },
+      {
+        "code" : "1001801000",
+        "display" : "Catarman"
+      },
+      {
+        "code" : "1102301000",
+        "display" : "Asuncion"
+      },
+      {
+        "code" : "1102401000",
+        "display" : "Bansalan"
+      },
+      {
+        "code" : "1204701000",
+        "display" : "Alamada"
+      },
+      {
+        "code" : "1206302000",
+        "display" : "Banga"
+      },
+      {
+        "code" : "1380100000",
+        "display" : "City of Caloocan"
+      },
+      {
+        "code" : "1380200000",
+        "display" : "City of Las Piñas"
+      },
+      {
+        "code" : "1380600000",
+        "display" : "City of Manila"
+      },
+      {
+        "code" : "1380601000",
+        "display" : "Tondo I/II"
+      },
+      {
+        "code" : "1380602000",
+        "display" : "Binondo"
+      },
+      {
+        "code" : "1380603000",
+        "display" : "Quiapo"
+      },
+      {
+        "code" : "1380604000",
+        "display" : "San Nicolas"
+      },
+      {
+        "code" : "1380605000",
+        "display" : "Santa Cruz"
+      },
+      {
+        "code" : "1380606000",
+        "display" : "Sampaloc"
+      },
+      {
+        "code" : "1380607000",
+        "display" : "San Miguel"
+      },
+      {
+        "code" : "1380608000",
+        "display" : "Ermita"
+      },
+      {
+        "code" : "1380609000",
+        "display" : "Intramuros"
+      },
+      {
+        "code" : "1380610000",
+        "display" : "Malate"
+      },
+      {
+        "code" : "1380611000",
+        "display" : "Paco"
+      },
+      {
+        "code" : "1380612000",
+        "display" : "Pandacan"
+      },
+      {
+        "code" : "1380613000",
+        "display" : "Port Area"
+      },
+      {
+        "code" : "1380614000",
+        "display" : "Santa Ana"
+      },
+      {
+        "code" : "1400101000",
+        "display" : "Bangued "
+      },
+      {
+        "code" : "1401101000",
+        "display" : "Atok"
+      },
+      {
+        "code" : "1600201000",
+        "display" : "Buenavista"
+      },
+      {
+        "code" : "1600301000",
+        "display" : "City of Bayugan"
+      },
+      {
+        "code" : "1704001000",
+        "display" : "Boac "
+      },
+      {
+        "code" : "1705101000",
+        "display" : "Abra De Ilog"
+      },
+      {
+        "code" : "1804502000",
+        "display" : "City of Bago"
+      },
+      {
+        "code" : "1804601000",
+        "display" : "Amlan"
+      },
+      {
+        "code" : "1900702000",
+        "display" : "City of Lamitan "
+      },
+      {
+        "code" : "1903601000",
+        "display" : "Bacolod-Kalawi"
+      }]
+    }]
+  }
+}

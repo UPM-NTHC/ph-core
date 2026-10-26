@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Examples - Draft PH Core Implementation Guide v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<style>
+/* Style unclassed narrative tables while excluding Publisher tables that carry
+   classes or generated/presentation attributes. */
+table:not([class]):not([style]):not([border]):not([data-fhir]) {
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+table:not([class]):not([style]):not([border]):not([data-fhir]) th,
+table:not([class]):not([style]):not([border]):not([data-fhir]) td {
+  border: 1px solid #e2e8f0;
+  padding: 8px 14px;
+  vertical-align: top;
+}
+
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Draft PH Core Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="client-server-conformance.html">Client and Server Conformance</a>
+      </li>
+      <li>
+        <a href="sex-and-gender-guidance.html">Sex and Gender</a>
+      </li>
+      <li>
+        <a href="sample-case.html">Worked Case</a>
+      </li>
+      <li>
+        <a href="fhir-rest-tutorial.html">FHIR REST Tutorial</a>
+      </li>
+      <li>
+        <a href="examples.html">Example</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <li>
+        <a href="otherIds.html">Other Identifiers</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Examples</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Draft PH Core Implementation Guide - Local Development build (v0.2.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/phcore/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Examples</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="example-scenarios">Example scenarios</h3>
+
+<h4 id="missing-data-examples">Missing data examples</h4>
+
+<p>These four examples illustrate distinct DAR placements from the <a href="client-server-conformance.html#missing-data">missing-data policy</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Representation</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Unknown whole name</td>
+      <td><a href="Patient-patient-explicit-absence-example.html">Explicit name absence reason</a></td>
+    </tr>
+    <tr>
+      <td>Unknown patient name with known mother's full name</td>
+      <td><a href="Patient-patient-anonymous-mothers-maiden-name-example.html">Anonymous Patient with Mother's Maiden Name</a></td>
+    </tr>
+    <tr>
+      <td>Missing individual clinical result</td>
+      <td><a href="Observation-observation-result-unavailable.html">Glucose result unavailable</a></td>
+    </tr>
+    <tr>
+      <td>Missing component alongside a measured component</td>
+      <td><a href="Observation-observation-component-unavailable.html">Blood pressure component unavailable</a></td>
+    </tr>
+    <tr>
+      <td>Unknown date of a patient-reported procedure</td>
+      <td><a href="Procedure-procedure-unknown-date-example.html">Appendectomy with unknown date</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="connected-scenarios">Connected scenarios</h4>
+
+<p>These synthetic datasets show how PH Core representations connect across resources. They are informative examples, not clinical protocols, registry records, PhilHealth claim-submission specifications or additional conformance requirements. Identifiers, contact details and event times are invented for illustration.</p>
+
+<p>The examples are organized by scenario. Juan Dela Cruz (born 1 January 1980) and Miguel Reyes (born 15 March 1981) are different synthetic patients with different example PhilHealth IDs. Repeated clinician names represent illustrative roles, not assertions about actual people.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Story and PH Core purpose</th>
+      <th>Start here</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Primary-care follow-up</td>
+      <td>Juan attends PGH on 15 March 2025. The diabetes problem, clinician/role, facility, laboratory requests/results and antihypertensive medication records share the same patient and visit.</td>
+      <td><a href="Bundle-transaction-example.html">Primary-care transaction</a></td>
+    </tr>
+    <tr>
+      <td>Emergency assessment</td>
+      <td>Miguel presents with acute chest pain on 12 June 2026. Encounter diagnosis, prior diabetes, vital signs, diagnostic observations and an ED note connect to the same encounter.</td>
+      <td><a href="sample-case.html">Worked case</a>, <a href="Bundle-bundle-acs-case-example.html">ACS transaction</a></td>
+    </tr>
+    <tr>
+      <td>Surgical history</td>
+      <td>Juan's January 2024 appendicitis diagnosis, surgical encounter, request, appendectomy and intraoperative observation form a separate historical episode.</td>
+      <td><a href="Encounter-encounter-surgery-example.html">Surgical encounter</a>, <a href="Procedure-procedure-single-example.html">Procedure</a></td>
+    </tr>
+    <tr>
+      <td>Immunization history</td>
+      <td>Juan's January 2013 immunization uses a vaccine Medication, a historical visit and one lot number.</td>
+      <td><a href="Immunization-immunization-single-example.html">Immunization</a>, <a href="Medication-medication-vaccine-example.html">Vaccine product</a></td>
+    </tr>
+    <tr>
+      <td>Attribution and exchange</td>
+      <td>A historical blood-pressure record and an allergy record illustrate authorship and subsequent transmission. Search matches and reverse-included Provenance have distinct roles.</td>
+      <td><a href="Bundle-bundle-observation-provenance-example.html">Blood pressure with authorship</a>, <a href="Bundle-bundle-allergy-provenance-example.html">Allergy with transmission</a></td>
+    </tr>
+    <tr>
+      <td>Representation examples</td>
+      <td>Focused examples illustrate identifier slicing, distinct sex and gender concepts, related people, outpatient services, derived BMI and environmental observations outside a single encounter.</td>
+      <td><a href="Organization-organization-single-example.html">Organization identifiers</a>, <a href="Patient-patient-sex-and-gender-example.html">Patient sex and gender</a>, <a href="RelatedPerson-relatedperson-single-example.html">Related person</a>, <a href="HealthcareService-healthcareservice-single-example.html">Service</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="primary-care-story">Primary-care story</h4>
+
+<p>Juan's diabetes was reported to have started in 2020 and is documented in the March 2025 follow-up. Dr. Maria Clara Santos works in the PGH outpatient service. The facility is the care provider; the separate illustrative PRC Organization is the credential issuer; the separate illustrative PhilHealth Organization is the insurer/payor in the <a href="Claim-claim-single-example.html">Claim</a> and <a href="Coverage-philhealth-coverage-example.html">Coverage</a>.</p>
+
+<ol>
+  <li><a href="Patient-patient-single-example.html">Patient</a>, <a href="Practitioner-practitioner-single-example.html">Practitioner</a>, <a href="PractitionerRole-practitionerrole-single-example.html">PractitionerRole</a>, <a href="Organization-organization-pgh-example.html">PGH</a> and <a href="Location-location-single-example.html">Location</a> identify the participants and setting.</li>
+  <li><a href="Encounter-encounter-single-example.html">Encounter</a> connects the visit to Juan and PGH. <a href="Condition-condition-single-example.html">Condition</a> represents the diabetes problem; onset and documentation time are separate.</li>
+  <li><a href="ServiceRequest-servicerequest-single-example.html">Fasting-glucose request</a> and <a href="Bundle-transaction-example.html#servicerequest-hba1c-example">HbA1c request</a> identify different requested tests. The completed <a href="Bundle-transaction-example.html#task-single-example">Task</a> records collection work focused on the fasting-glucose request. The later <a href="Observation-observation-glucose-example.html">glucose</a> and <a href="Bundle-transaction-example.html#observation-based-on-service-example">HbA1c</a> results link to their respective requests.</li>
+  <li><a href="Bundle-transaction-example.html#observation-bp-followup-example">Blood pressure</a> and <a href="Observation-observation-vitals-encounter-example.html">temperature</a> were recorded during the visit.</li>
+  <li><a href="Bundle-transaction-example.html#medicationrequest-single-example">MedicationRequest</a> renews the antihypertensive medication. <a href="Bundle-transaction-example.html#medicationdispense-single-example">MedicationDispense</a> illustrates 30 tablets at one tablet daily, <a href="Bundle-transaction-example.html#medicationadministration-single-example">MedicationAdministration</a> records a later taken dose, and <a href="Bundle-transaction-example.html#medicationstatement-single-example">MedicationStatement</a> records the report made at this visit of use that began on 10 March. These resource types describe different facts; they do not form mandatory national workflow steps.</li>
+</ol>
+
+<p>The primary-care transaction packages linked records for demonstration; entry order is not an ordered clinical audit log. <a href="Claim-claim-single-example.html">The Claim example</a> demonstrates generic FHIR reimbursement representation and does not establish PhilHealth benefits or reimbursement amounts.</p>
+
+<h4 id="historical-records-and-focused-examples">Historical records and focused examples</h4>
+
+<p>Historical observations keep their own event dates. A patient's current follow-up encounter is not reused for an earlier surgery or immunization. The <a href="Observation-observation-lab-panel-example.html">electrolyte panel</a> references sodium and potassium observations in the surgical episode; the glucose test belongs to the later follow-up. The <a href="Observation-observation-derived-bmi-example.html">BMI example</a> demonstrates derivation from the linked weight and height.</p>
+
+<p>Bundle-private examples are defined inline in the owning Bundle FSH file and are documented in its resource index. Shared core and focused examples remain separately published and can be reused across scenarios. The two transaction Bundles are intended to include their literal-reference dependencies. Search-response Bundles can reference resources not included in that response, just as a real FHIR search may. They are not transaction requests.</p>
+
+<h4 id="using-the-examples">Using the examples</h4>
+
+<p>Use the linked generated JSON as the maintained source of each example. Transaction <code class="language-plaintext highlighter-rouge">fullUrl</code> values are illustrative correlation URLs, not production endpoints; send a transaction only to a server whose CapabilityStatement supports it. Successful <code class="language-plaintext highlighter-rouge">POST</code> responses may assign new logical IDs. Repeating a create transaction can create duplicates, so treat loading/reloading as a server-specific test operation.</p>
+
+<p>See the <a href="fhir-rest-tutorial.html">FHIR REST tutorial</a> for general HTTP exercises. Profile constraints, cardinalities, bindings and designated actor obligations establish conformance; optional content in an example does not introduce a new requirement.</p>
+
+<p>The organization of these examples follows the separation of informative examples and profile guidance seen in the <a href="https://hl7.org/fhir/us/core/examples.html">US Core examples</a> and <a href="https://hl7.org/fhir/us/core/basic-provenance.html">Basic Provenance guidance</a>. PH Core uses its own synthetic scenarios and constraints.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  
+          Package fhir.ph.core#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-10-26 05:35:00 +0000">
+    2026-10-26
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

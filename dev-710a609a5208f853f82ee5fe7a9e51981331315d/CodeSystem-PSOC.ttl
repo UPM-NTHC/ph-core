@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PSOC"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSOC</b></p><a name=\"PSOC\"> </a><a name=\"hcPSOC\"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psoc/unit</code> provides some codes <b>that are example only</b>:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">111102<a name=\"PSOC-111102\"> </a></td><td>Hospital Administrator</td><td>Manages hospital operations</td></tr><tr><td style=\"white-space:nowrap\">111103<a name=\"PSOC-111103\"> </a></td><td>Medical Department Head</td><td>Head of a medical department</td></tr><tr><td style=\"white-space:nowrap\">121101<a name=\"PSOC-121101\"> </a></td><td>General Manager</td><td>Manages overall operations of an organization</td></tr><tr><td style=\"white-space:nowrap\">211101<a name=\"PSOC-211101\"> </a></td><td>Medical Doctor</td><td>Licensed physician practicing medicine</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://psa.gov.ph/classification/psoc/unit"^^xsd:anyURI ;
+     fhir:l <https://psa.gov.ph/classification/psoc/unit>
+  ] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "PSOC"] ; # 
+  fhir:title [ fhir:v "Mock PSOC"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-06-10T02:11:38+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-NTHC" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Mock of the Philippine Standard Occupational Classification."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "example"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "111102" ] ;
+     fhir:display [ fhir:v "Hospital Administrator" ] ;
+     fhir:definition [ fhir:v "Manages hospital operations" ]
+  ] [
+     fhir:code [ fhir:v "111103" ] ;
+     fhir:display [ fhir:v "Medical Department Head" ] ;
+     fhir:definition [ fhir:v "Head of a medical department" ]
+  ] [
+     fhir:code [ fhir:v "121101" ] ;
+     fhir:display [ fhir:v "General Manager" ] ;
+     fhir:definition [ fhir:v "Manages overall operations of an organization" ]
+  ] [
+     fhir:code [ fhir:v "211101" ] ;
+     fhir:display [ fhir:v "Medical Doctor" ] ;
+     fhir:definition [ fhir:v "Licensed physician practicing medicine" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

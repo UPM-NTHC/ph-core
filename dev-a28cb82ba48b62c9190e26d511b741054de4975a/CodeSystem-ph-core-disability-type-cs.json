@@ -1,0 +1,79 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ph-core-disability-type-cs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ph-core-disability-type-cs</b></p><a name=\"ph-core-disability-type-cs\"> </a><a name=\"hcph-core-disability-type-cs\"> </a><p>This case-sensitive code system <code>https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">visual<a name=\"ph-core-disability-type-cs-visual\"> </a></td><td>Visual Disability</td><td>Complete or partial loss of sight/visual function.</td></tr><tr><td style=\"white-space:nowrap\">hearing<a name=\"ph-core-disability-type-cs-hearing\"> </a></td><td>Hearing Disability</td><td>Complete or partial loss of hearing/hearing function.</td></tr><tr><td style=\"white-space:nowrap\">speech<a name=\"ph-core-disability-type-cs-speech\"> </a></td><td>Speech Impairment</td><td>Complete or partial loss of speech or communication function.</td></tr><tr><td style=\"white-space:nowrap\">physical<a name=\"ph-core-disability-type-cs-physical\"> </a></td><td>Physical/Orthopedic Disability</td><td>Impairment in physical/orthopedic function including locomotor disabilities.</td></tr><tr><td style=\"white-space:nowrap\">intellectual<a name=\"ph-core-disability-type-cs-intellectual\"> </a></td><td>Intellectual Disability</td><td>Significant limitations in intellectual functioning and adaptive behavior.</td></tr><tr><td style=\"white-space:nowrap\">learning<a name=\"ph-core-disability-type-cs-learning\"> </a></td><td>Learning Disability</td><td>Neurological disorders affecting acquisition and use of listening, speaking, reading, writing, reasoning, or mathematical abilities.</td></tr><tr><td style=\"white-space:nowrap\">psychosocial<a name=\"ph-core-disability-type-cs-psychosocial\"> </a></td><td>Psychosocial Disability</td><td>Mental health conditions and psychosocial impairments.</td></tr><tr><td style=\"white-space:nowrap\">visual-low-vision<a name=\"ph-core-disability-type-cs-visual-low-vision\"> </a></td><td>Low Vision</td><td>Significant visual impairment not correctable by standard glasses/contact lenses.</td></tr><tr><td style=\"white-space:nowrap\">visual-blindness<a name=\"ph-core-disability-type-cs-visual-blindness\"> </a></td><td>Blindness</td><td>Complete loss of vision or light perception.</td></tr></table></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs",
+  "version" : "0.2.0",
+  "name" : "PHCoreDisabilityTypeCS",
+  "title" : "PH Core Disability Type Code System",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-10T02:24:02+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "Code system for types of disability as defined by the Philippine government for PWD registration.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 9,
+  "concept" : [{
+    "code" : "visual",
+    "display" : "Visual Disability",
+    "definition" : "Complete or partial loss of sight/visual function."
+  },
+  {
+    "code" : "hearing",
+    "display" : "Hearing Disability",
+    "definition" : "Complete or partial loss of hearing/hearing function."
+  },
+  {
+    "code" : "speech",
+    "display" : "Speech Impairment",
+    "definition" : "Complete or partial loss of speech or communication function."
+  },
+  {
+    "code" : "physical",
+    "display" : "Physical/Orthopedic Disability",
+    "definition" : "Impairment in physical/orthopedic function including locomotor disabilities."
+  },
+  {
+    "code" : "intellectual",
+    "display" : "Intellectual Disability",
+    "definition" : "Significant limitations in intellectual functioning and adaptive behavior."
+  },
+  {
+    "code" : "learning",
+    "display" : "Learning Disability",
+    "definition" : "Neurological disorders affecting acquisition and use of listening, speaking, reading, writing, reasoning, or mathematical abilities."
+  },
+  {
+    "code" : "psychosocial",
+    "display" : "Psychosocial Disability",
+    "definition" : "Mental health conditions and psychosocial impairments."
+  },
+  {
+    "code" : "visual-low-vision",
+    "display" : "Low Vision",
+    "definition" : "Significant visual impairment not correctable by standard glasses/contact lenses."
+  },
+  {
+    "code" : "visual-blindness",
+    "display" : "Blindness",
+    "definition" : "Complete loss of vision or light perception."
+  }]
+}

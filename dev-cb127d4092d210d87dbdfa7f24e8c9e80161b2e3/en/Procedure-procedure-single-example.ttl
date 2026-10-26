@@ -1,0 +1,208 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Procedure/procedure-single-example> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "procedure-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Procedure:</b> Laparoscopic appendectomy (SNOMED CT: 80146002)</p><p><b>Subject:</b> Juan Dela Cruz</p><p><b>Status:</b> Completed</p><p><b>Performed:</b> January 15, 2024, 08:30 - 10:15 (Asia/Manila)</p><p><b>Performer:</b> Dr. Maria Clara Santos (Healthcare professional) on behalf of Department of Health - Central Office</p><p><b>Reason:</b> Acute appendicitis with peritonitis (SNOMED CT: 74400008)</p><p><b>Body Site:</b> Entire appendix - Right lower quadrant abdomen</p><p><b>Outcome:</b> Successful - Procedure completed without complications</p><p><b>Follow-up:</b> Postsurgical wound care in 7 days</p><p><b>Notes:</b> Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact.</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [
+       fhir:v "https://fhir.doh.gov.ph/phcore/NamingSystem/procedure-id"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/NamingSystem/procedure-id>
+     ] ;
+     fhir:value [ fhir:v "PROC-2024-000123" ]
+  ] [
+     fhir:use [ fhir:v "secondary" ] ;
+     fhir:system [
+       fhir:v "http://philhealth.gov.ph/procedure"^^xsd:anyURI ;
+       fhir:l <http://philhealth.gov.ph/procedure>
+     ] ;
+     fhir:value [ fhir:v "PH-APP-789456" ]
+  ] ) ; # 
+  fhir:basedOn ( [
+     fhir:display [ fhir:v "ServiceRequest for emergency appendectomy" ]
+  ] ) ; # 
+  fhir:partOf ( [
+     fhir:display [ fhir:v "Episode of care for acute abdomen treatment" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:statusReason [
+     fhir:coding ( [
+       a sct:385669000 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "385669000" ] ;
+       fhir:display [ fhir:v "Successful" ]
+     ] )
+  ] ; # 
+  fhir:category [
+     fhir:coding ( [
+       a sct:387713003 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "387713003" ] ;
+       fhir:display [ fhir:v "Surgical procedure" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:80146002 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "80146002" ] ;
+       fhir:display [ fhir:v "Appendectomy" ]
+     ] ) ;
+     fhir:text [ fhir:v "Laparoscopic appendectomy" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-single-example" ]
+  ] ; # 
+  fhir:performed [
+     a fhir:Period ;
+     fhir:start [ fhir:v "2024-01-15T08:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2024-01-15T10:15:00+08:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:recorder [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+  ] ; # 
+  fhir:asserter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/RelatedPerson/relatedperson-single-example> ;
+     fhir:reference [ fhir:v "RelatedPerson/relatedperson-single-example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:function [
+       fhir:coding ( [
+         a sct:223366009 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "223366009" ] ;
+         fhir:display [ fhir:v "Healthcare professional" ]
+       ] )
+     ] ;
+     fhir:actor [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+     ] ;
+     fhir:onBehalfOf [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+       fhir:reference [ fhir:v "Organization/organization-single-example" ]
+     ]
+  ] [
+     fhir:function [
+       fhir:coding ( [
+         a sct:133932002 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "133932002" ] ;
+         fhir:display [ fhir:v "Caregiver" ]
+       ] )
+     ] ;
+     fhir:actor [
+       fhir:l <https://fhir.doh.gov.ph/phcore/RelatedPerson/relatedperson-single-example> ;
+       fhir:reference [ fhir:v "RelatedPerson/relatedperson-single-example" ]
+     ]
+  ] ) ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:74400008 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "74400008" ] ;
+       fhir:display [ fhir:v "Appendicitis" ]
+     ] ) ;
+     fhir:text [ fhir:v "Acute appendicitis with peritonitis" ]
+  ] ) ; # 
+  fhir:reasonReference ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ;
+     fhir:reference [ fhir:v "Condition/condition-single-example" ]
+  ] ) ; # 
+  fhir:bodySite ( [
+     fhir:coding ( [
+       a sct:66754008 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "66754008" ] ;
+       fhir:display [ fhir:v "Appendix structure" ]
+     ] ) ;
+     fhir:text [ fhir:v "Right lower quadrant abdomen" ]
+  ] ) ; # 
+  fhir:outcome [
+     fhir:coding ( [
+       a sct:385669000 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "385669000" ] ;
+       fhir:display [ fhir:v "Successful" ]
+     ] ) ;
+     fhir:text [ fhir:v "Procedure completed without complications" ]
+  ] ; # 
+  fhir:followUp ( [
+     fhir:coding ( [
+       a sct:226007004 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "226007004" ] ;
+       fhir:display [ fhir:v "Post-surgical wound care" ]
+     ] ) ;
+     fhir:text [ fhir:v "Follow-up visit in 7 days for wound check" ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:time [ fhir:v "2024-01-15T10:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact. No perforation noted." ]
+  ] ) ; # 
+  fhir:usedCode ( [
+     fhir:coding ( [
+       a sct:261424001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "261424001" ] ;
+       fhir:display [ fhir:v "Primary operation" ]
+     ] ) ;
+     fhir:text [ fhir:v "Laparoscopic instruments" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

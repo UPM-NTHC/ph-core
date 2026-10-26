@@ -1,0 +1,69 @@
+# observation-potassium-example - Draft PH Core Implementation Guide v0.2.0
+
+## Example Observation: observation-potassium-example
+
+Serum potassium: 4.0 mmol/L (Normal) for Juan Dela Cruz.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Observation",
+  "id" : "observation-potassium-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"]
+  },
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory",
+      "display" : "Laboratory"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "2823-3",
+      "display" : "Potassium [Moles/volume] in Serum or Plasma"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/patient-single-example"
+  },
+  "effectiveDateTime" : "2024-01-15T08:00:00Z",
+  "performer" : [{
+    "reference" : "Organization/organization-single-example"
+  }],
+  "valueQuantity" : {
+    "value" : 4,
+    "unit" : "mmol/L",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mmol/L"
+  },
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "N",
+      "display" : "Normal"
+    }]
+  }],
+  "referenceRange" : [{
+    "low" : {
+      "value" : 3.5,
+      "unit" : "mmol/L",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mmol/L"
+    },
+    "high" : {
+      "value" : 5,
+      "unit" : "mmol/L",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mmol/L"
+    }
+  }]
+}
+
+```

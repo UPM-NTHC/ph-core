@@ -1,0 +1,77 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "educational-attainments",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet educational-attainments</b></p><a name=\"educational-attainments\"> </a><a name=\"hceducational-attainments\"> </a><p>This value set contains 4 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name=\"educational-attainments-https://psa.gov.ph/classification/psced/level-C201301\"> </a><code>https://psa.gov.ph/classification/psced/level</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0C201301</td><td>Elementary Graduate</td><td>Completed elementary education</td></tr><tr><td><a name=\"educational-attainments-https://psa.gov.ph/classification/psced/level-C201302\"> </a><code>https://psa.gov.ph/classification/psced/level</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0C201302</td><td>High School Graduate</td><td>Completed secondary education</td></tr><tr><td><a name=\"educational-attainments-https://psa.gov.ph/classification/psced/level-C201303\"> </a><code>https://psa.gov.ph/classification/psced/level</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0C201303</td><td>College Graduate</td><td>Completed bachelor's degree</td></tr><tr><td><a name=\"educational-attainments-https://psa.gov.ph/classification/psced/level-C201304\"> </a><code>https://psa.gov.ph/classification/psced/level</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0C201304</td><td>Postgraduate</td><td>Completed master's or doctoral degree</td></tr></table></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/educational-attainments",
+  "version" : "0.2.0",
+  "name" : "EducationalAttainments",
+  "title" : "Educational Attainments",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-09T05:32:13+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "All categories of educational programs, courses, and attainment levels in the Philippines, based on the Philippine Standard Classification of Education (PSCED) published by the Philippine Statistics Authority (PSA)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psced/level",
+      "concept" : [{
+        "code" : "C201301",
+        "display" : "Elementary Graduate"
+      },
+      {
+        "code" : "C201302",
+        "display" : "High School Graduate"
+      },
+      {
+        "code" : "C201303",
+        "display" : "College Graduate"
+      },
+      {
+        "code" : "C201304",
+        "display" : "Postgraduate"
+      }]
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2026-04-07T00:00:00Z",
+    "total" : 4,
+    "offset" : 0,
+    "contains" : [{
+      "system" : "https://psa.gov.ph/classification/psced/level",
+      "code" : "C201301",
+      "display" : "Elementary Graduate"
+    },
+    {
+      "system" : "https://psa.gov.ph/classification/psced/level",
+      "code" : "C201302",
+      "display" : "High School Graduate"
+    },
+    {
+      "system" : "https://psa.gov.ph/classification/psced/level",
+      "code" : "C201303",
+      "display" : "College Graduate"
+    },
+    {
+      "system" : "https://psa.gov.ph/classification/psced/level",
+      "code" : "C201304",
+      "display" : "Postgraduate"
+    }]
+  }
+}

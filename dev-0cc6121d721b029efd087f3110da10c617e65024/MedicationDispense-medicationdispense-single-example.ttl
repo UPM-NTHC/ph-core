@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/MedicationDispense/medicationdispense-single-example> a fhir:MedicationDispense ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medicationdispense-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationdispense"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationdispense>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pharmacy dispensed 30 tablets of Twinact 40mg/5mg (Telmisartan + Amlodipine) to Juan Dela Cruz on March 15, 2025, based on prescription from Dr. Maria Clara Santos.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://verification.fda.gov.ph"^^xsd:anyURI ;
+         fhir:l <https://verification.fda.gov.ph>
+       ] ;
+       fhir:code [ fhir:v "DRP-10144" ] ;
+       fhir:display [ fhir:v "Twinact" ]
+     ] ) ;
+     fhir:text [ fhir:v "Twinact 40mg/5mg tablet" ]
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:context [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-single-example" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:function [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function>
+         ] ;
+         fhir:code [ fhir:v "finalchecker" ] ;
+         fhir:display [ fhir:v "Final Checker" ]
+       ] )
+     ] ;
+     fhir:actor [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+     ]
+  ] ) ; # 
+  fhir:authorizingPrescription ( [
+     fhir:l <https://fhir.doh.gov.ph/phcore/MedicationRequest/medicationrequest-single-example> ;
+     fhir:reference [ fhir:v "MedicationRequest/medicationrequest-single-example" ]
+  ] ) ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:373784005 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "373784005" ] ;
+       fhir:display [ fhir:v "Dispensing medication" ]
+     ] )
+  ] ; # 
+  fhir:quantity [
+     fhir:value [ fhir:v "30"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "Tablet" ] ;
+     fhir:system [
+       fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+       fhir:l <http://snomed.info/sct>
+     ] ;
+     fhir:code [ fhir:v "732936001" ]
+  ] ; # 
+  fhir:daysSupply [
+     fhir:value [ fhir:v "7"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "days" ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "d" ]
+  ] ; # 
+  fhir:whenPrepared [ fhir:v "2025-03-15T10:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:whenHandedOver [ fhir:v "2025-03-15T11:00:00+08:00"^^xsd:dateTime] ; # 
+  fhir:dosageInstruction ( [
+     fhir:sequence [ fhir:v 1 ] ;
+     fhir:text [ fhir:v "Take 1 tablet once daily" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

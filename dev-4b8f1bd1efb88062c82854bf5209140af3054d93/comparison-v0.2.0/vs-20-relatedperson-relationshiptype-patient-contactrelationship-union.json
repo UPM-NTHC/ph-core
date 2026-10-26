@@ -1,0 +1,26 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "070c6222-fa90-429c-98d0-fb5e959be485-50",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/070c6222-fa90-429c-98d0-fb5e959be485-50",
+  "name" : "UnionPatientRelationshipTypeAndPatientContactRelationship",
+  "title" : "Union of Patient relationship type And Patient Contact Relationship ",
+  "status" : "draft",
+  "date" : "2026-10-26T05:37:34+00:00",
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-not-a",
+        "value" : "O"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_PersonalRelationshipRoleType"
+      }]
+    }]
+  }
+}

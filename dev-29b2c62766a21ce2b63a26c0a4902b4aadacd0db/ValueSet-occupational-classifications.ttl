@@ -1,0 +1,103 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/occupational-classifications> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "occupational-classifications"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet occupational-classifications</b></p><a name=\"occupational-classifications\"> </a><a name=\"hcoccupational-classifications\"> </a><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on system Mock PSOC version 0.1.0</p><p>This value set contains 4 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name=\"occupational-classifications-https://psa.gov.ph/classification/psoc/unit-111102\"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style=\"white-space:nowrap\">  111102</td><td>Hospital Administrator</td><td>Manages hospital operations</td></tr><tr><td><a name=\"occupational-classifications-https://psa.gov.ph/classification/psoc/unit-111103\"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style=\"white-space:nowrap\">  111103</td><td>Medical Department Head</td><td>Head of a medical department</td></tr><tr><td><a name=\"occupational-classifications-https://psa.gov.ph/classification/psoc/unit-121101\"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style=\"white-space:nowrap\">  121101</td><td>General Manager</td><td>Manages overall operations of an organization</td></tr><tr><td><a name=\"occupational-classifications-https://psa.gov.ph/classification/psoc/unit-211101\"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style=\"white-space:nowrap\">  211101</td><td>Medical Doctor</td><td>Licensed physician practicing medicine</td></tr></table></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.doh.gov.ph/phcore/ValueSet/occupational-classifications"] ;
+  fhir:ValueSet.version [ fhir:value "0.2.0"] ;
+  fhir:ValueSet.name [ fhir:value "OccupationClassifications"] ;
+  fhir:ValueSet.title [ fhir:value "Occupation Classifications"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-09T08:09:08+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA)."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://psa.gov.ph/classification/psoc/unit" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111102" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hospital Administrator" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "111103" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medical Department Head" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "121101" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "General Manager" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "211101" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medical Doctor" ]
+       ]
+     ]
+  ] ;
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2026-04-07T00:00:00Z"^^xsd:dateTime ] ;
+     fhir:ValueSet.expansion.total [ fhir:value "4"^^xsd:integer ] ;
+     fhir:ValueSet.expansion.offset [ fhir:value "0"^^xsd:integer ] ;
+     fhir:ValueSet.expansion.parameter [
+       fhir:index 0 ;
+       fhir:ValueSet.expansion.parameter.name [ fhir:value "version" ] ;
+       fhir:ValueSet.expansion.parameter.valueUri [ fhir:value "https://psa.gov.ph/classification/psoc/unit|0.1.0" ]
+     ] ;
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0 ;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "https://psa.gov.ph/classification/psoc/unit" ] ;
+       fhir:ValueSet.expansion.contains.code [ fhir:value "111102" ] ;
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Hospital Administrator" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "https://psa.gov.ph/classification/psoc/unit" ] ;
+       fhir:ValueSet.expansion.contains.code [ fhir:value "111103" ] ;
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Medical Department Head" ]
+     ], [
+       fhir:index 2 ;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "https://psa.gov.ph/classification/psoc/unit" ] ;
+       fhir:ValueSet.expansion.contains.code [ fhir:value "121101" ] ;
+       fhir:ValueSet.expansion.contains.display [ fhir:value "General Manager" ]
+     ], [
+       fhir:index 3 ;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "https://psa.gov.ph/classification/psoc/unit" ] ;
+       fhir:ValueSet.expansion.contains.code [ fhir:value "211101" ] ;
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Medical Doctor" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/occupational-classifications.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

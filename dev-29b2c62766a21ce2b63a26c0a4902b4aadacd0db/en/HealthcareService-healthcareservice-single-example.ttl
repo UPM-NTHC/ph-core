@@ -1,0 +1,114 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/HealthcareService/healthcareservice-single-example> a fhir:HealthcareService ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "healthcareservice-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Philippine General Hospital Outpatient Department - General Medicine is an active healthcare service providing outpatient consultations. It is managed by the Department of Health - Satellite Office and located at Philippine General Hospital, Taft Avenue, Manila.</div>"
+  ] ;
+  fhir:HealthcareService.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "http://pgh.gov.ph/fhir/Identifier/service-id" ] ;
+     fhir:Identifier.value [ fhir:value "PGH-OPD-GMED-001" ]
+  ] ;
+  fhir:HealthcareService.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:HealthcareService.providedBy [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/organization-single-example" ]
+  ] ;
+  fhir:HealthcareService.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/service-category" ] ;
+       fhir:Coding.code [ fhir:value "27" ] ;
+       fhir:Coding.display [ fhir:value "Specialist Medical" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Specialist Medical" ]
+  ] ;
+  fhir:HealthcareService.type [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/service-type" ] ;
+       fhir:Coding.code [ fhir:value "124" ] ;
+       fhir:Coding.display [ fhir:value "General Practice" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "General Practice" ]
+  ] ;
+  fhir:HealthcareService.specialty [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:394802001 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "394802001" ] ;
+       fhir:Coding.display [ fhir:value "General medicine" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "General medicine" ]
+  ] ;
+  fhir:HealthcareService.location [
+     fhir:index -1 ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/Location/location-single-example> ;
+     fhir:Reference.reference [ fhir:value "Location/location-single-example" ]
+  ] ;
+  fhir:HealthcareService.name [ fhir:value "Outpatient Department - General Medicine"] ;
+  fhir:HealthcareService.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+63-2-5548-0000" ] ;
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ], [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "email" ] ;
+     fhir:ContactPoint.value [ fhir:value "opd.gmed@pgh.gov.ph" ] ;
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ] ;
+  fhir:HealthcareService.availableTime [
+     fhir:index -1 ;
+     fhir:HealthcareService.availableTime.daysOfWeek [
+       fhir:value "mon" ;
+       fhir:index -1
+     ], [
+       fhir:value "tue" ;
+       fhir:index -1
+     ], [
+       fhir:value "wed" ;
+       fhir:index -1
+     ], [
+       fhir:value "thu" ;
+       fhir:index -1
+     ], [
+       fhir:value "fri" ;
+       fhir:index -1
+     ] ;
+     fhir:HealthcareService.availableTime.availableStartTime [ fhir:value "08:00:00"^^xsd:time ] ;
+     fhir:HealthcareService.availableTime.availableEndTime [ fhir:value "17:00:00"^^xsd:time ]
+  ] ;
+  fhir:HealthcareService.notAvailable [
+     fhir:index -1 ;
+     fhir:HealthcareService.notAvailable.description [ fhir:value "Closed on public holidays" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/HealthcareService/healthcareservice-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

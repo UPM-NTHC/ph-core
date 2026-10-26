@@ -1,0 +1,21 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "bb78b133-e6d5-40ba-aed4-b8be82514327-98",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/bb78b133-e6d5-40ba-aed4-b8be82514327-98",
+  "name" : "UnionPractitionerRoleAndPractitionerRole",
+  "title" : "Union of Practitioner role And Practitioner role",
+  "status" : "draft",
+  "date" : "2026-10-23T04:37:24+00:00",
+  "compose" : {
+    "include" : [{
+      
+    },
+    {
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "223366009"
+      }]
+    }]
+  }
+}

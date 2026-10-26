@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "480aee8a-bc59-4976-b286-740398f9abc2-51",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/480aee8a-bc59-4976-b286-740398f9abc2-51",
+  "name" : "IntersectionPatientRelationshipTypeAndPatientContactRelationship",
+  "title" : "Intersection of Patient relationship type And Patient Contact Relationship ",
+  "status" : "draft",
+  "date" : "2026-10-26T05:49:06+00:00"
+}

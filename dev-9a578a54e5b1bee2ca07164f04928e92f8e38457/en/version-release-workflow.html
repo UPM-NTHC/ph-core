@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Version Release Workflow - Draft PH Core Implementation Guide v0.2.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Draft PH Core Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="changes.html">Changes</a>
+  </li>
+  <li>
+    <a href="version-release-workflow.html">Release Workflow</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Version Release Workflow</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Draft PH Core Implementation Guide - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/phcore/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Version Release Workflow</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#version-release-workflow" id="markdown-toc-version-release-workflow">Version Release Workflow</a>    <ul>
+      <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+      <li><a href="#release-philosophy" id="markdown-toc-release-philosophy">Release Philosophy</a></li>
+      <li><a href="#release-bpmn-diagram" id="markdown-toc-release-bpmn-diagram">Release BPMN Diagram</a></li>
+      <li><a href="#step-by-step-procedure" id="markdown-toc-step-by-step-procedure">Step-by-Step Procedure</a>        <ul>
+          <li><a href="#1-pre-release-checklist" id="markdown-toc-1-pre-release-checklist">1. Pre-Release Checklist</a></li>
+          <li><a href="#2-update-sushi-configyaml" id="markdown-toc-2-update-sushi-configyaml">2. Update <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a></li>
+          <li><a href="#3-create-the-tag" id="markdown-toc-3-create-the-tag">3. Create the Tag</a></li>
+          <li><a href="#4-cicd-build--publish" id="markdown-toc-4-cicd-build--publish">4. CI/CD Build &amp; Publish</a></li>
+          <li><a href="#5-register-in-fhir-ig-registry" id="markdown-toc-5-register-in-fhir-ig-registry">5. Register in FHIR IG Registry</a></li>
+          <li><a href="#6-verify-publication" id="markdown-toc-6-verify-publication">6. Verify Publication</a></li>
+          <li><a href="#7-post-release" id="markdown-toc-7-post-release">7. Post-Release</a></li>
+        </ul>
+      </li>
+      <li><a href="#cicd-reference" id="markdown-toc-cicd-reference">CI/CD Reference</a></li>
+      <li><a href="#version-history" id="markdown-toc-version-history">Version History</a></li>
+      <li><a href="#references" id="markdown-toc-references">References</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="version-release-workflow">Version Release Workflow</h1>
+
+<p>This page describes the formal process for releasing new versions of the PH Core Implementation Guide. The workflow ensures that every release is traceable, reproducible, and discoverable by downstream IGs.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>A PH Core release is <strong>not</strong> just a Git tag. It is a multi-stage process involving:</p>
+
+<ol>
+  <li><strong>Git tag</strong> → triggers CI/CD</li>
+  <li><strong>CI/CD build</strong> → runs SUSHI + IG Publisher, produces <code class="language-plaintext highlighter-rouge">output/</code></li>
+  <li><strong>GitHub Pages publish</strong> → versioned directory (<code class="language-plaintext highlighter-rouge">gh-pages/X.Y.Z/</code>)</li>
+  <li><strong>FHIR IG Registry</strong> → PR to <code class="language-plaintext highlighter-rouge">FHIR/ig-registry</code> <code class="language-plaintext highlighter-rouge">fhir-ig-list.json</code></li>
+  <li><strong>Package Registry</strong> → <code class="language-plaintext highlighter-rouge">packages.fhir.org</code> indexes the published package</li>
+</ol>
+
+<blockquote>
+  <p><strong>Key distinction</strong>: The <a href="https://packages.fhir.org">FHIR Package Registry</a> and the <a href="https://github.com/FHIR/ig-registry">FHIR IG Registry</a> are <strong>separate</strong> systems. The Package Registry serves <code class="language-plaintext highlighter-rouge">.tgz</code> packages; the IG Registry lists published guides with their canonical URLs and history pages.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="release-philosophy">Release Philosophy</h2>
+
+<p>PH Core follows <a href="https://semver.org/">semantic versioning</a> adapted for FHIR Implementation Guides:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bump</th>
+      <th>When to use</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Patch</strong> (0.0.1)</td>
+      <td>Bug fixes, validation corrections, documentation typos</td>
+      <td>Fix QA error, correct binding strength</td>
+    </tr>
+    <tr>
+      <td><strong>Minor</strong> (0.1.0)</td>
+      <td>New profiles, extensions, or value sets; non-breaking additions</td>
+      <td>Add PHCoreCondition profile</td>
+    </tr>
+    <tr>
+      <td><strong>Major</strong> (1.0.0)</td>
+      <td>Breaking changes to existing profiles, canonical URL changes, FHIR version upgrade</td>
+      <td>Rebase to FHIR R5</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="release-bpmn-diagram">Release BPMN Diagram</h2>
+
+<pre><code class="language-mermaid">flowchart TB
+    subgraph PRE["Pre-Release"]
+        A1["Merge to main&lt;br/&gt;CI passes (SUSHI + IG Publisher)"]
+        A2["Update changes.md&lt;br/&gt;with release notes"]
+        A3["Reset releaseLabel&lt;br/&gt;ci-build → release"]
+    end
+
+    subgraph TAG["Tagging"]
+        B1["Create annotated Git tag&lt;br/&gt;vX.Y.Z"]
+        B2["Tag points to verified commit&lt;br/&gt;on main"]
+    end
+
+    subgraph BUILD["CI/CD Build"]
+        C1["Trigger: push tag v*"]
+        C2["Patch sushi-config.yaml&lt;br/&gt;version + releaseLabel"]
+        C3["Run SUSHI + IG Publisher"]
+        C4["Produce output/ artifacts"]
+    end
+
+    subgraph PAGES["GitHub Pages"]
+        D1["Checkout gh-pages branch"]
+        D2["Copy output/ → gh-pages/X.Y.Z/"]
+        D3["Update /current/ redirect"]
+        D4["Update history.html"]
+        D5["Update package-list.json"]
+        D6["Update index.html landing page"]
+    end
+
+    subgraph REGISTRY["FHIR Registries"]
+        E1["PR to FHIR/ig-registry&lt;br/&gt;fhir-ig-list.json"]
+        E2["packages.fhir.org&lt;br/&gt;indexes package"]
+    end
+
+    subgraph VERIFY["Verification"]
+        F1["Confirm gh-pages/X.Y.Z/ renders"]
+        F2["Confirm package-list.json valid"]
+        F3["Downstream IG resolves&lt;br/&gt;fhir.ph.core#X.Y.Z"]
+    end
+
+    A1 --&gt; A2 --&gt; A3 --&gt; B1
+    B1 --&gt; B2 --&gt; C1
+    C1 --&gt; C2 --&gt; C3 --&gt; C4 --&gt; D1
+    D1 --&gt; D2 --&gt; D3 --&gt; D4 --&gt; D5 --&gt; D6 --&gt; E1
+    E1 --&gt; E2 --&gt; F1 --&gt; F2 --&gt; F3
+
+    style PRE fill:#e1f5e1,stroke:#4caf50
+    style TAG fill:#fff3e0,stroke:#ff9800
+    style BUILD fill:#e3f2fd,stroke:#2196f3
+    style PAGES fill:#fff8e1,stroke:#ffc107
+    style REGISTRY fill:#fce4ec,stroke:#e91e63
+    style VERIFY fill:#f3e5f5,stroke:#9c27b0
+</code></pre>
+
+<hr />
+
+<h2 id="step-by-step-procedure">Step-by-Step Procedure</h2>
+
+<h3 id="1-pre-release-checklist">1. Pre-Release Checklist</h3>
+
+<p>Before tagging, ensure all of the following are complete:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">main</code> branch builds cleanly: <code class="language-plaintext highlighter-rouge">sushi .</code> returns <strong>0 Errors, 0 Warnings</strong></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />IG Publisher builds successfully: <code class="language-plaintext highlighter-rouge">./_genonce.sh</code> or <code class="language-plaintext highlighter-rouge">./_build.sh</code> (option 2)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />QA report (<code class="language-plaintext highlighter-rouge">output/qa.html</code>) has no errors and only acceptable warnings</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />All new profiles have examples</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">changes.md</code> is updated with release notes for this version</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">package-list.json</code> exists (or will be auto-generated by CI/CD)</li>
+</ul>
+
+<h3 id="2-update-sushi-configyaml">2. Update <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Before (development)</span>
+<span class="na">version</span><span class="pi">:</span> <span class="s">0.2.0</span>
+<span class="na">releaseLabel</span><span class="pi">:</span> <span class="s">ci-build</span>
+
+<span class="c1"># After (release preparation)</span>
+<span class="na">version</span><span class="pi">:</span> <span class="s">0.3.0</span>
+<span class="na">releaseLabel</span><span class="pi">:</span> <span class="s">release</span>
+</code></pre></div></div>
+
+<p>Valid <code class="language-plaintext highlighter-rouge">releaseLabel</code> values per FHIR IG publishing:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ci-build</code> — continuous integration, not published</li>
+  <li><code class="language-plaintext highlighter-rouge">draft</code> — working draft for ballot or review</li>
+  <li><code class="language-plaintext highlighter-rouge">release</code> — stable, published version</li>
+</ul>
+
+<h3 id="3-create-the-tag">3. Create the Tag</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/Github/ph-core
+
+<span class="c"># Fetch latest main</span>
+git pull origin main
+
+<span class="c"># Create annotated tag</span>
+git tag <span class="nt">-a</span> v0.3.0 <span class="nt">-m</span> <span class="s2">"v0.3.0 - Stabilization Release"</span>
+
+<span class="c"># Push tag to origin (triggers CI/CD)</span>
+git push origin v0.3.0
+</code></pre></div></div>
+
+<h3 id="4-cicd-build--publish">4. CI/CD Build &amp; Publish</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">ig-release.yml</code> workflow (or equivalent) performs:</p>
+
+<ol>
+  <li><strong>Patch <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></strong> → sets <code class="language-plaintext highlighter-rouge">version</code> and <code class="language-plaintext highlighter-rouge">releaseLabel: release</code></li>
+  <li><strong>Install dependencies</strong> → Node.js, SUSHI, Java 21, Jekyll, Graphviz</li>
+  <li><strong>Download IG Publisher</strong> → <code class="language-plaintext highlighter-rouge">input-cache/publisher.jar</code></li>
+  <li><strong>Run IG Publisher</strong> → <code class="language-plaintext highlighter-rouge">java -jar publisher.jar ig.ini</code></li>
+  <li><strong>Publish to <code class="language-plaintext highlighter-rouge">gh-pages</code></strong>:
+    <ul>
+      <li>Copy <code class="language-plaintext highlighter-rouge">output/</code> → <code class="language-plaintext highlighter-rouge">gh-pages/X.Y.Z/</code></li>
+      <li>Update <code class="language-plaintext highlighter-rouge">/current/</code> redirect to latest release</li>
+      <li>Update <code class="language-plaintext highlighter-rouge">history.html</code> with all releases</li>
+      <li>Update <code class="language-plaintext highlighter-rouge">package-list.json</code> (FHIR package feed)</li>
+      <li>Update <code class="language-plaintext highlighter-rouge">index.html</code> landing page</li>
+    </ul>
+  </li>
+</ol>
+
+<blockquote>
+  <p><strong>Anti-overwrite protection</strong>: The CI/CD refuses to overwrite an existing release directory.</p>
+</blockquote>
+
+<h3 id="5-register-in-fhir-ig-registry">5. Register in FHIR IG Registry</h3>
+
+<p>PH Core is <strong>not yet</strong> registered in the <a href="https://github.com/FHIR/ig-registry">FHIR IG Registry</a>. To register:</p>
+
+<ol>
+  <li>Fork <code class="language-plaintext highlighter-rouge">https://github.com/FHIR/ig-registry</code></li>
+  <li>Edit <code class="language-plaintext highlighter-rouge">fhir-ig-list.json</code> and add an entry:
+    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PH Core"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"National Base"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"npm-name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fhir.ph.core"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Philippine Core FHIR Implementation Guide defines minimum expectations for data commonly exchanged across Philippine health systems."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"authority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UP Manila National TeleHealth Center"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ph"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"en"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"history"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://UP-Manila-SILab.github.io/ph-core/history.html"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"canonical"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ci-build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://build.fhir.org/ig/UP-Manila-SILab/ph-core"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"editions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Baseline"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"ig-version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"package"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fhir.ph.core#0.1.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"fhir-version"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"4.0.1"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://UP-Manila-SILab.github.io/ph-core/0.1.0"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Profile Expansion"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"ig-version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"package"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fhir.ph.core#0.2.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"fhir-version"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"4.0.1"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://UP-Manila-SILab.github.io/ph-core/0.2.0"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stabilization"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"ig-version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.3.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"package"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fhir.ph.core#0.3.0"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"fhir-version"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"4.0.1"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://UP-Manila-SILab.github.io/ph-core/0.3.0"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Submit a PR to <code class="language-plaintext highlighter-rouge">FHIR/ig-registry</code></li>
+</ol>
+
+<blockquote>
+  <p><strong>Note</strong>: The registry maintainers check JSON validity via CI. Invalid JSON will be rejected.</p>
+</blockquote>
+
+<h3 id="6-verify-publication">6. Verify Publication</h3>
+
+<ol>
+  <li>Wait 5–15 minutes for CI/CD to complete.</li>
+  <li>Confirm <code class="language-plaintext highlighter-rouge">gh-pages/X.Y.Z/</code> renders at <code class="language-plaintext highlighter-rouge">https://UP-Manila-SILab.github.io/ph-core/X.Y.Z/</code></li>
+  <li>Confirm <code class="language-plaintext highlighter-rouge">https://UP-Manila-SILab.github.io/ph-core/current/</code> redirects to the latest release.</li>
+  <li>Confirm <code class="language-plaintext highlighter-rouge">package-list.json</code> is valid (FHIR tooling can parse it).</li>
+  <li>Confirm downstream IGs can resolve the dependency:
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">dependencies</span><span class="pi">:</span>
+  <span class="na">fhir.ph.core</span><span class="pi">:</span> <span class="s">0.3.0</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="7-post-release">7. Post-Release</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Announce in PH Core Development chat</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Update downstream IGs (eReferral, NHDR) to reference the new version</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Reset <code class="language-plaintext highlighter-rouge">releaseLabel</code> to <code class="language-plaintext highlighter-rouge">ci-build</code> on <code class="language-plaintext highlighter-rouge">main</code> for continued development</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Update the FHIR IG Registry entry if this is a new edition</li>
+</ul>
+
+<hr />
+
+<h2 id="cicd-reference">CI/CD Reference</h2>
+
+<p>The release workflow is modeled after the <a href="https://github.com/jgsuess/ph-ereferral/blob/main/.github/workflows/ig-release.yml">PH eReferral IG Release Workflow</a> by Jörn Guy Süß (CSIRO).</p>
+
+<p>Key features of the CI/CD:</p>
+<ul>
+  <li><strong>Trigger</strong>: <code class="language-plaintext highlighter-rouge">push</code> tags matching <code class="language-plaintext highlighter-rouge">v*</code></li>
+  <li><strong>Version derivation</strong>: Extracts version from tag (<code class="language-plaintext highlighter-rouge">v0.3.0</code> → <code class="language-plaintext highlighter-rouge">0.3.0</code>)</li>
+  <li><strong>Dynamic patching</strong>: Python script patches <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> at build time</li>
+  <li><strong>Idempotent</strong>: Refuses to overwrite an existing release</li>
+  <li><strong>Auto-generated pages</strong>: <code class="language-plaintext highlighter-rouge">history.html</code>, <code class="language-plaintext highlighter-rouge">index.html</code>, <code class="language-plaintext highlighter-rouge">package-list.json</code></li>
+</ul>
+
+<hr />
+
+<h2 id="version-history">Version History</h2>
+
+<p>For a chronological list of all releases, see the <a href="changes.html">Changes</a> page.</p>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://packages.fhir.org/fhir.ph.core">FHIR Package Registry</a></li>
+  <li><a href="https://github.com/FHIR/ig-registry">FHIR IG Registry</a></li>
+  <li><a href="https://fshschool.org/docs/sushi/configuration/">SUSHI Configuration</a></li>
+  <li><a href="https://hl7.org.au/fhir/core/2.0.0/changes.html">AU Core Version History</a></li>
+  <li><a href="https://semver.org/">Semantic Versioning</a></li>
+  <li><a href="https://github.com/jgsuess/ph-ereferral/blob/main/.github/workflows/ig-release.yml">PH eReferral IG Release Workflow</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  
+          Package fhir.ph.core#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-06-09 05:37:00 +0000">
+    2026-06-09
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

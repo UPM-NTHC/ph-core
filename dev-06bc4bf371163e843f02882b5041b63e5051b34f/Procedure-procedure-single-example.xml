@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="procedure-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Procedure procedure-single-example</b></p><a name="procedure-single-example"> </a><a name="hcprocedure-single-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-procedure.html">PH Core Procedure</a></p></div><p><b>basedOn</b>: <a href="ServiceRequest-servicerequest-appendectomy-example.html">ServiceRequest Appendectomy</a></p><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 387713003}">Surgical procedure</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 80146002}">Laparoscopic appendectomy</span></p><p><b>subject</b>: <a href="Patient-patient-single-example.html">Juan Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-surgery-example.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2024-01-15 07:30:00+0800 --&gt; 2024-01-16 12:00:00+0800</a></p><p><b>performed</b>: 2024-01-15 08:30:00+0800 --&gt; 2024-01-15 10:15:00+0800</p><p><b>recorder</b>: <a href="Practitioner-practitioner-single-example.html">Maria Clara Santos (official)</a></p><p><b>asserter</b>: <a href="RelatedPerson-relatedperson-single-example.html">Maria Cruz Santos(official) - Mother (National unique individual identifier: PhilSysID#1234-1234567-1 (use: official))</a></p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Function</b></td><td><b>Actor</b></td><td><b>OnBehalfOf</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 223366009}">Healthcare professional</span></td><td><a href="Practitioner-practitioner-single-example.html">Maria Clara Santos (official)</a></td><td><a href="Organization-organization-pgh-example.html">Philippine General Hospital (Healthcare Provider) (https://nhfr.doh.gov.ph/#1234567890)</a></td></tr></table><p><b>reasonCode</b>: <span title="Codes:{http://snomed.info/sct 74400008}">Acute appendicitis</span></p><p><b>reasonReference</b>: <a href="Condition-condition-appendicitis-example.html">Condition Appendicitis</a></p><p><b>bodySite</b>: <span title="Codes:{http://snomed.info/sct 66754008}">Right lower quadrant abdomen</span></p><p><b>outcome</b>: <span title="Codes:{http://snomed.info/sct 385669000}">Procedure completed without complications</span></p><p><b>followUp</b>: <span title="Codes:{http://snomed.info/sct 226007004}">Follow-up visit in 7 days for wound check</span></p><p><b>note</b>: @2024-01-15 10:30:00+0800</p><blockquote><div><p>Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact. No perforation noted.</p>
+</div></blockquote></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/servicerequest-appendectomy-example"/>
+  </basedOn>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="387713003"/>
+      <display value="Surgical procedure"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="80146002"/>
+      <display value="Appendectomy"/>
+    </coding>
+    <text value="Laparoscopic appendectomy"/>
+  </code>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/encounter-surgery-example"/>
+  </encounter>
+  <performedPeriod>
+    <start value="2024-01-15T08:30:00+08:00"/>
+    <end value="2024-01-15T10:15:00+08:00"/>
+  </performedPeriod>
+  <recorder>
+    <reference value="Practitioner/practitioner-single-example"/>
+  </recorder>
+  <asserter>
+    <reference value="RelatedPerson/relatedperson-single-example"/>
+  </asserter>
+  <performer>
+    <function>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="223366009"/>
+        <display value="Healthcare professional"/>
+      </coding>
+    </function>
+    <actor>
+      <reference value="Practitioner/practitioner-single-example"/>
+    </actor>
+    <onBehalfOf>
+      <reference value="Organization/organization-pgh-example"/>
+    </onBehalfOf>
+  </performer>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="74400008"/>
+      <display value="Appendicitis"/>
+    </coding>
+    <text value="Acute appendicitis"/>
+  </reasonCode>
+  <reasonReference>
+    <reference value="Condition/condition-appendicitis-example"/>
+  </reasonReference>
+  <bodySite>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="66754008"/>
+      <display value="Appendix structure"/>
+    </coding>
+    <text value="Right lower quadrant abdomen"/>
+  </bodySite>
+  <outcome>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="385669000"/>
+      <display value="Successful"/>
+    </coding>
+    <text value="Procedure completed without complications"/>
+  </outcome>
+  <followUp>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="226007004"/>
+      <display value="Post-surgical wound care"/>
+    </coding>
+    <text value="Follow-up visit in 7 days for wound check"/>
+  </followUp>
+  <note>
+    <time value="2024-01-15T10:30:00+08:00"/>
+    <text value="Patient tolerated procedure well. Minimal blood loss. Appendix was inflamed but intact. No perforation noted."/>
+  </note>
+</Procedure>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ServiceRequest xmlns="http://hl7.org/fhir">
+  <id value="servicerequest-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ServiceRequest servicerequest-single-example</b></p><a name="servicerequest-single-example"> </a><a name="hcservicerequest-single-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-serviceRequest.html">PH Core ServiceRequest</a></p></div><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title="Codes:{http://snomed.info/sct 108252007}">Laboratory procedure</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 33747003}">Fasting blood glucose test</span></p><p><b>subject</b>: <a href="Patient-patient-single-example.html">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href="Encounter-encounter-single-example.html">Encounter: identifier = http://example.org/encounter-id#ENC-12345; status = finished; class = ambulatory (ActCode#AMB); type = ambulatory; period = 2023-01-01 10:00:00+0000 --&gt; 2023-01-01 11:00:00+0000</a></p><p><b>occurrence</b>: 2024-03-15 10:00:00+0800</p><p><b>authoredOn</b>: 2024-03-15 09:30:00+0800</p><p><b>requester</b>: <a href="Practitioner-practitioner-single-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>supportingInfo</b>: <a href="Condition-condition-single-example.html">Condition Diabetes mellitus type 2</a></p></div>
+  </text>
+  <status value="active"/>
+  <intent value="order"/>
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="108252007"/>
+      <display value="Laboratory procedure"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="33747003"/>
+      <display value="Glucose measurement, blood"/>
+    </coding>
+    <text value="Fasting blood glucose test"/>
+  </code>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/encounter-single-example"/>
+  </encounter>
+  <occurrenceDateTime value="2024-03-15T10:00:00+08:00"/>
+  <authoredOn value="2024-03-15T09:30:00+08:00"/>
+  <requester>
+    <reference value="Practitioner/practitioner-single-example"/>
+  </requester>
+  <supportingInfo>
+    <reference value="Condition/condition-single-example"/>
+  </supportingInfo>
+</ServiceRequest>

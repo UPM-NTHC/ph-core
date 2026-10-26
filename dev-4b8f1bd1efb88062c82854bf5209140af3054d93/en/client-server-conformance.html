@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Client Server Conformance - Draft PH Core Implementation Guide v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<style>
+/* Style unclassed narrative tables while excluding Publisher tables that carry
+   classes or generated/presentation attributes. */
+table:not([class]):not([style]):not([border]):not([data-fhir]) {
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+table:not([class]):not([style]):not([border]):not([data-fhir]) th,
+table:not([class]):not([style]):not([border]):not([data-fhir]) td {
+  border: 1px solid #e2e8f0;
+  padding: 8px 14px;
+  vertical-align: top;
+}
+
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Draft PH Core Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="client-server-conformance.html">Client and Server Conformance</a>
+      </li>
+      <li>
+        <a href="sex-and-gender-guidance.html">Sex and Gender</a>
+      </li>
+      <li>
+        <a href="sample-case.html">Worked Case</a>
+      </li>
+      <li>
+        <a href="fhir-rest-tutorial.html">FHIR REST Tutorial</a>
+      </li>
+      <li>
+        <a href="examples.html">Example</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <li>
+        <a href="otherIds.html">Other Identifiers</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Client Server Conformance</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Draft PH Core Implementation Guide - Local Development build (v0.2.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/phcore/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Client Server Conformance</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#applying-profile-obligations" id="markdown-toc-applying-profile-obligations">Applying profile obligations</a></li>
+  <li><a href="#missing-data" id="markdown-toc-missing-data">Missing data</a></li>
+  <li><a href="#declaring-support" id="markdown-toc-declaring-support">Declaring support</a></li>
+  <li><a href="#search-and-related-resource-retrieval" id="markdown-toc-search-and-related-resource-retrieval">Search and related-resource retrieval</a></li>
+  <li><a href="#conditional-writes-and-atomic-ingestion" id="markdown-toc-conditional-writes-and-atomic-ingestion">Conditional writes and atomic ingestion</a></li>
+  <li><a href="#profile-aware-validation" id="markdown-toc-profile-aware-validation">Profile-aware validation</a></li>
+  <li><a href="#deployment-roles" id="markdown-toc-deployment-roles">Deployment roles</a></li>
+</ul>
+
+</div>
+<p>PH Core defines two API actors: <strong>PH Core Client</strong>, which initiates a request, and <strong>PH Core Server</strong>, which accepts the request and provides a response. A system may implement either role or both. These roles apply per exchange and do not prescribe a centralized or peer-to-peer topology.</p>
+
+<h3 id="applying-profile-obligations">Applying profile obligations</h3>
+
+<p>Handling obligations apply when a Client processes response resources or a Server processes resources in incoming requests it supports. Production obligations apply when a Client produces resources for a supported request or a Server produces response resources. Production does not necessarily mean original clinical capture: a Server may assemble, transform or return previously stored resources.</p>
+
+<p>Read-only Clients do not need to implement resource authoring. Servers do not need to originate clinical facts. For selected paths carrying <code class="language-plaintext highlighter-rouge">SHALL:populate-if-known</code>, producers SHALL include values they know and are permitted to share; they are not required to be capable of ever obtaining an unknown value. This applies to resource-bearing requests produced by Clients and response resources produced by Servers. Handling applies separately when received content is processed. <code class="language-plaintext highlighter-rouge">able-to-populate</code>, <code class="language-plaintext highlighter-rouge">populate-if-known</code> and <code class="language-plaintext highlighter-rouge">populate</code> remain distinct. <code class="language-plaintext highlighter-rouge">handle</code> does not automatically require persistence or display. Display obligations apply when content is presented to a human.</p>
+
+<p>The ActorDefinitions describe roles, profile obligations describe element behavior, and CapabilityStatements describe the API contract. None replaces the other. A Cardinality constraint remains an instance constraint regardless of actor.</p>
+
+<h3 id="missing-data">Missing data</h3>
+
+<p>These rules apply to producers of request or response resources and to systems exchanging PH Core profiles outside REST. They apply together with the selected profile's cardinalities, bindings, invariants and actor obligations.</p>
+
+<ul>
+  <li>Producers SHALL include known, shareable values where the selected population obligation requires them. A missing value does not excuse omission of a known value.</li>
+  <li>When an optional value and any meaningful reason for its absence are unavailable, producers SHALL omit the element. Must Support alone does not require an unknown placeholder, a new collection workflow or a fabricated value.</li>
+  <li>Producers SHOULD preserve a known, shareable absence reason when the applicable profile permits it and that reason is relevant to the exchange. An optional element MAY carry an explicit absence reason; it need not be made mandatory to communicate that reason.</li>
+  <li>Mandatory elements and conditionally required content SHALL satisfy the applicable profile even when the real value is unavailable. For a permitted non-coded datatype, use the standard <a href="https://hl7.org/fhir/R4/extension-data-absent-reason.html">Data Absent Reason extension</a>. For a missing required date with no more specific known reason, use <code class="language-plaintext highlighter-rouge">unknown</code>.</li>
+  <li>An absence reason on a parent SHALL NOT be treated as satisfying required children, fixed values or other constraints. The Patient name constraint and inherited Observation result constraint define their respective value/absence exclusions.</li>
+</ul>
+
+<p>The general extension representation rules do not establish a named DAR slice, support obligation or new invariant on each primitive in PH Core. Known partial dates retain their recorded precision; do not invent dates to fill missing information.</p>
+
+<p>For Observations, use <code class="language-plaintext highlighter-rouge">Observation.dataAbsentReason</code> for an absent top-level result and <code class="language-plaintext highlighter-rouge">Observation.component.dataAbsentReason</code> for an absent component result, as illustrated in blood-pressure examples. A top-level result value and its native absence reason SHALL NOT coexist under inherited R4 <code class="language-plaintext highlighter-rouge">obs-6</code>. The <a href="StructureDefinition-ph-core-observation-clinical-result.html">Clinical Result profile</a> requires a value or reason for an individual result without components or member observations. Panels may instead carry their results through <code class="language-plaintext highlighter-rouge">component</code> or <code class="language-plaintext highlighter-rouge">hasMember</code>; they do not need a top-level reason solely because they have no scalar value. The generic Observation profile does not gain additional DAR obligations or component-presence invariants from this guidance.</p>
+
+<p>For coded elements, preserve meaningful source text when the datatype and binding permit it. For extensible bindings, an appropriate concept in the bound value set SHALL be used when available. Use an appropriate exceptional concept from the applicable value set before considering an allowed external absence code. For a selected screening question whose answer value set contains an appropriate exceptional answer, use that answer in <code class="language-plaintext highlighter-rouge">valueCodeableConcept</code>; otherwise use native Observation DAR when appropriate. Required bindings SHALL be respected: generic DAR coding outside the required value set is not a replacement for a bound status or intent. If no truthful conformant representation exists, follow the applicable exchange's error or reconciliation process rather than invent a value. This guidance does not add custom hasValue() invariants to status or intent.</p>
+
+<p><code class="language-plaintext highlighter-rouge">unknown</code>, <code class="language-plaintext highlighter-rouge">not-asked</code>, <code class="language-plaintext highlighter-rouge">asked-declined</code>, <code class="language-plaintext highlighter-rouge">masked</code> and <code class="language-plaintext highlighter-rouge">not-applicable</code> convey different facts. Producers SHALL select the reason supported by the source and SHALL NOT infer refusal or masking from a blank field. Absence of an allergy record does not assert no known allergies. Use an appropriate clinical assertion for known negative findings.</p>
+
+<p>Patient names and national identifiers remain optional. Preserve meaningful text-only names when their parts cannot be distinguished. Omit unknown optional race, indigenous-status, occupation and geographic items by default; their existing structures and bindings still apply. <code class="language-plaintext highlighter-rouge">Others</code> is not an unknown indigenous classification, and DAR is not a geographic identity.</p>
+
+<p>Processors SHALL correctly interpret supported absence representations as missing content with the stated reason, rather than as actual dates, measurements, identifiers or clinical negative findings. Handling does not automatically require persistence or display. When displaying an absence reason, present its meaning and preserve the distinction from a measured value. Validation of an instance and compliance with a producer's known-value obligations are separate checks.</p>
+
+<p>See the <a href="examples.html#missing-data-examples">missing-data examples</a> for the Patient name extension, native Observation reasons and optional omission. The named Patient DAR slice follows US Core's explicit missing-name pattern; allowing meaningful name.text is a PH adaptation. General missing-data guidance is not evidence that US Core declares a DAR slice on every optional field.</p>
+
+<h3 id="declaring-support">Declaring support</h3>
+
+<p>The <a href="CapabilityStatement-PHCoreClientCapabilityStatement.html">Client CapabilityStatement</a> supplies the basic request-initiator requirements. The <a href="CapabilityStatement-PHCoreServerCapabilityStatement.html">Server CapabilityStatement</a> contains the resource and search catalog. Both are requirements statements, not claims that a particular deployment implements all catalog entries.</p>
+
+<p>Each REST actor SHALL support at least one relevant PH Core resource profile. A patient-centric deployment SHALL support PH Core Patient for its exchanged patient context. A directory serving providers, organizations, locations or services does not need Patient solely to claim Server conformance. Resource-level MAY means a resource is selectable; nested SHALL requirements apply when that resource is selected for the specified interaction. Additional capabilities may be implemented and SHALL be declared in the deployment statement.</p>
+
+<p>The Address profile constrains embedded datatype content and is not a REST resource. A reference to a base FHIR resource without a PH Core profile does not create a new PH Core profile or make that resource universally mandatory. Implementations SHALL declare how supported references are handled and make the resources needed for their use cases accessible through declared arrangements. This baseline does not require all references to be local. The catalog recommends explicit bounded <code class="language-plaintext highlighter-rouge">_include</code> and <code class="language-plaintext highlighter-rouge">_revinclude</code> values when the related resource types are supported and the authorized resources are locally accessible.</p>
+
+<p>Claim and Task are optional API catalog entries. Their profiles alone do not establish claim submission, adjudication, referral state transitions or acknowledgement workflows. Downstream guides define those contracts. Create, update, patch and delete remain selectable interactions. Selecting create or update triggers the conditional-write and atomic-ingestion requirements below. Version and instance history are recommended for persisted clinical records; type/system history and batch remain optional. <code class="language-plaintext highlighter-rouge">$everything</code>, <code class="language-plaintext highlighter-rouge">$document</code> and <code class="language-plaintext highlighter-rouge">$summary</code> are not required by this baseline. Selecting optional API capabilities does not waive profile constraints or applicable element obligations.</p>
+
+<p>Servers SHALL return an implementation-specific CapabilityStatement from <code class="language-plaintext highlighter-rouge">GET [base]/metadata</code>. It SHALL declare actual supported capabilities, use <code class="language-plaintext highlighter-rouge">kind = instance</code>, and identify this Server requirements statement in <code class="language-plaintext highlighter-rouge">instantiates</code>. A Client SHALL document its actual capabilities in an implementation-specific statement but is not required to expose a server endpoint. A dual-role implementation MAY include both <code class="language-plaintext highlighter-rouge">rest.mode = client</code> and <code class="language-plaintext highlighter-rouge">rest.mode = server</code>, and identify both applicable PH Core statements in <code class="language-plaintext highlighter-rouge">instantiates</code>. It SHALL claim only requirements it actually satisfies; a partial implementation does not acquire conformance by copying a requirements statement into <code class="language-plaintext highlighter-rouge">/metadata</code>.</p>
+
+<p>Systems exchanging files, documents or messages without implementing the baseline REST contract may claim conformance to supported PH Core profiles. Profile-only conformance does not imply Client or Server API conformance.</p>
+
+<h3 id="search-and-related-resource-retrieval">Search and related-resource retrieval</h3>
+
+<p>For each resource selected for PH Core REST access, the Server <strong>SHALL</strong> support <code class="language-plaintext highlighter-rouge">read</code> and <code class="language-plaintext highlighter-rouge">search-type</code>, including Claim, Task, Medication and Provenance. A Client selects the profiles and queries needed for its use case; it is not required to implement the entire Server catalog.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>Expectation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Common filters</td>
+      <td><strong>SHALL</strong> support <code class="language-plaintext highlighter-rouge">_id</code>, <code class="language-plaintext highlighter-rouge">_lastUpdated</code>, <code class="language-plaintext highlighter-rouge">_profile</code>; <strong>SHOULD</strong> support <code class="language-plaintext highlighter-rouge">_tag</code>, <code class="language-plaintext highlighter-rouge">_security</code>, <code class="language-plaintext highlighter-rouge">_source</code>.</td>
+    </tr>
+    <tr>
+      <td>Identity and context</td>
+      <td><strong>SHALL</strong> support the listed identifier, patient/target and other SHALL filters for the selected resource. Provenance uses target and event context; it has no standard business identifier element.</td>
+    </tr>
+    <tr>
+      <td>Resource-specific retrieval</td>
+      <td><strong>SHALL</strong> support filters and combinations marked SHALL; <strong>SHOULD</strong> support those marked SHOULD in the Server catalog.</td>
+    </tr>
+    <tr>
+      <td>Methods and paging</td>
+      <td><strong>SHALL</strong> support GET and POST search, <code class="language-plaintext highlighter-rouge">_count</code> and FHIR paging links. Returned match counts <strong>SHALL NOT</strong> exceed <code class="language-plaintext highlighter-rouge">_count</code>; zero requests a count-only response. Clients follow returned paging links.</td>
+    </tr>
+    <tr>
+      <td>Filter semantics</td>
+      <td><strong>SHALL</strong> support exact <code class="language-plaintext highlighter-rouge">_id</code>, namespace-qualified <code class="language-plaintext highlighter-rouge">system|code</code> token matching and ordinary AND combinations of supported filters. Single-target literal-reference searches <strong>SHALL</strong> accept the id and Type/id forms. Mandatory date filters <strong>SHALL</strong> support <code class="language-plaintext highlighter-rouge">gt</code>, <code class="language-plaintext highlighter-rouge">ge</code>, <code class="language-plaintext highlighter-rouge">lt</code>, <code class="language-plaintext highlighter-rouge">le</code> and repeated bounds for ranges.</td>
+    </tr>
+    <tr>
+      <td>Refinements</td>
+      <td><strong>SHOULD</strong> support <code class="language-plaintext highlighter-rouge">_sort</code> on applicable declared token/string/date filters, token alternatives where applicable, and single-hop identifier chaining when the target resource is supported and locally searchable.</td>
+    </tr>
+    <tr>
+      <td>Related content</td>
+      <td><strong>SHOULD</strong> support the catalog's explicit <code class="language-plaintext highlighter-rouge">_include</code> paths and <code class="language-plaintext highlighter-rouge">_revinclude=Provenance:target</code> when both resource types are supported and the referenced resources are locally accessible and authorized.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Examples of the required combinations include Observation <code class="language-plaintext highlighter-rouge">patient+code+date</code>, Encounter <code class="language-plaintext highlighter-rouge">patient+date</code> and <code class="language-plaintext highlighter-rouge">patient+status</code>, MedicationRequest <code class="language-plaintext highlighter-rouge">patient+status+intent</code>, and Provenance <code class="language-plaintext highlighter-rouge">target+recorded</code>. The machine-readable search-parameter-combination extensions identify these combinations and their strengths. Declaring query support does not add MS, require every instance to contain the indexed value, or change the profile's capture/population obligations.</p>
+
+<p><code class="language-plaintext highlighter-rouge">_profile</code> searches asserted <code class="language-plaintext highlighter-rouge">meta.profile</code> values; a match is not proof that the resource was validated. <code class="language-plaintext highlighter-rouge">_security</code> filtering is not a replacement for authorization. <code class="language-plaintext highlighter-rouge">_lastUpdated</code> searches current resource state and is not a complete deletion feed; deletion-aware synchronization requires a declared history/tombstone or equivalent contract.</p>
+
+<p>Single-hop chaining such as <code class="language-plaintext highlighter-rouge">patient.identifier=system|value</code> searches the referenced Patient's identifier. It is distinct from the <code class="language-plaintext highlighter-rouge">:identifier</code> modifier on an embedded logical reference. Broad <code class="language-plaintext highlighter-rouge">_has</code>, fulltext, <code class="language-plaintext highlighter-rouge">_filter</code>, wildcard or iterative graph retrieval remain optional and <strong>SHALL</strong> be declared if implemented. Search-result controls such as <code class="language-plaintext highlighter-rouge">_count</code> and <code class="language-plaintext highlighter-rouge">_sort</code> are not new resource-field SearchParameter definitions.</p>
+
+<h3 id="conditional-writes-and-atomic-ingestion">Conditional writes and atomic ingestion</h3>
+
+<p>A <strong>write-enabled ingestion Server</strong> supports <code class="language-plaintext highlighter-rouge">create</code> or <code class="language-plaintext highlighter-rouge">update</code> for at least one selected PH Core resource. A read-only Server is not required to support either interaction, the associated conditional flags or transaction. In the requirements catalog, the SHALL expectations on <code class="language-plaintext highlighter-rouge">conditionalCreate</code>, <code class="language-plaintext highlighter-rouge">conditionalUpdate</code>, <code class="language-plaintext highlighter-rouge">versioning</code> and transaction apply only under the following conditions:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Declared capability</th>
+      <th>Resulting requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>create</td>
+      <td><strong>SHALL</strong> support conditional create for that resource, both individually and within supported transactions.</td>
+    </tr>
+    <tr>
+      <td>update</td>
+      <td><strong>SHALL</strong> support conditional update and version-aware updates for that resource. The minimum version policy is <code class="language-plaintext highlighter-rouge">versioned</code>; <code class="language-plaintext highlighter-rouge">versioned-update</code> also qualifies and signals the stricter If-Match policy.</td>
+    </tr>
+    <tr>
+      <td>create or update</td>
+      <td><strong>SHALL</strong> support atomic FHIR transaction Bundles containing supported PH Core resources.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Conditional create uses <code class="language-plaintext highlighter-rouge">If-None-Exist</code> on POST or <code class="language-plaintext highlighter-rouge">Bundle.entry.request.ifNoneExist</code>. Zero matches creates; one match reuses the existing resource without updating it; multiple matches return <code class="language-plaintext highlighter-rouge">412 Precondition Failed</code>. Criteria <strong>SHALL</strong> be selective according to the deployment's identity contract. Use namespace-qualified identifiers where that resource has an appropriate business identifier. A person's name alone is not a national identity or deduplication rule. Provenance requires an explicit event-identity strategy rather than a nonexistent <code class="language-plaintext highlighter-rouge">identifier</code> search.</p>
+
+<p>Conditional update uses search criteria in the PUT URL. It <strong>SHALL</strong> follow FHIR's no-match, single-match and multiple-match rules, including <code class="language-plaintext highlighter-rouge">412</code> for ambiguous matches. A supplied resource id must follow FHIR's update-as-create and identity-consistency rules. <code class="language-plaintext highlighter-rouge">updateCreate</code> governs client-assigned logical ids and is separate from <code class="language-plaintext highlighter-rouge">conditionalUpdate</code>; support <strong>SHALL NOT</strong> be inferred from the latter. Deployment metadata <strong>SHALL</strong> state the actual version policy and any update-as-create support. A stale or incorrect supplied If-Match version <strong>SHALL</strong> fail with <code class="language-plaintext highlighter-rouge">412</code>; Clients follow stricter declared version policies when present.</p>
+
+<p>Transactions <strong>SHALL</strong> preserve all-or-nothing persistence, resolve intra-Bundle temporary <code class="language-plaintext highlighter-rouge">fullUrl</code> references and return a <code class="language-plaintext highlighter-rouge">transaction-response</code> with entry outcomes and assigned identities. A failing or unsupported entry <strong>SHALL</strong> cause failure without partial persistence. Clients <strong>SHALL NOT</strong> assume that splitting a transaction into independent requests provides equivalent behavior. Stable conditional criteria and version handling are still needed for retries; atomicity alone does not make every repeated transaction idempotent.</p>
+
+<p>These are externally observable interface requirements. An OpenHIE layer or peer-facing facade can implement them through an appropriate upstream service; the guide does not require a particular storage engine. Conditional delete, client-assigned-id creation, batch, HAPI administration operations, <code class="language-plaintext highlighter-rouge">$everything</code> and <code class="language-plaintext highlighter-rouge">$lastn</code> remain optional capabilities. A Server offering PATCH <strong>SHALL</strong> declare its supported patch formats and follow FHIR concurrency requirements.</p>
+
+<h3 id="profile-aware-validation">Profile-aware validation</h3>
+
+<p>Servers <strong>SHALL</strong> declare their actual selected PH Core profiles using <code class="language-plaintext highlighter-rouge">supportedProfile</code> in their deployment CapabilityStatement. A generic base-resource declaration or a successful JSON parse does not establish PH Core conformance. Servers <strong>SHOULD</strong> offer the standard <code class="language-plaintext highlighter-rouge">$validate</code> operation for supported profiles. If offered, it <strong>SHALL</strong> resolve the requested PH Core profile and apply its constraints; the deployment must make the relevant PH Core and terminology definitions available to its validator.</p>
+
+<p>Instance validation, handling of invalid incoming writes, and compliance with actor obligations are distinct concerns. Tests <strong>SHALL</strong> check the deployment's declared validation and write behavior, rather than treating an advertised operation or a <code class="language-plaintext highlighter-rouge">meta.profile</code> assertion as proof of enforcement. Profile cardinalities, bindings, invariants and designated obligations remain authoritative.</p>
+
+<h3 id="deployment-roles">Deployment roles</h3>
+
+<p>In an OpenHIE deployment, a facility may act as Client toward an interoperability layer; that layer acts as Server on its external API and as Client toward registries or a shared health record. In peer-to-peer exchange, the initiating facility is Client and the responding facility is Server. When the direction reverses, their roles reverse. Endpoint discovery, routing, identity reconciliation, trust, authorization, consent and audit policy remain deployment or downstream-guide responsibilities.</p>
+
+<p>The FHIR Client role is different from the OpenHIE Client Registry component. A Client Registry is an identity service and normally acts as a Server for requests to its interface.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  
+          Package fhir.ph.core#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-10-26 05:35:00 +0000">
+    2026-10-26
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

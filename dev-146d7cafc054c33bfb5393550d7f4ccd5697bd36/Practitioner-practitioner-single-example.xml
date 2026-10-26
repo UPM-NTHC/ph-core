@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="practitioner-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Dr. Maria Clara Santos, MD, is a licensed physician born on May 15, 1985, residing in Manila, NCR, Philippines. She can be reached via mobile at +63-912-345-6789 or by email at maria.santos@example.ph.</div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="248152002"/>
+          <display value="Female (finding)"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="76689-9"/>
+          <display value="Sex Assigned at Birth"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="LA22879-3"/>
+          <display value="Identifies as female"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="LA29519-8"/>
+          <display value="she/her/her/hers/herself"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <name>
+    <use value="official"/>
+    <family value="Santos"/>
+    <given value="Maria"/>
+    <given value="Clara"/>
+    <suffix value="MD"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63-912-345-6789"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="maria.santos@example.ph"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1339000003"/>
+        <display value="Ermita"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1380600000"/>
+        <display value="City of Manila"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1300000000"/>
+        <display value="National Capital Region"/>
+      </valueCoding>
+    </extension>
+    <use value="home"/>
+    <line value="1234 Mabini Street"/>
+    <postalCode value="1000"/>
+    <country value="PH"/>
+  </address>
+  <gender value="female"/>
+  <birthDate value="1985-05-15"/>
+  <qualification>
+    <identifier>
+      <system value="http://prc.gov.ph/fhir/Identifier/prc-license"/>
+      <value value="0123456"/>
+    </identifier>
+    <code>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0360"/>
+        <code value="MD"/>
+        <display value="Doctor of Medicine"/>
+      </coding>
+    </code>
+    <period>
+      <start value="2010-07-15"/>
+    </period>
+    <issuer>
+      <reference value="Organization/organization-single-example"/>
+    </issuer>
+  </qualification>
+  <communication>
+    <coding>
+      <system value="urn:ietf:bcp:47"/>
+      <code value="fil"/>
+      <display value="Filipino"/>
+    </coding>
+  </communication>
+  <communication>
+    <coding>
+      <system value="urn:ietf:bcp:47"/>
+      <code value="en"/>
+      <display value="English"/>
+    </coding>
+  </communication>
+</Practitioner>

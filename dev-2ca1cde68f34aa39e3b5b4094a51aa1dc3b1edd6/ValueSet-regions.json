@@ -1,0 +1,108 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "regions",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet regions</b></p><a name=\"regions\"> </a><a name=\"hcregions\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0100000000\">0100000000</a></td><td>Region I (Ilocos Region)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0200000000\">0200000000</a></td><td>Region II (Cagayan Valley)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0300000000\">0300000000</a></td><td>Region III (Central Luzon)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0400000000\">0400000000</a></td><td>Region IV-A (CALABARZON)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0500000000\">0500000000</a></td><td>Region V (Bicol Region)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600000000\">0600000000</a></td><td>Region VI (Western Visayas)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0700000000\">0700000000</a></td><td>Region VII (Central Visayas)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0800000000\">0800000000</a></td><td>Region VIII (Eastern Visayas)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0900000000\">0900000000</a></td><td>Region IX (Zamboanga Peninsula)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1000000000\">1000000000</a></td><td>Region X (Northern Mindanao)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1100000000\">1100000000</a></td><td>Region XI (Davao Region)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1200000000\">1200000000</a></td><td>Region XII (SOCCSKSARGEN)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1300000000\">1300000000</a></td><td>National Capital Region (NCR)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1400000000\">1400000000</a></td><td>Cordillera Administrative Region (CAR)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600000000\">1600000000</a></td><td>Region XIII (Caraga)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1700000000\">1700000000</a></td><td>MIMAROPA Region</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1800000000\">1800000000</a></td><td>Negros Island Region (NIR)</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1900000000\">1900000000</a></td><td>Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/regions",
+  "version" : "0.2.0",
+  "name" : "Regions",
+  "title" : "Regions",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-20T20:22:23+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psgc",
+      "concept" : [{
+        "code" : "0100000000",
+        "display" : "Region I (Ilocos Region)"
+      },
+      {
+        "code" : "0200000000",
+        "display" : "Region II (Cagayan Valley)"
+      },
+      {
+        "code" : "0300000000",
+        "display" : "Region III (Central Luzon)"
+      },
+      {
+        "code" : "0400000000",
+        "display" : "Region IV-A (CALABARZON)"
+      },
+      {
+        "code" : "0500000000",
+        "display" : "Region V (Bicol Region)"
+      },
+      {
+        "code" : "0600000000",
+        "display" : "Region VI (Western Visayas)"
+      },
+      {
+        "code" : "0700000000",
+        "display" : "Region VII (Central Visayas)"
+      },
+      {
+        "code" : "0800000000",
+        "display" : "Region VIII (Eastern Visayas)"
+      },
+      {
+        "code" : "0900000000",
+        "display" : "Region IX (Zamboanga Peninsula)"
+      },
+      {
+        "code" : "1000000000",
+        "display" : "Region X (Northern Mindanao)"
+      },
+      {
+        "code" : "1100000000",
+        "display" : "Region XI (Davao Region)"
+      },
+      {
+        "code" : "1200000000",
+        "display" : "Region XII (SOCCSKSARGEN)"
+      },
+      {
+        "code" : "1300000000",
+        "display" : "National Capital Region (NCR)"
+      },
+      {
+        "code" : "1400000000",
+        "display" : "Cordillera Administrative Region (CAR)"
+      },
+      {
+        "code" : "1600000000",
+        "display" : "Region XIII (Caraga)"
+      },
+      {
+        "code" : "1700000000",
+        "display" : "MIMAROPA Region"
+      },
+      {
+        "code" : "1800000000",
+        "display" : "Negros Island Region (NIR)"
+      },
+      {
+        "code" : "1900000000",
+        "display" : "Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)"
+      }]
+    }]
+  }
+}

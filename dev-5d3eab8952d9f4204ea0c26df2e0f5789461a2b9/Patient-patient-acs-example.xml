@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-acs-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient patient-acs-example</b></p><a name="patient-acs-example"> </a><a name="hcpatient-acs-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-patient.html">PH Core Patient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Juan Carlos Dela Cruz (official) Male, DoB: 1981-03-15 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="tel:+63-917-123-4567">+63-917-123-4567</a></li><li>123 Mabini Street Barangay Malinis City of Las Piñas 1740 PH (home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></li><li>Managing Organization: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="race of a patient."><a href="StructureDefinition-race.html">Race</a></td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-Race 2036-2}">Filipino</span></td></tr><tr><td style="background-color: #f3f5da" title="The nationality of the patient.">Patient Nationality:</td><td colspan="3"><ul><li>code: <span title="Codes:{urn:iso:std:iso:3166 PH}">Philippines</span></li><li>period: 1981-03-15 --&gt; (ongoing)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Highest educational attainment of the patient."><a href="StructureDefinition-educational-attainment.html">Educational Attainment</a></td><td colspan="3"><span title="Codes:{https://psa.gov.ph/classification/psced/level C201301}">Elementary Graduate</span></td></tr><tr><td style="background-color: #f3f5da" title="Patient's occupation.">Occupation:</td><td colspan="3"><ul><li>occupationClassification: <span title="Codes:{https://psa.gov.ph/classification/psoc/unit 911102}">Street Food Vendor</span></li><li>occupationLength: 2015-01-01 --&gt; (ongoing)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="If the patient is a member of an indigenous group."><a href="StructureDefinition-indigenous-people.html">Indigenous People</a></td><td colspan="3">false</td></tr><tr><td style="background-color: #f3f5da" title="The patient's professed religious affiliations."><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-patient-religion.html">Patient Religion</a></td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation 1041}">Roman Catholic Church</span></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+    <extension url="code">
+      <valueCodeableConcept>
+        <coding>
+          <system value="urn:iso:std:iso:3166"/>
+          <code value="PH"/>
+          <display value="Philippines"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="period">
+      <valuePeriod>
+        <start value="1981-03-15"/>
+      </valuePeriod>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+        <code value="1041"/>
+        <display value="Roman Catholic Church"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/indigenous-people">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/race">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-Race"/>
+        <code value="2036-2"/>
+        <display value="Filipino"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/educational-attainment">
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://psa.gov.ph/classification/psced/level"/>
+        <code value="C201301"/>
+        <display value="Elementary Graduate"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/occupation">
+    <extension url="occupationClassification">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://psa.gov.ph/classification/psoc/unit"/>
+          <code value="911102"/>
+          <display value="Street Food Vendor"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="occupationLength">
+      <valuePeriod>
+        <start value="2015-01-01"/>
+      </valuePeriod>
+    </extension>
+  </extension>
+  <identifier>
+    <system value="http://philhealth.gov.ph/fhir/Identifier/philhealth-id"/>
+    <value value="63-584789845-5"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="official"/>
+    <family value="Dela Cruz"/>
+    <given value="Juan"/>
+    <given value="Carlos"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63-917-123-4567"/>
+    <use value="mobile"/>
+  </telecom>
+  <gender value="male"/>
+  <birthDate value="1981-03-15"/>
+  <address>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1380200000"/>
+        <display value="City of Las Piñas"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1300000000"/>
+        <display value="National Capital Region"/>
+      </valueCoding>
+    </extension>
+    <use value="home"/>
+    <type value="both"/>
+    <line value="123 Mabini Street"/>
+    <line value="Barangay Malinis"/>
+    <city value="City of Las Piñas"/>
+    <district value="NCR"/>
+    <postalCode value="1740"/>
+    <country value="PH"/>
+  </address>
+  <generalPractitioner>
+    <reference value="Practitioner/practitioner-ed-example"/>
+  </generalPractitioner>
+  <managingOrganization>
+    <reference value="Organization/organization-pgh-example"/>
+  </managingOrganization>
+</Patient>

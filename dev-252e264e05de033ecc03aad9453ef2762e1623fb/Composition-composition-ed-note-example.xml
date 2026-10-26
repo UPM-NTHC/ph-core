@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="composition-ed-note-example"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Composition composition-ed-note-example</b></p><a name="composition-ed-note-example"> </a><a name="hccomposition-ed-note-example"> </a><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 18842-5}">ED Clinical Note</span></p><p><b>encounter</b>: <a href="Encounter-encounter-ed-example.html">Encounter: identifier = http://pgh.gov.ph/fhir/Identifier/encounter-id#ENC-2026-0612-001; status = finished; class = emergency (ActCode#EMER); type = emergency; priority = emergency; period = 2026-06-12 08:30:00+0800 --&gt; 2026-06-12 10:30:00+0800</a></p><p><b>date</b>: 2026-06-12 10:30:00+0800</p><p><b>author</b>: <a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></p><p><b>title</b>: Emergency Department Clinical Note — Acute Coronary Syndrome</p><p><b>confidentiality</b>: normal</p><h3>Attesters</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Mode</b></td><td><b>Time</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td>Legal</td><td>2026-06-12 10:30:00+0800</td><td><a href="Practitioner-practitioner-ed-example.html">Practitioner Maria Clara Santos (official)</a></td></tr></table><p><b>custodian</b>: <a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></p></div>
+  </text>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="18842-5"/>
+      <display value="Discharge summary"/>
+    </coding>
+    <text value="ED Clinical Note"/>
+  </type>
+  <subject>
+    <reference value="Patient/patient-acs-example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/encounter-ed-example"/>
+  </encounter>
+  <date value="2026-06-12T10:30:00+08:00"/>
+  <author>
+    <reference value="Practitioner/practitioner-ed-example"/>
+  </author>
+  <title value="Emergency Department Clinical Note — Acute Coronary Syndrome"/>
+  <confidentiality value="N"/>
+  <attester>
+    <mode value="legal"/>
+    <time value="2026-06-12T10:30:00+08:00"/>
+    <party>
+      <reference value="Practitioner/practitioner-ed-example"/>
+    </party>
+  </attester>
+  <custodian>
+    <reference value="Organization/organization-pgh-example"/>
+  </custodian>
+  <section>
+    <title value="Chief Complaint"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="10154-3"/>
+        <display value="Chief complaint Reported"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>45-year-old male with 2-hour history of crushing substernal chest pain radiating to left arm, associated with dyspnea and diaphoresis.</p></div>
+    </text>
+    <entry>
+      <reference value="Condition/condition-acs-example"/>
+    </entry>
+  </section>
+  <section>
+    <title value="History of Present Illness"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="10164-2"/>
+        <display value="History of present illness Narrative"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Patient Juan Dela Cruz, 45M, Filipino, presented to PGH ED at 08:30 with acute chest pain. Pain described as crushing, 8/10 severity, substernal with radiation to left arm. Associated with shortness of breath and sweating. No relief with rest. Known T2DM since 2020. Current smoker (1 pack/day x 20 years).</p></div>
+    </text>
+  </section>
+  <section>
+    <title value="Vital Signs"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="8716-3"/>
+        <display value="Vital signs note"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>BP: 160/95 mmHg (elevated)</li><li>HR: 110 bpm (tachycardic)</li><li>RR: 24/min (tachypneic)</li><li>SpO2: 92% RA (hypoxemic)</li><li>Temp: 37.2°C</li><li>Pain: 8/10</li></ul></div>
+    </text>
+    <entry>
+      <reference value="Observation/observation-bp-acs"/>
+    </entry>
+    <entry>
+      <reference value="Observation/observation-hr-acs"/>
+    </entry>
+    <entry>
+      <reference value="Observation/observation-rr-acs"/>
+    </entry>
+    <entry>
+      <reference value="Observation/observation-spo2-acs"/>
+    </entry>
+    <entry>
+      <reference value="Observation/observation-temp-acs"/>
+    </entry>
+    <entry>
+      <reference value="Observation/observation-pain-acs"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Assessment and Plan"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="18776-5"/>
+        <display value="Plan of care note"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><strong>Assessment:</strong> Acute Coronary Syndrome — Anterior STEMI (ST-elevation V1-V4 on ECG, elevated troponin 2.5 ng/mL).</p><p><strong>Plan:</strong> 1) Aspirin 325mg chewed, Clopidogrel 600mg loading, Metoprolol 25mg PO. 2) Cardiology consult for emergent PCI. 3) Admit to CCU post-PCI.</p></div>
+    </text>
+    <entry>
+      <reference value="Condition/condition-acs-example"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Active Conditions"/>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="11493-4"/>
+        <display value="Hospital discharge studies summary Narrative"/>
+      </coding>
+    </code>
+    <text>
+      <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Type 2 Diabetes Mellitus (diagnosed 2020, on Metformin)</li><li>Acute Coronary Syndrome — Anterior STEMI (diagnosed today)</li></ul></div>
+    </text>
+    <entry>
+      <reference value="Condition/condition-t2dm-example"/>
+    </entry>
+    <entry>
+      <reference value="Condition/condition-acs-example"/>
+    </entry>
+  </section>
+</Composition>

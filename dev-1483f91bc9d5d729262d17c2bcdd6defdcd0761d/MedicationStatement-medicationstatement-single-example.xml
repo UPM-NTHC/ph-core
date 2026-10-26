@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="medicationstatement-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Patient Juan Dela Cruz reports taking Twinact 40mg/5mg tablet (Telmisartan + Amlodipine) once daily for hypertension, starting March 10, 2025.</div>
+  </text>
+  <status value="active"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="https://verification.fda.gov.ph"/>
+      <code value="DRP-10144"/>
+      <display value="Twinact"/>
+    </coding>
+    <text value="Twinact 40mg/5mg tablet"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <context>
+    <reference value="Encounter/encounter-single-example"/>
+  </context>
+  <effectivePeriod>
+    <start value="2025-03-10"/>
+    <end value="2025-03-15"/>
+  </effectivePeriod>
+  <dateAsserted value="2025-03-10T10:30:00+08:00"/>
+  <informationSource>
+    <reference value="Patient/patient-single-example"/>
+  </informationSource>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="38341003"/>
+      <display value="Hypertensive disorder"/>
+    </coding>
+  </reasonCode>
+  <note>
+    <text value="Patient reports taking medication once daily for hypertension"/>
+  </note>
+  <dosage>
+    <sequence value="1"/>
+    <text value="Take 1 tablet once daily"/>
+    <timing>
+      <repeat>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
+        <code value="PO"/>
+        <display value="Swallow, oral"/>
+      </coding>
+    </route>
+  </dosage>
+</MedicationStatement>

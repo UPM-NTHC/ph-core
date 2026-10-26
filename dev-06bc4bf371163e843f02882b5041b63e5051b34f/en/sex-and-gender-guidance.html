@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Sex and Gender Guidance - Draft PH Core Implementation Guide v0.2.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<style>
+/* Style unclassed narrative tables while excluding Publisher tables that carry
+   classes or generated/presentation attributes. */
+table:not([class]):not([style]):not([border]):not([data-fhir]) {
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+table:not([class]):not([style]):not([border]):not([data-fhir]) th,
+table:not([class]):not([style]):not([border]):not([data-fhir]) td {
+  border: 1px solid #e2e8f0;
+  padding: 8px 14px;
+  vertical-align: top;
+}
+
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Draft PH Core Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.2.1 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="client-server-conformance.html">Client and Server Conformance</a>
+      </li>
+      <li>
+        <a href="sex-and-gender-guidance.html">Sex and Gender</a>
+      </li>
+      <li>
+        <a href="sample-case.html">Worked Case</a>
+      </li>
+      <li>
+        <a href="fhir-rest-tutorial.html">FHIR REST Tutorial</a>
+      </li>
+      <li>
+        <a href="examples.html">Example</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <li>
+        <a href="otherIds.html">Other Identifiers</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Sex and Gender Guidance</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Draft PH Core Implementation Guide - Local Development build (v0.2.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/phcore/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Sex and Gender Guidance</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#keep-the-meaning-clear" id="markdown-toc-keep-the-meaning-clear">Keep the meaning clear</a></li>
+  <li><a href="#gender-identity" id="markdown-toc-gender-identity">Gender identity</a></li>
+  <li><a href="#pronouns-and-name-to-use" id="markdown-toc-pronouns-and-name-to-use">Pronouns and name to use</a></li>
+  <li><a href="#recorded-sex-or-gender" id="markdown-toc-recorded-sex-or-gender">Recorded sex or gender</a></li>
+  <li><a href="#why-these-concepts-use-extensions" id="markdown-toc-why-these-concepts-use-extensions">Why these concepts use extensions</a></li>
+</ul>
+
+</div>
+<p>The <a href="https://hl7.org/xprod/ig/uv/gender-harmony/fhirgenderharmony.html">HL7 Cross Paradigm Implementation Guide: Gender Harmony</a> is an informative FHIR R5 guide. This page applies its relevant sex and gender guidance to the extensions declared in PH Core's FHIR R4 profiles; it adds no conformance requirement.</p>
+
+<h3 id="keep-the-meaning-clear">Keep the meaning clear</h3>
+
+<p>FHIR labels <code class="language-plaintext highlighter-rouge">Patient.gender</code> as administrative gender, but systems may use it for administrative sex or gender and for purposes such as patient matching or choosing a laboratory reference range. State its intended meaning to exchange partners. When both concepts are needed, systems can use <code class="language-plaintext highlighter-rouge">Patient.gender</code> for the agreed administrative gender and the optional <code class="language-plaintext highlighter-rouge">Patient.extension[sex]</code> slice for the separate recorded sex value.</p>
+
+<p>Use the optional <code class="language-plaintext highlighter-rouge">genderIdentity</code> and <code class="language-plaintext highlighter-rouge">individualPronouns</code> extensions for those concepts. Do not infer them from <code class="language-plaintext highlighter-rouge">Patient.gender</code> or the <code class="language-plaintext highlighter-rouge">sex</code> slice.</p>
+
+<h4 id="searching-by-administrative-gender">Searching by administrative gender</h4>
+
+<p>In the focused Patient example, <code class="language-plaintext highlighter-rouge">Patient.gender</code> is <code class="language-plaintext highlighter-rouge">male</code>. A client can search for Patient records with this value:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Patient?gender=male
+</code></pre></div></div>
+
+<p>This standard FHIR search looks only at <code class="language-plaintext highlighter-rouge">Patient.gender</code>; it does not search the <code class="language-plaintext highlighter-rouge">sex</code>, <code class="language-plaintext highlighter-rouge">genderIdentity</code> or <code class="language-plaintext highlighter-rouge">individualPronouns</code> extensions. The PH Core Server CapabilityStatement lists the <code class="language-plaintext highlighter-rouge">gender</code> search as <code class="language-plaintext highlighter-rouge">SHOULD</code>, so servers are recommended to support it, but clients should check a server's CapabilityStatement before relying on it.</p>
+
+<p>The <a href="https://build.fhir.org/ig/HL7/fhir-for-fair/FHIRandFAIR.html">FHIR for FAIR guidance</a> explains that searchable information can help people and software find relevant records. This search supports Findability; it does not grant permission to read matching records. The server's access controls still apply.</p>
+
+<h3 id="gender-identity">Gender identity</h3>
+
+<p>Use the optional <code class="language-plaintext highlighter-rouge">genderIdentity</code> extension on the applicable person resource to exchange a person's gender identity. In PH Core, this slice is available on Patient, Practitioner and RelatedPerson. The extension can carry more than one value and a period of applicability, so systems can represent a change over time instead of replacing the earlier value.</p>
+
+<p>Gender identity is stored with other person-level demographics. Control access to the resource carefully, since resource-level permissions can expose the extension alongside those other demographics.</p>
+
+<h3 id="pronouns-and-name-to-use">Pronouns and name to use</h3>
+
+<p>Use the optional <code class="language-plaintext highlighter-rouge">individualPronouns</code> extension for a person's pronouns. Pronouns are distinct from gender identity. The extension can include a period when the pronouns apply.</p>
+
+<p>When a person has asked to be addressed by a particular name, represent that name using <code class="language-plaintext highlighter-rouge">HumanName.use = usual</code> on the relevant person resource. This is separate from an official name retained for other purposes.</p>
+
+<h3 id="recorded-sex-or-gender">Recorded sex or gender</h3>
+
+<p>HL7 treats administrative sex and administrative gender as types of recorded sex or gender.</p>
+
+<p>First identify the concept needed for the exchange and its use case. Examples include sex assigned at birth, administrative sex, legal sex or gender, and a value recorded by a payer. Then agree with exchange partners how to represent that concept.</p>
+
+<p>If a suitable jurisdiction- or use-case-specific field or extension is already in use, keep using it rather than replacing it just to use the generic extension.</p>
+
+<p>PH Core declares the optional <code class="language-plaintext highlighter-rouge">sex</code> slice using HL7's <code class="language-plaintext highlighter-rouge">individual-recordedSexOrGender</code> extension. Use its <code class="language-plaintext highlighter-rouge">value</code> for the recorded value and its <code class="language-plaintext highlighter-rouge">type</code> to identify what that value means. The <a href="Patient-patient-sex-and-gender-example.html">Patient sex and gender example</a> has separate entries for a birth certificate, insurance card and driver's license, each with its own type and period. Do not infer the meaning from the code alone when the <code class="language-plaintext highlighter-rouge">type</code> is available.</p>
+
+<p>The example uses text for the insurance-card and driver's-license type labels rather than introducing local codes for those source categories.</p>
+
+<p>Sex assigned at birth is one kind of recorded sex or gender. It describes that source's record; it does not establish a person's gender identity, pronouns, or current clinical characteristics.</p>
+
+<h3 id="why-these-concepts-use-extensions">Why these concepts use extensions</h3>
+
+<p>The <a href="https://hl7.org/xprod/ig/uv/gender-harmony/fhirdesignbackground.html">FHIR design background</a> explains the tradeoffs behind using extensions: they can share structure across resources and be adopted in earlier FHIR releases, while changing a core Patient element requires broader standards review. Observations can hold more metadata but may be less discoverable and require separate authorization. Extensions are also less visible, and resource-level permissions may expose them with other demographics.</p>
+
+<p>PH Core declares <code class="language-plaintext highlighter-rouge">genderIdentity</code>, <code class="language-plaintext highlighter-rouge">individualPronouns</code> and <code class="language-plaintext highlighter-rouge">sex</code> on Patient, Practitioner and RelatedPerson.</p>
+
+<p>When interpreting some lab results, clinicians may need to choose a sex-related normal range. FHIR has an optional field for recording that choice. Its <a href="https://hl7.org/fhir/extensions/StructureDefinition-patient-sexParameterForClinicalUse.html">technical description</a> gives the formal name for developers. The PH Core Patient profile does not include this field. Before adding it, the PH Core community needs to agree on when it is needed and how it should be used. This page does not add the field or a substitute.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-NTHC">UP Manila National TeleHealth Center</a>.  
+          Package fhir.ph.core#0.2.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-10-26 05:47:00 +0000">
+    2026-10-26
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

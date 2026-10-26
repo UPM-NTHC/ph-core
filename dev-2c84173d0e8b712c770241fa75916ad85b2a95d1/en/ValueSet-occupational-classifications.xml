@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="occupational-classifications"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet occupational-classifications</b></p><a name="occupational-classifications"> </a><a name="hcoccupational-classifications"> </a><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on system Mock PSOC version 0.1.0</p><p>This value set contains 4 concepts</p><table class="codes"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name="occupational-classifications-https://psa.gov.ph/classification/psoc/unit-111102"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style="white-space:nowrap">  111102</td><td>Hospital Administrator</td><td>Manages hospital operations</td></tr><tr><td><a name="occupational-classifications-https://psa.gov.ph/classification/psoc/unit-111103"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style="white-space:nowrap">  111103</td><td>Medical Department Head</td><td>Head of a medical department</td></tr><tr><td><a name="occupational-classifications-https://psa.gov.ph/classification/psoc/unit-121101"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style="white-space:nowrap">  121101</td><td>General Manager</td><td>Manages overall operations of an organization</td></tr><tr><td><a name="occupational-classifications-https://psa.gov.ph/classification/psoc/unit-211101"> </a><code>https://psa.gov.ph/classification/psoc/unit</code></td><td style="white-space:nowrap">  211101</td><td>Medical Doctor</td><td>Licensed physician practicing medicine</td></tr></table></div>
+  </text>
+  <url value="https://fhir.doh.gov.ph/phcore/ValueSet/occupational-classifications"/>
+  <version value="0.2.0"/>
+  <name value="OccupationClassifications"/>
+  <title value="Occupation Classifications"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-10T01:16:31+00:00"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://psa.gov.ph/classification/psoc/unit"/>
+      <concept>
+        <code value="111102"/>
+        <display value="Hospital Administrator"/>
+      </concept>
+      <concept>
+        <code value="111103"/>
+        <display value="Medical Department Head"/>
+      </concept>
+      <concept>
+        <code value="121101"/>
+        <display value="General Manager"/>
+      </concept>
+      <concept>
+        <code value="211101"/>
+        <display value="Medical Doctor"/>
+      </concept>
+    </include>
+  </compose>
+  <expansion>
+    <timestamp value="2026-04-07T00:00:00Z"/>
+    <total value="4"/>
+    <offset value="0"/>
+    <parameter>
+      <name value="version"/>
+      <valueUri value="https://psa.gov.ph/classification/psoc/unit|0.1.0"/>
+    </parameter>
+    <contains>
+      <system value="https://psa.gov.ph/classification/psoc/unit"/>
+      <code value="111102"/>
+      <display value="Hospital Administrator"/>
+    </contains>
+    <contains>
+      <system value="https://psa.gov.ph/classification/psoc/unit"/>
+      <code value="111103"/>
+      <display value="Medical Department Head"/>
+    </contains>
+    <contains>
+      <system value="https://psa.gov.ph/classification/psoc/unit"/>
+      <code value="121101"/>
+      <display value="General Manager"/>
+    </contains>
+    <contains>
+      <system value="https://psa.gov.ph/classification/psoc/unit"/>
+      <code value="211101"/>
+      <display value="Medical Doctor"/>
+    </contains>
+  </expansion>
+</ValueSet>

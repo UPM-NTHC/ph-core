@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CapabilityStatement/PHCoreClientCapabilityStatement> a fhir:CapabilityStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "PHCoreClientCapabilityStatement"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CapabilityStatement PHCoreClientCapabilityStatement</b></p><a name=\"PHCoreClientCapabilityStatement\"> </a><a name=\"hcPHCoreClientCapabilityStatement\"> </a><h2 id=\"title\"/><ul><li>Implementation Guide Version: 0.2.1 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <strong>SHALL</strong> support <code>json</code>, <strong>MAY</strong> support <code>xml</code></li><li>Published on: 2026-10-15 </li><li>Published by: UP Manila National TeleHealth Center </li></ul><blockquote class=\"impl-note\"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id=\"rest\">FHIR RESTful Capabilities</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"mode1\" class=\"panel-title\">Mode: <code>client</code></h3></div><div class=\"panel-body\"><div><p>The PH Core Client SHALL support at least one PH Core resource profile relevant to its use case and follow that profile's constraints and applicable obligations. It SHALL fulfill handling obligations for the selected elements. It SHALL accept conformant received resources without rejecting them solely because valid optional content is present or optional values are absent; this does not require processing every non-MS optional element. For selected retrieval use cases, it SHALL support read and SHALL use the applicable queries from the PH Core Server CapabilityStatement. It SHALL use JSON and handle paging links and OperationOutcome responses for interactions it supports. It SHOULD inspect the Server's current CapabilityStatement before exchange and select the queries needed for its use case. The Server catalog does not require the Client to implement every listed query. Write support is optional; when sending resource payloads, the Client SHALL conform to the selected profiles and their applicable production obligations. When using conditional create or update, the Client SHALL supply selective identity criteria, handle no-match/single-match/multiple-match outcomes and respect the Server's version policy. A Client using transactions SHALL provide coherent fullUrl references, process transaction-response outcomes and treat an error as failure of the complete transaction. Retrying a request requires an identity/version strategy; an uncertain network outcome does not make an ordinary POST safe to repeat. These requirements do not require every Client to support every catalog profile, query or write interaction. Non-REST systems may claim profile-only conformance. A system claiming REST Client conformance SHALL document the profiles and interactions it supports in an implementation-specific CapabilityStatement; it is not required to host a /metadata endpoint solely for its Client role. See <a href=\"CapabilityStatement-PHCoreServerCapabilityStatement.html\">PH Core Server CapabilityStatement</a> and <a href=\"client-server-conformance.html\">Client and Server conformance</a>.</p>\n</div><div class=\"lead\"><em>Security</em></div><blockquote><div><p>The Client SHALL use HTTPS for production exchange and follow the Server's authorization requirements. Identity, trust, authorization and consent arrangements SHALL be defined by the deployment or downstream implementation guide. A specific OAuth or SMART deployment topology is not imposed by this baseline.</p>\n</div></blockquote></div></div></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ] ;
+     fhir:Extension.valueInteger [ fhir:value "0"^^xsd:integer ]
+  ] ;
+  fhir:CapabilityStatement.url [ fhir:value "https://fhir.doh.gov.ph/phcore/CapabilityStatement/PHCoreClientCapabilityStatement"] ;
+  fhir:CapabilityStatement.version [ fhir:value "0.2.1"] ;
+  fhir:CapabilityStatement.status [ fhir:value "draft"] ;
+  fhir:CapabilityStatement.date [ fhir:value "2026-10-15"^^xsd:date] ;
+  fhir:CapabilityStatement.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:CapabilityStatement.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:CapabilityStatement.description [ fhir:value "Baseline requirements for systems initiating PH Core FHIR API requests. Clients select the profiles and interactions needed for their use cases from the PH Core Server capability catalog."] ;
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"] ;
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "4.0.1"] ;
+  fhir:CapabilityStatement.format [
+     fhir:value "json" ;
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+       fhir:Extension.valueCode [ fhir:value "SHALL" ]
+     ]
+  ], [
+     fhir:value "xml" ;
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ] ;
+       fhir:Extension.valueCode [ fhir:value "MAY" ]
+     ]
+  ] ;
+  fhir:CapabilityStatement.rest [
+     fhir:index -1 ;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "client" ] ;
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "The PH Core Client SHALL support at least one PH Core resource profile relevant to its use case and follow that profile's constraints and applicable obligations. It SHALL fulfill handling obligations for the selected elements. It SHALL accept conformant received resources without rejecting them solely because valid optional content is present or optional values are absent; this does not require processing every non-MS optional element. For selected retrieval use cases, it SHALL support read and SHALL use the applicable queries from the PH Core Server CapabilityStatement. It SHALL use JSON and handle paging links and OperationOutcome responses for interactions it supports. It SHOULD inspect the Server's current CapabilityStatement before exchange and select the queries needed for its use case. The Server catalog does not require the Client to implement every listed query. Write support is optional; when sending resource payloads, the Client SHALL conform to the selected profiles and their applicable production obligations. When using conditional create or update, the Client SHALL supply selective identity criteria, handle no-match/single-match/multiple-match outcomes and respect the Server's version policy. A Client using transactions SHALL provide coherent fullUrl references, process transaction-response outcomes and treat an error as failure of the complete transaction. Retrying a request requires an identity/version strategy; an uncertain network outcome does not make an ordinary POST safe to repeat. These requirements do not require every Client to support every catalog profile, query or write interaction. Non-REST systems may claim profile-only conformance. A system claiming REST Client conformance SHALL document the profiles and interactions it supports in an implementation-specific CapabilityStatement; it is not required to host a /metadata endpoint solely for its Client role. See [PH Core Server CapabilityStatement](CapabilityStatement-PHCoreServerCapabilityStatement.html) and [Client and Server conformance](client-server-conformance.html)." ] ;
+     fhir:CapabilityStatement.rest.security [
+       fhir:CapabilityStatement.rest.security.description [ fhir:value "The Client SHALL use HTTPS for production exchange and follow the Server's authorization requirements. Identity, trust, authorization and consent arrangements SHALL be defined by the deployment or downstream implementation guide. A specific OAuth or SMART deployment topology is not imposed by this baseline." ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CapabilityStatement/PHCoreClientCapabilityStatement.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

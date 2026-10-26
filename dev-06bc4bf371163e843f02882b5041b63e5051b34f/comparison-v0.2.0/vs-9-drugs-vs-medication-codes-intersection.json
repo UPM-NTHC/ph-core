@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "480aee8a-bc59-4976-b286-740398f9abc2-24",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/480aee8a-bc59-4976-b286-740398f9abc2-24",
+  "name" : "IntersectionDrugsVSAndSNOMEDCTMedicationCodes",
+  "title" : "Intersection of Drugs And SNOMED CT Medication Codes",
+  "status" : "draft",
+  "date" : "2026-10-26T05:49:06+00:00"
+}

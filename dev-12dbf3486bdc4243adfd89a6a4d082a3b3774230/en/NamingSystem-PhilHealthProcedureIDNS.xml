@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<NamingSystem xmlns="http://hl7.org/fhir">
+  <id value="PhilHealthProcedureIDNS"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: NamingSystem PhilHealthProcedureIDNS</b></p><a name="PhilHealthProcedureIDNS"> </a><a name="hcPhilHealthProcedureIDNS"> </a><h3>Summary</h3><table class="grid"><tr><td>Defining URL</td><td>https://fhir.doh.gov.ph/phcore/NamingSystem/PhilHealthProcedureIDNS</td></tr><tr><td>Version</td><td>0.2.0</td></tr><tr><td>Name</td><td>PhilHealthProcedureID</td></tr><tr><td>Status</td><td>draft</td></tr><tr><td>Definition</td><td><div><p>Identifier system for procedures assigned by PhilHealth for claims and reimbursement purposes.</p>
+</div></td></tr><tr><td>Publisher</td><td>UP Manila National TeleHealth Center</td></tr></table><h3>Identifiers</h3><table class="grid"><tr><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>URI</td><td>http://philhealth.gov.ph/procedure</td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url">
+    <valueUri value="https://fhir.doh.gov.ph/phcore/NamingSystem/PhilHealthProcedureIDNS"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version">
+    <valueString value="0.2.0"/>
+  </extension>
+  <name value="PhilHealthProcedureID"/>
+  <status value="draft"/>
+  <kind value="identifier"/>
+  <date value="2025-06-01"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="Identifier system for procedures assigned by PhilHealth for claims and reimbursement purposes."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <uniqueId>
+    <type value="uri"/>
+    <value value="http://philhealth.gov.ph/procedure"/>
+  </uniqueId>
+</NamingSystem>

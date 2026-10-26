@@ -1,0 +1,98 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/educational-attainments> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "educational-attainments"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet educational-attainments</b></p><a name=\"educational-attainments\"> </a><a name=\"hceducational-attainments\"> </a><p>This value set contains 4 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name=\"educational-attainments-https://psa.gov.ph/classification/psced/level-C201301\"> </a><code>https://psa.gov.ph/classification/psced/level</code></td><td style=\"white-space:nowrap\">  C201301</td><td>Elementary Graduate</td><td>Completed elementary education</td></tr><tr><td><a name=\"educational-attainments-https://psa.gov.ph/classification/psced/level-C201302\"> </a><code>https://psa.gov.ph/classification/psced/level</code></td><td style=\"white-space:nowrap\">  C201302</td><td>High School Graduate</td><td>Completed secondary education</td></tr><tr><td><a name=\"educational-attainments-https://psa.gov.ph/classification/psced/level-C201303\"> </a><code>https://psa.gov.ph/classification/psced/level</code></td><td style=\"white-space:nowrap\">  C201303</td><td>College Graduate</td><td>Completed bachelor's degree</td></tr><tr><td><a name=\"educational-attainments-https://psa.gov.ph/classification/psced/level-C201304\"> </a><code>https://psa.gov.ph/classification/psced/level</code></td><td style=\"white-space:nowrap\">  C201304</td><td>Postgraduate</td><td>Completed master's or doctoral degree</td></tr></table></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.doh.gov.ph/phcore/ValueSet/educational-attainments"] ;
+  fhir:ValueSet.version [ fhir:value "0.2.0"] ;
+  fhir:ValueSet.name [ fhir:value "EducationalAttainments"] ;
+  fhir:ValueSet.title [ fhir:value "Educational Attainments"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-09T08:48:14+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "All categories of educational programs, courses, and attainment levels in the Philippines, based on the Philippine Standard Classification of Education (PSCED) published by the Philippine Statistics Authority (PSA)"] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://psa.gov.ph/classification/psced/level" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C201301" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Elementary Graduate" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C201302" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "High School Graduate" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C201303" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "College Graduate" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "C201304" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Postgraduate" ]
+       ]
+     ]
+  ] ;
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2026-04-07T00:00:00Z"^^xsd:dateTime ] ;
+     fhir:ValueSet.expansion.total [ fhir:value "4"^^xsd:integer ] ;
+     fhir:ValueSet.expansion.offset [ fhir:value "0"^^xsd:integer ] ;
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0 ;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "https://psa.gov.ph/classification/psced/level" ] ;
+       fhir:ValueSet.expansion.contains.code [ fhir:value "C201301" ] ;
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Elementary Graduate" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "https://psa.gov.ph/classification/psced/level" ] ;
+       fhir:ValueSet.expansion.contains.code [ fhir:value "C201302" ] ;
+       fhir:ValueSet.expansion.contains.display [ fhir:value "High School Graduate" ]
+     ], [
+       fhir:index 2 ;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "https://psa.gov.ph/classification/psced/level" ] ;
+       fhir:ValueSet.expansion.contains.code [ fhir:value "C201303" ] ;
+       fhir:ValueSet.expansion.contains.display [ fhir:value "College Graduate" ]
+     ], [
+       fhir:index 3 ;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "https://psa.gov.ph/classification/psced/level" ] ;
+       fhir:ValueSet.expansion.contains.code [ fhir:value "C201304" ] ;
+       fhir:ValueSet.expansion.contains.display [ fhir:value "Postgraduate" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/educational-attainments.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,150 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "PSGC",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSGC</b></p><a name=\"PSGC\"> </a><a name=\"hcPSGC\"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psgc</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1300000000<a name=\"PSGC-1300000000\"> </a></td><td>National Capital Region</td></tr><tr><td style=\"white-space:nowrap\">1380600000<a name=\"PSGC-1380600000\"> </a></td><td>City of Manila</td></tr><tr><td style=\"white-space:nowrap\">1339000003<a name=\"PSGC-1339000003\"> </a></td><td>Ermita</td></tr><tr><td style=\"white-space:nowrap\">1380100001<a name=\"PSGC-1380100001\"> </a></td><td>Barangay 1</td></tr><tr><td style=\"white-space:nowrap\">1380100000<a name=\"PSGC-1380100000\"> </a></td><td>City of Caloocan</td></tr><tr><td style=\"white-space:nowrap\">1380200000<a name=\"PSGC-1380200000\"> </a></td><td>City of Las Piñas</td></tr><tr><td style=\"white-space:nowrap\">1400100000<a name=\"PSGC-1400100000\"> </a></td><td>Abra</td></tr><tr><td style=\"white-space:nowrap\">1401100000<a name=\"PSGC-1401100000\"> </a></td><td>Benguet</td></tr><tr><td style=\"white-space:nowrap\">1402700000<a name=\"PSGC-1402700000\"> </a></td><td>Ifugao</td></tr><tr><td style=\"white-space:nowrap\">1403200000<a name=\"PSGC-1403200000\"> </a></td><td>Kalinga</td></tr><tr><td style=\"white-space:nowrap\">1404400000<a name=\"PSGC-1404400000\"> </a></td><td>Mountain Province</td></tr><tr><td style=\"white-space:nowrap\">1408100000<a name=\"PSGC-1408100000\"> </a></td><td>Apayao</td></tr><tr><td style=\"white-space:nowrap\">0102800000<a name=\"PSGC-0102800000\"> </a></td><td>Ilocos Norte</td></tr><tr><td style=\"white-space:nowrap\">0102900000<a name=\"PSGC-0102900000\"> </a></td><td>Ilocos Sur</td></tr><tr><td style=\"white-space:nowrap\">0103300000<a name=\"PSGC-0103300000\"> </a></td><td>La Union</td></tr><tr><td style=\"white-space:nowrap\">0105500000<a name=\"PSGC-0105500000\"> </a></td><td>Pangasinan</td></tr><tr><td style=\"white-space:nowrap\">0200900000<a name=\"PSGC-0200900000\"> </a></td><td>Batanes</td></tr><tr><td style=\"white-space:nowrap\">0201500000<a name=\"PSGC-0201500000\"> </a></td><td>Cagayan</td></tr><tr><td style=\"white-space:nowrap\">0203100000<a name=\"PSGC-0203100000\"> </a></td><td>Isabela</td></tr><tr><td style=\"white-space:nowrap\">0402100000<a name=\"PSGC-0402100000\"> </a></td><td>Cavite</td></tr><tr><td style=\"white-space:nowrap\">0403400000<a name=\"PSGC-0403400000\"> </a></td><td>Laguna</td></tr><tr><td style=\"white-space:nowrap\">0405600000<a name=\"PSGC-0405600000\"> </a></td><td>Quezon</td></tr><tr><td style=\"white-space:nowrap\">0405800000<a name=\"PSGC-0405800000\"> </a></td><td>Rizal</td></tr><tr><td style=\"white-space:nowrap\">1704000000<a name=\"PSGC-1704000000\"> </a></td><td>Marinduque</td></tr><tr><td style=\"white-space:nowrap\">1705100000<a name=\"PSGC-1705100000\"> </a></td><td>Occidental Mindoro</td></tr><tr><td style=\"white-space:nowrap\">0100000000<a name=\"PSGC-0100000000\"> </a></td><td>Ilocos Region</td></tr><tr><td style=\"white-space:nowrap\">0133000000<a name=\"PSGC-0133000000\"> </a></td><td>La Union</td></tr><tr><td style=\"white-space:nowrap\">0133070000<a name=\"PSGC-0133070000\"> </a></td><td>Bauang</td></tr><tr><td style=\"white-space:nowrap\">0133070250<a name=\"PSGC-0133070250\"> </a></td><td>Paringao</td></tr></table></div>"
+  },
+  "url" : "https://psa.gov.ph/classification/psgc",
+  "version" : "0.2.0",
+  "name" : "PSGC",
+  "title" : "Mock PSGC",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-12T04:48:36+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "Mock of the Philippine Standard Geographic Code.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 29,
+  "concept" : [{
+    "code" : "1300000000",
+    "display" : "National Capital Region"
+  },
+  {
+    "code" : "1380600000",
+    "display" : "City of Manila"
+  },
+  {
+    "code" : "1339000003",
+    "display" : "Ermita"
+  },
+  {
+    "code" : "1380100001",
+    "display" : "Barangay 1"
+  },
+  {
+    "code" : "1380100000",
+    "display" : "City of Caloocan"
+  },
+  {
+    "code" : "1380200000",
+    "display" : "City of Las Piñas"
+  },
+  {
+    "code" : "1400100000",
+    "display" : "Abra"
+  },
+  {
+    "code" : "1401100000",
+    "display" : "Benguet"
+  },
+  {
+    "code" : "1402700000",
+    "display" : "Ifugao"
+  },
+  {
+    "code" : "1403200000",
+    "display" : "Kalinga"
+  },
+  {
+    "code" : "1404400000",
+    "display" : "Mountain Province"
+  },
+  {
+    "code" : "1408100000",
+    "display" : "Apayao"
+  },
+  {
+    "code" : "0102800000",
+    "display" : "Ilocos Norte"
+  },
+  {
+    "code" : "0102900000",
+    "display" : "Ilocos Sur"
+  },
+  {
+    "code" : "0103300000",
+    "display" : "La Union"
+  },
+  {
+    "code" : "0105500000",
+    "display" : "Pangasinan"
+  },
+  {
+    "code" : "0200900000",
+    "display" : "Batanes"
+  },
+  {
+    "code" : "0201500000",
+    "display" : "Cagayan"
+  },
+  {
+    "code" : "0203100000",
+    "display" : "Isabela"
+  },
+  {
+    "code" : "0402100000",
+    "display" : "Cavite"
+  },
+  {
+    "code" : "0403400000",
+    "display" : "Laguna"
+  },
+  {
+    "code" : "0405600000",
+    "display" : "Quezon"
+  },
+  {
+    "code" : "0405800000",
+    "display" : "Rizal"
+  },
+  {
+    "code" : "1704000000",
+    "display" : "Marinduque"
+  },
+  {
+    "code" : "1705100000",
+    "display" : "Occidental Mindoro"
+  },
+  {
+    "code" : "0100000000",
+    "display" : "Ilocos Region"
+  },
+  {
+    "code" : "0133000000",
+    "display" : "La Union"
+  },
+  {
+    "code" : "0133070000",
+    "display" : "Bauang"
+  },
+  {
+    "code" : "0133070250",
+    "display" : "Paringao"
+  }]
+}

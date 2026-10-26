@@ -1,0 +1,29 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "480aee8a-bc59-4976-b286-740398f9abc2-12",
+  "url" : "http://hl7.org/fhir/comparison/CodeSystem/480aee8a-bc59-4976-b286-740398f9abc2-12",
+  "name" : "IntersectionPSOCAndPSOC",
+  "title" : "Intersection of Mock PSOC And PSOC",
+  "status" : "draft",
+  "date" : "2026-10-26T05:49:06+00:00",
+  "concept" : [{
+    "code" : "111102",
+    "display" : "Hospital Administrator",
+    "definition" : "Manages hospital operations"
+  },
+  {
+    "code" : "111103",
+    "display" : "Medical Department Head",
+    "definition" : "Head of a medical department"
+  },
+  {
+    "code" : "121101",
+    "display" : "General Manager",
+    "definition" : "Manages overall operations of an organization"
+  },
+  {
+    "code" : "211101",
+    "display" : "Medical Doctor",
+    "definition" : "Licensed physician practicing medicine"
+  }]
+}

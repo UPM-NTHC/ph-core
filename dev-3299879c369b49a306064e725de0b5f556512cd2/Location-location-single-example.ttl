@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Location/location-single-example> a fhir:Location ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "location-single-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-location" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-location>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Philippine General Hospital Main Building - A tertiary hospital located in Manila.</div>"
+  ] ;
+  fhir:Location.status [ fhir:value "active"] ;
+  fhir:Location.name [ fhir:value "Philippine General Hospital"] ;
+  fhir:Location.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ] ;
+       fhir:Coding.code [ fhir:value "HOSP" ] ;
+       fhir:Coding.display [ fhir:value "Hospital" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Hospital" ]
+  ] ;
+  fhir:Location.address [
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/region" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "1300000000" ] ;
+         fhir:Coding.display [ fhir:value "National Capital Region (NCR)" ]
+       ]
+     ], [
+       fhir:index 1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "1380600000" ] ;
+         fhir:Coding.display [ fhir:value "City of Manila" ]
+       ]
+     ] ;
+     fhir:Address.use [ fhir:value "work" ] ;
+     fhir:Address.line [
+       fhir:value "Taft Avenue" ;
+       fhir:index 0
+     ] ;
+     fhir:Address.postalCode [ fhir:value "1000" ] ;
+     fhir:Address.country [ fhir:value "PH" ]
+  ] ;
+  fhir:Location.physicalType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/location-physical-type" ] ;
+       fhir:Coding.code [ fhir:value "bu" ] ;
+       fhir:Coding.display [ fhir:value "Building" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Building" ]
+  ] ;
+  fhir:Location.position [
+     fhir:Location.position.longitude [ fhir:value "120.9856"^^xsd:decimal ] ;
+     fhir:Location.position.latitude [ fhir:value "14.5764"^^xsd:decimal ]
+  ] ;
+  fhir:Location.managingOrganization [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:Reference.reference [ fhir:value "Organization/organization-single-example" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Location/location-single-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

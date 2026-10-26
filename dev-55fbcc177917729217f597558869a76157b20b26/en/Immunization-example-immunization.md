@@ -1,0 +1,82 @@
+# example-immunization - Draft PH Core Implementation Guide v0.2.0
+
+## Example Immunization: example-immunization
+
+Juan Dela Cruz received a completed intramuscular flu shot (H5N1-1203) in the left arm on January 10, 2013. The vaccine lot number was AAJN11K and it was privately funded.
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Immunization",
+  "id" : "example-immunization",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization"]
+  },
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234"
+  }],
+  "status" : "completed",
+  "vaccineCode" : {
+    "coding" : [{
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "123"
+    }],
+    "text" : "influenza, H5N1-1203"
+  },
+  "patient" : {
+    "reference" : "Patient/example-patient"
+  },
+  "encounter" : {
+    "reference" : "Encounter/encounter-single-example"
+  },
+  "occurrenceDateTime" : "2013-01-10",
+  "primarySource" : true,
+  "lotNumber" : "AAJN11K",
+  "expirationDate" : "2015-02-15",
+  "site" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+      "code" : "LA",
+      "display" : "left arm"
+    }]
+  },
+  "route" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+      "code" : "IM",
+      "display" : "Injection, intramuscular"
+    }]
+  },
+  "doseQuantity" : {
+    "value" : 5,
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mg"
+  },
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+        "code" : "OP"
+      }]
+    },
+    "actor" : {
+      "reference" : "Practitioner/example-practitioner"
+    }
+  }],
+  "note" : [{
+    "text" : "Notes on adminstration of vaccine"
+  }],
+  "isSubpotent" : true,
+  "fundingSource" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/immunization-funding-source",
+      "code" : "private"
+    }]
+  }
+}
+
+```

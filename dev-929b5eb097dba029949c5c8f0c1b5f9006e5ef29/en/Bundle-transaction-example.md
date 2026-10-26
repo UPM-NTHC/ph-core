@@ -1,0 +1,383 @@
+# transaction-example - Draft PH Core Implementation Guide v0.2.0
+
+## Example Bundle: transaction-example
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "transaction-example",
+  "type" : "transaction",
+  "entry" : [{
+    "fullUrl" : "https://fhir.doh.gov.ph/phcore/Patient/example-patient",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "example-patient",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_example-patient\"> </a>Juan Dela Cruz is a male patient born on 1 January 1980, residing in Manila, NCR, Philippines.</div>"
+      },
+      "extension" : [{
+        "extension" : [{
+          "url" : "code",
+          "valueCodeableConcept" : {
+            "coding" : [{
+              "system" : "urn:iso:std:iso:3166",
+              "code" : "PH",
+              "display" : "Philippines"
+            }]
+          }
+        },
+        {
+          "url" : "period",
+          "valuePeriod" : {
+            "start" : "2020-01-01",
+            "end" : "2023-01-01"
+          }
+        }],
+        "url" : "http://hl7.org/fhir/StructureDefinition/patient-nationality"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/patient-religion",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation",
+            "code" : "1007",
+            "display" : "Atheism"
+          }]
+        }
+      },
+      {
+        "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/race",
+        "valueCodeableConcept" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-Race",
+            "code" : "2036-2",
+            "display" : "Filipino"
+          }]
+        }
+      }],
+      "identifier" : [{
+        "system" : "http://philhealth.gov.ph/fhir/Identifier/philhealth-id",
+        "value" : "63-584789845-5"
+      }],
+      "active" : true,
+      "name" : [{
+        "family" : "Dela Cruz",
+        "given" : ["Juan Jane", "Dela Fuente"]
+      }],
+      "gender" : "male",
+      "birthDate" : "1980-01-01",
+      "address" : [{
+        "extension" : [{
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "1380100001",
+            "display" : "Barangay 1"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "1380200000",
+            "display" : "City of Las Piñas"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/province",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0402100000",
+            "display" : "Cavite"
+          }
+        }],
+        "line" : ["123 Mabini Street", "Barangay Malinis"],
+        "city" : "Quezon City",
+        "district" : "NCR",
+        "postalCode" : "1100",
+        "country" : "PH"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Patient"
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/phcore/Encounter/example-encounter",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "example-encounter",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_example-encounter\"> </a>An ambulatory encounter for Juan Dela Cruz that has been completed.</div>"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "AMB",
+        "display" : "ambulatory"
+      },
+      "subject" : {
+        "reference" : "Patient/example-patient"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Encounter"
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/phcore/Condition/example-condition",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "example-condition",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_example-condition\"> </a>Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.</div>"
+      },
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active",
+          "display" : "Active"
+        }]
+      },
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "44054006",
+          "display" : "Diabetes mellitus type 2"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/example-patient"
+      },
+      "encounter" : {
+        "reference" : "Encounter/example-encounter"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Condition"
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/phcore/Medication/example-medication",
+    "resource" : {
+      "resourceType" : "Medication",
+      "id" : "example-medication",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Medication_example-medication\"> </a>A medication resource has been created, but no specific details are provided.</div>"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Medication"
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/phcore/Observation/blood-pressure",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "blood-pressure",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_blood-pressure\"> </a>On 17 September 2012, a blood pressure observation was recorded for Juan Dela Cruz. The systolic pressure was 107 mmHg (Normal), and the diastolic pressure was 60 mmHg (Below low normal). The measurement was taken from the right arm and performed by a practitioner.</div>"
+      },
+      "identifier" : [{
+        "system" : "urn:ietf:rfc:3986",
+        "value" : "urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281"
+      }],
+      "basedOn" : [{
+        "identifier" : {
+          "system" : "https://acme.org/identifiers",
+          "value" : "1234"
+        }
+      }],
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "vital-signs",
+          "display" : "Vital Signs"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85354-9",
+          "display" : "Blood pressure panel with all children optional"
+        }],
+        "text" : "Blood pressure systolic & diastolic"
+      },
+      "subject" : {
+        "reference" : "Patient/example-patient"
+      },
+      "effectiveDateTime" : "2012-09-17",
+      "performer" : [{
+        "reference" : "Practitioner/example-practitioner"
+      }],
+      "interpretation" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "code" : "L",
+          "display" : "Low"
+        }],
+        "text" : "Below low normal"
+      }],
+      "bodySite" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "368209003",
+          "display" : "Right arm"
+        }]
+      },
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "8480-6",
+            "display" : "Systolic blood pressure"
+          }]
+        },
+        "valueQuantity" : {
+          "value" : 107,
+          "unit" : "mmHg",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "mm[Hg]"
+        },
+        "interpretation" : [{
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+            "code" : "N",
+            "display" : "Normal"
+          }],
+          "text" : "Normal"
+        }]
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "8462-4",
+            "display" : "Diastolic blood pressure"
+          }]
+        },
+        "valueQuantity" : {
+          "value" : 60,
+          "unit" : "mmHg",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "mm[Hg]"
+        },
+        "interpretation" : [{
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+            "code" : "L",
+            "display" : "Low"
+          }],
+          "text" : "Below low normal"
+        }]
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/phcore/AllergyIntolerance/example-allergy",
+    "resource" : {
+      "resourceType" : "AllergyIntolerance",
+      "id" : "example-allergy",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"AllergyIntolerance_example-allergy\"> </a>Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.</div>"
+      },
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+          "code" : "active",
+          "display" : "Active"
+        }]
+      },
+      "criticality" : "high",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "294494002",
+          "display" : "Benethamine penicillin allergy"
+        }]
+      },
+      "patient" : {
+        "reference" : "Patient/example-patient"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "AllergyIntolerance"
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/phcore/Practitioner/example-practitioner",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "example-practitioner",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_example-practitioner\"> </a>Dr. Maria Clara Santos is a female practitioner born on May 15, 1985. She resides at 1234 Mabini Street, Manila, NCR, 1000, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph.</div>"
+      },
+      "name" : [{
+        "family" : "Santos",
+        "given" : ["Maria", "Clara"]
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "+63-912-345-6789",
+        "use" : "mobile"
+      },
+      {
+        "system" : "email",
+        "value" : "maria.santos@example.ph",
+        "use" : "work"
+      }],
+      "address" : [{
+        "use" : "home",
+        "line" : ["1234 Mabini Street"],
+        "city" : "Manila",
+        "state" : "NCR",
+        "postalCode" : "1000",
+        "country" : "PH"
+      }],
+      "gender" : "female",
+      "birthDate" : "1985-05-15"
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Practitioner"
+    }
+  }]
+}
+
+```

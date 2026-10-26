@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="example-patient"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient example-patient</b></p><a name="example-patient"> </a><a name="hcexample-patient"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-patient.html">PH Core Patient</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3">123 Mabini Street Barangay Malinis Quezon City 1100 PH </td></tr><tr><td style="background-color: #f3f5da" title="race of a patient."><a href="StructureDefinition-race.html">Race</a></td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-Race 2036-2}">Filipino</span></td></tr><tr><td style="background-color: #f3f5da" title="The nationality of the patient.">Patient Nationality:</td><td colspan="3"><ul><li>code: <span title="Codes:{urn:iso:std:iso:3166 PH}">Philippines</span></li><li>period: 2020-01-01 --&gt; 2023-01-01</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The patient's professed religious affiliations."><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-patient-religion.html">Patient Religion</a></td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation 1007}">Atheism</span></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-nationality">
+    <extension url="code">
+      <valueCodeableConcept>
+        <coding>
+          <system value="urn:iso:std:iso:3166"/>
+          <code value="PH"/>
+          <display value="Philippines"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="period">
+      <valuePeriod>
+        <start value="2020-01-01"/>
+        <end value="2023-01-01"/>
+      </valuePeriod>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/patient-religion">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation"/>
+        <code value="1007"/>
+        <display value="Atheism"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/race">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-Race"/>
+        <code value="2036-2"/>
+        <display value="Filipino"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <system value="http://philhealth.gov.ph/fhir/Identifier/philhealth-id"/>
+    <value value="63-584789845-5"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <family value="Dela Cruz"/>
+    <given value="Juan Jane"/>
+    <given value="Dela Fuente"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1980-01-01"/>
+  <address>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1380100001"/>
+        <display value="Barangay 1"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1380200000"/>
+        <display value="City of Las Piñas"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/province">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0402100000"/>
+        <display value="Cavite"/>
+      </valueCoding>
+    </extension>
+    <line value="123 Mabini Street"/>
+    <line value="Barangay Malinis"/>
+    <city value="Quezon City"/>
+    <district value="NCR"/>
+    <postalCode value="1100"/>
+    <country value="PH"/>
+  </address>
+</Patient>

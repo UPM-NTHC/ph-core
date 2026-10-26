@@ -1,0 +1,2275 @@
+# Resource Draft PH Core Implementation Guide
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "fhir.ph.core",
+  "language" : "en",
+  "url" : "https://fhir.doh.gov.ph/phcore/ImplementationGuide/fhir.ph.core",
+  "version" : "0.2.1",
+  "name" : "PHCoreImplementationGuide",
+  "title" : "Draft PH Core Implementation Guide",
+  "status" : "draft",
+  "date" : "2026-10-26T05:35:56+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH Core profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "packageId" : "fhir.ph.core",
+  "license" : "CC-BY-1.0",
+  "fhirVersion" : ["4.0.1"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "7.4.0"
+  },
+  {
+    "id" : "hl7_fhir_uv_extensions_r4",
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "5.3.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.3.0"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2025+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "ci-build"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://verification.fda.gov.ph"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://my-hospital.org/internal-id"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://psa.gov.ph/classification/psced/level"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://psa.gov.ph/classification/psgc"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "special-url"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://psa.gov.ph/classification/psoc/unit"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid-template"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid-template"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "https://fhir.doh.gov.ph/phcore/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "i18n-default-lang"
+      },
+      {
+        "url" : "value",
+        "valueString" : "en"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-administered-product.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/administered-product"
+      },
+      "name" : "Administered Product",
+      "description" : "The vaccine product that was administered.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-bundle-allergy-provenance-example.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bundle-allergy-provenance-example"
+      },
+      "name" : "Allergy with authorship and transmission",
+      "description" : "Search response containing an AllergyIntolerance and two Provenance records: one identifies its author and represented Organization, and the other identifies the Organization that later transmitted it.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "AllergyIntolerance"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AllergyIntolerance-allergy-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "AllergyIntolerance/allergy-single-example"
+      },
+      "name" : "allergy-single-example",
+      "description" : "Juan Dela Cruz has a high criticality, active allergy to Benethamine penicillin.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-allergyintolerance"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-patient-anonymous-mothers-maiden-name-example.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/patient-anonymous-mothers-maiden-name-example"
+      },
+      "name" : "Anonymous Patient with Mother's Maiden Name",
+      "description" : "The patient's own name is unknown, but the mother's full name is known from a reliable source and recorded as supplementary patient-matching information.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-barangay.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/barangay"
+      },
+      "name" : "Barangay",
+      "description" : "Barangay from the standard geographic code.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-barangays.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/barangays"
+      },
+      "name" : "Barangays",
+      "description" : "The Barangay codes valueset includes all barangay values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-batch-number.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/batch-number"
+      },
+      "name" : "Batch Number",
+      "description" : "The batch number of the vaccine administered.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-component-unavailable.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-component-unavailable"
+      },
+      "name" : "Blood pressure with an unavailable diastolic result",
+      "description" : "The systolic result is known. The diastolic result was not obtained and has its own native absence reason.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-bundle-observation-provenance-example.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bundle-observation-provenance-example"
+      },
+      "name" : "Blood pressure with authorship",
+      "description" : "Search response containing a blood pressure Observation and its author Provenance. The Observation is the search match; the Provenance is reverse-included through its target reference.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-bundle-acs-case-example.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/bundle-acs-case-example"
+      },
+      "name" : "bundle-acs-case-example",
+      "description" : "Synthetic ED presentation for Miguel Reyes on 12 June 2026; linked patient, clinicians, diagnosis, observations and ED note. No treatment protocol or production server capability is asserted.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-cities.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/cities"
+      },
+      "name" : "Cities",
+      "description" : "All city, municipality, and sub-municipality values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-city-municipality.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/city-municipality"
+      },
+      "name" : "City/Municipality",
+      "description" : "City/municipality from the standard geographic code.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Claim"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Claim-claim-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "Claim/claim-single-example"
+      },
+      "name" : "claim-single-example",
+      "description" : "Synthetic FHIR claim for Juan Dela Cruz's March 2025 outpatient follow-up. Illustrates insurer/provider separation; the amount and service coding do not establish PhilHealth coverage or reimbursement rules.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Condition-condition-appendicitis-example.html"
+      }],
+      "reference" : {
+        "reference" : "Condition/condition-appendicitis-example"
+      },
+      "name" : "condition-appendicitis-example",
+      "description" : "Acute appendicitis associated with Juan Dela Cruz's January 2024 surgery.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Condition-condition-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "Condition/condition-single-example"
+      },
+      "name" : "condition-single-example",
+      "description" : "Juan Dela Cruz has an active diagnosis of Type 2 Diabetes Mellitus.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-condition"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-drugs-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/drugs-vs"
+      },
+      "name" : "Drugs",
+      "description" : "Codes from the locally authored FDA CPR.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-educational-attainment.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/educational-attainment"
+      },
+      "name" : "Educational Attainment",
+      "description" : "Highest educational attainment of the patient.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-educational-attainments.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/educational-attainments"
+      },
+      "name" : "Educational Attainments",
+      "description" : "All categories of educational programs, courses, and attainment levels in the Philippines, based on the Philippine Standard Classification of Education (PSCED) published by the Philippine Statistics Authority (PSA)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-encounter-immunization-example.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/encounter-immunization-example"
+      },
+      "name" : "encounter-immunization-example",
+      "description" : "Historical influenza immunization visit for Juan Dela Cruz on 10 January 2013.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-encounter-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/encounter-single-example"
+      },
+      "name" : "encounter-single-example",
+      "description" : "An ambulatory visit for Juan Dela Cruz that has been completed.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Encounter-encounter-surgery-example.html"
+      }],
+      "reference" : {
+        "reference" : "Encounter/encounter-surgery-example"
+      },
+      "name" : "encounter-surgery-example",
+      "description" : "Juan Dela Cruz's surgical encounter for appendicitis on 15 January 2024.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-encounter"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "HealthcareService"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "HealthcareService-healthcareservice-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "HealthcareService/healthcareservice-single-example"
+      },
+      "name" : "Example PH Core HealthcareService",
+      "description" : "Philippine General Hospital Outpatient Department providing General Medicine consultations as a PH Core HealthcareService.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-healthcareservice"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Location"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Location-location-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "Location/location-single-example"
+      },
+      "name" : "Example PH Core Location",
+      "description" : "Philippine General Hospital - A government tertiary hospital located in Manila, Philippines.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-location"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-organization-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "Organization/organization-single-example"
+      },
+      "name" : "Example PH Core Organization",
+      "description" : "An example instance of a PH Core Organization conforming to the Philippine localization profile. Demonstrates all identifier types (NHFR, HCPN, PAN, PEN) and Must Support fields.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-result-unavailable.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-result-unavailable"
+      },
+      "name" : "Glucose result unavailable after specimen error",
+      "description" : "A requested glucose observation has no result because the specimen could not be processed. The reason is carried by the native result absence element.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation-clinical-result"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-organization-philhealth-example.html"
+      }],
+      "reference" : {
+        "reference" : "Organization/organization-philhealth-example"
+      },
+      "name" : "Illustrative PhilHealth insurer",
+      "description" : "Synthetic insurer/payor supporting the primary-care Claim and Coverage examples.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-organization-prc-example.html"
+      }],
+      "reference" : {
+        "reference" : "Organization/organization-prc-example"
+      },
+      "name" : "Illustrative practitioner credential issuer",
+      "description" : "Synthetic Professional Regulation Commission resource used as the issuer of the physician's example qualification.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Immunization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Immunization-immunization-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "Immunization/immunization-single-example"
+      },
+      "name" : "immunization-single-example",
+      "description" : "Juan Dela Cruz received a completed intramuscular influenza (H5N1-1203) vaccine at Philippine General Hospital on January 10, 2013.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-indigenous-status-cs.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/indigenous-status-cs"
+      },
+      "name" : "Indigenous Groups CodeSystem",
+      "description" : "Provisional locally authored list of indigenous-status labels.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-indigenous-status-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/indigenous-status-vs"
+      },
+      "name" : "Indigenous Groups ValueSet",
+      "description" : "Codes from the provisional locally authored indigenous-status list. National classification source, coverage and binding require appraisal.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-indigenous-status.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/indigenous-status"
+      },
+      "name" : "Indigenous status",
+      "description" : "Indigenous / ethnic group that the patient belongs to.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Medication-medication-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "Medication/medication-single-example"
+      },
+      "name" : "medication-single-example",
+      "description" : "Twinact (Telmisartan + Amlodipine) from PH FDA CPR.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Medication"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Medication-medication-vaccine-example.html"
+      }],
+      "reference" : {
+        "reference" : "Medication/medication-vaccine-example"
+      },
+      "name" : "medication-vaccine-example",
+      "description" : "Illustrative vaccine product referenced by the historical Immunization. CVX identifies the vaccine in Immunization.vaccineCode; this Medication has text only because the PH FDA Drugs value set has no registration concept for this product. This is not an FDA registration claim.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-bp-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-bp-example"
+      },
+      "name" : "observation-bp-example",
+      "description" : "Blood pressure observation for Juan Dela Cruz taken on 17 September 2012. Systolic: 107 mmHg (Normal), Diastolic: 60 mmHg (Below low normal).",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-derived-bmi-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-derived-bmi-example"
+      },
+      "name" : "observation-derived-bmi-example",
+      "description" : "BMI calculated from height and weight observations for Juan Dela Cruz.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-environmental-temp-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-environmental-temp-example"
+      },
+      "name" : "observation-environmental-temp-example",
+      "description" : "Environmental temperature observation for a hospital ward (Location as subject).",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-glucose-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-glucose-example"
+      },
+      "name" : "observation-glucose-example",
+      "description" : "Fasting blood glucose observation for Juan Dela Cruz.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-height-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-height-example"
+      },
+      "name" : "observation-height-example",
+      "description" : "Body height observation for Juan Dela Cruz.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-lab-panel-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-lab-panel-example"
+      },
+      "name" : "observation-lab-panel-example",
+      "description" : "Preoperative electrolyte panel with references to its sodium and potassium observations.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-part-of-procedure-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-part-of-procedure-example"
+      },
+      "name" : "observation-part-of-procedure-example",
+      "description" : "Intraoperative blood pressure observation during appendectomy procedure.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-performer-role-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-performer-role-example"
+      },
+      "name" : "observation-performer-role-example",
+      "description" : "Heart rate observation performed by a practitioner in a specific role.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-potassium-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-potassium-example"
+      },
+      "name" : "observation-potassium-example",
+      "description" : "Serum potassium observation for Juan Dela Cruz.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-sodium-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-sodium-example"
+      },
+      "name" : "observation-sodium-example",
+      "description" : "Serum sodium observation for Juan Dela Cruz.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-vitals-encounter-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-vitals-encounter-example"
+      },
+      "name" : "observation-vitals-encounter-example",
+      "description" : "Body temperature observation for Juan Dela Cruz taken during an ambulatory encounter.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-observation-weight-example.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/observation-weight-example"
+      },
+      "name" : "observation-weight-example",
+      "description" : "Body weight observation for Juan Dela Cruz.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-occupation.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/occupation"
+      },
+      "name" : "Occupation",
+      "description" : "Patient's occupation.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-occupational-classifications.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/occupational-classifications"
+      },
+      "name" : "Occupation Classifications",
+      "description" : "The Occupation codes valueset includes Occupational Classification values from the Philippine Standard Occupational Classification (PSOC) published by the Philippine Statistic Authority (PSA).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-organization-pgh-example.html"
+      }],
+      "reference" : {
+        "reference" : "Organization/organization-pgh-example"
+      },
+      "name" : "organization-pgh-example",
+      "description" : "Philippine General Hospital (PGH) — A government tertiary hospital located in Ermita, Manila, NCR. NHFR: 1234567890, PAN: PAN-2024-56789, PEN: PEN-987654321.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-patient-explicit-absence-example.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/patient-explicit-absence-example"
+      },
+      "name" : "Patient with an unknown name",
+      "description" : "The whole name is unknown. DAR is attached to HumanName, matching the US Core missing-name pattern.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Procedure"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Procedure-procedure-unknown-date-example.html"
+      }],
+      "reference" : {
+        "reference" : "Procedure/procedure-unknown-date-example"
+      },
+      "name" : "Patient-reported appendectomy with unknown date",
+      "description" : "The patient reports a completed past appendectomy but cannot recall its date. The standard DAR extension on performedDateTime records that the date is unknown.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-patient-sex-and-gender-example.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/patient-sex-and-gender-example"
+      },
+      "name" : "patient-sex-and-gender-example",
+      "description" : "A synthetic patient with male administrative gender and separate recorded sex entries from a birth certificate, insurance card and driver's license, alongside a female gender identity and she/her pronouns.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-patient-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "Patient/patient-single-example"
+      },
+      "name" : "patient-single-example",
+      "description" : "Juan Dela Cruz is a male patient born on 1 January 1980, residing in Ermita, Manila, NCR, Philippines.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:complex-type"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-address.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-address"
+      },
+      "name" : "PH Core Address",
+      "description" : "An address for the individual.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-allergyintolerance.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-allergyintolerance"
+      },
+      "name" : "PH Core AllergyIntolerance",
+      "description" : "This profile sets minimum expectations for an AllergyIntolerance resource to record, search, and fetch basic allergy intolerance information for a patient. It is based on the [FHIR R4 AllergyIntolerance](https://www.hl7.org/fhir/R4/allergyintolerance.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the AllergyIntolerance when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-claim.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-claim"
+      },
+      "name" : "PH Core Claim",
+      "description" : "Captures information about a request for reimbursement or payment for health care products and services within the Philippine health system.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ActorDefinition-PHCoreClient.html"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/PHCoreClient"
+      },
+      "name" : "PH Core Client",
+      "description" : "A system that initiates FHIR API requests to access or exchange PH Core resources.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-condition.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-condition"
+      },
+      "name" : "PH Core Condition",
+      "description" : "Captures Condition.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-ph-core-disability-type-cs.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/ph-core-disability-type-cs"
+      },
+      "name" : "PH Core Disability Type Code System",
+      "description" : "Provisional locally authored disability-category examples for PWD registration. The codes and definitions require comparison with the controlling Philippine classification.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-ph-core-disability-type-vs.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/ph-core-disability-type-vs"
+      },
+      "name" : "PH Core Disability Type Value Set",
+      "description" : "Value set for types of disability as defined by the Philippine government for PWD registration.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-encounter.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-encounter"
+      },
+      "name" : "PH Core Encounter",
+      "description" : "This profile sets minimum expectations for an Encounter resource to record, search, and fetch basic encounter information for a patient. It is based on the [FHIR R4 Encounter](https://www.hl7.org/fhir/R4/encounter.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the Encounter when conforming to this profile. It provides the floor for standards development for specific uses cases in a Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-healthcareservice.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-healthcareservice"
+      },
+      "name" : "PH Core HealthcareService",
+      "description" : "This profile sets minimum expectations for a HealthcareService resource to record, search, and fetch information about healthcare services offered by an organization or at a location in the Philippine context. It is based on the [FHIR R4 HealthcareService](https://www.hl7.org/fhir/R4/healthcareservice.html) resource and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets that **SHALL** be present in the HealthcareService when conforming to this profile. It provides the floor for standards development for specific use cases in a Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-immunization.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-immunization"
+      },
+      "name" : "PH Core Immunization",
+      "description" : "Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-location.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-location"
+      },
+      "name" : "PH Core Location",
+      "description" : "This profile localizes the FHIR R4 Location resource to the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-medication.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-medication"
+      },
+      "name" : "PH Core Medication",
+      "description" : "This resource is primarily used for the identification and definition of a medication, including ingredients, for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-medicationadministration.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-medicationadministration"
+      },
+      "name" : "PH Core Medication Administration",
+      "description" : "Captures key FHIR Medication Administration data for the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-medicationdispense.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-medicationdispense"
+      },
+      "name" : "PH Core Medication Dispense",
+      "description" : "Captures key FHIR Medication Dispense data for the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-medicationrequest.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-medicationrequest"
+      },
+      "name" : "PH Core Medication Request",
+      "description" : "Captures key FHIR Medication Request data for the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-medicationstatement.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-medicationstatement"
+      },
+      "name" : "PH Core Medication Statement",
+      "description" : "Captures key FHIR Medication Statement data for the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-observation.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-observation"
+      },
+      "name" : "PH Core Observation",
+      "description" : "Measurements and simple assertions made about a patient, device or other subject.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-observation-clinical-result.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-observation-clinical-result"
+      },
+      "name" : "PH Core Observation Clinical Result",
+      "description" : "A selected clinical measurement, test or panel with a result value, member/component results, or an explicit reason why the expected result is absent.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-organization.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-organization"
+      },
+      "name" : "PH Core Organization",
+      "description" : "This profile localizes the FHIR R4 Organization resource to the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-patient.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-patient"
+      },
+      "name" : "PH Core Patient",
+      "description" : "Captures key demographic and administrative information about individuals receiving care or other health-related services.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-practitioner.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-practitioner"
+      },
+      "name" : "PH Core Practitioner",
+      "description" : "The PH Core Practitioner Profile inherits from the [FHIR R4 Practitioner resource](https://hl7.org/fhir/R4/practitioner.html); refer to it for scope and usage definitions. This profile sets minimum expectations for the Practitioner resource to record, search, and fetch basic demographics and administrative information about an individual practitioner in a Philippine context. It specifies which core elements, extensions, vocabularies, and value sets SHALL be present and constrains how the elements are used. It provides the floor for standards development for Philippine use cases.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-practitionerrole.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-practitionerrole"
+      },
+      "name" : "PH Core PractitionerRole",
+      "description" : "The PH Core Practitioner Role Profile inherits from the [FHIR R4 PractitionerRole resource](https://hl7.org/fhir/R4/practitionerrole.html); refer to it for scope and usage definitions. This profile sets minimum expectations for the PractitionerRole resource to record, search, and fetch basic demographics and administrative information about an individual practitioner role in a Philippine context. It specifies which core elements, extensions, vocabularies, and value sets SHALL be present and constrains how the elements are used. It provides the floor for standards development for Philippine use cases.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-procedure.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-procedure"
+      },
+      "name" : "PH Core Procedure",
+      "description" : "An action that is or was performed on or for a patient, practitioner, device, organization, or location.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-provenance.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-provenance"
+      },
+      "name" : "PH Core Provenance",
+      "description" : "This profile identifies the resources described by an activity, when the activity was recorded, and the agents responsible for creating, updating, or transmitting the information.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-pwd-disability.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-pwd-disability"
+      },
+      "name" : "PH Core PWD Disability Registration",
+      "description" : "Extension for Person With Disability (PWD) registration information. Captures PWD ID number, type of disability, and ID expiration date as issued by the PDAO (Persons with Disability Affairs Office).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-relatedperson.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-relatedperson"
+      },
+      "name" : "PH Core RelatedPerson",
+      "description" : "This profile localizes the FHIR R4 RelatedPerson resource to the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActorDefinition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ActorDefinition-PHCoreServer.html"
+      }],
+      "reference" : {
+        "reference" : "ActorDefinition/PHCoreServer"
+      },
+      "name" : "PH Core Server",
+      "description" : "A system that accepts FHIR API requests and provides responses using PH Core resources.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-serviceRequest.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-serviceRequest"
+      },
+      "name" : "PH Core ServiceRequest",
+      "description" : "The PH Core ServiceRequest Profile is a Philippine-specific FHIR profile that represents a record of a request for services such as diagnostic investigations, treatments, or operations to be performed within the Philippine health system. It constrains the base FHIR ServiceRequest resource by defining minimum expectations on core elements, extensions, vocabularies, and value sets relevant to local clinical and administrative workflows. It serves as a nationally consistent baseline for recording, searching, and fetching service request information to support interoperable health information exchange across Philippine health facilities and programs.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-ph-core-task.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ph-core-task"
+      },
+      "name" : "PH Core Task",
+      "description" : "This profile localizes the FHIR R4 Task resource to the Philippine context.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-PHFDACPRCS.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/PHFDACPRCS"
+      },
+      "name" : "PH FDA Certificate of Product Registration (CPR) CodeSystem",
+      "description" : "Registered drug products from the Philippine Food and Drug Administration (FDA)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-PHCoreClientCapabilityStatement.html"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/PHCoreClientCapabilityStatement"
+      },
+      "name" : "PHCoreClientCapabilityStatement",
+      "description" : "Baseline requirements for systems initiating PH Core FHIR API requests. Clients select the profiles and interactions needed for their use cases from the PH Core Server capability catalog.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-PHCoreServerCapabilityStatement.html"
+      }],
+      "reference" : {
+        "reference" : "CapabilityStatement/PHCoreServerCapabilityStatement"
+      },
+      "name" : "PHCoreServerCapabilityStatement",
+      "description" : "Requirements and selectable capability catalog for systems responding to PH Core FHIR API requests, including standard retrieval and conditional atomic ingestion.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Coverage"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Coverage-philhealth-coverage-example.html"
+      }],
+      "reference" : {
+        "reference" : "Coverage/philhealth-coverage-example"
+      },
+      "name" : "philhealth-coverage-example",
+      "description" : "PhilHealth coverage for Juan Dela Cruz with member ID 63-584789845-5.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "NamingSystem-PhilSysIDNS.html"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/PhilSysIDNS"
+      },
+      "name" : "PhilSys Identification Number (PhilSys ID) NamingSystem",
+      "description" : "The National ID Number issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "NamingSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "NamingSystem-PhilHealthIDNS.html"
+      }],
+      "reference" : {
+        "reference" : "NamingSystem/PhilHealthIDNS"
+      },
+      "name" : "PIN - PhilHealth Identification Number NamingSystem",
+      "description" : "The permanent and unique number issued by PhilHealth to individual members and to each and every dependent.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-practitioner-identifier.html"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/practitioner-identifier"
+      },
+      "name" : "practitioner-identifier",
+      "description" : "R5 Practitioner identifier-search behavior backported to R4, covering practitioner and qualification identifiers.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-practitioner-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/practitioner-single-example"
+      },
+      "name" : "practitioner-single-example",
+      "description" : "Dr. Maria Clara Santos, MD, a licensed physician born on 1985-05-15, residing in Manila, Philippines. She can be contacted via mobile at +63-912-345-6789 or by email at maria.santos@example.ph. She speaks Filipino and English.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "PractitionerRole-practitionerrole-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/practitionerrole-single-example"
+      },
+      "name" : "practitionerrole-single-example",
+      "description" : "Dr. Maria Clara Santos is a General Practitioner working in the Philippine General Hospital outpatient service.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitionerrole"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-prc-all-codes.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/prc-all-codes"
+      },
+      "name" : "PRC All Codes ValueSet",
+      "description" : "The complete set of all concepts defined by PRCCodeSystem version 0.1.0, including its root and structural grouping concepts. This immutable technical ValueSet is the CodeSystem's full-content ValueSet; use the category-specific PRC ValueSets for code selection.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-prc.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/prc"
+      },
+      "name" : "PRC CodeSystem",
+      "description" : "Consolidated PH Core terminology for PRC CPDAS Council codes, CPDAS numerical profession codes, and PRC licensure examination codes. CPDAS council and profession concepts reflect the FAQ as of 12 January 2021; PRC examination concepts reflect the standardized list posted 18 March 2026. The hierarchy groups related concepts and does not assert an is-a relationship. The 2021 CPDAS table says its numeric profession codes are for CPD attendance sheets and is subject to regular updating. The 2026 Food Technology and Speech-Language Pathology examination boards have abstract local grouping nodes because the 2021 CPDAS table has no council codes for them; those nodes are not CouncilCode values.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-prc-council-codes.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/prc-council-codes"
+      },
+      "name" : "PRC Council Codes ValueSet",
+      "description" : "The Council and Code entries in the PRC CPDAS profession table as of 12 January 2021. The source says its profession codes are used for attendance sheets at accredited CPD programs.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-prc-licensure-examinations.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/prc-licensure-examinations"
+      },
+      "name" : "PRC Licensure Examinations ValueSet",
+      "description" : "The 59 PRC examination and assessment codes in the standardized nomenclature list posted 18 March 2026. Codes are examination identifiers, not professional qualifications or license numbers.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-prc-profession-codes.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/prc-profession-codes"
+      },
+      "name" : "PRC Profession Codes ValueSet",
+      "description" : "The 66 numerical profession codes in the PRC CPDAS table as of 12 January 2021. PRC states that the codes are used on attendance sheets for accredited CPD programs, and notes that the FAQ is subject to regular updating. Use these codes for a qualification or practitioner role only when the CPDAS profession classification matches; the code does not assert current license validity.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Procedure"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Procedure-procedure-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "Procedure/procedure-single-example"
+      },
+      "name" : "procedure-single-example",
+      "description" : "Appendectomy performed during Juan Dela Cruz's January 2024 surgical encounter; linked to the appendicitis diagnosis and completed service request.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-province.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/province"
+      },
+      "name" : "Province",
+      "description" : "Province from the standard geographic code.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-provinces.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/provinces"
+      },
+      "name" : "Provinces",
+      "description" : "All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-PSCED.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/PSCED"
+      },
+      "name" : "PSCED",
+      "description" : "The Philippine Standard Classification of Education.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-PSGC.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/PSGC"
+      },
+      "name" : "PSGC",
+      "description" : "The Philippine Standard Geographic Code.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-PSOC.html"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/PSOC"
+      },
+      "name" : "PSOC",
+      "description" : "The Philippine Standard Occupational Classification.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-race.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/race"
+      },
+      "name" : "Race",
+      "description" : "Draft representation of a person-reported race classification. The inherited terminology choice requires Philippine use-case appraisal.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-region.html"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/region"
+      },
+      "name" : "Region",
+      "description" : "Region from the standard geographic code.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-regions.html"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/regions"
+      },
+      "name" : "Regions",
+      "description" : "The Region codes valueset includes all region values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "RelatedPerson"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "RelatedPerson-relatedperson-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "RelatedPerson/relatedperson-single-example"
+      },
+      "name" : "relatedperson-single-example",
+      "description" : "Maria Cruz Santos is a female born on 1 January 1955, mother of the patient.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-relatedperson"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-servicerequest-appendectomy-example.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/servicerequest-appendectomy-example"
+      },
+      "name" : "servicerequest-appendectomy-example",
+      "description" : "Completed appendectomy request during Juan Dela Cruz's surgical encounter.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ServiceRequest-servicerequest-single-example.html"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/servicerequest-single-example"
+      },
+      "name" : "servicerequest-single-example",
+      "description" : "A laboratory service request for fasting blood glucose test ordered by Dr. Maria Clara Santos for patient Juan Dela Cruz during an ambulatory encounter.",
+      "exampleCanonical" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-serviceRequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-transaction-example.html"
+      }],
+      "reference" : {
+        "reference" : "Bundle/transaction-example"
+      },
+      "name" : "transaction-example",
+      "description" : "Synthetic primary-care follow-up for Juan Dela Cruz on 15 March 2025, including linked organizations, clinician, encounter, completed collection work and laboratory results, and the medication sequence. This Bundle packages records, not a workflow event log.",
+      "exampleBoolean" : true
+    }],
+    "page" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+        "valueUrl" : "toc.html"
+      }],
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "index.html"
+        }],
+        "nameUrl" : "index.html",
+        "title" : "Home",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "client-server-conformance.html"
+        }],
+        "nameUrl" : "client-server-conformance.html",
+        "title" : "Client Server Conformance",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "examples.html"
+        }],
+        "nameUrl" : "examples.html",
+        "title" : "Examples",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "fhir-rest-tutorial.html"
+        }],
+        "nameUrl" : "fhir-rest-tutorial.html",
+        "title" : "Fhir Rest Tutorial",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "otherIds.html"
+        }],
+        "nameUrl" : "otherIds.html",
+        "title" : "Other Ids",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "sample-case.html"
+        }],
+        "nameUrl" : "sample-case.html",
+        "title" : "Sample Case",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "sex-and-gender-guidance.html"
+        }],
+        "nameUrl" : "sex-and-gender-guidance.html",
+        "title" : "Sex and Gender Guidance",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "terminology.html"
+        }],
+        "nameUrl" : "terminology.html",
+        "title" : "Terminology",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/maps"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/assets"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}
+
+```

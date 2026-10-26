@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="philhealth-coverage-example"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">PhilHealth coverage for Juan Dela Cruz with member ID 63-584789845-5.</div>
+  </text>
+  <status value="active"/>
+  <subscriber>
+    <reference value="Patient/patient-single-example"/>
+  </subscriber>
+  <subscriberId value="63-584789845-5"/>
+  <beneficiary>
+    <reference value="Patient/patient-single-example"/>
+  </beneficiary>
+  <payor>
+    <reference value="Organization/organization-single-example"/>
+  </payor>
+</Coverage>

@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "PSOC"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSOC</b></p><a name=\"PSOC\"> </a><a name=\"hcPSOC\"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psoc/unit</code> provides some codes <b>that are example only</b>:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">111102<a name=\"PSOC-111102\"> </a></td><td>Hospital Administrator</td><td>Manages hospital operations</td></tr><tr><td style=\"white-space:nowrap\">111103<a name=\"PSOC-111103\"> </a></td><td>Medical Department Head</td><td>Head of a medical department</td></tr><tr><td style=\"white-space:nowrap\">121101<a name=\"PSOC-121101\"> </a></td><td>General Manager</td><td>Manages overall operations of an organization</td></tr><tr><td style=\"white-space:nowrap\">211101<a name=\"PSOC-211101\"> </a></td><td>Medical Doctor</td><td>Licensed physician practicing medicine</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://psa.gov.ph/classification/psoc/unit"] ;
+  fhir:CodeSystem.version [ fhir:value "0.2.0"] ;
+  fhir:CodeSystem.name [ fhir:value "PSOC"] ;
+  fhir:CodeSystem.title [ fhir:value "Mock PSOC"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-09T08:40:24+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Mock of the Philippine Standard Occupational Classification."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "example"] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "111102" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Hospital Administrator" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Manages hospital operations" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "111103" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medical Department Head" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Head of a medical department" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "121101" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "General Manager" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Manages overall operations of an organization" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "211101" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Medical Doctor" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Licensed physician practicing medicine" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

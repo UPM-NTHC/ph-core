@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="practitioner-ed-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner practitioner-ed-example</b></p><a name="practitioner-ed-example"> </a><a name="hcpractitioner-ed-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-practitioner.html">PH Core Practitioner</a></p></div><blockquote><p><b>Person Recorded Sex Or Gender</b></p><ul><li>value: <span title="Codes:{http://snomed.info/sct 248152002}">Female (finding)</span></li><li>type: <span title="Codes:{http://loinc.org 76689-9}">Sex Assigned at Birth</span></li></ul></blockquote><blockquote><p><b>Individual Gender Identity</b></p><ul><li>value: <span title="Codes:{http://loinc.org LA22879-3}">Identifies as female</span></li></ul></blockquote><blockquote><p><b>Individual Pronouns</b></p><ul><li>value: <span title="Codes:{http://loinc.org LA29519-8}">she/her/her/hers/herself</span></li></ul></blockquote><p><b>name</b>: Maria Clara Santos (Official)</p><p><b>telecom</b>: <a href="tel:+63-912-345-6789">+63-912-345-6789</a>, <a href="mailto:maria.santos@pgh.gov.ph">maria.santos@pgh.gov.ph</a></p><p><b>address</b>: 1234 Mabini Street Manila 1000 PH (home)</p><p><b>gender</b>: Female</p><p><b>birthDate</b>: 1985-05-15</p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Period</b></td><td><b>Issuer</b></td></tr><tr><td style="display: none">*</td><td><code>http://prc.gov.ph/fhir/Identifier/prc-license</code>/0123456</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0360 MD}">Doctor of Medicine</span></td><td>2010-07-15 --&gt; (ongoing)</td><td><a href="Organization-organization-pgh-example.html">Organization Philippine General Hospital</a></td></tr></table><p><b>communication</b>: <span title="Codes:{urn:ietf:bcp:47 fil}">Filipino</span>, <span title="Codes:{urn:ietf:bcp:47 en}">English</span></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="248152002"/>
+          <display value="Female (finding)"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="76689-9"/>
+          <display value="Sex Assigned at Birth"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="LA22879-3"/>
+          <display value="Identifies as female"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
+    <extension url="value">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="LA29519-8"/>
+          <display value="she/her/her/hers/herself"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+  </extension>
+  <name>
+    <use value="official"/>
+    <family value="Santos"/>
+    <given value="Maria"/>
+    <given value="Clara"/>
+    <suffix value="MD"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63-912-345-6789"/>
+    <use value="mobile"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="maria.santos@pgh.gov.ph"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1339000003"/>
+        <display value="Ermita"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1380600000"/>
+        <display value="City of Manila"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1300000000"/>
+        <display value="National Capital Region"/>
+      </valueCoding>
+    </extension>
+    <use value="home"/>
+    <type value="both"/>
+    <line value="1234 Mabini Street"/>
+    <city value="Manila"/>
+    <district value="NCR"/>
+    <postalCode value="1000"/>
+    <country value="PH"/>
+  </address>
+  <gender value="female"/>
+  <birthDate value="1985-05-15"/>
+  <qualification>
+    <identifier>
+      <system value="http://prc.gov.ph/fhir/Identifier/prc-license"/>
+      <value value="0123456"/>
+    </identifier>
+    <code>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0360"/>
+        <code value="MD"/>
+        <display value="Doctor of Medicine"/>
+      </coding>
+    </code>
+    <period>
+      <start value="2010-07-15"/>
+    </period>
+    <issuer>
+      <reference value="Organization/organization-pgh-example"/>
+    </issuer>
+  </qualification>
+  <communication>
+    <coding>
+      <system value="urn:ietf:bcp:47"/>
+      <code value="fil"/>
+      <display value="Filipino"/>
+    </coding>
+  </communication>
+  <communication>
+    <coding>
+      <system value="urn:ietf:bcp:47"/>
+      <code value="en"/>
+      <display value="English"/>
+    </coding>
+  </communication>
+</Practitioner>

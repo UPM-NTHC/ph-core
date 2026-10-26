@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/provinces> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "provinces"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet provinces</b></p><a name=\"provinces\"> </a><a name=\"hcprovinces\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0402100000\">0402100000</a></td><td>Cavite</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0403400000\">0403400000</a></td><td>Laguna</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0405600000\">0405600000</a></td><td>Quezon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0405800000\">0405800000</a></td><td>Rizal</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1704000000\">1704000000</a></td><td>Marinduque</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1705100000\">1705100000</a></td><td>Occidental Mindoro</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0133000000\">0133000000</a></td><td>La Union</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.doh.gov.ph/phcore/ValueSet/provinces"] ;
+  fhir:ValueSet.version [ fhir:value "0.2.0"] ;
+  fhir:ValueSet.name [ fhir:value "Provinces"] ;
+  fhir:ValueSet.title [ fhir:value "Provinces"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-10-21T14:45:39+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistic Authority (PSA)."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0402100000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cavite" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0403400000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Laguna" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0405600000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Quezon" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0405800000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rizal" ]
+       ], [
+         fhir:index 4 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1704000000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Marinduque" ]
+       ], [
+         fhir:index 5 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1705100000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Occidental Mindoro" ]
+       ], [
+         fhir:index 6 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0133000000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "La Union" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/provinces.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

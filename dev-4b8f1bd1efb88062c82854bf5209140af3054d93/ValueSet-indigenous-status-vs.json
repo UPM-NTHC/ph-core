@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "indigenous-status-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet indigenous-status-vs</b></p><a name=\"indigenous-status-vs\"> </a><a name=\"hcindigenous-status-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-indigenous-status-cs.html\"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-status-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.1</span></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/indigenous-status-vs",
+  "version" : "0.2.1",
+  "name" : "IndigenousStatusVS",
+  "title" : "Indigenous Groups ValueSet",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-10-26T05:35:56+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "Codes from the provisional locally authored indigenous-status list. National classification source, coverage and binding require appraisal.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-status-cs"
+    }]
+  }
+}

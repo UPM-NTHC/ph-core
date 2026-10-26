@@ -1,0 +1,114 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Immunization/example-immunization> a fhir:Immunization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-immunization"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-immunization>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">Juan Dela Cruz received a completed intramuscular flu shot (H5N1-1203) in the left arm on January 10, 2013. The vaccine lot number was AAJN11K and it was privately funded.</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [
+       fhir:v "urn:ietf:rfc:3986"^^xsd:anyURI ;
+       fhir:l <urn:ietf:rfc:3986>
+     ] ;
+     fhir:value [ fhir:v "urn:oid:1.3.6.1.4.1.21367.2005.3.7.1234" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/cvx"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/cvx>
+       ] ;
+       fhir:code [ fhir:v "123" ]
+     ] ) ;
+     fhir:text [ fhir:v "influenza, H5N1-1203" ]
+  ] ; # 
+  fhir:patient [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/example-patient> ;
+     fhir:reference [ fhir:v "Patient/example-patient" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-single-example" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:DateTime ;
+     fhir:v "2013-01-10"^^xsd:date
+  ] ; # 
+  fhir:primarySource [ fhir:v true] ; # 
+  fhir:lotNumber [ fhir:v "AAJN11K"] ; # 
+  fhir:expirationDate [ fhir:v "2015-02-15"^^xsd:date] ; # 
+  fhir:site [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActSite"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActSite>
+       ] ;
+       fhir:code [ fhir:v "LA" ] ;
+       fhir:display [ fhir:v "left arm" ]
+     ] )
+  ] ; # 
+  fhir:route [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration>
+       ] ;
+       fhir:code [ fhir:v "IM" ] ;
+       fhir:display [ fhir:v "Injection, intramuscular" ]
+     ] )
+  ] ; # 
+  fhir:doseQuantity [
+     fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+     fhir:system [
+       fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+       fhir:l <http://unitsofmeasure.org>
+     ] ;
+     fhir:code [ fhir:v "mg" ]
+  ] ; # 
+  fhir:performer ( [
+     fhir:function [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/v2-0443"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/v2-0443>
+         ] ;
+         fhir:code [ fhir:v "OP" ]
+       ] )
+     ] ;
+     fhir:actor [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/example-practitioner> ;
+       fhir:reference [ fhir:v "Practitioner/example-practitioner" ]
+     ]
+  ] ) ; # 
+  fhir:note ( [
+     fhir:text [ fhir:v "Notes on adminstration of vaccine" ]
+  ] ) ; # 
+  fhir:isSubpotent [ fhir:v true] ; # 
+  fhir:fundingSource [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/immunization-funding-source"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/immunization-funding-source>
+       ] ;
+       fhir:code [ fhir:v "private" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

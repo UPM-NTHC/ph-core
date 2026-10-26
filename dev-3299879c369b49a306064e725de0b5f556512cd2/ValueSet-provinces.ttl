@@ -1,0 +1,232 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/provinces> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "provinces"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet provinces</b></p><a name=\"provinces\"> </a><a name=\"hcprovinces\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102800000\">0102800000</a></td><td>Ilocos Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102900000\">0102900000</a></td><td>Ilocos Sur</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0103300000\">0103300000</a></td><td>La Union</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0105500000\">0105500000</a></td><td>Pangasinan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0200900000\">0200900000</a></td><td>Batanes</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0201500000\">0201500000</a></td><td>Cagayan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0203100000\">0203100000</a></td><td>Isabela</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0300800000\">0300800000</a></td><td>Bataan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301400000\">0301400000</a></td><td>Bulacan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401000000\">0401000000</a></td><td>Batangas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0402100000\">0402100000</a></td><td>Cavite</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0403400000\">0403400000</a></td><td>Laguna</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0405600000\">0405600000</a></td><td>Quezon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0405800000\">0405800000</a></td><td>Rizal</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0500500000\">0500500000</a></td><td>Albay</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0501600000\">0501600000</a></td><td>Camarines Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600400000\">0600400000</a></td><td>Aklan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600600000\">0600600000</a></td><td>Antique</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0701200000\">0701200000</a></td><td>Bohol</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0702200000\">0702200000</a></td><td>Cebu</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0802600000\">0802600000</a></td><td>Eastern Samar</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0803700000\">0803700000</a></td><td>Leyte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0906600000\">0906600000</a></td><td>Sulu</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0907200000\">0907200000</a></td><td>Zamboanga del Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001300000\">1001300000</a></td><td>Bukidnon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001800000\">1001800000</a></td><td>Camiguin</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102300000\">1102300000</a></td><td>Davao del Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102400000\">1102400000</a></td><td>Davao del Sur</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1204700000\">1204700000</a></td><td>Cotabato</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1206300000\">1206300000</a></td><td>South Cotabato</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1400100000\">1400100000</a></td><td>Abra</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1401100000\">1401100000</a></td><td>Benguet</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1402700000\">1402700000</a></td><td>Ifugao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1403200000\">1403200000</a></td><td>Kalinga</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1404400000\">1404400000</a></td><td>Mountain Province</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1408100000\">1408100000</a></td><td>Apayao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600200000\">1600200000</a></td><td>Agusan del Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600300000\">1600300000</a></td><td>Agusan del Sur</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1704000000\">1704000000</a></td><td>Marinduque</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1705100000\">1705100000</a></td><td>Occidental Mindoro</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804500000\">1804500000</a></td><td>Negros Occidental</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804600000\">1804600000</a></td><td>Negros Oriental</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1900700000\">1900700000</a></td><td>Basilan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1903600000\">1903600000</a></td><td>Lanao del Sur</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.doh.gov.ph/phcore/ValueSet/provinces"] ;
+  fhir:ValueSet.version [ fhir:value "0.2.0"] ;
+  fhir:ValueSet.name [ fhir:value "Provinces"] ;
+  fhir:ValueSet.title [ fhir:value "Provinces"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-09T08:48:14+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA)."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102800000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ilocos Norte" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102900000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ilocos Sur" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0103300000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "La Union" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0105500000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pangasinan" ]
+       ], [
+         fhir:index 4 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0200900000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Batanes" ]
+       ], [
+         fhir:index 5 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0201500000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cagayan" ]
+       ], [
+         fhir:index 6 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0203100000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Isabela" ]
+       ], [
+         fhir:index 7 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0300800000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bataan" ]
+       ], [
+         fhir:index 8 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0301400000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bulacan" ]
+       ], [
+         fhir:index 9 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0401000000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Batangas" ]
+       ], [
+         fhir:index 10 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0402100000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cavite" ]
+       ], [
+         fhir:index 11 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0403400000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Laguna" ]
+       ], [
+         fhir:index 12 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0405600000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Quezon" ]
+       ], [
+         fhir:index 13 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0405800000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rizal" ]
+       ], [
+         fhir:index 14 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0500500000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Albay" ]
+       ], [
+         fhir:index 15 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0501600000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Camarines Norte" ]
+       ], [
+         fhir:index 16 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0600400000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Aklan" ]
+       ], [
+         fhir:index 17 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0600600000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Antique" ]
+       ], [
+         fhir:index 18 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0701200000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bohol" ]
+       ], [
+         fhir:index 19 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0702200000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cebu" ]
+       ], [
+         fhir:index 20 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0802600000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Eastern Samar" ]
+       ], [
+         fhir:index 21 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0803700000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Leyte" ]
+       ], [
+         fhir:index 22 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0906600000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sulu" ]
+       ], [
+         fhir:index 23 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0907200000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Zamboanga del Norte" ]
+       ], [
+         fhir:index 24 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1001300000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bukidnon" ]
+       ], [
+         fhir:index 25 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1001800000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Camiguin" ]
+       ], [
+         fhir:index 26 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1102300000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Davao del Norte" ]
+       ], [
+         fhir:index 27 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1102400000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Davao del Sur" ]
+       ], [
+         fhir:index 28 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1204700000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Cotabato" ]
+       ], [
+         fhir:index 29 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1206300000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "South Cotabato" ]
+       ], [
+         fhir:index 30 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1400100000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abra" ]
+       ], [
+         fhir:index 31 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1401100000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Benguet" ]
+       ], [
+         fhir:index 32 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1402700000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ifugao" ]
+       ], [
+         fhir:index 33 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1403200000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Kalinga" ]
+       ], [
+         fhir:index 34 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1404400000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mountain Province" ]
+       ], [
+         fhir:index 35 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1408100000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Apayao" ]
+       ], [
+         fhir:index 36 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1600200000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Agusan del Norte" ]
+       ], [
+         fhir:index 37 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1600300000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Agusan del Sur" ]
+       ], [
+         fhir:index 38 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1704000000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Marinduque" ]
+       ], [
+         fhir:index 39 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1705100000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Occidental Mindoro" ]
+       ], [
+         fhir:index 40 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1804500000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Negros Occidental" ]
+       ], [
+         fhir:index 41 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1804600000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Negros Oriental" ]
+       ], [
+         fhir:index 42 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1900700000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basilan" ]
+       ], [
+         fhir:index 43 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1903600000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Lanao del Sur" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/provinces.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

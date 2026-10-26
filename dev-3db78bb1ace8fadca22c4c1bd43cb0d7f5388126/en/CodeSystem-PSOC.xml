@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="PSOC"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem PSOC</b></p><a name="PSOC"> </a><a name="hcPSOC"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psoc/unit</code> provides some codes <b>that are example only</b>:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">111102<a name="PSOC-111102"> </a></td><td>Hospital Administrator</td><td>Manages hospital operations</td></tr><tr><td style="white-space:nowrap">111103<a name="PSOC-111103"> </a></td><td>Medical Department Head</td><td>Head of a medical department</td></tr><tr><td style="white-space:nowrap">121101<a name="PSOC-121101"> </a></td><td>General Manager</td><td>Manages overall operations of an organization</td></tr><tr><td style="white-space:nowrap">211101<a name="PSOC-211101"> </a></td><td>Medical Doctor</td><td>Licensed physician practicing medicine</td></tr></table></div>
+  </text>
+  <url value="https://psa.gov.ph/classification/psoc/unit"/>
+  <version value="0.2.0"/>
+  <name value="PSOC"/>
+  <title value="Mock PSOC"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-06-12T04:48:36+00:00"/>
+  <publisher value="UP Manila National TeleHealth Center"/>
+  <contact>
+    <name value="UP Manila National TeleHealth Center"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-NTHC"/>
+    </telecom>
+  </contact>
+  <description value="Mock of the Philippine Standard Occupational Classification."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="example"/>
+  <concept>
+    <code value="111102"/>
+    <display value="Hospital Administrator"/>
+    <definition value="Manages hospital operations"/>
+  </concept>
+  <concept>
+    <code value="111103"/>
+    <display value="Medical Department Head"/>
+    <definition value="Head of a medical department"/>
+  </concept>
+  <concept>
+    <code value="121101"/>
+    <display value="General Manager"/>
+    <definition value="Manages overall operations of an organization"/>
+  </concept>
+  <concept>
+    <code value="211101"/>
+    <display value="Medical Doctor"/>
+    <definition value="Licensed physician practicing medicine"/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,213 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "provinces",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet provinces</b></p><a name=\"provinces\"> </a><a name=\"hcprovinces\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102800000\">0102800000</a></td><td>Ilocos Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102900000\">0102900000</a></td><td>Ilocos Sur</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0103300000\">0103300000</a></td><td>La Union</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0105500000\">0105500000</a></td><td>Pangasinan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0200900000\">0200900000</a></td><td>Batanes</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0201500000\">0201500000</a></td><td>Cagayan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0203100000\">0203100000</a></td><td>Isabela</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0300800000\">0300800000</a></td><td>Bataan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301400000\">0301400000</a></td><td>Bulacan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401000000\">0401000000</a></td><td>Batangas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0402100000\">0402100000</a></td><td>Cavite</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0403400000\">0403400000</a></td><td>Laguna</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0405600000\">0405600000</a></td><td>Quezon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0405800000\">0405800000</a></td><td>Rizal</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0500500000\">0500500000</a></td><td>Albay</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0501600000\">0501600000</a></td><td>Camarines Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600400000\">0600400000</a></td><td>Aklan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600600000\">0600600000</a></td><td>Antique</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0701200000\">0701200000</a></td><td>Bohol</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0702200000\">0702200000</a></td><td>Cebu</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0802600000\">0802600000</a></td><td>Eastern Samar</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0803700000\">0803700000</a></td><td>Leyte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0906600000\">0906600000</a></td><td>Sulu</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0907200000\">0907200000</a></td><td>Zamboanga del Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001300000\">1001300000</a></td><td>Bukidnon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001800000\">1001800000</a></td><td>Camiguin</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102300000\">1102300000</a></td><td>Davao del Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102400000\">1102400000</a></td><td>Davao del Sur</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1204700000\">1204700000</a></td><td>Cotabato</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1206300000\">1206300000</a></td><td>South Cotabato</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1400100000\">1400100000</a></td><td>Abra</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1401100000\">1401100000</a></td><td>Benguet</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1402700000\">1402700000</a></td><td>Ifugao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1403200000\">1403200000</a></td><td>Kalinga</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1404400000\">1404400000</a></td><td>Mountain Province</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1408100000\">1408100000</a></td><td>Apayao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600200000\">1600200000</a></td><td>Agusan del Norte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600300000\">1600300000</a></td><td>Agusan del Sur</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1704000000\">1704000000</a></td><td>Marinduque</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1705100000\">1705100000</a></td><td>Occidental Mindoro</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804500000\">1804500000</a></td><td>Negros Occidental</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804600000\">1804600000</a></td><td>Negros Oriental</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1900700000\">1900700000</a></td><td>Basilan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1903600000\">1903600000</a></td><td>Lanao del Sur</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/provinces",
+  "version" : "0.2.0",
+  "name" : "Provinces",
+  "title" : "Provinces",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-09-09T06:32:22+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "All province values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://psa.gov.ph/classification/psgc",
+      "concept" : [{
+        "code" : "0102800000",
+        "display" : "Ilocos Norte"
+      },
+      {
+        "code" : "0102900000",
+        "display" : "Ilocos Sur"
+      },
+      {
+        "code" : "0103300000",
+        "display" : "La Union"
+      },
+      {
+        "code" : "0105500000",
+        "display" : "Pangasinan"
+      },
+      {
+        "code" : "0200900000",
+        "display" : "Batanes"
+      },
+      {
+        "code" : "0201500000",
+        "display" : "Cagayan"
+      },
+      {
+        "code" : "0203100000",
+        "display" : "Isabela"
+      },
+      {
+        "code" : "0300800000",
+        "display" : "Bataan"
+      },
+      {
+        "code" : "0301400000",
+        "display" : "Bulacan"
+      },
+      {
+        "code" : "0401000000",
+        "display" : "Batangas"
+      },
+      {
+        "code" : "0402100000",
+        "display" : "Cavite"
+      },
+      {
+        "code" : "0403400000",
+        "display" : "Laguna"
+      },
+      {
+        "code" : "0405600000",
+        "display" : "Quezon"
+      },
+      {
+        "code" : "0405800000",
+        "display" : "Rizal"
+      },
+      {
+        "code" : "0500500000",
+        "display" : "Albay"
+      },
+      {
+        "code" : "0501600000",
+        "display" : "Camarines Norte"
+      },
+      {
+        "code" : "0600400000",
+        "display" : "Aklan"
+      },
+      {
+        "code" : "0600600000",
+        "display" : "Antique"
+      },
+      {
+        "code" : "0701200000",
+        "display" : "Bohol"
+      },
+      {
+        "code" : "0702200000",
+        "display" : "Cebu"
+      },
+      {
+        "code" : "0802600000",
+        "display" : "Eastern Samar"
+      },
+      {
+        "code" : "0803700000",
+        "display" : "Leyte"
+      },
+      {
+        "code" : "0906600000",
+        "display" : "Sulu"
+      },
+      {
+        "code" : "0907200000",
+        "display" : "Zamboanga del Norte"
+      },
+      {
+        "code" : "1001300000",
+        "display" : "Bukidnon"
+      },
+      {
+        "code" : "1001800000",
+        "display" : "Camiguin"
+      },
+      {
+        "code" : "1102300000",
+        "display" : "Davao del Norte"
+      },
+      {
+        "code" : "1102400000",
+        "display" : "Davao del Sur"
+      },
+      {
+        "code" : "1204700000",
+        "display" : "Cotabato"
+      },
+      {
+        "code" : "1206300000",
+        "display" : "South Cotabato"
+      },
+      {
+        "code" : "1400100000",
+        "display" : "Abra"
+      },
+      {
+        "code" : "1401100000",
+        "display" : "Benguet"
+      },
+      {
+        "code" : "1402700000",
+        "display" : "Ifugao"
+      },
+      {
+        "code" : "1403200000",
+        "display" : "Kalinga"
+      },
+      {
+        "code" : "1404400000",
+        "display" : "Mountain Province"
+      },
+      {
+        "code" : "1408100000",
+        "display" : "Apayao"
+      },
+      {
+        "code" : "1600200000",
+        "display" : "Agusan del Norte"
+      },
+      {
+        "code" : "1600300000",
+        "display" : "Agusan del Sur"
+      },
+      {
+        "code" : "1704000000",
+        "display" : "Marinduque"
+      },
+      {
+        "code" : "1705100000",
+        "display" : "Occidental Mindoro"
+      },
+      {
+        "code" : "1804500000",
+        "display" : "Negros Occidental"
+      },
+      {
+        "code" : "1804600000",
+        "display" : "Negros Oriental"
+      },
+      {
+        "code" : "1900700000",
+        "display" : "Basilan"
+      },
+      {
+        "code" : "1903600000",
+        "display" : "Lanao del Sur"
+      }]
+    }]
+  }
+}

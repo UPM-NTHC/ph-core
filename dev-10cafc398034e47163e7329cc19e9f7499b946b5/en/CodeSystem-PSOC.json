@@ -1,0 +1,54 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "PSOC",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSOC</b></p><a name=\"PSOC\"> </a><a name=\"hcPSOC\"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psoc/unit</code> provides some codes <b>that are example only</b>:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">111102<a name=\"PSOC-111102\"> </a></td><td>Hospital Administrator</td><td>Manages hospital operations</td></tr><tr><td style=\"white-space:nowrap\">111103<a name=\"PSOC-111103\"> </a></td><td>Medical Department Head</td><td>Head of a medical department</td></tr><tr><td style=\"white-space:nowrap\">121101<a name=\"PSOC-121101\"> </a></td><td>General Manager</td><td>Manages overall operations of an organization</td></tr><tr><td style=\"white-space:nowrap\">211101<a name=\"PSOC-211101\"> </a></td><td>Medical Doctor</td><td>Licensed physician practicing medicine</td></tr></table></div>"
+  },
+  "url" : "https://psa.gov.ph/classification/psoc/unit",
+  "version" : "0.2.0",
+  "name" : "PSOC",
+  "title" : "Mock PSOC",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-10T07:33:46+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "Mock of the Philippine Standard Occupational Classification.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "example",
+  "concept" : [{
+    "code" : "111102",
+    "display" : "Hospital Administrator",
+    "definition" : "Manages hospital operations"
+  },
+  {
+    "code" : "111103",
+    "display" : "Medical Department Head",
+    "definition" : "Head of a medical department"
+  },
+  {
+    "code" : "121101",
+    "display" : "General Manager",
+    "definition" : "Manages overall operations of an organization"
+  },
+  {
+    "code" : "211101",
+    "display" : "Medical Doctor",
+    "definition" : "Licensed physician practicing medicine"
+  }]
+}

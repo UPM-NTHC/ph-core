@@ -1,0 +1,26 @@
+{
+  "resourceType" : "Medication",
+  "id" : "medication-single-example",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication medication-single-example</b></p><a name=\"medication-single-example\"> </a><a name=\"hcmedication-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-medication.html\">PH Core Medication</a></p></div><p><b>code</b>: <span title=\"Codes:{https://verification.fda.gov.ph DRP-10144}\">Twinact 40mg/5mg tablet</span></p><p><b>form</b>: <span title=\"Codes:{http://snomed.info/sct 385055001}\">Tablet</span></p></div>"
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "https://verification.fda.gov.ph",
+      "code" : "DRP-10144",
+      "display" : "Twinact"
+    }],
+    "text" : "Twinact 40mg/5mg tablet"
+  },
+  "form" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "385055001",
+      "display" : "Tablet"
+    }]
+  }
+}

@@ -1,0 +1,433 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/cities> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "cities"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet cities</b></p><a name=\"cities\"> </a><a name=\"hccities\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-PSGC.html\"><code>https://psa.gov.ph/classification/psgc</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.2.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102801000\">0102801000</a></td><td>Adams</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102802000\">0102802000</a></td><td>Bacarra</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102803000\">0102803000</a></td><td>Badoc</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102804000\">0102804000</a></td><td>Bangui</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102805000\">0102805000</a></td><td>City of Batac</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102806000\">0102806000</a></td><td>Burgos</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102807000\">0102807000</a></td><td>Carasi</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102808000\">0102808000</a></td><td>Currimao</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102809000\">0102809000</a></td><td>Dingras</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102810000\">0102810000</a></td><td>Dumalneg</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102811000\">0102811000</a></td><td>Banna</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102812000\">0102812000</a></td><td>City of Laoag </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102813000\">0102813000</a></td><td>Marcos</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102901000\">0102901000</a></td><td>Alilem</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102906000\">0102906000</a></td><td>City of Candon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0102934000\">0102934000</a></td><td>City of Vigan </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0103314000\">0103314000</a></td><td>City of San Fernando </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0105503000\">0105503000</a></td><td>City of Alaminos</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0105518000\">0105518000</a></td><td>City of Dagupan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0105532000\">0105532000</a></td><td>City of San Carlos</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0105546000\">0105546000</a></td><td>City of Urdaneta</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0200901000\">0200901000</a></td><td>Basco </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0201501000\">0201501000</a></td><td>Abulug</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0201529000\">0201529000</a></td><td>Tuguegarao City </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0203108000\">0203108000</a></td><td>City of Cauayan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0203114000\">0203114000</a></td><td>City of Ilagan </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0203135000\">0203135000</a></td><td>City of Santiago</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0330100000\">0330100000</a></td><td>City of Angeles</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0331400000\">0331400000</a></td><td>City of Olongapo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0300801000\">0300801000</a></td><td>Abucay</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0300803000\">0300803000</a></td><td>City of Balanga </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301401000\">0301401000</a></td><td>Angat</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301403000\">0301403000</a></td><td>City of Baliwag</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301410000\">0301410000</a></td><td>City of Malolos </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301412000\">0301412000</a></td><td>City of Meycauayan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0301420000\">0301420000</a></td><td>City of San Jose Del Monte</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0304903000\">0304903000</a></td><td>City of Cabanatuan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0304908000\">0304908000</a></td><td>City of Gapan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0304917000\">0304917000</a></td><td>Science City of Muñoz</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0304919000\">0304919000</a></td><td>City of Palayan </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0304926000\">0304926000</a></td><td>San Jose City</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0305409000\">0305409000</a></td><td>Mabalacat City</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0305416000\">0305416000</a></td><td>City of San Fernando </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0306916000\">0306916000</a></td><td>City of Tarlac </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401001000\">0401001000</a></td><td>Agoncillo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401005000\">0401005000</a></td><td>Batangas City </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401007000\">0401007000</a></td><td>City of Calaca</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401014000\">0401014000</a></td><td>City of Lipa</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401028000\">0401028000</a></td><td>City of Sto. Tomas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0401031000\">0401031000</a></td><td>City of Tanauan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0402101000\">0402101000</a></td><td>Alfonso</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0500501000\">0500501000</a></td><td>Bacacay</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0501601000\">0501601000</a></td><td>Basud</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600401000\">0600401000</a></td><td>Altavas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0600601000\">0600601000</a></td><td>Anini-Y</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0701201000\">0701201000</a></td><td>Alburquerque</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0702201000\">0702201000</a></td><td>Alcantara</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0802601000\">0802601000</a></td><td>Arteche</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0803701000\">0803701000</a></td><td>Abuyog</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0906601000\">0906601000</a></td><td>Indanan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-0907201000\">0907201000</a></td><td>City of Dapitan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001301000\">1001301000</a></td><td>Baungon</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1001801000\">1001801000</a></td><td>Catarman</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102301000\">1102301000</a></td><td>Asuncion</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1102401000\">1102401000</a></td><td>Bansalan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1204701000\">1204701000</a></td><td>Alamada</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1206302000\">1206302000</a></td><td>Banga</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380100000\">1380100000</a></td><td>City of Caloocan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380200000\">1380200000</a></td><td>City of Las Piñas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380600000\">1380600000</a></td><td>City of Manila</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380601000\">1380601000</a></td><td>Tondo I/II</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380602000\">1380602000</a></td><td>Binondo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380603000\">1380603000</a></td><td>Quiapo</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380604000\">1380604000</a></td><td>San Nicolas</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380605000\">1380605000</a></td><td>Santa Cruz</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380606000\">1380606000</a></td><td>Sampaloc</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380607000\">1380607000</a></td><td>San Miguel</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380608000\">1380608000</a></td><td>Ermita</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380609000\">1380609000</a></td><td>Intramuros</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380610000\">1380610000</a></td><td>Malate</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380611000\">1380611000</a></td><td>Paco</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380612000\">1380612000</a></td><td>Pandacan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380613000\">1380613000</a></td><td>Port Area</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1380614000\">1380614000</a></td><td>Santa Ana</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1400101000\">1400101000</a></td><td>Bangued </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1401101000\">1401101000</a></td><td>Atok</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600201000\">1600201000</a></td><td>Buenavista</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1600301000\">1600301000</a></td><td>City of Bayugan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1704001000\">1704001000</a></td><td>Boac </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1705101000\">1705101000</a></td><td>Abra De Ilog</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804502000\">1804502000</a></td><td>City of Bago</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1804601000\">1804601000</a></td><td>Amlan</td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1900702000\">1900702000</a></td><td>City of Lamitan </td></tr><tr><td><a href=\"CodeSystem-PSGC.html#PSGC-1903601000\">1903601000</a></td><td>Bacolod-Kalawi</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.doh.gov.ph/phcore/ValueSet/cities"] ;
+  fhir:ValueSet.version [ fhir:value "0.2.0"] ;
+  fhir:ValueSet.name [ fhir:value "Cities"] ;
+  fhir:ValueSet.title [ fhir:value "Cities"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-09T08:48:14+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "All city, municipality, and sub-municipality values from the Philippine Standard Geographic Codes (PSGC) published by the Philippine Statistics Authority (PSA)."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102801000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Adams" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102802000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bacarra" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102803000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Badoc" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102804000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bangui" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102805000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Batac" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102806000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Burgos" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102807000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Carasi" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102808000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Currimao" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102809000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dingras" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102810000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dumalneg" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102811000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Banna" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102812000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Laoag " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102813000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Marcos" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102901000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alilem" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102906000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Candon" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0102934000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Vigan " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0103314000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of San Fernando " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0105503000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Alaminos" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0105518000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Dagupan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0105532000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of San Carlos" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0105546000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Urdaneta" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0200901000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basco " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0201501000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abulug" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0201529000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tuguegarao City " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0203108000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Cauayan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0203114000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Ilagan " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0203135000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Santiago" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0330100000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Angeles" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0331400000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Olongapo" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0300801000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abucay" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0300803000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Balanga " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0301401000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Angat" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0301403000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Baliwag" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0301410000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Malolos " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0301412000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Meycauayan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0301420000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of San Jose Del Monte" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0304903000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Cabanatuan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0304908000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Gapan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0304917000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Science City of Muñoz" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0304919000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Palayan " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0304926000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "San Jose City" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0305409000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mabalacat City" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0305416000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of San Fernando " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0306916000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Tarlac " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0401001000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Agoncillo" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0401005000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Batangas City " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0401007000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Calaca" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0401014000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Lipa" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0401028000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Sto. Tomas" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0401031000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Tanauan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0402101000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alfonso" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0500501000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bacacay" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0501601000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Basud" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0600401000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Altavas" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0600601000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Anini-Y" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0701201000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alburquerque" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0702201000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alcantara" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0802601000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Arteche" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0803701000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abuyog" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0906601000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Indanan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "0907201000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Dapitan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1001301000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Baungon" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1001801000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Catarman" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1102301000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Asuncion" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1102401000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bansalan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1204701000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alamada" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1206302000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Banga" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380100000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Caloocan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380200000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Las Piñas" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380600000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Manila" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380601000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tondo I/II" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380602000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Binondo" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380603000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Quiapo" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380604000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "San Nicolas" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380605000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Santa Cruz" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380606000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sampaloc" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380607000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "San Miguel" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380608000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ermita" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380609000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Intramuros" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380610000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Malate" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380611000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Paco" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380612000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pandacan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380613000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Port Area" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1380614000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Santa Ana" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1400101000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bangued " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1401101000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Atok" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1600201000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Buenavista" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1600301000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Bayugan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1704001000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Boac " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1705101000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Abra De Ilog" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1804502000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Bago" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1804601000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Amlan" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1900702000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "City of Lamitan " ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1903601000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Bacolod-Kalawi" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/ValueSet/cities.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

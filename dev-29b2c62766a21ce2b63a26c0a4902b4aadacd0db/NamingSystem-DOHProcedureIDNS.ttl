@@ -1,0 +1,60 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/NamingSystem/DOHProcedureIDNS> a fhir:NamingSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "DOHProcedureIDNS"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: NamingSystem DOHProcedureIDNS</b></p><a name=\"DOHProcedureIDNS\"> </a><a name=\"hcDOHProcedureIDNS\"> </a><h3>Summary</h3><table class=\"grid\"><tr><td>Defining URL</td><td>https://fhir.doh.gov.ph/phcore/NamingSystem/DOHProcedureIDNS</td></tr><tr><td>Version</td><td>0.2.0</td></tr><tr><td>Name</td><td>DOHProcedureID</td></tr><tr><td>Status</td><td>draft</td></tr><tr><td>Definition</td><td><div><p>Identifier system for procedures assigned by the Department of Health (DOH) health facilities.</p>\n</div></td></tr><tr><td>Publisher</td><td>UP Manila National TeleHealth Center</td></tr></table><h3>Identifiers</h3><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>URI</td><td>https://fhir.doh.gov.ph/phcore/NamingSystem/procedure-id</td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.url" ] ;
+     fhir:Extension.valueUri [ fhir:value "https://fhir.doh.gov.ph/phcore/NamingSystem/DOHProcedureIDNS" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-NamingSystem.version" ] ;
+     fhir:Extension.valueString [ fhir:value "0.2.0" ]
+  ] ;
+  fhir:NamingSystem.name [ fhir:value "DOHProcedureID"] ;
+  fhir:NamingSystem.status [ fhir:value "draft"] ;
+  fhir:NamingSystem.kind [ fhir:value "identifier"] ;
+  fhir:NamingSystem.date [ fhir:value "2025-06-01"^^xsd:date] ;
+  fhir:NamingSystem.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:NamingSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:NamingSystem.description [ fhir:value "Identifier system for procedures assigned by the Department of Health (DOH) health facilities."] ;
+  fhir:NamingSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:NamingSystem.uniqueId [
+     fhir:index 0 ;
+     fhir:NamingSystem.uniqueId.type [ fhir:value "uri" ] ;
+     fhir:NamingSystem.uniqueId.value [ fhir:value "https://fhir.doh.gov.ph/phcore/NamingSystem/procedure-id" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/NamingSystem/DOHProcedureIDNS.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

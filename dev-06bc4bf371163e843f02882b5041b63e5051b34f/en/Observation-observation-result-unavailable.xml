@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation-result-unavailable"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation-clinical-result"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation observation-result-unavailable</b></p><a name="observation-result-unavailable"> </a><a name="hcobservation-result-unavailable"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-observation-clinical-result.html">PH Core Observation Clinical Result</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 1558-6}">Fasting glucose [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-patient-single-example.html">Juan Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>effective</b>: 2025-03-15 10:30:00+0800</p><p><b>performer</b>: <a href="Organization-organization-pgh-example.html">Philippine General Hospital (Healthcare Provider) (https://nhfr.doh.gov.ph/#1234567890)</a></p><p><b>dataAbsentReason</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/data-absent-reason error}">Error</span></p><p><b>note</b>: </p><blockquote><div><p>Specimen could not be processed; no glucose result was obtained.</p>
+</div></blockquote></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="1558-6"/>
+      <display value="Fasting glucose [Mass/volume] in Serum or Plasma"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <effectiveDateTime value="2025-03-15T10:30:00+08:00"/>
+  <performer>
+    <reference value="Organization/organization-pgh-example"/>
+  </performer>
+  <dataAbsentReason>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/data-absent-reason"/>
+      <code value="error"/>
+    </coding>
+  </dataAbsentReason>
+  <note>
+    <text value="Specimen could not be processed; no glucose result was obtained."/>
+  </note>
+</Observation>

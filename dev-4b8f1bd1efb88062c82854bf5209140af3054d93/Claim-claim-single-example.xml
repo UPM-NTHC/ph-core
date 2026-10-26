@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="claim-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Claim claim-single-example</b></p><a name="claim-single-example"> </a><a name="hcclaim-single-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-claim.html">PH Core Claim</a></p></div><p><b>status</b>: Active</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/claim-type professional}">Professional</span></p><p><b>use</b>: Claim</p><p><b>patient</b>: <a href="Patient-patient-single-example.html">Juan Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>created</b>: 2025-03-15</p><p><b>insurer</b>: <a href="Organization-organization-philhealth-example.html">Philippine Health Insurance Corporation (illustrative) (Insurance Company)</a></p><p><b>provider</b>: <a href="Practitioner-practitioner-single-example.html">Maria Clara Santos (official)</a></p><p><b>priority</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/processpriority normal}">Normal</span></p><h3>Payees</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Party</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/payeetype provider}">Provider</span></td><td><a href="Practitioner-practitioner-single-example.html">Maria Clara Santos (official)</a></td></tr></table><h3>CareTeams</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Sequence</b></td><td><b>Provider</b></td><td><b>Responsible</b></td><td><b>Role</b></td></tr><tr><td style="display: none">*</td><td>1</td><td><a href="Practitioner-practitioner-single-example.html">Maria Clara Santos (official)</a></td><td>true</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/claimcareteamrole primary}">Primary Provider</span></td></tr></table><h3>Diagnoses</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Sequence</b></td><td><b>Diagnosis[x]</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>1</td><td><a href="Condition-condition-single-example.html">Condition Type 2 Diabetes Mellitus</a></td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/ex-diagnosistype principal}">Principal Diagnosis</span></td></tr></table><h3>Insurances</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Identifier</b></td><td><b>Coverage</b></td></tr><tr><td style="display: none">*</td><td>1</td><td>true</td><td><a href="NamingSystem-PhilHealthIDNS.html" title="The permanent and unique number issued by PhilHealth to individual members and to each and every dependent.">PhilHealthID</a>/63-584789845-5</td><td><a href="Coverage-philhealth-coverage-example.html">Coverage: status = active; subscriberId = 63-584789845-5</a></td></tr></table><blockquote><p><b>item</b></p><p><b>sequence</b>: 1</p><p><b>careTeamSequence</b>: 1</p><p><b>diagnosisSequence</b>: 1</p><p><b>productOrService</b>: <span title="Codes:{http://snomed.info/sct 11429006}">Outpatient Consultation</span></p><p><b>serviced</b>: 2025-03-15</p><p><b>quantity</b>: 1</p><h3>UnitPrices</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style="display: none">*</td><td>500</td><td>Philippine piso</td></tr></table><h3>Nets</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style="display: none">*</td><td>500</td><td>Philippine piso</td></tr></table></blockquote></div>
+  </text>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+      <code value="professional"/>
+      <display value="Professional"/>
+    </coding>
+  </type>
+  <use value="claim"/>
+  <patient>
+    <reference value="Patient/patient-single-example"/>
+  </patient>
+  <created value="2025-03-15"/>
+  <insurer>
+    <reference value="Organization/organization-philhealth-example"/>
+  </insurer>
+  <provider>
+    <reference value="Practitioner/practitioner-single-example"/>
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority"/>
+      <code value="normal"/>
+      <display value="Normal"/>
+    </coding>
+  </priority>
+  <payee>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/payeetype"/>
+        <code value="provider"/>
+        <display value="Provider"/>
+      </coding>
+    </type>
+    <party>
+      <reference value="Practitioner/practitioner-single-example"/>
+    </party>
+  </payee>
+  <careTeam>
+    <sequence value="1"/>
+    <provider>
+      <reference value="Practitioner/practitioner-single-example"/>
+    </provider>
+    <responsible value="true"/>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claimcareteamrole"/>
+        <code value="primary"/>
+        <display value="Primary Provider"/>
+      </coding>
+    </role>
+  </careTeam>
+  <diagnosis>
+    <sequence value="1"/>
+    <diagnosisReference>
+      <reference value="Condition/condition-single-example"/>
+    </diagnosisReference>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype"/>
+        <code value="principal"/>
+        <display value="Principal Diagnosis"/>
+      </coding>
+    </type>
+  </diagnosis>
+  <insurance>
+    <sequence value="1"/>
+    <focal value="true"/>
+    <identifier>
+      <system value="http://philhealth.gov.ph/fhir/Identifier/philhealth-id"/>
+      <value value="63-584789845-5"/>
+    </identifier>
+    <coverage>
+      <reference value="Coverage/philhealth-coverage-example"/>
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1"/>
+    <careTeamSequence value="1"/>
+    <diagnosisSequence value="1"/>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="11429006"/>
+        <display value="Consultation"/>
+      </coding>
+      <text value="Outpatient Consultation"/>
+    </productOrService>
+    <servicedDate value="2025-03-15"/>
+    <quantity>
+      <value value="1"/>
+    </quantity>
+    <unitPrice>
+      <value value="500"/>
+      <currency value="PHP"/>
+    </unitPrice>
+    <net>
+      <value value="500"/>
+      <currency value="PHP"/>
+    </net>
+  </item>
+</Claim>

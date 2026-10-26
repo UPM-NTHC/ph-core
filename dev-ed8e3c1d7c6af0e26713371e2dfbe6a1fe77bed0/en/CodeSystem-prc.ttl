@@ -1,0 +1,2436 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/prc> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "prc"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem prc</b></p><a name=\"prc\"> </a><a name=\"hcprc\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>URI</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>concept-kind</td><td>concept-kind</td><td>https://fhir.doh.gov.ph/phcore/CodeSystem/prc#concept-kind</td><td>string</td><td>Concept category: root, council, profession, examination, or structural-board-group.</td></tr><tr><td>Not Selectable</td><td>notSelectable</td><td>http://hl7.org/fhir/concept-properties#notSelectable</td><td>boolean</td><td>The concept is a structural grouping node and is not intended to be selected directly.</td></tr><tr><td>cpdas-row-number</td><td>cpdas-row-number</td><td>https://fhir.doh.gov.ph/phcore/CodeSystem/prc#cpdas-row-number</td><td>integer</td><td>The CPDAS table No. for a numerical profession concept; this is a row reference, not the code.</td></tr><tr><td>prc-exam-list-number</td><td>prc-exam-list-number</td><td>https://fhir.doh.gov.ph/phcore/CodeSystem/prc#prc-exam-list-number</td><td>integer</td><td>The PRC examination list number; it can repeat for multiple examinations associated with one board.</td></tr><tr><td>prc-exam-board-name</td><td>prc-exam-board-name</td><td>https://fhir.doh.gov.ph/phcore/CodeSystem/prc#prc-exam-board-name</td><td>string</td><td>The exact PRC board name from the 2026 examination list.</td></tr></table><p><b>Concepts</b></p><p>This case-sensitive code system <code>https://fhir.doh.gov.ph/phcore/CodeSystem/prc</code> defines the following codes in a Grouped By hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>concept-kind</b></td><td><b>Not Selectable</b></td><td><b>cpdas-row-number</b></td><td><b>prc-exam-list-number</b></td><td><b>prc-exam-board-name</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">PRC<a name=\"prc-PRC\"> </a></td><td>Professional Regulation Commission</td><td/><td>root</td><td>true</td><td/><td/><td/></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ACC<a name=\"prc-ACC\"> </a></td><td>Accountancy</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    100<a name=\"prc-100\"> </a></td><td>Certified Public Accountant</td><td/><td>profession</td><td/><td>1</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    CPALE<a name=\"prc-CPALE\"> </a></td><td>Certified Public Accountants Licensure Examination</td><td/><td>examination</td><td/><td/><td>5</td><td>Accountancy</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  AER<a name=\"prc-AER\"> </a></td><td>Aeronautical Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    3400<a name=\"prc-3400\"> </a></td><td>Aeronautical Engineer</td><td/><td>profession</td><td/><td>2</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    AELE<a name=\"prc-AELE\"> </a></td><td>Aeronautical Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>1</td><td>Aeronautical Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ABE<a name=\"prc-ABE\"> </a></td><td>Agricultural &amp; Biosystems Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    200<a name=\"prc-200\"> </a></td><td>Agricultural And Biosystems Engineer</td><td/><td>profession</td><td/><td>3</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    ABELE<a name=\"prc-ABELE\"> </a></td><td>Agricultural and Biosystems Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>2</td><td>Agricultural and Biosystems Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  AGR<a name=\"prc-AGR\"> </a></td><td>Agriculture</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    4200<a name=\"prc-4200\"> </a></td><td>Agriculturist</td><td/><td>profession</td><td/><td>4</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    AgLE<a name=\"prc-AgLE\"> </a></td><td>Agriculturists Licensure Examination</td><td/><td>examination</td><td/><td/><td>3</td><td>Agriculture</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ARC<a name=\"prc-ARC\"> </a></td><td>Architecture</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    300<a name=\"prc-300\"> </a></td><td>Architect</td><td/><td>profession</td><td/><td>5</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    LEA<a name=\"prc-LEA\"> </a></td><td>Licensure Examination for Architects</td><td/><td>examination</td><td/><td/><td>4</td><td>Architecture</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  CHE<a name=\"prc-CHE\"> </a></td><td>Chemical Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    410<a name=\"prc-410\"> </a></td><td>Chemical Engineer</td><td/><td>profession</td><td/><td>6</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    ChELE<a name=\"prc-ChELE\"> </a></td><td>Chemical Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>6</td><td>Chemical Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  CHM<a name=\"prc-CHM\"> </a></td><td>Chemistry</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    510<a name=\"prc-510\"> </a></td><td>Chemist</td><td/><td>profession</td><td/><td>7</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    520<a name=\"prc-520\"> </a></td><td>Chemical Technician</td><td/><td>profession</td><td/><td>8</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    CLE<a name=\"prc-CLE\"> </a></td><td>Chemists Licensure Examination</td><td/><td>examination</td><td/><td/><td>7</td><td>Chemistry</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    CTLE<a name=\"prc-CTLE\"> </a></td><td>Chemical Technicians Licensure Examination</td><td/><td>examination</td><td/><td/><td>7</td><td>Chemistry</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OCE<a name=\"prc-OCE\"> </a></td><td>Civil Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    600<a name=\"prc-600\"> </a></td><td>Civil Engineer</td><td/><td>profession</td><td/><td>9</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    CELE<a name=\"prc-CELE\"> </a></td><td>Civil Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>8</td><td>Civil Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  CRM<a name=\"prc-CRM\"> </a></td><td>Criminology</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    3500<a name=\"prc-3500\"> </a></td><td>Criminologist</td><td/><td>profession</td><td/><td>10</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    LEC<a name=\"prc-LEC\"> </a></td><td>Licensure Examination for Criminologists</td><td/><td>examination</td><td/><td/><td>9</td><td>Criminology</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OCB<a name=\"prc-OCB\"> </a></td><td>Customs Broker</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    800<a name=\"prc-800\"> </a></td><td>Customs Broker</td><td/><td>profession</td><td/><td>11</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    CuBLE<a name=\"prc-CuBLE\"> </a></td><td>Customs Brokers Licensure Examination</td><td/><td>examination</td><td/><td/><td>10</td><td>Customs Brokers</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  DNT<a name=\"prc-DNT\"> </a></td><td>Dentistry</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    910<a name=\"prc-910\"> </a></td><td>Dentist</td><td/><td>profession</td><td/><td>12</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    920<a name=\"prc-920\"> </a></td><td>Dental Hygienist</td><td/><td>profession</td><td/><td>13</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    930<a name=\"prc-930\"> </a></td><td>Dental Technologist</td><td/><td>profession</td><td/><td>14</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    DLE<a name=\"prc-DLE\"> </a></td><td>Dentists Licensure Examination</td><td/><td>examination</td><td/><td/><td>11</td><td>Dentistry</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    DHLE<a name=\"prc-DHLE\"> </a></td><td>Dental Hygienists Licensure Examination</td><td/><td>examination</td><td/><td/><td>11</td><td>Dentistry</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    DTLE<a name=\"prc-DTLE\"> </a></td><td>Dental Technologists Licensure Examination</td><td/><td>examination</td><td/><td/><td>11</td><td>Dentistry</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OEE<a name=\"prc-OEE\"> </a></td><td>Electrical Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1100<a name=\"prc-1100\"> </a></td><td>Registered Electrical Engineer</td><td/><td>profession</td><td/><td>15</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1110<a name=\"prc-1110\"> </a></td><td>Professional Electrical Engineer</td><td/><td>profession</td><td/><td>16</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1150<a name=\"prc-1150\"> </a></td><td>Registered Master Electrician</td><td/><td>profession</td><td/><td>17</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    REELE<a name=\"prc-REELE\"> </a></td><td>Registered Electrical Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>12</td><td>Electrical Engineering</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    RMELE<a name=\"prc-RMELE\"> </a></td><td>Registered Master Electricians Licensure Examination</td><td/><td>examination</td><td/><td/><td>12</td><td>Electrical Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  ECE<a name=\"prc-ECE\"> </a></td><td>Electronics Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1200<a name=\"prc-1200\"> </a></td><td>Electronics And Communications Engineer</td><td/><td>profession</td><td/><td>18</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1201<a name=\"prc-1201\"> </a></td><td>Professional Electronics Engineer</td><td/><td>profession</td><td/><td>19</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1202<a name=\"prc-1202\"> </a></td><td>Electronics Engineer</td><td/><td>profession</td><td/><td>20</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1203<a name=\"prc-1203\"> </a></td><td>Electronics Technician</td><td/><td>profession</td><td/><td>21</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    EELE<a name=\"prc-EELE\"> </a></td><td>Electronics Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>13</td><td>Electronics Engineering</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    ETLE<a name=\"prc-ETLE\"> </a></td><td>Electronics Technicians Licensure Examination</td><td/><td>examination</td><td/><td/><td>13</td><td>Electronics Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OEP<a name=\"prc-OEP\"> </a></td><td>Environmental Planning</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    3600<a name=\"prc-3600\"> </a></td><td>Environmental Planner</td><td/><td>profession</td><td/><td>22</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    EnPLE<a name=\"prc-EnPLE\"> </a></td><td>Environmental Planners Licensure Examination</td><td/><td>examination</td><td/><td/><td>14</td><td>Environmental Planning</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  FIS<a name=\"prc-FIS\"> </a></td><td>Fisheries</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    4300<a name=\"prc-4300\"> </a></td><td>Fisheries Technologist</td><td/><td>profession</td><td/><td>23</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    FPLE<a name=\"prc-FPLE\"> </a></td><td>Fisheries Professionals Licensure Examination</td><td/><td>examination</td><td/><td/><td>15</td><td>Fisheries</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  FRT<a name=\"prc-FRT\"> </a></td><td>Forestry</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1300<a name=\"prc-1300\"> </a></td><td>Forester</td><td/><td>profession</td><td/><td>24</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    PFLE<a name=\"prc-PFLE\"> </a></td><td>Professional Foresters Licensure Examination</td><td/><td>examination</td><td/><td/><td>17</td><td>Foresters</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OGE<a name=\"prc-OGE\"> </a></td><td>Geodetic Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1410<a name=\"prc-1410\"> </a></td><td>Geodetic Engineer</td><td/><td>profession</td><td/><td>25</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    GELE<a name=\"prc-GELE\"> </a></td><td>Geodetic Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>18</td><td>Geodetic Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  GEO<a name=\"prc-GEO\"> </a></td><td>Geology</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1510<a name=\"prc-1510\"> </a></td><td>Geologist</td><td/><td>profession</td><td/><td>26</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1520<a name=\"prc-1520\"> </a></td><td>Geologic Aide</td><td/><td>profession</td><td/><td>27</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    GLE<a name=\"prc-GLE\"> </a></td><td>Geologists Licensure Examination</td><td/><td>examination</td><td/><td/><td>19</td><td>Geology</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OGC<a name=\"prc-OGC\"> </a></td><td>Guidance &amp; Counseling</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    4100<a name=\"prc-4100\"> </a></td><td>Guidance Counselor</td><td/><td>profession</td><td/><td>28</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    GCLE<a name=\"prc-GCLE\"> </a></td><td>Guidance Counselors Licensure Examination</td><td/><td>examination</td><td/><td/><td>20</td><td>Guidance and Counseling</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OID<a name=\"prc-OID\"> </a></td><td>Interior Design</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    310<a name=\"prc-310\"> </a></td><td>Interior Designer</td><td/><td>profession</td><td/><td>29</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    LEID<a name=\"prc-LEID\"> </a></td><td>Licensure Examination for Interior Designers</td><td/><td>examination</td><td/><td/><td>21</td><td>Interior Design</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OLA<a name=\"prc-OLA\"> </a></td><td>Landscape Architecture</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    320<a name=\"prc-320\"> </a></td><td>Landscape Architect</td><td/><td>profession</td><td/><td>30</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    LALE<a name=\"prc-LALE\"> </a></td><td>Landscape Architects Licensure Examination</td><td/><td>examination</td><td/><td/><td>22</td><td>Landscape Architecture</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  LIB<a name=\"prc-LIB\"> </a></td><td>Librarian</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    3800<a name=\"prc-3800\"> </a></td><td>Librarian</td><td/><td>profession</td><td/><td>31</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    LLE<a name=\"prc-LLE\"> </a></td><td>Librarians Licensure Examination</td><td/><td>examination</td><td/><td/><td>23</td><td>Librarians</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OMP<a name=\"prc-OMP\"> </a></td><td>Master Plumbing</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1900<a name=\"prc-1900\"> </a></td><td>Master Plumber</td><td/><td>profession</td><td/><td>32</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    MPLE<a name=\"prc-MPLE\"> </a></td><td>Master Plumbers Licensure Examination</td><td/><td>examination</td><td/><td/><td>24</td><td>Master Plumbers</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  MEE<a name=\"prc-MEE\"> </a></td><td>Mechanical Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2010<a name=\"prc-2010\"> </a></td><td>Professional Mechanical Engineer</td><td/><td>profession</td><td/><td>33</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2040<a name=\"prc-2040\"> </a></td><td>Mechanical Engineer</td><td/><td>profession</td><td/><td>34</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2060<a name=\"prc-2060\"> </a></td><td>Certified Plant Mechanic</td><td/><td>profession</td><td/><td>35</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    MELE<a name=\"prc-MELE\"> </a></td><td>Mechanical Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>25</td><td>Mechanical Engineering</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    CPMLE<a name=\"prc-CPMLE\"> </a></td><td>Certified Plant Mechanics Licensure Examination</td><td/><td>examination</td><td/><td/><td>25</td><td>Mechanical Engineering</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    PME-OETE<a name=\"prc-PME-OETE\"> </a></td><td>Professional Mechanical Engineers Oral Examination/Technical Evaluation</td><td/><td>examination</td><td/><td/><td>25</td><td>Mechanical Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OMT<a name=\"prc-OMT\"> </a></td><td>Medical Technology</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2110<a name=\"prc-2110\"> </a></td><td>Medical Technologist</td><td/><td>profession</td><td/><td>36</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2120<a name=\"prc-2120\"> </a></td><td>Medical Laboratory Technician</td><td/><td>profession</td><td/><td>37</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    MTLE<a name=\"prc-MTLE\"> </a></td><td>Medical Technologists Licensure Examination</td><td/><td>examination</td><td/><td/><td>26</td><td>Medical Technology</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  MED<a name=\"prc-MED\"> </a></td><td>Medicine</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2200<a name=\"prc-2200\"> </a></td><td>Physician</td><td/><td>profession</td><td/><td>38</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    PLE<a name=\"prc-PLE\"> </a></td><td>Physicians Licensure Examination</td><td/><td>examination</td><td/><td/><td>27</td><td>Medicine</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    QA-FMP<a name=\"prc-QA-FMP\"> </a></td><td>Qualifying Assessment-Foreign Medical Professionals</td><td/><td>examination</td><td/><td/><td>27</td><td>Medicine</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OME<a name=\"prc-OME\"> </a></td><td>Metallurgical Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1810<a name=\"prc-1810\"> </a></td><td>Metallurgical Engineer</td><td/><td>profession</td><td/><td>39</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1820<a name=\"prc-1820\"> </a></td><td>Metallurgical Plant Foreman</td><td/><td>profession</td><td/><td>40</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    MetELE<a name=\"prc-MetELE\"> </a></td><td>Metallurgical Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>28</td><td>Metallurgical Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  MDW<a name=\"prc-MDW\"> </a></td><td>Midwifery</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2310<a name=\"prc-2310\"> </a></td><td>Midwife (Ra 2382)</td><td/><td>profession</td><td/><td>41</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2320<a name=\"prc-2320\"> </a></td><td>Midwife</td><td/><td>profession</td><td/><td>42</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    MidLE<a name=\"prc-MidLE\"> </a></td><td>Midwives Licensure Examination</td><td/><td>examination</td><td/><td/><td>29</td><td>Midwifery</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  MIN<a name=\"prc-MIN\"> </a></td><td>Mining Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2410<a name=\"prc-2410\"> </a></td><td>Mining Engineer</td><td/><td>profession</td><td/><td>43</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2420<a name=\"prc-2420\"> </a></td><td>Certified Mine Foreman</td><td/><td>profession</td><td/><td>44</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2440<a name=\"prc-2440\"> </a></td><td>Certified Quarry Foreman</td><td/><td>profession</td><td/><td>45</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    MinELE<a name=\"prc-MinELE\"> </a></td><td>Mining Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>30</td><td>Mining Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  NAME<a name=\"prc-NAME\"> </a></td><td>Naval Architecture</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2500<a name=\"prc-2500\"> </a></td><td>Naval Architect &amp; Marine Engineer</td><td/><td>profession</td><td/><td>46</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    NALE<a name=\"prc-NALE\"> </a></td><td>Naval Architects Licensure Examination</td><td/><td>examination</td><td/><td/><td>31</td><td>Naval Architecture</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  NRS<a name=\"prc-NRS\"> </a></td><td>Nursing</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2600<a name=\"prc-2600\"> </a></td><td>Nurse</td><td/><td>profession</td><td/><td>47</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    NLE<a name=\"prc-NLE\"> </a></td><td>Nurses Licensure Examination</td><td/><td>examination</td><td/><td/><td>32</td><td>Nursing</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  NAD<a name=\"prc-NAD\"> </a></td><td>Nutrition &amp; Dietetics</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    1010<a name=\"prc-1010\"> </a></td><td>Nutritionist Dietitian</td><td/><td>profession</td><td/><td>48</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    NDLE<a name=\"prc-NDLE\"> </a></td><td>Nutritionists-Dietitians Licensure Examination</td><td/><td>examination</td><td/><td/><td>33</td><td>Nutrition and Dietetics</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OCT<a name=\"prc-OCT\"> </a></td><td>Occupational Therapy</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2920<a name=\"prc-2920\"> </a></td><td>Occupational Therapist</td><td/><td>profession</td><td/><td>49</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    OTLE<a name=\"prc-OTLE\"> </a></td><td>Occupational Therapists Licensure Examination</td><td/><td>examination</td><td/><td/><td>37</td><td>Occupational Therapy</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OPT<a name=\"prc-OPT\"> </a></td><td>Optometry</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2700<a name=\"prc-2700\"> </a></td><td>Optometrist</td><td/><td>profession</td><td/><td>50</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2710<a name=\"prc-2710\"> </a></td><td>Ocular Pharmacologist</td><td/><td>profession</td><td/><td>51</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    OLE<a name=\"prc-OLE\"> </a></td><td>Optometrists Licensure Examination</td><td/><td>examination</td><td/><td/><td>34</td><td>Optometry</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    OPSCLE<a name=\"prc-OPSCLE\"> </a></td><td>Ocular Pharmacologists Special Certification Licensure Examination</td><td/><td>examination</td><td/><td/><td>34</td><td>Optometry</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  PHA<a name=\"prc-PHA\"> </a></td><td>Pharmacy</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2810<a name=\"prc-2810\"> </a></td><td>Pharmacist</td><td/><td>profession</td><td/><td>52</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2820<a name=\"prc-2820\"> </a></td><td>Chinese Druggist</td><td/><td>profession</td><td/><td>53</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    PhLE<a name=\"prc-PhLE\"> </a></td><td>Pharmacists Licensure Examination</td><td/><td>examination</td><td/><td/><td>35</td><td>Pharmacy</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  PHT<a name=\"prc-PHT\"> </a></td><td>Physical Therapy</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    2910<a name=\"prc-2910\"> </a></td><td>Physical Therapist</td><td/><td>profession</td><td/><td>54</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    PTLE<a name=\"prc-PTLE\"> </a></td><td>Physical Therapists Licensure Examination</td><td/><td>examination</td><td/><td/><td>36</td><td>Physical Therapy</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  PTR<a name=\"prc-PTR\"> </a></td><td>Professional Teachers</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    4000<a name=\"prc-4000\"> </a></td><td>Professional Teacher</td><td/><td>profession</td><td/><td>55</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    LEPT<a name=\"prc-LEPT\"> </a></td><td>Licensure Examination for Professional Teachers</td><td/><td>examination</td><td/><td/><td>38</td><td>Professional Teachers</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  PSYCH<a name=\"prc-PSYCH\"> </a></td><td>Psychology</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    4520<a name=\"prc-4520\"> </a></td><td>Psychologist</td><td/><td>profession</td><td/><td>56</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    4530<a name=\"prc-4530\"> </a></td><td>Psychometrician</td><td/><td>profession</td><td/><td>57</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    PsLE<a name=\"prc-PsLE\"> </a></td><td>Psychologists Licensure Examination</td><td/><td>examination</td><td/><td/><td>39</td><td>Psychology</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    PmLE<a name=\"prc-PmLE\"> </a></td><td>Psychometricians Licensure Examination</td><td/><td>examination</td><td/><td/><td>39</td><td>Psychology</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  RAD<a name=\"prc-RAD\"> </a></td><td>Radiologic Technology</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    3710<a name=\"prc-3710\"> </a></td><td>Radiologic Technologist</td><td/><td>profession</td><td/><td>58</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    3720<a name=\"prc-3720\"> </a></td><td>X-Ray Technologist</td><td/><td>profession</td><td/><td>59</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    RTLE<a name=\"prc-RTLE\"> </a></td><td>Radiologic Technologists Licensure Examination</td><td/><td>examination</td><td/><td/><td>40</td><td>Radiologic Technology</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    XTLE<a name=\"prc-XTLE\"> </a></td><td>X-Ray Technologists Licensure Examination</td><td/><td>examination</td><td/><td/><td>40</td><td>Radiologic Technology</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  RAE<a name=\"prc-RAE\"> </a></td><td>Real Estate Service</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    4410<a name=\"prc-4410\"> </a></td><td>Real Estate Consultant</td><td/><td>profession</td><td/><td>60</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    4420<a name=\"prc-4420\"> </a></td><td>Real Estate Appraiser</td><td/><td>profession</td><td/><td>61</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    4430<a name=\"prc-4430\"> </a></td><td>Real Estate Broker</td><td/><td>profession</td><td/><td>62</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    REALE<a name=\"prc-REALE\"> </a></td><td>Real Estate Appraisers Licensure Examination</td><td/><td>examination</td><td/><td/><td>41</td><td>Real Estate Service</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    REBLE<a name=\"prc-REBLE\"> </a></td><td>Real Estate Brokers Licensure Examination</td><td/><td>examination</td><td/><td/><td>41</td><td>Real Estate Service</td></tr><tr><td>3</td><td style=\"white-space:nowrap\">    RECLE<a name=\"prc-RECLE\"> </a></td><td>Real Estate Consultants Licensure Examination</td><td/><td>examination</td><td/><td/><td>41</td><td>Real Estate Service</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  RES<a name=\"prc-RES\"> </a></td><td>Respiratory Therapy</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    4510<a name=\"prc-4510\"> </a></td><td>Respiratory Therapist</td><td/><td>profession</td><td/><td>63</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    ResTLE<a name=\"prc-ResTLE\"> </a></td><td>Respiratory Therapists Licensure Examination</td><td/><td>examination</td><td/><td/><td>42</td><td>Respiratory Therapy</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  SAN<a name=\"prc-SAN\"> </a></td><td>Sanitary Engineering</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    3000<a name=\"prc-3000\"> </a></td><td>Sanitary Engineer</td><td/><td>profession</td><td/><td>64</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    SELE<a name=\"prc-SELE\"> </a></td><td>Sanitary Engineers Licensure Examination</td><td/><td>examination</td><td/><td/><td>43</td><td>Sanitary Engineering</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OSW<a name=\"prc-OSW\"> </a></td><td>Social Workers</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    3200<a name=\"prc-3200\"> </a></td><td>Social Worker</td><td/><td>profession</td><td/><td>65</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    SWLE<a name=\"prc-SWLE\"> </a></td><td>Social Workers Licensure Examination</td><td/><td>examination</td><td/><td/><td>44</td><td>Social Workers</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  VET<a name=\"prc-VET\"> </a></td><td>Veterinary Medicine</td><td/><td>council</td><td/><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    3300<a name=\"prc-3300\"> </a></td><td>Veterinarian</td><td/><td>profession</td><td/><td>66</td><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    VLE<a name=\"prc-VLE\"> </a></td><td>Veterinarians Licensure Examination</td><td/><td>examination</td><td/><td/><td>46</td><td>Veterinary Medicine</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  board-food-technology<a name=\"prc-board-food-technology\"> </a></td><td>Food Technology</td><td>Abstract local grouping node; no CPDAS Council code appears for this board in the 2021 table.</td><td>structural-board-group</td><td>true</td><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    PFTLE<a name=\"prc-PFTLE\"> </a></td><td>Professional Food Technologists Licensure Examination</td><td/><td>examination</td><td/><td/><td>16</td><td>Food Technology</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  board-speech-language-pathology<a name=\"prc-board-speech-language-pathology\"> </a></td><td>Speech-Language Pathology</td><td>Abstract local grouping node; no CPDAS Council code appears for this board in the 2021 table.</td><td>structural-board-group</td><td>true</td><td/><td/><td/></tr><tr><td>3</td><td style=\"white-space:nowrap\">    SLPLE<a name=\"prc-SLPLE\"> </a></td><td>Speech-Language Pathologists Licensure Examination</td><td/><td>examination</td><td/><td/><td>45</td><td>Speech-Language Pathology</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/prc"] ;
+  fhir:CodeSystem.version [ fhir:value "0.2.1"] ;
+  fhir:CodeSystem.name [ fhir:value "PRCCodeSystem"] ;
+  fhir:CodeSystem.title [ fhir:value "PRC CodeSystem"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-10-17"^^xsd:date] ;
+  fhir:CodeSystem.publisher [ fhir:value "UP Manila National TeleHealth Center"] ;
+  fhir:CodeSystem.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "UP Manila National TeleHealth Center" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-NTHC" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Consolidated PH Core terminology for PRC CPDAS Council codes, CPDAS numerical profession codes, and PRC licensure examination codes. CPDAS council and profession concepts reflect the FAQ as of 12 January 2021; PRC examination concepts reflect the standardized list posted 18 March 2026. The hierarchy groups related concepts and does not assert an is-a relationship. The 2021 CPDAS table says its numeric profession codes are for CPD attendance sheets and is subject to regular updating. The 2026 Food Technology and Speech-Language Pathology examination boards have abstract local grouping nodes because the 2021 CPDAS table has no council codes for them; those nodes are not CouncilCode values."] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:CodeSystem.purpose [ fhir:value "Provide one grouped terminology namespace while preserving PRC council codes, numerical profession codes, and examination codes as distinct concepts."] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.valueSet [
+     fhir:value "https://fhir.doh.gov.ph/phcore/ValueSet/prc-all-codes" ;
+     fhir:link <https://fhir.doh.gov.ph/phcore/ValueSet/prc-all-codes>
+  ] ;
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "grouped-by"] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "172"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.property [
+     fhir:index -1 ;
+     fhir:CodeSystem.property.code [ fhir:value "concept-kind" ] ;
+     fhir:CodeSystem.property.uri [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/prc#concept-kind" ] ;
+     fhir:CodeSystem.property.description [ fhir:value "Concept category: root, council, profession, examination, or structural-board-group." ] ;
+     fhir:CodeSystem.property.type [ fhir:value "string" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.property.code [ fhir:value "notSelectable" ] ;
+     fhir:CodeSystem.property.uri [ fhir:value "http://hl7.org/fhir/concept-properties#notSelectable" ] ;
+     fhir:CodeSystem.property.description [ fhir:value "The concept is a structural grouping node and is not intended to be selected directly." ] ;
+     fhir:CodeSystem.property.type [ fhir:value "boolean" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.property.code [ fhir:value "cpdas-row-number" ] ;
+     fhir:CodeSystem.property.uri [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/prc#cpdas-row-number" ] ;
+     fhir:CodeSystem.property.description [ fhir:value "The CPDAS table No. for a numerical profession concept; this is a row reference, not the code." ] ;
+     fhir:CodeSystem.property.type [ fhir:value "integer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.property.code [ fhir:value "prc-exam-list-number" ] ;
+     fhir:CodeSystem.property.uri [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/prc#prc-exam-list-number" ] ;
+     fhir:CodeSystem.property.description [ fhir:value "The PRC examination list number; it can repeat for multiple examinations associated with one board." ] ;
+     fhir:CodeSystem.property.type [ fhir:value "integer" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.property.code [ fhir:value "prc-exam-board-name" ] ;
+     fhir:CodeSystem.property.uri [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/prc#prc-exam-board-name" ] ;
+     fhir:CodeSystem.property.description [ fhir:value "The exact PRC board name from the 2026 examination list." ] ;
+     fhir:CodeSystem.property.type [ fhir:value "string" ]
+  ] ;
+  fhir:CodeSystem.concept [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PRC" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Professional Regulation Commission" ] ;
+     fhir:CodeSystem.concept.property [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+       fhir:CodeSystem.concept.property.valueString [ fhir:value "root" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "notSelectable" ] ;
+       fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ACC" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Accountancy" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "100" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Certified Public Accountant" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "1"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "CPALE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Certified Public Accountants Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "5"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Accountancy" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "AER" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Aeronautical Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "3400" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Aeronautical Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "2"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "AELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Aeronautical Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "1"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Aeronautical Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ABE" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Agricultural & Biosystems Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "200" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Agricultural And Biosystems Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "3"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "ABELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Agricultural and Biosystems Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "2"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Agricultural and Biosystems Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "AGR" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Agriculture" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "4200" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Agriculturist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "4"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "AgLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Agriculturists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "3"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Agriculture" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ARC" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Architecture" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "300" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Architect" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "5"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "LEA" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Licensure Examination for Architects" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "4"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Architecture" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "CHE" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Chemical Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "410" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Chemical Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "6"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "ChELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Chemical Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "6"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Chemical Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "CHM" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Chemistry" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "510" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Chemist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "7"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "520" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Chemical Technician" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "8"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "CLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Chemists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "7"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Chemistry" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "CTLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Chemical Technicians Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "7"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Chemistry" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OCE" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Civil Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "600" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Civil Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "9"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "CELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Civil Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "8"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Civil Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "CRM" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Criminology" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "3500" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Criminologist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "10"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "LEC" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Licensure Examination for Criminologists" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "9"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Criminology" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OCB" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Customs Broker" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "800" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Customs Broker" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "11"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "CuBLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Customs Brokers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "10"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Customs Brokers" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "DNT" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Dentistry" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "910" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Dentist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "12"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "920" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Dental Hygienist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "13"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "930" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Dental Technologist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "14"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "DLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Dentists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "11"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Dentistry" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "DHLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Dental Hygienists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "11"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Dentistry" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "DTLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Dental Technologists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "11"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Dentistry" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OEE" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Electrical Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1100" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Registered Electrical Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "15"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1110" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Professional Electrical Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "16"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1150" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Registered Master Electrician" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "17"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "REELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Registered Electrical Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "12"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Electrical Engineering" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "RMELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Registered Master Electricians Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "12"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Electrical Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "ECE" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Electronics Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1200" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Electronics And Communications Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "18"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1201" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Professional Electronics Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "19"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1202" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Electronics Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "20"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1203" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Electronics Technician" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "21"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "EELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Electronics Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "13"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Electronics Engineering" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "ETLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Electronics Technicians Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "13"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Electronics Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OEP" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Environmental Planning" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "3600" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Environmental Planner" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "22"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "EnPLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Environmental Planners Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "14"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Environmental Planning" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "FIS" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Fisheries" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "4300" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Fisheries Technologist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "23"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "FPLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Fisheries Professionals Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "15"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Fisheries" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "FRT" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Forestry" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1300" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Forester" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "24"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "PFLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Professional Foresters Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "17"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Foresters" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OGE" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Geodetic Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1410" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Geodetic Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "25"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "GELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Geodetic Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "18"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Geodetic Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "GEO" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Geology" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1510" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Geologist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "26"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1520" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Geologic Aide" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "27"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "GLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Geologists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "19"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Geology" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OGC" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Guidance & Counseling" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "4100" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Guidance Counselor" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "28"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "GCLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Guidance Counselors Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "20"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Guidance and Counseling" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OID" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Interior Design" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "310" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Interior Designer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "29"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "LEID" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Licensure Examination for Interior Designers" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "21"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Interior Design" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OLA" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Landscape Architecture" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "320" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Landscape Architect" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "30"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "LALE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Landscape Architects Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "22"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Landscape Architecture" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "LIB" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Librarian" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "3800" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Librarian" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "31"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "LLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Librarians Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "23"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Librarians" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OMP" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Master Plumbing" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1900" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Master Plumber" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "32"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "MPLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Master Plumbers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "24"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Master Plumbers" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "MEE" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Mechanical Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2010" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Professional Mechanical Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "33"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2040" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Mechanical Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "34"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2060" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Certified Plant Mechanic" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "35"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "MELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Mechanical Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "25"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Mechanical Engineering" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "CPMLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Certified Plant Mechanics Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "25"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Mechanical Engineering" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "PME-OETE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Professional Mechanical Engineers Oral Examination/Technical Evaluation" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "25"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Mechanical Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OMT" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Medical Technology" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2110" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Medical Technologist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "36"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2120" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Medical Laboratory Technician" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "37"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "MTLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Medical Technologists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "26"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Medical Technology" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "MED" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Medicine" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2200" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Physician" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "38"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "PLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Physicians Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "27"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Medicine" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "QA-FMP" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Qualifying Assessment-Foreign Medical Professionals" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "27"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Medicine" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OME" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Metallurgical Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1810" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Metallurgical Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "39"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1820" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Metallurgical Plant Foreman" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "40"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "MetELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Metallurgical Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "28"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Metallurgical Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "MDW" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Midwifery" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2310" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Midwife (Ra 2382)" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "41"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2320" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Midwife" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "42"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "MidLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Midwives Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "29"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Midwifery" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "MIN" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Mining Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2410" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Mining Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "43"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2420" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Certified Mine Foreman" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "44"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2440" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Certified Quarry Foreman" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "45"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "MinELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Mining Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "30"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Mining Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "NAME" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Naval Architecture" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2500" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Naval Architect & Marine Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "46"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "NALE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Naval Architects Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "31"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Naval Architecture" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "NRS" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Nursing" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2600" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Nurse" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "47"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "NLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Nurses Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "32"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Nursing" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "NAD" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Nutrition & Dietetics" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "1010" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Nutritionist Dietitian" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "48"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "NDLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Nutritionists-Dietitians Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "33"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Nutrition and Dietetics" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OCT" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Occupational Therapy" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2920" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Occupational Therapist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "49"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "OTLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Occupational Therapists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "37"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Occupational Therapy" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OPT" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Optometry" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2700" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Optometrist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "50"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2710" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Ocular Pharmacologist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "51"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "OLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Optometrists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "34"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Optometry" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "OPSCLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Ocular Pharmacologists Special Certification Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "34"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Optometry" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "PHA" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Pharmacy" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2810" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Pharmacist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "52"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2820" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Chinese Druggist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "53"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "PhLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Pharmacists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "35"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Pharmacy" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "PHT" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Physical Therapy" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "2910" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Physical Therapist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "54"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "PTLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Physical Therapists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "36"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Physical Therapy" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "PTR" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Professional Teachers" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "4000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Professional Teacher" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "55"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "LEPT" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Licensure Examination for Professional Teachers" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "38"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Professional Teachers" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "PSYCH" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Psychology" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "4520" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Psychologist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "56"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "4530" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Psychometrician" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "57"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "PsLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Psychologists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "39"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Psychology" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "PmLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Psychometricians Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "39"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Psychology" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "RAD" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Radiologic Technology" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "3710" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Radiologic Technologist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "58"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "3720" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "X-Ray Technologist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "59"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "RTLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Radiologic Technologists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Radiologic Technology" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "XTLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "X-Ray Technologists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "40"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Radiologic Technology" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "RAE" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Real Estate Service" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "4410" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Real Estate Consultant" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "60"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "4420" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Real Estate Appraiser" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "61"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "4430" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Real Estate Broker" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "62"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "REALE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Real Estate Appraisers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "41"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Real Estate Service" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "REBLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Real Estate Brokers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "41"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Real Estate Service" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "RECLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Real Estate Consultants Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "41"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Real Estate Service" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "RES" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Respiratory Therapy" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "4510" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Respiratory Therapist" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "63"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "ResTLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Respiratory Therapists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "42"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Respiratory Therapy" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "SAN" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Sanitary Engineering" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "3000" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Sanitary Engineer" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "64"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "SELE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Sanitary Engineers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "43"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Sanitary Engineering" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OSW" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Social Workers" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "3200" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Social Worker" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "65"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "SWLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Social Workers Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "44"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Social Workers" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "VET" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Veterinary Medicine" ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "council" ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "3300" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Veterinarian" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "profession" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "cpdas-row-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "66"^^xsd:integer ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "VLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Veterinarians Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "46"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Veterinary Medicine" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "board-food-technology" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Food Technology" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Abstract local grouping node; no CPDAS Council code appears for this board in the 2021 table." ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "structural-board-group" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "notSelectable" ] ;
+         fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "PFTLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Professional Food Technologists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "16"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Food Technology" ]
+         ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "board-speech-language-pathology" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Speech-Language Pathology" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Abstract local grouping node; no CPDAS Council code appears for this board in the 2021 table." ] ;
+       fhir:CodeSystem.concept.property [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+         fhir:CodeSystem.concept.property.valueString [ fhir:value "structural-board-group" ]
+       ], [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.property.code [ fhir:value "notSelectable" ] ;
+         fhir:CodeSystem.concept.property.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+       ] ;
+       fhir:CodeSystem.concept.concept [
+         fhir:index -1 ;
+         fhir:CodeSystem.concept.code [ fhir:value "SLPLE" ] ;
+         fhir:CodeSystem.concept.display [ fhir:value "Speech-Language Pathologists Licensure Examination" ] ;
+         fhir:CodeSystem.concept.property [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "concept-kind" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "examination" ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-list-number" ] ;
+           fhir:CodeSystem.concept.property.valueInteger [ fhir:value "45"^^xsd:integer ]
+         ], [
+           fhir:index -1 ;
+           fhir:CodeSystem.concept.property.code [ fhir:value "prc-exam-board-name" ] ;
+           fhir:CodeSystem.concept.property.valueString [ fhir:value "Speech-Language Pathology" ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/prc.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

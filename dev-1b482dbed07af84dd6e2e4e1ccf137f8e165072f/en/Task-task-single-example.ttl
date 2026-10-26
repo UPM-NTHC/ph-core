@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Task/task-single-example> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "task-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task task-single-example</b></p><a name=\"task-single-example\"> </a><a name=\"hctask-single-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-task.html\">PH Core Task</a></p></div><p><b>status</b>: Requested</p><p><b>intent</b>: order</p><p><b>priority</b>: Routine</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 82078001}\">Blood sample collection</span></p><p><b>description</b>: Collect blood sample for complete blood count (CBC) testing</p><p><b>for</b>: <a href=\"Patient-patient-single-example.html\">Juan Jane Dela Fuente Dela Cruz  Male, DoB: 1980-01-01 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#63-584789845-5)</a></p><p><b>encounter</b>: <a href=\"Encounter-encounter-single-example.html\">Encounter: identifier = http://example.org/encounter-id#ENC-12345; status = finished; class = ambulatory (ActCode#AMB); type = ambulatory; period = 2023-01-01 10:00:00+0000 --&gt; 2023-01-01 11:00:00+0000</a></p><p><b>executionPeriod</b>: 2024-03-15 09:00:00+0800 --&gt; 2024-03-15 10:00:00+0800</p><p><b>authoredOn</b>: 2024-03-15 08:30:00+0800</p><p><b>lastModified</b>: 2024-03-15 08:30:00+0800</p><p><b>requester</b>: <a href=\"Practitioner-practitioner-single-example.html\">Practitioner Maria Clara Santos (official)</a></p><p><b>owner</b>: <a href=\"Organization-organization-single-example.html\">Organization Department of Health - Sattelite Office</a></p><p><b>note</b>: By Practitioner/practitioner-single-example @2024-03-15 08:30:00+0800</p><blockquote><div><p>Patient has confirmed appointment. Please ensure fasting status is verified before sample collection.</p>\n</div></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "requested"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:priority [ fhir:v "routine"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:82078001 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "82078001" ] ;
+       fhir:display [ fhir:v "Collection of blood specimen for laboratory" ]
+     ] ) ;
+     fhir:text [ fhir:v "Blood sample collection" ]
+  ] ; # 
+  fhir:description [ fhir:v "Collect blood sample for complete blood count (CBC) testing"] ; # 
+  fhir:for [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Encounter/encounter-single-example> ;
+     fhir:reference [ fhir:v "Encounter/encounter-single-example" ]
+  ] ; # 
+  fhir:executionPeriod [
+     fhir:start [ fhir:v "2024-03-15T09:00:00+08:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2024-03-15T10:00:00+08:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2024-03-15T08:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:lastModified [ fhir:v "2024-03-15T08:30:00+08:00"^^xsd:dateTime] ; # 
+  fhir:requester [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+  ] ; # 
+  fhir:owner [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:reference [ fhir:v "Organization/organization-single-example" ]
+  ] ; # 
+  fhir:note ( [
+     fhir:author [
+       a fhir:Reference ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+     ] ;
+     fhir:time [ fhir:v "2024-03-15T08:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:text [ fhir:v "Patient has confirmed appointment. Please ensure fasting status is verified before sample collection." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

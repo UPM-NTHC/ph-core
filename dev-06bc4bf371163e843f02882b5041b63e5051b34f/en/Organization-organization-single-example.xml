@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="organization-single-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization organization-single-example</b></p><a name="organization-single-example"> </a><a name="hcorganization-single-example"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ph-core-organization.html">PH Core Organization</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Example Manila Health Center (https://nhfr.doh.gov.ph/#0987654321)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Other Ids (see the one above)">Other Ids:</td><td colspan="3"><ul><li><code>https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code</code>/HCPN-EXAMPLE-MANILA-001</li><li><code>http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber</code>/PAN-2024-00001</li><li><code>http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber</code>/PEN-000000001</li><li><code>http://my-hospital.org/internal-id</code>/HOSP-INT-12345</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the organization">Contact Detail</td><td colspan="3"><ul><li><a href="tel:+63-2-8651-7800">+63-2-8651-7800</a></li><li><a href="mailto:contact@doh.gov.ph">contact@doh.gov.ph</a></li><li>123 Hospital Street 1000 PH (work)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the organization">Contact Detail</td><td colspan="3"><ul><li>Health Facility Contact</li><li><a href="tel:+63-2-8651-7800">+63-2-8651-7800</a></li><li>125 Central Office Street 1000 PH (work)</li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="https://nhfr.doh.gov.ph/"/>
+    <value value="0987654321"/>
+  </identifier>
+  <identifier>
+    <system value="https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code"/>
+    <value value="HCPN-EXAMPLE-MANILA-001"/>
+  </identifier>
+  <identifier>
+    <system value="http://nhdr.gov.ph/fhir/Identifier/philhealthaccreditationnumber"/>
+    <value value="PAN-2024-00001"/>
+  </identifier>
+  <identifier>
+    <system value="http://nhdr.gov.ph/fhir/Identifier/philhealthemployernumber"/>
+    <value value="PEN-000000001"/>
+  </identifier>
+  <identifier>
+    <system value="http://my-hospital.org/internal-id"/>
+    <value value="HOSP-INT-12345"/>
+  </identifier>
+  <active value="true"/>
+  <name value="Example Manila Health Center"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="+63-2-8651-7800"/>
+    <use value="work"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="contact@doh.gov.ph"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1300000000"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="1380600000"/>
+      </valueCoding>
+    </extension>
+    <use value="work"/>
+    <line value="123 Hospital Street"/>
+    <postalCode value="1000"/>
+    <country value="PH"/>
+  </address>
+  <contact>
+    <name>
+      <text value="Health Facility Contact"/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+      <value value="+63-2-8651-7800"/>
+    </telecom>
+    <address>
+      <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+        <valueCoding>
+          <system value="https://psa.gov.ph/classification/psgc"/>
+          <code value="1300000000"/>
+        </valueCoding>
+      </extension>
+      <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+        <valueCoding>
+          <system value="https://psa.gov.ph/classification/psgc"/>
+          <code value="1380600000"/>
+        </valueCoding>
+      </extension>
+      <use value="work"/>
+      <line value="125 Central Office Street"/>
+      <postalCode value="1000"/>
+      <country value="PH"/>
+    </address>
+  </contact>
+</Organization>

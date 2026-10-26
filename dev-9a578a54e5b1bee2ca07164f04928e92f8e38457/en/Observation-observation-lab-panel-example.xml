@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="observation-lab-panel-example"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-observation"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Basic Metabolic Panel for Juan Dela Cruz including glucose, sodium, and potassium results.</div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="24326-1"/>
+      <display value="Electrolytes 1998 panel - Serum or Plasma"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-single-example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/encounter-single-example"/>
+  </encounter>
+  <effectiveDateTime value="2024-01-15T08:00:00Z"/>
+  <performer>
+    <reference value="Practitioner/practitioner-single-example"/>
+  </performer>
+  <hasMember>
+    <reference value="Observation/observation-glucose-example"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/observation-sodium-example"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/observation-potassium-example"/>
+  </hasMember>
+</Observation>

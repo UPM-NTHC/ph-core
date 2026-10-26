@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "070c6222-fa90-429c-98d0-fb5e959be485-144",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/070c6222-fa90-429c-98d0-fb5e959be485-144",
+  "name" : "IntersectionPHCoreDisabilityTypeVSAndPHCoreDisabilityTypeVS",
+  "title" : "Intersection of PH Core Disability Type Value Set And PH Core Disability Type Value Set",
+  "status" : "draft",
+  "date" : "2026-10-26T05:37:34+00:00"
+}

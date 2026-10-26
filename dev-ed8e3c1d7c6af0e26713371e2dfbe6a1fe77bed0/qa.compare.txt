@@ -1,0 +1,334 @@
+PHCoreImplementationGuide : Validation Results
+=========================================
+
+err = 0, warn = 35, info = 72
+$--
+Generated $--. FHIR version $-- for fhir.ph.core#$-- (canonical = https://fhir.doh.gov.ph/phcore)
+ Build Errors : 0 / 0 / 0
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ActorDefinition-PHCoreClient : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ActorDefinition-PHCoreServer : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/AllergyIntolerance-allergy-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-bundle-acs-case-example : 0 / 6 / 63
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-bundle-allergy-provenance-example : 0 / 0 / 7
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-bundle-observation-provenance-example : 0 / 0 / 7
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Bundle-transaction-example : 0 / 5 / 60
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CapabilityStatement-PHCoreClientCapabilityStatement : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CapabilityStatement-PHCoreServerCapabilityStatement : 0 / 0 / 29
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Claim-claim-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PHFDACPRCS : 0 / 1 / 16
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSCED : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSGC : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-PSOC : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-indigenous-status-cs : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-ph-core-disability-type-cs : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/CodeSystem-prc : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Condition-condition-appendicitis-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Condition-condition-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Coverage-philhealth-coverage-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Encounter-encounter-immunization-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Encounter-encounter-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Encounter-encounter-surgery-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/HealthcareService-healthcareservice-single-example : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Immunization-immunization-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ImplementationGuide-fhir.ph.core : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Location-location-single-example : 0 / 0 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Medication-medication-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Medication-medication-vaccine-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-PhilHealthIDNS : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/NamingSystem-PhilSysIDNS : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-bp-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-component-unavailable : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-derived-bmi-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-environmental-temp-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-glucose-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-height-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-lab-panel-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-part-of-procedure-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-performer-role-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-potassium-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-result-unavailable : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-sodium-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-vitals-encounter-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Observation-observation-weight-example : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Organization-organization-pgh-example : 0 / 3 / 5
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Organization-organization-philhealth-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Organization-organization-prc-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Organization-organization-single-example : 0 / 5 / 6
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-patient-anonymous-mothers-maiden-name-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-patient-explicit-absence-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-patient-sex-and-gender-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Patient-patient-single-example : 0 / 0 / 6
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Practitioner-practitioner-single-example : 0 / 1 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/PractitionerRole-practitionerrole-single-example : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Procedure-procedure-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/Procedure-procedure-unknown-date-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/RelatedPerson-relatedperson-single-example : 0 / 0 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/SearchParameter-practitioner-identifier : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ServiceRequest-servicerequest-appendectomy-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ServiceRequest-servicerequest-single-example : 0 / 0 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-administered-product : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-barangay : 0 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-batch-number : 0 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-city-municipality : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-educational-attainment : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-indigenous-status : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-occupation : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-address : 0 / 0 / 10
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-allergyintolerance : 0 / 0 / 15
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-claim : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-condition : 0 / 0 / 14
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-encounter : 0 / 0 / 12
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-healthcareservice : 0 / 0 / 8
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-immunization : 0 / 0 / 32
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-location : 0 / 0 / 10
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-medication : 0 / 0 / 4
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-medicationadministration : 0 / 2 / 5
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-medicationdispense : 0 / 2 / 6
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-medicationrequest : 0 / 2 / 5
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-medicationstatement : 0 / 2 / 5
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-observation : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-observation-clinical-result : 0 / 0 / 6
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-organization : 0 / 0 / 10
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-patient : 0 / 0 / 20
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-practitioner : 0 / 0 / 10
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-practitionerrole : 0 / 0 / 18
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-procedure : 0 / 0 / 12
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-provenance : 0 / 0 / 33
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-pwd-disability : 0 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-relatedperson : 0 / 0 / 12
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-serviceRequest : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-ph-core-task : 0 / 0 / 3
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-province : 0 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-race : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/StructureDefinition-region : 0 / 0 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-barangays : 0 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-cities : 0 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-drugs-vs : 0 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-educational-attainments : 0 / 4 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-indigenous-status-vs : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-occupational-classifications : 0 / 3 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-ph-core-disability-type-vs : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-prc-all-codes : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-prc-council-codes : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-prc-licensure-examinations : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-prc-profession-codes : 0 / 1 / 1
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-provinces : 0 / 1 / 2
+ /home/runner/work/ph-core/ph-core/fsh-generated/resources/ValueSet-regions : 0 / 1 / 2
+</table>
+== n/a ==
+== fsh-generated/resources/ActorDefinition-PHCoreClient.json ==
+INFORMATION: Resource: The resource ActorDefinition/PHCoreClient could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ActorDefinition-PHCoreServer.json ==
+INFORMATION: Resource: The resource ActorDefinition/PHCoreServer could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/AllergyIntolerance-allergy-single-example.json ==
+== fsh-generated/resources/Bundle-bundle-acs-case-example.json ==
+== fsh-generated/resources/Bundle-bundle-allergy-provenance-example.json ==
+== fsh-generated/resources/Bundle-bundle-observation-provenance-example.json ==
+== fsh-generated/resources/Bundle-transaction-example.json ==
+== fsh-generated/resources/CapabilityStatement-PHCoreClientCapabilityStatement.json ==
+INFORMATION: Resource: The resource CapabilityStatement/PHCoreClientCapabilityStatement could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/CapabilityStatement-PHCoreServerCapabilityStatement.json ==
+INFORMATION: Resource: The resource CapabilityStatement/PHCoreServerCapabilityStatement could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/Claim-claim-single-example.json ==
+== fsh-generated/resources/CodeSystem-PHFDACPRCS.json ==
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[0]: This property has only a code ('productInfo') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[1]: This property has only a code ('genericName') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[2]: This property has only a code ('dosageStrength') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[3]: This property has only a code ('dosageForm') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[4]: This property has only a code ('classification') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[5]: This property has only a code ('packaging') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[6]: This property has only a code ('pharmacologicCategory') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[7]: This property has only a code ('manufacturer') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[8]: This property has only a code ('countryOfOrigin') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[9]: This property has only a code ('trader') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[10]: This property has only a code ('importer') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[11]: This property has only a code ('distributor') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[12]: This property has only a code ('applicationType') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[13]: This property has only a code ('issuanceDate') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/PHFDACPRCS: CodeSystem.property[14]: This property has only a code ('expiryDate') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+WARNING: Resource: The resource CodeSystem/PHFDACPRCS should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/CodeSystem-PSCED.json ==
+WARNING: Resource: The resource CodeSystem/PSCED should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/CodeSystem-PSGC.json ==
+WARNING: Resource: The resource CodeSystem/PSGC should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/CodeSystem-PSOC.json ==
+WARNING: Resource: The resource CodeSystem/PSOC should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/CodeSystem-indigenous-status-cs.json ==
+WARNING: Resource: The resource CodeSystem/indigenous-status-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/CodeSystem-ph-core-disability-type-cs.json ==
+WARNING: Resource: The resource CodeSystem/ph-core-disability-type-cs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/CodeSystem-prc.json ==
+WARNING: Resource: The resource CodeSystem/prc should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/Condition-condition-appendicitis-example.json ==
+== fsh-generated/resources/Condition-condition-single-example.json ==
+== fsh-generated/resources/Coverage-philhealth-coverage-example.json ==
+== fsh-generated/resources/Encounter-encounter-immunization-example.json ==
+== fsh-generated/resources/Encounter-encounter-single-example.json ==
+== fsh-generated/resources/Encounter-encounter-surgery-example.json ==
+== fsh-generated/resources/HealthcareService-healthcareservice-single-example.json ==
+== fsh-generated/resources/Immunization-immunization-single-example.json ==
+== fsh-generated/resources/ImplementationGuide-fhir.ph.core.json ==
+INFORMATION: Resource: The resource ImplementationGuide/fhir.ph.core could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/Location-location-single-example.json ==
+== fsh-generated/resources/Medication-medication-single-example.json ==
+== fsh-generated/resources/Medication-medication-vaccine-example.json ==
+== fsh-generated/resources/NamingSystem-PhilHealthIDNS.json ==
+INFORMATION: Resource: The resource NamingSystem/PhilHealthIDNS could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/NamingSystem-PhilSysIDNS.json ==
+INFORMATION: Resource: The resource NamingSystem/PhilSysIDNS could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/Observation-observation-bp-example.json ==
+== fsh-generated/resources/Observation-observation-component-unavailable.json ==
+== fsh-generated/resources/Observation-observation-derived-bmi-example.json ==
+== fsh-generated/resources/Observation-observation-environmental-temp-example.json ==
+== fsh-generated/resources/Observation-observation-glucose-example.json ==
+== fsh-generated/resources/Observation-observation-height-example.json ==
+== fsh-generated/resources/Observation-observation-lab-panel-example.json ==
+== fsh-generated/resources/Observation-observation-part-of-procedure-example.json ==
+== fsh-generated/resources/Observation-observation-performer-role-example.json ==
+== fsh-generated/resources/Observation-observation-potassium-example.json ==
+== fsh-generated/resources/Observation-observation-result-unavailable.json ==
+== fsh-generated/resources/Observation-observation-sodium-example.json ==
+== fsh-generated/resources/Observation-observation-vitals-encounter-example.json ==
+== fsh-generated/resources/Observation-observation-weight-example.json ==
+== fsh-generated/resources/Organization-organization-pgh-example.json ==
+== fsh-generated/resources/Organization-organization-philhealth-example.json ==
+== fsh-generated/resources/Organization-organization-prc-example.json ==
+== fsh-generated/resources/Organization-organization-single-example.json ==
+INFORMATION: Organization/organization-single-example: Organization.identifier[4]: This element does not match any known slice defined in the profile https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization|0.2.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Patient-patient-anonymous-mothers-maiden-name-example.json ==
+== fsh-generated/resources/Patient-patient-explicit-absence-example.json ==
+== fsh-generated/resources/Patient-patient-sex-and-gender-example.json ==
+== fsh-generated/resources/Patient-patient-single-example.json ==
+== fsh-generated/resources/Practitioner-practitioner-single-example.json ==
+== fsh-generated/resources/PractitionerRole-practitionerrole-single-example.json ==
+== fsh-generated/resources/Procedure-procedure-single-example.json ==
+== fsh-generated/resources/Procedure-procedure-unknown-date-example.json ==
+== fsh-generated/resources/RelatedPerson-relatedperson-single-example.json ==
+== fsh-generated/resources/SearchParameter-practitioner-identifier.json ==
+INFORMATION: Resource: The resource SearchParameter/practitioner-identifier could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ServiceRequest-servicerequest-appendectomy-example.json ==
+== fsh-generated/resources/ServiceRequest-servicerequest-single-example.json ==
+== fsh-generated/resources/StructureDefinition-administered-product.json ==
+INFORMATION: Resource: The resource StructureDefinition/administered-product could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-barangay.json ==
+INFORMATION: Resource: The resource StructureDefinition/barangay could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+WARNING: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-batch-number.json ==
+INFORMATION: Resource: The resource StructureDefinition/batch-number could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+WARNING: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/phcore/StructureDefinition/batch-number'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-city-municipality.json ==
+INFORMATION: Resource: The resource StructureDefinition/city-municipality could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-educational-attainment.json ==
+INFORMATION: Resource: The resource StructureDefinition/educational-attainment could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-indigenous-status.json ==
+INFORMATION: Resource: The resource StructureDefinition/indigenous-status could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-occupation.json ==
+INFORMATION: Resource: The resource StructureDefinition/occupation could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-address.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-address could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-allergyintolerance.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-allergyintolerance could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-claim.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-claim could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-condition.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-condition could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-encounter.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-encounter could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-healthcareservice.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-healthcareservice could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-immunization.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-immunization could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-location.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-location could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-medication.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-medication could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-medicationadministration.json ==
+WARNING: StructureDefinition/ph-core-medicationadministration: StructureDefinition.snapshot: The slice 'medicationReference' on path 'MedicationAdministration.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/ph-core-medicationadministration: StructureDefinition.snapshot: The slice 'medicationCodeableConcept' on path 'MedicationAdministration.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+INFORMATION: Resource: The resource StructureDefinition/ph-core-medicationadministration could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+INFORMATION: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationadministration'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated/resources/StructureDefinition-ph-core-medicationdispense.json ==
+WARNING: StructureDefinition/ph-core-medicationdispense: StructureDefinition.snapshot: The slice 'medicationReference' on path 'MedicationDispense.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/ph-core-medicationdispense: StructureDefinition.snapshot: The slice 'medicationCodeableConcept' on path 'MedicationDispense.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+INFORMATION: Resource: The resource StructureDefinition/ph-core-medicationdispense could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+INFORMATION: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationdispense'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated/resources/StructureDefinition-ph-core-medicationrequest.json ==
+WARNING: StructureDefinition/ph-core-medicationrequest: StructureDefinition.snapshot: The slice 'medicationReference' on path 'MedicationRequest.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/ph-core-medicationrequest: StructureDefinition.snapshot: The slice 'medicationCodeableConcept' on path 'MedicationRequest.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+INFORMATION: Resource: The resource StructureDefinition/ph-core-medicationrequest could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+INFORMATION: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationrequest'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated/resources/StructureDefinition-ph-core-medicationstatement.json ==
+WARNING: StructureDefinition/ph-core-medicationstatement: StructureDefinition.snapshot: The slice 'medicationReference' on path 'MedicationStatement.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/ph-core-medicationstatement: StructureDefinition.snapshot: The slice 'medicationCodeableConcept' on path 'MedicationStatement.medication[x]' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+INFORMATION: Resource: The resource StructureDefinition/ph-core-medicationstatement could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+INFORMATION: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medicationstatement'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated/resources/StructureDefinition-ph-core-observation.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-observation could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-observation-clinical-result.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-observation-clinical-result could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-organization.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-organization could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-patient.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-patient could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-practitioner.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-practitioner could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-practitionerrole.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-practitionerrole could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-procedure.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-procedure could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-provenance.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-provenance could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+INFORMATION: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-provenance'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated/resources/StructureDefinition-ph-core-pwd-disability.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-pwd-disability could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+WARNING: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-pwd-disability'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-ph-core-relatedperson.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-relatedperson could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-serviceRequest.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-serviceRequest could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-ph-core-task.json ==
+INFORMATION: Resource: The resource StructureDefinition/ph-core-task could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+INFORMATION: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-task'): The Implementation Guide contains no explicitly linked examples for this profile
+== fsh-generated/resources/StructureDefinition-province.json ==
+INFORMATION: Resource: The resource StructureDefinition/province could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+WARNING: StructureDefinition.where(url = 'https://fhir.doh.gov.ph/phcore/StructureDefinition/province'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-race.json ==
+INFORMATION: Resource: The resource StructureDefinition/race could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/StructureDefinition-region.json ==
+INFORMATION: Resource: The resource StructureDefinition/region could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-barangays.json ==
+INFORMATION: ValueSet/barangays: ValueSet.compose.include[0]: The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'
+WARNING: Resource: The resource ValueSet/barangays should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-cities.json ==
+INFORMATION: ValueSet/cities: ValueSet.compose.include[0]: The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'
+WARNING: Resource: The resource ValueSet/cities should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-drugs-vs.json ==
+INFORMATION: ValueSet/drugs-vs: ValueSet.compose.include[0]: The value set references CodeSystem 'https://verification.fda.gov.ph' which has status 'fragment'
+WARNING: Resource: The resource ValueSet/drugs-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-educational-attainments.json ==
+INFORMATION: ValueSet/educational-attainments: ValueSet.compose.include[0]: The value set references CodeSystem 'https://psa.gov.ph/classification/psced/level' which has status 'fragment'
+WARNING: ValueSet/educational-attainments: ValueSet.expansion: This expansion has no parameters; in the absence of the parameters that controlled the expansion, systems may not be able to determine whether it is safe to use this expansion
+WARNING: ValueSet/educational-attainments: ValueSet.expansion: Because the expansion uses system 'https://psa.gov.ph/classification/psced/level' without a version, it should list the system using the expansion parameter 'used-codesystem'
+WARNING: Resource: The resource ValueSet/educational-attainments should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-indigenous-status-vs.json ==
+WARNING: Resource: The resource ValueSet/indigenous-status-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-occupational-classifications.json ==
+INFORMATION: ValueSet/occupational-classifications: ValueSet.compose.include[0]: The value set references CodeSystem 'https://psa.gov.ph/classification/psoc/unit' which has status 'fragment'
+WARNING: ValueSet/occupational-classifications: ValueSet.expansion: Because the expansion uses system 'https://psa.gov.ph/classification/psoc/unit' without a version, it should list the system using the expansion parameter 'used-codesystem'
+WARNING: Resource: The resource ValueSet/occupational-classifications should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-ph-core-disability-type-vs.json ==
+WARNING: Resource: The resource ValueSet/ph-core-disability-type-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-prc-all-codes.json ==
+WARNING: Resource: The resource ValueSet/prc-all-codes should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-prc-council-codes.json ==
+WARNING: Resource: The resource ValueSet/prc-council-codes should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-prc-licensure-examinations.json ==
+WARNING: Resource: The resource ValueSet/prc-licensure-examinations should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-prc-profession-codes.json ==
+WARNING: Resource: The resource ValueSet/prc-profession-codes should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-provinces.json ==
+INFORMATION: ValueSet/provinces: ValueSet.compose.include[0]: The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'
+WARNING: Resource: The resource ValueSet/provinces should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+== fsh-generated/resources/ValueSet-regions.json ==
+INFORMATION: ValueSet/regions: ValueSet.compose.include[0]: The value set references CodeSystem 'https://psa.gov.ph/classification/psgc' which has status 'fragment'
+WARNING: Resource: The resource ValueSet/regions should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)

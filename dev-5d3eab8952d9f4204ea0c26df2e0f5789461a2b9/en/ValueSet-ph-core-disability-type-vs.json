@@ -1,0 +1,37 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ph-core-disability-type-vs",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ph-core-disability-type-vs</b></p><a name=\"ph-core-disability-type-vs\"> </a><a name=\"hcph-core-disability-type-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-ph-core-disability-type-cs.html\"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0</span></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/ValueSet/ph-core-disability-type-vs",
+  "version" : "0.2.0",
+  "name" : "PHCoreDisabilityTypeVS",
+  "title" : "PH Core Disability Type Value Set",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-06-12T06:10:41+00:00",
+  "publisher" : "UP Manila National TeleHealth Center",
+  "contact" : [{
+    "name" : "UP Manila National TeleHealth Center",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-NTHC"
+    }]
+  }],
+  "description" : "Value set for types of disability as defined by the Philippine government for PWD registration.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs"
+    }]
+  }
+}

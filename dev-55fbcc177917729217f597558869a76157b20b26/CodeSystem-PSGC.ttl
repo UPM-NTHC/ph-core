@@ -1,0 +1,138 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/CodeSystem/PSGC> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PSGC"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSGC</b></p><a name=\"PSGC\"> </a><a name=\"hcPSGC\"> </a><p>This case-sensitive code system <code>https://psa.gov.ph/classification/psgc</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1300000000<a name=\"PSGC-1300000000\"> </a></td><td>National Capital Region</td></tr><tr><td style=\"white-space:nowrap\">1380600000<a name=\"PSGC-1380600000\"> </a></td><td>City of Manila</td></tr><tr><td style=\"white-space:nowrap\">1339000003<a name=\"PSGC-1339000003\"> </a></td><td>Ermita</td></tr><tr><td style=\"white-space:nowrap\">1380100001<a name=\"PSGC-1380100001\"> </a></td><td>Barangay 1</td></tr><tr><td style=\"white-space:nowrap\">1380100000<a name=\"PSGC-1380100000\"> </a></td><td>City of Caloocan</td></tr><tr><td style=\"white-space:nowrap\">1380200000<a name=\"PSGC-1380200000\"> </a></td><td>City of Las Piñas</td></tr><tr><td style=\"white-space:nowrap\">1400100000<a name=\"PSGC-1400100000\"> </a></td><td>Abra</td></tr><tr><td style=\"white-space:nowrap\">1401100000<a name=\"PSGC-1401100000\"> </a></td><td>Benguet</td></tr><tr><td style=\"white-space:nowrap\">1402700000<a name=\"PSGC-1402700000\"> </a></td><td>Ifugao</td></tr><tr><td style=\"white-space:nowrap\">1403200000<a name=\"PSGC-1403200000\"> </a></td><td>Kalinga</td></tr><tr><td style=\"white-space:nowrap\">1404400000<a name=\"PSGC-1404400000\"> </a></td><td>Mountain Province</td></tr><tr><td style=\"white-space:nowrap\">1408100000<a name=\"PSGC-1408100000\"> </a></td><td>Apayao</td></tr><tr><td style=\"white-space:nowrap\">0102800000<a name=\"PSGC-0102800000\"> </a></td><td>Ilocos Norte</td></tr><tr><td style=\"white-space:nowrap\">0102900000<a name=\"PSGC-0102900000\"> </a></td><td>Ilocos Sur</td></tr><tr><td style=\"white-space:nowrap\">0103300000<a name=\"PSGC-0103300000\"> </a></td><td>La Union</td></tr><tr><td style=\"white-space:nowrap\">0105500000<a name=\"PSGC-0105500000\"> </a></td><td>Pangasinan</td></tr><tr><td style=\"white-space:nowrap\">0200900000<a name=\"PSGC-0200900000\"> </a></td><td>Batanes</td></tr><tr><td style=\"white-space:nowrap\">0201500000<a name=\"PSGC-0201500000\"> </a></td><td>Cagayan</td></tr><tr><td style=\"white-space:nowrap\">0203100000<a name=\"PSGC-0203100000\"> </a></td><td>Isabela</td></tr><tr><td style=\"white-space:nowrap\">0402100000<a name=\"PSGC-0402100000\"> </a></td><td>Cavite</td></tr><tr><td style=\"white-space:nowrap\">0403400000<a name=\"PSGC-0403400000\"> </a></td><td>Laguna</td></tr><tr><td style=\"white-space:nowrap\">0405600000<a name=\"PSGC-0405600000\"> </a></td><td>Quezon</td></tr><tr><td style=\"white-space:nowrap\">0405800000<a name=\"PSGC-0405800000\"> </a></td><td>Rizal</td></tr><tr><td style=\"white-space:nowrap\">1704000000<a name=\"PSGC-1704000000\"> </a></td><td>Marinduque</td></tr><tr><td style=\"white-space:nowrap\">1705100000<a name=\"PSGC-1705100000\"> </a></td><td>Occidental Mindoro</td></tr><tr><td style=\"white-space:nowrap\">0100000000<a name=\"PSGC-0100000000\"> </a></td><td>Ilocos Region</td></tr><tr><td style=\"white-space:nowrap\">0133000000<a name=\"PSGC-0133000000\"> </a></td><td>La Union</td></tr><tr><td style=\"white-space:nowrap\">0133070000<a name=\"PSGC-0133070000\"> </a></td><td>Bauang</td></tr><tr><td style=\"white-space:nowrap\">0133070250<a name=\"PSGC-0133070250\"> </a></td><td>Paringao</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://psa.gov.ph/classification/psgc"^^xsd:anyURI ;
+     fhir:l <https://psa.gov.ph/classification/psgc>
+  ] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "PSGC"] ; # 
+  fhir:title [ fhir:v "Mock PSGC"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2026-06-10T02:31:18+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "UP Manila National TeleHealth Center"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "UP Manila National TeleHealth Center" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://github.com/UP-NTHC" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Mock of the Philippine Standard Geographic Code."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "PH" ] ;
+       fhir:display [ fhir:v "Philippines" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "29"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "1300000000" ] ;
+     fhir:display [ fhir:v "National Capital Region" ]
+  ] [
+     fhir:code [ fhir:v "1380600000" ] ;
+     fhir:display [ fhir:v "City of Manila" ]
+  ] [
+     fhir:code [ fhir:v "1339000003" ] ;
+     fhir:display [ fhir:v "Ermita" ]
+  ] [
+     fhir:code [ fhir:v "1380100001" ] ;
+     fhir:display [ fhir:v "Barangay 1" ]
+  ] [
+     fhir:code [ fhir:v "1380100000" ] ;
+     fhir:display [ fhir:v "City of Caloocan" ]
+  ] [
+     fhir:code [ fhir:v "1380200000" ] ;
+     fhir:display [ fhir:v "City of Las Piñas" ]
+  ] [
+     fhir:code [ fhir:v "1400100000" ] ;
+     fhir:display [ fhir:v "Abra" ]
+  ] [
+     fhir:code [ fhir:v "1401100000" ] ;
+     fhir:display [ fhir:v "Benguet" ]
+  ] [
+     fhir:code [ fhir:v "1402700000" ] ;
+     fhir:display [ fhir:v "Ifugao" ]
+  ] [
+     fhir:code [ fhir:v "1403200000" ] ;
+     fhir:display [ fhir:v "Kalinga" ]
+  ] [
+     fhir:code [ fhir:v "1404400000" ] ;
+     fhir:display [ fhir:v "Mountain Province" ]
+  ] [
+     fhir:code [ fhir:v "1408100000" ] ;
+     fhir:display [ fhir:v "Apayao" ]
+  ] [
+     fhir:code [ fhir:v "0102800000" ] ;
+     fhir:display [ fhir:v "Ilocos Norte" ]
+  ] [
+     fhir:code [ fhir:v "0102900000" ] ;
+     fhir:display [ fhir:v "Ilocos Sur" ]
+  ] [
+     fhir:code [ fhir:v "0103300000" ] ;
+     fhir:display [ fhir:v "La Union" ]
+  ] [
+     fhir:code [ fhir:v "0105500000" ] ;
+     fhir:display [ fhir:v "Pangasinan" ]
+  ] [
+     fhir:code [ fhir:v "0200900000" ] ;
+     fhir:display [ fhir:v "Batanes" ]
+  ] [
+     fhir:code [ fhir:v "0201500000" ] ;
+     fhir:display [ fhir:v "Cagayan" ]
+  ] [
+     fhir:code [ fhir:v "0203100000" ] ;
+     fhir:display [ fhir:v "Isabela" ]
+  ] [
+     fhir:code [ fhir:v "0402100000" ] ;
+     fhir:display [ fhir:v "Cavite" ]
+  ] [
+     fhir:code [ fhir:v "0403400000" ] ;
+     fhir:display [ fhir:v "Laguna" ]
+  ] [
+     fhir:code [ fhir:v "0405600000" ] ;
+     fhir:display [ fhir:v "Quezon" ]
+  ] [
+     fhir:code [ fhir:v "0405800000" ] ;
+     fhir:display [ fhir:v "Rizal" ]
+  ] [
+     fhir:code [ fhir:v "1704000000" ] ;
+     fhir:display [ fhir:v "Marinduque" ]
+  ] [
+     fhir:code [ fhir:v "1705100000" ] ;
+     fhir:display [ fhir:v "Occidental Mindoro" ]
+  ] [
+     fhir:code [ fhir:v "0100000000" ] ;
+     fhir:display [ fhir:v "Ilocos Region" ]
+  ] [
+     fhir:code [ fhir:v "0133000000" ] ;
+     fhir:display [ fhir:v "La Union" ]
+  ] [
+     fhir:code [ fhir:v "0133070000" ] ;
+     fhir:display [ fhir:v "Bauang" ]
+  ] [
+     fhir:code [ fhir:v "0133070250" ] ;
+     fhir:display [ fhir:v "Paringao" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

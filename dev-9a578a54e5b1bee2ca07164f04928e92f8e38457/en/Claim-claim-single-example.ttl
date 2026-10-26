@@ -1,0 +1,160 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Claim/claim-single-example> a fhir:Claim ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "claim-single-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim"^^xsd:anyURI ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-claim>
+     ] )
+  ] ; # 
+  fhir:language [ fhir:v "en"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Claim:</b> PhilHealth Outpatient Consultation</p><p><b>Status:</b> Active</p><p><b>Patient:</b> Juan Dela Cruz (PhilHealth ID: 63-584789845-5)</p><p><b>Created:</b> March 15, 2024</p><p><b>Insurer:</b> Philippine Health Insurance Corporation (PhilHealth)</p><p><b>Provider:</b> Dr. Maria Clara Santos</p><p><b>Diagnosis:</b> Type 2 Diabetes Mellitus (Principal)</p><p><b>Service:</b> Outpatient Consultation on March 15, 2024 - PHP 500.00</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/claim-type"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/claim-type>
+       ] ;
+       fhir:code [ fhir:v "professional" ] ;
+       fhir:display [ fhir:v "Professional" ]
+     ] )
+  ] ; # 
+  fhir:use [ fhir:v "claim"] ; # 
+  fhir:patient [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Patient/patient-single-example> ;
+     fhir:reference [ fhir:v "Patient/patient-single-example" ]
+  ] ; # 
+  fhir:created [ fhir:v "2024-03-15"^^xsd:date] ; # 
+  fhir:insurer [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Organization/organization-single-example> ;
+     fhir:reference [ fhir:v "Organization/organization-single-example" ]
+  ] ; # 
+  fhir:provider [
+     fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+     fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+  ] ; # 
+  fhir:priority [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/processpriority"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/processpriority>
+       ] ;
+       fhir:code [ fhir:v "normal" ] ;
+       fhir:display [ fhir:v "Normal" ]
+     ] )
+  ] ; # 
+  fhir:payee [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/payeetype"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/payeetype>
+         ] ;
+         fhir:code [ fhir:v "provider" ] ;
+         fhir:display [ fhir:v "Provider" ]
+       ] )
+     ] ;
+     fhir:party [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+     ]
+  ] ; # 
+  fhir:careTeam ( [
+     fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:provider [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Practitioner/practitioner-single-example> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-single-example" ]
+     ] ;
+     fhir:responsible [ fhir:v true ] ;
+     fhir:role [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/claimcareteamrole"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/claimcareteamrole>
+         ] ;
+         fhir:code [ fhir:v "primary" ] ;
+         fhir:display [ fhir:v "Primary Provider" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:diagnosis ( [
+     fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:diagnosis [
+       a fhir:Reference ;
+       fhir:l <https://fhir.doh.gov.ph/phcore/Condition/condition-single-example> ;
+       fhir:reference [ fhir:v "Condition/condition-single-example" ]
+     ] ;
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://terminology.hl7.org/CodeSystem/ex-diagnosistype"^^xsd:anyURI ;
+           fhir:l <http://terminology.hl7.org/CodeSystem/ex-diagnosistype>
+         ] ;
+         fhir:code [ fhir:v "principal" ] ;
+         fhir:display [ fhir:v "Principal Diagnosis" ]
+       ] )
+     ] )
+  ] ) ; # 
+  fhir:insurance ( [
+     fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:focal [ fhir:v true ] ;
+     fhir:identifier [
+       fhir:system [
+         fhir:v "http://philhealth.gov.ph/fhir/Identifier/philhealth-id"^^xsd:anyURI ;
+         fhir:l <http://philhealth.gov.ph/fhir/Identifier/philhealth-id>
+       ] ;
+       fhir:value [ fhir:v "63-584789845-5" ]
+     ] ;
+     fhir:coverage [
+       fhir:l <https://fhir.doh.gov.ph/phcore/Coverage/philhealth-coverage-example> ;
+       fhir:reference [ fhir:v "Coverage/philhealth-coverage-example" ]
+     ]
+  ] ) ; # 
+  fhir:item ( [
+     fhir:sequence [ fhir:v "1"^^xsd:positiveInteger ] ;
+     fhir:careTeamSequence ( [ fhir:v "1"^^xsd:positiveInteger ] ) ;
+     fhir:diagnosisSequence ( [ fhir:v "1"^^xsd:positiveInteger ] ) ;
+     fhir:productOrService [
+       fhir:coding ( [
+         a sct:11429006 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "11429006" ] ;
+         fhir:display [ fhir:v "Consultation" ]
+       ] ) ;
+       fhir:text [ fhir:v "Outpatient Consultation" ]
+     ] ;
+     fhir:serviced [
+       a fhir:Date ;
+       fhir:v "2024-03-15"^^xsd:date
+     ] ;
+     fhir:quantity [
+       fhir:value [ fhir:v "1"^^xsd:decimal ]
+     ] ;
+     fhir:unitPrice [
+       fhir:value [ fhir:v "500"^^xsd:decimal ] ;
+       fhir:currency [ fhir:v "PHP" ]
+     ] ;
+     fhir:net [
+       fhir:value [ fhir:v "500"^^xsd:decimal ] ;
+       fhir:currency [ fhir:v "PHP" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Procedure/procedure-unknown-date-example> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "procedure-unknown-date-example"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-procedure>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure procedure-unknown-date-example</b></p><a name=\"procedure-unknown-date-example\"> </a><a name=\"hcprocedure-unknown-date-example\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ph-core-procedure.html\">PH Core Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 80146002}\">Appendectomy</span></p><p><b>subject</b>: <a href=\"Patient-patient-explicit-absence-example.html\"> (no stated gender), DoB Unknown</a></p><p><b>performed</b>: Absent because: unknown</p><p><b>asserter</b>: <a href=\"Patient-patient-explicit-absence-example.html\"> (no stated gender), DoB Unknown</a></p></div>"
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:80146002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "80146002" ] ;
+       fhir:Coding.display [ fhir:value "Appendectomy" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-explicit-absence-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-explicit-absence-example" ]
+  ] ;
+  fhir:Procedure.performedDateTime [
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/data-absent-reason" ] ;
+       fhir:Extension.valueCode [ fhir:value "unknown" ]
+     ]
+  ] ;
+  fhir:Procedure.asserter [
+     fhir:link <https://fhir.doh.gov.ph/phcore/Patient/patient-explicit-absence-example> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-explicit-absence-example" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/phcore/Procedure/procedure-unknown-date-example.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

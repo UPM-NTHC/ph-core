@@ -1,0 +1,122 @@
+{
+  "codeSystems" : [{
+    "url" : "http://snomed.info/sct",
+    "version" : null,
+    "status" : "active",
+    "name" : "SNOMED_CT",
+    "title" : "SNOMED CT (all versions)",
+    "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+    "oids" : ["2.16.840.1.113883.6.96"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+    "http://hl7.org/fhir/R4/valueset-practitioner-role.html" : "Practitioner role"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/practitioner-role",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "PractitionerRole",
+    "title" : "Practitioner role",
+    "description" : "This example value set defines a set of codes that can be used to indicate the role of a Practitioner.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1132"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-practitioner-role.html" : "Practitioner role"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-Race",
+    "version" : "6.0.0",
+    "status" : "active",
+    "name" : "Race",
+    "title" : "Race",
+    "description" : "**Deprecation Information:** Deprecated per UP-263. This code system is NOT the acknowledged source of truth for Race concepts and codes. It should no longer be used. https://terminology.hl7.org/en/ECS_MR-CDCREC.html contains information on what should be used in its place. In the United States, federal standards for classifying data on race determine the categories used by federal agencies and exert a strong influence on categorization by state and local agencies and private sector organizations. The federal standards do not conceptually define race, and they recognize the absence of an anthropological or scientific basis for racial classification. Instead, the federal standards acknowledge that race is a social-political construct in which an individual's own identification with one more race categories is preferred to observer identification. The standards use a variety of features to define five minimum race categories. Among these features are descent from \"the original peoples\" of a specified region or nation. The minimum race categories are American Indian or Alaska Native, Asian, Black or African American, Native Hawaiian or Other Pacific Islander, and White. The federal standards stipulate that race data need not be limited to the five minimum categories, but any expansion must be collapsible to those categories.",
+    "oids" : ["2.16.840.1.113883.5.104"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.4.0/ValueSet-v3-Race.html" : "Race"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/indigenous-status-cs",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "IndigenousStatusCS",
+    "title" : "Indigenous Groups CodeSystem",
+    "description" : "Provisional locally authored list of indigenous-status labels.",
+    "uses" : {
+    },
+    "ValueSet-indigenous-status-vs.html" : "Indigenous Groups ValueSet"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/ph-core-disability-type-cs",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PHCoreDisabilityTypeCS",
+    "title" : "PH Core Disability Type Code System",
+    "description" : "Provisional locally authored disability-category examples for PWD registration. The codes and definitions require comparison with the controlling Philippine classification.",
+    "uses" : {
+    },
+    "ValueSet-ph-core-disability-type-vs.html" : "PH Core Disability Type Value Set"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/prc",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PRCCodeSystem",
+    "title" : "PRC CodeSystem",
+    "description" : "Consolidated PH Core terminology for PRC CPDAS Council codes, CPDAS numerical profession codes, and PRC licensure examination codes. CPDAS council and profession concepts reflect the FAQ as of 12 January 2021; PRC examination concepts reflect the standardized list posted 18 March 2026. The hierarchy groups related concepts and does not assert an is-a relationship. The 2021 CPDAS table says its numeric profession codes are for CPD attendance sheets and is subject to regular updating. The 2026 Food Technology and Speech-Language Pathology examination boards have abstract local grouping nodes because the 2021 CPDAS table has no council codes for them; those nodes are not CouncilCode values.",
+    "uses" : {
+    },
+    "ValueSet-prc-council-codes.html" : "PRC Council Codes ValueSet",
+    "ValueSet-prc-profession-codes.html" : "PRC Profession Codes ValueSet",
+    "ValueSet-prc-all-codes.html" : "PRC All Codes ValueSet",
+    "ValueSet-prc-licensure-examinations.html" : "PRC Licensure Examinations ValueSet"
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psced/level",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PSCED",
+    "title" : "PSCED",
+    "description" : "The Philippine Standard Classification of Education.",
+    "uses" : {
+    },
+    "ValueSet-educational-attainments.html" : "Educational Attainments"
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psgc",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PSGC",
+    "title" : "PSGC",
+    "description" : "The Philippine Standard Geographic Code.",
+    "uses" : {
+    },
+    "ValueSet-regions.html" : "Regions",
+    "ValueSet-cities.html" : "Cities",
+    "ValueSet-provinces.html" : "Provinces",
+    "ValueSet-barangays.html" : "Barangays"
+  },
+  {
+    "url" : "https://psa.gov.ph/classification/psoc/unit",
+    "version" : "0.2.1",
+    "status" : "draft",
+    "name" : "PSOC",
+    "title" : "PSOC",
+    "description" : "The Philippine Standard Occupational Classification.",
+    "uses" : {
+    },
+    "ValueSet-occupational-classifications.html" : "Occupation Classifications"
+  },
+  {
+    "url" : "https://verification.fda.gov.ph",
+    "version" : "0.2.1",
+    "status" : "active",
+    "name" : "PHFDACPRCS",
+    "title" : "PH FDA Certificate of Product Registration (CPR) CodeSystem",
+    "description" : "Registered drug products from the Philippine Food and Drug Administration (FDA)",
+    "uses" : {
+    },
+    "ValueSet-drugs-vs.html" : "Drugs"
+  }]
+}
